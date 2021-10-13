@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import {useRouter} from 'next/router';
 
 import {
     Container,
@@ -10,6 +11,8 @@ import {
   } from "react-bootstrap";
   
 const NFTSComponent = () => {
+
+  const router = useRouter();
 
   return (
     <>
@@ -34,14 +37,14 @@ const NFTSComponent = () => {
                 </p>
 
                 <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
-                  <Button variant="primary" className="red-btn p-0" size="lg">
+                  <Button variant="primary" className="red-btn p-0" size="lg" onClick={()=>{router.push('/contact')}}>
                       Talk to our Experts
                   </Button>
                 </div>
               </Col>
               <Col md={6} sm={12}>
                   <div className="nft-service-img-div">
-                    <Image src="/assets/images/nftesrvices-image1.png" rounded className="nft-service-img" alt="..." />
+                    <Image src="/assets/images/nftesrvices-image1.png" rounded className="nft-service-img" alt=" " />
                   </div>
               </Col>
             </Row>
@@ -80,7 +83,7 @@ const NFTSComponent = () => {
           <div className="cta-banner cta-banner3 d-flex align-items-center">
             <div className="cta-txt">
               <h2 className="h2">Start Now?</h2>
-              <Button variant="primary" className="red-btn min-size-btn">
+              <Button variant="primary" className="red-btn min-size-btn" onClick={()=>{router.push('/contact')}}>
                 Get a quote
               </Button>
             </div>

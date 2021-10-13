@@ -262,11 +262,15 @@ const HomeComponent = () => {
                     <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
                         {_.map(featuresHeroBanner, (item) => (
                             <Col key={_.uniqueId()} >
-                                <Link href={item.link} >
+                                { item.link !== '#' ? <Link href={item.link} >
                                     <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
                                         <span> {item.title} </span>
                                     </div>
-                                </Link>
+                                    </Link> : 
+                                    <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
+                                        <span> {item.title} </span>
+                                    </div>
+                                }
                             </Col>
                         ))}
                     </Row>
@@ -565,7 +569,7 @@ const HomeComponent = () => {
                             Still Have some Questions in Mind? Don&apos;t Worry. <br />
                             Get FREE Consultation from our Experts
                         </h2>
-                        <Button variant="primary" className="red-btn min-size-btn">
+                        <Button variant="primary" className="red-btn min-size-btn" onClick={()=>{router.push('/contact')}}>
                             Let’s Talk
                         </Button>
                         </div>

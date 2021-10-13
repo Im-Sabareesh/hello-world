@@ -68,12 +68,13 @@ button:not(.collapsed) {
   outline: 0;
   // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.dropdown-item.active, .dropdown-item:active {
-	background-color: none !important;
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: none !important;
 }
 
 .h1 {
@@ -131,58 +132,101 @@ button:not(.collapsed) {
   }
 }
 
-.nav-item 
-{
-  &.dropdown a
-  {
-    &:after
-    {
+.backtotop {
+  position: absolute;
+  bottom: 216px;
+  right: 20px;
+  width: 110px;
+  
+  a {
+    color: #ffffff;
+
+    .arrow-bg {
+      width: 52px;
+      height: 52px;
+      background: #ffffff;
+      border-radius: 50%;
+      text-align: center;
+      margin: 10px auto;
+      line-height: 47px;
+      svg
+      {
+        stroke: #6F74FF !important;
+      }
+     
+     
+    }
+  }
+}
+
+
+
+.dark-arrow {
+  
+  a {
+    color: #6F74FF !important;
+
+    .arrow-bg {
+      width: 52px;
+      height: 52px;
+      background: #6F74FF;
+      border-radius: 50%;
+      text-align: center;
+      margin: 10px auto;
+      line-height: 47px;
+
+      svg
+      {
+        stroke: #fff !important;
+      }
+     
+    }
+  }
+}
+
+
+
+.nav-item {
+  &.dropdown a {
+    color: #000000;
+    &:active {
+      background: none !important;
+    }
+    &:after {
       box-sizing: border-box;
       height: 8px;
       width: 8px;
       border-style: solid;
-      border-color:#000000;
+      border-color: #000000;
       border-width: 0px 1px 1px 0px;
       transform: rotate(45deg);
       position: relative;
-      left:9px;
+      left: 9px;
     }
   }
 }
 
-
-.inner-page-header
-{
-  .nav-item 
-{
-  &.dropdown a
-  {
-    &:after
-    {
-      border-color:#ffffff;
+.inner-page-header {
+  .nav-item {
+    &.dropdown a {
+      &:after {
+        border-color: #ffffff;
+      }
     }
   }
 }
-}
 
-.sticky
-{
-  .inner-page-header
-{
-  .nav-item 
-{
-  &.dropdown a
-  {
-    &:after
-    {
-      border-color:#000000;
-
+.sticky {
+  .inner-page-header {
+    .nav-item {
+      &.dropdown a {
+        &:after {
+          border-color: #000000;
+        }
+      }
     }
   }
 }
-}
-}
-
 
 // ------------------card-----------
 
@@ -302,11 +346,9 @@ button:not(.collapsed) {
     }
   }
 
-  .letstalk-btn
-  {
-    margin-top:12px !important;
+  .letstalk-btn {
+    margin-top: 12px !important;
   }
-
 }
 
 // ------------------home page header------------//
@@ -669,7 +711,8 @@ button:not(.collapsed) {
     box-shadow: 0px 8.19px 40.95px rgba(19, 62, 110, 0.16);
     border-radius: 24px;
     padding-bottom: 28px;
-
+    position: relative;
+    z-index: 2;
     .form-label {
       font-size: 14px;
       font-weight: 700;
@@ -824,13 +867,12 @@ button:not(.collapsed) {
   border-radius: 12px;
   box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
 }
-.footer-section
-{
-  .social-icons
-  {
-    img
-    {
-      height:19px;
+.footer-section {
+  @include gradient-background("gradient-secondary");
+
+  .social-icons {
+    img {
+      height: 19px;
     }
   }
 }
@@ -985,13 +1027,13 @@ button:not(.collapsed) {
   border-top-right-radius: 88px;
   padding-top: 300px;
   margin-top: -300px;
-  .social-icons
-  {
-    a
-    {
-      &:first-child
-      {
-        margin-left:0px !important;
+  position: relative;
+  z-index: 1;
+  @include gradient-background("gradient-primary");
+  .social-icons {
+    a {
+      &:first-child {
+        margin-left: 0px !important;
       }
     }
   }
@@ -1017,6 +1059,7 @@ button:not(.collapsed) {
   @include gradient-background("gradient-primary-opacity");
   // padding: 175px 0 100px 0;
   // background-size: cover;
+  margin-top: -40px;
 }
 .nft-page-footer {
   @include gradient-background("gradient-primary");
@@ -1066,11 +1109,11 @@ header .main-header {
     }
   }
 }
-.about-us-page .header-search img{
+.about-us-page .header-search img {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
-.about-us-page .fixed-top.sticky .header-search img{
+.about-us-page .fixed-top.sticky .header-search img {
   -webkit-filter: brightness(1) invert(0);
   filter: brightness(1) invert(0);
 }
@@ -1084,30 +1127,31 @@ header .main-header {
   margin: 164px 0 100px 0;
 }
 .listing-div {
-  li{
+  li {
     display: flex;
     align-items: center;
     margin-bottom: 32px;
     line-height: 30px;
     color: color("dark-secondary");
-    span{
+    span {
       padding-right: 40px;
       margin-bottom: 0;
     }
   }
 }
-.career-page{
-  .form-field{
-    &:not(:last-child){
+.career-page {
+  .form-field {
+    &:not(:last-child) {
       margin-right: 30px;
     }
-    .form-control, .form-select{
-      border: 1px solid #CECECE;
+    .form-control,
+    .form-select {
+      border: 1px solid #cecece;
       border-radius: 58px;
       height: 58px;
       padding: 10px 20px;
     }
-    &.search-field{
+    &.search-field {
       width: 333px;
       .form-control{
         background: url(../public/assets/icons/gradient-search.svg) no-repeat 94% center;
@@ -1115,32 +1159,33 @@ header .main-header {
     }
   }
 }
-.w-1k-block{
+.w-1k-block {
   width: 1082px;
   box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
 }
-.career-section1{
-  a{
-    &:hover{
+.career-section1 {
+  a {
+    &:hover {
       color: #6f75ff;
     }
   }
 }
-.career-section2{
-  .w-1k-block{
+.career-section2 {
+  .w-1k-block {
     margin-top: 60px;
   }
 }
-.career-section3{
+.career-section3 {
   padding: 90px 0 180px 0;
-  .job-position{
+  .job-position {
     width: 50%;
-    span{
+    span {
       width: 50%;
       display: block;
     }
   }
-  .job-location, .job-posted{
+  .job-location,
+  .job-posted {
     width: 150px;
     margin-right: 20px;
   }
@@ -1191,61 +1236,59 @@ header .main-header {
   }
 }
 
-
-
 // ----------------------career page details start----------------
 
 // ---------breadcrumb start---------
-.breadcrumb-section{
+.breadcrumb-section {
   margin-top: 120px;
 }
-.breadcrumb-item + .breadcrumb-item::before{
-    content: ">";
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
 }
-.breadcrumb-item{
-  &.active{
+.breadcrumb-item {
+  &.active {
     color: color("dark-secondary");
   }
-  a{
+  a {
     color: color("dark-secondary");
   }
 }
 
 // ---------breadcrumb start---------
 
-.careerdetail-overview-section{
-  .location-element{
+.careerdetail-overview-section {
+  .location-element {
     font-size: 18px;
     font-weight: 600;
   }
-  .job-overview{
+  .job-overview {
     width: 510px;
   }
-  .overview-img{
-    img{
+  .overview-img {
+    img {
       max-width: unset;
       margin-left: -100px;
     }
   }
 }
-.careerdetail-roles-section{
-  .roles-responsibility{
+.careerdetail-roles-section {
+  .roles-responsibility {
     padding: 70px 55px;
     border-radius: 12px;
     box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
   }
 }
-.career-listings{
+.career-listings {
   padding-left: 30px;
-  li{
+  li {
     list-style-type: disc;
-    &::marker{
+    &::marker {
       color: color("dark-secondary");
       font-size: 19px;
     }
   }
 }
-.career-apply-btn{
+.career-apply-btn {
   width: 280px;
 }
 // ----------------------career page details end----------------

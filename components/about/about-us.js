@@ -205,8 +205,20 @@ const AboutUs = () => {
                                             <Card.Text className="dark-secondary-text-color">{item.designation}</Card.Text>
                                         </div>
                                         <div className="d-flex social-icons">
-                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/assets/icons/gradient-twitter.svg" alt=" " /></a>
-                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/assets/icons/gradient-linkedin.svg" alt=" " /></a>
+                                            <a 
+                                                href="#" 
+                                                onClick={e => e.preventDefault()} 
+                                                className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
+                                            >
+                                                <Image src="/assets/icons/gradient-twitter.svg" alt=" " />
+                                            </a>
+                                            <a 
+                                                href="#" 
+                                                onClick={e => e.preventDefault()} 
+                                                className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
+                                            >
+                                                <Image src="/assets/icons/gradient-linkedin.svg" alt=" " />
+                                            </a>
                                         </div>
                                     </Card.Body>
                                 </Card>

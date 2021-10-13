@@ -64,7 +64,7 @@ const RadiusFooter  = (props) => {
     ];
 
     return (
-        <footer className={`${props.radius&& "home-footer"} footer-section bg-gradient-secondary`}>
+        <footer className={`${props.radius&& "home-footer"} footer-section`}>
             <Container>
             <Row className="py-5 pb-1">
                 <Col
@@ -104,16 +104,32 @@ const RadiusFooter  = (props) => {
                         <ul className="lh-lg">
                             {_.map(item.list, (listItem) => (
                                 <li key={_.uniqueId()} className="mb-2">
-                                    <Link href={listItem.route}>
-                                        <a className="light-text-color">
+                                    {listItem.route !== '#' ?
+                                        <Link href={listItem.route}>
+                                            <a className="light-text-color">
+                                                {listItem.name}
+                                            </a>
+                                        </Link> :
+                                        <a className="light-text-color" href="#" onClick={e => e.preventDefault()}>
                                             {listItem.name}
                                         </a>
-                                    </Link>
+                                    }
                                 </li>
                             ))}
                         </ul>
                     </Col>
                 ))}
+
+                {/* { props.radius && <div className="backtotop" id="backtotop">
+                    <a href="#" onClick={e => {e.preventDefault();document.body.scrollTop = document.documentElement.scrollTop = 0;}}>
+                    <div className="arrow-bg"> 
+                        <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 20L6 1.25M6 1.25L1 6.25M6 1.25L11 6.25" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                        Back to top
+                    </a>
+                </div> } */}
 
             </Row>
             <div className="d-flex justify-content-between align-items-center pt-5 pb-3 copyrights">

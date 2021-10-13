@@ -78,16 +78,18 @@ const TopLogoFooter  = () => {
         <Container>
             <Row className="py-md-5 py-4">
                 <Col xl={12} lg={12} md={12} sm={6} xs={12} className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 ">
-                    <a href="#" onClick={e => e.preventDefault()} className="brand-logo">
-                        <Image src="/assets/icons/cc-white-logo.svg" className="mb-md-4 mb-sm-3 mb-4" alt="..."/>
-                    </a>
+                    <Link href="/">
+                        <a  className="brand-logo">
+                            <Image src="/assets/icons/cc-white-logo.svg" className="mb-md-4 mb-sm-3 mb-4" alt=" "/>
+                        </a>
+                    </Link>
                     <p className="light-text-color text-shadow mb-md-3 mb-2">Follow Us</p>
                     <div className="social-icons">
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/facebook.svg"  alt="..."/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/instagram.svg"  alt="..."/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/twitter.svg"  alt="..."/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/youtube.svg" alt="..." /></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/wordpress.svg" alt="..."/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/facebook.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/instagram.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/twitter.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/youtube.svg" alt=" " /></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/wordpress.svg" alt=" "/></a>
                     </div>
                 </Col>
 
@@ -99,12 +101,12 @@ const TopLogoFooter  = () => {
                                 <li key={_.uniqueId()} className="mb-2">
                                     { listItem.route !== '#' ?
                                         <Link href={listItem.route}>
-                                            <a className="light-text-color" >
+                                            <a className="light-text-color">
                                                 {listItem.name}
                                             </a>
                                         </Link> :
-                                        <a className="light-text-color">
-                                        {listItem.name}
+                                        <a className="light-text-color" href="#" onClick={e => e.preventDefault()}>
+                                            {listItem.name}
                                         </a>
                                     }
                                 </li>
