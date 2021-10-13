@@ -120,7 +120,7 @@ const RadiusFooter  = (props) => {
                     </Col>
                 ))}
 
-                { props.radius && <div className="backtotop" id="backtotop">
+                {/* { props.radius && <div className="backtotop" id="backtotop">
                     <a href="#" onClick={e => {e.preventDefault();document.body.scrollTop = document.documentElement.scrollTop = 0;}}>
                     <div className="arrow-bg"> 
                         <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@ const RadiusFooter  = (props) => {
                     </div>
                         Back to top
                     </a>
-                </div> }
+                </div> } */}
 
             </Row>
             <div className="d-flex justify-content-between align-items-center pt-5 pb-3 copyrights">
