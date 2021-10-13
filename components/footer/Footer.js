@@ -21,7 +21,7 @@ const Footer = () => {
 
     return (
         <>
-            {footer.component()}
+            {!!footer && footer.component()}
         </>
     )
 }

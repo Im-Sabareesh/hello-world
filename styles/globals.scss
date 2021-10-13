@@ -68,6 +68,13 @@ button:not(.collapsed) {
   outline: 0;
   // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
 }
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	background-color: none !important;
+}
 
 .h1 {
   font-size: $heading1;
@@ -294,6 +301,12 @@ button:not(.collapsed) {
       padding: 15px 40px;
     }
   }
+
+  .letstalk-btn
+  {
+    margin-top:12px !important;
+  }
+
 }
 
 // ------------------home page header------------//
@@ -684,7 +697,7 @@ button:not(.collapsed) {
 .about-us-banner {
   background: url(../public/images/about-us-banner-bg.png) no-repeat center;
   background-position: bottom;
-  min-height: 490px;
+  min-height: 527px;
   padding-bottom: 125px;
   background-size: cover;
   padding-top: 80px;
@@ -692,7 +705,7 @@ button:not(.collapsed) {
   place-items: center;
 }
 .about-section1 {
-  margin-top: -90px;
+  margin-top: -125px;
   background: url(../public/images/about-us-ellipse-bg.png) no-repeat right
     bottom;
 }
@@ -972,6 +985,16 @@ button:not(.collapsed) {
   border-top-right-radius: 88px;
   padding-top: 300px;
   margin-top: -300px;
+  .social-icons
+  {
+    a
+    {
+      &:first-child
+      {
+        margin-left:0px !important;
+      }
+    }
+  }
 }
 
 // ------------------footer-section------------//

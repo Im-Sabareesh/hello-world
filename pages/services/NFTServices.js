@@ -15,4 +15,4 @@ const NFTServices = () => {
   );
 };
 
-export default NFTServices
+export default NFTServices;

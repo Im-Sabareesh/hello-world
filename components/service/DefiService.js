@@ -61,7 +61,7 @@ const DefiSComponent = () => {
                         src="/images/defi-main.png"
                         rounded
                         className="nft-service-img"
-                        alt="..."
+                        alt=" "
                         />
                     </div>
                     </Col>
@@ -141,7 +141,7 @@ const DefiSComponent = () => {
                                 <Card.Footer className="d-flex justify-content-between">
                                     <button
                                         type="button"
-                                        class="red-btn min-size-btn btn btn-primary w-100"
+                                        className="red-btn min-size-btn btn btn-primary w-100"
                                     >
                                         Know More
                                     </button>

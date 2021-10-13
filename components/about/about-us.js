@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import {useRouter} from 'next/router';
 
 import {
     Container,
@@ -11,7 +12,8 @@ import {
 
 const AboutUs = () => {
 
-    const teamMemberList = [
+    const router = useRouter(),
+    teamMemberList = [
         {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
@@ -71,7 +73,7 @@ const AboutUs = () => {
                 <Container fluid className="pb-xl-5 pb-2">
                     <Row className="pb-xl-5 pb-2">
                         <Col className="pb-xl-5 pb-2">
-                            <Image src="/images/about-us-grid.png" className="mx-auto d-block" rounded />
+                            <Image src="/images/about-us-grid.png" className="mx-auto d-block" alt=" " rounded />
                         </Col>
                     </Row>
                 </Container>
@@ -88,7 +90,7 @@ const AboutUs = () => {
                             <h2 className="h1">Whats Our Story?</h2>
                         </Col>
                         <Col lg={7}>
-                            <p>Blockchain is changing the way the world lives and works – but it's only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future.</p>
+                            <p>Blockchain is changing the way the world lives and works – but it&apos;s only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future.</p>
 
                             <p>We start with an understanding of your specific aspirations, followed by a practical application of blockchain innovation. The conversation grows as new opportunities come to light along the way.</p>
 
@@ -153,7 +155,7 @@ const AboutUs = () => {
                             </div>
                         </Col>
                        <Col xl={8} lg={7}>
-                            <p className="h3 lh-base fw-normal light-text-color">Blockchain is changing the way the world lives and works – but it's only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future. As the leading independent technology organization.</p>
+                            <p className="h3 lh-base fw-normal light-text-color">Blockchain is changing the way the world lives and works – but it&apos;s only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future. As the leading independent technology organization.</p>
 
                             <p className="h3 lh-base fw-normal light-text-color">We start with an understanding of your specific aspirations, followed by a practical application of blockchain innovation. The conversation grows as new opportunities come to light along the way.</p>
                         </Col>
@@ -203,8 +205,8 @@ const AboutUs = () => {
                                             <Card.Text className="dark-secondary-text-color">{item.designation}</Card.Text>
                                         </div>
                                         <div className="d-flex social-icons">
-                                            <a href="#" className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-twitter.svg" /></a>
-                                            <a href="#" className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-linkedin.svg" /></a>
+                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-twitter.svg" alt=" " /></a>
+                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-linkedin.svg" alt=" " /></a>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -230,7 +232,7 @@ const AboutUs = () => {
                             <p className="h3 dark-secondary-text-color lh-base fw-normal">Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level</p>
                         </Col>
                         <Col md={6} className="mt-lg-4 mt-2">
-                            <button type="button" className="red-btn min-size-btn btn btn-primary">Connect with us</button>
+                            <button type="button" onClick={()=>{router.push('/contact')}} className="red-btn min-size-btn btn btn-primary">Connect with us</button>
                         </Col>
                     </Row>
                 </Container>

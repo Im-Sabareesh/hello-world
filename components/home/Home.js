@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 import {
     Container,
@@ -14,6 +15,7 @@ import {
 
 const HomeComponent = () => {
 
+    const router = useRouter();
     const [validated, setValidated] = React.useState(false);
   
     const handleSubmit = (event) => {
@@ -246,13 +248,13 @@ const HomeComponent = () => {
                     </p>
 
                     <div className="button-outer">
-                        <Button variant="primary" className="red-btn" size="lg">
-                        Consult for Free
+                        <Button variant="primary" className="red-btn" size="lg" onClick={()=>{router.push('/contact')}}>
+                            Consult for Free
                         </Button>
                     </div>
                     </Col>
 
-                    <Col md={12} className="text-center">
+                    <Col md={12} className="text-center mt-4">
                     <h2 className="h2 secondary-text-color"> Featured </h2>
                     </Col>
 
@@ -261,7 +263,7 @@ const HomeComponent = () => {
                         {_.map(featuresHeroBanner, (item) => (
                             <Col key={_.uniqueId()} >
                                 <Link href={item.link} >
-                                    <div className="featured-box-container d-flex align-items-center justify-content-center text-center">
+                                    <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
                                         <span> {item.title} </span>
                                     </div>
                                 </Link>
@@ -331,7 +333,7 @@ const HomeComponent = () => {
                 <Container>
                 <Row>
                     <Col md={8} className="mx-auto text-center mb-2">
-                    <h2 className="h2 dark-text-color"> Services We Offer </h2>
+                    <h2 className="h2 dark-text-color mb-4"> Services We Offer </h2>
 
                     <p>
                         Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
@@ -357,7 +359,7 @@ const HomeComponent = () => {
                     ))}
 
                     <Col md={12} className="text-center mt-5">
-                    <a href="#" className="h3 dark-text-color link-primary">
+                    <a href="#" onClick={e => e.preventDefault()} className="h3 dark-text-color link-primary">
                         And a lot more for you
                     </a>
                     </Col>
@@ -390,9 +392,9 @@ const HomeComponent = () => {
                                 </Card.Body>
 
                                 <Card.Footer className="d-flex justify-content-between">
-                                    <a href="" className="link-primary">{item.link}</a>
+                                    <a href="#" onClick={e => e.preventDefault()} className="link-primary">{item.link}</a>
 
-                                    <a href="">
+                                    <a href="#" onClick={e => e.preventDefault()}>
                                         <Image src="/icons/card-arrow.svg" alt="" />
                                     </a>
                                 </Card.Footer>
@@ -411,22 +413,22 @@ const HomeComponent = () => {
                             Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
                             ullamco cillum dolor. Voluptate exercitation incididunt.
                             Alteration in some form, by injected humour, or randomised
-                            words which don't look even slightly believable. If you are
+                            words which don&apos;t look even slightly believable. If you are
                             going to use a passage of Lorem Ipsum. Nulla Lorem mollit
                             cupidatat irure. Laborum magna nulla duis ullamco cillum
                             dolor. Voluptate exercitation incididunt. Alteration in some
-                            form, by injected humour, or randomised words which don't
+                            form, by injected humour, or randomised words which don&apos;t
                             look even slightly believable. If you are going to use a
                             passage of Lorem Ipsum.
                         </Card.Text>
                         </Card.Body>
 
                         <Card.Footer className="d-flex justify-content-between">
-                        <a href="" className="link-primary">
+                        <a href="#" onClick={e => e.preventDefault()} className="link-primary">
                             BLOCKCHAIN
                         </a>
 
-                        <a href="">
+                        <a href="#" onClick={e => e.preventDefault()}>
                             <Image src="/icons/card-arrow.svg" alt="" />
                         </a>
                         </Card.Footer>
@@ -451,7 +453,7 @@ const HomeComponent = () => {
                 <div className="cta-banner cta-banner1 d-flex align-items-center">
                     <div className="cta-txt">
                     <h2 className="h2">Ready to Get Started?</h2>
-                    <Button variant="primary" className="red-btn min-size-btn">
+                    <Button variant="primary" className="red-btn min-size-btn" onClick={()=>{router.push('/contact')}}>
                         Get a quote
                     </Button>
                     </div>
@@ -471,7 +473,7 @@ const HomeComponent = () => {
                 <Container>
                 <Row>
                     <Col md={{ span: 12, order: 0 }} lg={6}>
-                    <Image src="/images/blockchain-business.png" />
+                    <Image src="/images/blockchain-business.png" alt=" " />
                     </Col>
 
                     <Col md={12} lg={6}>
@@ -481,21 +483,21 @@ const HomeComponent = () => {
                         It is a long established fact that a reader will be distracted
                         by the readable content of a page when looking at its layout.
                         The point of using Lorem Ipsum is that it has a more-or-less
-                        normal distribution of letters, as opposed to using 'Content
-                        here, content here', making it look like readable English.
+                        normal distribution of letters, as opposed to using &apos;Content
+                        here, content here&apos;, making it look like readable English.
                     </p>
 
                     <p>
                         Many desktop publishing packages and web page editors now use
-                        Lorem Ipsum as their default model text, and a search for 'lorem
-                        ipsum' will uncover many web sites still in their infancy.
+                        Lorem Ipsum as their default model text, and a search for &apos;lorem
+                        ipsum&apos; will uncover many web sites still in their infancy.
                     </p>
                     </Col>
                     {_.map(chooseUSSec5, (item) => (
                         <Col key={_.uniqueId()} md={6} className="mt-4">
                             <div className="d-flex">
                                 <div className="flex-shrink-0">
-                                    <Image src={item.icon} alt="..." />
+                                    <Image src={item.icon} alt=" " />
                                     </div>
                                     <div className="flex-grow-1 ms-3">
                                     <h3 className="h3 mb-3"> {item.name} </h3>
@@ -521,10 +523,10 @@ const HomeComponent = () => {
                     {_.map(quickStatSec6, (item) => (
                         <Col key={_.uniqueId()} xs={6} md={4} lg={2} className="counter-thumb text-center mt-3">
                             <p className="mb-4">
-                                <Image src={item.icon} alt="..." />
+                                <Image src={item.icon} alt=" " />
                             </p>
 
-                            <p className="mb-1"><span> {item.count} </span></p>
+                            <p className="mb-1"><span> {item.counts} </span></p>
 
                             <p><strong> {item.title} </strong></p>
                         </Col>
@@ -553,14 +555,14 @@ const HomeComponent = () => {
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">
-                    <Image src="/images/we-work.png" />
+                    <Image src="/images/we-work.png" alt=" " />
                     </Col>
 
                     <Col md={12} className="mt-5 mb-5">
                     <div className="cta-banner cta-banner2 d-flex align-items-center justify-content-end">
                         <div className="cta-txt">
                         <h2 className="h2">
-                            Still Have some Questions in Mind? Don't Worry. <br />
+                            Still Have some Questions in Mind? Don&apos;t Worry. <br />
                             Get FREE Consultation from our Experts
                         </h2>
                         <Button variant="primary" className="red-btn min-size-btn">
@@ -625,14 +627,14 @@ const HomeComponent = () => {
                             </h2>
                         </Col>
 
-                        <Col>
+                        <Col className="mt-4">
                             <Row className=" justify-content-center row-cols-1 row-cols-md-2  row-cols-lg-3">
                                 {_.map(testimonialSec9, (item) => (
                                     <Col key={_.uniqueId()} className="">
                                         <div className="testimonial-cont">
                                             <div className="testimonial-user-cont d-flex align-items-center">
                                                 <div className="user-thumb">
-                                                    <Image src={item.image} roundedCircle className="shadow"/>
+                                                    <Image src={item.image} roundedCircle className="shadow" alt=" "/>
                                                 </div>
                                                 <div className="user-name">
                                                     <h3 className="h3 mb-0">{item.name} </h3>
@@ -672,9 +674,9 @@ const HomeComponent = () => {
                                     <h3 className="h3 mb-3">{item.title}</h3>
                                 </Card.Title>
                                 <Card.Text>{item.by_date}</Card.Text>
-                                <a href="#" className="link-primary">
-                                    Learn More <Image src="/icons/purple-arrow.svg" />{" "}
-                                </a>
+                                    <a href="#" onClick={e => e.preventDefault()} className="link-primary">
+                                        Learn More <Image src="/icons/purple-arrow.svg" alt=" "/>{" "}
+                                    </a>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -693,7 +695,7 @@ const HomeComponent = () => {
                     <Col lg={{ span: 10, offset: 1 }}>
                         <div className="home-contact-card">
                         <Row>
-                            <Col lg={12} lg={6}>
+                            <Col md={12} lg={6}>
                             <h2 className="h2 mb-2"> Ready to Get Started? </h2>
                             <p>Have an idea? Let’s discuss it!</p>
 
@@ -775,7 +777,6 @@ const HomeComponent = () => {
                                         >
                                             <Form.Check.Input
                                             type={type}
-                                            isValid
                                             className="flex-shrink-0 mr-3"
                                             />
                                             <Form.Check.Label>
@@ -783,7 +784,7 @@ const HomeComponent = () => {
                                             “Contact Us” form, your personal data will
                                             be processed by ChainCode. We are
                                             committed to respecting your privacy. Read
-                                            our <a href="#"> Privacy Policy</a>.
+                                            our <a href="#" onClick={e => e.preventDefault()}> Privacy Policy</a>.
                                             </Form.Check.Label>
                                         </Form.Check>
                                         </div>
@@ -805,7 +806,7 @@ const HomeComponent = () => {
                             </Col>
 
                             <Col md={12} lg={6} className="contact-right-form">
-                            <Image src="/images/contact-form-img.png" />
+                                <Image src="/images/contact-form-img.png" alt=" " />
                             </Col>
                         </Row>
                         </div>

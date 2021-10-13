@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 import {
   Container,
@@ -12,7 +12,8 @@ import {
 
 const CareersComponent = () => {
 
-    const vacantListSec3 = [
+    const router = useRouter(),
+    vacantListSec3 = [
         {
             designation: 'User Experience Designer',
             describe: 'As entrepreneurs ourselves, we’d',
@@ -156,11 +157,9 @@ const CareersComponent = () => {
                                         <p className="h3">Posted</p>
                                         <span>{item.posts}</span>
                                     </div>
-                                    <Link href={item.link}>
-                                        <Button variant="primary" className="gradient-btn">
-                                            Read More
-                                        </Button>
-                                    </Link>
+                                    <Button variant="primary" onClick={()=>{router.push(item.link)}} className="gradient-btn">
+                                        Read More
+                                    </Button>
                                 </div>
                             </div>
                         </div>

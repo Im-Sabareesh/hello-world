@@ -98,10 +98,12 @@
     background-position: left;
     padding: 30px;
     // background-position-x: left -200px;
-    height:200px;
+    // height:200px;
+    min-height: 170px;
     &:after
     {
-      height: 200px;
+      // height: 200px;
+      min-height: 170px;
     }
 
     img {
@@ -332,10 +334,13 @@
     }
   }
   .cta-banner1 {
-    background-position: right;
+    background-position: -210px;
     padding: 30px;
-    background-position-x: right -140px;
-
+    // background-position-x: right -140px;
+    min-height: 202px;
+    &:after{  
+      min-height: 202px;
+    }
     img {
       display: none;
     }
@@ -365,7 +370,7 @@
       text-align: center;
     }
     .cta-banner2 {
-      background-position-x: left -230px;
+      background-position: -220px;
       padding: 30px;
 
       .cta-txt {
@@ -567,7 +572,7 @@
     }
   }
   .cta-banner2 {
-    background-position-x: left -145px;
+    background-position: -150px;
     padding: 30px;
 
     .cta-txt {
@@ -679,7 +684,7 @@
 
 
    .cta-banner2 {
-      background-position-x: left -125px;
+      background-position: -120px;
 
       .cta-txt {
         width: 500px;
@@ -1022,6 +1027,11 @@
     // changes
     .cta-banner3{
       background-position: left;
+      min-height: 170px;
+      padding: 30px;
+      &:after{
+        min-height: 170px;
+      }
     }
 }
 
@@ -1284,7 +1294,12 @@
     // ----------------------career page details end----------------
      // changes
     .cta-banner3{
-      background-position: left;
+      background-position: -210px;
+      min-height: 202px;
+      padding: 30px;
+      &:after{
+        min-height: 202px;
+      }
     }
 }
 @include media-breakpoint-between(md, lg) {
@@ -1528,6 +1543,12 @@
      .section-glow {
       padding: 55px 0 45px 0;
     }
+    .home-footer{
+      .home-footer-logo{
+        text-align: center !important;
+      }
+    }
+    
 }
 @include media-breakpoint-between(lg, xl) {
   // ----------font size---------

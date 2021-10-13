@@ -52,7 +52,7 @@ const CareerDetailsComponent = () => {
                         </Col>
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
-                                <Image src="/images/career-details-img1.png" alt="career-overview-img" className="overview-mobile-img d-none d-lg-block" />
+                                <Image src="/images/career-details-mobile-img1.png" alt="career-overview-img" className="overview-mobile-img d-none d-lg-block" />
                                 <Image src="/images/career-details-mobile-img1.png" alt="career-overview-img"  className="overview-mobile-img d-block d-lg-none" />
                             </div>
                         </Col>
@@ -100,17 +100,17 @@ const CareerDetailsComponent = () => {
 
                             <ul className="career-listings lh-md">
                                 <li>You believe in craftsmanship and create elegant and compelling designs, over andover.</li>
-                                <li>Your portfolio has some best-in-class work. You're a walking encyclopedia of microinteractions in use (on mobile, web, desktop, etc), and have nuanced views on how to make many of them even better.</li>
-                                <li>You've shipped product.</li>
-                                <li>You've weathered release cycles and know what details matter at each stage, how to motivate engineers to get the fit and finish right, how to translate insights from user studies into meaningful action, and what's most likely to go afoul at each stage. You can share several shining examples of real work you've shipped, and what you learned along the way.</li>
-                                <li>You substantially contribute to defining the 'what' as well as the 'how'.</li>
-                                <li>You're a product manager's secret weapon. You thrive best when helping to define the requirements, not just translating them into designs. You facilitate and draw the best design ideas from teammates.</li>
+                                <li>Your portfolio has some best-in-class work. You&apos;re a walking encyclopedia of microinteractions in use (on mobile, web, desktop, etc), and have nuanced views on how to make many of them even better.</li>
+                                <li>You&apos;ve shipped product.</li>
+                                <li>You&apos;ve weathered release cycles and know what details matter at each stage, how to motivate engineers to get the fit and finish right, how to translate insights from user studies into meaningful action, and what&apos;s most likely to go afoul at each stage. You can share several shining examples of real work you&apos;ve shipped, and what you learned along the way.</li>
+                                <li>You substantially contribute to defining the &apos;what&apos; as well as the &apos;how&apos;.</li>
+                                <li>You&apos;re a product manager&apos;s secret weapon. You thrive best when helping to define the requirements, not just translating them into designs. You facilitate and draw the best design ideas from teammates.</li>
                                 <li>You can think and talk about the bottom line.</li>
-                                <li>Analytics don't scare you, and you know which features can act as force multipliers on your company's business model.</li>
+                                <li>Analytics don&apos;t scare you, and you know which features can act as force multipliers on your company&apos;s business model.</li>
                                 <li>Prototyping is a key part of your toolset.</li>
-                                <li>You've prototyped on multiple platforms. You've made last-minute tweaks between user studies. You know how to be all kinds of quick and dirty, but dream of better prototyping tools.</li>
+                                <li>You&apos;ve prototyped on multiple platforms. You&apos;ve made last-minute tweaks between user studies. You know how to be all kinds of quick and dirty, but dream of better prototyping tools.</li>
                                 <li>Cross-platform is your style.</li>
-                                <li>Hopefully you've shipped something across several platforms. You know what translates from desktop and what doesn't, or why you'd opt for one solution for iOS and another on Android.</li>
+                                <li>Hopefully you&apos;ve shipped something across several platforms. You know what translates from desktop and what doesn&apos;t, or why you&apos;d opt for one solution for iOS and another on Android.</li>
                             </ul>
                             <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
                                 <Button variant="primary" className="red-btn career-apply-btn">Apply Now</Button>

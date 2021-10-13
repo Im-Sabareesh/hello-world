@@ -2,7 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
-import * as $ from 'jquery';
 
 import {
     Container,
@@ -18,8 +17,8 @@ import {
 
 const Header = () => {
 
-  const router = useRouter()
-  const whiteLayout = ["about", "contact"]
+  const router = useRouter();
+  const whiteLayout = ["about", "contact"];
   const [state, setState] = React.useState("");
   const socialMedisIcons = [
       "/icons/facebook.svg",
@@ -41,19 +40,6 @@ const Header = () => {
     window.addEventListener("scroll", listenScrollEvent);
   },[]);
 
-  const toggleSearch = () => {
-    const searchPanel = $('#search-section');
-    if (searchPanel.hasClass('d-none')) {
-      searchPanel.removeClass('d-none');
-      searchPanel.hide();
-      searchPanel.slideDown('slow');
-    } else {
-      searchPanel.slideUp('slow', function() {
-        searchPanel.addClass('d-none');
-      });
-    }
-  }
-
   return (
     <header className={`fixed-top ${state}`}>
       {router.pathname === '/' && <div className="header-top py-2">
@@ -71,7 +57,7 @@ const Header = () => {
               <ul className="social-links">
                   {_.map(socialMedisIcons, (icon) => (
                       <li key={icon}>
-                      <a href="#">
+                      <a href="#" onClick={e => e.preventDefault()}>
                           <Image src={icon} alt=""   />
                       </a>
                       </li>
@@ -103,12 +89,12 @@ const Header = () => {
                         <Link href='/about'>
                           <a className="nav-link">About Us</a>
                         </Link>
-                        <Link href='/about'>
-                          <a className="nav-link">Blockchain Solution</a>
-                        </Link>
-                        <Link href='/about'>
-                          <a className="nav-link">Case Studies</a>
-                        </Link>
+                        {/* <Link href='/about'> */}
+                          <a href="#" onClick={e => e.preventDefault()} className="nav-link">Blockchain Solution</a>
+                        {/* </Link> */}
+                        {/* <Link href='/about'> */}
+                          <a href="#" onClick={e => e.preventDefault()} className="nav-link">Case Studies</a>
+                        {/* </Link> */}
                         <NavDropdown title="Services" id="basic-nav-dropdown">
                           <NavDropdown.Item >
                             <Link href='/services/NFTServices'>
@@ -137,16 +123,11 @@ const Header = () => {
                   Let&apos;s Talk
                 </Button>
 
-                <a href="#" className="ms-2 header-search" onClick={toggleSearch}>
+                <a href="#" className="ms-2 header-search" onClick={e => e.preventDefault()}>
                   <Image src="/icons/icon-search.svg" alt="" className={!state && _.some(whiteLayout,lay=>router.pathname.includes(lay)) &&"white-logo"} />
                 </a>
             </Col>
           </Row>
-        </Container>
-      </div>
-      <div id="search-section" className="d-none bg-primary">
-        <Container>
-          Hello
         </Container>
       </div>
   </header>

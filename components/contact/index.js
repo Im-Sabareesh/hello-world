@@ -74,7 +74,7 @@ const ContactComponent = () => {
             <Row>
                 <Col md={6} lg={6}>
                 <p className="contact-img mb-5">
-                    <Image src="/images/contactus.svg" />
+                    <Image src="/images/contactus.svg" alt=" " />
                 </p>
 
                 <div className="contact-small-section pt-4">
@@ -208,7 +208,7 @@ const ContactComponent = () => {
               {_.map(branchList, (item) => (                  
                 <Col md={4} lg={4} key={_.uniqueId()} className="d-flex mt-5">
                   <div className=" mt-1 me-3 flex-shrink-0">
-                      <Image src="/icons/mappin.svg" />
+                      <Image src="/icons/mappin.svg" alt=" " />
                   </div>
                   <div className="address-cont ml-2 flex-shrink-0">
                       <h2 className="h2 mb-3"> {item.location} </h2>

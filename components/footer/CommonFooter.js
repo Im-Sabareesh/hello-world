@@ -72,26 +72,26 @@ const RadiusFooter  = (props) => {
                     sm={6}
                     md={12}
                     lg={4}
-                    className="text-md-center mb-5 mb-md-5 mb-sm-3 mb-xs-3"
+                    className={`${!props.radius ? "text-md-center" : "home-footer-logo"} mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                 >
-                    <a href="#" className="brand-logo">
+                    <a href="#" onClick={e => e.preventDefault()} className="brand-logo">
                         <Image src="/icons/cc-white-logo.svg" className="mb-4" alt="..." />
                     </a>
                     <p className="light-text-color text-shadow">Follow Us</p>
                     <div className="social-icons">
-                        <a href="#" className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
                             <Image src="/icons/facebook.svg" alt="..."/>
                         </a>
-                        <a href="#" className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
                             <Image src="/icons/instagram.svg" alt="..."/>
                         </a>
-                        <a href="#" className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
                             <Image src="/icons/twitter.svg" alt="..."/>
                         </a>
-                        <a href="#" className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
                             <Image src="/icons/youtube.svg" alt="..."/>
                         </a>
-                        <a href="#" className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
                             <Image src="/icons/wordpress.svg" alt="..."/>
                         </a>
 
@@ -122,12 +122,12 @@ const RadiusFooter  = (props) => {
                 </span>
                 <ul className="list-inline position-relative footer-after-line">
                     <li className="list-inline-item px-2">
-                        <a href="#" className="light-text-color">
+                        <a href="#" onClick={e => e.preventDefault()} className="light-text-color">
                             Privacy Policy
                         </a>
                     </li>
                     <li className="list-inline-item">
-                        <a href="#" className="light-text-color">
+                        <a href="#" onClick={e => e.preventDefault()} className="light-text-color">
                             Terms of Service & Rules
                         </a>
                     </li>
