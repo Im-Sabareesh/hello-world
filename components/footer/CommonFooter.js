@@ -104,11 +104,16 @@ const RadiusFooter  = (props) => {
                         <ul className="lh-lg">
                             {_.map(item.list, (listItem) => (
                                 <li key={_.uniqueId()} className="mb-2">
-                                    <Link href={listItem.route}>
+                                    {listItem.route !== '#' ?
+                                        <Link href={listItem.route}>
+                                            <a className="light-text-color">
+                                                {listItem.name}
+                                            </a>
+                                        </Link> :
                                         <a className="light-text-color">
                                             {listItem.name}
                                         </a>
-                                    </Link>
+                                    }
                                 </li>
                             ))}
                         </ul>
