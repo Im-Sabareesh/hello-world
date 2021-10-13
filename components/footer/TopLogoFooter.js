@@ -103,8 +103,8 @@ const TopLogoFooter  = () => {
                                                 {listItem.name}
                                             </a>
                                         </Link> :
-                                        <a className="light-text-color">
-                                        {listItem.name}
+                                        <a className="light-text-color" href="#" onClick={e => e.preventDefault()}>
+                                            {listItem.name}
                                         </a>
                                     }
                                 </li>
