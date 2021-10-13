@@ -17,35 +17,35 @@ const AboutUs = () => {
         {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_01.jpg',            
+            image: '/assets/images/member_01.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_02.jpg',            
+            image: '/assets/images/member_02.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_03.jpg',            
+            image: '/assets/images/member_03.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_04.jpg',            
+            image: '/assets/images/member_04.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_05.jpg',            
+            image: '/assets/images/member_05.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_06.jpg',            
+            image: '/assets/images/member_06.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_07.jpg',            
+            image: '/assets/images/member_07.jpg',            
         }, {
             name: 'Amitabh Bacchan',
             designation: 'Founder',
-            image: '/images/member_08.jpg',            
+            image: '/assets/images/member_08.jpg',            
         }
     ];
 
@@ -73,7 +73,7 @@ const AboutUs = () => {
                 <Container fluid className="pb-xl-5 pb-2">
                     <Row className="pb-xl-5 pb-2">
                         <Col className="pb-xl-5 pb-2">
-                            <Image src="/images/about-us-grid.png" className="mx-auto d-block" alt=" " rounded />
+                            <Image src="/assets/images/about-us-grid.png" className="mx-auto d-block" alt=" " rounded />
                         </Col>
                     </Row>
                 </Container>
@@ -205,8 +205,8 @@ const AboutUs = () => {
                                             <Card.Text className="dark-secondary-text-color">{item.designation}</Card.Text>
                                         </div>
                                         <div className="d-flex social-icons">
-                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-twitter.svg" alt=" " /></a>
-                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/icons/gradient-linkedin.svg" alt=" " /></a>
+                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/assets/icons/gradient-twitter.svg" alt=" " /></a>
+                                            <a href="#" onClick={e => e.preventDefault()} className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"><Image src="/assets/icons/gradient-linkedin.svg" alt=" " /></a>
                                         </div>
                                     </Card.Body>
                                 </Card>

@@ -17,15 +17,15 @@ const DefiSComponent = () => {
     wideServiceListSec3 = [
         {
             title: 'Market-Market Consulting',
-            image: '/images/wide-service-1.jpg',
+            image: '/assets/images/wide-service-1.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.'
         }, {
             title: 'Decentralized Crypto Banking',
-            image: '/images/wide-service-2.jpg',
+            image: '/assets/images/wide-service-2.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.'
         }, {
             title: 'Decentralized Crypto Banking',
-            image: '/images/wide-service-3.jpg',
+            image: '/assets/images/wide-service-3.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.'
         }
     ];
@@ -60,7 +60,7 @@ const DefiSComponent = () => {
                     <Col md={6} sm={12}>
                     <div className="nft-service-img-div">
                         <Image
-                        src="/images/defi-main.png"
+                        src="/assets/images/defi-main.png"
                         rounded
                         className="nft-service-img"
                         alt=" "
@@ -80,7 +80,7 @@ const DefiSComponent = () => {
                 <Container>
                     <Row>
                     <Col lg={5}>
-                        <Image src="/images/video-thumb.png" />
+                        <Image src="/assets/images/video-thumb.png" />
                     </Col>
 
                     <Col lg={{ span: 6, offset: 1 }}>
@@ -194,7 +194,7 @@ const DefiSComponent = () => {
                     </Col>
 
                     <Col md={{ span: 12, order: 0 }} lg={6}>
-                    <Image src="/images/defi-img2.png" alt=".." />
+                    <Image src="/assets/images/defi-img2.png" alt=".." />
                     </Col>
                 </Row>
                 </Container>

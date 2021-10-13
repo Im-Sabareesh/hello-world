@@ -270,7 +270,7 @@ button:not(.collapsed) {
 }
 
 .button-outer {
-  background: url(../public/images/button-shadow.png) center bottom no-repeat;
+  background: url(../public/assets/images/button-shadow.png) center bottom no-repeat;
   background-size: 90%;
   padding-bottom: 15px;
   width: max-content;
@@ -354,7 +354,7 @@ button:not(.collapsed) {
 // ------------------home page header------------//
 
 .hero-banner-container {
-  background: url(../public/images/hero-banner-bg.png) no-repeat;
+  background: url(../public/assets/images/hero-banner-bg.png) no-repeat;
   min-height: 500px;
   padding-top: 250px;
   padding-bottom: 65px;
@@ -401,7 +401,7 @@ button:not(.collapsed) {
 // ------------------home section 2------------//
 
 .home-section-2 {
-  background: url(../public/images/section2-bg.png) no-repeat;
+  background: url(../public/assets/images/section2-bg.png) no-repeat;
   background-size: cover;
   min-height: 500px;
 
@@ -413,7 +413,7 @@ button:not(.collapsed) {
 // ------------------home section 3------------//
 
 .home-section-3 {
-  background-image: url(../public/images/section3-bg.png);
+  background-image: url(../public/assets/images/section3-bg.png);
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -467,7 +467,7 @@ button:not(.collapsed) {
 // ------------------home section 4 ------------//
 
 .cta-banner1 {
-  background: url(../public/images/cta-bg1.jpg) no-repeat;
+  background: url(../public/assets/images/cta-bg1.jpg) no-repeat;
   border-radius: 10px;
   min-height: 302px;
   background-size: cover;
@@ -477,7 +477,7 @@ button:not(.collapsed) {
   &:after {
     width: 94%;
     min-height: 302px;
-    background: url(../public/images/cta-bg1.jpg) no-repeat;
+    background: url(../public/assets/images/cta-bg1.jpg) no-repeat;
     opacity: 0.38;
     filter: blur(5px);
     content: "";
@@ -500,7 +500,7 @@ button:not(.collapsed) {
 // ------------------home section 5 ------------//
 
 .home-section-5 {
-  background: url(../public/images/section2-bg.png) no-repeat;
+  background: url(../public/assets/images/section2-bg.png) no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -550,7 +550,7 @@ button:not(.collapsed) {
 // ------------------home section 7 ------------//
 
 .cta-banner2 {
-  background: url(../public/images/cta-bg2.jpg) right no-repeat;
+  background: url(../public/assets/images/cta-bg2.jpg) right no-repeat;
   border-radius: 10px;
   min-height: 302px;
   background-size: cover;
@@ -560,7 +560,7 @@ button:not(.collapsed) {
   &:after {
     width: 94%;
     min-height: 302px;
-    background: url(../public/images/cta-bg2.jpg) no-repeat;
+    background: url(../public/assets/images/cta-bg2.jpg) no-repeat;
     opacity: 0.38;
     filter: blur(5px);
     content: "";
@@ -589,7 +589,7 @@ button:not(.collapsed) {
 // ------------------home section 8 ------------//
 
 .home-section-8 {
-  background: url(../public/images/section8-bg.png) no-repeat;
+  background: url(../public/assets/images/section8-bg.png) no-repeat;
   background-size: 100% 100%;
   padding-bottom: 120px !important;
 
@@ -621,7 +621,7 @@ button:not(.collapsed) {
   padding-bottom: 50px !important;
 
   .testimonial-bg {
-    background: url(../public/images/testimonials-bg.svg) 100px 100px no-repeat;
+    background: url(../public/assets/images/testimonials-bg.svg) 100px 100px no-repeat;
     min-height: 400px;
 
     small {
@@ -641,7 +641,7 @@ button:not(.collapsed) {
       content: "";
       width: 70px;
       height: 51px;
-      background: url(../public/images/quote.png);
+      background: url(../public/assets/images/quote.png);
       position: absolute;
       top: 25px;
       right: 25px;
@@ -670,7 +670,7 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-10 {
-  background: url(../public/images/section2-bg.png) no-repeat;
+  background: url(../public/assets/images/section2-bg.png) no-repeat;
   background-size: cover;
   min-height: 500px;
 
@@ -701,7 +701,7 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-11 {
-  background: url(../public/images/home-contactus-bg.png) left top no-repeat;
+  background: url(../public/assets/images/home-contactus-bg.png) left top no-repeat;
   margin-top: -100px;
   padding-top: 100px;
 
@@ -738,7 +738,7 @@ button:not(.collapsed) {
 
 // ------------------about-us-section------------//
 .about-us-banner {
-  background: url(../public/images/about-us-banner-bg.png) no-repeat center;
+  background: url(../public/assets/images/about-us-banner-bg.png) no-repeat center;
   background-position: bottom;
   min-height: 527px;
   padding-bottom: 125px;
@@ -749,7 +749,7 @@ button:not(.collapsed) {
 }
 .about-section1 {
   margin-top: -125px;
-  background: url(../public/images/about-us-ellipse-bg.png) no-repeat right
+  background: url(../public/assets/images/about-us-ellipse-bg.png) no-repeat right
     bottom;
 }
 
@@ -902,7 +902,7 @@ button:not(.collapsed) {
 }
 
 .contactus-banner {
-  background: url(../public/images/contactus-banner.png) no-repeat center;
+  background: url(../public/assets/images/contactus-banner.png) no-repeat center;
   background-position: bottom;
   height: 545px;
   padding-bottom: 125px;
@@ -913,7 +913,7 @@ button:not(.collapsed) {
 }
 
 .contactus-inner-banner {
-  background: url(../public/images/contactus-innerbanner.png) no-repeat center;
+  background: url(../public/assets/images/contactus-innerbanner.png) no-repeat center;
   background-position: bottom;
   padding-bottom: 275px;
   padding-top: 100px;
@@ -984,7 +984,7 @@ button:not(.collapsed) {
       width: 16px;
       height: 16px;
       content: " ";
-      background: url(../public/images/arrow-button-down.png);
+      background: url(../public/assets/images/arrow-button-down.png);
       position: absolute;
       right: 25px;
       top: 64px;
@@ -1065,7 +1065,7 @@ button:not(.collapsed) {
   @include gradient-background("gradient-primary");
 }
 .cta-banner3 {
-  background: url(../public/images/cta-bg3.jpg) right no-repeat;
+  background: url(../public/assets/images/cta-bg3.jpg) right no-repeat;
   border-radius: 10px;
   min-height: 302px;
   background-size: cover;
@@ -1075,7 +1075,7 @@ button:not(.collapsed) {
   &:after {
     width: 94%;
     min-height: 302px;
-    background: url(../public/images/cta-bg3.jpg) no-repeat;
+    background: url(../public/assets/images/cta-bg3.jpg) no-repeat;
     opacity: 0.38;
     filter: blur(5px);
     content: "";
@@ -1119,8 +1119,8 @@ header .main-header {
 }
 
 // ---------------career page start---------------
-.career-hero-banner {
-  background: url(../public/icons/careers-banner.svg) no-repeat;
+.career-hero-banner{
+  background: url(../public/assets/icons/careers-banner.svg) no-repeat;
   min-height: 710px;
   padding-top: 150px;
   background-position: top;
@@ -1153,9 +1153,8 @@ header .main-header {
     }
     &.search-field {
       width: 333px;
-      .form-control {
-        background: url(../public/icons/gradient-search.svg) no-repeat 94%
-          center;
+      .form-control{
+        background: url(../public/assets/icons/gradient-search.svg) no-repeat 94% center;
       }
     }
   }
@@ -1216,7 +1215,7 @@ header .main-header {
 //----------------- defi section------------
 
 .section-glow {
-  background: url(../public/images/glow-bg.png) no-repeat;
+  background: url(../public/assets/images/glow-bg.png) no-repeat;
   padding: 175px 0 100px 0;
   background-size: cover;
 }

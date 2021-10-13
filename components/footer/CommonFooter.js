@@ -75,24 +75,24 @@ const RadiusFooter  = (props) => {
                     className={`${!props.radius ? "text-md-center" : "home-footer-logo"} mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                 >
                     <a href="#" onClick={e => e.preventDefault()} className="brand-logo">
-                        <Image src="/icons/cc-white-logo.svg" className="mb-4" alt=" " />
+                        <Image src="/assets/icons/cc-white-logo.svg" className="mb-4" alt="..." />
                     </a>
                     <p className="light-text-color text-shadow">Follow Us</p>
                     <div className="social-icons">
                         <a href="#" onClick={e => e.preventDefault()} className="mx-3">
-                            <Image src="/icons/facebook.svg" alt=" "/>
+                            <Image src="/assets/icons/facebook.svg" alt="..."/>
                         </a>
                         <a href="#" onClick={e => e.preventDefault()} className="mx-3">
-                            <Image src="/icons/instagram.svg" alt=" "/>
+                            <Image src="/assets/icons/instagram.svg" alt="..."/>
                         </a>
                         <a href="#" onClick={e => e.preventDefault()} className="mx-3">
-                            <Image src="/icons/twitter.svg" alt=" "/>
+                            <Image src="/assets/icons/twitter.svg" alt="..."/>
                         </a>
                         <a href="#" onClick={e => e.preventDefault()} className="mx-3">
-                            <Image src="/icons/youtube.svg" alt=" "/>
+                            <Image src="/assets/icons/youtube.svg" alt="..."/>
                         </a>
                         <a href="#" onClick={e => e.preventDefault()} className="mx-3">
-                            <Image src="/icons/wordpress.svg" alt=" "/>
+                            <Image src="/assets/icons/wordpress.svg" alt="..."/>
                         </a>
 
                     </div>

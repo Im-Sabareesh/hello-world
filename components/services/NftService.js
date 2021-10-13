@@ -44,7 +44,7 @@ const NFTSComponent = () => {
               </Col>
               <Col md={6} sm={12}>
                   <div className="nft-service-img-div">
-                    <Image src="/images/nftesrvices-image1.png" rounded className="nft-service-img" alt=" " />
+                    <Image src="/assets/images/nftesrvices-image1.png" rounded className="nft-service-img" alt=" " />
                   </div>
               </Col>
             </Row>
