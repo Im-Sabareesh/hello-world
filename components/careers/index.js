@@ -179,14 +179,14 @@ const CareersComponent = () => {
           <Row className="py-md-5 py-4">
               <Col xl={4} lg={3} md={6} sm={6} xs={12} className="text-xl-center mb-xl-0 mb-md-4 mb-3">
                   <a href="#" className="brand-logo">
-                      <Image src="icons/cc-white-logo.svg" className="mb-md-4 mb-sm-3 mb-4"/>
+                      <Image src="/assets/iconscc-white-logo.svg" className="mb-md-4 mb-sm-3 mb-4"/>
                   </a>
                   <p className="light-text-color text-shadow mb-md-3 mb-2">Follow Us</p>
                   <div className="social-icons">
-                      <a href="#" className="mx-2"><Image src="icons/facebook.svg" /></a>
-                      <a href="#" className="mx-2"><Image src="icons/instagram.svg" /></a>
-                      <a href="#" className="mx-2"><Image src="icons/twitter.svg" /></a>
-                      <a href="#" className="mx-2"><Image src="icons/youtube.svg" /></a>
+                      <a href="#" className="mx-2"><Image src="/assets/iconsfacebook.svg" /></a>
+                      <a href="#" className="mx-2"><Image src="/assets/iconsinstagram.svg" /></a>
+                      <a href="#" className="mx-2"><Image src="/assets/iconstwitter.svg" /></a>
+                      <a href="#" className="mx-2"><Image src="/assets/iconsyoutube.svg" /></a>
                   </div>
               </Col>
               <Col xl={3} lg={3} md={6} sm={6} xs={12} className="mb-xl-0 mb-md-4 mb-sm-3 mb-4">

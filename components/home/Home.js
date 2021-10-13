@@ -47,113 +47,113 @@ const HomeComponent = () => {
     blockChainUsageSec1 = [
         {
             name: 'Enhanced security',
-            icon: '/icons/enhanced-security.svg'
+            icon: '/assets/icons/enhanced-security.svg'
         }, {
             name: 'Greater transparency',
-            icon: '/icons/greater-transparancy.svg'
+            icon: '/assets/icons/greater-transparancy.svg'
         }, {
             name: 'Instant traceability',
-            icon: '/icons/instant-tracibility.svg'
+            icon: '/assets/icons/instant-tracibility.svg'
         }, {
             name: 'Increased efficiency',
-            icon: '/icons/increased-efficiency.svg'
+            icon: '/assets/icons/increased-efficiency.svg'
         }, {
             name: 'Decentralized Governance',
-            icon: '/icons/decentralized-governance.svg'
+            icon: '/assets/icons/decentralized-governance.svg'
         }
     ],
     serviceListSec2=[
         {
             name: 'Decentraized Finance',
-            icon: '/icons/service-icon1.png',
+            icon: '/assets/icons/service-icon1.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }, {
             name: 'Non Fungible Tokens',
-            icon: '/icons/service-icon2.png',
+            icon: '/assets/icons/service-icon2.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }, {
             name: 'Binance Smart Chain',
-            icon: '/icons/service-icon3.png',
+            icon: '/assets/icons/service-icon3.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }, {
             name: 'Website Development',
-            icon: '/icons/service-icon2.png',
+            icon: '/assets/icons/service-icon2.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }, {
             name: 'Mobile App Development',
-            icon: '/icons/service-icon3.png',
+            icon: '/assets/icons/service-icon3.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }, {
             name: 'AI Technology',
-            icon: '/icons/service-icon6.png',
+            icon: '/assets/icons/service-icon6.png',
             describe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.'
         }
     ],
     blockChainSolutionSec3 = [
         {
             name: 'Obortech Smart Hub',
-            image: '/images/solution-1.jpg',
+            image: '/assets/images/solution-1.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
             link: 'BLOCKCHAIN'
         }, {
             name: 'GDPR Compliance',
-            image: '/images/solution-2.jpg',
+            image: '/assets/images/solution-2.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
             link: 'BLOCKCHAIN'
         }, {
             name: 'Live Ledger',
-            image: '/images/solution-3.jpg',
+            image: '/assets/images/solution-3.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
             link: 'BLOCKCHAIN'
         }, {
             name: 'True Title',
-            image: '/images/solution-4.jpg',
+            image: '/assets/images/solution-4.jpg',
             describe: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
             link: 'BLOCKCHAIN'
         },
     ],
     chooseUSSec5 = [
         {
-            icon: '/icons/whychoose-icon1.svg',
+            icon: '/assets/icons/whychoose-icon1.svg',
             name: 'Focus on Innovation',
             describe: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
         }, {
-            icon: '/icons/whychoose-icon2.svg',
+            icon: '/assets/icons/whychoose-icon2.svg',
             name: 'True Partners',
             describe: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
         }, {
-            icon: '/icons/whychoose-icon3.svg',
+            icon: '/assets/icons/whychoose-icon3.svg',
             name: 'DevOps',
             describe: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
         }, {
-            icon: '/icons/whychoose-icon4.svg',
+            icon: '/assets/icons/whychoose-icon4.svg',
             name: 'Dedicated Teams',
             describe: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
         }
     ],
     quickStatSec6 = [
         {
-            icon: '/icons/industry-awards.svg',
+            icon: '/assets/icons/industry-awards.svg',
             counts: '150+',
             title: 'Industry Awards'
         }, {
-            icon: '/icons/projects.svg',
+            icon: '/assets/icons/projects.svg',
             counts: '150+',
             title: 'Projects'
         }, {
-            icon: '/icons/offices.svg',
+            icon: '/assets/icons/offices.svg',
             counts: '4',
             title: 'Offices'
         }, {
-            icon: '/icons/happy-clients.svg',
+            icon: '/assets/icons/happy-clients.svg',
             counts: '500',
             title: 'Happy Clients'
         }, {
-            icon: '/icons/certified-pmp.svg',
+            icon: '/assets/icons/certified-pmp.svg',
             counts: '4',
             title: 'Certified PMP'
         }, {
-            icon: '/icons/mm-lines-of-code.svg',
+            icon: '/assets/icons/mm-lines-of-code.svg',
             counts: '100',
             title: 'MM Lines of Code'
         }
@@ -190,34 +190,34 @@ const HomeComponent = () => {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe: "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/images/user-1.jpg'
+            image: '/assets/images/user-1.jpg'
         }, {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe: "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/images/user-1.jpg'
+            image: '/assets/images/user-1.jpg'
         }, {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe: "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/images/user-1.jpg'
+            image: '/assets/images/user-1.jpg'
         }
     ],
     insightsListSec10 = [
         {
             title: 'Financial Inclusion, Advanced by Digital Currencies',
             by_date: 'Jane Cooper | 14 March 2021',
-            image: '/images/insight-img1.jpg',
+            image: '/assets/images/insight-img1.jpg',
             link: ''
         }, {
             title: 'Financial Inclusion, Advanced by Digital Currencies',
             by_date: 'Jane Cooper | 14 March 2021',
-            image: '/images/insight-img2.jpg',
+            image: '/assets/images/insight-img2.jpg',
             link: ''
         }, {
             title: 'Financial Inclusion, Advanced by Digital Currencies',
             by_date: 'Jane Cooper | 14 March 2021',
-            image: '/images/insight-img3.jpg',
+            image: '/assets/images/insight-img3.jpg',
             link: ''
         }
     ];
@@ -302,7 +302,7 @@ const HomeComponent = () => {
                     lg={6}
                     className="mt-5 text-end text-lg-end text-md-center"
                     >
-                    <Image src="/images/home-section1-img.png" alt="" />
+                    <Image src="/assets/images/home-section1-img.png" alt="" />
                     </Col>
 
                     <div className="mt-5 mb-3">
@@ -395,7 +395,7 @@ const HomeComponent = () => {
                                     <a href="#" onClick={e => e.preventDefault()} className="link-primary">{item.link}</a>
 
                                     <a href="#" onClick={e => e.preventDefault()}>
-                                        <Image src="/icons/card-arrow.svg" alt="" />
+                                        <Image src="/assets/icons/card-arrow.svg" alt="" />
                                     </a>
                                 </Card.Footer>
                             </Card>
@@ -404,7 +404,7 @@ const HomeComponent = () => {
 
                     <Col md={12} lg={8}>
                     <Card className="custom-card">
-                        <Card.Img variant="top" src="/images/solution-5.jpg" />
+                        <Card.Img variant="top" src="/assets/images/solution-5.jpg" />
                         <Card.Body>
                         <Card.Title>
                             <h3 className="h3">Instasure</h3>
@@ -429,7 +429,7 @@ const HomeComponent = () => {
                         </a>
 
                         <a href="#" onClick={e => e.preventDefault()}>
-                            <Image src="/icons/card-arrow.svg" alt="" />
+                            <Image src="/assets/icons/card-arrow.svg" alt="" />
                         </a>
                         </Card.Footer>
                     </Card>
@@ -459,7 +459,7 @@ const HomeComponent = () => {
                     </div>
 
                     <div>
-                    <Image src="/icons/Arrow.svg" alt="" />
+                    <Image src="/assets/icons/Arrow.svg" alt="" />
                     </div>
                 </div>
                 </Container>
@@ -473,7 +473,7 @@ const HomeComponent = () => {
                 <Container>
                 <Row>
                     <Col md={{ span: 12, order: 0 }} lg={6}>
-                    <Image src="/images/blockchain-business.png" alt=" " />
+                    <Image src="/assets/images/blockchain-business.png" alt=" " />
                     </Col>
 
                     <Col md={12} lg={6}>
@@ -555,7 +555,7 @@ const HomeComponent = () => {
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">
-                    <Image src="/images/we-work.png" alt=" " />
+                    <Image src="/assets/images/we-work.png" alt=" " />
                     </Col>
 
                     <Col md={12} className="mt-5 mb-5">
@@ -675,7 +675,7 @@ const HomeComponent = () => {
                                 </Card.Title>
                                 <Card.Text>{item.by_date}</Card.Text>
                                     <a href="#" onClick={e => e.preventDefault()} className="link-primary">
-                                        Learn More <Image src="/icons/purple-arrow.svg" alt=" "/>{" "}
+                                        Learn More <Image src="/assets/icons/purple-arrow.svg" alt=" "/>{" "}
                                     </a>
                                 </Card.Body>
                             </Card>
@@ -806,7 +806,7 @@ const HomeComponent = () => {
                             </Col>
 
                             <Col md={12} lg={6} className="contact-right-form">
-                                <Image src="/images/contact-form-img.png" alt=" " />
+                                <Image src="/assets/images/contact-form-img.png" alt=" " />
                             </Col>
                         </Row>
                         </div>
