@@ -155,6 +155,9 @@ button:not(.collapsed) {
       }
      
      
+      &:hover{
+        color: #fff !important;
+      }
     }
   }
 }
@@ -182,6 +185,7 @@ button:not(.collapsed) {
      
     }
   }
+
 }
 
 
