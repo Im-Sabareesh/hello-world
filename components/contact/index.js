@@ -74,7 +74,7 @@ const ContactComponent = () => {
             <Row>
                 <Col md={6} lg={6}>
                 <p className="contact-img mb-5">
-                    <Image src="/images/contactus.svg" alt=" " />
+                    <Image src="/assets/images/contactus.svg" alt=" " />
                 </p>
 
                 <div className="contact-small-section pt-4">
@@ -90,12 +90,12 @@ const ContactComponent = () => {
                 <div className="contact-small-section contact-small-section-contact pt-4">
                     <h3 className="h3">Contact Us</h3>
                     <p>
-                    <Image src="/icons/contact-phone.svg" alt=" " className="me-2" />
+                    <Image src="/assets/icons/contact-phone.svg" alt=" " className="me-2" />
                     <a href="tel:+91-9646579412">+91-9646579412</a>
                     </p>
 
                     <p>
-                    <Image src="/icons/contact-email.svg" alt=" " className="me-2" />
+                    <Image src="/assets/icons/contact-email.svg" alt=" " className="me-2" />
                     <a href="mailto:info@chaincodeconsulting.com">
                         info@chaincodeconsulting.com
                     </a>
@@ -106,19 +106,19 @@ const ContactComponent = () => {
                     <h3 className="h3">Follow Us </h3>
                     <p className="contactus-sociallinks">
                     <a href="#">
-                        <Image src="/images/fb-p.png" alt="" />
+                        <Image src="/assets/images/fb-p.png" alt="" />
                     </a>
                     <a href="#">
-                        <Image src="/images/insta-p.png" alt="" />
+                        <Image src="/assets/images/insta-p.png" alt="" />
                     </a>
                     <a href="#">
-                        <Image src="/images/twitter-p.png" alt="" />
+                        <Image src="/assets/images/twitter-p.png" alt="" />
                     </a>
                     <a href="#">
-                        <Image src="/images/youtube-p.png" alt="" />
+                        <Image src="/assets/images/youtube-p.png" alt="" />
                     </a>
                     <a href="#">
-                        <Image src="/images/wp-p.png" alt="" />
+                        <Image src="/assets/images/wp-p.png" alt="" />
                     </a>
                     </p>
                 </div>
@@ -201,14 +201,14 @@ const ContactComponent = () => {
                 <h2 className="h2 mb-5"> Our Offices </h2>
 
                 <div className="ouroffice-banner">
-                    <Image src="/images/contactus.jpg" alt="" />
+                    <Image src="/assets/images/contactus.jpg" alt="" />
                 </div>
               </Col>
 
               {_.map(branchList, (item) => (                  
                 <Col md={4} lg={4} key={_.uniqueId()} className="d-flex mt-5">
                   <div className=" mt-1 me-3 flex-shrink-0">
-                      <Image src="/icons/mappin.svg" alt=" " />
+                      <Image src="/assets/icons/mappin.svg" alt=" " />
                   </div>
                   <div className="address-cont ml-2 flex-shrink-0">
                       <h2 className="h2 mb-3"> {item.location} </h2>
@@ -220,12 +220,12 @@ const ContactComponent = () => {
                       </p>
                       <div className="contact-small-section contact-small-section-contact pt-3">
                         <p>
-                            <Image src="/icons/contact-phone.svg" alt=" " className="me-2"  />
+                            <Image src="/assets/icons/contact-phone.svg" alt=" " className="me-2"  />
                             <a href="tel:+91-9646579412">{item.phone}</a>
                         </p>
 
                         <p>
-                            <Image src="/icons/contact-email.svg" alt=" " className="me-2"  />
+                            <Image src="/assets/icons/contact-email.svg" alt=" " className="me-2"  />
                             <a href="mailto:info@chaincodeconsulting.com">{item.mailID}</a>
                         </p>
                       </div>

@@ -52,8 +52,8 @@ const CareerDetailsComponent = () => {
                         </Col>
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
-                                <Image src="/images/career-details-mobile-img1.png" alt="career-overview-img" className="overview-mobile-img d-none d-lg-block" />
-                                <Image src="/images/career-details-mobile-img1.png" alt="career-overview-img"  className="overview-mobile-img d-block d-lg-none" />
+                                <Image src="/assets/images/career-details-mobile-img1.png" alt="career-overview-img" className="overview-mobile-img d-none d-lg-block" />
+                                <Image src="/assets/images/career-details-mobile-img1.png" alt="career-overview-img"  className="overview-mobile-img d-block d-lg-none" />
                             </div>
                         </Col>
                     </Row>

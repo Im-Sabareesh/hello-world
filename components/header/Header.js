@@ -21,11 +21,11 @@ const Header = () => {
   const whiteLayout = ["about", "contact"];
   const [state, setState] = React.useState("");
   const socialMedisIcons = [
-      "/icons/facebook.svg",
-      "/icons/instagram.svg",
-      "/icons/twitter.svg",
-      "/icons/youtube.svg",
-      "/icons/wordpress.svg",
+      "/assets/icons/facebook.svg",
+      "/assets/icons/instagram.svg",
+      "/assets/icons/twitter.svg",
+      "/assets/icons/youtube.svg",
+      "/assets/icons/wordpress.svg",
   ];
     
   const listenScrollEvent = (e) => {
@@ -74,7 +74,7 @@ const Header = () => {
             <Col sm={4} md={3} lg={2}>
               <Link href="/">
                 <a >
-                  <Image src="/icons/logo.svg" alt="" className={!state && _.some(whiteLayout,lay=>router.pathname.includes(lay)) &&"white-logo"}/>
+                  <Image src="/assets/icons/logo.svg" alt="" className={!state && _.some(whiteLayout,lay=>router.pathname.includes(lay)) &&"white-logo"}/>
                 </a>
               </Link>
             </Col>
@@ -124,7 +124,7 @@ const Header = () => {
                 </Button>
 
                 <a href="#" className="ms-2 header-search" onClick={e => e.preventDefault()}>
-                  <Image src="/icons/icon-search.svg" alt="" className={!state && _.some(whiteLayout,lay=>router.pathname.includes(lay)) &&"white-logo"} />
+                  <Image src="/assets/icons/icon-search.svg" alt="" className={!state && _.some(whiteLayout,lay=>router.pathname.includes(lay)) &&"white-logo"} />
                 </a>
             </Col>
           </Row>
