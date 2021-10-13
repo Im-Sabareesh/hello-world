@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@components/*": [
+          "components/*"
+        ],
+        "@components": [
+          "components"
+        ],
+        "@public/*": [
+          "public/*"
+        ],
+        "@public": [
+          "public"
+        ],
+        "@styles/*": [
+          "styles/*"
+        ],
+        "@styles": [
+          "styles"
+        ],
+        "@components/icons/*": [
+          "components/icons/*"
+        ],
+        "@components/icons": [
+          "components/icons"
+        ],
+        // "@redux/*": [
+        //   "src/redux/*"
+        // ],
+        // "@redux": [
+        //   "src/redux"
+        // ],
+        // "@i18n": [
+        //   "./i18n"
+        // ],
+        // "@test/*": [
+        //   "test/*"
+        // ],
+        // "@test": [
+        //   "test"
+        // ]
+      }
+    }
+  }

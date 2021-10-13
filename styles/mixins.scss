@@ -1,0 +1,48 @@
+@use 'sass:map';
+@import "./variables.scss";
+$breakpoints: (   
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+@mixin media-query($key) {
+    $size: map-get($breakpoints, $key);
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-query-max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@function color($color) {
+    @return map-get($colors, $color);
+}
+
+@mixin media-breakpoint-between($key1,$key2) {
+    $size1: map-get($breakpoints, $key1);
+    $size2: map-get($breakpoints, $key2);
+    @media (min-width: $size1) and (max-width: #{$size2 - 0.02px}) {
+        @content;
+    }
+}
+
+@mixin gradient-background($color) { 
+        background: -webkit-linear-gradient(color($color));
+        background: -moz-linear-gradient(color($color));
+        background: -o-linear-gradient(color($color));
+        background: linear-gradient(color($color)); 
+  }
+
+@mixin gradient-color($color) { 
+    color: -webkit-linear-gradient(color($color));
+    color: -moz-linear-gradient(color($color));
+    color: -o-linear-gradient(color($color));
+    color: linear-gradient(color($color));  
+  }

@@ -1,0 +1,1228 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+@import "~bootstrap/scss/bootstrap";
+
+/* Base style */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $primaryFont;
+  color: color("dark-secondary");
+  line-height: 26px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0px;
+  font-weight: 700;
+  color: color("dark-primary");
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:focus,
+a:hover {
+  // color: #333;
+  text-decoration: none;
+}
+.btn,
+.btn:focus {
+  // box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0);
+}
+button:focus {
+  box-shadow: none !important;
+}
+button:not(.collapsed) {
+  background-color: transparent;
+}
+.form-control:focus {
+  outline: 0;
+  // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
+
+.h1 {
+  font-size: $heading1;
+  line-height: 74px;
+  color: color("dark-secondary");
+}
+
+.h2 {
+  font-size: $heading2;
+}
+
+.h3 {
+  font-size: $heading1;
+  font-size: 20px;
+}
+
+// ----------font color---------
+
+.light-text-color {
+  color: color("light-primary");
+}
+.secondary-text-color {
+  color: color("secondary");
+}
+
+.dark-text-color {
+  color: color("dark-primary");
+}
+.dark-secondary-text-color {
+  color: color("dark-secondary");
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dark-box-shadow {
+  box-shadow: 0px 4px 12px 0px #0000001f;
+}
+// ----------font color--------
+
+.link-primary {
+  color: color("secondary");
+
+  &:hover {
+    color: color("primary");
+  }
+}
+
+.link-primary-gradient {
+  @include gradient-color("gradient-primary");
+
+  &:hover {
+    @include gradient-color("gradient-primary");
+  }
+}
+
+.nav-item 
+{
+  &.dropdown a
+  {
+    &:after
+    {
+      box-sizing: border-box;
+      height: 8px;
+      width: 8px;
+      border-style: solid;
+      border-color:#000000;
+      border-width: 0px 1px 1px 0px;
+      transform: rotate(45deg);
+      position: relative;
+      left:9px;
+    }
+  }
+}
+
+
+.inner-page-header
+{
+  .nav-item 
+{
+  &.dropdown a
+  {
+    &:after
+    {
+      border-color:#ffffff;
+    }
+  }
+}
+}
+
+.sticky
+{
+  .inner-page-header
+{
+  .nav-item 
+{
+  &.dropdown a
+  {
+    &:after
+    {
+      border-color:#000000;
+
+    }
+  }
+}
+}
+}
+
+
+// ------------------card-----------
+
+.card {
+  border-radius: 8px;
+  border: none;
+}
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.min-size-btn {
+  min-width: 175px !important;
+}
+
+.red-btn {
+  @include gradient-background("red-btn");
+  font-weight: 600;
+  font-size: 18px;
+  height: 47px;
+  border: transparent;
+  min-width: 120px;
+  color: #ffffff;
+  border-radius: 28px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include gradient-background("red-btn-hover");
+    color: white;
+    border: none;
+  }
+}
+
+.btn-lg {
+  width: 205px;
+  height: 56px;
+}
+
+.button-outer {
+  background: url(../public/images/button-shadow.png) center bottom no-repeat;
+  background-size: 90%;
+  padding-bottom: 15px;
+  width: max-content;
+}
+.purple-gradient-text-color {
+  @include gradient-background("gradient-secondary");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-gradient-secondary {
+  @include gradient-background("gradient-secondary");
+
+  // background: color("gradient-secondary");
+}
+.bg-light-primary {
+  @include gradient-background("light-primary");
+
+  // background: color("light-primary");
+}
+.bg-gradient-light {
+  @include gradient-background("gradient-light");
+}
+
+//------------------ header white logo------------------
+.white-logo {
+  filter: brightness(0) invert(1);
+}
+// ------------------header white logo------------------
+// ------------------home page header------------//
+
+.sticky {
+  .main-header {
+    background: #ffffff;
+    box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  }
+}
+
+.header-top {
+  background: color("secondary");
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  // letter-spacing: 0.346154px;
+  color: color("light-primary");
+
+  .topheader-text {
+  }
+
+  .social-links {
+    img {
+      height: 18px;
+    }
+
+    li {
+      display: inline;
+      padding-left: 25px;
+
+      &:first-child {
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+.main-header {
+  .main-menu {
+    .nav-link {
+      color: color("dark-primary") !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 40px;
+    }
+  }
+}
+
+// ------------------home page header------------//
+
+.hero-banner-container {
+  background: url(../public/images/hero-banner-bg.png) no-repeat;
+  min-height: 500px;
+  padding-top: 250px;
+  padding-bottom: 65px;
+  background-size: cover;
+}
+
+.featured-box-container {
+  @include gradient-background("gradient-third");
+  border-radius: 9.67499px;
+  height: 85px;
+  text-align: center;
+  padding: 33px;
+  transition: all 0.3s ease-in-out;
+  span {
+    font-size: 21px;
+    color: color("light-primary");
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 20px 0px rgba(50, 50, 50, 0.4);
+  }
+}
+
+.heading-line {
+  border-top: 2px solid color("secondary");
+  margin-top: 5px;
+  width: 93.6px;
+  margin-left: 20px;
+}
+
+// ------------------home section 1------------//
+
+.home-section1 {
+  @include gradient-background("gradient-primary-opacity");
+  min-height: 600px;
+
+  .home-section-icons {
+    height: 165px;
+  }
+}
+
+// ------------------home section 2------------//
+
+.home-section-2 {
+  background: url(../public/images/section2-bg.png) no-repeat;
+  background-size: cover;
+  min-height: 500px;
+
+  .service-thumb img {
+    height: 60px;
+  }
+}
+
+// ------------------home section 3------------//
+
+.home-section-3 {
+  background-image: url(../public/images/section3-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  padding-bottom: 125px !important;
+
+  h2 {
+    color: color("light-primary");
+  }
+}
+
+.custom-card {
+  margin-bottom: 30px;
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    margin-bottom: 0.5rem;
+    height: 55px;
+  }
+
+  .card-body {
+    padding: 1.2rem 1.2rem;
+  }
+
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 80px;
+  }
+
+  .card-footer {
+    padding: 1.2rem 1.2rem;
+    background-color: #ffffff !important;
+    border-top: none;
+
+    a {
+      font-weight: 800;
+    }
+  }
+  .card-footer:last-child {
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+}
+
+// ------------------home section 4 ------------//
+
+.cta-banner1 {
+  background: url(../public/images/cta-bg1.jpg) no-repeat;
+  border-radius: 10px;
+  min-height: 302px;
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+
+  &:after {
+    width: 94%;
+    min-height: 302px;
+    background: url(../public/images/cta-bg1.jpg) no-repeat;
+    opacity: 0.38;
+    filter: blur(5px);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3%;
+    bottom: -10px;
+  }
+
+  .cta-txt {
+    width: 240px;
+
+    h2 {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// ------------------home section 5 ------------//
+
+.home-section-5 {
+  background: url(../public/images/section2-bg.png) no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+
+// ------------------home section 6 ------------//
+
+.home-section-6 {
+  @include gradient-background("gradient-fourth");
+  background-size: cover;
+
+  h2 {
+    color: color("light-primary");
+  }
+
+  .counter-thumb {
+    color: color("light-primary");
+    position: relative;
+
+    &:after {
+      width: 2px;
+      height: 50px;
+      background: color("light-primary");
+      content: "";
+      position: absolute;
+      opacity: 0.2;
+      top: 50px;
+      right: 0px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    span {
+      font-size: 56px;
+      font-weight: 800;
+    }
+
+    strong {
+      font-size: 20px;
+    }
+  }
+}
+
+// ------------------home section 7 ------------//
+
+.cta-banner2 {
+  background: url(../public/images/cta-bg2.jpg) right no-repeat;
+  border-radius: 10px;
+  min-height: 302px;
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+
+  &:after {
+    width: 94%;
+    min-height: 302px;
+    background: url(../public/images/cta-bg2.jpg) no-repeat;
+    opacity: 0.38;
+    filter: blur(5px);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3%;
+    bottom: -10px;
+  }
+
+  .cta-txt {
+    width: 750px;
+    h2 {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.home-section-7 {
+  .workwithus-txt {
+    font-size: 20px;
+    color: color("dark-secondary");
+  }
+}
+
+// ------------------home section 8 ------------//
+
+.home-section-8 {
+  background: url(../public/images/section8-bg.png) no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 120px !important;
+
+  h2 {
+    color: color("light-primary");
+  }
+
+  .custom-card2 {
+    padding: 10px;
+    color: color("dark-secondary");
+    margin-top: 40px;
+
+    &.card {
+      border-radius: 4px;
+    }
+
+    .red-btn {
+      width: 270px;
+      height: 40px;
+    }
+  }
+}
+
+// ------------------home section 9 ------------//
+
+.home-section-9 {
+  @include gradient-background("gradient-fifth");
+  background-size: 100% 100%;
+  padding-bottom: 50px !important;
+
+  .testimonial-bg {
+    background: url(../public/images/testimonials-bg.svg) 100px 100px no-repeat;
+    min-height: 400px;
+
+    small {
+      color: color("secondary");
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .testimonial-cont {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 70px;
+      height: 51px;
+      background: url(../public/images/quote.png);
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+
+    .testimonial-user-cont {
+      .user-thumb {
+        img {
+          width: 65px;
+          height: 65px;
+          object-fit: cover;
+          margin-right: 25px;
+        }
+      }
+      .user-name {
+        padding-right: 50px;
+      }
+    }
+
+    .testimonials-txt {
+      font-size: 14px;
+    }
+  }
+}
+
+// ------------------home section 9 ------------//
+
+.home-section-10 {
+  background: url(../public/images/section2-bg.png) no-repeat;
+  background-size: cover;
+  min-height: 500px;
+
+  .insight-card {
+    background: none;
+    .card-img-top {
+      height: 251px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .card-body {
+      padding: 0px;
+    }
+
+    .card-text {
+      color: #898989;
+      font-size: 14px;
+    }
+
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+// ------------------home section 9 ------------//
+
+.home-section-11 {
+  background: url(../public/images/home-contactus-bg.png) left top no-repeat;
+  margin-top: -100px;
+  padding-top: 100px;
+
+  .home-contact-card {
+    padding: 40px;
+    background: color("light-primary");
+    box-shadow: 0px 8.19px 40.95px rgba(19, 62, 110, 0.16);
+    border-radius: 24px;
+    padding-bottom: 28px;
+
+    .form-label {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+
+    .form-control {
+      border: none;
+      border-bottom: #ced9eb solid 1px;
+      border-radius: 0px;
+      margin-bottom: 15px;
+    }
+
+    .form-check-label {
+      font-size: 10px;
+      line-height: 10px;
+      margin-left: 10px;
+      color: color("dark-secondary");
+      opacity: 0.7;
+    }
+  }
+}
+
+// ------------------about-us-section------------//
+.about-us-banner {
+  background: url(../public/images/about-us-banner-bg.png) no-repeat center;
+  background-position: bottom;
+  min-height: 490px;
+  padding-bottom: 125px;
+  background-size: cover;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+}
+.about-section1 {
+  margin-top: -90px;
+  background: url(../public/images/about-us-ellipse-bg.png) no-repeat right
+    bottom;
+}
+
+.our-story-block-number {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #c4c4c4;
+  span {
+    font-size: 14px;
+    color: #c4c4c4;
+  }
+}
+.line-animated {
+  width: 4px;
+  height: 115px;
+  background-color: #c4c4c4;
+}
+
+.our-story-block {
+  .our-story-block-content {
+    p {
+      color: #7a7a7a;
+    }
+  }
+  &:hover {
+    .line-animated {
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: color("secondary");
+        animation: fadeInUp 1s ease-in-out 2s forwards;
+        height: 65px;
+        width: 4px;
+        border-radius: 0.25rem !important;
+        bottom: 0;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 0, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+    p {
+      color: color("dark-secondary");
+    }
+    .our-story-block-number {
+      border: 1px solid #6f75ff;
+      outline: 2px solid #a8acff;
+      box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
+      -webkit-box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
+      -moz-box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
+    }
+  }
+}
+.about-section3 {
+  .our-story-block {
+    &:hover {
+      .line-animated {
+        &:before {
+          background: color("light-primary");
+        }
+      }
+    }
+  }
+}
+.about-section4 {
+  .our-team-block {
+    .line-animated {
+      height: 65px;
+    }
+  }
+  .lets-meet-box {
+    width: 420px;
+    margin-top: -100px;
+    border-radius: 8px;
+    .our-team-block {
+      .h3.dark-secondary-text-color {
+        font-size: 19px;
+      }
+    }
+  }
+  .about-section5 {
+    .our-team {
+      .card-title {
+        font-size: 20px;
+      }
+      .card-img-top {
+        width: 213px;
+        height: 213px;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+    }
+    .social-icons a {
+      width: 34px;
+      height: 34px;
+      border: 1px solid #c4c4c4;
+    }
+  }
+}
+.inner-page-header {
+  .main-menu {
+    .nav-link {
+      color: color("light-primary") !important;
+    }
+  }
+}
+.our-team {
+  border-radius: 12px;
+  box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+}
+.footer-section
+{
+  .social-icons
+  {
+    img
+    {
+      height:19px;
+    }
+  }
+}
+// ------------------about-us-section------------//
+
+// ----------------Contact us page---------------//
+
+.contactus-container {
+  .ouroffice-container {
+    @include gradient-background("gradient-primary-opacity");
+  }
+
+  .ouroffice-banner {
+    img {
+      max-width: unset;
+      margin-left: 15%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .address-cont {
+    .address-txt {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.contactus-banner {
+  background: url(../public/images/contactus-banner.png) no-repeat center;
+  background-position: bottom;
+  height: 545px;
+  padding-bottom: 125px;
+  background-size: cover;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+}
+
+.contactus-inner-banner {
+  background: url(../public/images/contactus-innerbanner.png) no-repeat center;
+  background-position: bottom;
+  padding-bottom: 275px;
+  padding-top: 100px;
+  display: grid;
+  place-items: center;
+  background-position-y: top 100px;
+  background-size: contain;
+}
+
+.contact-small-section {
+  .contactus-sociallinks {
+    a {
+      margin-right: 15px;
+      img {
+        height: 20px;
+      }
+    }
+  }
+
+  a {
+    color: color("secondary");
+  }
+
+  &.contact-small-section-contact {
+    a {
+      color: color("dark-primary");
+    }
+  }
+}
+
+.contact-img {
+  margin-top: 60px;
+}
+
+.getintouch-txt {
+  font-size: 20px;
+}
+
+.getintouch-form {
+  .form-group {
+    margin-bottom: 32px;
+  }
+
+  .form-label {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .form-control {
+    background: linear-gradient(
+      90deg,
+      rgba(111, 116, 255, 0.12) 0%,
+      rgba(94, 157, 255, 0.28) 100%
+    );
+    border-radius: 30px;
+    border: none;
+    height: 60px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .select-field {
+    position: relative;
+
+    &:after {
+      width: 16px;
+      height: 16px;
+      content: " ";
+      background: url(../public/images/arrow-button-down.png);
+      position: absolute;
+      right: 25px;
+      top: 64px;
+    }
+  }
+
+  .msg-field {
+    height: 225px;
+    resize: none;
+  }
+}
+
+.contactus-footer {
+  background: color("secondary");
+}
+
+// ------------------footer-section------------//
+.footer-section {
+  a {
+    &:hover {
+      color: color("dark-primary");
+    }
+  }
+}
+.footer-after-line li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 18px;
+  background-color: #ffffff;
+  top: 6px;
+  margin: 0 8px;
+}
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.home-footer {
+  border-top-left-radius: 88px;
+  border-top-right-radius: 88px;
+  padding-top: 300px;
+  margin-top: -300px;
+}
+
+// ------------------footer-section------------//
+
+// ------------------NFT Services-section------------//
+.service-inner-section1 {
+  padding-top: 155px;
+  padding-bottom: 65px;
+  display: grid;
+  place-items: center;
+  .nft-service-img {
+    width: 100%;
+    // height: 440px;
+    // object-fit: cover;
+    margin-bottom: -140px;
+    // border-radius: 0 !important;
+  }
+}
+.service-inner-section2 {
+  @include gradient-background("gradient-primary-opacity");
+  // padding: 175px 0 100px 0;
+  // background-size: cover;
+}
+.nft-page-footer {
+  @include gradient-background("gradient-primary");
+}
+.cta-banner3 {
+  background: url(../public/images/cta-bg3.jpg) right no-repeat;
+  border-radius: 10px;
+  min-height: 302px;
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+
+  &:after {
+    width: 94%;
+    min-height: 302px;
+    background: url(../public/images/cta-bg3.jpg) no-repeat;
+    opacity: 0.38;
+    filter: blur(5px);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3%;
+    bottom: -10px;
+  }
+
+  .cta-txt {
+    width: 750px;
+    h2 {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+  }
+}
+// ------------------NFT Services-section------------//
+
+// header start
+header .main-header {
+  position: relative;
+}
+.fixed-top.sticky .main-menu .nav-link {
+  color: #121212 !important;
+}
+.about-section5 {
+  .our-team {
+    .card-img-top {
+      margin: 0 auto;
+    }
+  }
+}
+.about-us-page .header-search img{
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+.about-us-page .fixed-top.sticky .header-search img{
+  -webkit-filter: brightness(1) invert(0);
+  filter: brightness(1) invert(0);
+}
+
+// ---------------career page start---------------
+.career-hero-banner{
+  background: url(../public/icons/careers-banner.svg) no-repeat;
+  min-height: 710px;
+  padding-top: 150px;
+  background-position: top;
+  margin: 164px 0 100px 0;
+}
+.listing-div {
+  li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    line-height: 30px;
+    color: color("dark-secondary");
+    span{
+      padding-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+.career-page{
+  .form-field{
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+    .form-control, .form-select{
+      border: 1px solid #CECECE;
+      border-radius: 58px;
+      height: 58px;
+      padding: 10px 20px;
+    }
+    &.search-field{
+      width: 333px;
+      .form-control{
+        background: url(../public/icons/gradient-search.svg) no-repeat 94% center;
+      }
+    }
+  }
+}
+.w-1k-block{
+  width: 1082px;
+  box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+}
+.career-section1{
+  a{
+    &:hover{
+      color: #6f75ff;
+    }
+  }
+}
+.career-section2{
+  .w-1k-block{
+    margin-top: 60px;
+  }
+}
+.career-section3{
+  padding: 90px 0 180px 0;
+  .job-position{
+    width: 50%;
+    span{
+      width: 50%;
+      display: block;
+    }
+  }
+  .job-location, .job-posted{
+    width: 150px;
+    margin-right: 20px;
+  }
+}
+.gradient-btn {
+  @include gradient-background("gradient-secondary");
+  font-weight: 600;
+  font-size: 18px;
+  height: 47px;
+  border: transparent;
+  color: #ffffff;
+  border-radius: 28px;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include gradient-background("gradient-btn-hover");
+    color: white;
+    border: none;
+  }
+}
+
+// ---------------career page end---------------
+
+//----------------- defi section------------
+
+.section-glow {
+  background: url(../public/images/glow-bg.png) no-repeat;
+  padding: 175px 0 100px 0;
+  background-size: cover;
+}
+
+.defi-section2 {
+  @include gradient-background("gradient-primary-opacity");
+}
+
+.service-inner-section4 {
+  @include gradient-background("gradient-sixth");
+}
+
+.ul-list {
+  padding-left: 15px;
+  li {
+    padding-bottom: 30px;
+    list-style: disc;
+  }
+}
+
+
+
+// ----------------------career page details start----------------
+
+// ---------breadcrumb start---------
+.breadcrumb-section{
+  margin-top: 120px;
+}
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">";
+}
+.breadcrumb-item{
+  &.active{
+    color: color("dark-secondary");
+  }
+  a{
+    color: color("dark-secondary");
+  }
+}
+
+// ---------breadcrumb start---------
+
+.careerdetail-overview-section{
+  .location-element{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .job-overview{
+    width: 510px;
+  }
+  .overview-img{
+    img{
+      max-width: unset;
+      margin-left: -100px;
+    }
+  }
+}
+.careerdetail-roles-section{
+  .roles-responsibility{
+    padding: 70px 55px;
+    border-radius: 12px;
+    box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+  }
+}
+.career-listings{
+  padding-left: 30px;
+  li{
+    list-style-type: disc;
+    &::marker{
+      color: color("dark-secondary");
+      font-size: 19px;
+    }
+  }
+}
+.career-apply-btn{
+  width: 280px;
+}
+// ----------------------career page details end----------------
