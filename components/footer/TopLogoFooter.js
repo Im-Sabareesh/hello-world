@@ -99,7 +99,7 @@ const TopLogoFooter  = () => {
                                 <li key={_.uniqueId()} className="mb-2">
                                     { listItem.route !== '#' ?
                                         <Link href={listItem.route}>
-                                            <a className="light-text-color" onClick={e => e.preventDefault()} >
+                                            <a className="light-text-color">
                                                 {listItem.name}
                                             </a>
                                         </Link> :

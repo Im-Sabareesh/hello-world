@@ -98,12 +98,12 @@ const Header = () => {
                         <NavDropdown title="Services" id="basic-nav-dropdown">
                           <NavDropdown.Item >
                             <Link href='/services/NFTServices'>
-                              <span className="dropdown-item">NFT Development</span>
+                              NFT Development
                             </Link>
                           </NavDropdown.Item>
                           <NavDropdown.Item >
                             <Link href='/services/DefiServices'>
-                              <span className="dropdown-item">Defi development</span>
+                              Defi development
                             </Link>
                           </NavDropdown.Item>
                         </NavDropdown>
