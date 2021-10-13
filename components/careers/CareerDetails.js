@@ -18,7 +18,7 @@ const CareerDetailsComponent = () => {
                     <Row>
                         <Col>
                             <Breadcrumb>
-                                <Breadcrumb.Item href="#">Careers </Breadcrumb.Item>
+                                <Breadcrumb.Item href="#" onClick={e => e.preventDefault()}>Careers </Breadcrumb.Item>
                                 <Breadcrumb.Item active>User Experience Designer</Breadcrumb.Item>
                             </Breadcrumb>
                         </Col>

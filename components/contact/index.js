@@ -83,7 +83,7 @@ const ContactComponent = () => {
                     Chaincode consulting is an Enterprise Blockchain development
                     and consulting firm. We are a team of highly experienced
                     developers.
-                    <a href="#"> Read more</a>
+                    <a href="#" onClick={e => e.preventDefault()} > Read more</a>
                     </p>
                 </div>
 
@@ -105,19 +105,19 @@ const ContactComponent = () => {
                 <div className="contact-small-section pt-4">
                     <h3 className="h3">Follow Us </h3>
                     <p className="contactus-sociallinks">
-                    <a href="#">
+                    <a href="#" onClick={e => e.preventDefault()} >
                         <Image src="/images/fb-p.png" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="#" onClick={e => e.preventDefault()} >
                         <Image src="/images/insta-p.png" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="#" onClick={e => e.preventDefault()} >
                         <Image src="/images/twitter-p.png" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="#" onClick={e => e.preventDefault()} >
                         <Image src="/images/youtube-p.png" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="#" onClick={e => e.preventDefault()} >
                         <Image src="/images/wp-p.png" alt="" />
                     </a>
                     </p>
