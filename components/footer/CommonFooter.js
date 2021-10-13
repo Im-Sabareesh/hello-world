@@ -64,7 +64,7 @@ const RadiusFooter  = (props) => {
     ];
 
     return (
-        <footer className={`${props.radius&& "home-footer"} footer-section bg-gradient-secondary`}>
+        <footer className={`${props.radius&& "home-footer"} footer-section`}>
             <Container>
             <Row className="py-5 pb-1">
                 <Col

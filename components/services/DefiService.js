@@ -176,7 +176,7 @@ const DefiSComponent = () => {
             <section className="service-inner-section4 py-5">
                 <Container>
                 <Row>
-                    <Col md={12} lg={6}>
+                    <Col md={12} lg={6} className="my-auto">
                     <h2 className="h2 mb-4">
                         {" "}
                         Blockchain solutions for frictionless business{" "}

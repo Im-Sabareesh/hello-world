@@ -135,6 +135,11 @@ button:not(.collapsed) {
 {
   &.dropdown a
   {
+    color:#000000;
+    &:active
+    {
+      background:none !important;
+    }
     &:after
     {
       box-sizing: border-box;
@@ -985,6 +990,7 @@ button:not(.collapsed) {
   border-top-right-radius: 88px;
   padding-top: 300px;
   margin-top: -300px;
+  @include gradient-background("gradient-primary");
   .social-icons
   {
     a
