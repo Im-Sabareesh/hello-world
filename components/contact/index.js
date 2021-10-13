@@ -135,58 +135,58 @@ const ContactComponent = () => {
 
                 <div className="getintouch-form mt-5">
                     <Form>
-                    <Form.Group className="form-group" controlId="">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" placeholder="" />
-                    </Form.Group>
+                        <Form.Group className="form-group" controlId="">
+                            <Form.Label>Your Name</Form.Label>
+                            <Form.Control type="text" placeholder="" />
+                        </Form.Group>
 
-                    <Form.Group className="form-group" controlId="">
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control type="text" placeholder="" />
-                    </Form.Group>
+                        <Form.Group className="form-group" controlId="">
+                            <Form.Label>Your Email</Form.Label>
+                            <Form.Control type="text" placeholder="" />
+                        </Form.Group>
 
-                    <Form.Group className="form-group" controlId="">
-                        <Form.Label>Contact Number</Form.Label>
-                        <Form.Control type="text" placeholder="" />
-                    </Form.Group>
+                        <Form.Group className="form-group" controlId="">
+                            <Form.Label>Contact Number</Form.Label>
+                            <Form.Control type="text" placeholder="" />
+                        </Form.Group>
 
-                    <Form.Group
-                        className="form-group select-field"
-                        controlId=""
-                    >
-                        <Form.Label>Service you are interested in </Form.Label>
-                        <Form.Select
-                        aria-label="Default select example"
-                        className="form-control select"
+                        <Form.Group
+                            className="form-group select-field"
+                            controlId=""
                         >
-                        <option>Select service</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        </Form.Select>
-                    </Form.Group>
+                            <Form.Label>Service you are interested in </Form.Label>
+                            <Form.Select
+                            aria-label="Default select example"
+                            className="form-control select"
+                            >
+                            <option>Select service</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            </Form.Select>
+                        </Form.Group>
 
-                    <Form.Group
-                        className="mb-3"
-                        controlId="exampleForm.ControlTextarea1"
-                    >
-                        <Form.Label>Your Message</Form.Label>
-                        <Form.Control
-                        as="textarea"
-                        className="msg-field"
-                        rows={3}
-                        />
-                    </Form.Group>
-
-                    <Form.Group className="button-outer">
-                        <Button
-                        variant="primary"
-                        className="red-btn red-btn-shadow btn-lg"
-                        type="submit"
+                        <Form.Group
+                            className="mb-3"
+                            controlId="exampleForm.ControlTextarea1"
                         >
-                        Send Message
-                        </Button>
-                    </Form.Group>
+                            <Form.Label>Your Message</Form.Label>
+                            <Form.Control
+                            as="textarea"
+                            className="msg-field"
+                            rows={3}
+                            />
+                        </Form.Group>
+
+                        <Form.Group className="button-outer">
+                            <Button
+                            variant="primary"
+                            className="red-btn red-btn-shadow btn-lg"
+                            type="submit"
+                            >
+                            Send Message
+                            </Button>
+                        </Form.Group>
                     </Form>
                 </div>
                 </Col>
