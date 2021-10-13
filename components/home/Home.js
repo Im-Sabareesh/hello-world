@@ -569,7 +569,7 @@ const HomeComponent = () => {
                             Still Have some Questions in Mind? Don&apos;t Worry. <br />
                             Get FREE Consultation from our Experts
                         </h2>
-                        <Button variant="primary" className="red-btn min-size-btn">
+                        <Button variant="primary" className="red-btn min-size-btn" onClick={()=>{router.push('/contact')}}>
                             Let’s Talk
                         </Button>
                         </div>
