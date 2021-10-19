@@ -77,7 +77,7 @@ const TopLogoFooter  = () => {
         <footer className="footer-section nft-page-footer">
         <Container>
             <Row className="py-md-5 py-4">
-                <Col xl={12} lg={12} md={12} sm={6} xs={12} className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 ">
+                <Col xl={12} lg={12} md={12} sm={6} xs={6} className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 ">
                     <Link href="/">
                         <a  className="brand-logo">
                             <Image src="/assets/icons/cc-white-logo.svg" className="mb-md-4 mb-sm-3 mb-4" alt=" "/>
@@ -85,16 +85,16 @@ const TopLogoFooter  = () => {
                     </Link>
                     <p className="light-text-color text-shadow mb-md-3 mb-2">Follow Us</p>
                     <div className="social-icons">
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/facebook.svg"  alt=" "/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/instagram.svg"  alt=" "/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/twitter.svg"  alt=" "/></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/youtube.svg" alt=" " /></a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3"><Image src="/assets/icons/wordpress.svg" alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1"><Image src="/assets/icons/facebook.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1"><Image src="/assets/icons/instagram.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1"><Image src="/assets/icons/twitter.svg"  alt=" "/></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1"><Image src="/assets/icons/youtube.svg" alt=" " /></a>
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1"><Image src="/assets/icons/wordpress.svg" alt=" "/></a>
                     </div>
                 </Col>
 
                 {_.map(footerLinkList, (item) => (
-                    <Col key={_.uniqueId()} xl={item.style.xl} lg={item.style.lg} md={4} sm={6} xs={12} className="mb-xl-0 mb-md-4 mb-sm-3 mb-4">
+                    <Col key={_.uniqueId()} xl={item.style.xl} lg={item.style.lg} md={4} sm={6} xs={6} className="mb-xl-0 mb-md-4 mb-sm-3 mb-4">
                         <p className="h3 light-text-color mb-3">{item.title}</p>
                         <ul className="lh-lg">
                             {_.map(item.list, (listItem) => (

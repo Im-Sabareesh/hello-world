@@ -79,19 +79,19 @@ const RadiusFooter  = (props) => {
                     </a>
                     <p className="light-text-color text-shadow">Follow Us</p>
                     <div className="social-icons">
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1">
                             <Image src="/assets/icons/facebook.svg" alt="..."/>
                         </a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1">
                             <Image src="/assets/icons/instagram.svg" alt="..."/>
                         </a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1">
                             <Image src="/assets/icons/twitter.svg" alt="..."/>
                         </a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1">
                             <Image src="/assets/icons/youtube.svg" alt="..."/>
                         </a>
-                        <a href="#" onClick={e => e.preventDefault()} className="mx-3">
+                        <a href="#" onClick={e => e.preventDefault()} className="mx-md-3 mx-1">
                             <Image src="/assets/icons/wordpress.svg" alt="..."/>
                         </a>
 
