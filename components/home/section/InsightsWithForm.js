@@ -15,9 +15,26 @@ import {
 
 import { CardSection } from 'common-components';
 
-export default function SectionTen({data}) {
+export default function InsightWithFormSection({data}) {
 
-    const router = useRouter();
+    const router = useRouter(),
+    insightsList = [
+        {
+            title: 'Financial Inclusion, Advanced by Digital Currencies',
+            subtitle: 'Jane Cooper | 14 March 2021',
+            image: '/assets/images/insight-img1.jpg',
+        },
+        {
+            title: 'Financial Inclusion, Advanced by Digital Currencies',
+            subtitle: 'Jane Cooper | 14 March 2021',
+            image: '/assets/images/insight-img2.jpg',
+        },
+        {
+            title: 'Financial Inclusion, Advanced by Digital Currencies',
+            subtitle: 'Jane Cooper | 14 March 2021',
+            image: '/assets/images/insight-img3.jpg',
+        },
+    ];
     const [validated, setValidated] = React.useState(false);
 
     const handleSubmit = (event) => {
@@ -37,7 +54,7 @@ export default function SectionTen({data}) {
                     <Col lg={12} className="text-center mb-5">
                         <h2 className="h2"> Our Latest Insights </h2>
                     </Col>
-                    <CardSection className="insight-card mt-3" data={data} />
+                    <CardSection className="insight-card mt-3" data={insightsList} />
                     <Col md={12} className="text-center my-5">
                         <Button
                             variant="primary"

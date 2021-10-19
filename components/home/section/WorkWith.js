@@ -10,7 +10,7 @@ import {
 
 import { ImgPanelSection } from 'common-components';
 
-export default function SectionSeven() {
+export default function WorkWithSection() {
 
     return (
         <section className="home-section-7 my-5">

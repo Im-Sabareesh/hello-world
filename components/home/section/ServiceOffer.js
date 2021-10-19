@@ -1,7 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import {
     Container,
@@ -13,7 +11,46 @@ import {
     Form,
 } from 'react-bootstrap';
 
-export default function SectionTwo({data}) {
+export default function ServiceOfferSection() {
+
+    const serviceList = [
+        {
+            name: 'Decentraized Finance',
+            icon: '/assets/icons/service-icon1.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+        {
+            name: 'Non Fungible Tokens',
+            icon: '/assets/icons/service-icon2.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+        {
+            name: 'Binance Smart Chain',
+            icon: '/assets/icons/service-icon3.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+        {
+            name: 'Website Development',
+            icon: '/assets/icons/service-icon2.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+        {
+            name: 'Mobile App Development',
+            icon: '/assets/icons/service-icon3.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+        {
+            name: 'AI Technology',
+            icon: '/assets/icons/service-icon6.png',
+            describe:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+        },
+    ];
 
     return (
         <section className="home-section-2 py-5">
@@ -36,7 +73,7 @@ export default function SectionTwo({data}) {
 
             <Container>
                 <Row>
-                    {_.map(data, (item) => (
+                    {_.map(serviceList, (item) => (
                         <Col
                             key={_.uniqueId()}
                             md={6}

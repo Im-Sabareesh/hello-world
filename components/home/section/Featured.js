@@ -10,7 +10,30 @@ import {
 } from 'react-bootstrap';
 
 
-export default function HeroBanner({data}) {
+export default function FeaturedSection() {
+
+    const featuresList = [
+        {
+            title: 'Hyperledger Development',
+            link: '#',
+        },
+        {
+            title: 'DeFi Development',
+            link: '/services/DefiServices/',
+        },
+        {
+            title: 'NFT Development',
+            link: '/services/NFTServices/',
+        },
+        {
+            title: 'Obortech Smart Hub',
+            link: '#',
+        },
+        {
+            title: 'GDPR Compliance',
+            link: '#',
+        },
+    ];
 
     return (    
         <section className="hero-banner-container">
@@ -57,7 +80,7 @@ export default function HeroBanner({data}) {
 
                     <div className="mt-4">
                         <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
-                            {_.map(data, (item) => (
+                            {_.map(featuresList, (item) => (
                                 <Col key={_.uniqueId()}>
                                     {item.link !== '#' ? (
                                         <Link href={item.link}>

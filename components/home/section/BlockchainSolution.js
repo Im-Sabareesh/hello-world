@@ -12,7 +12,38 @@ import {
 
 import { CardSection } from 'common-components';
 
-export default function SectionThree({data}) {
+export default function BlockChainSolutionSection() {
+
+    const blockChainSolnList = [
+        {
+            title: 'Obortech Smart Hub',
+            image: '/assets/images/solution-1.jpg',
+            subtitle:
+                'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
+            link: 'BLOCKCHAIN',
+        },
+        {
+            title: 'GDPR Compliance',
+            image: '/assets/images/solution-2.jpg',
+            subtitle:
+                'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
+            link: 'BLOCKCHAIN',
+        },
+        {
+            title: 'Live Ledger',
+            image: '/assets/images/solution-3.jpg',
+            subtitle:
+                'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
+            link: 'BLOCKCHAIN',
+        },
+        {
+            title: 'True Title',
+            image: '/assets/images/solution-4.jpg',
+            subtitle:
+                'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
+            link: 'BLOCKCHAIN',
+        },
+    ];
 
     return (
         <section className="home-section-3 py-5">
@@ -24,7 +55,7 @@ export default function SectionThree({data}) {
                         </h2>
                     </Col>
 
-                    <CardSection className="custom-card" footerCls="d-flex justify-content-between" data={data}/>
+                    <CardSection className="custom-card" footerCls="d-flex justify-content-between" data={blockChainSolnList}/>
 
                     <Col md={12} lg={8}>
                         <Card className="custom-card">

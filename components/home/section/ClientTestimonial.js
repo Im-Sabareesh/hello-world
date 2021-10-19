@@ -13,7 +13,31 @@ import {
     Form,
 } from 'react-bootstrap';
 
-export default function SectionNine({data}) {
+export default function CilentTestimonialSection() {
+
+    const testimonialList = [
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: '/assets/images/user-1.jpg',
+        },
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: '/assets/images/user-1.jpg',
+        },
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: '/assets/images/user-1.jpg',
+        },
+    ];
 
     return(
         <section className="home-section-9 py-5">
@@ -32,7 +56,7 @@ export default function SectionNine({data}) {
 
                                 <Col className="mt-4">
                                     <Row className=" justify-content-center row-cols-1 row-cols-md-2  row-cols-lg-3">
-                                        {_.map(data, (item) => (
+                                        {_.map(testimonialList, (item) => (
                                             <Col
                                                 key={_.uniqueId()}
                                                 className=""

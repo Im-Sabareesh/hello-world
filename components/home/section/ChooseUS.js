@@ -8,7 +8,34 @@ import {
     Image,
 } from 'react-bootstrap';
 
-export default function SectionFive({data}) {
+export default function ChooseUsSection({data}) {
+
+    const chooseUSList = [
+        {
+            icon: '/assets/icons/whychoose-icon1.svg',
+            name: 'Focus on Innovation',
+            describe:
+                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        },
+        {
+            icon: '/assets/icons/whychoose-icon2.svg',
+            name: 'True Partners',
+            describe:
+                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        },
+        {
+            icon: '/assets/icons/whychoose-icon3.svg',
+            name: 'DevOps',
+            describe:
+                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        },
+        {
+            icon: '/assets/icons/whychoose-icon4.svg',
+            name: 'Dedicated Teams',
+            describe:
+                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        },
+    ]; 
 
     return (
         <section className="home-section-5 py-5">
@@ -42,7 +69,7 @@ export default function SectionFive({data}) {
                             their infancy.
                         </p>
                     </Col>
-                    {_.map(data, (item) => (
+                    {_.map(chooseUSList, (item) => (
                         <Col key={_.uniqueId()} md={6} className="mt-4">
                             <div className="d-flex">
                                 <div className="flex-shrink-0">

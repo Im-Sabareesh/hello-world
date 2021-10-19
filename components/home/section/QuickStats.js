@@ -13,7 +13,40 @@ import {
     Form,
 } from 'react-bootstrap';
 
-export default function SectionSix({data}) {
+export default function QuickStatsSection() {
+
+    const quickStateList = [
+        {
+            icon: '/assets/icons/industry-awards.svg',
+            counts: '150+',
+            title: 'Industry Awards',
+        },
+        {
+            icon: '/assets/icons/projects.svg',
+            counts: '150+',
+            title: 'Projects',
+        },
+        {
+            icon: '/assets/icons/offices.svg',
+            counts: '4',
+            title: 'Offices',
+        },
+        {
+            icon: '/assets/icons/happy-clients.svg',
+            counts: '500',
+            title: 'Happy Clients',
+        },
+        {
+            icon: '/assets/icons/certified-pmp.svg',
+            counts: '4',
+            title: 'Certified PMP',
+        },
+        {
+            icon: '/assets/icons/mm-lines-of-code.svg',
+            counts: '100',
+            title: 'MM Lines of Code',
+        },
+    ];
 
     return (
         <section className="home-section-6 py-5">
@@ -22,7 +55,7 @@ export default function SectionSix({data}) {
                     <Col md={12} className="text-center mb-5">
                         <h2 className="h2">Quick Stats</h2>
                     </Col>
-                    {_.map(data, (item) => (
+                    {_.map(quickStateList, (item) => (
                         <Col
                             key={_.uniqueId()}
                             xs={6}

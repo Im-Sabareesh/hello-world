@@ -1,7 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import {
     Container,
@@ -10,7 +8,30 @@ import {
     Image,
 } from 'react-bootstrap';
 
-export default function SectionOne({data}) {
+export default function BlockchainBusinessSection() {
+
+    const blockChainUsageList = [
+        {
+            name: 'Enhanced security',
+            icon: '/assets/icons/enhanced-security.svg',
+        },
+        {
+            name: 'Greater transparency',
+            icon: '/assets/icons/greater-transparancy.svg',
+        },
+        {
+            name: 'Instant traceability',
+            icon: '/assets/icons/instant-tracibility.svg',
+        },
+        {
+            name: 'Increased efficiency',
+            icon: '/assets/icons/increased-efficiency.svg',
+        },
+        {
+            name: 'Decentralized Governance',
+            icon: '/assets/icons/decentralized-governance.svg',
+        },
+    ];
 
     return (
         <section className="home-section1 py-5">
@@ -46,7 +67,7 @@ export default function SectionOne({data}) {
 
                     <div className="mt-5 mb-3">
                         <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 justify-content-center mt-2">
-                            {_.map(data, (item) => (
+                            {_.map(blockChainUsageList, (item) => (
                                 <Col
                                     key={_.uniqueId()}
                                     className="home-section-icons d-flex align-items-center justify-content-center text-center"
