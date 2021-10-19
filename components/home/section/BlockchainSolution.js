@@ -43,6 +43,12 @@ export default function BlockChainSolutionSection() {
                 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt.',
             link: 'BLOCKCHAIN',
         },
+        {
+            title: 'Instasure',
+            image: '/assets/images/solution-5.jpg',
+            subtitle: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum.',
+            link: 'BLOCKCHAIN',
+        },
     ];
 
     return (
@@ -55,59 +61,19 @@ export default function BlockChainSolutionSection() {
                         </h2>
                     </Col>
 
-                    <CardSection className="custom-card" footerCls="d-flex justify-content-between" data={blockChainSolnList}/>
-
-                    <Col md={12} lg={8}>
-                        <Card className="custom-card">
-                            <Card.Img
-                                variant="top"
-                                src="/assets/images/solution-5.jpg"
-                            />
-                            <Card.Body>
-                                <Card.Title>
-                                    <h3 className="h3">Instasure</h3>
-                                </Card.Title>
-                                <Card.Text>
-                                    Nulla Lorem mollit cupidatat irure.
-                                    Laborum magna nulla duis ullamco cillum
-                                    dolor. Voluptate exercitation
-                                    incididunt. Alteration in some form, by
-                                    injected humour, or randomised words
-                                    which don&apos;t look even slightly
-                                    believable. If you are going to use a
-                                    passage of Lorem Ipsum. Nulla Lorem
-                                    mollit cupidatat irure. Laborum magna
-                                    nulla duis ullamco cillum dolor.
-                                    Voluptate exercitation incididunt.
-                                    Alteration in some form, by injected
-                                    humour, or randomised words which
-                                    don&apos;t look even slightly
-                                    believable. If you are going to use a
-                                    passage of Lorem Ipsum.
-                                </Card.Text>
-                            </Card.Body>
-
-                            <Card.Footer className="d-flex justify-content-between">
-                                <a
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
-                                    className="link-primary"
-                                >
-                                    BLOCKCHAIN
-                                </a>
-
-                                <a
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
-                                >
-                                    <Image
-                                        src="/assets/icons/card-arrow.svg"
-                                        alt=""
-                                    />
-                                </a>
-                            </Card.Footer>
-                        </Card>
-                    </Col>
+                    {_.map(blockChainSolnList, (item, index) => (
+                        index === (blockChainSolnList.length -1) ?
+                        (
+                            <Col md={12} lg={8}>
+                                <CardSection fullCard={true} footerClass="d-flex justify-content-between" item={item}/>
+                            </Col> 
+                        )
+                        : (
+                        <Col md={6} lg={4} key={_.uniqueId()}>
+                            <CardSection fullCard={true} footerClass="justify-content-between" item={item}/>
+                        </Col>
+                        )
+                    ))}
 
                     <Col md={12} className="text-center my-5">
                         <Button

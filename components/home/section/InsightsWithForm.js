@@ -15,7 +15,7 @@ import {
 
 import { CardSection } from 'common-components';
 
-export default function InsightWithFormSection({data}) {
+export default function InsightWithFormSection() {
 
     const router = useRouter(),
     insightsList = [
@@ -54,7 +54,13 @@ export default function InsightWithFormSection({data}) {
                     <Col lg={12} className="text-center mb-5">
                         <h2 className="h2"> Our Latest Insights </h2>
                     </Col>
-                    <CardSection className="insight-card mt-3" data={insightsList} />
+
+                    {_.map(insightsList, (item) => (
+                        <Col md={6} lg={4} key={_.uniqueId()}>
+                            <CardSection className="insight-card mt-3" fullCard={true} item={item} />
+                        </Col>
+                    ))}
+
                     <Col md={12} className="text-center my-5">
                         <Button
                             variant="primary"

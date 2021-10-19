@@ -11,67 +11,61 @@ import {
 
 const CardSection = ({
     className,
-    btnClass,
-    data,
-    footerCls
+    fullCard,
+    item,
+    footerClass
 }) => {
 
-    const RenderCard = (item) => {
+    const renderFullCard = () => {
         return (
-            <Col md={6} lg={4} key={_.uniqueId()}>
-                <Card className={className}>
-                { btnClass !== '' ? <>
-                    <Card.Body>
-                        <Card.Title>
-                            <h3 className="h3"> {item.title}</h3>
-                        </Card.Title>
-                        <Card.Text>{item.describe}</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="">
-                        <Button variant="primary" className={btnClass}>
-                            Know More
-                        </Button>
-                    </Card.Footer> </> : <>
-                    <Card.Img variant="top" src={item.image} />
-                    <Card.Body>
-                    <Card.Title>
-                        <h3 className="h3 mb-3">{item.title}</h3>
-                    </Card.Title>
-                    <Card.Text>{item.subtitle}</Card.Text>
-                        {footerCls === '' && <a href="#" onClick={e => e.preventDefault()} className="link-primary">
+            <Card className={`${footerClass && 'custom-card'} ${className && className}`}>
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                <Card.Title>
+                    <h3 className="h3 mb-3">{item.title}</h3>
+                </Card.Title>
+                <Card.Text>{item.subtitle}</Card.Text>
+                    {   !footerClass &&
+                        <a href="#" onClick={e => e.preventDefault()} className="link-primary">
                             Learn More <Image src="/assets/icons/purple-arrow.svg" alt=" "/>
-                        </a>}
-                    </Card.Body> 
-                    {footerCls !== '' && <Card.Footer className="d-flex justify-content-between">
-                        <a
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                            className="link-primary"
-                        >
+                        </a>
+                    }
+                </Card.Body>
+                { footerClass && 
+                    <Card.Footer className={footerClass}>
+                        <a href="#" onClick={(e) => e.preventDefault()} className="link-primary">
                             {item.link}
                         </a>
-
-                        <a
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                        >
-                            <Image
-                                src="/assets/icons/card-arrow.svg"
-                                alt=""
-                            />
-                        </a>
-                    </Card.Footer> }
-                    </>
+                        <a href="#" onClick={(e) => e.preventDefault()}>
+                            <Image src="/assets/icons/card-arrow.svg" alt="" />
+                        </a>                   
+                    </Card.Footer>
                 }
-                </Card>
-            </Col>
+            </Card>
+        )
+    }
+
+    const renderCard = () => {
+        return (
+            <Card className={`custom-card ${className && className}`}>
+                <Card.Body>
+                    <Card.Title>
+                        <h3 className="h3"> {item.title}</h3>
+                    </Card.Title>
+                    <Card.Text>{item.describe}</Card.Text>
+                </Card.Body>
+                <Card.Footer className="">
+                    <Button variant="primary" className="red-btn min-size-btn">
+                        Know More
+                    </Button>
+                </Card.Footer>
+            </Card>
+        
         )
     }
 
     return (
-        typeof data === 'string' ?
-        RenderCard(data) :
-        _.map(data, (item) => (RenderCard(item)))
+        fullCard ? renderFullCard() : renderCard()
     );
 };
 
@@ -80,12 +74,11 @@ export default CardSection;
 
 CardSection.propTypes = {
     className: PropTypes.string,
-    // data: PropTypes.string || PropTypes.object,
-    btnClass: PropTypes.string,
-    footerCls: PropTypes.string,
+    item: PropTypes.object,
+    fullCard: PropTypes.bool,
+    footerClass: PropTypes.string,
 };
 
 CardSection.defaultProps = {
-    btnClass: '',
-    footerCls: ''
+    fullCard: false
 };

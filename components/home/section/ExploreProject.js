@@ -59,7 +59,11 @@ export default function ExploreProjectSection() {
                             Explore Projects Delivered by ChainCode
                         </h2>
                     </Col>
-                    <CardSection className="custom-card custom-card2 text-center" btnClass="red-btn min-size-btn" data={exploreProjectList} />
+                    {_.map(exploreProjectList, (item) => (
+                        <Col md={6} lg={4} key={_.uniqueId()}>
+                            <CardSection className="custom-card2 text-center"  item={item} />
+                        </Col>
+                    ))}
                 </Row>
             </Container>
         </section>
