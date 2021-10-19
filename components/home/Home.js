@@ -15,7 +15,7 @@ import SectionTen from './section/SectionTen';
 
 const HomeComponent = () => {
 
-    const featuresHeroBanner = [
+    const featuresList = [
         {
             title: 'Hyperledger Development',
             link: '#',
@@ -37,7 +37,7 @@ const HomeComponent = () => {
             link: '#',
         },
     ],
-    blockChainUsageSec1 = [
+    blockChainUsageList = [
         {
             name: 'Enhanced security',
             icon: '/assets/icons/enhanced-security.svg',
@@ -59,7 +59,7 @@ const HomeComponent = () => {
             icon: '/assets/icons/decentralized-governance.svg',
         },
     ],
-    serviceListSec2 = [
+    serviceList = [
         {
             name: 'Decentraized Finance',
             icon: '/assets/icons/service-icon1.png',
@@ -97,7 +97,7 @@ const HomeComponent = () => {
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
     ],
-    blockChainSolutionSec3 = [
+    blockChainSolnList = [
         {
             title: 'Obortech Smart Hub',
             image: '/assets/images/solution-1.jpg',
@@ -127,7 +127,7 @@ const HomeComponent = () => {
             link: 'BLOCKCHAIN',
         },
     ],
-    chooseUSSec5 = [
+    chooseUSList = [
         {
             icon: '/assets/icons/whychoose-icon1.svg',
             name: 'Focus on Innovation',
@@ -153,7 +153,7 @@ const HomeComponent = () => {
                 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         },
     ],
-    quickStatSec6 = [
+    quickStateList = [
         {
             icon: '/assets/icons/industry-awards.svg',
             counts: '150+',
@@ -185,7 +185,7 @@ const HomeComponent = () => {
             title: 'MM Lines of Code',
         },
     ],
-    exploreProjSec7 = [
+    exploreProjectList = [
         {
             title: 'Blockchain Consulting',
             describe:
@@ -217,7 +217,7 @@ const HomeComponent = () => {
                 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
         },
     ],
-    testimonialSec9 = [
+    testimonialList = [
         {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
@@ -240,7 +240,7 @@ const HomeComponent = () => {
             image: '/assets/images/user-1.jpg',
         },
     ],
-    insightsListSec10 = [
+    insightsList = [
         {
             title: 'Financial Inclusion, Advanced by Digital Currencies',
             subtitle: 'Jane Cooper | 14 March 2021',
@@ -262,25 +262,25 @@ const HomeComponent = () => {
         <>
             {/*--------------- home hero banner start---------- */}
 
-            <HeroBanner data={featuresHeroBanner} />
+            <HeroBanner data={featuresList} />
 
             {/*--------------- home hero banner end---------- */}
 
             {/*--------------- Home section 1 start---------- */}
 
-            <SectionOne data={blockChainUsageSec1} />
+            <SectionOne data={blockChainUsageList} />
 
             {/*--------------- Home section 1 end---------- */}
 
             {/*--------------- Home section 2 start---------- */}
 
-            <SectionTwo data={serviceListSec2}/>
+            <SectionTwo data={serviceList}/>
 
             {/*--------------- Home section 2 end---------- */}
 
             {/*--------------- Home section 3 start---------- */}
 
-            <SectionThree data={blockChainSolutionSec3} />
+            <SectionThree data={blockChainSolnList} />
 
             {/*--------------- Home section3 end---------- */}
 
@@ -294,13 +294,13 @@ const HomeComponent = () => {
 
             {/*--------------- Home section5 cta start---------- */}
 
-            <SectionFive data={chooseUSSec5} />
+            <SectionFive data={chooseUSList} />
 
             {/*--------------- Home section5 cta end---------- */}
 
             {/*--------------- Home section6 start---------- */}
 
-            <SectionSix data={quickStatSec6} />
+            <SectionSix data={quickStateList} />
 
             {/*--------------- Home section6 end---------- */}
 
@@ -312,19 +312,19 @@ const HomeComponent = () => {
 
             {/*--------------- Home section8 start---------- */}
 
-            <SectionEight data={exploreProjSec7}/>
+            <SectionEight data={exploreProjectList}/>
 
             {/*--------------- Home section8 end---------- */}
 
             {/*--------------- Home section9 testimonial start---------- */}
 
-            <SectionNine data={testimonialSec9} />
+            <SectionNine data={testimonialList} />
 
             {/*--------------- Home section9 testimonial start---------- */}
 
             {/*--------------- Home section10 insights start---------- */}
             
-            <SectionTen data={insightsListSec10} />
+            <SectionTen data={insightsList} />
 
             {/*--------------- Home section10 insights end---------- */}
         </>

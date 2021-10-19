@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 import {
     Container,
-    Row,
-    Col,
     Image,
     Button
 } from "react-bootstrap";
