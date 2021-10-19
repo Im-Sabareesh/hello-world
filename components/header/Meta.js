@@ -23,15 +23,8 @@ export default function Meta(props) {
                 <meta property="og:url" content="" />
                 <meta property="og:image" content="" />
 
-                <link
-                    rel="icon"
-                    type="image/png"
-                    href="/static/images/favicon.ico"
-                />
-                <link
-                    rel="apple-touch-icon"
-                    href="/static/images/favicon.ico"
-                />
+                <link rel="icon" type="image/png" href="/favicon.ico" />
+                <link rel="apple-touch-icon" href="/favicon.ico" />
             </Head>
         </>
     );

@@ -1,13 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
 
 import { HomeComponent, Meta } from '@components';
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function Home() {
+    const { t } = useTranslation('home');
     return (
         <div className="home-page">
-            <Meta title="Home" desc="" />
+            <Meta title={t('title')} desc="" />
             <HomeComponent />
         </div>
     );
 }
+
+// export const getStaticProps = async (p) => {
+//     return {
+//         props: {
+//             ...(await serverSideTranslations(p.locale, ['home'])),
+//         },
+//     };
+// };
