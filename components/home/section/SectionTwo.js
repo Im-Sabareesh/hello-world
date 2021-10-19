@@ -1,0 +1,71 @@
+import React from 'react';
+import _ from 'lodash';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import {
+    Container,
+    Row,
+    Col,
+    Card,
+    Button,
+    Image,
+    Form,
+} from 'react-bootstrap';
+
+export default function SectionTwo({data}) {
+
+    return (
+        <section className="home-section-2 py-5">
+            <Container>
+                <Row>
+                    <Col md={8} className="mx-auto text-center mb-2">
+                        <h2 className="h2 dark-text-color mb-4">
+                            Services We Offer
+                        </h2>
+
+                        <p>
+                            Nulla Lorem mollit cupidatat irure. Laborum
+                            magna nulla duis ullamco cillum dolor. Voluptate
+                            exercitation incididunt aliquip deserunt
+                            reprehenderit elit laborum.
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container>
+                <Row>
+                    {_.map(data, (item) => (
+                        <Col
+                            key={_.uniqueId()}
+                            md={6}
+                            lg={4}
+                            className="service-thumb text-center mt-5"
+                        >
+                            <p>
+                                <Image src={item.icon} alt="" />
+                            </p>
+
+                            <h3 className="h3 dark-text-color">
+                                {item.name}
+                            </h3>
+
+                            <p> {item.describe} </p>
+                        </Col>
+                    ))}
+
+                    <Col md={12} className="text-center mt-5">
+                        <a
+                            href="#"
+                            onClick={(e) => e.preventDefault()}
+                            className="h3 dark-text-color link-primary"
+                        >
+                            And a lot more for you
+                        </a>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    )
+}
