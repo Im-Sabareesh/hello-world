@@ -1,7 +1,7 @@
-import Styled from "styled-components";
-import {Button} from 'react-bootstrap'
+import Styled from 'styled-components';
+import { Button } from 'react-bootstrap';
 
- const ThemedButton = Styled(Button)`
+const ThemedButton = Styled(Button)`
     font-family: Mulish;
     font-weight: 600;
     font-size: 18px;
@@ -20,4 +20,4 @@ import {Button} from 'react-bootstrap'
     }
 `;
 
-export default ThemedButton
+export default ThemedButton;

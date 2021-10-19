@@ -1,19 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 
-import {CareersComponent} from '@components';
+import { CareersComponent } from '@components';
 
 const Careers = () => {
-  
-  return (
-    <div className="career-page">
-      <Head>
-          <title>Careers</title>
-      </Head>
+    return (
+        <div className="career-page">
+            <Head>
+                <title>Careers</title>
+            </Head>
 
-      <CareersComponent/>
-    </div>
-  );
+            <CareersComponent />
+        </div>
+    );
 };
 
-export default Careers
+export default Careers;
