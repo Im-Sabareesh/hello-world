@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 function SvgMouseScroll(props) {
     return (
@@ -13,7 +13,7 @@ function SvgMouseScroll(props) {
         >
             <g
                 style={{
-                    mixBlendMode: "color-burn",
+                    mixBlendMode: 'color-burn',
                 }}
                 filter="url(#mouse-scroll_svg__filter0_d)"
             >

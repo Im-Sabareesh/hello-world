@@ -1,1709 +1,1694 @@
-@import "./mixins.scss";
+@import './mixins.scss';
 
 // / Responsive styles /
 // X-Small devices (portrait phones, less than 576px) /
 @include media-breakpoint-between(xs, sm) {
-  // --------------- font size-------
+    // --------------- font size-------
 
-  .h1 {
-    font-size: 33px;
-    line-height: 56px;
-  }
-
-  .h2 {
-    font-size: 20px;
-  }
-
-  .h3 {
-    font-size: 18px;
-  }
-
-  // --------------- font size-------
-
-  // --------------- spaces size-------
-
-  .py-5 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  .mb-5 {
-    margin-bottom: 1.5rem !important;
-  }
-
-  .mt-5 {
-    margin-top: 1.5rem !important;
-  }
-
-  // --------------- spaces size-------
-
-  .header-top {
-    font-size: 14px;
-
-    .topheader-text {
-      display: none;
+    .h1 {
+        font-size: 33px;
+        line-height: 56px;
     }
-  }
 
-  .hero-banner-container {
-    background-position-x: right 50%;
-    background-position-y: top 50px;
-    padding-top: 175px;
-    padding-bottom: 40px;
+    .h2 {
+        font-size: 20px;
+    }
+
+    .h3 {
+        font-size: 18px;
+    }
+
+    // --------------- font size-------
+
+    // --------------- spaces size-------
+
+    .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .mt-5 {
+        margin-top: 1.5rem !important;
+    }
+
+    // --------------- spaces size-------
+
+    .header-top {
+        font-size: 14px;
+
+        .topheader-text {
+            display: none;
+        }
+    }
+
+    .hero-banner-container {
+        background-position-x: right 50%;
+        background-position-y: top 50px;
+        padding-top: 175px;
+        padding-bottom: 40px;
+
+        .featured-box-container {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-header {
+        .letstalk-btn {
+            margin-left: -75px;
+            display: none;
+        }
+        .main-menu {
+            right: 30px;
+            top: 24px; // changes from value 64px to 24px on 11/10/21
+            position: absolute;
+            .nav-link {
+                padding: 15px 20px;
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                top: 7px;
+                right: 0px;
+            }
+
+            .me-auto.navbar-nav {
+                background: #fff;
+                margin-top: 55px;
+                border-radius: 6px;
+                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+            }
+        }
+
+        .header-search {
+            display: none;
+        }
+    }
 
     .featured-box-container {
-      margin-bottom: 20px;
+        span {
+            font-size: 19px;
+            line-height: 24px;
+        }
     }
-  }
+    .cta-banner1 {
+        background-position: left;
+        padding: 30px;
+        // background-position-x: left -200px;
+        // height:200px;
+        min-height: 170px;
+        &:after {
+            // height: 200px;
+            min-height: 170px;
+        }
 
-  .main-header {
-    .letstalk-btn {
-      margin-left: -75px;
-      display: none;
-    }
-    .main-menu {
-      right: 30px;
-      top: 24px; // changes from value 64px to 24px on 11/10/21
-      position: absolute;
-      .nav-link {
-        padding: 15px 20px;
-      }
-
-      .navbar-toggler {
-        position: absolute;
-        top: 7px;
-        right: 0px;
-      }
-
-      .me-auto.navbar-nav {
-        background: #fff;
-        margin-top: 55px;
-        border-radius: 6px;
-        box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
-      }
+        img {
+            display: none;
+        }
     }
 
-    .header-search {
-      display: none;
-    }
-  }
-
-  .featured-box-container {
-    span {
-      font-size: 19px;
-      line-height: 24px;
-    }
-  }
-  .cta-banner1 {
-    background-position: left;
-    padding: 30px;
-    // background-position-x: left -200px;
-    // height:200px;
-    min-height: 170px;
-    &:after
-    {
-      // height: 200px;
-      min-height: 170px;
+    .btn-lg,
+    .btn-group-lg > .btn {
+        width: 170px;
+        height: 56px;
+        padding: 0px;
     }
 
-    img {
-      display: none;
-    }
-  }
+    .home-section-6 {
+        .counter-thumb {
+            span {
+                font-size: 45px;
+            }
 
-  .btn-lg,
-  .btn-group-lg > .btn {
-    width: 170px;
-    height: 56px;
-    padding: 0px;
-  }
-
-  .home-section-6 {
-    .counter-thumb {
-      span {
-        font-size: 45px;
-      }
-
-      strong {
-        font-size: 16px;
-      }
-    }
-  }
-
-  .home-section-7 {
-    .workwithus-txt {
-      text-align: center;
-    }
-    .cta-banner2 {
-      background-position-x: left -230px;
-      padding: 30px;
-      min-height: 200px;
-      &:after
-      {
-        min-height: 200px;
-      }
-
-      .cta-txt {
-        width: 165px;
-      }
-    }
-  }
-
-  .home-section-8 {
-    padding-bottom: 60px !important;
-    padding-top: 60px !important;
-    background-size: cover;
-
-    padding-bottom: 60px !important;
-    .custom-card2 {
-      margin-top: 20px;
-      .red-btn {
-        width: 100%;
-      }
-    }
-  }
-
-  .testimonial-cont {
-    margin-bottom: 30px;
-    &:after {
-      background: none !important;
+            strong {
+                font-size: 16px;
+            }
+        }
     }
 
-    .user-name {
-      padding-right: 0px;
-      span {
-        font-size: 14px;
-      }
-    }
-  }
+    .home-section-7 {
+        .workwithus-txt {
+            text-align: center;
+        }
+        .cta-banner2 {
+            background-position-x: left -230px;
+            padding: 30px;
+            min-height: 200px;
+            &:after {
+                min-height: 200px;
+            }
 
-  .contact-right-form {
-    display: none;
-  }
-
-  .copyrights {
-    flex-flow: column;
-    align-items: center;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-
-  // ----------------Contact us --------
-
-  .contactus-banner {
-    height: 400px;
-    padding-top: 65px;
-
-    .contactus-inner-banner {
-      background-position-y: top 200px;
-
-      .w-50 {
-        width: 80% !important;
-      }
-    }
-  }
-
-  .contactus-container {
-    margin-top: 0px !important;
-    padding-top: 0px !important;
-    .contact-img {
-      margin-top: 0px;
+            .cta-txt {
+                width: 165px;
+            }
+        }
     }
 
-    .contactus-sociallinks {
-      margin-bottom: 50px;
+    .home-section-8 {
+        padding-bottom: 60px !important;
+        padding-top: 60px !important;
+        background-size: cover;
+
+        padding-bottom: 60px !important;
+        .custom-card2 {
+            margin-top: 20px;
+            .red-btn {
+                width: 100%;
+            }
+        }
     }
 
-    .ouroffice-banner {
-      img {
-        max-width: 100% !important;
-      }
+    .testimonial-cont {
+        margin-bottom: 30px;
+        &:after {
+            background: none !important;
+        }
+
+        .user-name {
+            padding-right: 0px;
+            span {
+                font-size: 14px;
+            }
+        }
     }
-  }
 
- .section-glow {
-    padding: 50px 0 20px 0 !important;
-  }
-
-  .inner-page-header
-{
-  .nav-item 
-{
-  &.dropdown a
-  {
-    &:after
-    {
-      border-color:#000000;
+    .contact-right-form {
+        display: none;
     }
-  }
-}
-}
 
+    .copyrights {
+        flex-flow: column;
+        align-items: center;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    // ----------------Contact us --------
+
+    .contactus-banner {
+        height: 400px;
+        padding-top: 65px;
+
+        .contactus-inner-banner {
+            background-position-y: top 200px;
+
+            .w-50 {
+                width: 80% !important;
+            }
+        }
+    }
+
+    .contactus-container {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        .contact-img {
+            margin-top: 0px;
+        }
+
+        .contactus-sociallinks {
+            margin-bottom: 50px;
+        }
+
+        .ouroffice-banner {
+            img {
+                max-width: 100% !important;
+            }
+        }
+    }
+
+    .section-glow {
+        padding: 50px 0 20px 0 !important;
+    }
+
+    .inner-page-header {
+        .nav-item {
+            &.dropdown a {
+                &:after {
+                    border-color: #000000;
+                }
+            }
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
 @include media-breakpoint-between(sm, md) {
-  // --------------- font size-------
+    // --------------- font size-------
 
-  .h1 {
-    font-size: 40px;
-    line-height: 56px;
-  }
-
-  .h2 {
-    font-size: 25px;
-  }
-
-  .h3 {
-    font-size: 22px;
-  }
-
-  // --------------- font size-------
-
-  // --------------- spaces size-------
-
-  .py-5 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  .mb-5 {
-    margin-bottom: 1.5rem !important;
-  }
-
-  .mt-5 {
-    margin-top: 1.5rem !important;
-  }
-
-  // --------------- spaces size-------
-
-  .header-top {
-    font-size: 14px;
-
-    .topheader-text {
-      display: none;
+    .h1 {
+        font-size: 40px;
+        line-height: 56px;
     }
-  }
 
-  .hero-banner-container {
-    background-position-x: right 50%;
-    background-position-y: top 50px;
-    padding-top: 175px;
-    padding-bottom: 40px;
+    .h2 {
+        font-size: 25px;
+    }
+
+    .h3 {
+        font-size: 22px;
+    }
+
+    // --------------- font size-------
+
+    // --------------- spaces size-------
+
+    .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .mt-5 {
+        margin-top: 1.5rem !important;
+    }
+
+    // --------------- spaces size-------
+
+    .header-top {
+        font-size: 14px;
+
+        .topheader-text {
+            display: none;
+        }
+    }
+
+    .hero-banner-container {
+        background-position-x: right 50%;
+        background-position-y: top 50px;
+        padding-top: 175px;
+        padding-bottom: 40px;
+
+        .featured-box-container {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-header {
+        .letstalk-btn {
+            margin-left: -75px;
+        }
+        .main-menu {
+            right: 30px;
+            top: 22px; // changes from value 64px to 22px on 11/10/21
+            position: absolute;
+            .nav-link {
+                padding: 15px 20px;
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                top: 7px;
+                right: 0px;
+            }
+
+            .me-auto.navbar-nav {
+                background: #fff;
+                margin-top: 55px;
+                border-radius: 6px;
+                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+            }
+        }
+
+        .header-search {
+            display: none;
+        }
+    }
 
     .featured-box-container {
-      margin-bottom: 20px;
+        span {
+            font-size: 19px;
+            line-height: 24px;
+        }
     }
-  }
-
-  .main-header {
-    .letstalk-btn {
-      margin-left: -75px;
-    }
-    .main-menu {
-      right: 30px;
-      top: 22px; // changes from value 64px to 22px on 11/10/21
-      position: absolute;
-      .nav-link {
-        padding: 15px 20px;
-      }
-
-      .navbar-toggler {
-        position: absolute;
-        top: 7px;
-        right: 0px;
-      }
-
-      .me-auto.navbar-nav {
-        background: #fff;
-        margin-top: 55px;
-        border-radius: 6px;
-        box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
-      }
+    .cta-banner1 {
+        background-position: -210px;
+        padding: 30px;
+        // background-position-x: right -140px;
+        min-height: 202px;
+        &:after {
+            min-height: 202px;
+        }
+        img {
+            display: none;
+        }
     }
 
-    .header-search {
-      display: none;
-    }
-  }
-
-  .featured-box-container {
-    span {
-      font-size: 19px;
-      line-height: 24px;
-    }
-  }
-  .cta-banner1 {
-    background-position: -210px;
-    padding: 30px;
-    // background-position-x: right -140px;
-    min-height: 202px;
-    &:after{  
-      min-height: 202px;
-    }
-    img {
-      display: none;
-    }
-  }
-
-  .btn-lg,
-  .btn-group-lg > .btn {
-    width: 170px;
-    height: 56px;
-    padding: 0px;
-  }
-
-  .home-section-6 {
-    .counter-thumb {
-      span {
-        font-size: 45px;
-      }
-
-      strong {
-        font-size: 16px;
-      }
-    }
-  }
-
-  .home-section-7 {
-    .workwithus-txt {
-      text-align: center;
-    }
-    .cta-banner2 {
-      background-position: -220px;
-      padding: 30px;
-
-      .cta-txt {
-        width: 265px;
-      }
-    }
-  }
-
-  .home-section-8 {
-    padding-bottom: 60px !important;
-    padding-top: 60px !important;
-    background-size: cover;
-
-    padding-bottom: 60px !important;
-    .custom-card2 {
-      margin-top: 20px;
-      .red-btn {
-        width: 100%;
-      }
-    }
-  }
-
-  .testimonial-cont {
-    margin-bottom: 30px;
-    &:after {
-      background: none !important;
+    .btn-lg,
+    .btn-group-lg > .btn {
+        width: 170px;
+        height: 56px;
+        padding: 0px;
     }
 
-    .user-name {
-      padding-right: 0px;
-      span {
-        font-size: 14px;
-      }
-    }
-  }
+    .home-section-6 {
+        .counter-thumb {
+            span {
+                font-size: 45px;
+            }
 
-  .contact-right-form {
-    display: none;
-  }
-
-  // ----------------Contact us --------
-
-  .contactus-banner {
-    height: 400px;
-    padding-top: 65px;
-
-    .contactus-inner-banner {
-      background-position-y: top 200px;
-
-      .w-50 {
-        width: 80% !important;
-      }
-    }
-  }
-
-  .contactus-container {
-    margin-top: 0px !important;
-    padding-top: 0px !important;
-
-    .contactus-sociallinks {
-      margin-bottom: 50px;
+            strong {
+                font-size: 16px;
+            }
+        }
     }
 
-    .ouroffice-banner {
-      img {
-        max-width: 100% !important;
-      }
+    .home-section-7 {
+        .workwithus-txt {
+            text-align: center;
+        }
+        .cta-banner2 {
+            background-position: -220px;
+            padding: 30px;
+
+            .cta-txt {
+                width: 265px;
+            }
+        }
     }
-  }
 
-  .section-glow {
-    padding: 50px 0 20px 0 !important;
-  }
+    .home-section-8 {
+        padding-bottom: 60px !important;
+        padding-top: 60px !important;
+        background-size: cover;
 
-  .inner-page-header
-  {
-    .nav-item 
-  {
-    &.dropdown a
-    {
-      &:after
-      {
-        border-color:#000000;
-      }
+        padding-bottom: 60px !important;
+        .custom-card2 {
+            margin-top: 20px;
+            .red-btn {
+                width: 100%;
+            }
+        }
     }
-  }
-  }
 
+    .testimonial-cont {
+        margin-bottom: 30px;
+        &:after {
+            background: none !important;
+        }
+
+        .user-name {
+            padding-right: 0px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .contact-right-form {
+        display: none;
+    }
+
+    // ----------------Contact us --------
+
+    .contactus-banner {
+        height: 400px;
+        padding-top: 65px;
+
+        .contactus-inner-banner {
+            background-position-y: top 200px;
+
+            .w-50 {
+                width: 80% !important;
+            }
+        }
+    }
+
+    .contactus-container {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+
+        .contactus-sociallinks {
+            margin-bottom: 50px;
+        }
+
+        .ouroffice-banner {
+            img {
+                max-width: 100% !important;
+            }
+        }
+    }
+
+    .section-glow {
+        padding: 50px 0 20px 0 !important;
+    }
+
+    .inner-page-header {
+        .nav-item {
+            &.dropdown a {
+                &:after {
+                    border-color: #000000;
+                }
+            }
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
 
 @include media-breakpoint-between(md, lg) {
-  // --------------- font size-------
+    // --------------- font size-------
 
-  .h1 {
-    font-size: 46px;
-    line-height: 56px;
-  }
-
-  .h2 {
-    font-size: 30px;
-  }
-
-  // --------------- font size-------
-
-  // --------------- spaces size-------
-
-  .py-5 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  .mb-5 {
-    margin-bottom: 1.5rem !important;
-  }
-
-  .mt-5 {
-    margin-top: 1.5rem !important;
-  }
-  
-
-  // --------------- spaces size-------
-
-  .header-top {
-    font-size: 14px;
-
-    .topheader-text {
-      display: none;
+    .h1 {
+        font-size: 46px;
+        line-height: 56px;
     }
-  }
 
-  .hero-banner-container {
-    background-position-x: right 50%;
-    background-position-y: top 50px;
-    padding-top: 200px;
+    .h2 {
+        font-size: 30px;
+    }
+
+    // --------------- font size-------
+
+    // --------------- spaces size-------
+
+    .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .mt-5 {
+        margin-top: 1.5rem !important;
+    }
+
+    // --------------- spaces size-------
+
+    .header-top {
+        font-size: 14px;
+
+        .topheader-text {
+            display: none;
+        }
+    }
+
+    .hero-banner-container {
+        background-position-x: right 50%;
+        background-position-y: top 50px;
+        padding-top: 200px;
+
+        .featured-box-container {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-header {
+        .main-menu {
+            right: 30px;
+            top: 21px; // changes from value 64px to 21px on 11/10/21
+            position: absolute;
+            .nav-link {
+                padding: 15px 20px;
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                top: 7px;
+                right: 0px;
+            }
+
+            .me-auto.navbar-nav {
+                background: #fff;
+                margin-top: 55px;
+                border-radius: 6px;
+                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+            }
+        }
+
+        .header-search {
+            display: none;
+        }
+    }
 
     .featured-box-container {
-      margin-bottom: 20px;
+        span {
+            font-size: 19px;
+            line-height: 24px;
+        }
     }
-  }
-
-  .main-header {
-    .main-menu {
-      right: 30px;
-      top: 21px; // changes from value 64px to 21px on 11/10/21
-      position: absolute;
-      .nav-link {
-        padding: 15px 20px;
-      }
-
-      .navbar-toggler {
-        position: absolute;
-        top: 7px;
-        right: 0px;
-      }
-
-      .me-auto.navbar-nav {
-        background: #fff;
-        margin-top: 55px;
-        border-radius: 6px;
-        box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
-      }
+    .cta-banner1 {
+        background-position: right;
+        padding: 30px;
+        background-position-x: -406px;
     }
 
-    .header-search {
-      display: none;
-    }
-  }
-
-  .featured-box-container {
-    span {
-      font-size: 19px;
-      line-height: 24px;
-    }
-  }
-  .cta-banner1 {
-    background-position: right;
-    padding: 30px;
-    background-position-x: -406px;
-  }
-
-  .btn-lg,
-  .btn-group-lg > .btn {
-    width: 170px;
-    height: 56px;
-    padding: 0px;
-  }
-
-  .home-section-6 {
-    .counter-thumb {
-      span {
-        font-size: 45px;
-      }
-
-      strong {
-        font-size: 16px;
-      }
-    }
-  }
-  .cta-banner2 {
-    background-position: -150px;
-    padding: 30px;
-
-    .cta-txt {
-      width: 365px;
-    }
-  }
-  .home-section-8 {
-    padding-bottom: 60px !important;
-    .custom-card2 {
-      margin-top: 20px;
-      .red-btn {
-        width: 100%;
-      }
-    }
-  }
-
-  .testimonial-cont {
-    margin-bottom: 30px;
-    &:after {
-      background: none !important;
+    .btn-lg,
+    .btn-group-lg > .btn {
+        width: 170px;
+        height: 56px;
+        padding: 0px;
     }
 
-    .user-name {
-      padding-right: 0px;
-      span {
-        font-size: 14px;
-      }
+    .home-section-6 {
+        .counter-thumb {
+            span {
+                font-size: 45px;
+            }
+
+            strong {
+                font-size: 16px;
+            }
+        }
     }
-  }
+    .cta-banner2 {
+        background-position: -150px;
+        padding: 30px;
 
-  .contact-right-form {
-    display: none;
-  }
-
-  .inner-page-header
-{
-  .nav-item 
-{
-  &.dropdown a
-  {
-    &:after
-    {
-      border-color:#000000;
+        .cta-txt {
+            width: 365px;
+        }
     }
-  }
-}
-}
+    .home-section-8 {
+        padding-bottom: 60px !important;
+        .custom-card2 {
+            margin-top: 20px;
+            .red-btn {
+                width: 100%;
+            }
+        }
+    }
 
-  // ----------------Contact us --------
+    .testimonial-cont {
+        margin-bottom: 30px;
+        &:after {
+            background: none !important;
+        }
 
-  .contactus-banner {
-    height: 400px;
-    padding-top: 65px;
-  }
+        .user-name {
+            padding-right: 0px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .contact-right-form {
+        display: none;
+    }
+
+    .inner-page-header {
+        .nav-item {
+            &.dropdown a {
+                &:after {
+                    border-color: #000000;
+                }
+            }
+        }
+    }
+
+    // ----------------Contact us --------
+
+    .contactus-banner {
+        height: 400px;
+        padding-top: 65px;
+    }
 }
 
 // Large devices (desktops, 992px and up) /
 
 @include media-breakpoint-between(lg, xl) {
-  .header-top {
-    font-size: 14px;
-  }
-
-  .hero-banner-container {
-    background-position-x: right 50%;
-    background-position-y: top 50px;
-  }
-
-  .main-header {
-    .main-menu {
-      .nav-link {
-        padding: 15px 20px;
-      }
-    }
-
-    .header-search {
-      display: none;
-    }
-  }
-
-  .featured-box-container {
-    span {
-      font-size: 19px;
-      line-height: 24px;
-    }
-  }
-  .cta-banner1 {
-    background-position: right;
-  }
-
-  .btn-lg,
-  .btn-group-lg > .btn {
-    width: 170px;
-    height: 56px;
-    padding: 0px;
-  }
-
-  .home-section-6 {
-    .counter-thumb {
-      span {
-        font-size: 45px;
-      }
-
-      strong {
-        font-size: 16px;
-      }
-    }
-  }
-
-
-   .cta-banner2 {
-      background-position: -120px;
-
-      .cta-txt {
-        width: 500px;
-      }
-    }
-
-  .home-section-8 {
-    .custom-card2 {
-      .red-btn {
-        width: 100%;
-      }
-    }
-  }
-
-  .testimonial-cont {
-    &:after {
-      background: none !important;
-    }
-
-    .user-name {
-      padding-right: 0px;
-      span {
+    .header-top {
         font-size: 14px;
-      }
     }
-  }
+
+    .hero-banner-container {
+        background-position-x: right 50%;
+        background-position-y: top 50px;
+    }
+
+    .main-header {
+        .main-menu {
+            .nav-link {
+                padding: 15px 20px;
+            }
+        }
+
+        .header-search {
+            display: none;
+        }
+    }
+
+    .featured-box-container {
+        span {
+            font-size: 19px;
+            line-height: 24px;
+        }
+    }
+    .cta-banner1 {
+        background-position: right;
+    }
+
+    .btn-lg,
+    .btn-group-lg > .btn {
+        width: 170px;
+        height: 56px;
+        padding: 0px;
+    }
+
+    .home-section-6 {
+        .counter-thumb {
+            span {
+                font-size: 45px;
+            }
+
+            strong {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .cta-banner2 {
+        background-position: -120px;
+
+        .cta-txt {
+            width: 500px;
+        }
+    }
+
+    .home-section-8 {
+        .custom-card2 {
+            .red-btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .testimonial-cont {
+        &:after {
+            background: none !important;
+        }
+
+        .user-name {
+            padding-right: 0px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
 @include media-breakpoint-between(xl, xxl) {
-  .header-top {
-    font-size: 19px;
-  }
-
-  .main-header {
-    .main-menu {
-      .nav-link {
-        padding: 15px 31px;
-      }
+    .header-top {
+        font-size: 19px;
     }
-  }
 
-  .hero-banner-container {
-    background-position-x: right 50%;
-    background-position-y: top 40px;
-  }
+    .main-header {
+        .main-menu {
+            .nav-link {
+                padding: 15px 31px;
+            }
+        }
+    }
 
-  .cta-banner1 {
-    background-position: right;
-  }
+    .hero-banner-container {
+        background-position-x: right 50%;
+        background-position-y: top 40px;
+    }
 
+    .cta-banner1 {
+        background-position: right;
+    }
 
-.home-contact-form
-{
-  .btn-lg
-  {
-    width: 166px;
-    padding:0px;
-  }
-}
-
+    .home-contact-form {
+        .btn-lg {
+            width: 166px;
+            padding: 0px;
+        }
+    }
 }
 
 // About us and nft changes
 
 @include media-breakpoint-between(xs, sm) {
-  // ----------font size---------
-  .nft-service-page .h1,
-  .about-us-page .h1 {
-    font-size: 26px;
-    line-height: 40px;
-  }
-  .nft-service-page .h2,
-  .about-us-page .h2 {
-    font-size: 24px;
-  }
-  .nft-service-page .h3,
-  .about-us-page .h3 {
-    font-size: 18px;
-  }
-  // ----------font size---------
+    // ----------font size---------
+    .nft-service-page .h1,
+    .about-us-page .h1 {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .nft-service-page .h2,
+    .about-us-page .h2 {
+        font-size: 24px;
+    }
+    .nft-service-page .h3,
+    .about-us-page .h3 {
+        font-size: 18px;
+    }
+    // ----------font size---------
 
-  // --------- about us page start---------
-  .about-us-banner {
-    min-height: 400px;
-    padding-bottom: 65px;
-    .w-50 {
-      width: 100% !important;
+    // --------- about us page start---------
+    .about-us-banner {
+        min-height: 400px;
+        padding-bottom: 65px;
+        .w-50 {
+            width: 100% !important;
+        }
     }
-  }
-  .about-section1 {
-    margin-top: -70px;
-    background-size: 180px;
-  }
-  .line-animated {
-    height: 93px;
-  }
-  .about-section2 {
-    .our-story-block {
-      margin-bottom: 40px;
+    .about-section1 {
+        margin-top: -70px;
+        background-size: 180px;
     }
-  }
-  .about-section3 {
     .line-animated {
-      height: 90px;
-      margin-bottom: 15px;
+        height: 93px;
     }
-  }
-  .about-section4 {
-    .lets-meet-box {
-      width: 100%;
-      margin-top: 20px;
-      padding: 35px !important;
-      margin-bottom: 30px;
+    .about-section2 {
+        .our-story-block {
+            margin-bottom: 40px;
+        }
     }
-    .our-team-block {
-      .h3.dark-secondary-text-color {
-        line-height: 27px;
-      }
-      .line-animated {
-        height: 60px;
-      }
+    .about-section3 {
+        .line-animated {
+            height: 90px;
+            margin-bottom: 15px;
+        }
     }
-  }
-  .about-section5 {
-    .our-team {
-      .card-title {
-        font-size: 17px;
-      }
-      .card-img-top {
-        width: 103px;
-        height: 103px;
-      }
+    .about-section4 {
+        .lets-meet-box {
+            width: 100%;
+            margin-top: 20px;
+            padding: 35px !important;
+            margin-bottom: 30px;
+        }
+        .our-team-block {
+            .h3.dark-secondary-text-color {
+                line-height: 27px;
+            }
+            .line-animated {
+                height: 60px;
+            }
+        }
     }
-  }
+    .about-section5 {
+        .our-team {
+            .card-title {
+                font-size: 17px;
+            }
+            .card-img-top {
+                width: 103px;
+                height: 103px;
+            }
+        }
+    }
 
-  // --------- about us page end---------
+    // --------- about us page end---------
 
-  // ---------footer start---------
-  .footer-section {
-    .brand-logo {
-      img {
-        width: 150px;
-      }
+    // ---------footer start---------
+    .footer-section {
+        .brand-logo {
+            img {
+                width: 150px;
+            }
+        }
+        .copyrights-section {
+            font-size: 15px;
+        }
     }
-    .copyrights-section {
-      font-size: 15px;
+    .lh-lg {
+        line-height: 26px !important;
     }
-  }
-  .lh-lg {
-    line-height: 26px !important;
-  }
-  // ---------footer end---------
+    // ---------footer end---------
 
-  // ------------------NFT Services-section------------//
-  .service-inner-section1 {
-    padding-top: 130px;
-    padding-bottom: 35px;
-    .nft-service-img {
-      // height: 250px;
+    // ------------------NFT Services-section------------//
+    .service-inner-section1 {
+        padding-top: 130px;
+        padding-bottom: 35px;
+        .nft-service-img {
+            // height: 250px;
             margin-bottom: 0;
             margin-top: 20px;
         }
-        .btn-lg, .btn-group-lg > .btn {
+        .btn-lg,
+        .btn-group-lg > .btn {
             width: 200px;
         }
     }
 
-  .service-inner-section3 {
-    .cta-banner2 {
-      min-height: 190px;
-      background-position: -590px;
-      &:after {
-        min-height: 190px;
-      }
-      .h2 {
-        margin-bottom: 20px;
-      }
+    .service-inner-section3 {
+        .cta-banner2 {
+            min-height: 190px;
+            background-position: -590px;
+            &:after {
+                min-height: 190px;
+            }
+            .h2 {
+                margin-bottom: 20px;
+            }
+        }
     }
-  }
-  // ------------------NFT Services-section------------//
+    // ------------------NFT Services-section------------//
 
-  .inner-page-header {
-    .main-menu {
-      .nav-link {
-        color: color("dark-primary") !important;
-      }
+    .inner-page-header {
+        .main-menu {
+            .nav-link {
+                color: color('dark-primary') !important;
+            }
+        }
     }
-  }
-    .fixed-top{
-      .inner-page-header{
-        .navbar-light{
-          .navbar-toggler-icon{
-            filter: brightness(0) invert(1);
-          }
-          .navbar-toggler{
-            border-color: rgb(255 255 255 / 57%);
-          }
-        }
-      }
-      &.sticky{
-        .inner-page-header{
-          .navbar-light{
-            .navbar-toggler-icon{
-              filter: brightness(1) invert(0);
+    .fixed-top {
+        .inner-page-header {
+            .navbar-light {
+                .navbar-toggler-icon {
+                    filter: brightness(0) invert(1);
+                }
+                .navbar-toggler {
+                    border-color: rgb(255 255 255 / 57%);
+                }
             }
-            .navbar-toggler{
-              border-color: initial;
-            }
-          }
         }
-      }
+        &.sticky {
+            .inner-page-header {
+                .navbar-light {
+                    .navbar-toggler-icon {
+                        filter: brightness(1) invert(0);
+                    }
+                    .navbar-toggler {
+                        border-color: initial;
+                    }
+                }
+            }
+        }
     }
 
     // ------------------Career page starts------------//
-    .career-page{
-      .h1 {
-        font-size: 33px;
-        line-height: 54px;
-      }
-      .form-field{
-        &.search-field {
-          width: 100% !important;
+    .career-page {
+        .h1 {
+            font-size: 33px;
+            line-height: 54px;
         }
-        &.md-margin{
-          margin-bottom: 20px;
+        .form-field {
+            &.search-field {
+                width: 100% !important;
+            }
+            &.md-margin {
+                margin-bottom: 20px;
+            }
+            width: 100% !important;
+            &.col {
+                flex: unset;
+            }
+            &:not(:last-child) {
+                margin-right: 0px;
+            }
+            &:nth-child(odd) {
+                margin-right: 0px;
+            }
+            .form-control,
+            .form-select {
+                height: 48px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
-        width: 100% !important;
-        &.col{
-          flex: unset;
+        .h3 {
+            font-size: 16px;
         }
-        &:not(:last-child){
-          margin-right: 0px;
-        }
-        &:nth-child(odd){
-          margin-right: 0px;
-        }
-        .form-control, .form-select{
-          height: 48px;
-        }
-        &:not(:last-child){
-          margin-bottom: 20px;
-        }
-      }
-      .h3 {
-        font-size: 16px;
-      }
     }
-    .career-section1{
-      .h1{
-        font-size: 26px;
-        line-height: 35px;
-      }
-      padding-bottom: 0 !important;
+    .career-section1 {
+        .h1 {
+            font-size: 26px;
+            line-height: 35px;
+        }
+        padding-bottom: 0 !important;
     }
 
     .career-hero-banner {
-      min-height: 290px;
-      margin: 95px 0 30px 0;
-      padding-top: 30px;
-      background-size: 100%;
-      background-position: bottom;
-      .w-50{
-        width: 100% !important;
-      }
+        min-height: 290px;
+        margin: 95px 0 30px 0;
+        padding-top: 30px;
+        background-size: 100%;
+        background-position: bottom;
+        .w-50 {
+            width: 100% !important;
+        }
     }
     .career-section3 {
-      padding: 10px 0 30px 0;
-      .job-position {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .job-position {
-          span {
-          width: 90%;
+        padding: 10px 0 30px 0;
+        .job-position {
+            width: 100%;
+            margin-bottom: 20px;
         }
-      }
-      .job-info{
-        width: 100%;
-        flex-wrap: wrap;
-      }
-      .job-location, .job-posted{
-        width: 100%;
-        margin-bottom: 20px;
-      }
+        .job-position {
+            span {
+                width: 90%;
+            }
+        }
+        .job-info {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .job-location,
+        .job-posted {
+            width: 100%;
+            margin-bottom: 20px;
+        }
     }
-    .career-section2{
-      .w-1k-block {
-        margin-top: 0;
-      }
+    .career-section2 {
+        .w-1k-block {
+            margin-top: 0;
+        }
     }
     .w-1k-block {
-      width: 100%;
+        width: 100%;
     }
-    .listing-div{
-      margin-top: 20px;
-      li{
-        margin-bottom: 20px;
-        span {
-          padding-right: 20px;
-          margin-bottom: 0;
-          font-size: 27px;
+    .listing-div {
+        margin-top: 20px;
+        li {
+            margin-bottom: 20px;
+            span {
+                padding-right: 20px;
+                margin-bottom: 0;
+                font-size: 27px;
+            }
         }
-      }
     }
     // ------------------Career page starts------------//
     // ----------------------career page details start----------------
-    .CareerDetails-wrapper{
-      .h1 {
-        font-size: 27px;
-        line-height: 38px;
-      }
-      .h2 {
-        font-size: 23px;
-      }
+    .CareerDetails-wrapper {
+        .h1 {
+            font-size: 27px;
+            line-height: 38px;
+        }
+        .h2 {
+            font-size: 23px;
+        }
     }
     .careerdetail-roles-section {
-      .roles-responsibility {
-        padding: 30px 30px;
-      }
+        .roles-responsibility {
+            padding: 30px 30px;
+        }
     }
     .careerdetail-overview-section {
         padding: 30px 0;
-      .job-overview {
-        width: 100%;
-        margin-top: 25px;
-      }
-      .overview-img img {
-        width: 280px;
-        margin: 10px auto 0;
-      }
-      .red-btn{
-        width: 180px;
-      }
+        .job-overview {
+            width: 100%;
+            margin-top: 25px;
+        }
+        .overview-img img {
+            width: 280px;
+            margin: 10px auto 0;
+        }
+        .red-btn {
+            width: 180px;
+        }
     }
     .career-apply-btn {
-      width: auto;
+        width: auto;
     }
     // ----------------------career page details end----------------
     // changes
-    .cta-banner3{
-      background-position: left;
-      min-height: 170px;
-      padding: 30px;
-      &:after{
+    .cta-banner3 {
+        background-position: left;
         min-height: 170px;
-      }
+        padding: 30px;
+        &:after {
+            min-height: 170px;
+        }
     }
 }
 
 @include media-breakpoint-between(sm, md) {
-  // ----------font size---------
-  .nft-service-page .h1,
-  .about-us-page .h1 {
-    font-size: 30px;
-    line-height: 60px;
-  }
-  .nft-service-page .h2,
-  .about-us-page .h2 {
-    font-size: 25px;
-  }
-  .nft-service-page .h3,
-  .about-us-page .h3 {
-    font-size: 18px;
-  }
-  // ----------font size---------
+    // ----------font size---------
+    .nft-service-page .h1,
+    .about-us-page .h1 {
+        font-size: 30px;
+        line-height: 60px;
+    }
+    .nft-service-page .h2,
+    .about-us-page .h2 {
+        font-size: 25px;
+    }
+    .nft-service-page .h3,
+    .about-us-page .h3 {
+        font-size: 18px;
+    }
+    // ----------font size---------
 
-  // --------- about us page start---------
-  .about-us-banner {
-    min-height: 430px;
-    .w-50 {
-      width: 85% !important;
+    // --------- about us page start---------
+    .about-us-banner {
+        min-height: 430px;
+        .w-50 {
+            width: 85% !important;
+        }
     }
-  }
-  .about-section1 {
-    margin-top: -90px;
-    background-size: 280px;
-  }
-  .line-animated {
-    height: 110px;
-  }
-  .about-section2 {
-    .our-story-block {
-      margin-bottom: 20px;
+    .about-section1 {
+        margin-top: -90px;
+        background-size: 280px;
     }
-  }
-  .about-section3 {
     .line-animated {
-      height: 90px;
-      margin-bottom: 15px;
+        height: 110px;
     }
-  }
-  .about-section4 {
-    .lets-meet-box {
-      width: 100%;
-      margin-top: 30px;
-      padding: 40px 35px !important;
-      margin-bottom: 30px;
+    .about-section2 {
+        .our-story-block {
+            margin-bottom: 20px;
+        }
     }
-    .our-team-block {
-      .h3.dark-secondary-text-color {
-        line-height: 27px;
-      }
-      .line-animated {
-        height: 60px;
-      }
+    .about-section3 {
+        .line-animated {
+            height: 90px;
+            margin-bottom: 15px;
+        }
     }
-  }
-  .about-section5 {
-    .our-team {
-      .card-title {
-        font-size: 19px;
-      }
-      .card-img-top {
-        width: 163px;
-        height: 163px;
-      }
+    .about-section4 {
+        .lets-meet-box {
+            width: 100%;
+            margin-top: 30px;
+            padding: 40px 35px !important;
+            margin-bottom: 30px;
+        }
+        .our-team-block {
+            .h3.dark-secondary-text-color {
+                line-height: 27px;
+            }
+            .line-animated {
+                height: 60px;
+            }
+        }
     }
-  }
+    .about-section5 {
+        .our-team {
+            .card-title {
+                font-size: 19px;
+            }
+            .card-img-top {
+                width: 163px;
+                height: 163px;
+            }
+        }
+    }
 
-  // --------- about us page end---------
+    // --------- about us page end---------
 
-  // ---------footer start---------
-  .footer-section {
-    .brand-logo {
-      img {
-        width: 190px;
-      }
+    // ---------footer start---------
+    .footer-section {
+        .brand-logo {
+            img {
+                width: 190px;
+            }
+        }
     }
-  }
-  .lh-lg {
-    line-height: 26px !important;
-  }
-  // ---------footer end---------
+    .lh-lg {
+        line-height: 26px !important;
+    }
+    // ---------footer end---------
 
-  // ------------------NFT Services-section------------//
-  .service-inner-section1 {
-    padding-top: 130px;
-    padding-bottom: 35px;
-    .nft-service-img {
-      // height: 350px;
+    // ------------------NFT Services-section------------//
+    .service-inner-section1 {
+        padding-top: 130px;
+        padding-bottom: 35px;
+        .nft-service-img {
+            // height: 350px;
             margin-bottom: 0;
             margin-top: 20px;
         }
-        .btn-lg, .btn-group-lg > .btn {
+        .btn-lg,
+        .btn-group-lg > .btn {
             width: 200px;
         }
     }
-    .service-inner-section3{
-        .cta-banner2{
+    .service-inner-section3 {
+        .cta-banner2 {
             min-height: 200px;
             background-position: -430px;
-            &:after{
+            &:after {
                 min-height: 200px;
             }
-            .h2{
+            .h2 {
                 margin-bottom: 20px;
             }
         }
     }
     // ------------------NFT Services-section------------//
 
-  .inner-page-header {
-    .main-menu {
-      .nav-link {
-        color: color("dark-primary") !important;
-      }
+    .inner-page-header {
+        .main-menu {
+            .nav-link {
+                color: color('dark-primary') !important;
+            }
+        }
     }
-  }
-    .fixed-top{
-      .inner-page-header{
-        .navbar-light{
-          .navbar-toggler-icon{
-            filter: brightness(0) invert(1);
-          }
-          .navbar-toggler{
-            border-color: rgb(255 255 255 / 57%);
-          }
-        }
-      }
-      &.sticky{
-        .inner-page-header{
-          .navbar-light{
-            .navbar-toggler-icon{
-              filter: brightness(1) invert(0);
+    .fixed-top {
+        .inner-page-header {
+            .navbar-light {
+                .navbar-toggler-icon {
+                    filter: brightness(0) invert(1);
+                }
+                .navbar-toggler {
+                    border-color: rgb(255 255 255 / 57%);
+                }
             }
-            .navbar-toggler{
-              border-color: initial;
-            }
-          }
         }
-      }
+        &.sticky {
+            .inner-page-header {
+                .navbar-light {
+                    .navbar-toggler-icon {
+                        filter: brightness(1) invert(0);
+                    }
+                    .navbar-toggler {
+                        border-color: initial;
+                    }
+                }
+            }
+        }
     }
     // ------------------Career page starts------------//
-    .career-page{
-      .h1 {
-        font-size: 39px;
-        line-height: 64px;
-      }
-      .form-field{
-        &.search-field {
-          width: 48% !important;
+    .career-page {
+        .h1 {
+            font-size: 39px;
+            line-height: 64px;
         }
-        &.md-margin{
-          margin-bottom: 20px;
+        .form-field {
+            &.search-field {
+                width: 48% !important;
+            }
+            &.md-margin {
+                margin-bottom: 20px;
+            }
+            width: 48% !important;
+            &.col {
+                flex: unset;
+            }
+            &:not(:last-child) {
+                margin-right: 0px;
+            }
+            &:nth-child(odd) {
+                margin-right: 15px;
+            }
+            .form-control,
+            .form-select {
+                height: 48px;
+            }
         }
-        width: 48% !important;
-        &.col{
-          flex: unset;
+        .h3 {
+            font-size: 16px;
         }
-        &:not(:last-child){
-            margin-right: 0px;
-        }
-        &:nth-child(odd){
-          margin-right: 15px;
-        }
-        .form-control, .form-select{
-          height: 48px;
-        }
-      }
-      .h3 {
-        font-size: 16px;
-      }
     }
-    .career-section1{
-      .h1{
-        font-size: 30px;
-        line-height: 35px;
-      }
+    .career-section1 {
+        .h1 {
+            font-size: 30px;
+            line-height: 35px;
+        }
     }
 
     .career-hero-banner {
-      min-height: 340px;
-      margin: 115px 0 30px 0;
-      padding-top: 40px;
+        min-height: 340px;
+        margin: 115px 0 30px 0;
+        padding-top: 40px;
     }
     .career-section3 {
-      padding: 10px 0 40px 0;
-      .job-position {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-      .job-position {
-          span {
-          width: 90%;
+        padding: 10px 0 40px 0;
+        .job-position {
+            width: 100%;
+            margin-bottom: 30px;
         }
-      }
-      .job-info{
-        width: 100%;
-      }
-      .job-location, .job-posted{
-        width: unset;
-      }
+        .job-position {
+            span {
+                width: 90%;
+            }
+        }
+        .job-info {
+            width: 100%;
+        }
+        .job-location,
+        .job-posted {
+            width: unset;
+        }
     }
-    .career-section2{
-      .w-1k-block {
-        margin-top: 0;
-      }
+    .career-section2 {
+        .w-1k-block {
+            margin-top: 0;
+        }
     }
     .w-1k-block {
-      width: 100%;
+        width: 100%;
     }
-    .listing-div{
-      margin-top: 20px;
-      li{
-        margin-bottom: 20px;
-        span {
-          padding-right: 20px;
-          margin-bottom: 0;
-          font-size: 27px;
+    .listing-div {
+        margin-top: 20px;
+        li {
+            margin-bottom: 20px;
+            span {
+                padding-right: 20px;
+                margin-bottom: 0;
+                font-size: 27px;
+            }
         }
-      }
     }
     // ------------------Career page starts------------//
     // ----------------------career page details start----------------
-    .CareerDetails-wrapper{
-      .h1 {
-        font-size: 29px;
-        line-height: 42px;
-      }
-      .h2 {
-        font-size: 24px;
-      }
+    .CareerDetails-wrapper {
+        .h1 {
+            font-size: 29px;
+            line-height: 42px;
+        }
+        .h2 {
+            font-size: 24px;
+        }
     }
     .careerdetail-roles-section {
-      .roles-responsibility {
-        padding: 35px 35px;
-      }
+        .roles-responsibility {
+            padding: 35px 35px;
+        }
     }
     .careerdetail-overview-section {
         padding: 40px 0;
-      .job-overview {
-        width: 100%;
-        margin-top: 20px;
-      }
-      .overview-img img {
-        width: 420px;
-        margin: 10px auto 0;
-      }
-      .red-btn{
-        width: 200px;
-      }
+        .job-overview {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .overview-img img {
+            width: 420px;
+            margin: 10px auto 0;
+        }
+        .red-btn {
+            width: 200px;
+        }
     }
     .career-apply-btn {
-      width: 230px;
+        width: 230px;
     }
     // ----------------------career page details end----------------
-     // changes
-    .cta-banner3{
-      background-position: -210px;
-      min-height: 202px;
-      padding: 30px;
-      &:after{
+    // changes
+    .cta-banner3 {
+        background-position: -210px;
         min-height: 202px;
-      }
+        padding: 30px;
+        &:after {
+            min-height: 202px;
+        }
     }
 }
 @include media-breakpoint-between(md, lg) {
-  // ----------font size---------
-  .nft-service-page .h1,
-  .about-us-page .h1 {
-    font-size: 35px;
-  }
-  .nft-service-page .h2,
-  .about-us-page .h2 {
-    font-size: 28px;
-  }
-  // ----------font size---------
-
-  // --------- about us page start---------
-  .about-us-banner {
-    min-height: 460px;
-    .w-50 {
-      width: 75% !important;
+    // ----------font size---------
+    .nft-service-page .h1,
+    .about-us-page .h1 {
+        font-size: 35px;
     }
-  }
-  .about-section1 {
-    margin-top: -120px;
-    background-size: 410px;
-  }
-  .line-animated {
-    height: 140px;
-  }
-  .about-section3 {
+    .nft-service-page .h2,
+    .about-us-page .h2 {
+        font-size: 28px;
+    }
+    // ----------font size---------
+
+    // --------- about us page start---------
+    .about-us-banner {
+        min-height: 460px;
+        .w-50 {
+            width: 75% !important;
+        }
+    }
+    .about-section1 {
+        margin-top: -120px;
+        background-size: 410px;
+    }
     .line-animated {
-      height: 110px;
-      margin-bottom: 15px;
+        height: 140px;
     }
-  }
-  .about-section4 {
-    .lets-meet-box {
-      width: 100%;
-      margin-top: -60px;
-      padding: 40px 35px !important;
-      margin-bottom: 30px;
+    .about-section3 {
+        .line-animated {
+            height: 110px;
+            margin-bottom: 15px;
+        }
     }
-    .our-team-block {
-      .h3.dark-secondary-text-color {
-        line-height: 27px;
-      }
-      .line-animated {
-        height: 60px;
-      }
+    .about-section4 {
+        .lets-meet-box {
+            width: 100%;
+            margin-top: -60px;
+            padding: 40px 35px !important;
+            margin-bottom: 30px;
+        }
+        .our-team-block {
+            .h3.dark-secondary-text-color {
+                line-height: 27px;
+            }
+            .line-animated {
+                height: 60px;
+            }
+        }
     }
-  }
-  .about-section5 {
-    .our-team {
-      .card-title {
-        font-size: 19px;
-      }
-      .card-img-top {
-        width: 163px;
-        height: 163px;
-      }
+    .about-section5 {
+        .our-team {
+            .card-title {
+                font-size: 19px;
+            }
+            .card-img-top {
+                width: 163px;
+                height: 163px;
+            }
+        }
     }
-  }
 
-  // --------- about us page end---------
+    // --------- about us page end---------
 
-  // ---------footer start---------
-  .lh-lg {
-    line-height: 26px !important;
-  }
-  // ---------footer end---------
+    // ---------footer start---------
+    .lh-lg {
+        line-height: 26px !important;
+    }
+    // ---------footer end---------
 
-  // ------------------NFT Services-section------------//
-  .service-inner-section1 {
-    padding-top: 140px;
-    padding-bottom: 35px;
-    .nft-service-img {
-      // height: 430px;
+    // ------------------NFT Services-section------------//
+    .service-inner-section1 {
+        padding-top: 140px;
+        padding-bottom: 35px;
+        .nft-service-img {
+            // height: 430px;
             margin-bottom: -90px;
         }
-        .btn-lg, .btn-group-lg > .btn {
+        .btn-lg,
+        .btn-group-lg > .btn {
             width: 190px;
         }
     }
-    .service-inner-section3{
-        .cta-banner2{
+    .service-inner-section3 {
+        .cta-banner2 {
             //min-height: 240px;
             //background-position: center;
-            &:after{
+            &:after {
                 min-height: 240px;
             }
-            .h2{
+            .h2 {
                 margin-bottom: 20px;
             }
         }
     }
     // ------------------NFT Services-section------------//
 
-  .inner-page-header {
-    .main-menu {
-      .nav-link {
-        color: color("dark-primary") !important;
-      }
+    .inner-page-header {
+        .main-menu {
+            .nav-link {
+                color: color('dark-primary') !important;
+            }
+        }
     }
-  }
-    .fixed-top{
-      .inner-page-header{
-        .navbar-light{
-          .navbar-toggler-icon{
-            filter: brightness(0) invert(1);
-          }
-          .navbar-toggler{
-            border-color: rgb(255 255 255 / 57%);
-          }
-        }
-      }
-      &.sticky{
-        .inner-page-header{
-          .navbar-light{
-            .navbar-toggler-icon{
-              filter: brightness(1) invert(0);
+    .fixed-top {
+        .inner-page-header {
+            .navbar-light {
+                .navbar-toggler-icon {
+                    filter: brightness(0) invert(1);
+                }
+                .navbar-toggler {
+                    border-color: rgb(255 255 255 / 57%);
+                }
             }
-            .navbar-toggler{
-              border-color: initial;
-            }
-          }
         }
-      }
+        &.sticky {
+            .inner-page-header {
+                .navbar-light {
+                    .navbar-toggler-icon {
+                        filter: brightness(1) invert(0);
+                    }
+                    .navbar-toggler {
+                        border-color: initial;
+                    }
+                }
+            }
+        }
     }
 
     // ------------------Career page starts------------//
-    .career-page{
-      .h1 {
-        font-size: 41px;
-        line-height: 64px;
-      }
-      .form-field{
-        &.search-field {
-          width: 48% !important;
+    .career-page {
+        .h1 {
+            font-size: 41px;
+            line-height: 64px;
         }
-        &.md-margin{
-          margin-bottom: 20px;
+        .form-field {
+            &.search-field {
+                width: 48% !important;
+            }
+            &.md-margin {
+                margin-bottom: 20px;
+            }
+            width: 48% !important;
+            &.col {
+                flex: unset;
+            }
+            &:not(:last-child) {
+                margin-right: 0px;
+            }
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+            .form-control,
+            .form-select {
+                height: 48px;
+            }
         }
-        width: 48% !important;
-        &.col{
-          flex: unset;
-        }
-        &:not(:last-child){
-            margin-right: 0px;
-        }
-        &:nth-child(odd){
-          margin-right: 20px;
-        }
-        .form-control, .form-select{
-          height: 48px;
-        }
-      }
     }
-    .career-section1{
-      .h1{
-        font-size: 32px;
-        line-height: 15px;
-      }
+    .career-section1 {
+        .h1 {
+            font-size: 32px;
+            line-height: 15px;
+        }
     }
 
     .career-hero-banner {
-      min-height: 420px;
-      margin: 115px 0 30px 0;
-      padding-top: 50px;
+        min-height: 420px;
+        margin: 115px 0 30px 0;
+        padding-top: 50px;
     }
     .career-section3 {
-      padding: 20px 0 40px 0;
-      .job-position {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-      .job-position {
-          span {
-          width: 90%;
+        padding: 20px 0 40px 0;
+        .job-position {
+            width: 100%;
+            margin-bottom: 30px;
         }
-      }
-      .job-info{
-        width: 100%;
-      }
-      .job-location, .job-posted{
-        width: unset;
-      }
+        .job-position {
+            span {
+                width: 90%;
+            }
+        }
+        .job-info {
+            width: 100%;
+        }
+        .job-location,
+        .job-posted {
+            width: unset;
+        }
     }
-    .career-section2{
-      .w-1k-block {
-        margin-top: 0;
-      }
+    .career-section2 {
+        .w-1k-block {
+            margin-top: 0;
+        }
     }
     .w-1k-block {
-      width: 100%;
+        width: 100%;
     }
-    .listing-div{
-      margin-top: 30px;
-      li{
-        margin-bottom: 20px;
-        span {
-          padding-right: 20px;
-          margin-bottom: 0;
-          font-size: 33px;
+    .listing-div {
+        margin-top: 30px;
+        li {
+            margin-bottom: 20px;
+            span {
+                padding-right: 20px;
+                margin-bottom: 0;
+                font-size: 33px;
+            }
         }
-      }
     }
     // ------------------Career page starts------------//
     // ----------------------career page details start----------------
-     .CareerDetails-wrapper{
-      .h1 {
-        font-size: 33px;
-        line-height: 49px;
-      }
-      .h2 {
-        font-size: 27px;
-      }
+    .CareerDetails-wrapper {
+        .h1 {
+            font-size: 33px;
+            line-height: 49px;
+        }
+        .h2 {
+            font-size: 27px;
+        }
     }
     .careerdetail-roles-section {
-      .roles-responsibility {
-        padding: 35px 40px;
-      }
+        .roles-responsibility {
+            padding: 35px 40px;
+        }
     }
     .careerdetail-overview-section {
         padding: 40px 0;
-      .job-overview {
-        width: 100%;
-        margin-top: 20px;
-      }
-      .overview-img img {
-        width: 440px;
-        margin: 10px auto 0;
-      }
-      .red-btn{
-        width: 200px;
-      }
+        .job-overview {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .overview-img img {
+            width: 440px;
+            margin: 10px auto 0;
+        }
+        .red-btn {
+            width: 200px;
+        }
     }
     .career-apply-btn {
-      width: 250px;
+        width: 250px;
     }
     // ----------------------career page details end----------------
-     // changes
-     .section-glow {
-      padding: 55px 0 45px 0;
+    // changes
+    .section-glow {
+        padding: 55px 0 45px 0;
     }
-    .home-footer{
-      .home-footer-logo{
-        text-align: center !important;
-      }
+    .home-footer {
+        .home-footer-logo {
+            text-align: center !important;
+        }
     }
-    
 }
 @include media-breakpoint-between(lg, xl) {
-  // ----------font size---------
-  .nft-service-page .h1,
-  .about-us-page .h1 {
-    font-size: 40px;
-  }
-  .nft-service-page .h2,
-  .about-us-page .h2 {
-    font-size: 33px;
-  }
-  // ----------font size---------
+    // ----------font size---------
+    .nft-service-page .h1,
+    .about-us-page .h1 {
+        font-size: 40px;
+    }
+    .nft-service-page .h2,
+    .about-us-page .h2 {
+        font-size: 33px;
+    }
+    // ----------font size---------
 
-  // --------- about us page start---------
-  .about-us-banner {
-    min-height: 500px;
-  }
-  .about-section1 {
-    margin-top: -120px;
-    background-size: 580px;
-  }
-  .line-animated {
-    height: 130px;
-  }
-  .about-section4 {
-    .lets-meet-box {
-      width: 100%;
-      margin-top: -60px;
-      padding: 40px 35px !important;
+    // --------- about us page start---------
+    .about-us-banner {
+        min-height: 500px;
     }
-    .our-team-block {
-      .h3.dark-secondary-text-color {
-        line-height: 27px;
-      }
-      .line-animated {
-        height: 90px;
-      }
+    .about-section1 {
+        margin-top: -120px;
+        background-size: 580px;
     }
-  }
-  .about-section5 {
-    .our-team {
-      .card-title {
-        font-size: 19px;
-      }
-      .card-img-top {
-        width: 163px;
-        height: 163px;
-      }
+    .line-animated {
+        height: 130px;
     }
-  }
+    .about-section4 {
+        .lets-meet-box {
+            width: 100%;
+            margin-top: -60px;
+            padding: 40px 35px !important;
+        }
+        .our-team-block {
+            .h3.dark-secondary-text-color {
+                line-height: 27px;
+            }
+            .line-animated {
+                height: 90px;
+            }
+        }
+    }
+    .about-section5 {
+        .our-team {
+            .card-title {
+                font-size: 19px;
+            }
+            .card-img-top {
+                width: 163px;
+                height: 163px;
+            }
+        }
+    }
 
-  // --------- about us page end---------
-  // ------------------NFT Services-section------------//
-  .service-inner-section1 {
-    padding-top: 150px;
-    padding-bottom: 45px;
-    .btn-lg,
-    .btn-group-lg > .btn {
-      width: 200px;
+    // --------- about us page end---------
+    // ------------------NFT Services-section------------//
+    .service-inner-section1 {
+        padding-top: 150px;
+        padding-bottom: 45px;
+        .btn-lg,
+        .btn-group-lg > .btn {
+            width: 200px;
+        }
     }
-  }
     .service-inner-section1 .nft-service-img {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
     // ------------------NFT Services-section------------//
 
     // ------------------Career page starts------------//
-    .career-page{
-      .h1 {
-        font-size: 44px;
-        line-height: 64px;
-      }
+    .career-page {
+        .h1 {
+            font-size: 44px;
+            line-height: 64px;
+        }
     }
     .career-hero-banner {
-      min-height: 550px;
-      margin: 125px 0 30px 0;
-      padding-top: 80px;
+        min-height: 550px;
+        margin: 125px 0 30px 0;
+        padding-top: 80px;
     }
     .career-section3 {
-      padding: 20px 0 40px 0;
-      .job-position {
-        width: 40%;
-      }
-      .job-position {
-          span {
-          width: 90%;
+        padding: 20px 0 40px 0;
+        .job-position {
+            width: 40%;
         }
-      }
+        .job-position {
+            span {
+                width: 90%;
+            }
+        }
     }
-    .career-section2{
-      .w-1k-block {
-        margin-top: 0;
-      }
+    .career-section2 {
+        .w-1k-block {
+            margin-top: 0;
+        }
     }
     .w-1k-block {
-      width: 100%;
+        width: 100%;
     }
-    .listing-div{
-      li{
-        margin-bottom: 20px;
-        span {
-          padding-right: 20px;
-          margin-bottom: 0;
-          font-size: 36px;
+    .listing-div {
+        li {
+            margin-bottom: 20px;
+            span {
+                padding-right: 20px;
+                margin-bottom: 0;
+                font-size: 36px;
+            }
         }
-      }
     }
     // ------------------Career page starts------------//
-// ----------------------career page details start----------------
-    .CareerDetails-wrapper{
-      .h1 {
-        font-size: 38px;
-        line-height: 50px;
-      }
-      .h2 {
-        font-size: 29px;
-      }
+    // ----------------------career page details start----------------
+    .CareerDetails-wrapper {
+        .h1 {
+            font-size: 38px;
+            line-height: 50px;
+        }
+        .h2 {
+            font-size: 29px;
+        }
     }
     .careerdetail-roles-section {
-      .roles-responsibility {
-        padding: 35px 40px;
-      }
+        .roles-responsibility {
+            padding: 35px 40px;
+        }
     }
     .careerdetail-overview-section {
         padding: 40px 0;
-      .job-overview {
-        width: 100%;
-      }
-      .overview-img img {
-        margin-left: 0;
-        width: 440px;
-      }
+        .job-overview {
+            width: 100%;
+        }
+        .overview-img img {
+            margin-left: 0;
+            width: 440px;
+        }
     }
     // career page changes start
-    .career-section1{
-      .listing-div {
-        margin-top: 25px;
-      }
+    .career-section1 {
+        .listing-div {
+            margin-top: 25px;
+        }
     }
     // career page changes end
     // ----------------------career page details end----------------
 
     // changes
     .section-glow {
-      padding: 75px 0 75px 0;
+        padding: 75px 0 75px 0;
     }
-
 }
 @include media-breakpoint-between(xl, xxl) {
-  // ----------font size---------
-  .nft-service-page .h1,
-  .about-us-page .h1 {
-    font-size: 46px;
-  }
-  // ----------font size---------
+    // ----------font size---------
+    .nft-service-page .h1,
+    .about-us-page .h1 {
+        font-size: 46px;
+    }
+    // ----------font size---------
 
     // --------- about us page start---------
     .about-us-banner {
@@ -1714,35 +1699,33 @@
     }
     // --------- about us page end---------
 
-
     // ------------------Career page starts------------//
     .career-hero-banner {
-      min-height: 730px;
+        min-height: 730px;
     }
     .career-section3 {
-      padding: 60px 0 100px 0;
+        padding: 60px 0 100px 0;
     }
-    .career-section2{
-      .w-1k-block {
-        margin-top: 30px;
-      }
+    .career-section2 {
+        .w-1k-block {
+            margin-top: 30px;
+        }
     }
     // ------------------Career page starts------------//
 
     // ----------------------career page details start----------------
-    .CareerDetails-wrapper{
-      .h1 {
-        font-size: 48px;
-      }
-      .h2 {
-        font-size: 33px;
-      }
+    .CareerDetails-wrapper {
+        .h1 {
+            font-size: 48px;
+        }
+        .h2 {
+            font-size: 33px;
+        }
     }
     .careerdetail-roles-section {
-      .roles-responsibility {
-        padding: 60px 55px;
-      }
+        .roles-responsibility {
+            padding: 60px 55px;
+        }
     }
     // ----------------------career page details end----------------
-
 }
