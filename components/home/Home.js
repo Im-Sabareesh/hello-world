@@ -16,7 +16,7 @@ import {
 const HomeComponent = () => {
     const router = useRouter();
     const [validated, setValidated] = React.useState(false);
-
+    console.log(process.env.DB_HOST);
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -1058,6 +1058,7 @@ const HomeComponent = () => {
                                                                                     Privacy
                                                                                     Policy
                                                                                 </a>
+
                                                                                 .
                                                                             </Form.Check.Label>
                                                                         </Form.Check>
