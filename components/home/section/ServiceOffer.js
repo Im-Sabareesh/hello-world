@@ -12,7 +12,6 @@ import {
 } from 'react-bootstrap';
 
 export default function ServiceOfferSection() {
-
     const serviceList = [
         {
             name: 'Decentraized Finance',
@@ -62,8 +61,8 @@ export default function ServiceOfferSection() {
                         </h2>
 
                         <p>
-                            Nulla Lorem mollit cupidatat irure. Laborum
-                            magna nulla duis ullamco cillum dolor. Voluptate
+                            Nulla Lorem mollit cupidatat irure. Laborum magna
+                            nulla duis ullamco cillum dolor. Voluptate
                             exercitation incididunt aliquip deserunt
                             reprehenderit elit laborum.
                         </p>
@@ -84,9 +83,7 @@ export default function ServiceOfferSection() {
                                 <Image src={item.icon} alt="" />
                             </p>
 
-                            <h3 className="h3 dark-text-color">
-                                {item.name}
-                            </h3>
+                            <h3 className="h3 dark-text-color">{item.name}</h3>
 
                             <p> {item.describe} </p>
                         </Col>
@@ -104,5 +101,5 @@ export default function ServiceOfferSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

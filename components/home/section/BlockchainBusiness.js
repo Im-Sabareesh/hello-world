@@ -1,15 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {
-    Container,
-    Row,
-    Col,
-    Image,
-} from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 export default function BlockchainBusinessSection() {
-
     const blockChainUsageList = [
         {
             name: 'Enhanced security',
@@ -43,14 +37,14 @@ export default function BlockchainBusinessSection() {
                         </h2>
 
                         <p>
-                            Blockchain for business uses a shared and
-                            immutable ledger that can only be accessed by
-                            members with permission. Network members control
-                            what information each organization or member may
-                            see, and what actions each can take. Blockchain
-                            is sometimes called a trustless network not
-                            because business partners don’t trust each
-                            other, but because they don’t have to.
+                            Blockchain for business uses a shared and immutable
+                            ledger that can only be accessed by members with
+                            permission. Network members control what information
+                            each organization or member may see, and what
+                            actions each can take. Blockchain is sometimes
+                            called a trustless network not because business
+                            partners don’t trust each other, but because they
+                            don’t have to.
                         </p>
                     </Col>
 
@@ -87,5 +81,5 @@ export default function BlockchainBusinessSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

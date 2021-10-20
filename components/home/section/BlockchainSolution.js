@@ -1,19 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 
 import { CardSection } from 'common-components';
 
 export default function BlockChainSolutionSection() {
-
     const blockChainSolnList = [
         {
             title: 'Obortech Smart Hub',
@@ -46,7 +38,8 @@ export default function BlockChainSolutionSection() {
         {
             title: 'Instasure',
             image: '/assets/images/solution-5.jpg',
-            subtitle: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum.',
+            subtitle:
+                'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt. Alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum.',
             link: 'BLOCKCHAIN',
         },
     ];
@@ -61,19 +54,25 @@ export default function BlockChainSolutionSection() {
                         </h2>
                     </Col>
 
-                    {_.map(blockChainSolnList, (item, index) => (
-                        index === (blockChainSolnList.length -1) ?
-                        (
+                    {_.map(blockChainSolnList, (item, index) =>
+                        index === blockChainSolnList.length - 1 ? (
                             <Col md={12} lg={8}>
-                                <CardSection fullCard={true} footerClass="d-flex justify-content-between" item={item}/>
-                            </Col> 
+                                <CardSection
+                                    fullCard={true}
+                                    footerClass="d-flex justify-content-between"
+                                    item={item}
+                                />
+                            </Col>
+                        ) : (
+                            <Col md={6} lg={4} key={_.uniqueId()}>
+                                <CardSection
+                                    fullCard={true}
+                                    footerClass="justify-content-between"
+                                    item={item}
+                                />
+                            </Col>
                         )
-                        : (
-                        <Col md={6} lg={4} key={_.uniqueId()}>
-                            <CardSection fullCard={true} footerClass="justify-content-between" item={item}/>
-                        </Col>
-                        )
-                    ))}
+                    )}
 
                     <Col md={12} className="text-center my-5">
                         <Button
@@ -86,5 +85,5 @@ export default function BlockChainSolutionSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

@@ -14,7 +14,6 @@ import {
 } from 'react-bootstrap';
 
 export default function CilentTestimonialSection() {
-
     const testimonialList = [
         {
             name: 'Chuan Allen',
@@ -39,7 +38,7 @@ export default function CilentTestimonialSection() {
         },
     ];
 
-    return(
+    return (
         <section className="home-section-9 py-5">
             <Container>
                 <Row>
@@ -65,9 +64,7 @@ export default function CilentTestimonialSection() {
                                                     <div className="testimonial-user-cont d-flex align-items-center">
                                                         <div className="user-thumb">
                                                             <Image
-                                                                src={
-                                                                    item.image
-                                                                }
+                                                                src={item.image}
                                                                 roundedCircle
                                                                 className="shadow"
                                                                 alt=" "
@@ -78,7 +75,7 @@ export default function CilentTestimonialSection() {
                                                                 {item.name}
                                                             </h3>
                                                             <span>
-                                                                { item.company }
+                                                                {item.company}
                                                             </span>
                                                         </div>
                                                     </div>
@@ -96,5 +93,5 @@ export default function CilentTestimonialSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

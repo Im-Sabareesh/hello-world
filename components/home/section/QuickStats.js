@@ -14,7 +14,6 @@ import {
 } from 'react-bootstrap';
 
 export default function QuickStatsSection() {
-
     const quickStateList = [
         {
             icon: '/assets/icons/industry-awards.svg',
@@ -79,5 +78,5 @@ export default function QuickStatsSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

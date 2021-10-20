@@ -2,16 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 
-import {
-    Container,
-    Row,
-    Col,
-    Button,
-} from 'react-bootstrap';
-
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 export default function FeaturedSection() {
-
     const featuresList = [
         {
             title: 'Hyperledger Development',
@@ -35,7 +28,7 @@ export default function FeaturedSection() {
         },
     ];
 
-    return (    
+    return (
         <section className="hero-banner-container">
             <Container>
                 <Row>
@@ -53,9 +46,8 @@ export default function FeaturedSection() {
 
                         <p>
                             Unleash full business potential with our cutting
-                            edge blockchain solutions. We innovate, build
-                            and integrate real-world blockchain
-                            applications.
+                            edge blockchain solutions. We innovate, build and
+                            integrate real-world blockchain applications.
                         </p>
 
                         <div className="button-outer">
@@ -73,9 +65,7 @@ export default function FeaturedSection() {
                     </Col>
 
                     <Col md={12} className="text-center mt-4">
-                        <h2 className="h2 secondary-text-color">
-                            Featured
-                        </h2>
+                        <h2 className="h2 secondary-text-color">Featured</h2>
                     </Col>
 
                     <div className="mt-4">
@@ -100,5 +90,5 @@ export default function FeaturedSection() {
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

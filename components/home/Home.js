@@ -2,13 +2,20 @@ import React from 'react';
 import _ from 'lodash';
 
 import { ImgPanelSection } from 'common-components';
-import { FeaturedSection, BlockchainBusinessSection, ServiceOfferSection,
-    BlockChainSolutionSection, ChooseUsSection, QuickStatsSection, WorkWithSection,
-    ExploreProjectSection, CilentTestimonialSection, InsightWithFormSection } from './section';
-
+import {
+    FeaturedSection,
+    BlockchainBusinessSection,
+    ServiceOfferSection,
+    BlockChainSolutionSection,
+    ChooseUsSection,
+    QuickStatsSection,
+    WorkWithSection,
+    ExploreProjectSection,
+    CilentTestimonialSection,
+    InsightWithFormSection,
+} from './section';
 
 const HomeComponent = () => {
-
     return (
         <>
             {/*--------------- home hero banner start---------- */}
@@ -25,7 +32,7 @@ const HomeComponent = () => {
 
             {/*--------------- Home section 2 start---------- */}
 
-            <ServiceOfferSection/>
+            <ServiceOfferSection />
 
             {/*--------------- Home section 2 end---------- */}
 
@@ -37,9 +44,14 @@ const HomeComponent = () => {
 
             {/*--------------- Home section4 cta start---------- */}
 
-            <ImgPanelSection secClass="home-section-4 py-5" className="cta-banner cta-banner1 d-flex align-items-center"
-                title="Ready to Get Started?" link="/contact"
-                btnName="Get a quote" image="/assets/icons/Arrow.svg"/>
+            <ImgPanelSection
+                secClass="home-section-4 py-5"
+                className="cta-banner cta-banner1 d-flex align-items-center"
+                title="Ready to Get Started?"
+                link="/contact"
+                btnName="Get a quote"
+                image="/assets/icons/Arrow.svg"
+            />
 
             {/*--------------- Home section4 cta end---------- */}
 
@@ -63,7 +75,7 @@ const HomeComponent = () => {
 
             {/*--------------- Home section8 start---------- */}
 
-            <ExploreProjectSection/>
+            <ExploreProjectSection />
 
             {/*--------------- Home section8 end---------- */}
 
@@ -74,8 +86,8 @@ const HomeComponent = () => {
             {/*--------------- Home section9 testimonial start---------- */}
 
             {/*--------------- Home section10 insights start---------- */}
-            
-            <InsightWithFormSection/>
+
+            <InsightWithFormSection />
 
             {/*--------------- Home section10 insights end---------- */}
         </>

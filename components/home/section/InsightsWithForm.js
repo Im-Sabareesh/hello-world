@@ -16,25 +16,24 @@ import {
 import { CardSection } from 'common-components';
 
 export default function InsightWithFormSection() {
-
     const router = useRouter(),
-    insightsList = [
-        {
-            title: 'Financial Inclusion, Advanced by Digital Currencies',
-            subtitle: 'Jane Cooper | 14 March 2021',
-            image: '/assets/images/insight-img1.jpg',
-        },
-        {
-            title: 'Financial Inclusion, Advanced by Digital Currencies',
-            subtitle: 'Jane Cooper | 14 March 2021',
-            image: '/assets/images/insight-img2.jpg',
-        },
-        {
-            title: 'Financial Inclusion, Advanced by Digital Currencies',
-            subtitle: 'Jane Cooper | 14 March 2021',
-            image: '/assets/images/insight-img3.jpg',
-        },
-    ];
+        insightsList = [
+            {
+                title: 'Financial Inclusion, Advanced by Digital Currencies',
+                subtitle: 'Jane Cooper | 14 March 2021',
+                image: '/assets/images/insight-img1.jpg',
+            },
+            {
+                title: 'Financial Inclusion, Advanced by Digital Currencies',
+                subtitle: 'Jane Cooper | 14 March 2021',
+                image: '/assets/images/insight-img2.jpg',
+            },
+            {
+                title: 'Financial Inclusion, Advanced by Digital Currencies',
+                subtitle: 'Jane Cooper | 14 March 2021',
+                image: '/assets/images/insight-img3.jpg',
+            },
+        ];
     const [validated, setValidated] = React.useState(false);
 
     const handleSubmit = (event) => {
@@ -57,7 +56,11 @@ export default function InsightWithFormSection() {
 
                     {_.map(insightsList, (item) => (
                         <Col md={6} lg={4} key={_.uniqueId()}>
-                            <CardSection className="insight-card mt-3" fullCard={true} item={item} />
+                            <CardSection
+                                className="insight-card mt-3"
+                                fullCard={true}
+                                item={item}
+                            />
                         </Col>
                     ))}
 
@@ -82,9 +85,7 @@ export default function InsightWithFormSection() {
                                         <h2 className="h2 mb-2">
                                             Ready to Get Started?
                                         </h2>
-                                        <p>
-                                            Have an idea? Let’s discuss it!
-                                        </p>
+                                        <p>Have an idea? Let’s discuss it!</p>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -152,8 +153,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom03"
                                                     >
                                                         <Form.Label>
-                                                            HOW CAN WE HELP
-                                                            YOU?
+                                                            HOW CAN WE HELP YOU?
                                                         </Form.Label>
                                                         <Form.Control
                                                             as="textarea"
@@ -175,9 +175,7 @@ export default function InsightWithFormSection() {
                                                         {['checkbox'].map(
                                                             (type) => (
                                                                 <div
-                                                                    key={
-                                                                        type
-                                                                    }
+                                                                    key={type}
                                                                     className="mb-3"
                                                                 >
                                                                     <Form.Check
@@ -219,14 +217,18 @@ export default function InsightWithFormSection() {
                                                                             your
                                                                             privacy.
                                                                             Read
-                                                                            our <a
+                                                                            our{' '}
+                                                                            <a
                                                                                 href="#"
                                                                                 onClick={(
                                                                                     e
                                                                                 ) =>
                                                                                     e.preventDefault()
                                                                                 }
-                                                                            >Privacy Policy</a>
+                                                                            >
+                                                                                Privacy
+                                                                                Policy
+                                                                            </a>
                                                                             .
                                                                         </Form.Check.Label>
                                                                     </Form.Check>
@@ -269,5 +271,5 @@ export default function InsightWithFormSection() {
                 </div>
             </Container>
         </section>
-    )
+    );
 }

@@ -16,7 +16,6 @@ import {
 import { CardSection } from 'common-components';
 
 export default function ExploreProjectSection() {
-
     const exploreProjectList = [
         {
             title: 'Blockchain Consulting',
@@ -61,11 +60,14 @@ export default function ExploreProjectSection() {
                     </Col>
                     {_.map(exploreProjectList, (item) => (
                         <Col md={6} lg={4} key={_.uniqueId()}>
-                            <CardSection className="custom-card2 text-center"  item={item} />
+                            <CardSection
+                                className="custom-card2 text-center"
+                                item={item}
+                            />
                         </Col>
                     ))}
                 </Row>
             </Container>
         </section>
-    )
+    );
 }

@@ -1,17 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {
-    Container,
-    Row,
-    Col,
-    Image,
-} from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import { ImgPanelSection } from 'common-components';
 
 export default function WorkWithSection() {
-
     return (
         <section className="home-section-7 my-5">
             <Container>
@@ -33,14 +27,17 @@ export default function WorkWithSection() {
                     <Col md={8} className="workwithus-txt  mt-3">
                         <Image src="/assets/images/we-work.png" alt=" " />
                     </Col>
-                    
+
                     <Col md={12} className="mt-5 mb-5">
-                        <ImgPanelSection title="Still Have some Questions in Mind? Don&apos;t Worry. <br /> Get FREE Consultation from our Experts"
+                        <ImgPanelSection
+                            title="Still Have some Questions in Mind? Don't Worry. <br /> Get FREE Consultation from our Experts"
                             className="cta-banner cta-banner2 d-flex align-items-center justify-content-end"
-                            link="/contact" btnName="Let’s Talk"/>
+                            link="/contact"
+                            btnName="Let’s Talk"
+                        />
                     </Col>
                 </Row>
             </Container>
         </section>
-    )
+    );
 }
