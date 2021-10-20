@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 
 import { Container, Row, Col, Button, Image, Card } from 'react-bootstrap';
+import { CardSection, ImgPanelSection } from 'common-components';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -149,49 +150,22 @@ const DefiSComponent = () => {
                         </Col>
                         {_.map(wideServiceListSec3, (item) => (
                             <Col key={_.uniqueId()} md={6} lg={4}>
-                                <Card className="custom-card shadow-sm mt-3 mb-4">
-                                    <Card.Img variant="top" src={item.image} />
-                                    <Card.Body>
-                                        <Card.Title>
-                                            <h3 className="h3">
-                                                {' '}
-                                                {item.title}{' '}
-                                            </h3>
-                                        </Card.Title>
-                                        <Card.Text>{item.describe}</Card.Text>
-                                    </Card.Body>
-                                    <Card.Footer className="d-flex justify-content-between">
-                                        <button
-                                            type="button"
-                                            className="red-btn min-size-btn btn btn-primary w-100"
-                                        >
-                                            Know More
-                                        </button>
-                                    </Card.Footer>
-                                </Card>
+                                <CardSection
+                                    className="card shadow-sm mt-3 mb-4"
+                                    item={item}
+                                />
                             </Col>
                         ))}
                     </Row>
                 </Container>
 
                 <Container className="mt-5 pt-2">
-                    <div className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5">
-                        <div className="cta-txt">
-                            <h2 className="h2">
-                                It’s Never too Late to Start! Get FREE
-                                Consultation from our Experts
-                            </h2>
-                            <Button
-                                variant="primary"
-                                className="red-btn min-size-btn"
-                                onClick={() => {
-                                    router.push('/contact');
-                                }}
-                            >
-                                Let’s Talk
-                            </Button>
-                        </div>
-                    </div>
+                    <ImgPanelSection
+                        className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
+                        title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
+                        link="/contact"
+                        btnName="Let’s Talk"
+                    />
                 </Container>
             </section>
 

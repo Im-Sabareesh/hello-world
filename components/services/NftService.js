@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { ImgPanelSection } from 'common-components';
 
 const NFTSComponent = () => {
     const router = useRouter();
@@ -105,25 +106,14 @@ const NFTSComponent = () => {
 
             {/*--------------- NFT Services section3 cta start---------- */}
 
-            <section className="service-inner-section3 py-md-5 py-4">
-                <Container>
-                    <div className="cta-banner cta-banner3 d-flex align-items-center">
-                        <div className="cta-txt">
-                            <h2 className="h2">Start Now?</h2>
-                            <Button
-                                variant="primary"
-                                className="red-btn min-size-btn"
-                                onClick={() => {
-                                    router.push('/contact');
-                                }}
-                            >
-                                Get a quote
-                            </Button>
-                        </div>
-                    </div>
-                </Container>
-            </section>
-
+            <ImgPanelSection
+                secClass="service-inner-section3 py-md-5 py-4"
+                className="cta-banner cta-banner3 d-flex align-items-center"
+                title="Start Now?"
+                link="/contact"
+                btnName="Get a quote"
+            />
+            
             {/*--------------- NFT Services section3 cta end---------- */}
         </>
     );
