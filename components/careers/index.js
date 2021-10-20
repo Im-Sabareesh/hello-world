@@ -8,32 +8,32 @@ const CareersComponent = () => {
     const router = useRouter(),
         vacantListSec3 = [
             {
+                cid: 1,
                 designation: 'User Experience Designer',
                 describe: 'As entrepreneurs ourselves, we’d',
                 location: 'Pune, Maharashtra',
                 posts: '2 months ago',
-                link: '/careers/careerDetails',
             },
             {
+                cid: 2,
                 designation: 'Affiliate Marketing Manager',
                 describe: 'As entrepreneurs ourselves, we’d',
                 location: 'Pune, Maharashtra',
                 posts: '2 months ago',
-                link: '/careers/careerDetails',
             },
             {
+                cid: 3,
                 designation: 'Affiliate Marketing Manager',
                 describe: 'As entrepreneurs ourselves, we’d',
                 location: 'Pune, Maharashtra',
                 posts: '2 months ago',
-                link: '/careers/careerDetails',
             },
             {
+                cid: 4,
                 designation: 'Affiliate Marketing Manager',
                 describe: 'As entrepreneurs ourselves, we’d',
                 location: 'Pune, Maharashtra',
                 posts: '2 months ago',
-                link: '/careers/careerDetails',
             },
         ];
 
@@ -242,7 +242,9 @@ const CareersComponent = () => {
                                             <Button
                                                 variant="primary"
                                                 onClick={() => {
-                                                    router.push(item.link);
+                                                    router.push(
+                                                        `careers/${item.cid}`
+                                                    );
                                                 }}
                                                 className="gradient-btn"
                                             >
