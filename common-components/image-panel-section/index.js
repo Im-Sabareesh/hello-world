@@ -44,12 +44,14 @@ const ImagePanelSection = ({
     }
 
     return (
-        <> {secClass !== '' ? 
+        secClass !== '' ? 
         <section className={secClass}>
             <Container>
                 {RenderPanel()}
             </Container>
-        </section> : RenderPanel() } </>
+        </section> 
+        : 
+        RenderPanel()
     );
 };
 
