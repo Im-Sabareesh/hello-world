@@ -11,7 +11,7 @@ export default function FeaturedSection() {
             link: '#',
         },
         {
-            title: 'DeFi Development',
+            title: 'Defi Development',
             link: '/services/DefiServices/',
         },
         {

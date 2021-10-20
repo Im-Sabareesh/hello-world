@@ -14,7 +14,7 @@ import {
 export default function ServiceOfferSection() {
     const serviceList = [
         {
-            name: 'Decentraized Finance',
+            name: 'Decentralized Finance',
             icon: '/assets/icons/service-icon1.png',
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',

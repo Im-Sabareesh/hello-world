@@ -43,7 +43,7 @@ export default function ExploreProjectSection() {
                 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
         },
         {
-            title: 'Binanace Smart Chain',
+            title: 'Binance Smart Chain',
             describe:
                 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
         },
