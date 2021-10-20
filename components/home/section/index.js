@@ -1,0 +1,10 @@
+export { default as FeaturedSection } from './Featured';
+export { default as BlockchainBusinessSection } from './BlockchainBusiness';
+export { default as ServiceOfferSection } from './ServiceOffer';
+export { default as BlockChainSolutionSection } from './BlockchainSolution';
+export { default as ChooseUsSection } from './ChooseUS';
+export { default as QuickStatsSection } from './QuickStats';
+export { default as WorkWithSection } from './WorkWith';
+export { default as ExploreProjectSection } from './ExploreProject';
+export { default as CilentTestimonialSection } from './ClientTestimonial';
+export { default as InsightWithFormSection } from './InsightsWithForm';
