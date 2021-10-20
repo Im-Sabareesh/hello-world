@@ -56,7 +56,7 @@ export default function BlockChainSolutionSection() {
 
                     {_.map(blockChainSolnList, (item, index) =>
                         index === blockChainSolnList.length - 1 ? (
-                            <Col md={12} lg={8}>
+                            <Col md={12} lg={8} key={_.uniqueId()}>
                                 <CardSection
                                     fullCard={true}
                                     footerClass="d-flex justify-content-between"
