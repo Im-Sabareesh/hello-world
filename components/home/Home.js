@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import {
     Container,
@@ -14,7 +15,8 @@ import {
 } from 'react-bootstrap';
 
 const HomeComponent = () => {
-    const router = useRouter();
+    const router = useRouter(),
+        { t } = useTranslation(['home', 'common']);
     const [validated, setValidated] = React.useState(false);
 
     const handleSubmit = (event) => {
@@ -29,51 +31,51 @@ const HomeComponent = () => {
 
     const featuresHeroBanner = [
             {
-                title: 'Hyperledger Development',
+                title: t('hyperledgerDevelopment'),
                 link: '#',
             },
             {
-                title: 'DeFi Development',
+                title: t('defiDevelopment', { ns: 'common' }),
                 link: '/services/DefiServices/',
             },
             {
-                title: 'NFT Development',
+                title: t('nftDevelopement', { ns: 'common' }),
                 link: '/services/NFTServices/',
             },
             {
-                title: 'Obortech Smart Hub',
+                title: t('obortechSmartHub'),
                 link: '#',
             },
             {
-                title: 'GDPR Compliance',
+                title: t('gdprCompliance'),
                 link: '#',
             },
         ],
         blockChainUsageSec1 = [
             {
-                name: 'Enhanced security',
+                name: t('enhancedSecurity'),
                 icon: '/assets/icons/enhanced-security.svg',
             },
             {
-                name: 'Greater transparency',
+                name: t('greaterTransparency'),
                 icon: '/assets/icons/greater-transparancy.svg',
             },
             {
-                name: 'Instant traceability',
+                name: t('instantTraceability'),
                 icon: '/assets/icons/instant-tracibility.svg',
             },
             {
-                name: 'Increased efficiency',
+                name: t('increasedEfficiency'),
                 icon: '/assets/icons/increased-efficiency.svg',
             },
             {
-                name: 'Decentralized Governance',
+                name: t('decentralizedGovernance'),
                 icon: '/assets/icons/decentralized-governance.svg',
             },
         ],
         serviceListSec2 = [
             {
-                name: 'Decentraized Finance',
+                name: 'Decentralized Finance',
                 icon: '/assets/icons/service-icon1.png',
                 describe:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
@@ -229,7 +231,7 @@ const HomeComponent = () => {
                 link: '',
             },
             {
-                title: 'Binanace Smart Chain',
+                title: 'Binance Smart Chain',
                 describe:
                     'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
                 link: '',
@@ -289,21 +291,14 @@ const HomeComponent = () => {
                         <Col md={10} lg={8} xl={7} xxl={6}>
                             <div className="d-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
-                                    Blockchain Technology
+                                    {t('blockChainTechnology')}
                                 </h3>
                                 <div className="heading-line"> </div>
                             </div>
 
-                            <h3 className="h1">
-                                We provide enterprise blockchain consulting
-                            </h3>
+                            <h3 className="h1">{t('provideEnterprise')}</h3>
 
-                            <p>
-                                Unleash full business potential with our cutting
-                                edge blockchain solutions. We innovate, build
-                                and integrate real-world blockchain
-                                applications.
-                            </p>
+                            <p>{t('provideEnterpriseDesc')}</p>
 
                             <div className="button-outer">
                                 <Button
@@ -314,15 +309,14 @@ const HomeComponent = () => {
                                         router.push('/contact');
                                     }}
                                 >
-                                    Consult for Free
+                                    {t('consultFree')}
                                 </Button>
                             </div>
                         </Col>
 
                         <Col md={12} className="text-center mt-4">
                             <h2 className="h2 secondary-text-color">
-                                {' '}
-                                Featured{' '}
+                                {t('featured')}
                             </h2>
                         </Col>
 
@@ -358,19 +352,10 @@ const HomeComponent = () => {
                     <Row>
                         <Col md={12} lg={6} className="mt-5">
                             <h2 className="dark-text-color mb-4 h2">
-                                How Blockchain Enhances Your Business
+                                {t('blockChainEnhance')}
                             </h2>
 
-                            <p>
-                                Blockchain for business uses a shared and
-                                immutable ledger that can only be accessed by
-                                members with permission. Network members control
-                                what information each organization or member may
-                                see, and what actions each can take. Blockchain
-                                is sometimes called a trustless network not
-                                because business partners don’t trust each
-                                other, but because they don’t have to.
-                            </p>
+                            <p>{t('blockChainEnhanceDesc')}</p>
                         </Col>
 
                         <Col
@@ -416,16 +401,10 @@ const HomeComponent = () => {
                     <Row>
                         <Col md={8} className="mx-auto text-center mb-2">
                             <h2 className="h2 dark-text-color mb-4">
-                                {' '}
-                                Services We Offer{' '}
+                                {t('servicesOffer')}
                             </h2>
 
-                            <p>
-                                Nulla Lorem mollit cupidatat irure. Laborum
-                                magna nulla duis ullamco cillum dolor. Voluptate
-                                exercitation incididunt aliquip deserunt
-                                reprehenderit elit laborum.
-                            </p>
+                            <p>{t('nullaLoremLaborum')}</p>
                         </Col>
                     </Row>
                 </Container>
@@ -457,7 +436,7 @@ const HomeComponent = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="h3 dark-text-color link-primary"
                             >
-                                And a lot more for you
+                                {t('lotMoreYou')}
                             </a>
                         </Col>
                     </Row>
@@ -473,7 +452,7 @@ const HomeComponent = () => {
                     <Row>
                         <Col md={12}>
                             <h2 className="h2 light-text-color mb-5">
-                                Our BlockChain Solutions
+                                {t('ourBlockChainSolutions')}
                             </h2>
                         </Col>
 
@@ -1058,6 +1037,7 @@ const HomeComponent = () => {
                                                                                     Privacy
                                                                                     Policy
                                                                                 </a>
+
                                                                                 .
                                                                             </Form.Check.Label>
                                                                         </Form.Check>

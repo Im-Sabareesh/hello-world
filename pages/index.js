@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { HomeComponent, Meta } from '@components';
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 export default function Home() {
@@ -14,10 +14,10 @@ export default function Home() {
     );
 }
 
-// export const getStaticProps = async (p) => {
-//     return {
-//         props: {
-//             ...(await serverSideTranslations(p.locale, ['home'])),
-//         },
-//     };
-// };
+export const getStaticProps = async (p) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(p.locale, ['home', 'common'])),
+        },
+    };
+};

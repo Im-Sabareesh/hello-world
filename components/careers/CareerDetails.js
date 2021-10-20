@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import {
     Container,
@@ -10,6 +11,8 @@ import {
 } from 'react-bootstrap';
 
 const CareerDetailsComponent = () => {
+    const router = useRouter();
+
     return (
         <>
             <div className="breadcrumb-section">
@@ -18,10 +21,9 @@ const CareerDetailsComponent = () => {
                         <Col>
                             <Breadcrumb>
                                 <Breadcrumb.Item
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
+                                    onClick={() => router.push('/careers')}
                                 >
-                                    Careers{' '}
+                                    Careers
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item active>
                                     User Experience Designer

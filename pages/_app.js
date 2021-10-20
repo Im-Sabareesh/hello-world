@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         if (i18n.changeLanguage) i18n.changeLanguage(locale);
     }, [locale]);
     return (
-        <Layout>
+        <Layout {...pageProps}>
             <Component {...pageProps} />
         </Layout>
     );
