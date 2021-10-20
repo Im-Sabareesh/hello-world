@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import {
     Container,
@@ -12,44 +13,45 @@ import {
 } from 'react-bootstrap';
 
 export default function ServiceOfferSection() {
-    const serviceList = [
-        {
-            name: 'Decentralized Finance',
-            icon: '/assets/icons/service-icon1.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-        {
-            name: 'Non Fungible Tokens',
-            icon: '/assets/icons/service-icon2.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-        {
-            name: 'Binance Smart Chain',
-            icon: '/assets/icons/service-icon3.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-        {
-            name: 'Website Development',
-            icon: '/assets/icons/service-icon2.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-        {
-            name: 'Mobile App Development',
-            icon: '/assets/icons/service-icon3.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-        {
-            name: 'AI Technology',
-            icon: '/assets/icons/service-icon6.png',
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-        },
-    ];
+    const { t } = useTranslation('home'),
+        serviceList = [
+            {
+                name: 'Decentralized Finance',
+                icon: '/assets/icons/service-icon1.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+            {
+                name: 'Non Fungible Tokens',
+                icon: '/assets/icons/service-icon2.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+            {
+                name: 'Binance Smart Chain',
+                icon: '/assets/icons/service-icon3.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+            {
+                name: 'Website Development',
+                icon: '/assets/icons/service-icon2.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+            {
+                name: 'Mobile App Development',
+                icon: '/assets/icons/service-icon3.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+            {
+                name: 'AI Technology',
+                icon: '/assets/icons/service-icon6.png',
+                describe:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            },
+        ];
 
     return (
         <section className="home-section-2 py-5">
@@ -57,15 +59,10 @@ export default function ServiceOfferSection() {
                 <Row>
                     <Col md={8} className="mx-auto text-center mb-2">
                         <h2 className="h2 dark-text-color mb-4">
-                            Services We Offer
+                            {t('servicesOffer')}
                         </h2>
 
-                        <p>
-                            Nulla Lorem mollit cupidatat irure. Laborum magna
-                            nulla duis ullamco cillum dolor. Voluptate
-                            exercitation incididunt aliquip deserunt
-                            reprehenderit elit laborum.
-                        </p>
+                        <p>{t('nullaLoremLaborum')}</p>
                     </Col>
                 </Row>
             </Container>
@@ -95,7 +92,7 @@ export default function ServiceOfferSection() {
                             onClick={(e) => e.preventDefault()}
                             className="h3 dark-text-color link-primary"
                         >
-                            And a lot more for you
+                            {t('lotMoreYou')}
                         </a>
                     </Col>
                 </Row>

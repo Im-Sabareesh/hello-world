@@ -8,7 +8,7 @@ import nextI18NextConfig from '../next-i18next.config.js';
 import '../styles/globals.scss';
 import '../styles/globals-responsive.scss';
 import { Layout } from '@components';
-import { store } from '../redux/store'
+import { store } from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
     const { i18n } = useTranslation();
