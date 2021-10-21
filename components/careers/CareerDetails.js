@@ -1,4 +1,6 @@
 import React from 'react';
+import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 
 import {
     Container,
@@ -8,8 +10,19 @@ import {
     Image,
     Breadcrumb,
 } from 'react-bootstrap';
+import { careerSelector } from '@redux';
+import CareerStaticPosts from './careerStaticPosts';
 
 const CareerDetailsComponent = () => {
+    const router = useRouter();
+    const {
+        query: { cid },
+    } = router;
+    const state =
+        useSelector((state) =>
+            careerSelector.careerDetailsSelector(state, cid)
+        ) || {};
+
     return (
         <>
             <div className="breadcrumb-section">
@@ -18,13 +31,15 @@ const CareerDetailsComponent = () => {
                         <Col>
                             <Breadcrumb>
                                 <Breadcrumb.Item
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        router.back();
+                                    }}
                                 >
                                     Careers{' '}
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item active>
-                                    User Experience Designer
+                                    {state.name}
                                 </Breadcrumb.Item>
                             </Breadcrumb>
                         </Col>
@@ -40,17 +55,16 @@ const CareerDetailsComponent = () => {
                         <Col sm={12} md={12} lg={7} className="my-auto">
                             <div className="text-center text-lg-start">
                                 <p className="location-element">
-                                    Full Time, Pune
+                                    {state.type} {state.location}
                                 </p>
                                 <h1 className="h1 mb-2 pb-2 dark-text-color">
-                                    User Experience Designer
+                                    {state.name}
                                 </h1>
                                 <Button
                                     variant="primary"
                                     className="red-btn mb-lg-5 mb-md-4 mb-3"
                                 >
-                                    {' '}
-                                    Apply Now{' '}
+                                    Apply Now
                                 </Button>
                             </div>
 
@@ -175,72 +189,7 @@ const CareerDetailsComponent = () => {
                                 Ideal Candidate
                             </h4>
 
-                            <ul className="career-listings lh-md">
-                                <li>
-                                    You believe in craftsmanship and create
-                                    elegant and compelling designs, over
-                                    andover.
-                                </li>
-                                <li>
-                                    Your portfolio has some best-in-class work.
-                                    You&apos;re a walking encyclopedia of
-                                    microinteractions in use (on mobile, web,
-                                    desktop, etc), and have nuanced views on how
-                                    to make many of them even better.
-                                </li>
-                                <li>You&apos;ve shipped product.</li>
-                                <li>
-                                    You&apos;ve weathered release cycles and
-                                    know what details matter at each stage, how
-                                    to motivate engineers to get the fit and
-                                    finish right, how to translate insights from
-                                    user studies into meaningful action, and
-                                    what&apos;s most likely to go afoul at each
-                                    stage. You can share several shining
-                                    examples of real work you&apos;ve shipped,
-                                    and what you learned along the way.
-                                </li>
-                                <li>
-                                    You substantially contribute to defining the
-                                    &apos;what&apos; as well as the
-                                    &apos;how&apos;.
-                                </li>
-                                <li>
-                                    You&apos;re a product manager&apos;s secret
-                                    weapon. You thrive best when helping to
-                                    define the requirements, not just
-                                    translating them into designs. You
-                                    facilitate and draw the best design ideas
-                                    from teammates.
-                                </li>
-                                <li>
-                                    You can think and talk about the bottom
-                                    line.
-                                </li>
-                                <li>
-                                    Analytics don&apos;t scare you, and you know
-                                    which features can act as force multipliers
-                                    on your company&apos;s business model.
-                                </li>
-                                <li>
-                                    Prototyping is a key part of your toolset.
-                                </li>
-                                <li>
-                                    You&apos;ve prototyped on multiple
-                                    platforms. You&apos;ve made last-minute
-                                    tweaks between user studies. You know how to
-                                    be all kinds of quick and dirty, but dream
-                                    of better prototyping tools.
-                                </li>
-                                <li>Cross-platform is your style.</li>
-                                <li>
-                                    Hopefully you&apos;ve shipped something
-                                    across several platforms. You know what
-                                    translates from desktop and what
-                                    doesn&apos;t, or why you&apos;d opt for one
-                                    solution for iOS and another on Android.
-                                </li>
-                            </ul>
+                            <CareerStaticPosts content={state.idealCandidate} />
                             <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
                                 <Button
                                     variant="primary"

@@ -32,13 +32,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-rsync -avzh --delete --progress -e "ssh -i ~/.ssh/Chaincode.pem" /Volumes/Kathir/kathir/ReactJs/chaincode/out ubuntu@13.127.48.125:/var/www/chaincode
-
-Home - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/
-About Us - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/about/
-Contact Us - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/contact/
-Careers - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/careers/
-Careers Details - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/careers/careerDetails/
-NFT Developement - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/services/NFTServices/
-Defi Developement - http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com/services/DefiServices/
