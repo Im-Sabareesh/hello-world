@@ -1,78 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const RadiusFooter = (props) => {
-    const footerLinkList = [
-        {
-            title: 'Our Services',
-            lgStyle: 3,
-            list: [
-                {
-                    name: 'Decentralized Finance',
-                    route: '/services/DefiServices',
-                },
-                {
-                    name: 'Non Fungible Tokens',
-                    route: '/services/DefiServices',
-                },
-                {
-                    name: 'Binance Smart Chain',
-                    route: '#',
-                },
-                {
-                    name: 'App Development',
-                    route: '#',
-                },
-                {
-                    name: 'Web Development',
-                    route: '#',
-                },
-            ],
-        },
-        {
-            title: 'Expert Solutions',
-            lgStyle: 2,
-            list: [
-                {
-                    name: 'Live Ledger',
-                    route: '#',
-                },
-                {
-                    name: 'True Title',
-                    route: '#',
-                },
-                {
-                    name: 'Instasure',
-                    route: '#',
-                },
-            ],
-        },
-        {
-            title: 'Connect With Us',
-            lgStyle: { span: 2, offset: 1 },
-            list: [
-                {
-                    name: 'Contact Us',
-                    route: '/contact',
-                },
-                {
-                    name: 'Career',
-                    route: '/careers',
-                },
-                {
-                    name: 'More About Us',
-                    route: '/about',
-                },
-                {
-                    name: 'Blog',
-                    route: '#',
-                },
-            ],
-        },
-    ];
+    const { t } = useTranslation('common'),
+        footerLinkList = [
+            {
+                title: t('footer.ourServices'),
+                lgStyle: 3,
+                list: [
+                    {
+                        name: t('footer.decentralizedFinance'),
+                        route: '/services/DefiServices',
+                    },
+                    {
+                        name: t('footer.nonFungibleTokens'),
+                        route: '/services/NFTServices',
+                    },
+                    {
+                        name: t('footer.binanceSmartChain'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.appDevelopment'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.webDevelopment'),
+                        route: '#',
+                    },
+                ],
+            },
+            {
+                title: t('footer.expertSolutions'),
+                lgStyle: 2,
+                list: [
+                    {
+                        name: t('footer.liveLedger'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.trueTitle'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.instasure'),
+                        route: '#',
+                    },
+                ],
+            },
+            {
+                title: t('footer.connectWithUs'),
+                lgStyle: { span: 2, offset: 1 },
+                list: [
+                    {
+                        name: t('contactUs'),
+                        route: '/contact',
+                    },
+                    {
+                        name: t('career'),
+                        route: '/careers',
+                    },
+                    {
+                        name: t('footer.moreAboutUs'),
+                        route: '/about',
+                    },
+                    {
+                        name: t('footer.blog'),
+                        route: '#',
+                    },
+                ],
+            },
+        ];
 
     return (
         <footer className={`${props.radius && 'home-footer'} footer-section`}>
@@ -101,7 +103,7 @@ const RadiusFooter = (props) => {
                             />
                         </a>
                         <p className="light-text-color text-shadow">
-                            Follow Us
+                            {t('footer.followUs')}
                         </p>
                         <div className="social-icons">
                             <a
@@ -217,7 +219,7 @@ const RadiusFooter = (props) => {
                 </Row>
                 <div className="d-flex justify-content-between align-items-center pt-5 pb-3 copyrights">
                     <span className="light-text-color">
-                        ©ChainCode PTY LTD 2021. All rights reserved
+                        {t('footer.copyRightsReserved')}
                     </span>
                     <ul className="list-inline position-relative footer-after-line">
                         <li className="list-inline-item px-2">
@@ -226,7 +228,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="light-text-color"
                             >
-                                Privacy Policy
+                                {t('privacyPolicy')}
                             </a>
                         </li>
                         <li className="list-inline-item">
@@ -235,7 +237,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="light-text-color"
                             >
-                                Terms of Service & Rules
+                                {t('termsOfService')}
                             </a>
                         </li>
                     </ul>

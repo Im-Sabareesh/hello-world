@@ -6,13 +6,15 @@
         "dev": "next dev",
         "build": "next build && next export",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "prettier": "prettier --write ."
     },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
         "bootstrap": "5.1.1",
         "lodash": "^4.17.21",
         "next": "11.1.2",
+        "next-i18next": "^8.9.0",
         "next-redux-wrapper": "^7.0.5",
         "postcss": "^8.1.0",
         "prop-types": "^15.7.2",
