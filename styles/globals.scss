@@ -645,11 +645,18 @@ button:not(.collapsed) {
 
         .testimonial-user-cont {
             .user-thumb {
+              margin-right: 25px;
                 img {
                     width: 65px;
                     height: 65px;
                     object-fit: cover;
                     margin-right: 25px;
+                }
+                div {
+                  border-radius: 35px;
+                }
+                .shadow {
+                  border-radius: 35px;
                 }
             }
             .user-name {

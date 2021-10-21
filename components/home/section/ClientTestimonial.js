@@ -3,15 +3,9 @@ import _ from 'lodash';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-    Form,
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 export default function CilentTestimonialSection() {
     const testimonialList = [
@@ -20,21 +14,21 @@ export default function CilentTestimonialSection() {
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
+            image: homeImages.user1,
         },
         {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
+            image: homeImages.user1,
         },
         {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
+            image: homeImages.user1,
         },
     ];
 
@@ -65,9 +59,12 @@ export default function CilentTestimonialSection() {
                                                         <div className="user-thumb">
                                                             <Image
                                                                 src={item.image}
-                                                                roundedCircle
                                                                 className="shadow"
                                                                 alt=" "
+                                                                placeholder="blur"
+                                                                height={70}
+                                                                width={70}
+                                                                loading="lazy"
                                                             />
                                                         </div>
                                                         <div className="user-name">

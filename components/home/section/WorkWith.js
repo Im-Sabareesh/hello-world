@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
 
 import { ImgPanelSection } from 'common-components';
+import homeImages from '@components/images';
 
 export default function WorkWithSection() {
     return (
@@ -25,7 +27,13 @@ export default function WorkWithSection() {
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">
-                        <Image src="/assets/images/we-work.png" alt=" " />
+                        <Image
+                            src={homeImages.weWorkWith}
+                            alt=" "
+                            height={285}
+                            width={822}
+                            loading="lazy"
+                        />
                     </Col>
 
                     <Col md={12} className="mt-5 mb-5">

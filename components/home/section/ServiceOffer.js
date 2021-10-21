@@ -1,51 +1,45 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-    Form,
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 export default function ServiceOfferSection() {
     const serviceList = [
         {
             name: 'Decentraized Finance',
-            icon: '/assets/icons/service-icon1.png',
+            icon: homeImages.deCenFin,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Non Fungible Tokens',
-            icon: '/assets/icons/service-icon2.png',
+            icon: homeImages.nonFunToken,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Binance Smart Chain',
-            icon: '/assets/icons/service-icon3.png',
+            icon: homeImages.smartChain,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Website Development',
-            icon: '/assets/icons/service-icon2.png',
+            icon: homeImages.webDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Mobile App Development',
-            icon: '/assets/icons/service-icon3.png',
+            icon: homeImages.mobDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'AI Technology',
-            icon: '/assets/icons/service-icon6.png',
+            icon: homeImages.aiTech,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
@@ -80,7 +74,14 @@ export default function ServiceOfferSection() {
                             className="service-thumb text-center mt-5"
                         >
                             <p>
-                                <Image src={item.icon} alt="" />
+                                <Image
+                                    src={item.icon}
+                                    alt=""
+                                    height={65}
+                                    width={85}
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
                             </p>
 
                             <h3 className="h3 dark-text-color">{item.name}</h3>

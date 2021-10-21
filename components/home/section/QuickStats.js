@@ -3,45 +3,39 @@ import _ from 'lodash';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-    Form,
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 export default function QuickStatsSection() {
     const quickStateList = [
         {
-            icon: '/assets/icons/industry-awards.svg',
+            icon: homeImages.indusAwards,
             counts: '150+',
             title: 'Industry Awards',
         },
         {
-            icon: '/assets/icons/projects.svg',
+            icon: homeImages.projects,
             counts: '150+',
             title: 'Projects',
         },
         {
-            icon: '/assets/icons/offices.svg',
+            icon: homeImages.officers,
             counts: '4',
             title: 'Offices',
         },
         {
-            icon: '/assets/icons/happy-clients.svg',
+            icon: homeImages.hpyClients,
             counts: '500',
             title: 'Happy Clients',
         },
         {
-            icon: '/assets/icons/certified-pmp.svg',
+            icon: homeImages.certPmp,
             counts: '4',
             title: 'Certified PMP',
         },
         {
-            icon: '/assets/icons/mm-lines-of-code.svg',
+            icon: homeImages.mmLines,
             counts: '100',
             title: 'MM Lines of Code',
         },
@@ -63,7 +57,13 @@ export default function QuickStatsSection() {
                             className="counter-thumb text-center mt-3"
                         >
                             <p className="mb-4">
-                                <Image src={item.icon} alt=" " />
+                                <Image
+                                    src={item.icon}
+                                    alt=" "
+                                    height={40}
+                                    width={40}
+                                    loading="lazy"
+                                />
                             </p>
 
                             <p className="mb-1">

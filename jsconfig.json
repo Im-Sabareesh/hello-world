@@ -9,7 +9,9 @@
             "@styles/*": ["styles/*"],
             "@styles": ["styles"],
             "@components/icons/*": ["components/icons/*"],
-            "@components/icons": ["components/icons"]
+            "@components/icons": ["components/icons"],
+            "@components/images/*": ["components/images/*"],
+            "@components/images": ["components/images"]
             // "@redux/*": [
             //   "src/redux/*"
             // ],

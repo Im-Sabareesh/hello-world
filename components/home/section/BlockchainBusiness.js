@@ -1,29 +1,31 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 export default function BlockchainBusinessSection() {
     const blockChainUsageList = [
         {
             name: 'Enhanced security',
-            icon: '/assets/icons/enhanced-security.svg',
+            icon: homeImages.enhSecurity,
         },
         {
             name: 'Greater transparency',
-            icon: '/assets/icons/greater-transparancy.svg',
+            icon: homeImages.greTransp,
         },
         {
             name: 'Instant traceability',
-            icon: '/assets/icons/instant-tracibility.svg',
+            icon: homeImages.instanceTrace,
         },
         {
             name: 'Increased efficiency',
-            icon: '/assets/icons/increased-efficiency.svg',
+            icon: homeImages.incEff,
         },
         {
             name: 'Decentralized Governance',
-            icon: '/assets/icons/decentralized-governance.svg',
+            icon: homeImages.deCenGov,
         },
     ];
 
@@ -54,8 +56,13 @@ export default function BlockchainBusinessSection() {
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
                         <Image
-                            src="/assets/images/home-section1-img.png"
+                            src={homeImages.homeSecTopImg}
                             alt=""
+                            width={610}
+                            height={318}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
                         />
                     </Col>
 
@@ -68,7 +75,13 @@ export default function BlockchainBusinessSection() {
                                 >
                                     <div>
                                         <p>
-                                            <Image src={item.icon} alt="" />
+                                            <Image
+                                                src={item.icon}
+                                                alt=""
+                                                width={76}
+                                                height={76}
+                                                loading="lazy"
+                                            />
                                         </p>
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}
