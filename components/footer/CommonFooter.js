@@ -201,8 +201,7 @@ const RadiusFooter = (props) => {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.body.scrollTop =
-                                        document.documentElement.scrollTop = 0;
+                                    document.body.scrollTop = document.documentElement.scrollTop = 0;
                                 }}
                             >
                                 <div className="arrow-bg">
