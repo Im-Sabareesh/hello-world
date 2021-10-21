@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 function SvgMouse(props) {
     return (
@@ -13,7 +13,7 @@ function SvgMouse(props) {
         >
             <g
                 style={{
-                    mixBlendMode: "color-burn",
+                    mixBlendMode: 'color-burn',
                 }}
                 filter="url(#mouse_svg__filter0_d)"
             >
