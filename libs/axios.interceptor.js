@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { toaster } from '@components';
 
 const AxiosInstance = axios.create({
-    baseURL: `${process.env.API_URL}/`,
+    // baseURL: `${process.env.API_URL}/`,
     timeout: 30000,
     headers: {
         'Content-Type': 'application/json',
