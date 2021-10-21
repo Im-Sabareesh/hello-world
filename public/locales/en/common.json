@@ -1,0 +1,48 @@
+{
+    "hello": "Hello",
+    "greet": "Hello, {{name}}!",
+    "world": "World",
+    "documentation": "Go To Documentation",
+    "language": {
+        "tr": "🇹🇷 Türkçe",
+        "en": "🇺🇸 English"
+    },
+    "header": {
+        "title": "Header",
+        "aboutUS": "About Us",
+        "blockchainSolution": "Blockchain Solution",
+        "caseStudies": "Case Studies",
+        "headerInfo": "Want to know how Blockchain can make a difference in your Business? Get Expert Advice from our Team now!"
+    },
+    "footer": {
+        "title": "Footer",
+        "followUs": "Follow Us",
+        "ourServices": "Our Services",
+        "decentralizedFinance": "Decentralized Finance",
+        "nonFungibleTokens": "Non Fungible Tokens",
+        "binanceSmartChain": "Binance Smart Chain",
+        "appDevelopment": "App Development",
+        "webDevelopment": "Web Development",
+        "expertSolutions": "Expert Solutions",
+        "liveLedger": "Live Ledger",
+        "trueTitle": "True Title",
+        "instasure": "Instasure",
+        "connectWithUs": "Connect With Us",
+        "moreAboutUs": "More About Us",
+        "blog": "Blog",
+        "copyRightsReserved": "©ChainCode PTY LTD 2021. All rights reserved"
+    },
+    "letsTalk": "Let's Talk",
+    "defiDevelopment": "Defi development",
+    "nftDevelopement": "NFT Development",
+    "viewMore": "View More",
+    "getQuote": "Get a quote",
+    "Know More": "Know More",
+    "learnMore": "Learn More",
+    "consultFree": "Consult for Free",
+    "sendRequest": "Send Request",
+    "contactUs": "Contact Us",
+    "career": "Career",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service & Rules"
+}

@@ -36,7 +36,7 @@ const CareerDetailsComponent = () => {
                                         router.back();
                                     }}
                                 >
-                                    Careers{' '}
+                                    Careers
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item active>
                                     {state.name}

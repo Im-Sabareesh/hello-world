@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NFTSComponent } from '@components';
 
@@ -15,3 +16,11 @@ const NFTServices = () => {
 };
 
 export default NFTServices;
+
+export const getStaticProps = async (p) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(p.locale, ['common'])),
+        },
+    };
+};

@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import Head from 'next/head';
 import { useDispatch } from 'react-redux';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { CareersComponent } from '@components';
 import { careerAction } from '@redux';
@@ -19,6 +20,14 @@ const Careers = () => {
             <CareersComponent />
         </div>
     );
+};
+
+export const getStaticProps = async (p) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(p.locale, ['common'])),
+        },
+    };
 };
 
 export default Careers;

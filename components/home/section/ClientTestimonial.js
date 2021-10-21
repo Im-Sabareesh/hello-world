@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import {
     Container,
@@ -14,29 +13,30 @@ import {
 } from 'react-bootstrap';
 
 export default function CilentTestimonialSection() {
-    const testimonialList = [
-        {
-            name: 'Chuan Allen',
-            company: 'Reporter in CNN TV',
-            describe:
-                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
-        },
-        {
-            name: 'Chuan Allen',
-            company: 'Reporter in CNN TV',
-            describe:
-                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
-        },
-        {
-            name: 'Chuan Allen',
-            company: 'Reporter in CNN TV',
-            describe:
-                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: '/assets/images/user-1.jpg',
-        },
-    ];
+    const { t } = useTranslation('home'),
+        testimonialList = [
+            {
+                name: 'Chuan Allen',
+                company: 'Reporter in CNN TV',
+                describe:
+                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+                image: '/assets/images/user-1.jpg',
+            },
+            {
+                name: 'Chuan Allen',
+                company: 'Reporter in CNN TV',
+                describe:
+                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+                image: '/assets/images/user-1.jpg',
+            },
+            {
+                name: 'Chuan Allen',
+                company: 'Reporter in CNN TV',
+                describe:
+                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+                image: '/assets/images/user-1.jpg',
+            },
+        ];
 
     return (
         <section className="home-section-9 py-5">
@@ -46,10 +46,10 @@ export default function CilentTestimonialSection() {
                         <div className="testimonial-bg py-5">
                             <Row>
                                 <Col lg={12} className="text-center">
-                                    <small> Testimonial </small>
+                                    <small> {t('testimonial')} </small>
 
                                     <h2 className="h2 mt-4 mb-5">
-                                        Let Our Clients do the Talking
+                                        {t('letClients')}
                                     </h2>
                                 </Col>
 
