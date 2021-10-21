@@ -169,6 +169,7 @@ export default function InsightWithFormSection() {
                                                         {['checkbox'].map(
                                                             (type) => (
                                                                 <div
+                                                                    key={_.uniqueId()}
                                                                     key={type}
                                                                     className="mb-3"
                                                                 >
