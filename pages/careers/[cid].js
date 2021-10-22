@@ -1,16 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { CareerDetailsComponent } from '@components';
+import { CareerDetailsComponent, Meta } from '@components';
 import { api } from '@libs';
-
 const CareerDetails = () => {
+    const { t } = useTranslation('careerDetails');
     return (
         <div className="CareerDetails-wrapper">
-            <Head>
-                <title>Career Details</title>
-            </Head>
+            <Meta title={t('title')} desc="" />
 
             <CareerDetailsComponent />
         </div>
@@ -25,7 +23,7 @@ export async function getStaticProps({ params, locale }) {
     return {
         props: {
             // careeerDetails: await api.getCareerDetails(1),
-            ...(await serverSideTranslations(locale, ['common'])),
+            ...(await serverSideTranslations(locale, ['careerDetails', 'common'])),
         },
     };
 }

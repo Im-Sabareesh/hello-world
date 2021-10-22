@@ -1,15 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-import { ContactComponent } from '@components';
+import { ContactComponent, Meta } from '@components';
 
 const ContactUs = () => {
+    const { t } = useTranslation('contact');
     return (
         <div className="contactus-page">
-            <Head>
-                <title>Contact Us</title>
-            </Head>
+            <Meta title={t('title')} desc="" />
 
             <ContactComponent />
         </div>
@@ -21,7 +20,7 @@ export default ContactUs;
 export const getStaticProps = async (p) => {
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
+            ...(await serverSideTranslations(p.locale, ['contact', 'common'])),
         },
     };
 };

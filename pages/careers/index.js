@@ -1,23 +1,24 @@
-import React, { useReducer } from 'react';
-import Head from 'next/head';
+import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { CareersComponent } from '@components';
+import { CareersComponent, Meta } from '@components';
 import { careerAction } from '@redux';
 
 const Careers = () => {
+    const { t } = useTranslation('careers');
     const dispatch = useDispatch();
     React.useEffect(() => {
         dispatch(careerAction.careerList());
     }, []);
     return (
         <div className="career-page">
-            <Head>
-                <title>Careers</title>
-            </Head>
+
+            <Meta title={t('title')} desc="" />
 
             <CareersComponent />
+
         </div>
     );
 };
@@ -25,7 +26,7 @@ const Careers = () => {
 export const getStaticProps = async (p) => {
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
+            ...(await serverSideTranslations(p.locale, ['careers', 'common'])),
         },
     };
 };

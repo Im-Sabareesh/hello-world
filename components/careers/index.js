@@ -216,7 +216,6 @@ const CareersComponent = () => {
                                                 </span>
                                             </div>
                                             <Button
-                                                variant="primary"
                                                 onClick={() => {
                                                     router.push(
                                                         `careers/${item.id}`
