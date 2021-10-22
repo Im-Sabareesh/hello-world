@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { ImgPanelSection, Button, H1, Paragraph } from '@components';
-import nftImages from '@components/images';
+import images from '@components/images';
 
 const NFTSComponent = () => {
     const router = useRouter();
@@ -50,7 +50,7 @@ const NFTSComponent = () => {
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <Image
-                                    src={nftImages.nftPng}
+                                    src={images.nftPng}
                                     rounded
                                     className="nft-service-img"
                                     alt=" "

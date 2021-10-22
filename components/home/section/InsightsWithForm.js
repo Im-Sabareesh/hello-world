@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
-import homeImages from '@components/images';
+import images from '@components/images';
 import { CardSection, Button, Paragraph } from '@components';
 
 export default function InsightWithFormSection() {
@@ -236,7 +236,7 @@ export default function InsightWithFormSection() {
                                         className="contact-right-form"
                                     >
                                         <Image
-                                            src={homeImages.contactForm}
+                                            src={images.contactForm}
                                             alt=" "
                                             height={488}
                                             width={486}

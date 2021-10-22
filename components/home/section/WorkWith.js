@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { ImgPanelSection, H1, Paragraph } from 'common-components';
-import homeImages from '@components/images';
+import { ImgPanelSection, H1, Paragraph } from '@components';
+import images from '@components/images';
 
 export default function WorkWithSection() {
     const { t } = useTranslation(['home', 'common']);
@@ -28,7 +28,7 @@ export default function WorkWithSection() {
 
                     <Col md={8} className="workwithus-txt  mt-3">
                         <Image
-                            src={homeImages.weWorkWith}
+                            src={images.weWorkWith}
                             alt=" "
                             height={285}
                             width={822}

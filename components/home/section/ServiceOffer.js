@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import homeImages from '@components/images';
+import images from '@components/images';
 import { Paragraph } from '@components';
 
 export default function ServiceOfferSection() {
@@ -13,37 +13,37 @@ export default function ServiceOfferSection() {
     const serviceList = [
         {
             name: 'Decentraized Finance',
-            icon: homeImages.deCenFin,
+            icon: images.deCenFin,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Non Fungible Tokens',
-            icon: homeImages.nonFunToken,
+            icon: images.nonFunToken,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Binance Smart Chain',
-            icon: homeImages.smartChain,
+            icon: images.smartChain,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Website Development',
-            icon: homeImages.webDev,
+            icon: images.webDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Mobile App Development',
-            icon: homeImages.mobDev,
+            icon: images.mobDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'AI Technology',
-            icon: homeImages.aiTech,
+            icon: images.aiTech,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Container, Row, Col} from 'react-bootstrap';
 
 import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
-import defisImages from '@components/images';
+import images from '@components/images';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -70,7 +70,7 @@ const DefiSComponent = () => {
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <Image
-                                    src={defisImages.defiMain}
+                                    src={images.defiMain}
                                     rounded
                                     className="nft-service-img"
                                     alt=" "
@@ -96,7 +96,7 @@ const DefiSComponent = () => {
                         <Row>
                             <Col lg={5}>
                                 <Image
-                                    src={defisImages.videoThumb}
+                                    src={images.videoThumb}
                                     width={610}
                                     height={318}
                                     layout="intrinsic"
@@ -211,7 +211,7 @@ const DefiSComponent = () => {
 
                         <Col md={{ span: 12, order: 0 }} lg={6}>
                             <Image
-                                src={defisImages.defiTwo}
+                                src={images.defiTwo}
                                 alt=".."
                                 width={913}
                                 height={752}

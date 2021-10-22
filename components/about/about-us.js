@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Button, H1, Paragraph } from '@components';
-import aboutUsImg from '@components/images';
+import images from '@components/images';
 
 const AboutUs = () => {
     const router = useRouter(),
@@ -81,7 +81,7 @@ const AboutUs = () => {
                     <Row className="pb-xl-5 pb-2">
                         <Col className="pb-xl-5 pb-2 align-img">
                             <Image
-                                src={aboutUsImg.aboutUs}
+                                src={images.aboutUs}
                                 alt=" "
                                 className="mx-auto about-section1-img"
                                 rounded="true"
@@ -297,7 +297,7 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src={aboutUsImg.twitter}
+                                                    src={images.twitter}
                                                     alt=" "
                                                     width={23}
                                                     height={20}
@@ -311,7 +311,7 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src={aboutUsImg.linkeIn}
+                                                    src={images.linkeIn}
                                                     alt=" "
                                                     width={23}
                                                     height={20}

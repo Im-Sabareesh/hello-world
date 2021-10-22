@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import homeImages from '@components/images';
+import images from '@components/images';
 
 export default function CilentTestimonialSection() {
     const { t } = useTranslation('home');
@@ -15,21 +15,21 @@ export default function CilentTestimonialSection() {
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: homeImages.user1,
+            image: images.user1,
         },
         {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: homeImages.user1,
+            image: images.user1,
         },
         {
             name: 'Chuan Allen',
             company: 'Reporter in CNN TV',
             describe:
                 "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-            image: homeImages.user1,
+            image: images.user1,
         },
     ];
 

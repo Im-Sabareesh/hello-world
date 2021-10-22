@@ -6,31 +6,31 @@ import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { Paragraph } from '@components';
-import homeImages from '@components/images';
+import images from '@components/images';
 
 export default function ChooseUsSection({ data }) {
     const { t } = useTranslation('home');
     const chooseUSList = [
         {
-            icon: homeImages.whyChose,
+            icon: images.whyChose,
             name: 'Focus on Innovation',
             describe:
                 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         },
         {
-            icon: homeImages.truePartner,
+            icon: images.truePartner,
             name: 'True Partners',
             describe:
                 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         },
         {
-            icon: homeImages.devOps,
+            icon: images.devOps,
             name: 'DevOps',
             describe:
                 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         },
         {
-            icon: homeImages.dedTeam,
+            icon: images.dedTeam,
             name: 'Dedicated Teams',
             describe:
                 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
@@ -43,7 +43,7 @@ export default function ChooseUsSection({ data }) {
                 <Row>
                     <Col md={{ span: 12, order: 0 }} lg={6}>
                         <Image
-                            src={homeImages.blockchainBuss}
+                            src={images.blockchainBuss}
                             placeholder="blur"
                             alt=" "
                             height={332}

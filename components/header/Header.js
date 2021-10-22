@@ -15,7 +15,7 @@ import {
 } from 'react-bootstrap';
 
 import { Button } from '@components';
-import headerImages from '@components/images';
+import images from '@components/images';
 
 const Header = () => {
     const router = useRouter(),
@@ -94,7 +94,7 @@ const Header = () => {
                             <Link href="/">
                                 <a>
                                     <Image
-                                        src={headerImages.logo}
+                                        src={images.logo}
                                         alt=""
                                         className={
                                             !state &&
@@ -187,7 +187,7 @@ const Header = () => {
                                 onClick={(e) => e.preventDefault()}
                             >
                                 <Image
-                                    src={headerImages.searchIcon}
+                                    src={images.searchIcon}
                                     alt=""
                                     className={
                                         !state &&

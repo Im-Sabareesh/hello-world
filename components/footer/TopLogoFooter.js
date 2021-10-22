@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import footerImages from '@components/images';
+import images from '@components/images';
 
 import { Paragraph } from '@components';
 
@@ -104,8 +104,8 @@ const TopLogoFooter = () => {
                         <Link href="/">
                             <a className="brand-logo">
                                 <Image
-                                    src={footerImages.ccWhiteLogo}
-                                    className="mb-md-4 mb-sm-3 mb-4"
+                                    src={images.ccWhiteLogo}
+                                    // className="mb-md-4 mb-sm-3 mb-4"
                                     alt=" "
                                     width={219}
                                     height={140}
@@ -122,7 +122,7 @@ const TopLogoFooter = () => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.fbSVG}
+                                    src={images.fbSVG}
                                     alt=" "
                                     width={11}
                                     height={19}
@@ -134,7 +134,7 @@ const TopLogoFooter = () => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.instaSVG}
+                                    src={images.instaSVG}
                                     alt=" "
                                     width={20}
                                     height={19}
@@ -146,7 +146,7 @@ const TopLogoFooter = () => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.twitterSVG}
+                                    src={images.twitterSVG}
                                     alt=" "
                                     width={25}
                                     height={19}
@@ -158,7 +158,7 @@ const TopLogoFooter = () => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.uTubeSVG}
+                                    src={images.uTubeSVG}
                                     alt=" "
                                     width={27}
                                     height={19}
@@ -170,7 +170,7 @@ const TopLogoFooter = () => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.wpSVG}
+                                    src={images.wpSVG}
                                     alt=" "
                                     width={19}
                                     height={19}

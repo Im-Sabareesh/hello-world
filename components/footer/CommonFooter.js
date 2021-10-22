@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { Paragraph } from '@components';
-import footerImages from '@components/images';
+import images from '@components/images';
 
 const RadiusFooter = (props) => {
     const { t } = useTranslation('common'),
@@ -101,8 +101,7 @@ const RadiusFooter = (props) => {
                                 className="brand-logo"
                             >
                                 <Image
-                                    src={footerImages.ccWhiteLogo}
-                                    className="mb-4"
+                                    src={images.ccWhiteLogo}
                                     alt="..."
                                     width={219}
                                     height={140}
@@ -119,7 +118,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.fbSVG}
+                                    src={images.fbSVG}
                                     alt="..."
                                     width={11}
                                     height={19}
@@ -131,7 +130,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.instaSVG}
+                                    src={images.instaSVG}
                                     alt="..."
                                     width={20}
                                     height={19}
@@ -143,7 +142,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.twitterSVG}
+                                    src={images.twitterSVG}
                                     alt="..."
                                     width={25}
                                     height={19}
@@ -155,7 +154,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.uTubeSVG}
+                                    src={images.uTubeSVG}
                                     alt="..."
                                     width={27}
                                     height={19}
@@ -167,7 +166,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.wpSVG}
+                                    src={images.wpSVG}
                                     alt="..."
                                     width={19}
                                     height={19}
@@ -226,7 +225,7 @@ const RadiusFooter = (props) => {
                             >
                                 <div className="arrow-bg">
                                     <Image
-                                        src={footerImages.upArrow}
+                                        src={images.upArrow}
                                         alt=" "
                                         width={52}
                                         height={51}

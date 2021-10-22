@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
 import { Button, H1, Paragraph } from '@components';
-import careerImages from '@components/images';
+import images from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
 
@@ -75,14 +75,14 @@ const CareerDetailsComponent = () => {
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
                                 <Image
-                                    src={careerImages.careerDetail}
+                                    src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-none d-lg-block"
                                     width={843}
                                     height={843}
                                 />
                                 <Image
-                                    src={careerImages.careerDetail}
+                                    src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-block d-lg-none"
                                     width={843}

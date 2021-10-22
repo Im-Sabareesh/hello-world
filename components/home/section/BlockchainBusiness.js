@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import homeImages from '@components/images';
+import images from '@components/images';
 
 import { Paragraph } from '@components';
 
@@ -13,23 +13,23 @@ export default function BlockchainBusinessSection() {
         blockChainUsageList = [
             {
                 name: t('enhancedSecurity'),
-                icon: homeImages.enhSecurity,
+                icon: images.enhSecurity,
             },
             {
                 name: t('greaterTransparency'),
-                icon: homeImages.greTransp,
+                icon: images.greTransp,
             },
             {
                 name: t('instantTraceability'),
-                icon: homeImages.instanceTrace,
+                icon: images.instanceTrace,
             },
             {
                 name: t('increasedEfficiency'),
-                icon: homeImages.incEff,
+                icon: images.incEff,
             },
             {
                 name: t('decentralizedGovernance'),
-                icon: homeImages.deCenGov,
+                icon: images.deCenGov,
             },
         ];
 
@@ -51,7 +51,7 @@ export default function BlockchainBusinessSection() {
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
                         <Image
-                            src={homeImages.homeSecTopImg}
+                            src={images.homeSecTopImg}
                             alt=""
                             width={610}
                             height={318}
