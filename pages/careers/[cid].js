@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params, locale }) {
     return {
         props: {
-            careeerDetails: await api.getCareerDetails(1),
+            // careeerDetails: await api.getCareerDetails(1),
             ...(await serverSideTranslations(locale, ['common'])),
         },
     };

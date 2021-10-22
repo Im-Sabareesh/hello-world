@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 
@@ -11,7 +12,7 @@ import {
     Breadcrumb,
 } from 'react-bootstrap';
 import { careerSelector } from '@redux';
-import CareerStaticPosts from './careerStaticPosts';
+import StaticComponent from '../StaticComponent';
 
 const CareerDetailsComponent = () => {
     const router = useRouter();
@@ -22,7 +23,6 @@ const CareerDetailsComponent = () => {
         useSelector((state) =>
             careerSelector.careerDetailsSelector(state, cid)
         ) || {};
-
     return (
         <>
             <div className="breadcrumb-section">
@@ -72,31 +72,7 @@ const CareerDetailsComponent = () => {
                                 <h2 className="h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color">
                                     Overview
                                 </h2>
-                                <p>
-                                    At ChainCode, we Combine medical expertise
-                                    with Machine Learning to offer patients a
-                                    primary care experiance like any other.
-                                </p>
-
-                                <p>
-                                    As the primary interface between patients
-                                    and their medical team, Our mobile app is a
-                                    strategic piece of the virtual clinic we are
-                                    building.
-                                </p>
-
-                                <p>
-                                    As the primary interface between patients
-                                    and their medical team, Our mobile app is a
-                                    strategic piece of the virtual clinic we are
-                                    building.
-                                </p>
-
-                                <p>
-                                    This position is full-time and based in
-                                    Paris, but we are open to partial remote
-                                    work.
-                                </p>
+                                <StaticComponent content={state.overview} />
                             </div>
                         </Col>
                         <Col sm={12} md={12} lg={5}>
@@ -116,12 +92,14 @@ const CareerDetailsComponent = () => {
                     </Row>
                 </Container>
             </section>
-
+            {_.map(state.content, (content) => (
+                <StaticComponent content={content} />
+            ))}
             {/*--------------- careerdetail-overview-section end---------- */}
 
             {/*--------------- career-roles-responsibility start---------- */}
 
-            <section className="careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
+            {/* <section className="careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
                 <Container>
                     <Row>
                         <Col sm={12}>
@@ -175,13 +153,13 @@ const CareerDetailsComponent = () => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
             {/*--------------- career-roles-responsibility end---------- */}
 
             {/*--------------- careerdetail-canditate-section start---------- */}
 
-            <section className="careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
+            {/* <section className="careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
                 <Container>
                     <Row>
                         <Col sm={12}>
@@ -189,7 +167,6 @@ const CareerDetailsComponent = () => {
                                 Ideal Candidate
                             </h4>
 
-                            <CareerStaticPosts content={state.idealCandidate} />
                             <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
                                 <Button
                                     variant="primary"
@@ -201,7 +178,7 @@ const CareerDetailsComponent = () => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
             {/*--------------- careerdetail-canditate-section end---------- */}
         </>

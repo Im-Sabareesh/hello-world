@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-export default function CareerStaticPosts({ content }) {
+export default function StaticComponent({ content }) {
     return (
         <>
             <div dangerouslySetInnerHTML={{ __html: content }} />
@@ -8,10 +8,10 @@ export default function CareerStaticPosts({ content }) {
     );
 }
 
-CareerStaticPosts.propTypes = {
+StaticComponent.propTypes = {
     content: PropTypes.string,
 };
 
-CareerStaticPosts.defaultProps = {
+StaticComponent.defaultProps = {
     content: '',
 };

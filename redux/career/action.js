@@ -5,9 +5,12 @@ const careerAction = {
     //fetch career list action
     careerList: () => (dispatch) => {
         axios
-            .get('assets/data/careers.json')
+            .get('/assets/data/careers.json')
             .then((response) => {
-                dispatch({ type: careerAction.fetchItems, payload: response });
+                dispatch({
+                    type: careerAction.fetchItems,
+                    payload: response.careers,
+                });
             })
             .catch((err) => console.log(err));
     },

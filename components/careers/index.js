@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { careerSelector } from '@redux';
 import { useSelector } from 'react-redux';
-
+import moment from 'moment';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
 const CareersComponent = () => {
@@ -209,7 +209,11 @@ const CareersComponent = () => {
                                             </div>
                                             <div className="job-posted">
                                                 <p className="h3">Posted</p>
-                                                <span>{item.time}</span>
+                                                <span>
+                                                    {moment(
+                                                        item.time
+                                                    ).fromNow()}
+                                                </span>
                                             </div>
                                             <Button
                                                 variant="primary"
