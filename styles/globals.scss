@@ -26,14 +26,14 @@ h6,
 .h4,
 .h5,
 .h6 {
-    margin-top: 0px;
+    margin-top: 0;
     font-weight: 700;
     color: color('dark-primary');
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 img {
@@ -54,10 +54,13 @@ a:hover {
     // color: #333;
     text-decoration: none;
 }
-.btn,
-.btn:focus {
-    // box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0);
-}
+// .btn,
+// .btn:focus {
+
+//     ;
+//     // box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0);;
+
+// }
 button:focus {
     box-shadow: none !important;
 }
@@ -109,10 +112,10 @@ button:not(.collapsed) {
 }
 
 .text-shadow {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dark-box-shadow {
-    box-shadow: 0px 4px 12px 0px #0000001f;
+    box-shadow: 0 4px 12px 0 #0000001f;
 }
 // ----------font color--------
 
@@ -192,7 +195,7 @@ button:not(.collapsed) {
             width: 8px;
             border-style: solid;
             border-color: #000000;
-            border-width: 0px 1px 1px 0px;
+            border-width: 0 1px 1px 0;
             transform: rotate(45deg);
             position: relative;
             left: 9px;
@@ -264,8 +267,7 @@ button:not(.collapsed) {
 }
 
 .button-outer {
-    background: url(../public/assets/images/button-shadow.png) center bottom
-        no-repeat;
+    background: url('../public/assets/images/button-shadow.png') center bottom no-repeat;
     background-size: 90%;
     padding-bottom: 15px;
     width: max-content;
@@ -289,7 +291,7 @@ button:not(.collapsed) {
     @include gradient-background('gradient-light');
 }
 
-//------------------ header white logo------------------
+// ------------------ header white logo------------------
 .white-logo {
     filter: brightness(0) invert(1);
 }
@@ -299,7 +301,7 @@ button:not(.collapsed) {
 .sticky {
     .main-header {
         background: #ffffff;
-        box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+        box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.1);
     }
 }
 
@@ -311,8 +313,7 @@ button:not(.collapsed) {
     // letter-spacing: 0.346154px;
     color: color('light-primary');
 
-    .topheader-text {
-    }
+    .topheader-text {}
 
     .social-links {
         img {
@@ -324,7 +325,7 @@ button:not(.collapsed) {
             padding-left: 25px;
 
             &:first-child {
-                padding-left: 0px;
+                padding-left: 0;
             }
         }
     }
@@ -349,7 +350,7 @@ button:not(.collapsed) {
 // ------------------home page header------------//
 
 .hero-banner-container {
-    background: url(../public/assets/images/hero-banner-bg.png) no-repeat;
+    background: url('../public/assets/images/hero-banner-bg.png') no-repeat;
     min-height: 500px;
     padding-top: 250px;
     padding-bottom: 65px;
@@ -371,7 +372,7 @@ button:not(.collapsed) {
     }
 
     &:hover {
-        box-shadow: 0px 1px 20px 0px rgba(50, 50, 50, 0.4);
+        box-shadow: 0 1px 20px 0 rgba(50, 50, 50, 0.4);
     }
 }
 
@@ -396,7 +397,7 @@ button:not(.collapsed) {
 // ------------------home section 2------------//
 
 .home-section-2 {
-    background: url(../public/assets/images/section2-bg.png) no-repeat;
+    background: url('../public/assets/images/section2-bg.png') no-repeat;
     background-size: cover;
     min-height: 500px;
 
@@ -408,7 +409,7 @@ button:not(.collapsed) {
 // ------------------home section 3------------//
 
 .home-section-3 {
-    background-image: url(../public/assets/images/section3-bg.png);
+    background-image: url('../public/assets/images/section3-bg.png');
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
@@ -434,7 +435,7 @@ button:not(.collapsed) {
     }
 
     .card-body {
-        padding: 1.2rem 1.2rem;
+        padding: 1.2rem;
     }
 
     .card-text {
@@ -446,7 +447,7 @@ button:not(.collapsed) {
     }
 
     .card-footer {
-        padding: 1.2rem 1.2rem;
+        padding: 1.2rem;
         background-color: #ffffff !important;
         border-top: none;
 
@@ -462,7 +463,7 @@ button:not(.collapsed) {
 // ------------------home section 4 ------------//
 
 .cta-banner1 {
-    background: url(../public/assets/images/cta-bg1.jpg) no-repeat;
+    background: url('../public/assets/images/cta-bg1.jpg') no-repeat;
     border-radius: 10px;
     min-height: 302px;
     background-size: cover;
@@ -472,7 +473,7 @@ button:not(.collapsed) {
     &:after {
         width: 94%;
         min-height: 302px;
-        background: url(../public/assets/images/cta-bg1.jpg) no-repeat;
+        background: url('../public/assets/images/cta-bg1.jpg') no-repeat;
         opacity: 0.38;
         filter: blur(5px);
         content: '';
@@ -495,7 +496,7 @@ button:not(.collapsed) {
 // ------------------home section 5 ------------//
 
 .home-section-5 {
-    background: url(../public/assets/images/section2-bg.png) no-repeat;
+    background: url('../public/assets/images/section2-bg.png') no-repeat;
     background-size: cover;
     min-height: 500px;
 }
@@ -522,7 +523,7 @@ button:not(.collapsed) {
             position: absolute;
             opacity: 0.2;
             top: 50px;
-            right: 0px;
+            right: 0;
         }
 
         &:last-child {
@@ -545,7 +546,7 @@ button:not(.collapsed) {
 // ------------------home section 7 ------------//
 
 .cta-banner2 {
-    background: url(../public/assets/images/cta-bg2.jpg) right no-repeat;
+    background: url('../public/assets/images/cta-bg2.jpg') right no-repeat;
     border-radius: 10px;
     min-height: 302px;
     background-size: cover;
@@ -555,7 +556,7 @@ button:not(.collapsed) {
     &:after {
         width: 94%;
         min-height: 302px;
-        background: url(../public/assets/images/cta-bg2.jpg) no-repeat;
+        background: url('../public/assets/images/cta-bg2.jpg') no-repeat;
         opacity: 0.38;
         filter: blur(5px);
         content: '';
@@ -584,7 +585,7 @@ button:not(.collapsed) {
 // ------------------home section 8 ------------//
 
 .home-section-8 {
-    background: url(../public/assets/images/section8-bg.png) no-repeat;
+    background: url('../public/assets/images/section8-bg.png') no-repeat;
     background-size: 100% 100%;
     padding-bottom: 120px !important;
 
@@ -616,8 +617,7 @@ button:not(.collapsed) {
     padding-bottom: 50px !important;
 
     .testimonial-bg {
-        background: url(../public/assets/images/testimonials-bg.svg) 100px 100px
-            no-repeat;
+        background: url('../public/assets/images/testimonials-bg.svg') 100px 100px no-repeat;
         min-height: 400px;
 
         small {
@@ -637,7 +637,7 @@ button:not(.collapsed) {
             content: '';
             width: 70px;
             height: 51px;
-            background: url(../public/assets/images/quote.png);
+            background: url('../public/assets/images/quote.png');
             position: absolute;
             top: 25px;
             right: 25px;
@@ -666,7 +666,7 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-10 {
-    background: url(../public/assets/images/section2-bg.png) no-repeat;
+    background: url('../public/assets/images/section2-bg.png') no-repeat;
     background-size: cover;
     min-height: 500px;
 
@@ -680,7 +680,7 @@ button:not(.collapsed) {
         }
 
         .card-body {
-            padding: 0px;
+            padding: 0;
         }
 
         .card-text {
@@ -697,29 +697,27 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-11 {
-    background: url(../public/assets/images/home-contactus-bg.png) left top
-        no-repeat;
+    background: url('../public/assets/images/home-contactus-bg.png') left top no-repeat;
     margin-top: -100px;
     padding-top: 100px;
 
     .home-contact-card {
-        padding: 40px;
+        padding: 40px 40px 28px;
         background: color('light-primary');
-        box-shadow: 0px 8.19px 40.95px rgba(19, 62, 110, 0.16);
+        box-shadow: 0 8.19px 40.95px rgba(19, 62, 110, 0.16);
         border-radius: 24px;
-        padding-bottom: 28px;
         position: relative;
         z-index: 2;
         .form-label {
             font-size: 14px;
             font-weight: 700;
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
 
         .form-control {
             border: none;
             border-bottom: #ced9eb solid 1px;
-            border-radius: 0px;
+            border-radius: 0;
             margin-bottom: 15px;
         }
 
@@ -735,8 +733,7 @@ button:not(.collapsed) {
 
 // ------------------about-us-section------------//
 .about-us-banner {
-    background: url(../public/assets/images/about-us-banner-bg.png) no-repeat
-        center;
+    background: url('../public/assets/images/about-us-banner-bg.png') no-repeat center;
     background-position: bottom;
     min-height: 527px;
     padding-bottom: 125px;
@@ -747,8 +744,7 @@ button:not(.collapsed) {
 }
 .about-section1 {
     margin-top: -125px;
-    background: url(../public/assets/images/about-us-ellipse-bg.png) no-repeat
-        right bottom;
+    background: url('../public/assets/images/about-us-ellipse-bg.png') no-repeat right bottom;
 }
 
 .our-story-block-number {
@@ -802,9 +798,9 @@ button:not(.collapsed) {
         .our-story-block-number {
             border: 1px solid #6f75ff;
             outline: 2px solid #a8acff;
-            box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
-            -webkit-box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
-            -moz-box-shadow: 0px 0px 0px 4px rgba(209, 211, 255, 0.75);
+            box-shadow: 0 0 0 4px rgba(209, 211, 255, 0.75);
+            -webkit-box-shadow: 0 0 0 4px rgba(209, 211, 255, 0.75);
+            -moz-box-shadow: 0 0 0 4px rgba(209, 211, 255, 0.75);
         }
     }
 }
@@ -863,7 +859,7 @@ button:not(.collapsed) {
 }
 .our-team {
     border-radius: 12px;
-    box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+    box-shadow: 0 13.509px 39.6668px rgba(229, 235, 235, 0.5);
 }
 .footer-section {
     @include gradient-background('gradient-secondary');
@@ -900,8 +896,7 @@ button:not(.collapsed) {
 }
 
 .contactus-banner {
-    background: url(../public/assets/images/contactus-banner.png) no-repeat
-        center;
+    background: url('../public/assets/images/contactus-banner.png') no-repeat center;
     background-position: bottom;
     height: 545px;
     padding-bottom: 125px;
@@ -912,8 +907,7 @@ button:not(.collapsed) {
 }
 
 .contactus-inner-banner {
-    background: url(../public/assets/images/contactus-innerbanner.png) no-repeat
-        center;
+    background: url('../public/assets/images/contactus-innerbanner.png') no-repeat center;
     background-position: bottom;
     padding-bottom: 275px;
     padding-top: 100px;
@@ -965,11 +959,7 @@ button:not(.collapsed) {
     }
 
     .form-control {
-        background: linear-gradient(
-            90deg,
-            rgba(111, 116, 255, 0.12) 0%,
-            rgba(94, 157, 255, 0.28) 100%
-        );
+        background: linear-gradient(90deg, rgba(111, 116, 255, 0.12) 0%, rgba(94, 157, 255, 0.28) 100%);
         border-radius: 30px;
         border: none;
         height: 60px;
@@ -984,7 +974,7 @@ button:not(.collapsed) {
             width: 16px;
             height: 16px;
             content: ' ';
-            background: url(../public/assets/images/arrow-button-down.png);
+            background: url('../public/assets/images/arrow-button-down.png');
             position: absolute;
             right: 25px;
             top: 64px;
@@ -1033,7 +1023,7 @@ button:not(.collapsed) {
     .social-icons {
         a {
             &:first-child {
-                margin-left: 0px !important;
+                margin-left: 0 !important;
             }
         }
     }
@@ -1065,7 +1055,7 @@ button:not(.collapsed) {
     @include gradient-background('gradient-primary');
 }
 .cta-banner3 {
-    background: url(../public/assets/images/cta-bg3.jpg) right no-repeat;
+    background: url('../public/assets/images/cta-bg3.jpg') right no-repeat;
     border-radius: 10px;
     min-height: 302px;
     background-size: cover;
@@ -1075,7 +1065,7 @@ button:not(.collapsed) {
     &:after {
         width: 94%;
         min-height: 302px;
-        background: url(../public/assets/images/cta-bg3.jpg) no-repeat;
+        background: url('../public/assets/images/cta-bg3.jpg') no-repeat;
         opacity: 0.38;
         filter: blur(5px);
         content: '';
@@ -1120,11 +1110,11 @@ header .main-header {
 
 // ---------------career page start---------------
 .career-hero-banner {
-    background: url(../public/assets/icons/careers-banner.svg) no-repeat;
+    background: url('../public/assets/icons/careers-banner.svg') no-repeat;
     min-height: 710px;
     padding-top: 150px;
     background-position: top;
-    margin: 164px 0 100px 0;
+    margin: 164px 0 100px;
 }
 .listing-div {
     li {
@@ -1154,15 +1144,14 @@ header .main-header {
         &.search-field {
             width: 333px;
             .form-control {
-                background: url(../public/assets/icons/gradient-search.svg)
-                    no-repeat 94% center;
+                background: url('../public/assets/icons/gradient-search.svg') no-repeat 94% center;
             }
         }
     }
 }
 .w-1k-block {
     width: 1082px;
-    box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+    box-shadow: 0 13.509px 39.6668px rgba(229, 235, 235, 0.5);
 }
 .career-section1 {
     a {
@@ -1177,7 +1166,7 @@ header .main-header {
     }
 }
 .career-section3 {
-    padding: 90px 0 180px 0;
+    padding: 90px 0 180px;
     .job-position {
         width: 50%;
         span {
@@ -1213,11 +1202,11 @@ header .main-header {
 
 // ---------------career page end---------------
 
-//----------------- defi section------------
+// ----------------- defi section------------
 
 .section-glow {
-    background: url(../public/assets/images/glow-bg.png) no-repeat;
-    padding: 175px 0 100px 0;
+    background: url('../public/assets/images/glow-bg.png') no-repeat;
+    padding: 175px 0 100px;
     background-size: cover;
 }
 
@@ -1276,7 +1265,7 @@ header .main-header {
     .roles-responsibility {
         padding: 70px 55px;
         border-radius: 12px;
-        box-shadow: 0px 13.509px 39.6668px rgba(229, 235, 235, 0.5);
+        box-shadow: 0 13.509px 39.6668px rgba(229, 235, 235, 0.5);
     }
 }
 .career-listings {

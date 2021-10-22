@@ -110,7 +110,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/facebook.svg"
@@ -120,7 +120,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/instagram.svg"
@@ -130,7 +130,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/twitter.svg"
@@ -140,7 +140,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/youtube.svg"
@@ -150,7 +150,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/wordpress.svg"

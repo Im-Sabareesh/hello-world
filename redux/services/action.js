@@ -2,7 +2,9 @@ import { axios } from '@libs';
 
 const servicesAction = {
     fetchItems: 'FetchItems.ServicesList',
-    //fetch career list action
+    //
+    //fetch services list action
+    //
     servicesList: () => (dispatch) => {
         axios
             .get('assets/data/services.json')
