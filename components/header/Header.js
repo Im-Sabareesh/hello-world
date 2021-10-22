@@ -12,8 +12,9 @@ import {
     Navbar,
     Nav,
     NavDropdown,
-    Image,
 } from 'react-bootstrap';
+import Image from 'next/image';
+import headerImages from '@components/images';
 
 const Header = () => {
     const router = useRouter(),
@@ -63,7 +64,12 @@ const Header = () => {
                                                     e.preventDefault()
                                                 }
                                             >
-                                                <Image src={icon} alt="" />
+                                                <Image
+                                                    src={icon}
+                                                    alt=""
+                                                    height={20}
+                                                    width={20}
+                                                />
                                             </a>
                                         </li>
                                     ))}
@@ -87,7 +93,7 @@ const Header = () => {
                             <Link href="/">
                                 <a>
                                     <Image
-                                        src="/assets/icons/logo.svg"
+                                        src={headerImages.logo}
                                         alt=""
                                         className={
                                             !state &&
@@ -96,6 +102,9 @@ const Header = () => {
                                             ) &&
                                             'white-logo'
                                         }
+                                        width={120}
+                                        height={72}
+                                        loading="lazy"
                                     />
                                 </a>
                             </Link>
@@ -178,7 +187,7 @@ const Header = () => {
                                 onClick={(e) => e.preventDefault()}
                             >
                                 <Image
-                                    src="/assets/icons/icon-search.svg"
+                                    src={headerImages.searchIcon}
                                     alt=""
                                     className={
                                         !state &&
@@ -187,6 +196,8 @@ const Header = () => {
                                         ) &&
                                         'white-logo'
                                     }
+                                    width={17}
+                                    height={17}
                                 />
                             </a>
                         </Col>

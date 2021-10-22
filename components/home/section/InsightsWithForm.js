@@ -3,15 +3,9 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-    Form,
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 import { CardSection } from 'common-components';
 
@@ -176,6 +170,7 @@ export default function InsightWithFormSection() {
                                                         {['checkbox'].map(
                                                             (type) => (
                                                                 <div
+                                                                    key={_.uniqueId()}
                                                                     key={type}
                                                                     className="mb-3"
                                                                 >
@@ -243,8 +238,12 @@ export default function InsightWithFormSection() {
                                         className="contact-right-form"
                                     >
                                         <Image
-                                            src="/assets/images/contact-form-img.png"
+                                            src={homeImages.contactForm}
                                             alt=" "
+                                            height={488}
+                                            width={486}
+                                            loading="lazy"
+                                            placeholder="blur"
                                         />
                                     </Col>
                                 </Row>

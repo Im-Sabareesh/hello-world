@@ -3,14 +3,9 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 
-import {
-    Container,
-    Row,
-    Col,
-    Button,
-    Image,
-    Breadcrumb,
-} from 'react-bootstrap';
+import { Container, Row, Col, Button, Breadcrumb } from 'react-bootstrap';
+import Image from 'next/image';
+import careerImages from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
 
@@ -78,14 +73,18 @@ const CareerDetailsComponent = () => {
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
                                 <Image
-                                    src="/assets/images/career-details-mobile-img1.png"
+                                    src={careerImages.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-none d-lg-block"
+                                    width={843}
+                                    height={843}
                                 />
                                 <Image
-                                    src="/assets/images/career-details-mobile-img1.png"
+                                    src={careerImages.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-block d-lg-none"
+                                    width={843}
+                                    height={843}
                                 />
                             </div>
                         </Col>
@@ -95,92 +94,6 @@ const CareerDetailsComponent = () => {
             {_.map(state.content, (content) => (
                 <StaticComponent content={content} />
             ))}
-            {/*--------------- careerdetail-overview-section end---------- */}
-
-            {/*--------------- career-roles-responsibility start---------- */}
-
-            {/* <section className="careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
-                <Container>
-                    <Row>
-                        <Col sm={12}>
-                            <div className="roles-responsibility">
-                                <h3 className="h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color">
-                                    Roles & Responsibilities
-                                </h3>
-
-                                <p>
-                                    The Swiggy Design team works with design
-                                    oriented engineers, product managers and
-                                    some of the best designers in a fast-paced,
-                                    rapidly growing, hybrid
-                                    (technology/operations) environment.
-                                </p>
-
-                                <p>
-                                    We are highly user-centric and we deeply
-                                    believe we can innovate our way out of any
-                                    box. The role demands great execution, bold
-                                    innovation, obsession with quality,
-                                    fearlessness and optimism to be inspired by
-                                    the unknown and never settle, solving
-                                    problems with creativity while keeping the
-                                    user in mind and ambition to take projects
-                                    to the finish line.
-                                </p>
-
-                                <ul className="career-listings lh-md mt-md-4">
-                                    <li>
-                                        Create and refine comprehensive UX user
-                                        flows for business-critical
-                                        interactions.
-                                    </li>
-                                    <li>
-                                        Work with users and product teams to
-                                        test, evaluate and iterate on product
-                                        features.
-                                    </li>
-                                    <li>
-                                        Monitor and analyse data, how well
-                                        existing interfaces work and where they
-                                        breakdown.
-                                    </li>
-                                    <li>
-                                        Clearly and effectively communicate
-                                        design processes, ideas, and solutions.
-                                    </li>
-                                </ul>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section> */}
-
-            {/*--------------- career-roles-responsibility end---------- */}
-
-            {/*--------------- careerdetail-canditate-section start---------- */}
-
-            {/* <section className="careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
-                <Container>
-                    <Row>
-                        <Col sm={12}>
-                            <h4 className="h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color">
-                                Ideal Candidate
-                            </h4>
-
-                            <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
-                                <Button
-                                    variant="primary"
-                                    className="red-btn career-apply-btn"
-                                >
-                                    Apply Now
-                                </Button>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section> */}
-
-            {/*--------------- careerdetail-canditate-section end---------- */}
         </>
     );
 };

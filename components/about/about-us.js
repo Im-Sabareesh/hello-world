@@ -2,7 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import Image from 'next/image';
+import aboutUsImg from '@components/images';
 
 const AboutUs = () => {
     const router = useRouter(),
@@ -78,12 +80,16 @@ const AboutUs = () => {
             <section className="about-section1 pb-xl-5 pb-md-4 pb-2">
                 <Container fluid className="pb-xl-5 pb-2">
                     <Row className="pb-xl-5 pb-2">
-                        <Col className="pb-xl-5 pb-2">
+                        <Col className="pb-xl-5 pb-2 align-img">
                             <Image
-                                src="/assets/images/about-us-grid.png"
-                                className="mx-auto d-block"
+                                src={aboutUsImg.aboutUs}
                                 alt=" "
-                                rounded
+                                className="mx-auto about-section1-img"
+                                rounded="true"
+                                width={1385}
+                                height={800}
+                                layout="responsive"
+                                objectPosition="center"
                             />
                         </Col>
                     </Row>
@@ -292,8 +298,10 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src="/assets/icons/gradient-twitter.svg"
+                                                    src={aboutUsImg.twitter}
                                                     alt=" "
+                                                    width={23}
+                                                    height={20}
                                                 />
                                             </a>
                                             <a
@@ -304,8 +312,10 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src="/assets/icons/gradient-linkedin.svg"
+                                                    src={aboutUsImg.linkeIn}
                                                     alt=" "
+                                                    width={23}
+                                                    height={20}
                                                 />
                                             </a>
                                         </div>

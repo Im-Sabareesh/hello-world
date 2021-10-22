@@ -3,7 +3,9 @@ import Link from 'next/link';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import footerImages from '@components/images';
 
 const RadiusFooter = (props) => {
     const { t } = useTranslation('common'),
@@ -97,9 +99,11 @@ const RadiusFooter = (props) => {
                                 className="brand-logo"
                             >
                                 <Image
-                                    src="/assets/icons/cc-white-logo.svg"
+                                    src={footerImages.ccWhiteLogo}
                                     className="mb-4"
                                     alt="..."
+                                    width={219}
+                                    height={140}
                                 />
                             </a>
                         </Link>
@@ -113,8 +117,10 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src="/assets/icons/facebook.svg"
+                                    src={footerImages.fbSVG}
                                     alt="..."
+                                    width={11}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -123,8 +129,10 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src="/assets/icons/instagram.svg"
+                                    src={footerImages.instaSVG}
                                     alt="..."
+                                    width={20}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -133,8 +141,10 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src="/assets/icons/twitter.svg"
+                                    src={footerImages.twitterSVG}
                                     alt="..."
+                                    width={25}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -143,8 +153,10 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src="/assets/icons/youtube.svg"
+                                    src={footerImages.uTubeSVG}
                                     alt="..."
+                                    width={27}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -153,8 +165,10 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src="/assets/icons/wordpress.svg"
+                                    src={footerImages.wpSVG}
                                     alt="..."
+                                    width={19}
+                                    height={19}
                                 />
                             </a>
                         </div>
@@ -210,8 +224,10 @@ const RadiusFooter = (props) => {
                             >
                                 <div className="arrow-bg">
                                     <Image
-                                        src="/assets/images/uparrow.png"
+                                        src={footerImages.upArrow}
                                         alt=" "
+                                        width={52}
+                                        height={51}
                                     />
                                 </div>
                                 Back to top
