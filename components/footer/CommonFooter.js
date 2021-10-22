@@ -91,17 +91,18 @@ const RadiusFooter = (props) => {
                                 : 'home-footer-logo'
                         } mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                     >
-                        <a
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                            className="brand-logo"
-                        >
-                            <Image
-                                src="/assets/icons/cc-white-logo.svg"
-                                className="mb-4"
-                                alt="..."
-                            />
-                        </a>
+                        <Link href="/">
+                            <a
+                                // onClick={(e) => e.preventDefault()}
+                                className="brand-logo"
+                            >
+                                <Image
+                                    src="/assets/icons/cc-white-logo.svg"
+                                    className="mb-4"
+                                    alt="..."
+                                />
+                            </a>
+                        </Link>
                         <p className="light-text-color text-shadow">
                             {t('footer.followUs')}
                         </p>

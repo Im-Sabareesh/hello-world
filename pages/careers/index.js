@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Head from 'next/head';
+import { useDispatch } from 'react-redux';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { CareersComponent } from '@components';
+import { careerAction } from '@redux';
 
 const Careers = () => {
+    const dispatch = useDispatch();
+    React.useEffect(() => {
+        dispatch(careerAction.careerList());
+    }, []);
     return (
         <div className="career-page">
             <Head>
@@ -16,8 +22,6 @@ const Careers = () => {
     );
 };
 
-export default Careers;
-
 export const getStaticProps = async (p) => {
     return {
         props: {
@@ -25,3 +29,5 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+export default Careers;
