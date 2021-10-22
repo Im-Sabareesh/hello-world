@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
+import PropTypes from 'prop-types';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
