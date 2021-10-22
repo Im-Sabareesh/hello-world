@@ -9,7 +9,7 @@ const fetchList = (state, payload) => {
     };
 };
 
-export default function (state = initState, action) {
+export default function reducer(state = initState, action) {
     switch (action.type) {
         case servicesAction.fetchItems: {
             return fetchList(state, action.payload);
