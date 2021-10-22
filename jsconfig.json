@@ -12,8 +12,7 @@
             "@components/icons": ["components/icons"],
             "@libs": ["libs"],
             "@libs/*": ["libs/*"],
-            "@redux": ["redux"],
-   
+            "@redux": ["redux"]
         }
     }
 }

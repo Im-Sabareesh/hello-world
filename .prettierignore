@@ -1,0 +1,5 @@
+# Ignore artifacts:
+.next/
+styles/
+out/
+node_modules/
