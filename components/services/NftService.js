@@ -2,7 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import Image from 'next/image';
+import nftImages from '@components/images';
 
 const NFTSComponent = () => {
     const router = useRouter();
@@ -46,10 +48,12 @@ const NFTSComponent = () => {
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <Image
-                                    src="/assets/images/nftesrvices-image1.png"
+                                    src={nftImages.nftPng}
                                     rounded
                                     className="nft-service-img"
                                     alt=" "
+                                    width={636}
+                                    height={529}
                                 />
                             </div>
                         </Col>

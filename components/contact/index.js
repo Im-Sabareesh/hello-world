@@ -1,7 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import Image from 'next/image';
+import contactImages from '@components/images';
 
 const ContactComponent = () => {
     const branchList = [
@@ -73,8 +75,12 @@ const ContactComponent = () => {
                             <Col md={6} lg={6}>
                                 <p className="contact-img mb-5">
                                     <Image
-                                        src="/assets/images/contactus.svg"
+                                        src={contactImages.contactUs}
                                         alt=" "
+                                        width={636}
+                                        height={527}
+                                        layout="intrinsic"
+                                        loading="lazy"
                                     />
                                 </p>
 
@@ -97,27 +103,41 @@ const ContactComponent = () => {
 
                                 <div className="contact-small-section contact-small-section-contact pt-4">
                                     <h3 className="h3">Contact Us</h3>
-                                    <p>
-                                        <Image
-                                            src="/assets/icons/contact-phone.svg"
-                                            alt=" "
-                                            className="me-2"
-                                        />
-                                        <a href="tel:+91-9646579412">
-                                            +91-9646579412
-                                        </a>
-                                    </p>
-
-                                    <p>
-                                        <Image
-                                            src="/assets/icons/contact-email.svg"
-                                            alt=" "
-                                            className="me-2"
-                                        />
-                                        <a href="mailto:info@chaincodeconsulting.com">
-                                            info@chaincodeconsulting.com
-                                        </a>
-                                    </p>
+                                    <span className="d-flex">
+                                        <p className="contact-icon">
+                                            <Image
+                                                src={contactImages.contactPhone}
+                                                alt=" "
+                                                className=""
+                                                height={20}
+                                                width={20}
+                                                layout="intrinsic"
+                                                objectFit="unset"
+                                            />
+                                        </p>
+                                        <p>
+                                            <a href="tel:+91-9646579412">
+                                                +91-9646579412
+                                            </a>
+                                        </p>
+                                    </span>
+                                    <span className="d-flex">
+                                        <p className="contact-icon">
+                                            <Image
+                                                src={contactImages.contactEmail}
+                                                alt=" "
+                                                className=""
+                                                height={20}
+                                                width={20}
+                                                layout="intrinsic"
+                                            />
+                                        </p>
+                                        <p>
+                                            <a href="mailto:info@chaincodeconsulting.com">
+                                                info@chaincodeconsulting.com
+                                            </a>
+                                        </p>
+                                    </span>
                                 </div>
 
                                 <div className="contact-small-section pt-4">
@@ -128,8 +148,10 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src="/assets/images/fb-p.png"
+                                                src={contactImages.fbPng}
                                                 alt=""
+                                                height={27}
+                                                width={15}
                                             />
                                         </a>
                                         <a
@@ -137,8 +159,10 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src="/assets/images/insta-p.png"
+                                                src={contactImages.instaPgn}
                                                 alt=""
+                                                height={27}
+                                                width={28}
                                             />
                                         </a>
                                         <a
@@ -146,8 +170,10 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src="/assets/images/twitter-p.png"
+                                                src={contactImages.twitterPng}
                                                 alt=""
+                                                height={25}
+                                                width={30}
                                             />
                                         </a>
                                         <a
@@ -155,8 +181,10 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src="/assets/images/youtube-p.png"
+                                                src={contactImages.uTubePng}
                                                 alt=""
+                                                height={25}
+                                                width={34}
                                             />
                                         </a>
                                         <a
@@ -164,8 +192,10 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src="/assets/images/wp-p.png"
+                                                src={contactImages.wpPng}
                                                 alt=""
+                                                height={64}
+                                                width={64}
                                             />
                                         </a>
                                     </p>
@@ -268,19 +298,27 @@ const ContactComponent = () => {
                 </section>
 
                 <section className="ouroffice-container py-5">
-                    <Container>
+                    <Container fluid>
                         <Row>
                             <Col className="text-center">
                                 <h2 className="h2 mb-5"> Our Offices </h2>
-
-                                <div className="ouroffice-banner">
-                                    <Image
-                                        src="/assets/images/contactus.jpg"
-                                        alt=""
-                                    />
-                                </div>
                             </Col>
-
+                            <Col md={12} className=" ouroffice-banner">
+                                <Image
+                                    src={contactImages.contactUsJpg}
+                                    alt=""
+                                    className="office-banner"
+                                    width={1754}
+                                    height={544}
+                                    layout="responsive"
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
+                            </Col>
+                        </Row>
+                    </Container>
+                    <Container>
+                        <Row>
                             {_.map(branchList, (item) => (
                                 <Col
                                     md={4}
@@ -290,8 +328,10 @@ const ContactComponent = () => {
                                 >
                                     <div className=" mt-1 me-3 flex-shrink-0">
                                         <Image
-                                            src="/assets/icons/mappin.svg"
+                                            src={contactImages.mappin}
                                             alt=" "
+                                            height={29}
+                                            width={22}
                                         />
                                     </div>
                                     <div className="address-cont ml-2 flex-shrink-0">
@@ -311,27 +351,44 @@ const ContactComponent = () => {
                                             {item.address.city}
                                         </p>
                                         <div className="contact-small-section contact-small-section-contact pt-3">
-                                            <p>
-                                                <Image
-                                                    src="/assets/icons/contact-phone.svg"
-                                                    alt=" "
-                                                    className="me-2"
-                                                />
-                                                <a href="tel:+91-9646579412">
-                                                    {item.phone}
-                                                </a>
-                                            </p>
-
-                                            <p>
-                                                <Image
-                                                    src="/assets/icons/contact-email.svg"
-                                                    alt=" "
-                                                    className="me-2"
-                                                />
-                                                <a href="mailto:info@chaincodeconsulting.com">
-                                                    {item.mailID}
-                                                </a>
-                                            </p>
+                                            <span className="d-flex">
+                                                <p className="contact-icon">
+                                                    <Image
+                                                        src={
+                                                            contactImages.contactPhone
+                                                        }
+                                                        alt=" "
+                                                        className=""
+                                                        height={20}
+                                                        width={20}
+                                                        layout="intrinsic"
+                                                        objectFit="unset"
+                                                    />
+                                                </p>
+                                                <p>
+                                                    <a href="tel:+91-9646579412">
+                                                        {item.phone}
+                                                    </a>
+                                                </p>
+                                            </span>
+                                            <span className="d-flex">
+                                                <p className="contact-icon">
+                                                    <Image
+                                                        src={
+                                                            contactImages.contactEmail
+                                                        }
+                                                        alt=" "
+                                                        className=""
+                                                        height={20}
+                                                        width={20}
+                                                    />
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:info@chaincodeconsulting.com">
+                                                        {item.mailID}
+                                                    </a>
+                                                </p>
+                                            </span>
                                         </div>
                                     </div>
                                 </Col>

@@ -756,6 +756,9 @@ button:not(.collapsed) {
     margin-top: -125px;
     background: url(../public/assets/images/about-us-ellipse-bg.png) no-repeat
         right bottom;
+    .about-section1-img {
+        padding: 0px 4% !important;
+    }
 }
 
 .our-story-block-number {
@@ -1004,6 +1007,9 @@ button:not(.collapsed) {
     }
 }
 
+.office-banner {
+    margin-left: 15% !important;
+}
 .contactus-footer {
     background: color('secondary');
 }
@@ -1054,6 +1060,9 @@ button:not(.collapsed) {
     padding-bottom: 65px;
     display: grid;
     place-items: center;
+    .nft-service-img-div {
+        margin-bottom: -140px;
+    }
     .nft-service-img {
         width: 100%;
         // height: 440px;
@@ -1298,5 +1307,10 @@ header .main-header {
 }
 .career-apply-btn {
     width: 280px;
+}
+
+.contact-icon {
+    margin-top: 3px;
+    margin-right: 10px;
 }
 // ----------------------career page details end----------------

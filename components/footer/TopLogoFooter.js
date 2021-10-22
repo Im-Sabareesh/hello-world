@@ -2,7 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import footerImages from '@components/images';
 
 const TopLogoFooter = () => {
     const footerLinkList = [
@@ -98,9 +100,11 @@ const TopLogoFooter = () => {
                         <Link href="/">
                             <a className="brand-logo">
                                 <Image
-                                    src="/assets/icons/cc-white-logo.svg"
+                                    src={footerImages.ccWhiteLogo}
                                     className="mb-md-4 mb-sm-3 mb-4"
                                     alt=" "
+                                    width={219}
+                                    height={140}
                                 />
                             </a>
                         </Link>
@@ -114,8 +118,10 @@ const TopLogoFooter = () => {
                                 className="mx-3"
                             >
                                 <Image
-                                    src="/assets/icons/facebook.svg"
+                                    src={footerImages.fbSVG}
                                     alt=" "
+                                    width={11}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -124,8 +130,10 @@ const TopLogoFooter = () => {
                                 className="mx-3"
                             >
                                 <Image
-                                    src="/assets/icons/instagram.svg"
+                                    src={footerImages.instaSVG}
                                     alt=" "
+                                    width={20}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -134,8 +142,10 @@ const TopLogoFooter = () => {
                                 className="mx-3"
                             >
                                 <Image
-                                    src="/assets/icons/twitter.svg"
+                                    src={footerImages.twitterSVG}
                                     alt=" "
+                                    width={25}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -144,8 +154,10 @@ const TopLogoFooter = () => {
                                 className="mx-3"
                             >
                                 <Image
-                                    src="/assets/icons/youtube.svg"
+                                    src={footerImages.uTubeSVG}
                                     alt=" "
+                                    width={27}
+                                    height={19}
                                 />
                             </a>
                             <a
@@ -154,8 +166,10 @@ const TopLogoFooter = () => {
                                 className="mx-3"
                             >
                                 <Image
-                                    src="/assets/icons/wordpress.svg"
+                                    src={footerImages.wpSVG}
                                     alt=" "
+                                    width={19}
+                                    height={19}
                                 />
                             </a>
                         </div>

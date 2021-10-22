@@ -1,13 +1,8 @@
 import React from 'react';
 
-import {
-    Container,
-    Row,
-    Col,
-    Button,
-    Image,
-    Breadcrumb,
-} from 'react-bootstrap';
+import { Container, Row, Col, Button, Breadcrumb } from 'react-bootstrap';
+import Image from 'next/image';
+import careerImages from '@components/images';
 
 const CareerDetailsComponent = () => {
     return (
@@ -88,14 +83,18 @@ const CareerDetailsComponent = () => {
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
                                 <Image
-                                    src="/assets/images/career-details-mobile-img1.png"
+                                    src={careerImages.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-none d-lg-block"
+                                    width={843}
+                                    height={843}
                                 />
                                 <Image
-                                    src="/assets/images/career-details-mobile-img1.png"
+                                    src={careerImages.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-block d-lg-none"
+                                    width={843}
+                                    height={843}
                                 />
                             </div>
                         </Col>
