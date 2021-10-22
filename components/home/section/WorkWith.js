@@ -41,7 +41,7 @@ export default function WorkWithSection() {
                             title={`${t('someQuestion')}<br />${t(
                                 'getFreeConsultAns'
                             )}`}
-                            className="cta-banner cta-banner2 d-flex align-items-center justify-content-end"
+                            className="cta-banner cta-banner2 d-flex align-items-center justify-content-sm-end"
                             link="/contact"
                             btnName={t('letsTalk', { ns: 'common' })}
                         />

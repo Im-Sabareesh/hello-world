@@ -126,9 +126,10 @@ button:not(.collapsed) {
 
 .backtotop {
     position: absolute;
-    bottom: 216px;
+    bottom: 136px;
     right: 20px;
     width: 110px;
+    font-size: 13px;
 
     a {
         color: #ffffff;
@@ -1244,3 +1245,6 @@ header .main-header {
     margin-right: 10px;
 }
 // ----------------------career page details end----------------
+.search-margin{
+    margin-top: 10px;
+}

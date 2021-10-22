@@ -215,9 +215,9 @@ const RadiusFooter = (props) => {
                     ))}
 
                     {props.radius && (
-                        <div className="backtotop" id="backtotop">
+                        <div className="backtotop">
                             <a
-                                href="#"
+                                href="#" className="text-uppercase"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     document.body.scrollTop =

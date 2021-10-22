@@ -164,9 +164,10 @@ const Header = () => {
                             sm={4}
                             md={4}
                             lg={2}
-                            className="text-end text-md-start mt-2 letstalk-btn"
+                            className="text-end text-md-start d-sm-flex letstalk-btn mt-2"
                         >
-                            <Button
+                           <div>
+                           <Button
                                 btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
@@ -174,8 +175,9 @@ const Header = () => {
                             >
                                 {t('letsTalk')}
                             </Button>
-
-                            <a
+                           </div>
+                           <div className="search-margin">
+                           <a
                                 href="#"
                                 className="ms-2 header-search"
                                 onClick={(e) => e.preventDefault()}
@@ -195,6 +197,7 @@ const Header = () => {
                                     height={17}
                                 />
                             </a>
+                           </div>
                         </Col>
                     </Row>
                 </Container>

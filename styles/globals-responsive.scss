@@ -142,7 +142,7 @@
             }
 
             .cta-txt {
-                width: 165px;
+                width: 100%;
             }
         }
     }
@@ -938,7 +938,7 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 26px !important;
+            font-size: 24px !important;
             line-height: 35px !important;
         }
         padding-bottom: 0 !important;
@@ -1039,6 +1039,13 @@
     }
     .service-inner-section1 .nft-service-img-div {
         margin-bottom: 0;
+        margin-top: 20px;
+    }
+    .backtotop {
+        display: none;
+    }
+    .about-section1 .about-section1-img {
+        padding: 0px 0% !important;
     }
 }
 
@@ -1313,6 +1320,13 @@
     }
     .service-inner-section1 .nft-service-img-div {
         margin-bottom: 0;
+        margin-top: 20px;
+    }
+    .backtotop {
+        display: none;
+    }
+    .about-section1 .about-section1-img {
+        padding: 0px 0% !important;
     }
 }
 @include media-breakpoint-between(md, lg) {
@@ -1567,6 +1581,16 @@
     .service-inner-section1 .nft-service-img-div {
         margin-bottom: 0;
     }
+    .backtotop {
+        bottom: 65px;
+    }
+    .style_red-btn__2MgIy{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .about-section1 .about-section1-img {
+        padding: 0px 2% !important;
+    }
 }
 @include media-breakpoint-between(lg, xl) {
     // ----------font size---------
@@ -1712,6 +1736,16 @@
     // changes
     .section-glow {
         padding: 75px 0;
+    }
+    .backtotop {
+        bottom: 65px;
+    }
+    .style_red-btn__2MgIy{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .about-section1 .about-section1-img {
+        padding: 0px 2% !important;
     }
 }
 @include media-breakpoint-between(xl, xxl) {

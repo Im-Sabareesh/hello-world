@@ -103,9 +103,9 @@ const DefiSComponent = () => {
                             <Col lg={5}>
                                 <Image
                                     src={images.videoThumb}
-                                    width={610}
-                                    height={318}
-                                    layout="intrinsic"
+                                    width={771}
+                                    height={542}
+                                    layout="responsive"
                                     placeholder="blur"
                                     loading="lazy"
                                 />
@@ -219,8 +219,9 @@ const DefiSComponent = () => {
                             <Image
                                 src={images.defiTwo}
                                 alt=".."
-                                width={913}
-                                height={752}
+                                width={927}
+                                height={646}
+                                layout="responsive"
                                 placeholder="blur"
                                 loading="lazy"
                             />
