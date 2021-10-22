@@ -2,16 +2,13 @@ import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
-import { Col, Image, Card, Button } from 'react-bootstrap';
+import { Image, Card } from 'react-bootstrap';
+import { Button } from '@components';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
         return (
-            <Card
-                className={`${footerClass && 'custom-card'} ${
-                    className && className
-                }`}
-            >
+            <Card className={`${footerClass && 'custom-card'} ${className}`}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                     <Card.Title>
@@ -52,7 +49,8 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
 
     const renderCard = () => {
         return (
-            <Card className={`custom-card ${className && className}`}>
+            <Card className={`custom-card ${className}`}>
+                {item.image && <Card.Img variant="top" src={item.image} />}
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>
@@ -60,7 +58,12 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                     <Card.Text>{item.describe}</Card.Text>
                 </Card.Body>
                 <Card.Footer className="">
-                    <Button variant="primary" className="red-btn min-size-btn">
+                    <Button
+                        btnVarient="red-btn"
+                        className={`min-size-btn ${
+                            item.image && 'btn btn-primary w-100'
+                        }`}
+                    >
                         Know More
                     </Button>
                 </Card.Footer>
@@ -82,4 +85,7 @@ CardSection.propTypes = {
 
 CardSection.defaultProps = {
     fullCard: false,
+    className: '',
+    item: {},
+    footerClass: '',
 };

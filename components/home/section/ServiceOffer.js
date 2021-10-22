@@ -1,47 +1,49 @@
 import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
-
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
-import homeImages from '@components/images';
+
+import { Container, Row, Col } from 'react-bootstrap';
+
+import images from '@components/images';
+import { Paragraph } from '@components';
 
 export default function ServiceOfferSection() {
     const { t } = useTranslation('home');
     const serviceList = [
         {
             name: 'Decentraized Finance',
-            icon: homeImages.deCenFin,
+            icon: images.deCenFin,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Non Fungible Tokens',
-            icon: homeImages.nonFunToken,
+            icon: images.nonFunToken,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Binance Smart Chain',
-            icon: homeImages.smartChain,
+            icon: images.smartChain,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Website Development',
-            icon: homeImages.webDev,
+            icon: images.webDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'Mobile App Development',
-            icon: homeImages.mobDev,
+            icon: images.mobDev,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
         {
             name: 'AI Technology',
-            icon: homeImages.aiTech,
+            icon: images.aiTech,
             describe:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
         },
@@ -56,7 +58,7 @@ export default function ServiceOfferSection() {
                             {t('servicesOffer')}
                         </h2>
 
-                        <p>{t('nullaLoremLaborum')}</p>
+                        <Paragraph>{t('nullaLoremLaborum')}</Paragraph>
                     </Col>
                 </Row>
             </Container>
@@ -83,7 +85,7 @@ export default function ServiceOfferSection() {
 
                             <h3 className="h3 dark-text-color">{item.name}</h3>
 
-                            <p> {item.describe} </p>
+                            <Paragraph> {item.describe} </Paragraph>
                         </Col>
                     ))}
 

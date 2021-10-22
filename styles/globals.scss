@@ -14,13 +14,11 @@ body {
     overflow-x: hidden;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-.h1,
 .h2,
 .h3,
 .h4,
@@ -80,12 +78,6 @@ button:not(.collapsed) {
     background-color: none !important;
 }
 
-.h1 {
-    font-size: $heading1;
-    line-height: 74px;
-    color: color('dark-secondary');
-}
-
 .h2 {
     font-size: $heading2;
 }
@@ -111,9 +103,6 @@ button:not(.collapsed) {
     color: color('dark-secondary');
 }
 
-.text-shadow {
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
 .dark-box-shadow {
     box-shadow: 0 4px 12px 0 #0000001f;
 }
@@ -240,34 +229,14 @@ button:not(.collapsed) {
     min-width: 175px !important;
 }
 
-.red-btn {
-    @include gradient-background('red-btn');
-    font-weight: 600;
-    font-size: 18px;
-    height: 47px;
-    border: transparent;
-    min-width: 120px;
-    color: #ffffff;
-    border-radius: 28px;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include gradient-background('red-btn-hover');
-        color: white;
-        border: none;
-    }
-}
-
 .btn-lg {
     width: 205px;
-    height: 56px;
+    height: 56px !important;
 }
 
 .button-outer {
-    background: url('../public/assets/images/button-shadow.png') center bottom no-repeat;
+    background: url('../public/assets/images/button-shadow.png') center bottom
+        no-repeat;
     background-size: 90%;
     padding-bottom: 15px;
     width: max-content;
@@ -313,7 +282,8 @@ button:not(.collapsed) {
     // letter-spacing: 0.346154px;
     color: color('light-primary');
 
-    .topheader-text {}
+    .topheader-text {
+    }
 
     .social-links {
         img {
@@ -617,7 +587,8 @@ button:not(.collapsed) {
     padding-bottom: 50px !important;
 
     .testimonial-bg {
-        background: url('../public/assets/images/testimonials-bg.svg') 100px 100px no-repeat;
+        background: url('../public/assets/images/testimonials-bg.svg') 100px
+            100px no-repeat;
         min-height: 400px;
 
         small {
@@ -704,7 +675,8 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-11 {
-    background: url('../public/assets/images/home-contactus-bg.png') left top no-repeat;
+    background: url('../public/assets/images/home-contactus-bg.png') left top
+        no-repeat;
     margin-top: -100px;
     padding-top: 100px;
 
@@ -740,7 +712,8 @@ button:not(.collapsed) {
 
 // ------------------about-us-section------------//
 .about-us-banner {
-    background: url('../public/assets/images/about-us-banner-bg.png') no-repeat center;
+    background: url('../public/assets/images/about-us-banner-bg.png') no-repeat
+        center;
     background-position: bottom;
     min-height: 527px;
     padding-bottom: 125px;
@@ -897,17 +870,11 @@ button:not(.collapsed) {
             margin-bottom: 15px;
         }
     }
-
-    .address-cont {
-        .address-txt {
-            font-size: 20px;
-            font-weight: 600;
-        }
-    }
 }
 
 .contactus-banner {
-    background: url('../public/assets/images/contactus-banner.png') no-repeat center;
+    background: url('../public/assets/images/contactus-banner.png') no-repeat
+        center;
     background-position: bottom;
     height: 545px;
     padding-bottom: 125px;
@@ -918,7 +885,8 @@ button:not(.collapsed) {
 }
 
 .contactus-inner-banner {
-    background: url('../public/assets/images/contactus-innerbanner.png') no-repeat center;
+    background: url('../public/assets/images/contactus-innerbanner.png')
+        no-repeat center;
     background-position: bottom;
     padding-bottom: 275px;
     padding-top: 100px;
@@ -937,7 +905,6 @@ button:not(.collapsed) {
             }
         }
     }
-
     a {
         color: color('secondary');
     }
@@ -947,14 +914,6 @@ button:not(.collapsed) {
             color: color('dark-primary');
         }
     }
-}
-
-.contact-img {
-    margin-top: 60px;
-}
-
-.getintouch-txt {
-    font-size: 20px;
 }
 
 .getintouch-form {
@@ -970,7 +929,11 @@ button:not(.collapsed) {
     }
 
     .form-control {
-        background: linear-gradient(90deg, rgba(111, 116, 255, 0.12) 0%, rgba(94, 157, 255, 0.28) 100%);
+        background: linear-gradient(
+            90deg,
+            rgba(111, 116, 255, 0.12) 0%,
+            rgba(94, 157, 255, 0.28) 100%
+        );
         border-radius: 30px;
         border: none;
         height: 60px;
@@ -1161,7 +1124,8 @@ header .main-header {
         &.search-field {
             width: 333px;
             .form-control {
-                background: url('../public/assets/icons/gradient-search.svg') no-repeat 94% center;
+                background: url('../public/assets/icons/gradient-search.svg')
+                    no-repeat 94% center;
             }
         }
     }
@@ -1197,26 +1161,6 @@ header .main-header {
         margin-right: 20px;
     }
 }
-.gradient-btn {
-    @include gradient-background('gradient-secondary');
-    font-weight: 600;
-    font-size: 18px;
-    height: 47px;
-    border: transparent;
-    color: #ffffff;
-    border-radius: 28px;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include gradient-background('gradient-btn-hover');
-        color: white;
-        border: none;
-    }
-}
-
 // ---------------career page end---------------
 
 // ----------------- defi section------------
@@ -1264,10 +1208,6 @@ header .main-header {
 // ---------breadcrumb start---------
 
 .careerdetail-overview-section {
-    .location-element {
-        font-size: 18px;
-        font-weight: 600;
-    }
     .job-overview {
         width: 510px;
     }

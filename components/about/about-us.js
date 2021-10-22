@@ -1,10 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import Image from 'next/image';
-import aboutUsImg from '@components/images';
+import { Button, H1, Paragraph } from '@components';
+import images from '@components/images';
 
 const AboutUs = () => {
     const router = useRouter(),
@@ -59,14 +60,12 @@ const AboutUs = () => {
                     <Row>
                         <Col>
                             <div className="light-text-color text-center w-50 mx-auto">
-                                <h1 className="h1 light-text-color">
-                                    About Us
-                                </h1>
-                                <p>
+                                <H1 className="light-text-color">About Us</H1>
+                                <Paragraph>
                                     Our vision is to be the world’s most trusted
                                     transparency platform to build a system
                                     where reputable people buy & sell assets.
-                                </p>
+                                </Paragraph>
                             </div>
                         </Col>
                     </Row>
@@ -82,7 +81,7 @@ const AboutUs = () => {
                     <Row className="pb-xl-5 pb-2">
                         <Col className="pb-xl-5 pb-2 align-img">
                             <Image
-                                src={aboutUsImg.aboutUs}
+                                src={images.aboutUs}
                                 alt=" "
                                 className="mx-auto about-section1-img"
                                 rounded="true"
@@ -104,31 +103,31 @@ const AboutUs = () => {
                 <Container>
                     <Row>
                         <Col lg={5}>
-                            <h2 className="h1">Whats Our Story?</h2>
+                            <H1>Whats Our Story?</H1>
                         </Col>
                         <Col lg={7}>
-                            <p>
+                            <Paragraph>
                                 Blockchain is changing the way the world lives
                                 and works – but it&apos;s only a means to an
                                 end, not the end itself. We can help you apply
                                 this technology to drive your transformation
                                 into the future.
-                            </p>
+                            </Paragraph>
 
-                            <p>
+                            <Paragraph>
                                 We start with an understanding of your specific
                                 aspirations, followed by a practical application
                                 of blockchain innovation. The conversation grows
                                 as new opportunities come to light along the
                                 way.
-                            </p>
+                            </Paragraph>
 
-                            <p>
+                            <Paragraph>
                                 As the leading independent technology
                                 organization, we integrate alliances,
                                 partnerships, and leaders from every aspect of
-                                the blockchain ecosystem.{' '}
-                            </p>
+                                the blockchain ecosystem.
+                            </Paragraph>
                         </Col>
                     </Row>
                     <Row className="pt-xl-5 pt-3 mt-md-4">
@@ -142,10 +141,10 @@ const AboutUs = () => {
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
                                         Our vision
                                     </h3>
-                                    <p>
+                                    <Paragraph>
                                         We believe that universal access to
                                         space will inherently improve human life
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </div>
                         </Col>
@@ -159,10 +158,10 @@ const AboutUs = () => {
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
                                         Our mission
                                     </h3>
-                                    <p>
+                                    <Paragraph>
                                         We believe that universal access to
                                         space will inherently improve human life
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </div>
                         </Col>
@@ -176,10 +175,10 @@ const AboutUs = () => {
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
                                         what we do
                                     </h3>
-                                    <p>
+                                    <Paragraph>
                                         We believe that universal access to
                                         space will inherently improve human life
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </div>
                         </Col>
@@ -206,22 +205,22 @@ const AboutUs = () => {
                             </div>
                         </Col>
                         <Col xl={8} lg={7}>
-                            <p className="h3 lh-base fw-normal light-text-color">
+                            <h3 className="h3 lh-base fw-normal light-text-color">
                                 Blockchain is changing the way the world lives
                                 and works – but it&apos;s only a means to an
                                 end, not the end itself. We can help you apply
                                 this technology to drive your transformation
                                 into the future. As the leading independent
                                 technology organization.
-                            </p>
+                            </h3>
 
-                            <p className="h3 lh-base fw-normal light-text-color">
+                            <h3 className="h3 lh-base fw-normal light-text-color">
                                 We start with an understanding of your specific
                                 aspirations, followed by a practical application
                                 of blockchain innovation. The conversation grows
                                 as new opportunities come to light along the
                                 way.
-                            </p>
+                            </h3>
                         </Col>
                     </Row>
                 </Container>
@@ -241,12 +240,12 @@ const AboutUs = () => {
                                 </h4>
                                 <div className="our-team-block">
                                     <div className="line-animated rounded position-relative float-start  me-3"></div>
-                                    <p className="h3 mb-2 purple-gradient-text-color">
+                                    <h3 className="h3 mb-2 purple-gradient-text-color">
                                         8 Members
-                                    </p>
-                                    <p className="h3 dark-secondary-text-color">
+                                    </h3>
+                                    <h3 className="h3 dark-secondary-text-color">
                                         Designer - Developer - Marketing
-                                    </p>
+                                    </h3>
                                 </div>
                             </div>
                         </Col>
@@ -254,12 +253,12 @@ const AboutUs = () => {
                             <h6 className="h3 text-uppercase dark-text-color mb-4">
                                 Our Team
                             </h6>
-                            <p className="h3 dark-secondary-text-color lh-base fw-normal">
+                            <h3 className="h3 dark-secondary-text-color lh-base fw-normal">
                                 Making people smile gets us out of bed every
                                 morning. Through thoughtful design we create
                                 delightful digital experiences that make life
                                 simpler and more enjoyable
-                            </p>
+                            </h3>
                         </Col>
                     </Row>
                 </Container>
@@ -298,7 +297,7 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src={aboutUsImg.twitter}
+                                                    src={images.twitter}
                                                     alt=" "
                                                     width={23}
                                                     height={20}
@@ -312,7 +311,7 @@ const AboutUs = () => {
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
                                                 <Image
-                                                    src={aboutUsImg.linkeIn}
+                                                    src={images.linkeIn}
                                                     alt=" "
                                                     width={23}
                                                     height={20}
@@ -335,31 +334,31 @@ const AboutUs = () => {
             <section className="about-section6 py-xl-5 py-md-4 py-2 mb-xl-5 mb-4">
                 <Container>
                     <Row>
-                        <p className="h3 purple-gradient-text-color text-uppercase mb-3">
+                        <h3 className="h3 purple-gradient-text-color text-uppercase mb-3">
                             WORK WITH US
-                        </p>
+                        </h3>
                         <Col md={6}>
                             <h6 className="h2 dark-text-color mb-3">
                                 Have you decided to work on a project with us?
                             </h6>
                         </Col>
                         <Col md={6}>
-                            <p className="h3 dark-secondary-text-color lh-base fw-normal">
+                            <h3 className="h3 dark-secondary-text-color lh-base fw-normal">
                                 Interested in joining our team and impacting the
                                 world? Reach out! We are always looking for new
                                 projectsto help take design to next level
-                            </p>
+                            </h3>
                         </Col>
                         <Col md={6} className="mt-lg-4 mt-2">
-                            <button
-                                type="button"
+                            <Button
+                                btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}
-                                className="red-btn min-size-btn btn btn-primary"
+                                className="min-size-btn btn btn-primary"
                             >
                                 Connect with us
-                            </button>
+                            </Button>
                         </Col>
                     </Row>
                 </Container>

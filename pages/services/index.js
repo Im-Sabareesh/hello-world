@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Paragraph } from '@components';
+
 const Services = () => {
     return (
         <>
-            <p>Services</p>
+            <Paragraph>Services</Paragraph>
         </>
     );
 };

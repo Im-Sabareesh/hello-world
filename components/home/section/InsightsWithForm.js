@@ -2,12 +2,12 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
-import homeImages from '@components/images';
 
-import { CardSection } from 'common-components';
+import { Container, Row, Col, Form } from 'react-bootstrap';
+
+import images from '@components/images';
+import { CardSection, Button, Paragraph } from '@components';
 
 export default function InsightWithFormSection() {
     const { t } = useTranslation(['home', 'common']),
@@ -60,10 +60,7 @@ export default function InsightWithFormSection() {
                     ))}
 
                     <Col md={12} className="text-center my-5">
-                        <Button
-                            variant="primary"
-                            className="red-btn min-size-btn"
-                        >
+                        <Button btnVarient="red-btn" className="min-size-btn">
                             {t('viewMore', { ns: 'common' })}
                         </Button>
                     </Col>
@@ -80,7 +77,7 @@ export default function InsightWithFormSection() {
                                         <h2 className="h2 mb-2">
                                             {t('readyGetStarted')}
                                         </h2>
-                                        <p>{t('haveAnIdea')}</p>
+                                        <Paragraph>{t('haveAnIdea')}</Paragraph>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -221,8 +218,9 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustomUsername"
                                                     >
                                                         <Button
+                                                            btnVarient="red-btn"
                                                             type="submit"
-                                                            className="red-btn btn-lg"
+                                                            className="btn-lg"
                                                         >
                                                             Send Request
                                                         </Button>
@@ -238,7 +236,7 @@ export default function InsightWithFormSection() {
                                         className="contact-right-form"
                                     >
                                         <Image
-                                            src={homeImages.contactForm}
+                                            src={images.contactForm}
                                             alt=" "
                                             height={488}
                                             width={486}

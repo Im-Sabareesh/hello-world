@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
 
-import { ImgPanelSection } from 'common-components';
+import { ImgPanelSection } from '@components';
 import {
     FeaturedSection,
     BlockchainBusinessSection,
