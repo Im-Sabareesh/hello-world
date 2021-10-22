@@ -109,7 +109,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/facebook.svg"
@@ -119,7 +119,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/instagram.svg"
@@ -129,7 +129,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/twitter.svg"
@@ -139,7 +139,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/youtube.svg"
@@ -149,7 +149,7 @@ const RadiusFooter = (props) => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/wordpress.svg"
@@ -203,7 +203,8 @@ const RadiusFooter = (props) => {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+                                    document.body.scrollTop =
+                                        document.documentElement.scrollTop = 0;
                                 }}
                             >
                                 <div className="arrow-bg">
