@@ -2,34 +2,36 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { Button, H1, Paragraph } from '@components';
 
 export default function FeaturedSection() {
-    const router = useRouter(),
-    featuresList = [
-        {
-            title: 'Hyperledger Development',
-            link: '#',
-        },
-        {
-            title: 'DeFi Development',
-            link: '/services/DefiServices/',
-        },
-        {
-            title: 'NFT Development',
-            link: '/services/NFTServices/',
-        },
-        {
-            title: 'Obortech Smart Hub',
-            link: '#',
-        },
-        {
-            title: 'GDPR Compliance',
-            link: '#',
-        },
-    ];
+    const router = useRouter();
+    const { t } = useTranslation(['home', 'common']),
+        featuresList = [
+            {
+                title: t('hyperledgerDevelopment'),
+                link: '#',
+            },
+            {
+                title: t('defiDevelopment', { ns: 'common' }),
+                link: '/services/DefiServices/',
+            },
+            {
+                title: t('nftDevelopement', { ns: 'common' }),
+                link: '/services/NFTServices/',
+            },
+            {
+                title: t('obortechSmartHub'),
+                link: '#',
+            },
+            {
+                title: t('gdprCompliance'),
+                link: '#',
+            },
+        ];
 
     return (
         <section className="hero-banner-container">
@@ -38,35 +40,32 @@ export default function FeaturedSection() {
                     <Col md={10} lg={8} xl={7} xxl={6}>
                         <div className="d-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
-                                Blockchain Technology
+                                {t('blockChainTechnology')}
                             </h3>
                             <div className="heading-line"> </div>
                         </div>
 
-                        <H1>
-                            We provide enterprise blockchain consulting
-                        </H1>
+                        <H1>{t('provideEnterprise')}</H1>
 
-                        <Paragraph>
-                            Unleash full business potential with our cutting
-                            edge blockchain solutions. We innovate, build and
-                            integrate real-world blockchain applications.
-                        </Paragraph>
+                        <Paragraph>{t('provideEnterpriseDesc')}</Paragraph>
 
                         <div className="button-outer">
-                            <Button btnVarient="red-btn"
+                            <Button
+                                btnVarient="red-btn"
                                 size="lg"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}
                             >
-                                Consult for Free
+                                {t('consultFree', { ns: 'common' })}
                             </Button>
                         </div>
                     </Col>
 
                     <Col md={12} className="text-center mt-4">
-                        <h2 className="h2 secondary-text-color">Featured</h2>
+                        <h2 className="h2 secondary-text-color">
+                            {t('featured')}
+                        </h2>
                     </Col>
 
                     <div className="mt-4">

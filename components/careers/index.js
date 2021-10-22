@@ -2,41 +2,16 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Form } from 'react-bootstrap';
 import { Button, H1, Paragraph } from '@components';
+import { careerSelector } from '@redux';
+import { useSelector } from 'react-redux';
+import moment from 'moment';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 
 const CareersComponent = () => {
-    const router = useRouter(),
-        vacantListSec3 = [
-            {
-                cid: 1,
-                designation: 'User Experience Designer',
-                describe: 'As entrepreneurs ourselves, we’d',
-                location: 'Pune, Maharashtra',
-                posts: '2 months ago',
-            },
-            {
-                cid: 2,
-                designation: 'Affiliate Marketing Manager',
-                describe: 'As entrepreneurs ourselves, we’d',
-                location: 'Pune, Maharashtra',
-                posts: '2 months ago',
-            },
-            {
-                cid: 3,
-                designation: 'Affiliate Marketing Manager',
-                describe: 'As entrepreneurs ourselves, we’d',
-                location: 'Pune, Maharashtra',
-                posts: '2 months ago',
-            },
-            {
-                cid: 4,
-                designation: 'Affiliate Marketing Manager',
-                describe: 'As entrepreneurs ourselves, we’d',
-                location: 'Pune, Maharashtra',
-                posts: '2 months ago',
-            },
-        ];
+    const jobList = useSelector(careerSelector.careerListSelector);
+
+    const router = useRouter();
 
     return (
         <>
@@ -216,17 +191,15 @@ const CareersComponent = () => {
                 <Container>
                     <Row>
                         <Col sm={12}>
-                            {_.map(vacantListSec3, (item) => (
+                            {_.map(jobList, (item) => (
                                 <div
                                     key={_.uniqueId()}
                                     className="w-1k-block bg-light-primary mx-auto p-lg-4 p-3 mb-lg-4 mb-md-4 mb-3"
                                 >
                                     <div className="job-listing p-3  d-flex justify-content-between align-items-center flex-lg-nowrap flex-wrap">
                                         <div className="job-position">
-                                            <h3 className="h3">
-                                                {item.designation}
-                                            </h3>
-                                            <span>{item.describe}</span>
+                                            <h3 className="h3">{item.name}</h3>
+                                            <span>{item.description}</span>
                                         </div>
                                         <div className="job-info d-flex justify-content-between align-items-center">
                                             <div className="job-location">
@@ -235,12 +208,17 @@ const CareersComponent = () => {
                                             </div>
                                             <div className="job-posted">
                                                 <h3 className="h3">Posted</h3>
-                                                <span>{item.posts}</span>
+                                                <span>
+                                                    {moment(
+                                                        item.time
+                                                    ).fromNow()}
+                                                </span>
                                             </div>
-                                            <Button btnVarient="gradient-btn"
+                                            <Button
+                                                btnVarient="gradient-btn"
                                                 onClick={() => {
                                                     router.push(
-                                                        `careers/${item.cid}`
+                                                        `careers/${item.id}`
                                                     );
                                                 }}
                                             >

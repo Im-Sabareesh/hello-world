@@ -1,89 +1,91 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-import { Paragraph } from '@components'
+import { Paragraph } from '@components';
 
 const TopLogoFooter = () => {
-    const footerLinkList = [
-        {
-            title: 'Our Services',
-            style: {
-                xl: { span: 3, offset: 2 },
-                lg: { span: 3, offset: 2 },
+    const { t } = useTranslation('common'),
+        footerLinkList = [
+            {
+                title: t('footer.ourServices'),
+                style: {
+                    xl: { span: 3, offset: 2 },
+                    lg: { span: 3, offset: 2 },
+                },
+                list: [
+                    {
+                        name: t('footer.decentralizedFinance'),
+                        route: '/services/DefiServices',
+                    },
+                    {
+                        name: t('footer.nonFungibleTokens'),
+                        route: '/services/NFTServices',
+                    },
+                    {
+                        name: t('footer.binanceSmartChain'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.appDevelopment'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.webDevelopment'),
+                        route: '#',
+                    },
+                ],
             },
-            list: [
-                {
-                    name: 'Decentralized Finance',
-                    route: '/services/DefiServices',
+            {
+                title: t('footer.expertSolutions'),
+                style: {
+                    xl: 3,
+                    lg: 3,
                 },
-                {
-                    name: 'Non Fungible Tokens',
-                    route: '/services/NFTServices',
-                },
-                {
-                    name: 'Binance Smart Chain',
-                    route: '#',
-                },
-                {
-                    name: 'App Development',
-                    route: '#',
-                },
-                {
-                    name: 'Web Development',
-                    route: '#',
-                },
-            ],
-        },
-        {
-            title: 'Expert Solutions',
-            style: {
-                xl: 3,
-                lg: 3,
+                list: [
+                    {
+                        name: t('footer.liveLedger'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.trueTitle'),
+                        route: '#',
+                    },
+                    {
+                        name: t('footer.instasure'),
+                        route: '#',
+                    },
+                ],
             },
-            list: [
-                {
-                    name: 'Live Ledger',
-                    route: '#',
+            {
+                title: t('footer.connectWithUs'),
+                style: {
+                    xl: 3,
+                    lg: 3,
                 },
-                {
-                    name: 'True Title',
-                    route: '#',
-                },
-                {
-                    name: 'Instasure',
-                    route: '#',
-                },
-            ],
-        },
-        {
-            title: 'Connect With Us',
-            style: {
-                xl: 3,
-                lg: 3,
+                list: [
+                    {
+                        name: t('contactUs'),
+                        route: '/contact',
+                    },
+                    {
+                        name: t('career'),
+                        route: '/careers',
+                    },
+                    {
+                        name: t('footer.moreAboutUs'),
+                        route: '/about',
+                    },
+                    {
+                        name: t('footer.blog'),
+                        route: '#',
+                    },
+                ],
             },
-            list: [
-                {
-                    name: 'Contact Us',
-                    route: '/contact',
-                },
-                {
-                    name: 'Career',
-                    route: '/careers',
-                },
-                {
-                    name: 'More About Us',
-                    route: '/about',
-                },
-                {
-                    name: 'Blog',
-                    route: '#',
-                },
-            ],
-        },
-    ];
+        ];
 
     return (
         <footer className="footer-section nft-page-footer">
@@ -94,7 +96,7 @@ const TopLogoFooter = () => {
                         lg={12}
                         md={12}
                         sm={6}
-                        xs={12}
+                        xs={6}
                         className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 "
                     >
                         <Link href="/">
@@ -107,13 +109,13 @@ const TopLogoFooter = () => {
                             </a>
                         </Link>
                         <Paragraph className="light-text-color text-shadow mb-md-3 mb-2">
-                            Follow Us
+                            {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/facebook.svg"
@@ -123,7 +125,7 @@ const TopLogoFooter = () => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/instagram.svg"
@@ -133,7 +135,7 @@ const TopLogoFooter = () => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/twitter.svg"
@@ -143,7 +145,7 @@ const TopLogoFooter = () => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/youtube.svg"
@@ -153,7 +155,7 @@ const TopLogoFooter = () => {
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
-                                className="mx-3"
+                                className="mx-md-3 mx-1"
                             >
                                 <Image
                                     src="/assets/icons/wordpress.svg"
@@ -170,7 +172,7 @@ const TopLogoFooter = () => {
                             lg={item.style.lg}
                             md={4}
                             sm={6}
-                            xs={12}
+                            xs={6}
                             className="mb-xl-0 mb-md-4 mb-sm-3 mb-4"
                         >
                             <h3 className="h3 light-text-color mb-3">
@@ -204,7 +206,7 @@ const TopLogoFooter = () => {
                 </Row>
                 <div className="copyrights-section d-md-flex justify-content-between align-items-center text-md-left text-center pb-3">
                     <span className="light-text-color">
-                        ©ChainCode PTY LTD 2021. All rights reserved
+                        {t('footer.copyRightsReserved')}
                     </span>
                     <ul className="list-inline position-relative footer-after-line">
                         <li className="list-inline-item px-2">
@@ -213,7 +215,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="light-text-color"
                             >
-                                Privacy Policy
+                                {t('privacyPolicy')}
                             </a>
                         </li>
                         <li className="list-inline-item">
@@ -222,7 +224,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="light-text-color"
                             >
-                                Terms of Service & Rules
+                                {t('termsOfService')}
                             </a>
                         </li>
                     </ul>

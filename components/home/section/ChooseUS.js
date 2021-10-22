@@ -1,37 +1,38 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
-
 import { Paragraph } from '@components';
 
-export default function ChooseUsSection({ data }) {
-    const chooseUSList = [
-        {
-            icon: '/assets/icons/whychoose-icon1.svg',
-            name: 'Focus on Innovation',
-            describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        },
-        {
-            icon: '/assets/icons/whychoose-icon2.svg',
-            name: 'True Partners',
-            describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        },
-        {
-            icon: '/assets/icons/whychoose-icon3.svg',
-            name: 'DevOps',
-            describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        },
-        {
-            icon: '/assets/icons/whychoose-icon4.svg',
-            name: 'Dedicated Teams',
-            describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        },
-    ];
+export default function ChooseUsSection() {
+    const { t } = useTranslation('home'),
+        chooseUSList = [
+            {
+                icon: '/assets/icons/whychoose-icon1.svg',
+                name: 'Focus on Innovation',
+                describe:
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+            },
+            {
+                icon: '/assets/icons/whychoose-icon2.svg',
+                name: 'True Partners',
+                describe:
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+            },
+            {
+                icon: '/assets/icons/whychoose-icon3.svg',
+                name: 'DevOps',
+                describe:
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+            },
+            {
+                icon: '/assets/icons/whychoose-icon4.svg',
+                name: 'Dedicated Teams',
+                describe:
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+            },
+        ];
 
     return (
         <section className="home-section-5 py-5">
@@ -45,24 +46,11 @@ export default function ChooseUsSection({ data }) {
                     </Col>
 
                     <Col md={12} lg={6}>
-                        <h2 className="h2 mb-4"> Why Choose Us </h2>
+                        <h2 className="h2 mb-4"> {t('chooseUs')} </h2>
 
-                        <Paragraph>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when
-                            looking at its layout. The point of using Lorem
-                            Ipsum is that it has a more-or-less normal
-                            distribution of letters, as opposed to using
-                            &apos;Content here, content here&apos;, making it
-                            look like readable English.
-                        </Paragraph>
+                        <Paragraph>{t('chooseUsDesc1')}</Paragraph>
 
-                        <Paragraph>
-                            Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model
-                            text, and a search for &apos;lorem ipsum&apos; will
-                            uncover many web sites still in their infancy.
-                        </Paragraph>
+                        <Paragraph>{t('chooseUsDesc2')}</Paragraph>
                     </Col>
                     {_.map(chooseUSList, (item) => (
                         <Col key={_.uniqueId()} md={6} className="mt-4">

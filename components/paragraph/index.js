@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Paragraph = ({children, className}) => {
+const Paragraph = ({ children, className }) => {
     return (
         <p className={className}>
             {children}
@@ -15,7 +15,7 @@ const Paragraph = ({children, className}) => {
                 .contactus-sociallinks a {
                     margin-right: 15px;
                 }
-                .contactus-sociallinks a img{
+                .contactus-sociallinks a img {
                     height: 20px;
                 }
                 .getintouch-txt {
@@ -34,7 +34,7 @@ const Paragraph = ({children, className}) => {
             `}</style>
         </p>
     );
-}
+};
 
 export default Paragraph;
 
@@ -43,5 +43,5 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-    className: ""
+    className: '',
 };

@@ -72,14 +72,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -168,7 +168,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -202,8 +202,8 @@
     }
 
     .contactus-container {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
         .contact-img {
             margin-top: 0px !important;
         }
@@ -220,7 +220,15 @@
     }
 
     .section-glow {
-        padding: 50px 0 20px 0 !important;
+        padding: 50px 0 20px !important;
+    }
+
+    // ----------------Backdrop home footer --------
+    .backtotop {
+        position: absolute;
+        bottom: 75px;
+        right: 20px;
+        width: 110px;
     }
 
     .inner-page-header {
@@ -239,8 +247,8 @@
     // --------------- font size-------
 
     .h1 {
-        font-size: 40px  !important;
-        line-height: 56px  !important;
+        font-size: 40px !important;
+        line-height: 56px !important;
     }
 
     .h2 {
@@ -304,14 +312,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -393,7 +401,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -420,8 +428,8 @@
     }
 
     .contactus-container {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
 
         .contactus-sociallinks {
             margin-bottom: 50px !important;
@@ -435,7 +443,7 @@
     }
 
     .section-glow {
-        padding: 50px 0 20px 0 !important;
+        padding: 50px 0 20px !important;
     }
 
     .inner-page-header {
@@ -455,8 +463,8 @@
     // --------------- font size-------
 
     .h1 {
-        font-size: 46px  !important;
-        line-height: 56px  !important;
+        font-size: 46px !important;
+        line-height: 56px !important;
     }
 
     .h2 {
@@ -512,14 +520,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -583,7 +591,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -687,7 +695,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -732,8 +740,8 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 26px  !important;
-        line-height: 40px  !important;
+        font-size: 26px !important;
+        line-height: 40px !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -881,8 +889,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 33px  !important;
-            line-height: 54px  !important;
+            font-size: 33px !important;
+            line-height: 54px !important;
         }
         .form-field {
             &.search-field {
@@ -896,10 +904,10 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             .form-control,
             .form-select {
@@ -915,15 +923,15 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 26px  !important;
-            line-height: 35px  !important;
+            font-size: 26px !important;
+            line-height: 35px !important;
         }
         padding-bottom: 0 !important;
     }
 
     .career-hero-banner {
         min-height: 290px;
-        margin: 95px 0 30px 0;
+        margin: 95px 0 30px;
         padding-top: 30px;
         background-size: 100%;
         background-position: bottom;
@@ -932,7 +940,7 @@
         }
     }
     .career-section3 {
-        padding: 10px 0 30px 0;
+        padding: 10px 0 30px;
         .job-position {
             width: 100%;
             margin-bottom: 20px;
@@ -975,8 +983,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 27px  !important;
-            line-height: 38px  !important;
+            font-size: 27px !important;
+            line-height: 38px !important;
         }
         .h2 {
             font-size: 23px;
@@ -984,7 +992,7 @@
     }
     .careerdetail-roles-section {
         .roles-responsibility {
-            padding: 30px 30px;
+            padding: 30px;
         }
     }
     .careerdetail-overview-section {
@@ -1020,8 +1028,8 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 30px  !important;
-        line-height: 60px  !important;
+        font-size: 30px !important;
+        line-height: 60px !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1163,8 +1171,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 39px  !important;
-            line-height: 64px  !important;
+            font-size: 39px !important;
+            line-height: 64px !important;
         }
         .form-field {
             &.search-field {
@@ -1178,7 +1186,7 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
                 margin-right: 15px;
@@ -1194,18 +1202,18 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 30px  !important;
-            line-height: 35px  !important;
+            font-size: 30px !important;
+            line-height: 35px !important;
         }
     }
 
     .career-hero-banner {
         min-height: 340px;
-        margin: 115px 0 30px 0;
+        margin: 115px 0 30px;
         padding-top: 40px;
     }
     .career-section3 {
-        padding: 10px 0 40px 0;
+        padding: 10px 0 40px;
         .job-position {
             width: 100%;
             margin-bottom: 30px;
@@ -1246,8 +1254,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 29px  !important;
-            line-height: 42px  !important;
+            font-size: 29px !important;
+            line-height: 42px !important;
         }
         .h2 {
             font-size: 24px;
@@ -1255,7 +1263,7 @@
     }
     .careerdetail-roles-section {
         .roles-responsibility {
-            padding: 35px 35px;
+            padding: 35px;
         }
     }
     .careerdetail-overview-section {
@@ -1290,7 +1298,7 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 35px  !important;
+        font-size: 35px !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1369,8 +1377,8 @@
     }
     .service-inner-section3 {
         .cta-banner2 {
-            //min-height: 240px;
-            //background-position: center;
+            // min-height: 240px;
+            // background-position: center;
             &:after {
                 min-height: 240px;
             }
@@ -1416,8 +1424,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 41px  !important;
-            line-height: 64px  !important;
+            font-size: 41px !important;
+            line-height: 64px !important;
         }
         .form-field {
             &.search-field {
@@ -1431,7 +1439,7 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
                 margin-right: 20px;
@@ -1444,18 +1452,18 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 32px  !important;
-            line-height: 15px  !important;
+            font-size: 32px !important;
+            line-height: 15px !important;
         }
     }
 
     .career-hero-banner {
         min-height: 420px;
-        margin: 115px 0 30px 0;
+        margin: 115px 0 30px;
         padding-top: 50px;
     }
     .career-section3 {
-        padding: 20px 0 40px 0;
+        padding: 20px 0 40px;
         .job-position {
             width: 100%;
             margin-bottom: 30px;
@@ -1496,8 +1504,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 33px  !important;
-            line-height: 49px  !important;
+            font-size: 33px !important;
+            line-height: 49px !important;
         }
         .h2 {
             font-size: 27px;
@@ -1528,7 +1536,7 @@
     // ----------------------career page details end----------------
     // changes
     .section-glow {
-        padding: 55px 0 45px 0;
+        padding: 55px 0 45px;
     }
     .home-footer {
         .home-footer-logo {
@@ -1540,7 +1548,7 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 40px  !important;
+        font-size: 40px !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1604,17 +1612,17 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 44px  !important;
-            line-height: 64px  !important;
+            font-size: 44px !important;
+            line-height: 64px !important;
         }
     }
     .career-hero-banner {
         min-height: 550px;
-        margin: 125px 0 30px 0;
+        margin: 125px 0 30px;
         padding-top: 80px;
     }
     .career-section3 {
-        padding: 20px 0 40px 0;
+        padding: 20px 0 40px;
         .job-position {
             width: 40%;
         }
@@ -1646,8 +1654,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 38px  !important;
-            line-height: 50px  !important;
+            font-size: 38px !important;
+            line-height: 50px !important;
         }
         .h2 {
             font-size: 29px;
@@ -1679,14 +1687,14 @@
 
     // changes
     .section-glow {
-        padding: 75px 0 75px 0;
+        padding: 75px 0;
     }
 }
 @include media-breakpoint-between(xl, xxl) {
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 46px  !important;
+        font-size: 46px !important;
     }
     // ----------font size---------
 
@@ -1704,7 +1712,7 @@
         min-height: 730px;
     }
     .career-section3 {
-        padding: 60px 0 100px 0;
+        padding: 60px 0 100px;
     }
     .career-section2 {
         .w-1k-block {
@@ -1716,7 +1724,7 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 48px  !important;
+            font-size: 48px !important;
         }
         .h2 {
             font-size: 33px;

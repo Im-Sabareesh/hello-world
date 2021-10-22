@@ -3,11 +3,24 @@ import PropTypes from 'prop-types';
 
 import styles from '../style.module.scss';
 
-const ButtonComponent = ({children, className, onClick, type, size, btnVarient}) => {
+const ButtonComponent = ({
+    children,
+    className,
+    onClick,
+    type,
+    size,
+    btnVarient,
+}) => {
     return (
-        <Button variant="primary" type={type} size={size} className={`${styles[btnVarient]} ${btnVarient} ${className}`} onClick={(e) => onClick(e)}>
+        <Button
+            variant="primary"
+            type={type}
+            size={size}
+            className={`${styles[btnVarient]} ${btnVarient} ${className}`}
+            onClick={(e) => onClick(e)}
+        >
             {children}
-            
+
             <style jsx>{`
                 .min-size-btn {
                     min-width: 175px !important;
@@ -20,10 +33,9 @@ const ButtonComponent = ({children, className, onClick, type, size, btnVarient})
                     height: 56px;
                 }
             `}</style>
-
         </Button>
     );
-}
+};
 
 export default ButtonComponent;
 
@@ -37,8 +49,8 @@ ButtonComponent.propTypes = {
 
 ButtonComponent.defaultProps = {
     type: 'button',
-    onClick: ()=>{},
+    onClick: () => {},
     className: '',
     size: '',
-    btnVarient:''
+    btnVarient: '',
 };

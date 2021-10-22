@@ -4,7 +4,13 @@ import { useRouter } from 'next/router';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
+import {
+    CardSection,
+    ImgPanelSection,
+    Button,
+    H1,
+    Paragraph,
+} from '@components';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -53,7 +59,8 @@ const DefiSComponent = () => {
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
-                                <Button btnVarient="red-btn"
+                                <Button
+                                    btnVarient="red-btn"
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {

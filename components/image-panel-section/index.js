@@ -24,7 +24,8 @@ const ImagePanelSection = ({
                         className="h2"
                         dangerouslySetInnerHTML={{ __html: title }}
                     ></h2>
-                    <Button btnVarient="red-btn"
+                    <Button
+                        btnVarient="red-btn"
                         className="min-size-btn"
                         onClick={() => {
                             router.push(link);

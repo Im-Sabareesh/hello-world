@@ -1,7 +1,6 @@
-
 import PropTypes from 'prop-types';
 
-const H1 = ({children, className}) => {
+const H1 = ({ children, className }) => {
     return (
         <h1 className={`h1 ${className}`}>
             {children}
@@ -39,7 +38,7 @@ const H1 = ({children, className}) => {
         `}</style>
         </h1>
     );
-}
+};
 
 export default H1;
 
@@ -48,5 +47,5 @@ H1.propTypes = {
 };
 
 H1.defaultProps = {
-    className: ""
+    className: '',
 };

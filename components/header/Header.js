@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 import {
     Container,
@@ -15,16 +16,17 @@ import {
 import { Button } from '@components';
 
 const Header = () => {
-    const router = useRouter();
-    const whiteLayout = ['about', 'contact'];
-    const [state, setState] = React.useState('');
-    const socialMedisIcons = [
-        '/assets/icons/facebook.svg',
-        '/assets/icons/instagram.svg',
-        '/assets/icons/twitter.svg',
-        '/assets/icons/youtube.svg',
-        '/assets/icons/wordpress.svg',
-    ];
+    const router = useRouter(),
+        { t } = useTranslation('common'),
+        whiteLayout = ['about', 'contact'],
+        [state, setState] = React.useState(''),
+        socialMedisIcons = [
+            '/assets/icons/facebook.svg',
+            '/assets/icons/instagram.svg',
+            '/assets/icons/twitter.svg',
+            '/assets/icons/youtube.svg',
+            '/assets/icons/wordpress.svg',
+        ];
 
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
@@ -45,9 +47,7 @@ const Header = () => {
                     <Container fluid>
                         <Row className="justify-content-between">
                             <Col md={9} className="topheader-text">
-                                Want to know how Blockchain can make a
-                                difference in your Business? Get Expert Advice
-                                from our Team now!
+                                {t('header.headerInfo')}
                             </Col>
                             <Col
                                 md={12}
@@ -110,7 +110,7 @@ const Header = () => {
                                         <Nav className="me-auto">
                                             <Link href="/about">
                                                 <a className="nav-link">
-                                                    About Us
+                                                    {t('header.aboutUS')}
                                                 </a>
                                             </Link>
                                             {/* <Link href='/about'> */}
@@ -121,7 +121,7 @@ const Header = () => {
                                                 }
                                                 className="nav-link"
                                             >
-                                                Blockchain Solution
+                                                {t('header.blockchainSolution')}
                                             </a>
                                             {/* </Link> */}
                                             {/* <Link href='/about'> */}
@@ -132,7 +132,7 @@ const Header = () => {
                                                 }
                                                 className="nav-link"
                                             >
-                                                Case Studies
+                                                {t('header.caseStudies')}
                                             </a>
                                             {/* </Link> */}
                                             <NavDropdown
@@ -141,12 +141,12 @@ const Header = () => {
                                             >
                                                 <NavDropdown.Item>
                                                     <Link href="/services/NFTServices">
-                                                        NFT Development
+                                                        {t('nftDevelopement')}
                                                     </Link>
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item>
                                                     <Link href="/services/DefiServices">
-                                                        Defi development
+                                                        {t('defiDevelopment')}
                                                     </Link>
                                                 </NavDropdown.Item>
                                             </NavDropdown>
@@ -162,12 +162,13 @@ const Header = () => {
                             lg={2}
                             className="text-end text-md-start mt-2 letstalk-btn"
                         >
-                            <Button btnVarient="red-btn"
+                            <Button
+                                btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}
                             >
-                                Let&apos;s Talk
+                                {t('letsTalk')}
                             </Button>
 
                             <a

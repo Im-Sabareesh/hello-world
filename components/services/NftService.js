@@ -32,7 +32,8 @@ const NFTSComponent = () => {
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
-                                <Button btnVarient="red-btn"
+                                <Button
+                                    btnVarient="red-btn"
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {
@@ -112,7 +113,7 @@ const NFTSComponent = () => {
                 link="/contact"
                 btnName="Get a quote"
             />
-            
+
             {/*--------------- NFT Services section3 cta end---------- */}
         </>
     );

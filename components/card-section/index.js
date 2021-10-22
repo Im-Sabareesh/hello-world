@@ -8,8 +8,7 @@ import { Button } from '@components';
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
         return (
-            <Card
-                className={`${footerClass && 'custom-card'} ${className}`}>
+            <Card className={`${footerClass && 'custom-card'} ${className}`}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                     <Card.Title>
@@ -51,7 +50,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderCard = () => {
         return (
             <Card className={`custom-card ${className}`}>
-                { item.image && <Card.Img variant="top" src={item.image} /> }
+                {item.image && <Card.Img variant="top" src={item.image} />}
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>
@@ -59,7 +58,12 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                     <Card.Text>{item.describe}</Card.Text>
                 </Card.Body>
                 <Card.Footer className="">
-                    <Button btnVarient="red-btn" className={`min-size-btn ${item.image && 'btn btn-primary w-100'}`}>
+                    <Button
+                        btnVarient="red-btn"
+                        className={`min-size-btn ${
+                            item.image && 'btn btn-primary w-100'
+                        }`}
+                    >
                         Know More
                     </Button>
                 </Card.Footer>
@@ -81,7 +85,7 @@ CardSection.propTypes = {
 
 CardSection.defaultProps = {
     fullCard: false,
-    className :"",
+    className: '',
     item: {},
-    footerClass:"",
+    footerClass: '',
 };

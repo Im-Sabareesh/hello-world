@@ -1,26 +1,26 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import { ImgPanelSection, H1, Paragraph } from '@components';
 
 export default function WorkWithSection() {
+    const { t } = useTranslation(['home', 'common']);
+
     return (
         <section className="home-section-7 my-5">
             <Container>
                 <Row className="align-items-center">
                     <Col md={12} className="text-center">
-                        <h2 className="h2 my-4"> We Work with </h2>
+                        <h2 className="h2 my-4">{t('weWork')} </h2>
                     </Col>
 
                     <Col md={4} className="workwithus-txt mt-3">
-                        <H1 className="secondary-text-color mb-3">
-                            121,000+
-                        </H1>
+                        <H1 className="secondary-text-color mb-3">121,000+</H1>
                         <Paragraph>
-                            customers in over 120 countries growing their
-                            businesses with Blockchain Consulting
+                            {t('weWorkDescBefore')} 120 {t('weWorkDescAfter')}
                         </Paragraph>
                     </Col>
 
@@ -30,10 +30,12 @@ export default function WorkWithSection() {
 
                     <Col md={12} className="mt-5 mb-5">
                         <ImgPanelSection
-                            title="Still Have some Questions in Mind? Don't Worry. <br /> Get FREE Consultation from our Experts"
+                            title={`${t('someQuestion')}<br />${t(
+                                'getFreeConsultAns'
+                            )}`}
                             className="cta-banner cta-banner2 d-flex align-items-center justify-content-end"
                             link="/contact"
-                            btnName="Let’s Talk"
+                            btnName={t('letsTalk', { ns: 'common' })}
                         />
                     </Col>
                 </Row>

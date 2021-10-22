@@ -5,7 +5,6 @@ import { Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Button, H1, Paragraph } from '@components';
 
 const ContactComponent = () => {
-    
     const branchList = [
         {
             location: 'India',
@@ -185,7 +184,11 @@ const ContactComponent = () => {
                                 </Paragraph>
 
                                 <div className="getintouch-form mt-5">
-                                    <Form onSubmit={(event) => event.preventDefault()}>
+                                    <Form
+                                        onSubmit={(event) =>
+                                            event.preventDefault()
+                                        }
+                                    >
                                         <Form.Group
                                             className="form-group"
                                             controlId=""
@@ -254,7 +257,8 @@ const ContactComponent = () => {
                                         </Form.Group>
 
                                         <Form.Group className="button-outer">
-                                            <Button btnVarient="red-btn"
+                                            <Button
+                                                btnVarient="red-btn"
                                                 className="red-btn-shadow btn-lg"
                                                 type="submit"
                                             >

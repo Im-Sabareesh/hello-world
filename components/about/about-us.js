@@ -58,9 +58,7 @@ const AboutUs = () => {
                     <Row>
                         <Col>
                             <div className="light-text-color text-center w-50 mx-auto">
-                                <H1 className="light-text-color">
-                                    About Us
-                                </H1>
+                                <H1 className="light-text-color">About Us</H1>
                                 <Paragraph>
                                     Our vision is to be the world’s most trusted
                                     transparency platform to build a system
@@ -342,7 +340,8 @@ const AboutUs = () => {
                             </h3>
                         </Col>
                         <Col md={6} className="mt-lg-4 mt-2">
-                            <Button btnVarient="red-btn"
+                            <Button
+                                btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}

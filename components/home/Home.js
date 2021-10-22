@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { ImgPanelSection } from '@components';
 import {
@@ -16,6 +17,8 @@ import {
 } from './section';
 
 const HomeComponent = () => {
+    const { t } = useTranslation(['home', 'common']);
+
     return (
         <>
             {/*--------------- home hero banner start---------- */}
@@ -47,9 +50,9 @@ const HomeComponent = () => {
             <ImgPanelSection
                 secClass="home-section-4 py-5"
                 className="cta-banner cta-banner1 d-flex align-items-center"
-                title="Ready to Get Started?"
+                title={t('readyGetStarted')}
                 link="/contact"
-                btnName="Get a quote"
+                btnName={t('getQuote', { ns: 'common' })}
                 image="/assets/icons/Arrow.svg"
             />
 
