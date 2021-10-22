@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { CareerDetailsComponent, Meta } from '@components';
 import { api } from '@libs';
 const CareerDetails = () => {
-    const { t } = useTranslation('careerDetails');
+    const { t } = useTranslation('careersDetails');
     return (
         <div className="CareerDetails-wrapper">
             <Meta title={t('title')} desc="" />
@@ -22,8 +22,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params, locale }) {
     return {
         props: {
-            // careeerDetails: await api.getCareerDetails(1),
-            ...(await serverSideTranslations(locale, ['careerDetails', 'common'])),
+            careeerDetails: await api.getCareerDetails(1),
+            ...(await serverSideTranslations(locale, ['careersDetails', 'common'])),
         },
     };
 }

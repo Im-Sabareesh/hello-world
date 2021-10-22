@@ -67,7 +67,7 @@ export default function BlockchainBusinessSection() {
                                     className="home-section-icons d-flex align-items-center justify-content-center text-center"
                                 >
                                     <div>
-                                        <p>
+                                        {/* <p> */}
                                             <Image
                                                 src={item.icon}
                                                 alt=""
@@ -75,7 +75,7 @@ export default function BlockchainBusinessSection() {
                                                 height={76}
                                                 loading="lazy"
                                             />
-                                        </p>
+                                        {/* </p> */}
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}
                                         </h3>

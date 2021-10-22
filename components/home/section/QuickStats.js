@@ -56,7 +56,7 @@ export default function QuickStatsSection() {
                             lg={2}
                             className="counter-thumb text-center mt-3"
                         >
-                            <p className="mb-4">
+                            <div className="mb-4">
                                 <Image
                                     src={item.icon}
                                     alt=" "
@@ -64,7 +64,7 @@ export default function QuickStatsSection() {
                                     width={40}
                                     loading="lazy"
                                 />
-                            </p>
+                            </div>
 
                             <p className="mb-1">
                                 <span> {item.counts} </span>

@@ -84,7 +84,7 @@ const Header = () => {
                 className={`main-header py-3 ${
                     _.some(whiteLayout, (lay) =>
                         router.pathname.includes(lay)
-                    ) && 'inner-page-header'
+                    )? 'inner-page-header':''
                 }`}
             >
                 <Container>
@@ -99,8 +99,8 @@ const Header = () => {
                                             !state &&
                                             _.some(whiteLayout, (lay) =>
                                                 router.pathname.includes(lay)
-                                            ) &&
-                                            'white-logo'
+                                            ) ?
+                                            'white-logo':''
                                         }
                                         width={120}
                                         height={72}
@@ -193,8 +193,8 @@ const Header = () => {
                                         !state &&
                                         _.some(whiteLayout, (lay) =>
                                             router.pathname.includes(lay)
-                                        ) &&
-                                        'white-logo'
+                                        ) ?
+                                        'white-logo':""
                                     }
                                     width={17}
                                     height={17}

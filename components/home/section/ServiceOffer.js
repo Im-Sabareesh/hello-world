@@ -70,7 +70,7 @@ export default function ServiceOfferSection() {
                             lg={4}
                             className="service-thumb text-center mt-5"
                         >
-                            <p>
+                            {/* <p> */}
                                 <Image
                                     src={item.icon}
                                     alt=""
@@ -79,7 +79,7 @@ export default function ServiceOfferSection() {
                                     placeholder="blur"
                                     loading="lazy"
                                 />
-                            </p>
+                            {/* </p> */}
 
                             <h3 className="h3 dark-text-color">{item.name}</h3>
 

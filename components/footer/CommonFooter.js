@@ -269,9 +269,9 @@ const RadiusFooter = (props) => {
 export default RadiusFooter;
 
 RadiusFooter.propTypes = {
-    radius: PropTypes.string,
+    radius: PropTypes.bool,
 };
 
 RadiusFooter.defaultProps = {
-    radius: '',
+    radius: false,
 };
