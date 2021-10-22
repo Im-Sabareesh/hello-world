@@ -1,16 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
-import {
-    CardSection,
-    ImgPanelSection,
-    Button,
-    H1,
-    Paragraph,
-} from '@components';
+import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
+import defisImages from '@components/images';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -74,10 +70,15 @@ const DefiSComponent = () => {
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <Image
-                                    src="/assets/images/defi-main.png"
+                                    src={defisImages.defiMain}
                                     rounded
                                     className="nft-service-img"
                                     alt=" "
+                                    width={913}
+                                    height={752}
+                                    layout="intrinsic"
+                                    placeholder="blur"
+                                    loading="lazy"
                                 />
                             </div>
                         </Col>
@@ -94,7 +95,14 @@ const DefiSComponent = () => {
                     <Container>
                         <Row>
                             <Col lg={5}>
-                                <Image src="/assets/images/video-thumb.png" />
+                                <Image
+                                    src={defisImages.videoThumb}
+                                    width={610}
+                                    height={318}
+                                    layout="intrinsic"
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
                             </Col>
 
                             <Col lg={{ span: 6, offset: 1 }}>
@@ -203,8 +211,12 @@ const DefiSComponent = () => {
 
                         <Col md={{ span: 12, order: 0 }} lg={6}>
                             <Image
-                                src="/assets/images/defi-img2.png"
+                                src={defisImages.defiTwo}
                                 alt=".."
+                                width={913}
+                                height={752}
+                                placeholder="blur"
+                                loading="lazy"
                             />
                         </Col>
                     </Row>

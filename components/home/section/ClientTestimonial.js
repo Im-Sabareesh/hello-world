@@ -1,34 +1,37 @@
 import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+
+import homeImages from '@components/images';
 
 export default function CilentTestimonialSection() {
-    const { t } = useTranslation('home'),
-        testimonialList = [
-            {
-                name: 'Chuan Allen',
-                company: 'Reporter in CNN TV',
-                describe:
-                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-                image: '/assets/images/user-1.jpg',
-            },
-            {
-                name: 'Chuan Allen',
-                company: 'Reporter in CNN TV',
-                describe:
-                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-                image: '/assets/images/user-1.jpg',
-            },
-            {
-                name: 'Chuan Allen',
-                company: 'Reporter in CNN TV',
-                describe:
-                    "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
-                image: '/assets/images/user-1.jpg',
-            },
-        ];
+    const { t } = useTranslation('home');
+    const testimonialList = [
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: homeImages.user1,
+        },
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: homeImages.user1,
+        },
+        {
+            name: 'Chuan Allen',
+            company: 'Reporter in CNN TV',
+            describe:
+                "Alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem.",
+            image: homeImages.user1,
+        },
+    ];
 
     return (
         <section className="home-section-9 py-5">
@@ -57,9 +60,12 @@ export default function CilentTestimonialSection() {
                                                         <div className="user-thumb">
                                                             <Image
                                                                 src={item.image}
-                                                                roundedCircle
                                                                 className="shadow"
                                                                 alt=" "
+                                                                placeholder="blur"
+                                                                height={70}
+                                                                width={70}
+                                                                loading="lazy"
                                                             />
                                                         </div>
                                                         <div className="user-name">

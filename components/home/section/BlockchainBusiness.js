@@ -2,7 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import homeImages from '@components/images';
 
 import { Paragraph } from '@components';
 
@@ -11,23 +13,23 @@ export default function BlockchainBusinessSection() {
         blockChainUsageList = [
             {
                 name: t('enhancedSecurity'),
-                icon: '/assets/icons/enhanced-security.svg',
+                icon: homeImages.enhSecurity,
             },
             {
                 name: t('greaterTransparency'),
-                icon: '/assets/icons/greater-transparancy.svg',
+                icon: homeImages.greTransp,
             },
             {
                 name: t('instantTraceability'),
-                icon: '/assets/icons/instant-tracibility.svg',
+                icon: homeImages.instanceTrace,
             },
             {
                 name: t('increasedEfficiency'),
-                icon: '/assets/icons/increased-efficiency.svg',
+                icon: homeImages.incEff,
             },
             {
                 name: t('decentralizedGovernance'),
-                icon: '/assets/icons/decentralized-governance.svg',
+                icon: homeImages.deCenGov,
             },
         ];
 
@@ -49,8 +51,13 @@ export default function BlockchainBusinessSection() {
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
                         <Image
-                            src="/assets/images/home-section1-img.png"
+                            src={homeImages.homeSecTopImg}
                             alt=""
+                            width={610}
+                            height={318}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
                         />
                     </Col>
 
@@ -63,7 +70,13 @@ export default function BlockchainBusinessSection() {
                                 >
                                     <div>
                                         <Paragraph>
-                                            <Image src={item.icon} alt="" />
+                                            <Image
+                                                src={item.icon}
+                                                alt=""
+                                                width={76}
+                                                height={76}
+                                                loading="lazy"
+                                            />
                                         </Paragraph>
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}

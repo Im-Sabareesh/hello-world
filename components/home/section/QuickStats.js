@@ -1,41 +1,43 @@
 import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import { Paragraph } from '@components';
+import homeImages from '@components/images';
 
 export default function QuickStatsSection() {
     const { t } = useTranslation('home'),
         quickStateList = [
             {
-                icon: '/assets/icons/industry-awards.svg',
+                icon: homeImages.indusAwards,
                 counts: '150+',
                 title: t('industryAwards'),
             },
             {
-                icon: '/assets/icons/projects.svg',
+                icon: homeImages.projects,
                 counts: '150+',
                 title: t('projects'),
             },
             {
-                icon: '/assets/icons/offices.svg',
+                icon: homeImages.officers,
                 counts: '4',
                 title: t('offices'),
             },
             {
-                icon: '/assets/icons/happy-clients.svg',
+                icon: homeImages.hpyClients,
                 counts: '500',
                 title: t('happyClients'),
             },
             {
-                icon: '/assets/icons/certified-pmp.svg',
+                icon: homeImages.certPmp,
                 counts: '4',
                 title: t('certifiedPMP'),
             },
             {
-                icon: '/assets/icons/mm-lines-of-code.svg',
+                icon: homeImages.mmLines,
                 counts: '100',
                 title: t('mmLineCode'),
             },
@@ -57,7 +59,13 @@ export default function QuickStatsSection() {
                             className="counter-thumb text-center mt-3"
                         >
                             <Paragraph className="mb-4">
-                                <Image src={item.icon} alt=" " />
+                                <Image
+                                    src={item.icon}
+                                    alt=" "
+                                    height={40}
+                                    width={40}
+                                    loading="lazy"
+                                />
                             </Paragraph>
 
                             <Paragraph className="mb-1">

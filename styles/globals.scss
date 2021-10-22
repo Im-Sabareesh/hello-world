@@ -616,11 +616,18 @@ button:not(.collapsed) {
 
         .testimonial-user-cont {
             .user-thumb {
+              margin-right: 25px;
                 img {
                     width: 65px;
                     height: 65px;
                     object-fit: cover;
                     margin-right: 25px;
+                }
+                div {
+                  border-radius: 35px;
+                }
+                .shadow {
+                  border-radius: 35px;
                 }
             }
             .user-name {
@@ -717,8 +724,11 @@ button:not(.collapsed) {
 }
 .about-section1 {
     margin-top: -125px;
-    background: url('../public/assets/images/about-us-ellipse-bg.png') no-repeat
+    background: url(../public/assets/images/about-us-ellipse-bg.png) no-repeat
         right bottom;
+    .about-section1-img {
+        padding: 0px 4% !important;
+    }
 }
 
 .our-story-block-number {
@@ -951,6 +961,9 @@ button:not(.collapsed) {
     }
 }
 
+.office-banner {
+    margin-left: 15% !important;
+}
 .contactus-footer {
     background: color('secondary');
 }
@@ -1001,6 +1014,9 @@ button:not(.collapsed) {
     padding-bottom: 65px;
     display: grid;
     place-items: center;
+    .nft-service-img-div {
+        margin-bottom: -140px;
+    }
     .nft-service-img {
         width: 100%;
         // height: 440px;
@@ -1221,5 +1237,10 @@ header .main-header {
 }
 .career-apply-btn {
     width: 280px;
+}
+
+.contact-icon {
+    margin-top: 3px;
+    margin-right: 10px;
 }
 // ----------------------career page details end----------------
