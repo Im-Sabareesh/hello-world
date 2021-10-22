@@ -13,10 +13,13 @@ import StaticComponent from '../StaticComponent';
 
 const CareerDetailsComponent = () => {
     const router = useRouter();
-    const { query: { cid }} = router;
-    const state = useSelector((state) =>
-        careerSelector.careerDetailsSelector(state, cid)
-    ) || {};
+    const {
+        query: { cid },
+    } = router;
+    const state =
+        useSelector((state) =>
+            careerSelector.careerDetailsSelector(state, cid)
+        ) || {};
     return (
         <>
             <div className="breadcrumb-section">
@@ -90,10 +93,16 @@ const CareerDetailsComponent = () => {
                     </Row>
                 </Container>
             </section>
-
             {_.map(state.content, (content) => (
                 <StaticComponent key={_.uniqueId()} content={content} />
             ))}
+            <section className="careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
+                <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
+                    <Button btnVarient="red-btn" className=" career-apply-btn">
+                        Apply Now
+                    </Button>
+                </div>
+            </section>
         </>
     );
 };

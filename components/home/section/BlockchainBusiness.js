@@ -70,13 +70,13 @@ export default function BlockchainBusinessSection() {
                                 >
                                     <div>
                                         {/* <p> */}
-                                            <Image
-                                                src={item.icon}
-                                                alt=""
-                                                width={76}
-                                                height={76}
-                                                loading="lazy"
-                                            />
+                                        <Image
+                                            src={item.icon}
+                                            alt=""
+                                            width={76}
+                                            height={76}
+                                            loading="lazy"
+                                        />
                                         {/* </p> */}
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}

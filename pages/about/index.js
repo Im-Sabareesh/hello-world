@@ -5,14 +5,12 @@ import { useTranslation } from 'next-i18next';
 import { AboutUsComponent, Meta } from '@components';
 
 const AboutUs = () => {
-    const { t } = useTranslation('about');
+    const { t } = useTranslation('common');
     return (
         <div className="about-us-page">
-
-            <Meta title={t('title')} desc="" />
+            <Meta title={t('header.aboutUS')} desc="" />
 
             <AboutUsComponent />
-
         </div>
     );
 };
@@ -22,7 +20,7 @@ export default AboutUs;
 export const getStaticProps = async (p) => {
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['about', 'common'])),
+            ...(await serverSideTranslations(p.locale, ['common'])),
         },
     };
 };

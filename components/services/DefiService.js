@@ -3,9 +3,15 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import { Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
+import {
+    CardSection,
+    ImgPanelSection,
+    Button,
+    H1,
+    Paragraph,
+} from '@components';
 import images from '@components/images';
 
 const DefiSComponent = () => {
@@ -71,7 +77,7 @@ const DefiSComponent = () => {
                             <div className="nft-service-img-div">
                                 <Image
                                     src={images.defiMain}
-                                    rounded
+                                    rounded="true"
                                     className="nft-service-img"
                                     alt=" "
                                     width={913}

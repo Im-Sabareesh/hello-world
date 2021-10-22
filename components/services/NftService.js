@@ -51,7 +51,7 @@ const NFTSComponent = () => {
                             <div className="nft-service-img-div">
                                 <Image
                                     src={images.nftPng}
-                                    rounded
+                                    rounded="true"
                                     className="nft-service-img"
                                     alt=" "
                                     width={636}

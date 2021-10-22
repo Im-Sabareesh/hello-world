@@ -7,18 +7,16 @@ import { CareersComponent, Meta } from '@components';
 import { careerAction } from '@redux';
 
 const Careers = () => {
-    const { t } = useTranslation('careers');
+    const { t } = useTranslation('common');
     const dispatch = useDispatch();
     React.useEffect(() => {
         dispatch(careerAction.careerList());
     }, []);
     return (
         <div className="career-page">
-
-            <Meta title={t('title')} desc="" />
+            <Meta title={t('career')} desc="" />
 
             <CareersComponent />
-
         </div>
     );
 };
@@ -26,7 +24,7 @@ const Careers = () => {
 export const getStaticProps = async (p) => {
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['careers', 'common'])),
+            ...(await serverSideTranslations(p.locale, ['common'])),
         },
     };
 };

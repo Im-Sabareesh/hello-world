@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 import styles from '../style.module.scss';
 
-const ButtonComponent = ({
+export default function ButtonComponent({
     children,
     className,
     onClick,
     type,
     size,
     btnVarient,
-}) => {
+}) {
     return (
         <Button
             variant="primary"
@@ -35,9 +35,7 @@ const ButtonComponent = ({
             `}</style>
         </Button>
     );
-};
-
-export default ButtonComponent;
+}
 
 ButtonComponent.propTypes = {
     className: PropTypes.string,
