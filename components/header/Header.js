@@ -3,18 +3,19 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 import {
     Container,
     Row,
     Col,
-    Button,
     Navbar,
     Nav,
     NavDropdown,
 } from 'react-bootstrap';
-import Image from 'next/image';
-import headerImages from '@components/images';
+
+import { Button } from '@components';
+import images from '@components/images';
 
 const Header = () => {
     const router = useRouter(),
@@ -93,7 +94,7 @@ const Header = () => {
                             <Link href="/">
                                 <a>
                                     <Image
-                                        src={headerImages.logo}
+                                        src={images.logo}
                                         alt=""
                                         className={
                                             !state &&
@@ -172,8 +173,7 @@ const Header = () => {
                             className="text-end text-md-start mt-2 letstalk-btn"
                         >
                             <Button
-                                variant="primary"
-                                className="red-btn"
+                                btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}
@@ -187,7 +187,7 @@ const Header = () => {
                                 onClick={(e) => e.preventDefault()}
                             >
                                 <Image
-                                    src={headerImages.searchIcon}
+                                    src={images.searchIcon}
                                     alt=""
                                     className={
                                         !state &&

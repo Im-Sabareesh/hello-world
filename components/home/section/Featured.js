@@ -1,11 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Button, H1, Paragraph } from '@components';
 
 export default function FeaturedSection() {
+    const router = useRouter();
     const { t } = useTranslation(['home', 'common']),
         featuresList = [
             {
@@ -42,14 +45,13 @@ export default function FeaturedSection() {
                             <div className="heading-line"> </div>
                         </div>
 
-                        <h3 className="h1">{t('provideEnterprise')}</h3>
+                        <H1>{t('provideEnterprise')}</H1>
 
-                        <p>{t('provideEnterpriseDesc')}</p>
+                        <Paragraph>{t('provideEnterpriseDesc')}</Paragraph>
 
                         <div className="button-outer">
                             <Button
-                                variant="primary"
-                                className="red-btn"
+                                btnVarient="red-btn"
                                 size="lg"
                                 onClick={() => {
                                     router.push('/contact');

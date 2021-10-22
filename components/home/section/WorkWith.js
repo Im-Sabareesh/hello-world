@@ -1,12 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
-
-import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 
-import { ImgPanelSection } from 'common-components';
-import homeImages from '@components/images';
+import { Container, Row, Col } from 'react-bootstrap';
+
+import { ImgPanelSection, H1, Paragraph } from '@components';
+import images from '@components/images';
 
 export default function WorkWithSection() {
     const { t } = useTranslation(['home', 'common']);
@@ -20,17 +20,15 @@ export default function WorkWithSection() {
                     </Col>
 
                     <Col md={4} className="workwithus-txt mt-3">
-                        <h1 className="h1 secondary-text-color mb-3">
-                            121,000+
-                        </h1>
-                        <p>
+                        <H1 className="secondary-text-color mb-3">121,000+</H1>
+                        <Paragraph>
                             {t('weWorkDescBefore')} 120 {t('weWorkDescAfter')}
-                        </p>
+                        </Paragraph>
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">
                         <Image
-                            src={homeImages.weWorkWith}
+                            src={images.weWorkWith}
                             alt=" "
                             height={285}
                             width={822}

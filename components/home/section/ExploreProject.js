@@ -2,17 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
 
-import {
-    Container,
-    Row,
-    Col,
-    Card,
-    Button,
-    Image,
-    Form,
-} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import { CardSection } from 'common-components';
+import { CardSection } from '@components';
 
 export default function ExploreProjectSection() {
     const { t } = useTranslation('home'),

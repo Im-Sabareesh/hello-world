@@ -2,9 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
 
-import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import { CardSection } from 'common-components';
+import { CardSection, Button } from '@components';
 
 export default function BlockChainSolutionSection() {
     const { t } = useTranslation(['home', 'common']),
@@ -77,10 +77,7 @@ export default function BlockChainSolutionSection() {
                     )}
 
                     <Col md={12} className="text-center my-5">
-                        <Button
-                            variant="primary"
-                            className="red-btn min-size-btn"
-                        >
+                        <Button btnVarient="red-btn" className="min-size-btn">
                             {t('viewMore', { ns: 'common' })}
                         </Button>
                     </Col>

@@ -2,10 +2,12 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-
-import { Container, Row, Col, Button, Breadcrumb } from 'react-bootstrap';
 import Image from 'next/image';
-import careerImages from '@components/images';
+
+import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
+
+import { Button, H1, Paragraph } from '@components';
+import images from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
 
@@ -49,15 +51,15 @@ const CareerDetailsComponent = () => {
                     <Row>
                         <Col sm={12} md={12} lg={7} className="my-auto">
                             <div className="text-center text-lg-start">
-                                <p className="location-element">
+                                <Paragraph className="location-element">
                                     {state.type} {state.location}
-                                </p>
-                                <h1 className="h1 mb-2 pb-2 dark-text-color">
+                                </Paragraph>
+                                <H1 className="mb-2 pb-2 dark-text-color">
                                     {state.name}
-                                </h1>
+                                </H1>
                                 <Button
-                                    variant="primary"
-                                    className="red-btn mb-lg-5 mb-md-4 mb-3"
+                                    btnVarient="red-btn"
+                                    className="mb-lg-5 mb-md-4 mb-3"
                                 >
                                     Apply Now
                                 </Button>
@@ -73,14 +75,14 @@ const CareerDetailsComponent = () => {
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
                                 <Image
-                                    src={careerImages.careerDetail}
+                                    src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-none d-lg-block"
                                     width={843}
                                     height={843}
                                 />
                                 <Image
-                                    src={careerImages.careerDetail}
+                                    src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-block d-lg-none"
                                     width={843}
@@ -91,6 +93,7 @@ const CareerDetailsComponent = () => {
                     </Row>
                 </Container>
             </section>
+
             {_.map(state.content, (content) => (
                 <StaticComponent content={content} />
             ))}

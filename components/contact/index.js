@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
-import contactImages from '@components/images';
+
+import { Container, Row, Col, Form } from 'react-bootstrap';
+
+import { Button, H1, Paragraph } from '@components';
+import images from '@components/images';
 
 const ContactComponent = () => {
     const branchList = [
@@ -49,14 +51,14 @@ const ContactComponent = () => {
                         <Row>
                             <Col>
                                 <div className="light-text-color text-center w-50 mx-auto">
-                                    <h1 className="h1 light-text-color">
+                                    <H1 className="light-text-color">
                                         Contact us
-                                    </h1>
-                                    <p>
+                                    </H1>
+                                    <Paragraph>
                                         lets start something great togeather.
                                         Connect with one of the experts from the
                                         team today !
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </Col>
                         </Row>
@@ -73,20 +75,20 @@ const ContactComponent = () => {
                     <Container>
                         <Row>
                             <Col md={6} lg={6}>
-                                <p className="contact-img mb-5">
+                                <Paragraph className="contact-img mb-5">
                                     <Image
-                                        src={contactImages.contactUs}
+                                        src={images.contactUs}
                                         alt=" "
                                         width={636}
                                         height={527}
                                         layout="intrinsic"
                                         loading="lazy"
                                     />
-                                </p>
+                                </Paragraph>
 
                                 <div className="contact-small-section pt-4">
                                     <h3 className="h3">About Us</h3>
-                                    <p className="mb-0">
+                                    <Paragraph className="mb-0">
                                         Chaincode consulting is an Enterprise
                                         Blockchain development and consulting
                                         firm. We are a team of highly
@@ -98,15 +100,15 @@ const ContactComponent = () => {
                                             {' '}
                                             Read more
                                         </a>
-                                    </p>
+                                    </Paragraph>
                                 </div>
 
                                 <div className="contact-small-section contact-small-section-contact pt-4">
                                     <h3 className="h3">Contact Us</h3>
                                     <span className="d-flex">
-                                        <p className="contact-icon">
+                                        <Paragraph className="contact-icon">
                                             <Image
-                                                src={contactImages.contactPhone}
+                                                src={images.contactPhone}
                                                 alt=" "
                                                 className=""
                                                 height={20}
@@ -114,41 +116,41 @@ const ContactComponent = () => {
                                                 layout="intrinsic"
                                                 objectFit="unset"
                                             />
-                                        </p>
-                                        <p>
+                                        </Paragraph>
+                                        <Paragraph>
                                             <a href="tel:+91-9646579412">
                                                 +91-9646579412
                                             </a>
-                                        </p>
+                                        </Paragraph>
                                     </span>
                                     <span className="d-flex">
-                                        <p className="contact-icon">
+                                        <Paragraph className="contact-icon">
                                             <Image
-                                                src={contactImages.contactEmail}
+                                                src={images.contactEmail}
                                                 alt=" "
                                                 className=""
                                                 height={20}
                                                 width={20}
                                                 layout="intrinsic"
                                             />
-                                        </p>
-                                        <p>
+                                        </Paragraph>
+                                        <Paragraph>
                                             <a href="mailto:info@chaincodeconsulting.com">
                                                 info@chaincodeconsulting.com
                                             </a>
-                                        </p>
+                                        </Paragraph>
                                     </span>
                                 </div>
 
                                 <div className="contact-small-section pt-4">
                                     <h3 className="h3">Follow Us </h3>
-                                    <p className="contactus-sociallinks">
+                                    <Paragraph className="contactus-sociallinks">
                                         <a
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src={contactImages.fbPng}
+                                                src={images.fbPng}
                                                 alt=""
                                                 height={27}
                                                 width={15}
@@ -159,7 +161,7 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src={contactImages.instaPgn}
+                                                src={images.instaPgn}
                                                 alt=""
                                                 height={27}
                                                 width={28}
@@ -170,7 +172,7 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src={contactImages.twitterPng}
+                                                src={images.twitterPng}
                                                 alt=""
                                                 height={25}
                                                 width={30}
@@ -181,7 +183,7 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src={contactImages.uTubePng}
+                                                src={images.uTubePng}
                                                 alt=""
                                                 height={25}
                                                 width={34}
@@ -192,28 +194,32 @@ const ContactComponent = () => {
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <Image
-                                                src={contactImages.wpPng}
+                                                src={images.wpPng}
                                                 alt=""
                                                 height={64}
                                                 width={64}
                                             />
                                         </a>
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </Col>
 
                             <Col md={6} lg={6}>
                                 <h2 className="h2"> Get In Touch </h2>
 
-                                <p className="getintouch-txt mb-1">
+                                <Paragraph className="getintouch-txt mb-1">
                                     To request a quote, contact us directly or
                                     fill out the form and we will get back to
                                     you within 24 hours. We will keep your
                                     information confidential.
-                                </p>
+                                </Paragraph>
 
                                 <div className="getintouch-form mt-5">
-                                    <Form>
+                                    <Form
+                                        onSubmit={(event) =>
+                                            event.preventDefault()
+                                        }
+                                    >
                                         <Form.Group
                                             className="form-group"
                                             controlId=""
@@ -254,7 +260,7 @@ const ContactComponent = () => {
                                             controlId=""
                                         >
                                             <Form.Label>
-                                                Service you are interested in{' '}
+                                                Service you are interested in
                                             </Form.Label>
                                             <Form.Select
                                                 aria-label="Default select example"
@@ -283,8 +289,8 @@ const ContactComponent = () => {
 
                                         <Form.Group className="button-outer">
                                             <Button
-                                                variant="primary"
-                                                className="red-btn red-btn-shadow btn-lg"
+                                                btnVarient="red-btn"
+                                                className="red-btn-shadow btn-lg"
                                                 type="submit"
                                             >
                                                 Send Message
@@ -305,7 +311,7 @@ const ContactComponent = () => {
                             </Col>
                             <Col md={12} className=" ouroffice-banner">
                                 <Image
-                                    src={contactImages.contactUsJpg}
+                                    src={images.contactUsJpg}
                                     alt=""
                                     className="office-banner"
                                     width={1754}
@@ -328,7 +334,7 @@ const ContactComponent = () => {
                                 >
                                     <div className=" mt-1 me-3 flex-shrink-0">
                                         <Image
-                                            src={contactImages.mappin}
+                                            src={images.mappin}
                                             alt=" "
                                             height={29}
                                             width={22}
@@ -336,26 +342,24 @@ const ContactComponent = () => {
                                     </div>
                                     <div className="address-cont ml-2 flex-shrink-0">
                                         <h2 className="h2 mb-3">
-                                            {' '}
                                             {item.location}{' '}
                                         </h2>
-                                        <p className="address-txt">
+                                        <Paragraph className="address-txt">
                                             {item.address.building}
                                             {item.address.town !== '' && (
                                                 <>
-                                                    {' '}
                                                     <br /> {item.address.town}
                                                 </>
                                             )}
                                             <br />
                                             {item.address.city}
-                                        </p>
+                                        </Paragraph>
                                         <div className="contact-small-section contact-small-section-contact pt-3">
                                             <span className="d-flex">
-                                                <p className="contact-icon">
+                                                <Paragraph className="contact-icon">
                                                     <Image
                                                         src={
-                                                            contactImages.contactPhone
+                                                            images.contactPhone
                                                         }
                                                         alt=" "
                                                         className=""
@@ -364,30 +368,30 @@ const ContactComponent = () => {
                                                         layout="intrinsic"
                                                         objectFit="unset"
                                                     />
-                                                </p>
-                                                <p>
+                                                </Paragraph>
+                                                <Paragraph>
                                                     <a href="tel:+91-9646579412">
                                                         {item.phone}
                                                     </a>
-                                                </p>
+                                                </Paragraph>
                                             </span>
                                             <span className="d-flex">
-                                                <p className="contact-icon">
+                                                <Paragraph className="contact-icon">
                                                     <Image
                                                         src={
-                                                            contactImages.contactEmail
+                                                            images.contactEmail
                                                         }
                                                         alt=" "
                                                         className=""
                                                         height={20}
                                                         width={20}
                                                     />
-                                                </p>
-                                                <p>
+                                                </Paragraph>
+                                                <Paragraph>
                                                     <a href="mailto:info@chaincodeconsulting.com">
                                                         {item.mailID}
                                                     </a>
-                                                </p>
+                                                </Paragraph>
                                             </span>
                                         </div>
                                     </div>

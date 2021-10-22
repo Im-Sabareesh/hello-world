@@ -1,10 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import Image from 'next/image';
-import defisImages from '@components/images';
+
+import { Container, Row, Col} from 'react-bootstrap';
+
+import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
+import images from '@components/images';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -43,19 +45,19 @@ const DefiSComponent = () => {
                                 </h3>
                             </div>
 
-                            <h3 className="h1">Defi development</h3>
+                            <H1>Defi development</H1>
 
-                            <p>
+                            <Paragraph>
                                 Our NFT development process provides high
                                 customization freedom and allows you to become a
                                 frontrunner in the NFT field by availing of the
                                 services of our NFT development company.
-                            </p>
+                            </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
-                                    variant="primary"
-                                    className="red-btn p-0"
+                                    btnVarient="red-btn"
+                                    className="p-0"
                                     size="lg"
                                     onClick={() => {
                                         router.push('/contact');
@@ -68,7 +70,7 @@ const DefiSComponent = () => {
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <Image
-                                    src={defisImages.defiMain}
+                                    src={images.defiMain}
                                     rounded
                                     className="nft-service-img"
                                     alt=" "
@@ -94,7 +96,7 @@ const DefiSComponent = () => {
                         <Row>
                             <Col lg={5}>
                                 <Image
-                                    src={defisImages.videoThumb}
+                                    src={images.videoThumb}
                                     width={610}
                                     height={318}
                                     layout="intrinsic"
@@ -163,49 +165,22 @@ const DefiSComponent = () => {
                         </Col>
                         {_.map(wideServiceListSec3, (item) => (
                             <Col key={_.uniqueId()} md={6} lg={4}>
-                                <Card className="custom-card shadow-sm mt-3 mb-4">
-                                    <Card.Img variant="top" src={item.image} />
-                                    <Card.Body>
-                                        <Card.Title>
-                                            <h3 className="h3">
-                                                {' '}
-                                                {item.title}{' '}
-                                            </h3>
-                                        </Card.Title>
-                                        <Card.Text>{item.describe}</Card.Text>
-                                    </Card.Body>
-                                    <Card.Footer className="d-flex justify-content-between">
-                                        <button
-                                            type="button"
-                                            className="red-btn min-size-btn btn btn-primary w-100"
-                                        >
-                                            Know More
-                                        </button>
-                                    </Card.Footer>
-                                </Card>
+                                <CardSection
+                                    className="card shadow-sm mt-3 mb-4"
+                                    item={item}
+                                />
                             </Col>
                         ))}
                     </Row>
                 </Container>
 
                 <Container className="mt-5 pt-2">
-                    <div className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5">
-                        <div className="cta-txt">
-                            <h2 className="h2">
-                                It’s Never too Late to Start! Get FREE
-                                Consultation from our Experts
-                            </h2>
-                            <Button
-                                variant="primary"
-                                className="red-btn min-size-btn"
-                                onClick={() => {
-                                    router.push('/contact');
-                                }}
-                            >
-                                Let’s Talk
-                            </Button>
-                        </div>
-                    </div>
+                    <ImgPanelSection
+                        className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
+                        title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
+                        link="/contact"
+                        btnName="Let’s Talk"
+                    />
                 </Container>
             </section>
 
@@ -222,7 +197,7 @@ const DefiSComponent = () => {
                                 Blockchain solutions for frictionless business{' '}
                             </h2>
 
-                            <p>
+                            <Paragraph>
                                 Blockchain for business uses a shared and
                                 immutable ledger that can only be accessed by
                                 members with permission. Network members control
@@ -231,12 +206,12 @@ const DefiSComponent = () => {
                                 is sometimes called a trustless network not
                                 because business partners don’t trust each
                                 other, but because they don’t have to.
-                            </p>
+                            </Paragraph>
                         </Col>
 
                         <Col md={{ span: 12, order: 0 }} lg={6}>
                             <Image
-                                src={defisImages.defiTwo}
+                                src={images.defiTwo}
                                 alt=".."
                                 width={913}
                                 height={752}

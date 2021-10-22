@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
-import footerImages from '@components/images';
+
+import { Paragraph } from '@components';
+import images from '@components/images';
 
 const RadiusFooter = (props) => {
     const { t } = useTranslation('common'),
@@ -99,17 +101,16 @@ const RadiusFooter = (props) => {
                                 className="brand-logo"
                             >
                                 <Image
-                                    src={footerImages.ccWhiteLogo}
-                                    className="mb-4"
+                                    src={images.ccWhiteLogo}
                                     alt="..."
                                     width={219}
                                     height={140}
                                 />
                             </a>
                         </Link>
-                        <p className="light-text-color text-shadow">
+                        <Paragraph className="light-text-color text-shadow">
                             {t('footer.followUs')}
-                        </p>
+                        </Paragraph>
                         <div className="social-icons">
                             <a
                                 href="#"
@@ -117,7 +118,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.fbSVG}
+                                    src={images.fbSVG}
                                     alt="..."
                                     width={11}
                                     height={19}
@@ -129,7 +130,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.instaSVG}
+                                    src={images.instaSVG}
                                     alt="..."
                                     width={20}
                                     height={19}
@@ -141,7 +142,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.twitterSVG}
+                                    src={images.twitterSVG}
                                     alt="..."
                                     width={25}
                                     height={19}
@@ -153,7 +154,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.uTubeSVG}
+                                    src={images.uTubeSVG}
                                     alt="..."
                                     width={27}
                                     height={19}
@@ -165,7 +166,7 @@ const RadiusFooter = (props) => {
                                 className="mx-md-3 mx-1"
                             >
                                 <Image
-                                    src={footerImages.wpSVG}
+                                    src={images.wpSVG}
                                     alt="..."
                                     width={19}
                                     height={19}
@@ -183,9 +184,9 @@ const RadiusFooter = (props) => {
                             lg={item.lgStyle}
                             className="mb-xs-3 mb-sm-3 mb-4"
                         >
-                            <p className="h3 light-text-color mb-3">
+                            <h3 className="h3 light-text-color mb-3">
                                 {item.title}
-                            </p>
+                            </h3>
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2">
@@ -224,7 +225,7 @@ const RadiusFooter = (props) => {
                             >
                                 <div className="arrow-bg">
                                     <Image
-                                        src={footerImages.upArrow}
+                                        src={images.upArrow}
                                         alt=" "
                                         width={52}
                                         height={51}
