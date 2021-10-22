@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { CareerDetailsComponent } from '@components';
+import { api } from '@libs';
 
 const CareerDetails = () => {
     return (
@@ -16,12 +17,17 @@ const CareerDetails = () => {
     );
 };
 
-export default CareerDetails;
+export async function getStaticPaths() {
+    return { paths: [{ params: { cid: '1' } }], fallback: false };
+}
 
-export const getStaticProps = async (p) => {
+export async function getStaticProps({ params, locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
+            // careeerDetails: await api.getCareerDetails(1),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     };
-};
+}
+
+export default CareerDetails;
