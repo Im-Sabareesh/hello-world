@@ -14,13 +14,11 @@ body {
     overflow-x: hidden;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-.h1,
 .h2,
 .h3,
 .h4,
@@ -77,12 +75,6 @@ button:not(.collapsed) {
     background-color: none !important;
 }
 
-.h1 {
-    font-size: $heading1;
-    line-height: 74px;
-    color: color('dark-secondary');
-}
-
 .h2 {
     font-size: $heading2;
 }
@@ -108,9 +100,6 @@ button:not(.collapsed) {
     color: color('dark-secondary');
 }
 
-.text-shadow {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 .dark-box-shadow {
     box-shadow: 0px 4px 12px 0px #0000001f;
 }
@@ -237,30 +226,9 @@ button:not(.collapsed) {
     min-width: 175px !important;
 }
 
-.red-btn {
-    @include gradient-background('red-btn');
-    font-weight: 600;
-    font-size: 18px;
-    height: 47px;
-    border: transparent;
-    min-width: 120px;
-    color: #ffffff;
-    border-radius: 28px;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include gradient-background('red-btn-hover');
-        color: white;
-        border: none;
-    }
-}
-
 .btn-lg {
     width: 205px;
-    height: 56px;
+    height: 56px !important;
 }
 
 .button-outer {
@@ -890,13 +858,6 @@ button:not(.collapsed) {
             margin-bottom: 15px;
         }
     }
-
-    .address-cont {
-        .address-txt {
-            font-size: 20px;
-            font-weight: 600;
-        }
-    }
 }
 
 .contactus-banner {
@@ -932,7 +893,6 @@ button:not(.collapsed) {
             }
         }
     }
-
     a {
         color: color('secondary');
     }
@@ -942,14 +902,6 @@ button:not(.collapsed) {
             color: color('dark-primary');
         }
     }
-}
-
-.contact-img {
-    margin-top: 60px;
-}
-
-.getintouch-txt {
-    font-size: 20px;
 }
 
 .getintouch-form {
@@ -1191,26 +1143,6 @@ header .main-header {
         margin-right: 20px;
     }
 }
-.gradient-btn {
-    @include gradient-background('gradient-secondary');
-    font-weight: 600;
-    font-size: 18px;
-    height: 47px;
-    border: transparent;
-    color: #ffffff;
-    border-radius: 28px;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include gradient-background('gradient-btn-hover');
-        color: white;
-        border: none;
-    }
-}
-
 // ---------------career page end---------------
 
 //----------------- defi section------------
@@ -1258,10 +1190,6 @@ header .main-header {
 // ---------breadcrumb start---------
 
 .careerdetail-overview-section {
-    .location-element {
-        font-size: 18px;
-        font-weight: 600;
-    }
     .job-overview {
         width: 510px;
     }

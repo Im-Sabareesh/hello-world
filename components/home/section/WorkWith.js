@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-import { ImgPanelSection } from 'common-components';
+import { ImgPanelSection, H1, Paragraph } from '@components';
 
 export default function WorkWithSection() {
     return (
@@ -15,13 +15,13 @@ export default function WorkWithSection() {
                     </Col>
 
                     <Col md={4} className="workwithus-txt mt-3">
-                        <h1 className="h1 secondary-text-color mb-3">
+                        <H1 className="secondary-text-color mb-3">
                             121,000+
-                        </h1>
-                        <p>
+                        </H1>
+                        <Paragraph>
                             customers in over 120 countries growing their
                             businesses with Blockchain Consulting
-                        </p>
+                        </Paragraph>
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">

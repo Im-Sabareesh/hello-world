@@ -3,7 +3,8 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
-import { Container, Image, Button } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
+import { Button } from '@components';
 
 const ImagePanelSection = ({
     className,
@@ -23,9 +24,8 @@ const ImagePanelSection = ({
                         className="h2"
                         dangerouslySetInnerHTML={{ __html: title }}
                     ></h2>
-                    <Button
-                        variant="primary"
-                        className="red-btn min-size-btn"
+                    <Button btnVarient="red-btn"
+                        className="min-size-btn"
                         onClick={() => {
                             router.push(link);
                         }}

@@ -2,7 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
-import { Col, Image, Card, Button } from 'react-bootstrap';
+import { Image, Card } from 'react-bootstrap';
+import { Button } from '@components';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
@@ -58,7 +59,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                     <Card.Text>{item.describe}</Card.Text>
                 </Card.Body>
                 <Card.Footer className="">
-                    <Button variant="primary" className={`red-btn min-size-btn ${item.image && 'btn btn-primary w-100'}`}>
+                    <Button btnVarient="red-btn" className={`min-size-btn ${item.image && 'btn btn-primary w-100'}`}>
                         Know More
                     </Button>
                 </Card.Footer>
@@ -80,4 +81,7 @@ CardSection.propTypes = {
 
 CardSection.defaultProps = {
     fullCard: false,
+    className :"",
+    item: {},
+    footerClass:"",
 };

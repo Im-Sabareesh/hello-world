@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import { CardSection } from 'common-components';
+import { CardSection, Button } from '@components';
 
 export default function BlockChainSolutionSection() {
     const blockChainSolnList = [
@@ -67,7 +67,7 @@ export default function BlockChainSolutionSection() {
                             <Col md={6} lg={4} key={_.uniqueId()}>
                                 <CardSection
                                     fullCard={true}
-                                    footerClass="justify-content-between"
+                                    footerClass="d-flex justify-content-between"
                                     item={item}
                                 />
                             </Col>
@@ -75,9 +75,8 @@ export default function BlockChainSolutionSection() {
                     )}
 
                     <Col md={12} className="text-center my-5">
-                        <Button
-                            variant="primary"
-                            className="red-btn min-size-btn"
+                        <Button btnVarient="red-btn"
+                            className="min-size-btn"
                         >
                             View More
                         </Button>

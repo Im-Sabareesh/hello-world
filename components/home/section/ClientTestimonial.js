@@ -1,16 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import {
     Container,
     Row,
     Col,
-    Card,
-    Button,
     Image,
-    Form,
 } from 'react-bootstrap';
 
 export default function CilentTestimonialSection() {

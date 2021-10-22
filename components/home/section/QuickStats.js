@@ -1,17 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import {
     Container,
     Row,
     Col,
-    Card,
-    Button,
     Image,
-    Form,
 } from 'react-bootstrap';
+
+import { Paragraph } from '@components';
 
 export default function QuickStatsSection() {
     const quickStateList = [
@@ -62,17 +59,17 @@ export default function QuickStatsSection() {
                             lg={2}
                             className="counter-thumb text-center mt-3"
                         >
-                            <p className="mb-4">
+                            <Paragraph className="mb-4">
                                 <Image src={item.icon} alt=" " />
-                            </p>
+                            </Paragraph>
 
-                            <p className="mb-1">
+                            <Paragraph className="mb-1">
                                 <span> {item.counts} </span>
-                            </p>
+                            </Paragraph>
 
-                            <p>
+                            <Paragraph>
                                 <strong> {item.title} </strong>
-                            </p>
+                            </Paragraph>
                         </Col>
                     ))}
                 </Row>

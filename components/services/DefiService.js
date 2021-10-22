@@ -2,8 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Button, Image, Card } from 'react-bootstrap';
-import { CardSection, ImgPanelSection } from 'common-components';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+
+import { CardSection, ImgPanelSection, Button, H1, Paragraph } from '@components';
 
 const DefiSComponent = () => {
     const router = useRouter(),
@@ -42,19 +43,18 @@ const DefiSComponent = () => {
                                 </h3>
                             </div>
 
-                            <h3 className="h1">Defi development</h3>
+                            <H1>Defi development</H1>
 
-                            <p>
+                            <Paragraph>
                                 Our NFT development process provides high
                                 customization freedom and allows you to become a
                                 frontrunner in the NFT field by availing of the
                                 services of our NFT development company.
-                            </p>
+                            </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
-                                <Button
-                                    variant="primary"
-                                    className="red-btn p-0"
+                                <Button btnVarient="red-btn"
+                                    className="p-0"
                                     size="lg"
                                     onClick={() => {
                                         router.push('/contact');
@@ -182,7 +182,7 @@ const DefiSComponent = () => {
                                 Blockchain solutions for frictionless business{' '}
                             </h2>
 
-                            <p>
+                            <Paragraph>
                                 Blockchain for business uses a shared and
                                 immutable ledger that can only be accessed by
                                 members with permission. Network members control
@@ -191,7 +191,7 @@ const DefiSComponent = () => {
                                 is sometimes called a trustless network not
                                 because business partners don’t trust each
                                 other, but because they don’t have to.
-                            </p>
+                            </Paragraph>
                         </Col>
 
                         <Col md={{ span: 12, order: 0 }} lg={6}>

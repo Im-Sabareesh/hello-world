@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
+import { Paragraph } from '@components'
+
 const TopLogoFooter = () => {
     const footerLinkList = [
         {
@@ -104,9 +106,9 @@ const TopLogoFooter = () => {
                                 />
                             </a>
                         </Link>
-                        <p className="light-text-color text-shadow mb-md-3 mb-2">
+                        <Paragraph className="light-text-color text-shadow mb-md-3 mb-2">
                             Follow Us
-                        </p>
+                        </Paragraph>
                         <div className="social-icons">
                             <a
                                 href="#"
@@ -171,9 +173,9 @@ const TopLogoFooter = () => {
                             xs={12}
                             className="mb-xl-0 mb-md-4 mb-sm-3 mb-4"
                         >
-                            <p className="h3 light-text-color mb-3">
+                            <h3 className="h3 light-text-color mb-3">
                                 {item.title}
-                            </p>
+                            </h3>
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2">

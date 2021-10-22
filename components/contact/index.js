@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
+import { Container, Row, Col, Image, Form } from 'react-bootstrap';
+import { Button, H1, Paragraph } from '@components';
 
 const ContactComponent = () => {
+    
     const branchList = [
         {
             location: 'India',
@@ -47,14 +49,14 @@ const ContactComponent = () => {
                         <Row>
                             <Col>
                                 <div className="light-text-color text-center w-50 mx-auto">
-                                    <h1 className="h1 light-text-color">
+                                    <H1 className="light-text-color">
                                         Contact us
-                                    </h1>
-                                    <p>
+                                    </H1>
+                                    <Paragraph>
                                         lets start something great togeather.
                                         Connect with one of the experts from the
                                         team today !
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </Col>
                         </Row>
@@ -71,16 +73,16 @@ const ContactComponent = () => {
                     <Container>
                         <Row>
                             <Col md={6} lg={6}>
-                                <p className="contact-img mb-5">
+                                <Paragraph className="contact-img mb-5">
                                     <Image
                                         src="/assets/images/contactus.svg"
                                         alt=" "
                                     />
-                                </p>
+                                </Paragraph>
 
                                 <div className="contact-small-section pt-4">
                                     <h3 className="h3">About Us</h3>
-                                    <p className="mb-0">
+                                    <Paragraph className="mb-0">
                                         Chaincode consulting is an Enterprise
                                         Blockchain development and consulting
                                         firm. We are a team of highly
@@ -92,12 +94,12 @@ const ContactComponent = () => {
                                             {' '}
                                             Read more
                                         </a>
-                                    </p>
+                                    </Paragraph>
                                 </div>
 
                                 <div className="contact-small-section contact-small-section-contact pt-4">
                                     <h3 className="h3">Contact Us</h3>
-                                    <p>
+                                    <Paragraph>
                                         <Image
                                             src="/assets/icons/contact-phone.svg"
                                             alt=" "
@@ -106,9 +108,9 @@ const ContactComponent = () => {
                                         <a href="tel:+91-9646579412">
                                             +91-9646579412
                                         </a>
-                                    </p>
+                                    </Paragraph>
 
-                                    <p>
+                                    <Paragraph>
                                         <Image
                                             src="/assets/icons/contact-email.svg"
                                             alt=" "
@@ -117,12 +119,12 @@ const ContactComponent = () => {
                                         <a href="mailto:info@chaincodeconsulting.com">
                                             info@chaincodeconsulting.com
                                         </a>
-                                    </p>
+                                    </Paragraph>
                                 </div>
 
                                 <div className="contact-small-section pt-4">
                                     <h3 className="h3">Follow Us </h3>
-                                    <p className="contactus-sociallinks">
+                                    <Paragraph className="contactus-sociallinks">
                                         <a
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
@@ -168,22 +170,22 @@ const ContactComponent = () => {
                                                 alt=""
                                             />
                                         </a>
-                                    </p>
+                                    </Paragraph>
                                 </div>
                             </Col>
 
                             <Col md={6} lg={6}>
                                 <h2 className="h2"> Get In Touch </h2>
 
-                                <p className="getintouch-txt mb-1">
+                                <Paragraph className="getintouch-txt mb-1">
                                     To request a quote, contact us directly or
                                     fill out the form and we will get back to
                                     you within 24 hours. We will keep your
                                     information confidential.
-                                </p>
+                                </Paragraph>
 
                                 <div className="getintouch-form mt-5">
-                                    <Form>
+                                    <Form onSubmit={(event) => event.preventDefault()}>
                                         <Form.Group
                                             className="form-group"
                                             controlId=""
@@ -224,7 +226,7 @@ const ContactComponent = () => {
                                             controlId=""
                                         >
                                             <Form.Label>
-                                                Service you are interested in{' '}
+                                                Service you are interested in
                                             </Form.Label>
                                             <Form.Select
                                                 aria-label="Default select example"
@@ -252,9 +254,8 @@ const ContactComponent = () => {
                                         </Form.Group>
 
                                         <Form.Group className="button-outer">
-                                            <Button
-                                                variant="primary"
-                                                className="red-btn red-btn-shadow btn-lg"
+                                            <Button btnVarient="red-btn"
+                                                className="red-btn-shadow btn-lg"
                                                 type="submit"
                                             >
                                                 Send Message
@@ -296,22 +297,20 @@ const ContactComponent = () => {
                                     </div>
                                     <div className="address-cont ml-2 flex-shrink-0">
                                         <h2 className="h2 mb-3">
-                                            {' '}
                                             {item.location}{' '}
                                         </h2>
-                                        <p className="address-txt">
+                                        <Paragraph className="address-txt">
                                             {item.address.building}
                                             {item.address.town !== '' && (
                                                 <>
-                                                    {' '}
                                                     <br /> {item.address.town}
                                                 </>
                                             )}
                                             <br />
                                             {item.address.city}
-                                        </p>
+                                        </Paragraph>
                                         <div className="contact-small-section contact-small-section-contact pt-3">
-                                            <p>
+                                            <Paragraph>
                                                 <Image
                                                     src="/assets/icons/contact-phone.svg"
                                                     alt=" "
@@ -320,9 +319,9 @@ const ContactComponent = () => {
                                                 <a href="tel:+91-9646579412">
                                                     {item.phone}
                                                 </a>
-                                            </p>
+                                            </Paragraph>
 
-                                            <p>
+                                            <Paragraph>
                                                 <Image
                                                     src="/assets/icons/contact-email.svg"
                                                     alt=" "
@@ -331,7 +330,7 @@ const ContactComponent = () => {
                                                 <a href="mailto:info@chaincodeconsulting.com">
                                                     {item.mailID}
                                                 </a>
-                                            </p>
+                                            </Paragraph>
                                         </div>
                                     </div>
                                 </Col>

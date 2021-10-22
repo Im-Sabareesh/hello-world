@@ -1,11 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Button, H1, Paragraph } from '@components';
 
 export default function FeaturedSection() {
-    const featuresList = [
+    const router = useRouter(),
+    featuresList = [
         {
             title: 'Hyperledger Development',
             link: '#',
@@ -40,20 +43,18 @@ export default function FeaturedSection() {
                             <div className="heading-line"> </div>
                         </div>
 
-                        <h3 className="h1">
+                        <H1>
                             We provide enterprise blockchain consulting
-                        </h3>
+                        </H1>
 
-                        <p>
+                        <Paragraph>
                             Unleash full business potential with our cutting
                             edge blockchain solutions. We innovate, build and
                             integrate real-world blockchain applications.
-                        </p>
+                        </Paragraph>
 
                         <div className="button-outer">
-                            <Button
-                                variant="primary"
-                                className="red-btn"
+                            <Button btnVarient="red-btn"
                                 size="lg"
                                 onClick={() => {
                                     router.push('/contact');

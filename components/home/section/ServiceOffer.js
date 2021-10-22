@@ -11,6 +11,8 @@ import {
     Form,
 } from 'react-bootstrap';
 
+import { Paragraph } from '@components';
+
 export default function ServiceOfferSection() {
     const serviceList = [
         {
@@ -60,12 +62,12 @@ export default function ServiceOfferSection() {
                             Services We Offer
                         </h2>
 
-                        <p>
+                        <Paragraph>
                             Nulla Lorem mollit cupidatat irure. Laborum magna
                             nulla duis ullamco cillum dolor. Voluptate
                             exercitation incididunt aliquip deserunt
                             reprehenderit elit laborum.
-                        </p>
+                        </Paragraph>
                     </Col>
                 </Row>
             </Container>
@@ -79,13 +81,13 @@ export default function ServiceOfferSection() {
                             lg={4}
                             className="service-thumb text-center mt-5"
                         >
-                            <p>
+                            <Paragraph>
                                 <Image src={item.icon} alt="" />
-                            </p>
+                            </Paragraph>
 
                             <h3 className="h3 dark-text-color">{item.name}</h3>
 
-                            <p> {item.describe} </p>
+                            <Paragraph> {item.describe} </Paragraph>
                         </Col>
                     ))}
 

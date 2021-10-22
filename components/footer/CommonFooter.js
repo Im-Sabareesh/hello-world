@@ -3,6 +3,7 @@ import Link from 'next/link';
 import _ from 'lodash';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Paragraph } from '@components';
 
 const RadiusFooter = (props) => {
     const footerLinkList = [
@@ -100,9 +101,9 @@ const RadiusFooter = (props) => {
                                 alt="..."
                             />
                         </a>
-                        <p className="light-text-color text-shadow">
+                        <Paragraph className="light-text-color text-shadow">
                             Follow Us
-                        </p>
+                        </Paragraph>
                         <div className="social-icons">
                             <a
                                 href="#"
@@ -166,9 +167,9 @@ const RadiusFooter = (props) => {
                             lg={item.lgStyle}
                             className="mb-xs-3 mb-sm-3 mb-4"
                         >
-                            <p className="h3 light-text-color mb-3">
+                            <h3 className="h3 light-text-color mb-3">
                                 {item.title}
-                            </p>
+                            </h3>
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2">

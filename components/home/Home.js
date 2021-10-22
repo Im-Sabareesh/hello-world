@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { ImgPanelSection } from 'common-components';
+import { ImgPanelSection } from '@components';
 import {
     FeaturedSection,
     BlockchainBusinessSection,

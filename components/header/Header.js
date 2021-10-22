@@ -7,12 +7,12 @@ import {
     Container,
     Row,
     Col,
-    Button,
     Navbar,
     Nav,
     NavDropdown,
     Image,
 } from 'react-bootstrap';
+import { Button } from '@components';
 
 const Header = () => {
     const router = useRouter();
@@ -162,9 +162,7 @@ const Header = () => {
                             lg={2}
                             className="text-end text-md-start mt-2 letstalk-btn"
                         >
-                            <Button
-                                variant="primary"
-                                className="red-btn"
+                            <Button btnVarient="red-btn"
                                 onClick={() => {
                                     router.push('/contact');
                                 }}

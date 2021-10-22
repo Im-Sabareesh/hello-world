@@ -1,19 +1,16 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import {
     Container,
     Row,
     Col,
-    Card,
-    Button,
     Image,
     Form,
 } from 'react-bootstrap';
 
-import { CardSection } from 'common-components';
+import { CardSection, Button, Paragraph } from '@components';
 
 export default function InsightWithFormSection() {
     const router = useRouter(),
@@ -65,9 +62,8 @@ export default function InsightWithFormSection() {
                     ))}
 
                     <Col md={12} className="text-center my-5">
-                        <Button
-                            variant="primary"
-                            className="red-btn min-size-btn"
+                        <Button btnVarient="red-btn"
+                            className="min-size-btn"
                         >
                             View More
                         </Button>
@@ -85,7 +81,7 @@ export default function InsightWithFormSection() {
                                         <h2 className="h2 mb-2">
                                             Ready to Get Started?
                                         </h2>
-                                        <p>Have an idea? Let’s discuss it!</p>
+                                        <Paragraph>Have an idea? Let’s discuss it!</Paragraph>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -242,9 +238,9 @@ export default function InsightWithFormSection() {
                                                         md="5"
                                                         controlId="validationCustomUsername"
                                                     >
-                                                        <Button
+                                                        <Button btnVarient="red-btn"
                                                             type="submit"
-                                                            className="red-btn btn-lg"
+                                                            className="btn-lg"
                                                         >
                                                             Send Request
                                                         </Button>

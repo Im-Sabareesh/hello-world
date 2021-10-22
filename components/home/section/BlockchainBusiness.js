@@ -3,6 +3,8 @@ import _ from 'lodash';
 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
+import { Paragraph } from '@components';
+
 export default function BlockchainBusinessSection() {
     const blockChainUsageList = [
         {
@@ -36,7 +38,7 @@ export default function BlockchainBusinessSection() {
                             How Blockchain Enhances Your Business
                         </h2>
 
-                        <p>
+                        <Paragraph>
                             Blockchain for business uses a shared and immutable
                             ledger that can only be accessed by members with
                             permission. Network members control what information
@@ -45,7 +47,7 @@ export default function BlockchainBusinessSection() {
                             called a trustless network not because business
                             partners don’t trust each other, but because they
                             don’t have to.
-                        </p>
+                        </Paragraph>
                     </Col>
 
                     <Col
@@ -67,9 +69,9 @@ export default function BlockchainBusinessSection() {
                                     className="home-section-icons d-flex align-items-center justify-content-center text-center"
                                 >
                                     <div>
-                                        <p>
+                                        <Paragraph>
                                             <Image src={item.icon} alt="" />
-                                        </p>
+                                        </Paragraph>
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}
                                         </h3>

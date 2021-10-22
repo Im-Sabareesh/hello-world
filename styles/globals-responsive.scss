@@ -6,8 +6,8 @@
     // --------------- font size-------
 
     .h1 {
-        font-size: 33px;
-        line-height: 56px;
+        font-size: 33px !important;
+        line-height: 56px !important;
     }
 
     .h2 {
@@ -112,9 +112,9 @@
 
     .btn-lg,
     .btn-group-lg > .btn {
-        width: 170px;
-        height: 56px;
-        padding: 0px;
+        width: 170px !important;
+        height: 56px !important;
+        padding: 0px !important;
     }
 
     .home-section-6 {
@@ -205,11 +205,11 @@
         margin-top: 0px !important;
         padding-top: 0px !important;
         .contact-img {
-            margin-top: 0px;
+            margin-top: 0px !important;
         }
 
         .contactus-sociallinks {
-            margin-bottom: 50px;
+            margin-bottom: 50px !important;
         }
 
         .ouroffice-banner {
@@ -239,8 +239,8 @@
     // --------------- font size-------
 
     .h1 {
-        font-size: 40px;
-        line-height: 56px;
+        font-size: 40px  !important;
+        line-height: 56px  !important;
     }
 
     .h2 {
@@ -342,7 +342,7 @@
     .btn-lg,
     .btn-group-lg > .btn {
         width: 170px;
-        height: 56px;
+        height: 56px !important;
         padding: 0px;
     }
 
@@ -424,7 +424,7 @@
         padding-top: 0px !important;
 
         .contactus-sociallinks {
-            margin-bottom: 50px;
+            margin-bottom: 50px !important;
         }
 
         .ouroffice-banner {
@@ -455,8 +455,8 @@
     // --------------- font size-------
 
     .h1 {
-        font-size: 46px;
-        line-height: 56px;
+        font-size: 46px  !important;
+        line-height: 56px  !important;
     }
 
     .h2 {
@@ -543,7 +543,7 @@
     .btn-lg,
     .btn-group-lg > .btn {
         width: 170px;
-        height: 56px;
+        height: 56px !important;
         padding: 0px;
     }
 
@@ -649,7 +649,7 @@
     .btn-lg,
     .btn-group-lg > .btn {
         width: 170px;
-        height: 56px;
+        height: 56px !important;
         padding: 0px;
     }
 
@@ -720,7 +720,7 @@
 
     .home-contact-form {
         .btn-lg {
-            width: 166px;
+            width: 166px !important;
             padding: 0px;
         }
     }
@@ -732,8 +732,8 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 26px;
-        line-height: 40px;
+        font-size: 26px  !important;
+        line-height: 40px  !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -828,7 +828,7 @@
         }
         .btn-lg,
         .btn-group-lg > .btn {
-            width: 200px;
+            width: 200px !important;
         }
     }
 
@@ -881,8 +881,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 33px;
-            line-height: 54px;
+            font-size: 33px  !important;
+            line-height: 54px  !important;
         }
         .form-field {
             &.search-field {
@@ -915,8 +915,8 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 26px;
-            line-height: 35px;
+            font-size: 26px  !important;
+            line-height: 35px  !important;
         }
         padding-bottom: 0 !important;
     }
@@ -975,8 +975,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 27px;
-            line-height: 38px;
+            font-size: 27px  !important;
+            line-height: 38px  !important;
         }
         .h2 {
             font-size: 23px;
@@ -1020,8 +1020,8 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 30px;
-        line-height: 60px;
+        font-size: 30px  !important;
+        line-height: 60px  !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1112,7 +1112,7 @@
         }
         .btn-lg,
         .btn-group-lg > .btn {
-            width: 200px;
+            width: 200px !important;
         }
     }
     .service-inner-section3 {
@@ -1163,8 +1163,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 39px;
-            line-height: 64px;
+            font-size: 39px  !important;
+            line-height: 64px  !important;
         }
         .form-field {
             &.search-field {
@@ -1194,8 +1194,8 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 30px;
-            line-height: 35px;
+            font-size: 30px  !important;
+            line-height: 35px  !important;
         }
     }
 
@@ -1246,8 +1246,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 29px;
-            line-height: 42px;
+            font-size: 29px  !important;
+            line-height: 42px  !important;
         }
         .h2 {
             font-size: 24px;
@@ -1290,7 +1290,7 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 35px;
+        font-size: 35px  !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1364,7 +1364,7 @@
         }
         .btn-lg,
         .btn-group-lg > .btn {
-            width: 190px;
+            width: 190px !important;
         }
     }
     .service-inner-section3 {
@@ -1416,8 +1416,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 41px;
-            line-height: 64px;
+            font-size: 41px  !important;
+            line-height: 64px  !important;
         }
         .form-field {
             &.search-field {
@@ -1444,8 +1444,8 @@
     }
     .career-section1 {
         .h1 {
-            font-size: 32px;
-            line-height: 15px;
+            font-size: 32px  !important;
+            line-height: 15px  !important;
         }
     }
 
@@ -1496,8 +1496,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 33px;
-            line-height: 49px;
+            font-size: 33px  !important;
+            line-height: 49px  !important;
         }
         .h2 {
             font-size: 27px;
@@ -1540,7 +1540,7 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 40px;
+        font-size: 40px  !important;
     }
     .nft-service-page .h2,
     .about-us-page .h2 {
@@ -1593,7 +1593,7 @@
         padding-bottom: 45px;
         .btn-lg,
         .btn-group-lg > .btn {
-            width: 200px;
+            width: 200px !important;
         }
     }
     .service-inner-section1 .nft-service-img {
@@ -1604,8 +1604,8 @@
     // ------------------Career page starts------------//
     .career-page {
         .h1 {
-            font-size: 44px;
-            line-height: 64px;
+            font-size: 44px  !important;
+            line-height: 64px  !important;
         }
     }
     .career-hero-banner {
@@ -1646,8 +1646,8 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 38px;
-            line-height: 50px;
+            font-size: 38px  !important;
+            line-height: 50px  !important;
         }
         .h2 {
             font-size: 29px;
@@ -1686,7 +1686,7 @@
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
-        font-size: 46px;
+        font-size: 46px  !important;
     }
     // ----------font size---------
 
@@ -1716,7 +1716,7 @@
     // ----------------------career page details start----------------
     .CareerDetails-wrapper {
         .h1 {
-            font-size: 48px;
+            font-size: 48px  !important;
         }
         .h2 {
             font-size: 33px;

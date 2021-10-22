@@ -4,10 +4,10 @@ import {
     Container,
     Row,
     Col,
-    Button,
     Image,
     Breadcrumb,
 } from 'react-bootstrap';
+import { Button, H1, Paragraph } from '@components';
 
 const CareerDetailsComponent = () => {
     return (
@@ -39,18 +39,16 @@ const CareerDetailsComponent = () => {
                     <Row>
                         <Col sm={12} md={12} lg={7} className="my-auto">
                             <div className="text-center text-lg-start">
-                                <p className="location-element">
+                                <Paragraph className="location-element">
                                     Full Time, Pune
-                                </p>
-                                <h1 className="h1 mb-2 pb-2 dark-text-color">
+                                </Paragraph>
+                                <H1 className="mb-2 pb-2 dark-text-color">
                                     User Experience Designer
-                                </h1>
-                                <Button
-                                    variant="primary"
-                                    className="red-btn mb-lg-5 mb-md-4 mb-3"
+                                </H1>
+                                <Button btnVarient="red-btn"
+                                    className="mb-lg-5 mb-md-4 mb-3"
                                 >
-                                    {' '}
-                                    Apply Now{' '}
+                                    Apply Now
                                 </Button>
                             </div>
 
@@ -58,31 +56,31 @@ const CareerDetailsComponent = () => {
                                 <h2 className="h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color">
                                     Overview
                                 </h2>
-                                <p>
+                                <Paragraph>
                                     At ChainCode, we Combine medical expertise
                                     with Machine Learning to offer patients a
                                     primary care experiance like any other.
-                                </p>
+                                </Paragraph>
 
-                                <p>
+                                <Paragraph>
                                     As the primary interface between patients
                                     and their medical team, Our mobile app is a
                                     strategic piece of the virtual clinic we are
                                     building.
-                                </p>
+                                </Paragraph>
 
-                                <p>
+                                <Paragraph>
                                     As the primary interface between patients
                                     and their medical team, Our mobile app is a
                                     strategic piece of the virtual clinic we are
                                     building.
-                                </p>
+                                </Paragraph>
 
-                                <p>
+                                <Paragraph>
                                     This position is full-time and based in
                                     Paris, but we are open to partial remote
                                     work.
-                                </p>
+                                </Paragraph>
                             </div>
                         </Col>
                         <Col sm={12} md={12} lg={5}>
@@ -116,15 +114,15 @@ const CareerDetailsComponent = () => {
                                     Roles & Responsibilities
                                 </h3>
 
-                                <p>
+                                <Paragraph>
                                     The Swiggy Design team works with design
                                     oriented engineers, product managers and
                                     some of the best designers in a fast-paced,
                                     rapidly growing, hybrid
                                     (technology/operations) environment.
-                                </p>
+                                </Paragraph>
 
-                                <p>
+                                <Paragraph>
                                     We are highly user-centric and we deeply
                                     believe we can innovate our way out of any
                                     box. The role demands great execution, bold
@@ -134,7 +132,7 @@ const CareerDetailsComponent = () => {
                                     problems with creativity while keeping the
                                     user in mind and ambition to take projects
                                     to the finish line.
-                                </p>
+                                </Paragraph>
 
                                 <ul className="career-listings lh-md mt-md-4">
                                     <li>
@@ -242,9 +240,8 @@ const CareerDetailsComponent = () => {
                                 </li>
                             </ul>
                             <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
-                                <Button
-                                    variant="primary"
-                                    className="red-btn career-apply-btn"
+                                <Button btnVarient="red-btn"
+                                    className="career-apply-btn"
                                 >
                                     Apply Now
                                 </Button>

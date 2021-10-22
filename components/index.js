@@ -9,3 +9,8 @@ export { default as CareersComponent } from './careers';
 export { default as CareerDetailsComponent } from './careers/CareerDetails';
 export { default as Layout } from './layout';
 export { default as Meta } from './header/Meta';
+export { default as CardSection } from './card-section';
+export { default as ImgPanelSection } from './image-panel-section';
+export { default as Button } from './button';
+export { default as H1 } from './h1';
+export { default as Paragraph } from './paragraph';

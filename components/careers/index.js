@@ -2,7 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Button, H1, Paragraph } from '@components';
 
 const CareersComponent = () => {
     const router = useRouter(),
@@ -46,16 +47,13 @@ const CareersComponent = () => {
                     <Row>
                         <Col>
                             <div className="text-center w-50 mx-auto">
-                                <h1 className="h1">Join our Team</h1>
-                                <p>
+                                <H1>Join our Team</H1>
+                                <Paragraph>
                                     Help us on the quest of making good software
                                     even better.
-                                </p>
+                                </Paragraph>
                                 <div className="button-outer mx-auto mt-md-3 pt-md-3">
-                                    <Button
-                                        variant="primary"
-                                        className="red-btn"
-                                    >
+                                    <Button btnVarient="red-btn">
                                         See Current Openings
                                     </Button>
                                 </div>
@@ -78,19 +76,19 @@ const CareersComponent = () => {
                             sm={12}
                             className="dark-secondary-text-color"
                         >
-                            <h1 className="h1 mb-md-4 pb-md-3 mb-2 pb-2 ">
+                            <H1 className="mb-md-4 pb-md-3 mb-2 pb-2 ">
                                 Why Chaincode Consulting ?
-                            </h1>
-                            <p className="h3 lh-base mb-3 fw-normal">
+                            </H1>
+                            <h3 className="h3 lh-base mb-3 fw-normal">
                                 We are always looking for driven, interesting,
                                 and capable individules to join our team. In
                                 addition to our agaency business, we have
                                 several in-house projects and companies.
-                            </p>
-                            <p className="h3 lh-base mb-3 fw-normal">
+                            </h3>
+                            <h3 className="h3 lh-base mb-3 fw-normal">
                                 If you think you fit the bill, then we’d like to
                                 chat.
-                            </p>
+                            </h3>
                             <a
                                 href="#"
                                 onClick={(e) => e.preventDefault()}
@@ -153,9 +151,9 @@ const CareersComponent = () => {
 
             <section className="career-section2  py-xl-5 py-4">
                 <Container>
-                    <h1 className="h2 mb-md-4 pb-md-3 mb-2 pb-2 dark-secondary-text-color text-center">
+                    <h2 className="h2 mb-md-4 pb-md-3 mb-2 pb-2 dark-secondary-text-color text-center">
                         Job Listings
-                    </h1>
+                    </h2>
                     <Row>
                         <Col sm={12}>
                             <div className="w-1k-block bg-light-primary mx-auto p-lg-4 p-3">
@@ -225,28 +223,26 @@ const CareersComponent = () => {
                                 >
                                     <div className="job-listing p-3  d-flex justify-content-between align-items-center flex-lg-nowrap flex-wrap">
                                         <div className="job-position">
-                                            <p className="h3">
+                                            <h3 className="h3">
                                                 {item.designation}
-                                            </p>
+                                            </h3>
                                             <span>{item.describe}</span>
                                         </div>
                                         <div className="job-info d-flex justify-content-between align-items-center">
                                             <div className="job-location">
-                                                <p className="h3">Location</p>
+                                                <h3 className="h3">Location</h3>
                                                 <span>{item.location}</span>
                                             </div>
                                             <div className="job-posted">
-                                                <p className="h3">Posted</p>
+                                                <h3 className="h3">Posted</h3>
                                                 <span>{item.posts}</span>
                                             </div>
-                                            <Button
-                                                variant="primary"
+                                            <Button btnVarient="gradient-btn"
                                                 onClick={() => {
                                                     router.push(
                                                         `careers/${item.cid}`
                                                     );
                                                 }}
-                                                className="gradient-btn"
                                             >
                                                 Read More
                                             </Button>
