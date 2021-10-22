@@ -1,13 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function CilentTestimonialSection() {
+  const { t } = useTranslation('home');
     const testimonialList = [
         {
             name: 'Chuan Allen',
@@ -40,10 +40,10 @@ export default function CilentTestimonialSection() {
                         <div className="testimonial-bg py-5">
                             <Row>
                                 <Col lg={12} className="text-center">
-                                    <small> Testimonial </small>
+                                    <small> {t('testimonial')} </small>
 
                                     <h2 className="h2 mt-4 mb-5">
-                                        Let Our Clients do the Talking
+                                        {t('letClients')}
                                     </h2>
                                 </Col>
 

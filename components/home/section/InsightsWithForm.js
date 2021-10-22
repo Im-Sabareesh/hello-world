@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
@@ -10,7 +10,8 @@ import homeImages from '@components/images';
 import { CardSection } from 'common-components';
 
 export default function InsightWithFormSection() {
-    const router = useRouter(),
+    const { t } = useTranslation(['home', 'common']),
+        router = useRouter(),
         insightsList = [
             {
                 title: 'Financial Inclusion, Advanced by Digital Currencies',
@@ -45,7 +46,7 @@ export default function InsightWithFormSection() {
             <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">
-                        <h2 className="h2"> Our Latest Insights </h2>
+                        <h2 className="h2"> {t('ourLatestInsights')} </h2>
                     </Col>
 
                     {_.map(insightsList, (item) => (
@@ -63,7 +64,7 @@ export default function InsightWithFormSection() {
                             variant="primary"
                             className="red-btn min-size-btn"
                         >
-                            View More
+                            {t('viewMore', { ns: 'common' })}
                         </Button>
                     </Col>
                 </Row>
@@ -77,9 +78,9 @@ export default function InsightWithFormSection() {
                                 <Row>
                                     <Col md={12} lg={6}>
                                         <h2 className="h2 mb-2">
-                                            Ready to Get Started?
+                                            {t('readyGetStarted')}
                                         </h2>
-                                        <p>Have an idea? Let’s discuss it!</p>
+                                        <p>{t('haveAnIdea')}</p>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -94,7 +95,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom01"
                                                     >
                                                         <Form.Label>
-                                                            FIRST NAME*
+                                                            {t('firstName')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -112,7 +113,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom02"
                                                     >
                                                         <Form.Label>
-                                                            EMAIL*
+                                                            {t('email')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -130,7 +131,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustomUsername"
                                                     >
                                                         <Form.Label>
-                                                            PHONE*
+                                                            {t('phone')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -147,7 +148,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom03"
                                                     >
                                                         <Form.Label>
-                                                            HOW CAN WE HELP YOU?
+                                                            {t('weHelpYou')}
                                                         </Form.Label>
                                                         <Form.Control
                                                             as="textarea"
@@ -187,32 +188,10 @@ export default function InsightWithFormSection() {
                                                                             className="flex-shrink-0 mr-3"
                                                                         />
                                                                         <Form.Check.Label>
-                                                                            *As
-                                                                            a
-                                                                            result
-                                                                            of
-                                                                            submitting
-                                                                            completed
-                                                                            “Contact
-                                                                            Us”
-                                                                            form,
-                                                                            your
-                                                                            personal
-                                                                            data
-                                                                            will
-                                                                            be
-                                                                            processed
-                                                                            by
-                                                                            ChainCode.
-                                                                            We
-                                                                            are
-                                                                            committed
-                                                                            to
-                                                                            respecting
-                                                                            your
-                                                                            privacy.
-                                                                            Read
-                                                                            our{' '}
+                                                                            *
+                                                                            {t(
+                                                                                'agreeTrems'
+                                                                            )}
                                                                             <a
                                                                                 href="#"
                                                                                 onClick={(
@@ -221,8 +200,12 @@ export default function InsightWithFormSection() {
                                                                                     e.preventDefault()
                                                                                 }
                                                                             >
-                                                                                Privacy
-                                                                                Policy
+                                                                                {t(
+                                                                                    'privacyPolicy',
+                                                                                    {
+                                                                                        ns: 'common',
+                                                                                    }
+                                                                                )}
                                                                             </a>
                                                                             .
                                                                         </Form.Check.Label>

@@ -14,11 +14,11 @@ const Footer = () => {
             footer: undefined,
             component: () => <EmptyFooter />,
         },
-        {
-            name: '/',
-            footer: 'left',
-            component: () => <CommonFooter radius={true} />,
-        },
+        // {
+        //     name: '/',
+        //     footer: 'left',
+        //     component: () => <CommonFooter radius={true} />,
+        // },
         { name: '/careers', footer: 'left', component: () => <CommonFooter /> },
         {
             name: '/careers/careerDetails',
@@ -37,9 +37,11 @@ const Footer = () => {
         },
     ];
 
-    const footer = _.find(whiteLayout, (l) => router.pathname === l.name);
+    const footer = _.find(whiteLayout, (l) => router.pathname.includes(l.name));
 
-    return <>{!!footer && footer.component()}</>;
+    return (
+        <>{!!footer ? footer.component() : <CommonFooter radius={true} />}</>
+    );
 };
 
 export default Footer;

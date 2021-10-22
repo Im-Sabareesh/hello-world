@@ -1,11 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function ChooseUsSection({ data }) {
+  const { t } = useTranslation('home')
     const chooseUSList = [
         {
             icon: homeImages.whyChose,
@@ -49,24 +51,11 @@ export default function ChooseUsSection({ data }) {
                     </Col>
 
                     <Col md={12} lg={6}>
-                        <h2 className="h2 mb-4"> Why Choose Us </h2>
+                        <h2 className="h2 mb-4"> {t('chooseUs')} </h2>
 
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when
-                            looking at its layout. The point of using Lorem
-                            Ipsum is that it has a more-or-less normal
-                            distribution of letters, as opposed to using
-                            &apos;Content here, content here&apos;, making it
-                            look like readable English.
-                        </p>
+                        <p>{t('chooseUsDesc1')}</p>
 
-                        <p>
-                            Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model
-                            text, and a search for &apos;lorem ipsum&apos; will
-                            uncover many web sites still in their infancy.
-                        </p>
+                        <p>{t('chooseUsDesc2')}</p>
                     </Col>
                     {_.map(chooseUSList, (item) => (
                         <Col key={_.uniqueId()} md={6} className="mt-4">

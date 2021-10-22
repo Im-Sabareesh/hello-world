@@ -72,14 +72,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -114,7 +114,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -168,7 +168,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -202,10 +202,10 @@
     }
 
     .contactus-container {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
         .contact-img {
-            margin-top: 0px;
+            margin-top: 0;
         }
 
         .contactus-sociallinks {
@@ -220,7 +220,15 @@
     }
 
     .section-glow {
-        padding: 50px 0 20px 0 !important;
+        padding: 50px 0 20px !important;
+    }
+
+    // ----------------Backdrop home footer --------
+    .backtotop {
+        position: absolute;
+        bottom: 75px;
+        right: 20px;
+        width: 110px;
     }
 
     .inner-page-header {
@@ -307,14 +315,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -346,7 +354,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -396,7 +404,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -423,8 +431,8 @@
     }
 
     .contactus-container {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
 
         .contactus-sociallinks {
             margin-bottom: 50px;
@@ -438,7 +446,7 @@
     }
 
     .section-glow {
-        padding: 50px 0 20px 0 !important;
+        padding: 50px 0 20px !important;
     }
 
     .inner-page-header {
@@ -520,14 +528,14 @@
             .navbar-toggler {
                 position: absolute;
                 top: 7px;
-                right: 0px;
+                right: 0;
             }
 
             .me-auto.navbar-nav {
                 background: #fff;
                 margin-top: 55px;
                 border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
+                box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.2);
             }
         }
 
@@ -552,7 +560,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -591,7 +599,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -662,7 +670,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -699,7 +707,7 @@
         }
 
         .user-name {
-            padding-right: 0px;
+            padding-right: 0;
             span {
                 font-size: 14px;
             }
@@ -736,7 +744,7 @@
     .home-contact-form {
         .btn-lg {
             width: 166px;
-            padding: 0px;
+            padding: 0;
         }
     }
 }
@@ -911,10 +919,10 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             .form-control,
             .form-select {
@@ -938,7 +946,7 @@
 
     .career-hero-banner {
         min-height: 290px;
-        margin: 95px 0 30px 0;
+        margin: 95px 0 30px;
         padding-top: 30px;
         background-size: 100%;
         background-position: bottom;
@@ -947,7 +955,7 @@
         }
     }
     .career-section3 {
-        padding: 10px 0 30px 0;
+        padding: 10px 0 30px;
         .job-position {
             width: 100%;
             margin-bottom: 20px;
@@ -999,7 +1007,7 @@
     }
     .careerdetail-roles-section {
         .roles-responsibility {
-            padding: 30px 30px;
+            padding: 30px;
         }
     }
     .careerdetail-overview-section {
@@ -1196,7 +1204,7 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
                 margin-right: 15px;
@@ -1219,11 +1227,11 @@
 
     .career-hero-banner {
         min-height: 340px;
-        margin: 115px 0 30px 0;
+        margin: 115px 0 30px;
         padding-top: 40px;
     }
     .career-section3 {
-        padding: 10px 0 40px 0;
+        padding: 10px 0 40px;
         .job-position {
             width: 100%;
             margin-bottom: 30px;
@@ -1273,7 +1281,7 @@
     }
     .careerdetail-roles-section {
         .roles-responsibility {
-            padding: 35px 35px;
+            padding: 35px;
         }
     }
     .careerdetail-overview-section {
@@ -1390,8 +1398,8 @@
     }
     .service-inner-section3 {
         .cta-banner2 {
-            //min-height: 240px;
-            //background-position: center;
+            // min-height: 240px;
+            // background-position: center;
             &:after {
                 min-height: 240px;
             }
@@ -1452,7 +1460,7 @@
                 flex: unset;
             }
             &:not(:last-child) {
-                margin-right: 0px;
+                margin-right: 0;
             }
             &:nth-child(odd) {
                 margin-right: 20px;
@@ -1472,11 +1480,11 @@
 
     .career-hero-banner {
         min-height: 420px;
-        margin: 115px 0 30px 0;
+        margin: 115px 0 30px;
         padding-top: 50px;
     }
     .career-section3 {
-        padding: 20px 0 40px 0;
+        padding: 20px 0 40px;
         .job-position {
             width: 100%;
             margin-bottom: 30px;
@@ -1549,7 +1557,7 @@
     // ----------------------career page details end----------------
     // changes
     .section-glow {
-        padding: 55px 0 45px 0;
+        padding: 55px 0 45px;
     }
     .home-footer {
         .home-footer-logo {
@@ -1634,11 +1642,11 @@
     }
     .career-hero-banner {
         min-height: 550px;
-        margin: 125px 0 30px 0;
+        margin: 125px 0 30px;
         padding-top: 80px;
     }
     .career-section3 {
-        padding: 20px 0 40px 0;
+        padding: 20px 0 40px;
         .job-position {
             width: 40%;
         }
@@ -1703,7 +1711,7 @@
 
     // changes
     .section-glow {
-        padding: 75px 0 75px 0;
+        padding: 75px 0;
     }
 }
 @include media-breakpoint-between(xl, xxl) {
@@ -1728,7 +1736,7 @@
         min-height: 730px;
     }
     .career-section3 {
-        padding: 60px 0 100px 0;
+        padding: 60px 0 100px;
     }
     .career-section2 {
         .w-1k-block {
@@ -1750,7 +1758,7 @@
         .roles-responsibility {
             padding: 60px 55px;
         }
-    }
+    };
     // ----------------------career page details end----------------
 }
 

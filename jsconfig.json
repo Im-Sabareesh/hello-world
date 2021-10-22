@@ -11,22 +11,11 @@
             "@components/icons/*": ["components/icons/*"],
             "@components/icons": ["components/icons"],
             "@components/images/*": ["components/images/*"],
-            "@components/images": ["components/images"]
-            // "@redux/*": [
-            //   "src/redux/*"
-            // ],
-            // "@redux": [
-            //   "src/redux"
-            // ],
-            // "@i18n": [
-            //   "./i18n"
-            // ],
-            // "@test/*": [
-            //   "test/*"
-            // ],
-            // "@test": [
-            //   "test"
-            // ]
+            "@components/images": ["components/images"],
+            "@libs": ["libs"],
+            "@libs/*": ["libs/*"],
+            "@redux": ["redux"],
+   
         }
     }
 }

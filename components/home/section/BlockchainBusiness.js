@@ -1,33 +1,35 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function BlockchainBusinessSection() {
-    const blockChainUsageList = [
-        {
-            name: 'Enhanced security',
-            icon: homeImages.enhSecurity,
-        },
-        {
-            name: 'Greater transparency',
-            icon: homeImages.greTransp,
-        },
-        {
-            name: 'Instant traceability',
-            icon: homeImages.instanceTrace,
-        },
-        {
-            name: 'Increased efficiency',
-            icon: homeImages.incEff,
-        },
-        {
-            name: 'Decentralized Governance',
-            icon: homeImages.deCenGov,
-        },
-    ];
+    const { t } = useTranslation(['home', 'common']),
+        blockChainUsageList = [
+            {
+                name: t('enhancedSecurity'),
+                icon: homeImages.enhSecurity
+            },
+            {
+                name: t('greaterTransparency'),
+                icon: homeImages.greTransp
+            },
+            {
+                name: t('instantTraceability'),
+                icon: homeImages.instanceTrace
+            },
+            {
+                name: t('increasedEfficiency'),
+                icon: homeImages.incEff
+            },
+            {
+                name: t('decentralizedGovernance'),
+                icon: homeImages.deCenGov
+            },
+        ];
 
     return (
         <section className="home-section1 py-5">
@@ -35,19 +37,10 @@ export default function BlockchainBusinessSection() {
                 <Row>
                     <Col md={12} lg={6} className="mt-5">
                         <h2 className="dark-text-color mb-4 h2">
-                            How Blockchain Enhances Your Business
+                            {t('blockChainEnhance')}
                         </h2>
 
-                        <p>
-                            Blockchain for business uses a shared and immutable
-                            ledger that can only be accessed by members with
-                            permission. Network members control what information
-                            each organization or member may see, and what
-                            actions each can take. Blockchain is sometimes
-                            called a trustless network not because business
-                            partners don’t trust each other, but because they
-                            don’t have to.
-                        </p>
+                        <p>{t('blockChainEnhanceDesc')}</p>
                     </Col>
 
                     <Col

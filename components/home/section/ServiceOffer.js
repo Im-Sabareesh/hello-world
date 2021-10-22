@@ -1,11 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
+import { useTranslation } from 'next-i18next';
 
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function ServiceOfferSection() {
+  const { t } = useTranslation('home')
     const serviceList = [
         {
             name: 'Decentraized Finance',
@@ -51,15 +53,10 @@ export default function ServiceOfferSection() {
                 <Row>
                     <Col md={8} className="mx-auto text-center mb-2">
                         <h2 className="h2 dark-text-color mb-4">
-                            Services We Offer
+                            {t('servicesOffer')}
                         </h2>
 
-                        <p>
-                            Nulla Lorem mollit cupidatat irure. Laborum magna
-                            nulla duis ullamco cillum dolor. Voluptate
-                            exercitation incididunt aliquip deserunt
-                            reprehenderit elit laborum.
-                        </p>
+                        <p>{t('nullaLoremLaborum')}</p>
                     </Col>
                 </Row>
             </Container>
@@ -96,7 +93,7 @@ export default function ServiceOfferSection() {
                             onClick={(e) => e.preventDefault()}
                             className="h3 dark-text-color link-primary"
                         >
-                            And a lot more for you
+                            {t('lotMoreYou')}
                         </a>
                     </Col>
                 </Row>
