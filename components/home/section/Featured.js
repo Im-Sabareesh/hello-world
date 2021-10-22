@@ -90,3 +90,7 @@ export default function FeaturedSection() {
         </section>
     );
 }
+
+FeaturedSection.propTypes = {};
+
+FeaturedSection.defaultProps = {};

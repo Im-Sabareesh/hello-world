@@ -266,3 +266,11 @@ const RadiusFooter = (props) => {
 };
 
 export default RadiusFooter;
+
+RadiusFooter.propTypes = {
+    radius: PropTypes.string,
+};
+
+RadiusFooter.defaultProps = {
+    radius: '',
+};

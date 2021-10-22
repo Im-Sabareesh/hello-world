@@ -98,3 +98,7 @@ const HomeComponent = () => {
 };
 
 export default HomeComponent;
+
+HomeComponent.propTypes = {};
+
+HomeComponent.defaultProps = {};

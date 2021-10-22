@@ -25,3 +25,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+DefiServices.propTypes = {};
+
+DefiServices.defaultProps = {};

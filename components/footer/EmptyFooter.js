@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useTranslation } from 'next-i18next';
 
 const EmptyFooter = () => {
@@ -31,3 +31,7 @@ const EmptyFooter = () => {
 };
 
 export default EmptyFooter;
+
+EmptyFooter.propTypes = {};
+
+EmptyFooter.defaultProps = {};

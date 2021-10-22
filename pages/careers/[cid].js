@@ -31,3 +31,7 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export default CareerDetails;
+
+CareerDetails.propTypes = {};
+
+CareerDetails.defaultProps = {};

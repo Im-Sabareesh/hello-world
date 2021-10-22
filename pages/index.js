@@ -20,4 +20,8 @@ export const getStaticProps = async (p) => {
             ...(await serverSideTranslations(p.locale, ['home', 'common'])),
         },
     };
-};
+}
+
+Home.propTypes = {};
+
+Home.defaultProps = {};

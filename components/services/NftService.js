@@ -134,3 +134,7 @@ const NFTSComponent = () => {
 };
 
 export default NFTSComponent;
+
+NFTSComponent.propTypes = {};
+
+NFTSComponent.defaultProps = {};

@@ -24,3 +24,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+NFTServices.propTypes = {};
+
+NFTServices.defaultProps = {};

@@ -89,3 +89,7 @@ export default function BlockChainSolutionSection() {
         </section>
     );
 }
+
+BlockChainSolutionSection.propTypes = {};
+
+BlockChainSolutionSection.defaultProps = {};

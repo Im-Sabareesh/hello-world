@@ -81,3 +81,7 @@ export default function ChooseUsSection({ data }) {
         </section>
     );
 }
+
+ChooseUsSection.propTypes = {};
+
+ChooseUsSection.defaultProps = {};

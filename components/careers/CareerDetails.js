@@ -99,3 +99,7 @@ const CareerDetailsComponent = () => {
 };
 
 export default CareerDetailsComponent;
+
+CareerDetailsComponent.propTypes = {};
+
+CareerDetailsComponent.defaultProps = {};

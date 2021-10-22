@@ -241,3 +241,7 @@ const CareersComponent = () => {
 };
 
 export default CareersComponent;
+
+CareersComponent.propTypes = {};
+
+CareersComponent.defaultProps = {};

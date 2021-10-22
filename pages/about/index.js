@@ -25,3 +25,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+AboutUs.propTypes = {};
+
+AboutUs.defaultProps = {};

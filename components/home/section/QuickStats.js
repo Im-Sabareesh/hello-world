@@ -80,3 +80,7 @@ export default function QuickStatsSection() {
         </section>
     );
 }
+
+QuickStatsSection.propTypes = {};
+
+QuickStatsSection.defaultProps = {};

@@ -101,3 +101,7 @@ export default function ServiceOfferSection() {
         </section>
     );
 }
+
+ServiceOfferSection.propTypes = {};
+
+ServiceOfferSection.defaultProps = {};

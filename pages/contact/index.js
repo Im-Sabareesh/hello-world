@@ -25,3 +25,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+ContactUs.propTypes = {};
+
+ContactUs.defaultProps = {};

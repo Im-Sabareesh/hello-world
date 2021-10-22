@@ -69,3 +69,7 @@ export default function ExploreProjectSection() {
         </section>
     );
 }
+
+ExploreProjectSection.propTypes = {};
+
+ExploreProjectSection.defaultProps = {};

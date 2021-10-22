@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 
 export default function toaster(description, type) {
     toast(description, {
@@ -12,3 +13,10 @@ export default function toaster(description, type) {
         type: type,
     });
 }
+
+toaster.propTypes = {
+    description: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+};
+
+toaster.defaultProps = {};

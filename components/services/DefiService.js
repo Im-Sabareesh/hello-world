@@ -254,3 +254,7 @@ const DefiSComponent = () => {
 };
 
 export default DefiSComponent;
+
+DefiSComponent.propTypes = {};
+
+DefiSComponent.defaultProps = {};

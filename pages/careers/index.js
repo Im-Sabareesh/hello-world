@@ -31,3 +31,7 @@ export const getStaticProps = async (p) => {
 };
 
 export default Careers;
+
+Careers.propTypes = {};
+
+Careers.defaultProps = {};

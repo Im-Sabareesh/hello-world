@@ -209,3 +209,8 @@ const Header = () => {
 };
 
 export default Header;
+
+
+Header.propTypes = {};
+
+Header.defaultProps = {};

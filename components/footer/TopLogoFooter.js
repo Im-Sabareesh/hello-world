@@ -247,3 +247,7 @@ const TopLogoFooter = () => {
 };
 
 export default TopLogoFooter;
+
+TopLogoFooter.propTypes = {};
+
+TopLogoFooter.defaultProps = {};

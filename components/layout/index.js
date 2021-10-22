@@ -16,3 +16,7 @@ const Layout = (props) => {
 };
 
 export default Layout;
+
+Layout.propTypes = {};
+
+Layout.defaultProps = {};
