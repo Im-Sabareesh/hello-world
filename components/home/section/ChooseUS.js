@@ -8,7 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Paragraph } from '@components';
 import images from '@components/images';
 
-export default function ChooseUsSection({ data }) {
+export default function ChooseUsSection() {
     const { t } = useTranslation('home');
     const chooseUSList = [
         {
@@ -83,3 +83,7 @@ export default function ChooseUsSection({ data }) {
         </section>
     );
 }
+
+ChooseUsSection.propTypes = {};
+
+ChooseUsSection.defaultProps = {};

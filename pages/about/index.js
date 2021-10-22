@@ -1,15 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-import { AboutUsComponent } from '@components';
+import { AboutUsComponent, Meta } from '@components';
 
 const AboutUs = () => {
+    const { t } = useTranslation('common');
     return (
         <div className="about-us-page">
-            <Head>
-                <title>About Us</title>
-            </Head>
+            <Meta title={t('header.aboutUS')} desc="" />
 
             <AboutUsComponent />
         </div>
@@ -25,3 +24,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+AboutUs.propTypes = {};
+
+AboutUs.defaultProps = {};

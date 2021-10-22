@@ -72,16 +72,16 @@ export default function ServiceOfferSection() {
                             lg={4}
                             className="service-thumb text-center mt-5"
                         >
-                            <Paragraph>
-                                <Image
-                                    src={item.icon}
-                                    alt=""
-                                    height={65}
-                                    width={85}
-                                    placeholder="blur"
-                                    loading="lazy"
-                                />
-                            </Paragraph>
+                            {/* <p> */}
+                            <Image
+                                src={item.icon}
+                                alt=""
+                                height={65}
+                                width={85}
+                                placeholder="blur"
+                                loading="lazy"
+                            />
+                            {/* </p> */}
 
                             <h3 className="h3 dark-text-color">{item.name}</h3>
 
@@ -103,3 +103,7 @@ export default function ServiceOfferSection() {
         </section>
     );
 }
+
+ServiceOfferSection.propTypes = {};
+
+ServiceOfferSection.defaultProps = {};

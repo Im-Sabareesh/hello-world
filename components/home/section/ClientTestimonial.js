@@ -93,3 +93,7 @@ export default function CilentTestimonialSection() {
         </section>
     );
 }
+
+CilentTestimonialSection.propTypes = {};
+
+CilentTestimonialSection.defaultProps = {};

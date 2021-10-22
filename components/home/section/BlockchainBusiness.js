@@ -69,15 +69,15 @@ export default function BlockchainBusinessSection() {
                                     className="home-section-icons d-flex align-items-center justify-content-center text-center"
                                 >
                                     <div>
-                                        <Paragraph>
-                                            <Image
-                                                src={item.icon}
-                                                alt=""
-                                                width={76}
-                                                height={76}
-                                                loading="lazy"
-                                            />
-                                        </Paragraph>
+                                        {/* <p> */}
+                                        <Image
+                                            src={item.icon}
+                                            alt=""
+                                            width={76}
+                                            height={76}
+                                            loading="lazy"
+                                        />
+                                        {/* </p> */}
                                         <h3 className="h3 dark-text-color mb-0">
                                             {item.name}
                                         </h3>
@@ -91,3 +91,7 @@ export default function BlockchainBusinessSection() {
         </section>
     );
 }
+
+BlockchainBusinessSection.propTypes = {};
+
+BlockchainBusinessSection.defaultProps = {};

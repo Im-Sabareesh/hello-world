@@ -7,12 +7,14 @@ const Layout = (props) => {
     return (
         <>
             <Header />
-
             {props.children}
-
             <Footer />
         </>
     );
 };
 
 export default Layout;
+
+Layout.propTypes = {};
+
+Layout.defaultProps = {};

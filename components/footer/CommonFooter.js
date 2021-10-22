@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
 import { useTranslation } from 'next-i18next';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -267,3 +268,11 @@ const RadiusFooter = (props) => {
 };
 
 export default RadiusFooter;
+
+RadiusFooter.propTypes = {
+    radius: PropTypes.bool,
+};
+
+RadiusFooter.defaultProps = {
+    radius: false,
+};

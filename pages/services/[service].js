@@ -7,3 +7,7 @@ export default function ServicesDetails() {
         </>
     );
 }
+
+ServicesDetails.propTypes = {};
+
+ServicesDetails.defaultProps = {};

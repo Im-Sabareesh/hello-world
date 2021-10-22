@@ -253,3 +253,7 @@ export default function InsightWithFormSection() {
         </section>
     );
 }
+
+InsightWithFormSection.propTypes = {};
+
+InsightWithFormSection.defaultProps = {};

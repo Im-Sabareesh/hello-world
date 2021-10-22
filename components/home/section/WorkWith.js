@@ -51,3 +51,7 @@ export default function WorkWithSection() {
         </section>
     );
 }
+
+WorkWithSection.propTypes = {};
+
+WorkWithSection.defaultProps = {};

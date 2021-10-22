@@ -408,3 +408,7 @@ const ContactComponent = () => {
 };
 
 export default ContactComponent;
+
+ContactComponent.propTypes = {};
+
+ContactComponent.defaultProps = {};

@@ -370,3 +370,7 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+AboutUs.propTypes = {};
+
+AboutUs.defaultProps = {};

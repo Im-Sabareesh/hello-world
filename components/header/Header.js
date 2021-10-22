@@ -5,14 +5,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 
-import {
-    Container,
-    Row,
-    Col,
-    Navbar,
-    Nav,
-    NavDropdown,
-} from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 import { Button } from '@components';
 import images from '@components/images';
@@ -83,9 +76,9 @@ const Header = () => {
 
             <div
                 className={`main-header py-3 ${
-                    _.some(whiteLayout, (lay) =>
-                        router.pathname.includes(lay)
-                    ) && 'inner-page-header'
+                    _.some(whiteLayout, (lay) => router.pathname.includes(lay))
+                        ? 'inner-page-header'
+                        : ''
                 }`}
             >
                 <Container>
@@ -100,8 +93,9 @@ const Header = () => {
                                             !state &&
                                             _.some(whiteLayout, (lay) =>
                                                 router.pathname.includes(lay)
-                                            ) &&
-                                            'white-logo'
+                                            )
+                                                ? 'white-logo'
+                                                : ''
                                         }
                                         width={120}
                                         height={72}
@@ -193,8 +187,9 @@ const Header = () => {
                                         !state &&
                                         _.some(whiteLayout, (lay) =>
                                             router.pathname.includes(lay)
-                                        ) &&
-                                        'white-logo'
+                                        )
+                                            ? 'white-logo'
+                                            : ''
                                     }
                                     width={17}
                                     height={17}
@@ -209,3 +204,7 @@ const Header = () => {
 };
 
 export default Header;
+
+Header.propTypes = {};
+
+Header.defaultProps = {};

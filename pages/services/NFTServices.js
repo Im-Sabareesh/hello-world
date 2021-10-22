@@ -1,15 +1,15 @@
 import React from 'react';
-import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { NFTSComponent } from '@components';
+import { NFTSComponent, Meta } from '@components';
 
 const NFTServices = () => {
+    const { t } = useTranslation('common');
     return (
         <div className="nft-service-page">
-            <Head>
-                <title>NFT Development</title>
-            </Head>
+            <Meta title={t('nftDevelopement')} desc="" />
+
             <NFTSComponent />
         </div>
     );
@@ -24,3 +24,7 @@ export const getStaticProps = async (p) => {
         },
     };
 };
+
+NFTServices.propTypes = {};
+
+NFTServices.defaultProps = {};

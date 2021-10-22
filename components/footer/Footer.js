@@ -45,3 +45,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+Footer.propTypes = {};
+
+Footer.defaultProps = {};
