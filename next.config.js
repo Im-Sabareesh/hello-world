@@ -40,4 +40,4 @@ module.exports = (phase) => {
         i18n,
         localePath,
     };
-}
+};

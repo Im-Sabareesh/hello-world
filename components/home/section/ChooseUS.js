@@ -7,7 +7,7 @@ import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function ChooseUsSection({ data }) {
-  const { t } = useTranslation('home')
+    const { t } = useTranslation('home');
     const chooseUSList = [
         {
             icon: homeImages.whyChose,

@@ -11,23 +11,23 @@ export default function BlockchainBusinessSection() {
         blockChainUsageList = [
             {
                 name: t('enhancedSecurity'),
-                icon: homeImages.enhSecurity
+                icon: homeImages.enhSecurity,
             },
             {
                 name: t('greaterTransparency'),
-                icon: homeImages.greTransp
+                icon: homeImages.greTransp,
             },
             {
                 name: t('instantTraceability'),
-                icon: homeImages.instanceTrace
+                icon: homeImages.instanceTrace,
             },
             {
                 name: t('increasedEfficiency'),
-                icon: homeImages.incEff
+                icon: homeImages.incEff,
             },
             {
                 name: t('decentralizedGovernance'),
-                icon: homeImages.deCenGov
+                icon: homeImages.deCenGov,
             },
         ];
 

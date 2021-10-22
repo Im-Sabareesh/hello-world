@@ -7,7 +7,7 @@ import Image from 'next/image';
 import homeImages from '@components/images';
 
 export default function ServiceOfferSection() {
-  const { t } = useTranslation('home')
+    const { t } = useTranslation('home');
     const serviceList = [
         {
             name: 'Decentraized Finance',

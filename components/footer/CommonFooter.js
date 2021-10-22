@@ -98,13 +98,13 @@ const RadiusFooter = (props) => {
                                 // onClick={(e) => e.preventDefault()}
                                 className="brand-logo"
                             >
-                  <Image
-                    src={footerImages.ccWhiteLogo}
-                    className="mb-4"
-                    alt="..."
-                    width={219}
-                    height={140}
-                  />
+                                <Image
+                                    src={footerImages.ccWhiteLogo}
+                                    className="mb-4"
+                                    alt="..."
+                                    width={219}
+                                    height={140}
+                                />
                             </a>
                         </Link>
                         <p className="light-text-color text-shadow">
