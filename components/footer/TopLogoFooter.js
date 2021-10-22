@@ -94,7 +94,7 @@ const TopLogoFooter = () => {
                         lg={12}
                         md={12}
                         sm={6}
-                        xs={12}
+                        xs={6}
                         className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 "
                     >
                         <Link href="/">
@@ -170,7 +170,7 @@ const TopLogoFooter = () => {
                             lg={item.style.lg}
                             md={4}
                             sm={6}
-                            xs={12}
+                            xs={6}
                             className="mb-xl-0 mb-md-4 mb-sm-3 mb-4"
                         >
                             <p className="h3 light-text-color mb-3">
