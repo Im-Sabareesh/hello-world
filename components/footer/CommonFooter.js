@@ -19,11 +19,11 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: '/services/DefiServices',
+                        route: `/${props.language}/services/DefiServices`
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: '/services/NFTServices',
+                        route: `/${props.language}/services/NFTServices`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),
@@ -63,15 +63,15 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('contactUs'),
-                        route: '/contact',
+                        route: `/${props.language}/contact`,
                     },
                     {
                         name: t('career'),
-                        route: '/careers',
+                        route: `/${props.language}/careers`,
                     },
                     {
                         name: t('footer.moreAboutUs'),
-                        route: '/about',
+                        route: `/${props.language}/about`,
                     },
                     {
                         name: t('footer.blog'),
@@ -96,7 +96,7 @@ const RadiusFooter = (props) => {
                                 : 'home-footer-logo'
                         } mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                     >
-                        <Link href="/">
+                        <Link href={`/${props.language}/`}>
                             <a
                                 // onClick={(e) => e.preventDefault()}
                                 className="brand-logo"
@@ -271,8 +271,10 @@ export default RadiusFooter;
 
 RadiusFooter.propTypes = {
     radius: PropTypes.bool,
+    language: PropTypes.string
 };
 
 RadiusFooter.defaultProps = {
     radius: false,
+    language: ''
 };

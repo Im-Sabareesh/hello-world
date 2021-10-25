@@ -1,11 +1,10 @@
 import React from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-
+import i18next from 'i18next';
 import { AboutUsComponent, Meta } from '@components';
 
+import {getAllLanguageSlugs, getLanguage} from '@libs/lang';
 const AboutUs = () => {
-    const { t } = useTranslation('common');
+    const t  = i18next.t.bind(i18next);
     return (
         <div className="about-us-page">
             <Meta title={t('header.aboutUS')} desc="" />
@@ -17,13 +16,23 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-export const getStaticProps = async (p) => {
-    return {
-        props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
-        },
-    };
-};
+
+export async function getStaticPaths() {
+	const paths = getAllLanguageSlugs();
+	return {
+		paths,
+		fallback: false,
+	};
+}
+
+export async function getStaticProps({ params }) {
+	const language = getLanguage(params.lang);
+	return {
+		props: {
+			language,
+		},
+	};
+}
 
 AboutUs.propTypes = {};
 

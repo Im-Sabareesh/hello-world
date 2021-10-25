@@ -3,26 +3,24 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import i18next from 'i18next';
-import Image from 'next/image';
-
-import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import NextImage from 'next/image';
+import PropTypes from 'prop-types'
+import { Container, Row, Col, Navbar, Nav, Image, NavDropdown } from 'react-bootstrap';
 
 import { Button } from '@components';
 import images from '@components/images';
-
-const Header = () => {
+const Header = (props) => {
     const router = useRouter(),
         t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'],
         [state, setState] = React.useState(''),
         socialMedisIcons = [
-            '/assets/icons/facebook.svg',
-            '/assets/icons/instagram.svg',
-            '/assets/icons/twitter.svg',
-            '/assets/icons/youtube.svg',
-            '/assets/icons/wordpress.svg',
+            images.fbPng,
+            images.instaPgn,
+            images.twitterPng,
+            images.uTubePng,
+            images.wpPng
         ];
-
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
             setState('sticky');
@@ -58,12 +56,13 @@ const Header = () => {
                                                     e.preventDefault()
                                                 }
                                             >
-                                                <Image
+                                                <Image src={icon} />
+                                                {/* <Image
                                                     src={icon}
-                                                    alt=""
+                                                    alt=" "
                                                     height={20}
-                                                    width={20}
-                                                />
+                                                    width={20} */}
+                                                {/* /> */}
                                             </a>
                                         </li>
                                     ))}
@@ -84,9 +83,9 @@ const Header = () => {
                 <Container>
                     <Row>
                         <Col sm={4} md={3} lg={2}>
-                            <Link href="/">
+                            <Link href={`/${props.language}/`}>
                                 <a>
-                                    <Image
+                                    <NextImage
                                         src={images.logo}
                                         alt=""
                                         className={
@@ -112,7 +111,7 @@ const Header = () => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Link href="/about">
+                                            <Link href={`/${props.language}/about`}>
                                                 <a className="nav-link">
                                                     {t('header.aboutUS')}
                                                 </a>
@@ -144,12 +143,12 @@ const Header = () => {
                                                 id="basic-nav-dropdown"
                                             >
                                                 <NavDropdown.Item>
-                                                    <Link href="/services/NFTServices">
+                                                    <Link href={`/${props.language}/services/NFTServices`}>
                                                         {t('nftDevelopement')}
                                                     </Link>
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item>
-                                                    <Link href="/services/DefiServices">
+                                                    <Link href={`/${props.language}/services/DefiServices`}>
                                                         {t('defiDevelopment')}
                                                     </Link>
                                                 </NavDropdown.Item>
@@ -180,7 +179,7 @@ const Header = () => {
                                 className="ms-2 header-search"
                                 onClick={(e) => e.preventDefault()}
                             >
-                                <Image
+                                <NextImage
                                     src={images.searchIcon}
                                     alt=""
                                     className={
@@ -205,6 +204,8 @@ const Header = () => {
 
 export default Header;
 
-Header.propTypes = {};
+Header.propTypes = {language: PropTypes.string};
 
-Header.defaultProps = {};
+Header.defaultProps = {
+    language: ''
+};

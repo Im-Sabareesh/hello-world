@@ -1,14 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-
+import PropTypes from 'prop-types'
 import { Button, H1, Paragraph } from '@components';
 import { careerSelector } from '@redux';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
-const CareersComponent = () => {
+const CareersComponent = (props) => {
     const jobList = useSelector(careerSelector.careerListSelector);
 
     const router = useRouter();
@@ -218,7 +218,7 @@ const CareersComponent = () => {
                                                 btnVarient="gradient-btn"
                                                 onClick={() => {
                                                     router.push(
-                                                        `careers/${item.id}`
+                                                        `/${props.language}/careers/${item.id}`
                                                     );
                                                 }}
                                             >
@@ -240,6 +240,6 @@ const CareersComponent = () => {
 
 export default CareersComponent;
 
-CareersComponent.propTypes = {};
+CareersComponent.propTypes = {language: PropTypes.string};
 
-CareersComponent.defaultProps = {};
+CareersComponent.defaultProps = { language: ""};

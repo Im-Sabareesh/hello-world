@@ -4,11 +4,13 @@ import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
 const Layout = (props) => {
+    const language = props.language
+
     return (
         <>
-            <Header />
+            <Header language={language}/>
             {props.children}
-            <Footer />
+            <Footer language={language}/>
         </>
     );
 };

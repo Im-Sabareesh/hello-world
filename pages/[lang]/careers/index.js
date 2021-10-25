@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18next from 'i18next';
 
 import { CareersComponent, Meta } from '@components';
 import { careerAction } from '@redux';
+import {getAllLanguageSlugs, getLanguage} from '@libs/lang';
 
-const Careers = () => {
-    const { t } = useTranslation('common');
+const Careers = (props) => {
+    const t  = i18next.t.bind(i18next);
     const dispatch = useDispatch();
     React.useEffect(() => {
         dispatch(careerAction.careerList());
@@ -16,18 +16,28 @@ const Careers = () => {
         <div className="career-page">
             <Meta title={t('career')} desc="" />
 
-            <CareersComponent />
+            <CareersComponent language={props.language} />
         </div>
     );
 };
 
-export const getStaticProps = async (p) => {
-    return {
-        props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
-        },
-    };
-};
+
+export async function getStaticPaths() {
+	const  paths = getAllLanguageSlugs();
+	return {
+		paths,
+		fallback: false,
+	};
+}
+
+export async function getStaticProps({ params }) {
+	const language = getLanguage(params.lang);
+	return {
+		props: {
+			language,
+		},
+	};
+}
 
 export default Careers;
 

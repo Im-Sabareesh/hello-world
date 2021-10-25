@@ -14,10 +14,9 @@ import i18next from 'i18next';
 function MyApp(props) {
     const { Component, pageProps } = props;
     i18next.changeLanguage(pageProps.language);
-
     return (
         <Provider store={store}>
-            <Layout>
+            <Layout {...pageProps}>
                 <ToastContainer
                     position="top-right"
                     autoClose={5000}
@@ -35,12 +34,12 @@ function MyApp(props) {
     );
 }
 
-export async function getInitialProps({ Component, ctx }) {
-    const pageProps = Component.getInitialProps
-        ? await Component.getInitialProps(ctx)
-        : {};
+// export async function getInitialProps({ Component, ctx }) {
+//     const pageProps = Component.getInitialProps
+//         ? await Component.getInitialProps(ctx)
+//         : {};
 
-    return { pageProps };
-}
+//     return { pageProps };
+// }
 
 export default MyApp;
