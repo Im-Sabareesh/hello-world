@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import images from '@components/images';
 import { Paragraph } from '@components';
 
 const TopLogoFooter = () => {
-    const { t } = useTranslation('common'),
+    const t = i18next.t.bind(i18next),
         footerLinkList = [
             {
                 title: t('footer.ourServices'),

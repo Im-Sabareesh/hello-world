@@ -3,7 +3,6 @@ const {
     PHASE_DEVELOPMENT_SERVER,
     PHASE_PRODUCTION_BUILD,
 } = require('next/constants');
-const { i18n, localePath } = require('./next-i18next.config');
 
 module.exports = (phase) => {
     const isDev = phase === PHASE_DEVELOPMENT_SERVER;
@@ -37,7 +36,5 @@ module.exports = (phase) => {
         sassOptions: {
             includePaths: [path.join(__dirname, 'styles')],
         },
-        i18n,
-        localePath,
     };
 };

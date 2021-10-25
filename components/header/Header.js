@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import Image from 'next/image';
 
 import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
@@ -12,7 +12,7 @@ import images from '@components/images';
 
 const Header = () => {
     const router = useRouter(),
-        { t } = useTranslation('common'),
+        t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'],
         [state, setState] = React.useState(''),
         socialMedisIcons = [

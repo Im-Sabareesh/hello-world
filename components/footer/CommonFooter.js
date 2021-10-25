@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
@@ -11,7 +11,7 @@ import { Paragraph } from '@components';
 import images from '@components/images';
 
 const RadiusFooter = (props) => {
-    const { t } = useTranslation('common'),
+    const t = i18next.t.bind(i18next),
         footerLinkList = [
             {
                 title: t('footer.ourServices'),
