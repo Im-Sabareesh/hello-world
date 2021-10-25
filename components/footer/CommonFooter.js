@@ -109,7 +109,7 @@ const RadiusFooter = (props) => {
                                 />
                             </a>
                         </Link>
-                        <Paragraph className="light-text-color text-shadow">
+                        <Paragraph className="light-text-color text-shadow mt-2">
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">

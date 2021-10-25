@@ -112,7 +112,7 @@ const TopLogoFooter = () => {
                                 />
                             </a>
                         </Link>
-                        <Paragraph className="light-text-color text-shadow mb-md-3 mb-2">
+                        <Paragraph className="light-text-color text-shadow mb-md-3 mb-2 mt-2">
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">

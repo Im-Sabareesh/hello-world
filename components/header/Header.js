@@ -49,7 +49,7 @@ const Header = () => {
                                 lg={3}
                                 className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
                             >
-                                <ul className="social-links">
+                                <ul className="social-links pt-1">
                                     {_.map(socialMedisIcons, (icon) => (
                                         <li key={icon}>
                                             <a
@@ -61,8 +61,8 @@ const Header = () => {
                                                 <Image
                                                     src={icon}
                                                     alt=""
-                                                    height={20}
-                                                    width={20}
+                                                    height={18}
+                                                    width={21}
                                                 />
                                             </a>
                                         </li>
@@ -179,7 +179,7 @@ const Header = () => {
                            <div className="search-margin">
                            <a
                                 href="#"
-                                className="ms-2 header-search"
+                                className="ms-2 header-search pt-1"
                                 onClick={(e) => e.preventDefault()}
                             >
                                 <Image
