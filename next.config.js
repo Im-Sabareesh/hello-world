@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require('@svgr/webpack')
-const withImages = require('next-images')
+// const webpack = require('@svgr/webpack')
+// const withImages = require('next-images')
 
 const {PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD} = require('next/constants');
 
@@ -31,54 +31,23 @@ module.exports = (phase) => {
         })()
     };
 
-    //     webpack(config) {
-    //         config.module.rules.push({
-    //           test: /\.svg$/,
-    //           issuer: {
-    //             test: /\.(js|ts)x?$/,
-    //            // for webpack 5 use
-    //            // { and: [/\.(js|ts)x?$/] }
-    //           },
-
-    //           use: ['@svgr/webpack'],
-    //         });
-    // }
 
 
     return {
-        // withImages({
-        //     distDir: '../_next',
-        //     webpack(config, options) {
-        //         return config;
-        //       }
-        // }),
-        webpack(config) {
-            config.module.rules.push({
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
-                use: {
-                  loader: 'url-loader',
-                  options: {
-                    limit: 100000,
-                    name: '[name].[ext]',
-                    esModule: false,
-                  },
-                },
-              });
-              
-            return config
-        },
+    
+       
         reactStrictMode: true,
         trailingSlash: true,
         env: env,
         sassOptions: {
             includePaths: [path.join(__dirname, 'styles')]
         },
-        images: {
-            loader: "imgix",
-            path: "/",
-            domain: ['localhost',]
+        // images: {
+        //     loader: "imgix",
+        //     path: "/",
+        //     domain: ['localhost',]
 
-        },
+        // },
         exportPathMap: async function (defaultPathMap, {
             dev,
             dir,
