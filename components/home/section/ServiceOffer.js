@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -9,7 +9,7 @@ import images from '@components/images';
 import { Paragraph } from '@components';
 
 export default function ServiceOfferSection() {
-    const { t } = useTranslation('home');
+    const t = i18next.t.bind(i18next);
     const serviceList = [
         {
             name: 'Decentraized Finance',
@@ -55,10 +55,10 @@ export default function ServiceOfferSection() {
                 <Row>
                     <Col md={8} className="mx-auto text-center mb-2">
                         <h2 className="h2 dark-text-color mb-4">
-                            {t('servicesOffer')}
+                            {t('home.servicesOffer')}
                         </h2>
 
-                        <Paragraph>{t('nullaLoremLaborum')}</Paragraph>
+                        <Paragraph>{t('home.nullaLoremLaborum')}</Paragraph>
                     </Col>
                 </Row>
             </Container>
@@ -95,7 +95,7 @@ export default function ServiceOfferSection() {
                             onClick={(e) => e.preventDefault()}
                             className="h3 dark-text-color link-primary"
                         >
-                            {t('lotMoreYou')}
+                            {t('home.lotMoreYou')}
                         </a>
                     </Col>
                 </Row>

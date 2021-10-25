@@ -93,7 +93,8 @@
         "email": "EMAIL",
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
-        "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our "
+        "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
+        "defiDevelopment": "Defi Development"
     },
     "aboutUs":{
         "title": "About Us"

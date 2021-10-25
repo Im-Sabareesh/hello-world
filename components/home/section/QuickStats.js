@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -9,37 +9,37 @@ import { Paragraph } from '@components';
 import images from '@components/images';
 
 export default function QuickStatsSection() {
-    const { t } = useTranslation('home'),
+    const t = i18next.t.bind(i18next),
         quickStateList = [
             {
                 icon: images.indusAwards,
                 counts: '150+',
-                title: t('industryAwards'),
+                title: t('home.industryAwards'),
             },
             {
                 icon: images.projects,
                 counts: '150+',
-                title: t('projects'),
+                title: t('home.projects'),
             },
             {
                 icon: images.officers,
                 counts: '4',
-                title: t('offices'),
+                title: t('home.offices'),
             },
             {
                 icon: images.hpyClients,
                 counts: '500',
-                title: t('happyClients'),
+                title: t('home.happyClients'),
             },
             {
                 icon: images.certPmp,
                 counts: '4',
-                title: t('certifiedPMP'),
+                title: t('home.certifiedPMP'),
             },
             {
                 icon: images.mmLines,
                 counts: '100',
-                title: t('mmLineCode'),
+                title: t('home.mmLineCode'),
             },
         ];
 
@@ -48,7 +48,7 @@ export default function QuickStatsSection() {
             <Container>
                 <Row>
                     <Col md={12} className="text-center mb-5">
-                        <h2 className="h2">{t('quickStats')}</h2>
+                        <h2 className="h2">{t('home.quickStats')}</h2>
                     </Col>
                     {_.map(quickStateList, (item) => (
                         <Col

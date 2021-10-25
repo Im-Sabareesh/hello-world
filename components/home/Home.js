@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
-
+import i18next from 'i18next';
+import PropTypes from 'prop-types';
 import { ImgPanelSection } from '@components';
 import {
     FeaturedSection,
@@ -16,14 +16,13 @@ import {
     InsightWithFormSection,
 } from './section';
 
-const HomeComponent = () => {
-    const { t } = useTranslation(['home', 'common']);
-
+const HomeComponent = (props) => {
+    const t = i18next.t.bind(i18next);
     return (
         <>
             {/*--------------- home hero banner start---------- */}
 
-            <FeaturedSection />
+            <FeaturedSection language={props.language} />
 
             {/*--------------- home hero banner end---------- */}
 
@@ -50,9 +49,9 @@ const HomeComponent = () => {
             <ImgPanelSection
                 secClass="home-section-4 py-5"
                 className="cta-banner cta-banner1 d-flex align-items-center"
-                title={t('readyGetStarted')}
-                link="/contact"
-                btnName={t('getQuote', { ns: 'common' })}
+                title={t('home.readyGetStarted')}
+                link={`${props.language}/contact`}
+                btnName={t('getQuote')}
                 image="/assets/icons/Arrow.svg"
             />
 
@@ -72,7 +71,7 @@ const HomeComponent = () => {
 
             {/*--------------- Home section7 start---------- */}
 
-            <WorkWithSection />
+            <WorkWithSection language={props.language} />
 
             {/*--------------- Home section7 end---------- */}
 
@@ -99,6 +98,8 @@ const HomeComponent = () => {
 
 export default HomeComponent;
 
-HomeComponent.propTypes = {};
+HomeComponent.propTypes = {language: PropTypes.string};
 
-HomeComponent.defaultProps = {};
+HomeComponent.defaultProps = {
+    language: ''
+};

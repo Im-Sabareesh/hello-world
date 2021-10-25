@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import Image from 'next/image';
 
 import { Container, Row, Col, Form } from 'react-bootstrap';
@@ -10,7 +10,7 @@ import images from '@components/images';
 import { CardSection, Button, Paragraph } from '@components';
 
 export default function InsightWithFormSection() {
-    const { t } = useTranslation(['home', 'common']),
+    const t = i18next.t.bind(i18next),
         router = useRouter(),
         insightsList = [
             {
@@ -46,7 +46,7 @@ export default function InsightWithFormSection() {
             <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">
-                        <h2 className="h2"> {t('ourLatestInsights')} </h2>
+                        <h2 className="h2"> {t('home.ourLatestInsights')} </h2>
                     </Col>
 
                     {_.map(insightsList, (item) => (
@@ -61,7 +61,7 @@ export default function InsightWithFormSection() {
 
                     <Col md={12} className="text-center my-5">
                         <Button btnVarient="red-btn" className="min-size-btn">
-                            {t('viewMore', { ns: 'common' })}
+                            {t('viewMore')}
                         </Button>
                     </Col>
                 </Row>
@@ -75,9 +75,9 @@ export default function InsightWithFormSection() {
                                 <Row>
                                     <Col md={12} lg={6}>
                                         <h2 className="h2 mb-2">
-                                            {t('readyGetStarted')}
+                                            {t('home.readyGetStarted')}
                                         </h2>
-                                        <Paragraph>{t('haveAnIdea')}</Paragraph>
+                                        <Paragraph>{t('home.haveAnIdea')}</Paragraph>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -92,7 +92,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom01"
                                                     >
                                                         <Form.Label>
-                                                            {t('firstName')}*
+                                                            {t('home.firstName')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -110,7 +110,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom02"
                                                     >
                                                         <Form.Label>
-                                                            {t('email')}*
+                                                            {t('home.email')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -128,7 +128,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustomUsername"
                                                     >
                                                         <Form.Label>
-                                                            {t('phone')}*
+                                                            {t('home.phone')}*
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -145,7 +145,7 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom03"
                                                     >
                                                         <Form.Label>
-                                                            {t('weHelpYou')}
+                                                            {t('home.weHelpYou')}
                                                         </Form.Label>
                                                         <Form.Control
                                                             as="textarea"
@@ -187,7 +187,7 @@ export default function InsightWithFormSection() {
                                                                         <Form.Check.Label>
                                                                             *
                                                                             {t(
-                                                                                'agreeTrems'
+                                                                                'home.agreeTrems'
                                                                             )}
                                                                             <a
                                                                                 href="#"
@@ -198,10 +198,7 @@ export default function InsightWithFormSection() {
                                                                                 }
                                                                             >
                                                                                 {t(
-                                                                                    'privacyPolicy',
-                                                                                    {
-                                                                                        ns: 'common',
-                                                                                    }
+                                                                                    'privacyPolicy'
                                                                                 )}
                                                                             </a>
                                                                             .
