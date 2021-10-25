@@ -76,8 +76,8 @@ export default function ServiceOfferSection() {
                             <Image
                                 src={item.icon}
                                 alt=""
-                                height={65}
-                                width={85}
+                                height={81}
+                                width={100}
                                 placeholder="blur"
                                 loading="lazy"
                                 className="pb-2"
