@@ -27,7 +27,7 @@ const ContactComponent = () => {
                 city: 'Rochester, New York – 14615',
             },
             phone: '+1-585-633-7642',
-            mailID: 'iinfo@chaincodeconsulting.com',
+            mailID: 'info@chaincodeconsulting.com',
         },
         {
             location: 'Canada',

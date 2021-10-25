@@ -80,6 +80,7 @@ export default function ServiceOfferSection() {
                                 width={85}
                                 placeholder="blur"
                                 loading="lazy"
+                                className="pb-2"
                             />
                             {/* </p> */}
 
