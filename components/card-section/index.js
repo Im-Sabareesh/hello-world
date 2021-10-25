@@ -11,7 +11,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
         return (
             <Card className={`${footerClass && 'custom-card'} ${className}`}>
-                <Image src={item.image} alt="" className="card-img-top" loading="lazy" height={220} width={416}/>
+                <Image src={item.image} alt="" className="card-img-top" loading="lazy" height={!footerClass ? 251 : 221 } width={416}/>
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3 mb-3">{item.title}</h3>
