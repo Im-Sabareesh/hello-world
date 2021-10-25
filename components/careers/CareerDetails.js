@@ -74,20 +74,27 @@ const CareerDetailsComponent = () => {
                         </Col>
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
-                                <Image
-                                    src={images.careerDetail}
-                                    alt="career-overview-img"
-                                    className="overview-mobile-img d-none d-lg-block"
-                                    width={843}
-                                    height={843}
-                                />
-                                <Image
-                                    src={images.careerDetail}
-                                    alt="career-overview-img"
-                                    className="overview-mobile-img d-block d-lg-none"
-                                    width={843}
-                                    height={843}
-                                />
+                                <div className=" d-none d-lg-block">
+                                    <Image
+                                        src={images.careerDetail}
+                                        alt="career-overview-img"
+                                        className="overview-mobile-img p-0"
+                                        width={843}
+                                        height={843}
+                                        layout="fixed"
+                                    />
+                                </div>
+                                <div className="d-lg-flex">
+                                    <Image
+                                        src={images.careerDetail}
+                                        alt="career-overview-img"
+                                        className="overview-mobile-img"
+                                        width={843}
+                                        height={843}
+                                        layout="responsive"
+                                    />
+                                </div>
+                                
                             </div>
                         </Col>
                     </Row>
