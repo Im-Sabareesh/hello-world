@@ -10,7 +10,6 @@ const H1 = ({ children, className }) => {
                     font-weight: 700;
                     color: color('dark-primary');
                 }
-                }
                 .h1 {
                     font-size: 56px;
                     line-height: 74px;
