@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
@@ -8,6 +9,7 @@ import { Button, H1, Paragraph } from '@components';
 import images from '@components/images';
 
 const ContactComponent = () => {
+    const router = useRouter();
     const branchList = [
         {
             location: 'India',
@@ -95,9 +97,8 @@ const ContactComponent = () => {
                                         experienced developers.
                                         <a
                                             href="#"
-                                            onClick={(e) => e.preventDefault()}
+                                            onClick={() => router.push('/about')}
                                         >
-                                            {' '}
                                             Read more
                                         </a>
                                     </Paragraph>
@@ -309,7 +310,7 @@ const ContactComponent = () => {
                             <Col className="text-center">
                                 <h2 className="h2 mb-5"> Our Offices </h2>
                             </Col>
-                            <Col md={12} className=" ouroffice-banner">
+                            <Col md={12} className=" ouroffice-banner pe-0">
                                 <Image
                                     src={images.contactUsJpg}
                                     alt=""

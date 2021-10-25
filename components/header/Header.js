@@ -75,7 +75,7 @@ const Header = () => {
             )}
 
             <div
-                className={`main-header py-3 ${
+                className={`main-header py-2 ${
                     _.some(whiteLayout, (lay) => router.pathname.includes(lay))
                         ? 'inner-page-header'
                         : ''

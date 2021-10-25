@@ -27,7 +27,9 @@ const H1 = ({ children, className }) => {
                 .secondary-text-color {
                     color: #6f75ff;
                 }
-                
+                .career-name {
+                    letter-spacing: -2px;
+                }
                 .dark-text-color {
                     color: #121212;
                 }

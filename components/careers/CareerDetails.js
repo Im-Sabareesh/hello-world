@@ -49,12 +49,12 @@ const CareerDetailsComponent = () => {
             <section className="careerdetail-overview-section mb-xl-5">
                 <Container>
                     <Row>
-                        <Col sm={12} md={12} lg={7} className="my-auto">
+                        <Col sm={12} md={12} lg={6} className="my-auto">
                             <div className="text-center text-lg-start">
                                 <Paragraph className="location-element">
                                     {state.type} {state.location}
                                 </Paragraph>
-                                <H1 className="mb-2 pb-2 dark-text-color">
+                                <H1 className="mb-2 pb-2 dark-text-color career-name">
                                     {state.name}
                                 </H1>
                                 <Button
@@ -72,7 +72,7 @@ const CareerDetailsComponent = () => {
                                 <StaticComponent content={state.overview} />
                             </div>
                         </Col>
-                        <Col sm={12} md={12} lg={5}>
+                        <Col sm={12} md={12} lg={6}>
                             <div className="overview-img">
                                 <div className=" d-none d-lg-block">
                                     <Image
