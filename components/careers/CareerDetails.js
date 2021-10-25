@@ -13,13 +13,10 @@ import StaticComponent from '../StaticComponent';
 
 const CareerDetailsComponent = () => {
     const router = useRouter();
-    const {
-        query: { cid },
-    } = router;
-    const state =
-        useSelector((state) =>
-            careerSelector.careerDetailsSelector(state, cid)
-        ) || {};
+    const { query: { cid } } = router;
+    const state = useSelector((state) =>
+        careerSelector.careerDetailsSelector(state, cid)
+    ) || {};
     return (
         <>
             <div className="breadcrumb-section">
