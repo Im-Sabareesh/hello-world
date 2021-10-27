@@ -48,7 +48,7 @@ const Header = (props) => {
                             >
                                 <ul className="social-links pt-1">
                                     {_.map(socialMedisIcons, (icon) => (
-                                        <li key={icon}>
+                                        <li key={_.uniqueId()}>
                                             <a
                                                 href="#"
                                                 onClick={(e) =>
