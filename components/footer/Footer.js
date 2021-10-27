@@ -47,7 +47,7 @@ const Footer = (props) => {
         <>
             {!!footer
                 ? footer.component()
-                : router.pathname == '/[lang]/' && (
+                : router.pathname == '/[lang]' && (
                       <CommonFooter radius={true} language={props.language} />
                   )}
         </>

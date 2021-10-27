@@ -1,11 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
 import images from '@components/images';
+import { MyImage } from '@components';
 
 export default function CilentTestimonialSection() {
     const t = i18next.t.bind(i18next);
@@ -58,7 +57,7 @@ export default function CilentTestimonialSection() {
                                                 <div className="testimonial-cont">
                                                     <div className="testimonial-user-cont d-flex align-items-center">
                                                         <div className="user-thumb">
-                                                            <Image
+                                                            <MyImage
                                                                 src={item.image}
                                                                 className="shadow"
                                                                 alt=" "
