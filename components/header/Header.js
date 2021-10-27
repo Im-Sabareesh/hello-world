@@ -46,9 +46,9 @@ const Header = (props) => {
                                 lg={3}
                                 className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
                             >
-                                <ul className="social-links">
+                                <ul className="social-links pt-1">
                                     {_.map(socialMedisIcons, (icon) => (
-                                        <li key={icon}>
+                                        <li key={_.uniqueId()}>
                                             <a
                                                 href="#"
                                                 onClick={(e) =>
@@ -59,9 +59,9 @@ const Header = (props) => {
                                                     // src={icon}
                                                     // alt=" "
                                                     // quality={100}
-                                                    // height={20}
-                                                    // width={20}
                                                     {...icon}
+                                                    height={18}
+                                                    width={21}
                                                 />
                                             </a>
                                         </li>
@@ -74,7 +74,7 @@ const Header = (props) => {
             )}
 
             <div
-                className={`main-header py-3 ${
+                className={`main-header py-2 ${
                     _.some(whiteLayout, (lay) => router.pathname.includes(lay))
                         ? 'inner-page-header'
                         : ''
@@ -169,37 +169,42 @@ const Header = (props) => {
                             sm={4}
                             md={4}
                             lg={2}
-                            className="text-end text-md-start mt-2 letstalk-btn"
+                            className="text-end text-md-start d-sm-flex letstalk-btn mt-2"
                         >
-                            <Button
-                                btnVarient="red-btn"
-                                onClick={() => {
-                                    router.push(`/${props.language}/contact`);
-                                }}
-                            >
-                                {t('letsTalk')}
-                            </Button>
-
-                            <a
-                                href="#"
-                                className="ms-2 header-search"
-                                onClick={(e) => e.preventDefault()}
-                            >
-                                <MyImage
-                                    src={images.searchIcon}
-                                    alt=""
-                                    className={
-                                        !state &&
-                                        _.some(whiteLayout, (lay) =>
-                                            router.pathname.includes(lay)
-                                        )
-                                            ? 'white-logo'
-                                            : ''
-                                    }
-                                    width={17}
-                                    height={17}
-                                />
-                            </a>
+                            <div>
+                                <Button
+                                    btnVarient="red-btn"
+                                    onClick={() => {
+                                        router.push(
+                                            `/${props.language}/contact`
+                                        );
+                                    }}
+                                >
+                                    {t('letsTalk')}
+                                </Button>
+                            </div>
+                            <div className="search-margin">
+                                <a
+                                    href="#"
+                                    className="ms-2 header-search pt-1"
+                                    onClick={(e) => e.preventDefault()}
+                                >
+                                    <MyImage
+                                        src={images.searchIcon}
+                                        alt=""
+                                        className={
+                                            !state &&
+                                            _.some(whiteLayout, (lay) =>
+                                                router.pathname.includes(lay)
+                                            )
+                                                ? 'white-logo'
+                                                : ''
+                                        }
+                                        width={17}
+                                        height={17}
+                                    />
+                                </a>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

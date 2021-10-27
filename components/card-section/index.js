@@ -4,12 +4,20 @@ import PropTypes from 'prop-types';
 
 import { Card } from 'react-bootstrap';
 import { Button, MyImage } from '@components';
+import images from '@components/images';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
         return (
             <Card className={`${footerClass && 'custom-card'} ${className}`}>
-                <Card.Img variant="top" src={item.image} />
+                <MyImage
+                    src={item.image}
+                    alt=""
+                    className="card-img-top"
+                    loading="lazy"
+                    height={!footerClass ? 251 : 221}
+                    width={416}
+                />
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3 mb-3">{item.title}</h3>
@@ -19,13 +27,17 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                         <a
                             href="#"
                             onClick={(e) => e.preventDefault()}
-                            className="link-primary"
+                            className="link-primary d-flex"
                         >
-                            Learn More{' '}
-                            <MyImage
-                                src="/assets/icons/purple-arrow.svg"
-                                alt=" " width={11} height={10} 
-                            />
+                            Learn More
+                            <div className="ps-1">
+                                <MyImage
+                                    src={images.purpleArrow}
+                                    alt=" "
+                                    width={11}
+                                    height={10}
+                                />
+                            </div>
                         </a>
                     )}
                 </Card.Body>
@@ -39,7 +51,12 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             {item.link}
                         </a>
                         <a href="#" onClick={(e) => e.preventDefault()}>
-                            <MyImage src="/assets/icons/card-arrow.svg" alt="" width={16} height={14} />
+                            <MyImage
+                                src={images.purpleArrow}
+                                alt=""
+                                width={16}
+                                height={14}
+                            />
                         </a>
                     </Card.Footer>
                 )}
@@ -50,7 +67,16 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderCard = () => {
         return (
             <Card className={`custom-card ${className}`}>
-                {item.image && <Card.Img variant="top" src={item.image} />}
+                {item.image && (
+                    <MyImage
+                        src={item.image}
+                        alt=""
+                        loading="lazy"
+                        className="card-img-top"
+                        height={220}
+                        width={416}
+                    />
+                )}
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>

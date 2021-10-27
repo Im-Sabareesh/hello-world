@@ -48,12 +48,12 @@ const CareerDetailsComponent = () => {
             <section className="careerdetail-overview-section mb-xl-5">
                 <Container>
                     <Row>
-                        <Col sm={12} md={12} lg={7} className="my-auto">
+                        <Col sm={12} md={12} lg={6} className="my-auto">
                             <div className="text-center text-lg-start">
                                 <Paragraph className="location-element">
                                     {state.type} {state.location}
                                 </Paragraph>
-                                <H1 className="mb-2 pb-2 dark-text-color">
+                                <H1 className="mb-2 pb-2 dark-text-color career-name">
                                     {state.name}
                                 </H1>
                                 <Button
@@ -71,22 +71,28 @@ const CareerDetailsComponent = () => {
                                 <StaticComponent content={state.overview} />
                             </div>
                         </Col>
-                        <Col sm={12} md={12} lg={5}>
+                        <Col sm={12} md={12} lg={6}>
                             <div className="overview-img">
-                                <MyImage
-                                    src={images.careerDetail}
-                                    alt="career-overview-img"
-                                    className="overview-mobile-img d-none d-lg-block"
-                                    width={843}
-                                    height={843}
-                                />
-                                <MyImage
-                                    src={images.careerDetail}
-                                    alt="career-overview-img"
-                                    className="overview-mobile-img d-block d-lg-none"
-                                    width={843}
-                                    height={843}
-                                />
+                                <div className="d-none d-lg-block">
+                                    <MyImage
+                                        src={images.careerDetail}
+                                        alt="career-overview-img"
+                                        className="overview-mobile-img p-0"
+                                        width={843}
+                                        height={843}
+                                        layout="fixed"
+                                    />
+                                </div>
+                                <div className="d-lg-flex">
+                                    <MyImage
+                                        src={images.careerDetail}
+                                        alt="career-overview-img"
+                                        className="overview-mobile-img"
+                                        width={843}
+                                        height={843}
+                                        layout="responsive"
+                                    />
+                                </div>
                             </div>
                         </Col>
                     </Row>

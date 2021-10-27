@@ -107,7 +107,7 @@ const RadiusFooter = (props) => {
                                 />
                             </a>
                         </Link>
-                        <Paragraph className="light-text-color text-shadow mt-4">
+                        <Paragraph className="light-text-color text-shadow mt-2">
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
@@ -187,10 +187,12 @@ const RadiusFooter = (props) => {
                                 {item.title}
                             </h3>
                             <ul className="lh-lg">
-                                {_.map(item.list, (listItem) =>  (
+                                {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2">
                                         {listItem.route !== '#' ? (
-                                            <Link href={`/${props.language}${listItem.route}`}>
+                                            <Link
+                                                href={`/${props.language}${listItem.route}`}
+                                            >
                                                 <a className="light-text-color">
                                                     {listItem.name}
                                                 </a>
@@ -212,9 +214,10 @@ const RadiusFooter = (props) => {
                     ))}
 
                     {props.radius && (
-                        <div className="backtotop" id="backtotop">
+                        <div className="backtotop">
                             <a
                                 href="#"
+                                className="text-uppercase"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     document.body.scrollTop =

@@ -126,9 +126,10 @@ button:not(.collapsed) {
 
 .backtotop {
     position: absolute;
-    bottom: 216px;
+    bottom: 136px;
     right: 20px;
     width: 110px;
+    font-size: 13px;
 
     a {
         color: #ffffff;
@@ -617,6 +618,9 @@ button:not(.collapsed) {
         .testimonial-user-cont {
             .user-thumb {
               margin-right: 25px;
+                > div {
+                    overflow: visible !important;
+                }
                 img {
                     width: 65px;
                     height: 65px;
@@ -659,6 +663,7 @@ button:not(.collapsed) {
 
         .card-body {
             padding: 0;
+            padding-top: 16px;
         }
 
         .card-text {
@@ -1244,3 +1249,6 @@ header .main-header {
     margin-right: 10px;
 }
 // ----------------------career page details end----------------
+.search-margin{
+    margin-top: 14px;
+}

@@ -4,13 +4,13 @@ import i18next from 'i18next';
 import { ContactComponent, Meta } from '@components';
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 
-const ContactUs = () => {
+const ContactUs = (props) => {
     const t = i18next.t.bind(i18next);
     return (
         <div className="contactus-page">
             <Meta title={t('contactUs')} desc="" />
 
-            <ContactComponent />
+            <ContactComponent language={props.language} />
         </div>
     );
 };

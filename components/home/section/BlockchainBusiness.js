@@ -84,6 +84,7 @@ export default function BlockchainBusinessSection() {
                                             width={76}
                                             height={76}
                                             loading="lazy"
+                                            className="pb-2"
                                         />
                                         {/* </p> */}
                                         <h3 className="h3 dark-text-color mb-0">

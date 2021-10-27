@@ -4,8 +4,10 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 
 import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
+import { useRouter } from 'next/router';
 
-const ContactComponent = () => {
+const ContactComponent = (props) => {
+    const router = useRouter();
     const branchList = [
         {
             location: 'India',
@@ -25,7 +27,7 @@ const ContactComponent = () => {
                 city: 'Rochester, New York – 14615',
             },
             phone: '+1-585-633-7642',
-            mailID: 'iinfo@chaincodeconsulting.com',
+            mailID: 'info@chaincodeconsulting.com',
         },
         {
             location: 'Canada',
@@ -93,9 +95,12 @@ const ContactComponent = () => {
                                         experienced developers.
                                         <a
                                             href="#"
-                                            onClick={(e) => e.preventDefault()}
+                                            onClick={() =>
+                                                router.push(
+                                                    `/${props.language}/about`
+                                                )
+                                            }
                                         >
-                                            {' '}
                                             Read more
                                         </a>
                                     </Paragraph>
@@ -307,7 +312,7 @@ const ContactComponent = () => {
                             <Col className="text-center">
                                 <h2 className="h2 mb-5"> Our Offices </h2>
                             </Col>
-                            <Col md={12} className=" ouroffice-banner">
+                            <Col md={12} className=" ouroffice-banner pe-0">
                                 <MyImage
                                     src={images.contactUsJpg}
                                     alt=""

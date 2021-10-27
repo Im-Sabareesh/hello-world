@@ -10,7 +10,6 @@ const H1 = ({ children, className }) => {
                     font-weight: 700;
                     color: color('dark-primary');
                 }
-                }
                 .h1 {
                     font-size: 56px;
                     line-height: 74px;
@@ -27,7 +26,9 @@ const H1 = ({ children, className }) => {
                 .secondary-text-color {
                     color: #6f75ff;
                 }
-                
+                .career-name {
+                    letter-spacing: -2px;
+                }
                 .dark-text-color {
                     color: #121212;
                 }
@@ -35,7 +36,7 @@ const H1 = ({ children, className }) => {
                 .dark-secondary-text-color {
                     color: #404852;
                 }
-        `}</style>
+            `}</style>
         </h1>
     );
 };

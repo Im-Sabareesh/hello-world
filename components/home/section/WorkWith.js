@@ -41,7 +41,7 @@ export default function WorkWithSection(props) {
                             title={`${t('home.someQuestion')}<br />${t(
                                 'home.getFreeConsultAns'
                             )}`}
-                            className="cta-banner cta-banner2 d-flex align-items-center justify-content-end"
+                            className="cta-banner cta-banner2 d-flex align-items-center justify-content-sm-end"
                             link={`${props.language}/contact`}
                             btnName={t('letsTalk')}
                         />

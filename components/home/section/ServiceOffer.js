@@ -74,14 +74,17 @@ export default function ServiceOfferSection() {
                             <MyImage
                                 src={item.icon}
                                 alt=""
-                                height={65}
-                                width={85}
+                                height={122}
+                                width={150}
                                 placeholder="blur"
                                 loading="lazy"
+                                objectFit="contain"
                             />
                             {/* </p> */}
 
-                            <h3 className="h3 dark-text-color">{item.name}</h3>
+                            <h3 className="h3 dark-text-color pt-2">
+                                {item.name}
+                            </h3>
 
                             <Paragraph> {item.describe} </Paragraph>
                         </Col>
