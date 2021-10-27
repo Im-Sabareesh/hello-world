@@ -3,13 +3,13 @@ import i18next from 'i18next';
 import { AboutUsComponent, Meta } from '@components';
 
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
-const AboutUs = () => {
+const AboutUs = (props) => {
     const t = i18next.t.bind(i18next);
     return (
         <div className="about-us-page">
             <Meta title={t('header.aboutUS')} desc="" />
 
-            <AboutUsComponent />
+            <AboutUsComponent language={props.language} />
         </div>
     );
 };
