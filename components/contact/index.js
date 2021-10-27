@@ -6,7 +6,7 @@ import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { useRouter } from 'next/router';
 
-const ContactComponent = () => {
+const ContactComponent = (props) => {
     const router = useRouter();
     const branchList = [
         {
@@ -95,7 +95,7 @@ const ContactComponent = () => {
                                         experienced developers.
                                         <a
                                             href="#"
-                                            onClick={() => router.push('/about')}
+                                            onClick={() => router.push(`/${props.language}/about`)}
                                         >
                                             Read more
                                         </a>

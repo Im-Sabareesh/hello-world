@@ -52,6 +52,7 @@ import twitterSVG from '@public/assets/icons/twitter.svg';
 import uTubeSVG from '@public/assets/icons/youtube.svg';
 import wpSVG from '@public/assets/icons/wordpress.svg';
 import upArrow from '@public/assets/images/uparrow.png';
+import purpleArrow from '@public//assets/icons/purple-arrow.svg';
 
 export default {
     homeSecTopImg,
@@ -108,4 +109,5 @@ export default {
     uTubeSVG,
     wpSVG,
     upArrow,
+    purpleArrow
 };
