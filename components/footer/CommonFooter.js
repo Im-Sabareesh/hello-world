@@ -19,11 +19,11 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: `/${props.language}/services/DefiServices`,
+                        route: `/services/DefiServices`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: `/${props.language}/services/NFTServices`,
+                        route: `/services/NFTServices`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),
@@ -63,15 +63,15 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('contactUs'),
-                        route: `/${props.language}/contact`,
+                        route: `/contact`,
                     },
                     {
                         name: t('career'),
-                        route: `/${props.language}/careers`,
+                        route: `/careers`,
                     },
                     {
                         name: t('footer.moreAboutUs'),
-                        route: `/${props.language}/about`,
+                        route: `/about`,
                     },
                     {
                         name: t('footer.blog'),
@@ -189,10 +189,10 @@ const RadiusFooter = (props) => {
                                 {item.title}
                             </h3>
                             <ul className="lh-lg">
-                                {_.map(item.list, (listItem) => (
+                                {_.map(item.list, (listItem) =>  (
                                     <li key={_.uniqueId()} className="mb-2">
                                         {listItem.route !== '#' ? (
-                                            <Link href={listItem.route}>
+                                            <Link href={`/${props.language}${listItem.route}`}>
                                                 <a className="light-text-color">
                                                     {listItem.name}
                                                 </a>
@@ -200,7 +200,6 @@ const RadiusFooter = (props) => {
                                         ) : (
                                             <a
                                                 className="light-text-color"
-                                                href="#"
                                                 onClick={(e) =>
                                                     e.preventDefault()
                                                 }
