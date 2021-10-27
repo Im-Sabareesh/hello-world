@@ -3,13 +3,11 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import i18next from 'i18next';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-import { Button } from '@components';
+import { Button, MyImage } from '@components';
 import images from '@components/images';
-import MyImage from '../Image';
 
 const Header = (props) => {
     const router = useRouter(),
@@ -58,11 +56,12 @@ const Header = (props) => {
                                                 }
                                             >
                                                 <MyImage
-                                                    src={icon}
-                                                    alt=" "
-                                                    quality={100}
-                                                    height={20}
-                                                    width={20}
+                                                    // src={icon}
+                                                    // alt=" "
+                                                    // quality={100}
+                                                    // height={20}
+                                                    // width={20}
+                                                    {...icon}
                                                 />
                                             </a>
                                         </li>
@@ -86,7 +85,7 @@ const Header = (props) => {
                         <Col sm={4} md={3} lg={2}>
                             <Link href={`/${props.language}/`}>
                                 <a>
-                                    <Image
+                                    <MyImage
                                         src={images.logo}
                                         alt=""
                                         className={
@@ -175,7 +174,7 @@ const Header = (props) => {
                             <Button
                                 btnVarient="red-btn"
                                 onClick={() => {
-                                    router.push('/contact');
+                                    router.push(`/${props.language}/contact`);
                                 }}
                             >
                                 {t('letsTalk')}
@@ -186,7 +185,7 @@ const Header = (props) => {
                                 className="ms-2 header-search"
                                 onClick={(e) => e.preventDefault()}
                             >
-                                <Image
+                                <MyImage
                                     src={images.searchIcon}
                                     alt=""
                                     className={

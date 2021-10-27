@@ -1,11 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 export default function ChooseUsSection() {
@@ -42,7 +40,7 @@ export default function ChooseUsSection() {
             <Container>
                 <Row>
                     <Col md={{ span: 12, order: 0 }} lg={6}>
-                        <Image
+                        <MyImage
                             src={images.blockchainBuss}
                             placeholder="blur"
                             alt=" "
@@ -63,7 +61,7 @@ export default function ChooseUsSection() {
                         <Col key={_.uniqueId()} md={6} className="mt-4">
                             <div className="d-flex">
                                 <div className="flex-shrink-0">
-                                    <Image
+                                    <MyImage
                                         src={item.icon}
                                         alt=" "
                                         height={40}

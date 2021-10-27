@@ -2,8 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
-import { Image, Card } from 'react-bootstrap';
-import { Button } from '@components';
+import { Card } from 'react-bootstrap';
+import { Button, MyImage } from '@components';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
@@ -22,9 +22,9 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             className="link-primary"
                         >
                             Learn More{' '}
-                            <Image
+                            <MyImage
                                 src="/assets/icons/purple-arrow.svg"
-                                alt=" "
+                                alt=" " width={11} height={10} 
                             />
                         </a>
                     )}
@@ -39,7 +39,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             {item.link}
                         </a>
                         <a href="#" onClick={(e) => e.preventDefault()}>
-                            <Image src="/assets/icons/card-arrow.svg" alt="" />
+                            <MyImage src="/assets/icons/card-arrow.svg" alt="" width={16} height={14} />
                         </a>
                     </Card.Footer>
                 )}

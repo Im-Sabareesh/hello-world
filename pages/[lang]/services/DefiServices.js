@@ -4,13 +4,13 @@ import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 
 import { DefiServiceComponent, Meta } from '@components';
 
-const DefiServices = () => {
+const DefiServices = (props) => {
     const t = i18next.t.bind(i18next);
     return (
         <div className="nft-service-page defi-service-page">
             <Meta title={t('defiDevelopment')} desc="" />
 
-            <DefiServiceComponent />
+            <DefiServiceComponent language={props.language} />
         </div>
     );
 };

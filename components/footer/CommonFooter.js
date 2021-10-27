@@ -3,11 +3,9 @@ import Link from 'next/link';
 import _ from 'lodash';
 import i18next from 'i18next';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const RadiusFooter = (props) => {
@@ -101,7 +99,7 @@ const RadiusFooter = (props) => {
                                 // onClick={(e) => e.preventDefault()}
                                 className="brand-logo"
                             >
-                                <Image
+                                <MyImage
                                     src={images.ccWhiteLogo}
                                     alt="..."
                                     width={219}
@@ -109,7 +107,7 @@ const RadiusFooter = (props) => {
                                 />
                             </a>
                         </Link>
-                        <Paragraph className="light-text-color text-shadow">
+                        <Paragraph className="light-text-color text-shadow mt-4">
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
@@ -118,7 +116,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.fbSVG}
                                     alt="..."
                                     width={11}
@@ -130,7 +128,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.instaSVG}
                                     alt="..."
                                     width={20}
@@ -142,7 +140,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.twitterSVG}
                                     alt="..."
                                     width={25}
@@ -154,7 +152,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.uTubeSVG}
                                     alt="..."
                                     width={27}
@@ -166,7 +164,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.wpSVG}
                                     alt="..."
                                     width={19}
@@ -225,7 +223,7 @@ const RadiusFooter = (props) => {
                                 }}
                             >
                                 <div className="arrow-bg">
-                                    <Image
+                                    <MyImage
                                         src={images.upArrow}
                                         alt=" "
                                         width={52}
