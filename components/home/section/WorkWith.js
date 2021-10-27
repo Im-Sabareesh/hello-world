@@ -1,12 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { ImgPanelSection, H1, Paragraph } from '@components';
+import { ImgPanelSection, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 export default function WorkWithSection(props) {
@@ -29,7 +27,7 @@ export default function WorkWithSection(props) {
                     </Col>
 
                     <Col md={8} className="workwithus-txt  mt-3">
-                        <Image
+                        <MyImage
                             src={images.weWorkWith}
                             alt=" "
                             height={285}

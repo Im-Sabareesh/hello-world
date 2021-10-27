@@ -1,11 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
-import Image from 'next/image';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 export default function QuickStatsSection() {
@@ -59,7 +58,7 @@ export default function QuickStatsSection() {
                             className="counter-thumb text-center mt-3"
                         >
                             <div className="mb-4">
-                                <Image
+                                <MyImage
                                     src={item.icon}
                                     alt=" "
                                     height={40}

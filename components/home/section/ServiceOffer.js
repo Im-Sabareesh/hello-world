@@ -1,12 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
 import images from '@components/images';
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 
 export default function ServiceOfferSection() {
     const t = i18next.t.bind(i18next);
@@ -73,7 +71,7 @@ export default function ServiceOfferSection() {
                             className="service-thumb text-center mt-5"
                         >
                             {/* <p> */}
-                            <Image
+                            <MyImage
                                 src={item.icon}
                                 alt=""
                                 height={65}

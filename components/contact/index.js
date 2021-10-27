@@ -1,10 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
-import Image from 'next/image';
-
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 
 const ContactComponent = () => {
@@ -76,7 +74,7 @@ const ContactComponent = () => {
                         <Row>
                             <Col md={6} lg={6}>
                                 <Paragraph className="contact-img mb-5">
-                                    <Image
+                                    <MyImage
                                         src={images.contactUs}
                                         alt=" "
                                         width={636}
@@ -107,7 +105,7 @@ const ContactComponent = () => {
                                     <h3 className="h3">Contact Us</h3>
                                     <span className="d-flex">
                                         <Paragraph className="contact-icon">
-                                            <Image
+                                            <MyImage
                                                 src={images.contactPhone}
                                                 alt=" "
                                                 className=""
@@ -125,7 +123,7 @@ const ContactComponent = () => {
                                     </span>
                                     <span className="d-flex">
                                         <Paragraph className="contact-icon">
-                                            <Image
+                                            <MyImage
                                                 src={images.contactEmail}
                                                 alt=" "
                                                 className=""
@@ -149,7 +147,7 @@ const ContactComponent = () => {
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <Image
+                                            <MyImage
                                                 src={images.fbPng}
                                                 alt=""
                                                 height={27}
@@ -160,7 +158,7 @@ const ContactComponent = () => {
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <Image
+                                            <MyImage
                                                 src={images.instaPgn}
                                                 alt=""
                                                 height={27}
@@ -171,7 +169,7 @@ const ContactComponent = () => {
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <Image
+                                            <MyImage
                                                 src={images.twitterPng}
                                                 alt=""
                                                 height={25}
@@ -182,7 +180,7 @@ const ContactComponent = () => {
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <Image
+                                            <MyImage
                                                 src={images.uTubePng}
                                                 alt=""
                                                 height={25}
@@ -193,7 +191,7 @@ const ContactComponent = () => {
                                             href="#"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <Image
+                                            <MyImage
                                                 src={images.wpPng}
                                                 alt=""
                                                 height={64}
@@ -310,7 +308,7 @@ const ContactComponent = () => {
                                 <h2 className="h2 mb-5"> Our Offices </h2>
                             </Col>
                             <Col md={12} className=" ouroffice-banner">
-                                <Image
+                                <MyImage
                                     src={images.contactUsJpg}
                                     alt=""
                                     className="office-banner"
@@ -333,7 +331,7 @@ const ContactComponent = () => {
                                     className="d-flex mt-5"
                                 >
                                     <div className=" mt-1 me-3 flex-shrink-0">
-                                        <Image
+                                        <MyImage
                                             src={images.mappin}
                                             alt=" "
                                             height={29}
@@ -357,7 +355,7 @@ const ContactComponent = () => {
                                         <div className="contact-small-section contact-small-section-contact pt-3">
                                             <span className="d-flex">
                                                 <Paragraph className="contact-icon">
-                                                    <Image
+                                                    <MyImage
                                                         src={
                                                             images.contactPhone
                                                         }
@@ -377,7 +375,7 @@ const ContactComponent = () => {
                                             </span>
                                             <span className="d-flex">
                                                 <Paragraph className="contact-icon">
-                                                    <Image
+                                                    <MyImage
                                                         src={
                                                             images.contactEmail
                                                         }

@@ -3,12 +3,10 @@ import _ from 'lodash';
 import Link from 'next/link';
 import i18next from 'i18next';
 import PropTypes from 'prop-types';
-
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
-import images from '@components/images';
 
-import { Paragraph } from '@components';
+import images from '@components/images';
+import { Paragraph, MyImage } from '@components';
 
 const TopLogoFooter = (props) => {
     const t = i18next.t.bind(i18next),
@@ -104,7 +102,7 @@ const TopLogoFooter = (props) => {
                     >
                         <Link href={`/${props.language}/`}>
                             <a className="brand-logo">
-                                <Image
+                                <MyImage
                                     src={images.ccWhiteLogo}
                                     // className="mb-md-4 mb-sm-3 mb-4"
                                     alt=" "
@@ -122,7 +120,7 @@ const TopLogoFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.fbSVG}
                                     alt=" "
                                     width={11}
@@ -134,7 +132,7 @@ const TopLogoFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.instaSVG}
                                     alt=" "
                                     width={20}
@@ -146,7 +144,7 @@ const TopLogoFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.twitterSVG}
                                     alt=" "
                                     width={25}
@@ -158,7 +156,7 @@ const TopLogoFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.uTubeSVG}
                                     alt=" "
                                     width={27}
@@ -170,7 +168,7 @@ const TopLogoFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.wpSVG}
                                     alt=" "
                                     width={19}

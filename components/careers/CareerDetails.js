@@ -2,11 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-import Image from 'next/image';
 
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
@@ -74,14 +73,14 @@ const CareerDetailsComponent = () => {
                         </Col>
                         <Col sm={12} md={12} lg={5}>
                             <div className="overview-img">
-                                <Image
+                                <MyImage
                                     src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-none d-lg-block"
                                     width={843}
                                     height={843}
                                 />
-                                <Image
+                                <MyImage
                                     src={images.careerDetail}
                                     alt="career-overview-img"
                                     className="overview-mobile-img d-block d-lg-none"

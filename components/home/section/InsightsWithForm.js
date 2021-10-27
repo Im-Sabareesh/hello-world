@@ -2,12 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
-import Image from 'next/image';
-
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
 import images from '@components/images';
-import { CardSection, Button, Paragraph } from '@components';
+import { CardSection, Button, Paragraph, MyImage } from '@components';
 
 export default function InsightWithFormSection() {
     const t = i18next.t.bind(i18next),
@@ -238,7 +236,7 @@ export default function InsightWithFormSection() {
                                         lg={6}
                                         className="contact-right-form"
                                     >
-                                        <Image
+                                        <MyImage
                                             src={images.contactForm}
                                             alt=" "
                                             height={488}

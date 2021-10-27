@@ -4,13 +4,13 @@ import i18next from 'i18next';
 import { NFTSComponent, Meta } from '@components';
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 
-const NFTServices = () => {
+const NFTServices = (props) => {
     const t = i18next.t.bind(i18next);
     return (
         <div className="nft-service-page">
             <Meta title={t('nftDevelopement')} desc="" />
 
-            <NFTSComponent />
+            <NFTSComponent language={props.language} />
         </div>
     );
 };

@@ -46,8 +46,8 @@ module.exports = (phase) => {
             imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
             domain: [
                 'http://localhost:3000',
-                'ec2-13-127-48-125.ap-south-1.compute.amazonaws.com',
-                'chaincode.sumanastech.com',
+                'http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com',
+                'https://chaincode.sumanastech.com/',
             ],
         },
     };

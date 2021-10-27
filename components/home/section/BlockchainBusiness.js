@@ -3,7 +3,6 @@ import _ from 'lodash';
 import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
 import images from '@components/images';
 
 import { Paragraph, MyImage } from '@components';
@@ -79,7 +78,7 @@ export default function BlockchainBusinessSection() {
                                 >
                                     <div>
                                         {/* <p> */}
-                                        <Image
+                                        <MyImage
                                             src={item.icon}
                                             alt=""
                                             width={76}

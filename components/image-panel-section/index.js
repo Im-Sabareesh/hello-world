@@ -2,9 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import { Container } from 'react-bootstrap';
 
-import { Container, Image } from 'react-bootstrap';
-import { Button } from '@components';
+import { Button, MyImage } from '@components';
 
 const ImagePanelSection = ({
     className,
@@ -36,7 +36,7 @@ const ImagePanelSection = ({
                 </div>
                 {image !== '' && (
                     <div>
-                        <Image src={image} alt="" />
+                        <MyImage src={image} alt="" width={176} height={165} />
                     </div>
                 )}
             </div>

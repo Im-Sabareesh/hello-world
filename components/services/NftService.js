@@ -1,14 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-import { ImgPanelSection, Button, H1, Paragraph } from '@components';
+import { ImgPanelSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
-const NFTSComponent = () => {
+const NFTSComponent = (props) => {
     const router = useRouter();
 
     return (
@@ -40,7 +39,7 @@ const NFTSComponent = () => {
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {
-                                        router.push('/contact');
+                                        router.push(`/${props.language}/contact`);
                                     }}
                                 >
                                     Talk to our Experts
@@ -49,7 +48,7 @@ const NFTSComponent = () => {
                         </Col>
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
-                                <Image
+                                <MyImage
                                     src={images.nftPng}
                                     rounded="true"
                                     className="nft-service-img"
@@ -115,7 +114,7 @@ const NFTSComponent = () => {
                 secClass="service-inner-section3 py-md-5 py-4"
                 className="cta-banner cta-banner3 d-flex align-items-center"
                 title="Start Now?"
-                link="/contact"
+                link={`/${props.language}/contact`}
                 btnName="Get a quote"
             />
 
@@ -126,6 +125,8 @@ const NFTSComponent = () => {
 
 export default NFTSComponent;
 
-NFTSComponent.propTypes = {};
+NFTSComponent.propTypes = { language: PropTypes.string};
 
-NFTSComponent.defaultProps = {};
+NFTSComponent.defaultProps = {
+    language: ''
+};
