@@ -1,11 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
-const AboutUs = () => {
+const AboutUs = (props) => {
     const router = useRouter(),
         teamMemberList = [
             {
@@ -350,7 +351,7 @@ const AboutUs = () => {
                             <Button
                                 btnVarient="red-btn"
                                 onClick={() => {
-                                    router.push('/contact');
+                                    router.push(`/${props.language}/contact`);
                                 }}
                                 className="min-size-btn btn btn-primary"
                             >
@@ -368,6 +369,8 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-AboutUs.propTypes = {};
+AboutUs.propTypes = { language: PropTypes.string };
 
-AboutUs.defaultProps = {};
+AboutUs.defaultProps = {
+    language: ''
+};
