@@ -10,7 +10,7 @@ import {
     Button,
     H1,
     Paragraph,
-    MyImage
+    MyImage,
 } from '@components';
 import images from '@components/images';
 
@@ -66,7 +66,9 @@ const DefiSComponent = (props) => {
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {
-                                        router.push(`/${props.language}/contact`);
+                                        router.push(
+                                            `/${props.language}/contact`
+                                        );
                                     }}
                                 >
                                     Talk to our Experts
@@ -237,8 +239,8 @@ const DefiSComponent = (props) => {
 
 export default DefiSComponent;
 
-DefiSComponent.propTypes = { language: PropTypes.string};
+DefiSComponent.propTypes = { language: PropTypes.string };
 
 DefiSComponent.defaultProps = {
-    language: ''
+    language: '',
 };

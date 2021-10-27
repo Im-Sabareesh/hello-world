@@ -109,5 +109,5 @@ export default {
     uTubeSVG,
     wpSVG,
     upArrow,
-    purpleArrow
+    purpleArrow,
 };

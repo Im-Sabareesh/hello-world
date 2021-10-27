@@ -18,7 +18,7 @@ const MyImage = (props) => {
             quality={props.quality}
             height={props.height}
         />
-    ):null;
+    ) : null;
 };
 
 export default MyImage;

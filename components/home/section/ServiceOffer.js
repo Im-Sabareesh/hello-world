@@ -82,7 +82,9 @@ export default function ServiceOfferSection() {
                             />
                             {/* </p> */}
 
-                            <h3 className="h3 dark-text-color pt-2">{item.name}</h3>
+                            <h3 className="h3 dark-text-color pt-2">
+                                {item.name}
+                            </h3>
 
                             <Paragraph> {item.describe} </Paragraph>
                         </Col>

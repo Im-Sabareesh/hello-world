@@ -39,7 +39,9 @@ const NFTSComponent = (props) => {
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {
-                                        router.push(`/${props.language}/contact`);
+                                        router.push(
+                                            `/${props.language}/contact`
+                                        );
                                     }}
                                 >
                                     Talk to our Experts
@@ -125,8 +127,8 @@ const NFTSComponent = (props) => {
 
 export default NFTSComponent;
 
-NFTSComponent.propTypes = { language: PropTypes.string};
+NFTSComponent.propTypes = { language: PropTypes.string };
 
 NFTSComponent.defaultProps = {
-    language: ''
+    language: '',
 };

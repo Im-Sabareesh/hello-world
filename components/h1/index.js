@@ -36,7 +36,7 @@ const H1 = ({ children, className }) => {
                 .dark-secondary-text-color {
                     color: #404852;
                 }
-        `}</style>
+            `}</style>
         </h1>
     );
 };

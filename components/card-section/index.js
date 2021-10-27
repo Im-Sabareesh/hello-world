@@ -10,7 +10,14 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
         return (
             <Card className={`${footerClass && 'custom-card'} ${className}`}>
-                <MyImage src={item.image} alt="" className="card-img-top" loading="lazy" height={!footerClass ? 251 : 221 } width={416}/>
+                <MyImage
+                    src={item.image}
+                    alt=""
+                    className="card-img-top"
+                    loading="lazy"
+                    height={!footerClass ? 251 : 221}
+                    width={416}
+                />
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3 mb-3">{item.title}</h3>
@@ -23,10 +30,12 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             className="link-primary d-flex"
                         >
                             Learn More
-                            <div className="ps-1" >
+                            <div className="ps-1">
                                 <MyImage
                                     src={images.purpleArrow}
-                                    alt=" " width={11} height={10}
+                                    alt=" "
+                                    width={11}
+                                    height={10}
                                 />
                             </div>
                         </a>
@@ -42,7 +51,12 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             {item.link}
                         </a>
                         <a href="#" onClick={(e) => e.preventDefault()}>
-                            <MyImage src={images.purpleArrow} alt="" width={16} height={14} />
+                            <MyImage
+                                src={images.purpleArrow}
+                                alt=""
+                                width={16}
+                                height={14}
+                            />
                         </a>
                     </Card.Footer>
                 )}
@@ -53,7 +67,16 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderCard = () => {
         return (
             <Card className={`custom-card ${className}`}>
-                {item.image && <MyImage src={item.image} alt="" loading="lazy" className="card-img-top" height={220} width={416} />}
+                {item.image && (
+                    <MyImage
+                        src={item.image}
+                        alt=""
+                        loading="lazy"
+                        className="card-img-top"
+                        height={220}
+                        width={416}
+                    />
+                )}
                 <Card.Body>
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>

@@ -95,7 +95,11 @@ const ContactComponent = (props) => {
                                         experienced developers.
                                         <a
                                             href="#"
-                                            onClick={() => router.push(`/${props.language}/about`)}
+                                            onClick={() =>
+                                                router.push(
+                                                    `/${props.language}/about`
+                                                )
+                                            }
                                         >
                                             Read more
                                         </a>

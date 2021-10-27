@@ -171,38 +171,40 @@ const Header = (props) => {
                             lg={2}
                             className="text-end text-md-start d-sm-flex letstalk-btn mt-2"
                         >
-                           <div>
-                           <Button
-                                btnVarient="red-btn"
-                                onClick={() => {
-                                    router.push(`/${props.language}/contact`);
-                                }}
-                            >
-                                {t('letsTalk')}
-                            </Button>
-                           </div>
-                           <div className="search-margin">
-                           <a
-                                href="#"
-                                className="ms-2 header-search pt-1"
-                                onClick={(e) => e.preventDefault()}
-                            >
-                                <MyImage
-                                    src={images.searchIcon}
-                                    alt=""
-                                    className={
-                                        !state &&
-                                        _.some(whiteLayout, (lay) =>
-                                            router.pathname.includes(lay)
-                                        )
-                                            ? 'white-logo'
-                                            : ''
-                                    }
-                                    width={17}
-                                    height={17}
-                                />
-                            </a>
-                           </div>
+                            <div>
+                                <Button
+                                    btnVarient="red-btn"
+                                    onClick={() => {
+                                        router.push(
+                                            `/${props.language}/contact`
+                                        );
+                                    }}
+                                >
+                                    {t('letsTalk')}
+                                </Button>
+                            </div>
+                            <div className="search-margin">
+                                <a
+                                    href="#"
+                                    className="ms-2 header-search pt-1"
+                                    onClick={(e) => e.preventDefault()}
+                                >
+                                    <MyImage
+                                        src={images.searchIcon}
+                                        alt=""
+                                        className={
+                                            !state &&
+                                            _.some(whiteLayout, (lay) =>
+                                                router.pathname.includes(lay)
+                                            )
+                                                ? 'white-logo'
+                                                : ''
+                                        }
+                                        width={17}
+                                        height={17}
+                                    />
+                                </a>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

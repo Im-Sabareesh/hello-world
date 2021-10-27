@@ -8,7 +8,11 @@ const Footer = (props) => {
     const router = useRouter();
 
     const whiteLayout = [
-        { name: '/about', footer: 'left', component: () => <CommonFooter language={props.language} /> },
+        {
+            name: '/about',
+            footer: 'left',
+            component: () => <CommonFooter language={props.language} />,
+        },
         {
             name: '/contact',
             footer: undefined,

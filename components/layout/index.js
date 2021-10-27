@@ -11,7 +11,7 @@ const Layout = (props) => {
     return (
         <>
             {/* <Header language={language} /> */}
-            {router.pathname === '/' ? null : (<Header language={language} />)}
+            {router.pathname === '/' ? null : <Header language={language} />}
             {props.children}
             <Footer language={language} />
         </>
