@@ -1,34 +1,34 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import images from '@components/images';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 
 export default function BlockchainBusinessSection() {
-    const { t } = useTranslation(['home', 'common']),
+    const t = i18next.t.bind(i18next),
         blockChainUsageList = [
             {
-                name: t('enhancedSecurity'),
+                name: t('home.enhancedSecurity'),
                 icon: images.enhSecurity,
             },
             {
-                name: t('greaterTransparency'),
+                name: t('home.greaterTransparency'),
                 icon: images.greTransp,
             },
             {
-                name: t('instantTraceability'),
+                name: t('home.instantTraceability'),
                 icon: images.instanceTrace,
             },
             {
-                name: t('increasedEfficiency'),
+                name: t('home.increasedEfficiency'),
                 icon: images.incEff,
             },
             {
-                name: t('decentralizedGovernance'),
+                name: t('home.decentralizedGovernance'),
                 icon: images.deCenGov,
             },
         ];
@@ -39,10 +39,10 @@ export default function BlockchainBusinessSection() {
                 <Row>
                     <Col md={12} lg={6} className="mt-5">
                         <h2 className="dark-text-color mb-4 h2">
-                            {t('blockChainEnhance')}
+                            {t('home.blockChainEnhance')}
                         </h2>
 
-                        <Paragraph>{t('blockChainEnhanceDesc')}</Paragraph>
+                        <Paragraph>{t('home.blockChainEnhanceDesc')}</Paragraph>
                     </Col>
 
                     <Col
@@ -50,7 +50,7 @@ export default function BlockchainBusinessSection() {
                         lg={6}
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
-                        <Image
+                        <MyImage
                             src={images.homeSecTopImg}
                             alt=""
                             width={610}
@@ -59,6 +59,15 @@ export default function BlockchainBusinessSection() {
                             placeholder="blur"
                             loading="lazy"
                         />
+                        {/* <Image
+                            src={images.homeSecTopImg}
+                            alt=""
+                            width={610}
+                            height={318}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> */}
                     </Col>
 
                     <div className="mt-5 mb-3">

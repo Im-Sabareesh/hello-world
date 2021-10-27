@@ -1,13 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { CardSection } from '@components';
 
 export default function ExploreProjectSection() {
-    const { t } = useTranslation('home'),
+    const t = i18next.t.bind(i18next),
         exploreProjectList = [
             {
                 title: 'Blockchain Consulting',
@@ -46,7 +46,7 @@ export default function ExploreProjectSection() {
             <Container>
                 <Row className="align-items-center">
                     <Col md={12} className="text-center mt-5">
-                        <h2 className="h2 my-4">{t('exploreProject')}</h2>
+                        <h2 className="h2 my-4">{t('home.exploreProject')}</h2>
                     </Col>
                     {_.map(exploreProjectList, (item) => (
                         <Col md={6} lg={4} key={_.uniqueId()}>

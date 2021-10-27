@@ -2,27 +2,27 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import Image from 'next/image';
-
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 import { Button } from '@components';
 import images from '@components/images';
+import MyImage from '../Image';
 
-const Header = () => {
+const Header = (props) => {
     const router = useRouter(),
-        { t } = useTranslation('common'),
+        t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'],
         [state, setState] = React.useState(''),
         socialMedisIcons = [
-            '/assets/icons/facebook.svg',
-            '/assets/icons/instagram.svg',
-            '/assets/icons/twitter.svg',
-            '/assets/icons/youtube.svg',
-            '/assets/icons/wordpress.svg',
+            images.fbSVG,
+            images.instaSVG,
+            images.twitterSVG,
+            images.uTubeSVG,
+            images.wpSVG,
         ];
-
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
             setState('sticky');
@@ -34,10 +34,9 @@ const Header = () => {
     React.useEffect(() => {
         window.addEventListener('scroll', listenScrollEvent);
     }, []);
-
     return (
         <header className={`fixed-top ${state}`}>
-            {router.pathname === '/' && (
+            {router.pathname === '/[lang]' && (
                 <div className="header-top py-2">
                     <Container fluid>
                         <Row className="justify-content-between">
@@ -58,9 +57,10 @@ const Header = () => {
                                                     e.preventDefault()
                                                 }
                                             >
-                                                <Image
+                                                <MyImage
                                                     src={icon}
-                                                    alt=""
+                                                    alt=" "
+                                                    quality={100}
                                                     height={20}
                                                     width={20}
                                                 />
@@ -84,7 +84,7 @@ const Header = () => {
                 <Container>
                     <Row>
                         <Col sm={4} md={3} lg={2}>
-                            <Link href="/">
+                            <Link href={`/${props.language}/`}>
                                 <a>
                                     <Image
                                         src={images.logo}
@@ -112,7 +112,9 @@ const Header = () => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Link href="/about">
+                                            <Link
+                                                href={`/${props.language}/about`}
+                                            >
                                                 <a className="nav-link">
                                                     {t('header.aboutUS')}
                                                 </a>
@@ -144,12 +146,16 @@ const Header = () => {
                                                 id="basic-nav-dropdown"
                                             >
                                                 <NavDropdown.Item>
-                                                    <Link href="/services/NFTServices">
+                                                    <Link
+                                                        href={`/${props.language}/services/NFTServices`}
+                                                    >
                                                         {t('nftDevelopement')}
                                                     </Link>
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item>
-                                                    <Link href="/services/DefiServices">
+                                                    <Link
+                                                        href={`/${props.language}/services/DefiServices`}
+                                                    >
                                                         {t('defiDevelopment')}
                                                     </Link>
                                                 </NavDropdown.Item>
@@ -205,6 +211,8 @@ const Header = () => {
 
 export default Header;
 
-Header.propTypes = {};
+Header.propTypes = { language: PropTypes.string };
 
-Header.defaultProps = {};
+Header.defaultProps = {
+    language: '',
+};

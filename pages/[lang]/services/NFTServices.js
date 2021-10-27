@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18next from 'i18next';
 
 import { NFTSComponent, Meta } from '@components';
+import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 
 const NFTServices = () => {
-    const { t } = useTranslation('common');
+    const t = i18next.t.bind(i18next);
     return (
         <div className="nft-service-page">
             <Meta title={t('nftDevelopement')} desc="" />
@@ -17,13 +17,22 @@ const NFTServices = () => {
 
 export default NFTServices;
 
-export const getStaticProps = async (p) => {
+export async function getStaticPaths() {
+    const paths = getAllLanguageSlugs();
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps({ params }) {
+    const language = getLanguage(params.lang);
     return {
         props: {
-            ...(await serverSideTranslations(p.locale, ['common'])),
+            language,
         },
     };
-};
+}
 
 NFTServices.propTypes = {};
 
