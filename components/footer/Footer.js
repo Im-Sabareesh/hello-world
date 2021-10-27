@@ -40,7 +40,7 @@ const Footer = (props) => {
     const footer = _.find(whiteLayout, (l) => router.pathname.includes(l.name));
 
     return (
-        <>{!!footer ? footer.component() : <CommonFooter radius={true} language={props.language} />}</>
+        <>{!!footer ? footer.component() :router.pathname=='/[lang]/'&& <CommonFooter radius={true} language={props.language} />}</>
     );
 };
 

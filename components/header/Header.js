@@ -3,23 +3,25 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import i18next from 'i18next';
-import NextImage from 'next/image';
+import Image from 'next/image';
 import PropTypes from 'prop-types'
-import { Container, Row, Col, Navbar, Nav, Image, NavDropdown } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav,  NavDropdown } from 'react-bootstrap';
 
 import { Button } from '@components';
 import images from '@components/images';
+import MyImage from '../Image'
+
 const Header = (props) => {
     const router = useRouter(),
         t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'],
         [state, setState] = React.useState(''),
         socialMedisIcons = [
-            images.fbPng,
-            images.instaPgn,
-            images.twitterPng,
-            images.uTubePng,
-            images.wpPng
+            images.fbSVG,
+            images.instaSVG,
+            images.twitterSVG,
+            images.uTubeSVG,
+            images.wpSVG
         ];
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
@@ -32,10 +34,9 @@ const Header = (props) => {
     React.useEffect(() => {
         window.addEventListener('scroll', listenScrollEvent);
     }, []);
-
     return (
         <header className={`fixed-top ${state}`}>
-            {router.pathname === '/' && (
+            {router.pathname === "/[lang]" && (
                 <div className="header-top py-2">
                     <Container fluid>
                         <Row className="justify-content-between">
@@ -48,7 +49,7 @@ const Header = (props) => {
                                 className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
                             >
                                 <ul className="social-links">
-                                    {_.map(socialMedisIcons, (icon) => (
+                                    {_.map(socialMedisIcons, (icon) =>  (
                                         <li key={icon}>
                                             <a
                                                 href="#"
@@ -56,13 +57,14 @@ const Header = (props) => {
                                                     e.preventDefault()
                                                 }
                                             >
-                                                <Image src={icon} />
-                                                {/* <Image
+                                                <MyImage
                                                     src={icon}
                                                     alt=" "
+                                                    quality={100}
                                                     height={20}
-                                                    width={20} */}
-                                                {/* /> */}
+                                                    width={20}
+
+                                                /> 
                                             </a>
                                         </li>
                                     ))}
@@ -85,7 +87,7 @@ const Header = (props) => {
                         <Col sm={4} md={3} lg={2}>
                             <Link href={`/${props.language}/`}>
                                 <a>
-                                    <NextImage
+                                    <Image
                                         src={images.logo}
                                         alt=""
                                         className={
@@ -179,7 +181,7 @@ const Header = (props) => {
                                 className="ms-2 header-search"
                                 onClick={(e) => e.preventDefault()}
                             >
-                                <NextImage
+                                <Image
                                     src={images.searchIcon}
                                     alt=""
                                     className={

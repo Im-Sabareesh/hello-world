@@ -22,7 +22,7 @@ export default function FeaturedSection(props) {
             },
             {
                 title: t('nftDevelopement'),
-                link: '/services/NFTServices/',
+                link: 'services/NFTServices/',
             },
             {
                 title: t('home.obortechSmartHub'),

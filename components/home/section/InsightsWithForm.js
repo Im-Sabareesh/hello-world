@@ -168,7 +168,6 @@ export default function InsightWithFormSection() {
                                                             (type) => (
                                                                 <div
                                                                     key={_.uniqueId()}
-                                                                    key={type}
                                                                     className="mb-3"
                                                                 >
                                                                     <Form.Check

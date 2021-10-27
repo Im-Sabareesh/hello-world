@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import images from '@components/images';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 
 export default function BlockchainBusinessSection() {
     const t = i18next.t.bind(i18next),
@@ -50,7 +50,16 @@ export default function BlockchainBusinessSection() {
                         lg={6}
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
-                        <Image
+                        <MyImage 
+                         src={images.homeSecTopImg}
+                         alt=""
+                         width={610}
+                         height={318}
+                         layout="intrinsic"
+                         placeholder="blur"
+                         loading="lazy"
+                        />
+                        {/* <Image
                             src={images.homeSecTopImg}
                             alt=""
                             width={610}
@@ -58,7 +67,7 @@ export default function BlockchainBusinessSection() {
                             layout="intrinsic"
                             placeholder="blur"
                             loading="lazy"
-                        />
+                        /> */}
                     </Col>
 
                     <div className="mt-5 mb-3">

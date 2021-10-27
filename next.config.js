@@ -42,75 +42,12 @@ module.exports = (phase) => {
         sassOptions: {
             includePaths: [path.join(__dirname, 'styles')]
         },
-        // images: {
-        //     loader: "imgix",
-        //     path: "/",
-        //     domain: ['localhost',]
-
-        // },
-        exportPathMap: async function (defaultPathMap, {
-            dev,
-            dir,
-            outDir,
-            distDir,
-            buildId
-        }) {
-            return {
-                '/': {
-                    page: '/'
-                },
-                '/404': {
-                    page: '/404'
-                },
-                '/500': {
-                    page: '/500'
-                },
-                '/en': {
-                    page: '/en'
-                },
-                '/de': {
-                    page: '/de'
-                },
-                '/en/about': {
-                    page: '/en/about'
-                },
-                '/de/about': {
-                    page: '/de/about'
-                },
-                '/de/careers': {
-                    page: '/de/careers'
-                },
-                '/en/careers': {
-                    page: '/en/careers'
-                },
-                '/en/careers/1': {
-                    page: '/en/careers'
-                },
-                '/de/careers/1': {
-                    page: '/en/careers'
-                },
-                '/en/contact': {
-                    page: '/en/careers'
-                },
-                '/de/contact': {
-                    page: '/en/careers'
-                },
-                '/de/services/DefiServices': {
-                    page: '/en/careers'
-                },
-                '/en/services/DefiServices': {
-                    page: '/en/careers'
-                },
-                '/de/services/NFTServices': {
-                    page: '/en/careers'
-                },
-                '/en/services/NFTServices': {
-                    page: '/en/careers'
-                }
-
-
-            }
-        }
+        images: {
+            loader: "cloudinary",
+            // path: "/",
+            imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+            domain: ['http://localhost:3000',"ec2-13-127-48-125.ap-south-1.compute.amazonaws.com","chaincode.sumanastech.com"]
+        },
     };
     // }
 
