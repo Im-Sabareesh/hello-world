@@ -272,7 +272,7 @@ const AboutUs = () => {
                         {_.map(teamMemberList, (item) => (
                             <Col lg={3} md={4} xs={6} key={_.uniqueId()}>
                                 <Card className="our-team border-0 p-lg-4 p-3 mb-xl-5 mb-4">
-                                    <Image loading="lazy" className="card-img-top rounded-circle mt-0 mb-xl-4 mb-1"
+                                    <MyImage loading="lazy" className="card-img-top rounded-circle mt-0 mb-xl-4 mb-1"
                                         height={258} width={258}
                                         src={item.image}
                                     />
