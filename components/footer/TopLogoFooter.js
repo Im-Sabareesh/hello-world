@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 import i18next from 'i18next';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
@@ -252,9 +252,9 @@ const TopLogoFooter = (props) => {
 export default TopLogoFooter;
 
 TopLogoFooter.propTypes = {
-    language: PropTypes.string
+    language: PropTypes.string,
 };
 
 TopLogoFooter.defaultProps = {
-    language: ''
+    language: '',
 };

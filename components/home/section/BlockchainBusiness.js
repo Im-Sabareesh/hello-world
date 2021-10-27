@@ -50,14 +50,14 @@ export default function BlockchainBusinessSection() {
                         lg={6}
                         className="mt-5 text-end text-lg-end text-md-center"
                     >
-                        <MyImage 
-                         src={images.homeSecTopImg}
-                         alt=""
-                         width={610}
-                         height={318}
-                         layout="intrinsic"
-                         placeholder="blur"
-                         loading="lazy"
+                        <MyImage
+                            src={images.homeSecTopImg}
+                            alt=""
+                            width={610}
+                            height={318}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
                         />
                         {/* <Image
                             src={images.homeSecTopImg}

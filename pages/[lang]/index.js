@@ -16,20 +16,20 @@ export default function Home(props) {
 }
 
 export async function getStaticPaths() {
-	const paths = getAllLanguageSlugs();
-	return {
-		paths,
-		fallback: false,
-	};
+    const paths = getAllLanguageSlugs();
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
 export async function getStaticProps({ params }) {
-	const language = getLanguage(params.lang);
-	return {
-		props: {
-			language,
-		},
-	};
+    const language = getLanguage(params.lang);
+    return {
+        props: {
+            language,
+        },
+    };
 }
 
 Home.propTypes = {};

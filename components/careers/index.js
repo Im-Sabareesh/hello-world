@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { Button, H1, Paragraph } from '@components';
 import { careerSelector } from '@redux';
 import { useSelector } from 'react-redux';
@@ -240,6 +240,6 @@ const CareersComponent = (props) => {
 
 export default CareersComponent;
 
-CareersComponent.propTypes = {language: PropTypes.string};
+CareersComponent.propTypes = { language: PropTypes.string };
 
-CareersComponent.defaultProps = { language: ""};
+CareersComponent.defaultProps = { language: '' };

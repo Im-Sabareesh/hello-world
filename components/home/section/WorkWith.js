@@ -23,7 +23,8 @@ export default function WorkWithSection(props) {
                     <Col md={4} className="workwithus-txt mt-3">
                         <H1 className="secondary-text-color mb-3">121,000+</H1>
                         <Paragraph>
-                            {t('home.weWorkDescBefore')} 120 {t('home.weWorkDescAfter')}
+                            {t('home.weWorkDescBefore')} 120{' '}
+                            {t('home.weWorkDescAfter')}
                         </Paragraph>
                     </Col>
 
@@ -53,8 +54,8 @@ export default function WorkWithSection(props) {
     );
 }
 
-WorkWithSection.propTypes = { language: PropTypes.string};
+WorkWithSection.propTypes = { language: PropTypes.string };
 
 WorkWithSection.defaultProps = {
-    language: ''
+    language: '',
 };

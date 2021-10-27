@@ -19,7 +19,7 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: `/${props.language}/services/DefiServices`
+                        route: `/${props.language}/services/DefiServices`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
@@ -271,10 +271,10 @@ export default RadiusFooter;
 
 RadiusFooter.propTypes = {
     radius: PropTypes.bool,
-    language: PropTypes.string
+    language: PropTypes.string,
 };
 
 RadiusFooter.defaultProps = {
     radius: false,
-    language: ''
+    language: '',
 };

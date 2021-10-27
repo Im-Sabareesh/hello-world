@@ -98,8 +98,8 @@ const HomeComponent = (props) => {
 
 export default HomeComponent;
 
-HomeComponent.propTypes = {language: PropTypes.string};
+HomeComponent.propTypes = { language: PropTypes.string };
 
 HomeComponent.defaultProps = {
-    language: ''
+    language: '',
 };

@@ -74,7 +74,9 @@ export default function FeaturedSection(props) {
                             {_.map(featuresList, (item) => (
                                 <Col key={_.uniqueId()}>
                                     {item.link !== '#' ? (
-                                        <Link href={`${props.language}/${item.link}`}>
+                                        <Link
+                                            href={`${props.language}/${item.link}`}
+                                        >
                                             <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
                                                 <span> {item.title} </span>
                                             </div>
@@ -94,8 +96,8 @@ export default function FeaturedSection(props) {
     );
 }
 
-FeaturedSection.propTypes = { language: PropTypes.string};
+FeaturedSection.propTypes = { language: PropTypes.string };
 
 FeaturedSection.defaultProps = {
-    language: ''
+    language: '',
 };

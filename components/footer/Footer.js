@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import _ from 'lodash';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { EmptyFooter, CommonFooter, TopLogoFooter } from './';
 
 const Footer = (props) => {
@@ -19,7 +19,11 @@ const Footer = (props) => {
         //     footer: 'left',
         //     component: () => <CommonFooter radius={true} />,
         // },
-        { name: '/careers', footer: 'left', component: () => <CommonFooter language={props.language} /> },
+        {
+            name: '/careers',
+            footer: 'left',
+            component: () => <CommonFooter language={props.language} />,
+        },
         {
             name: '/careers/careerDetails',
             footer: 'left',
@@ -40,16 +44,22 @@ const Footer = (props) => {
     const footer = _.find(whiteLayout, (l) => router.pathname.includes(l.name));
 
     return (
-        <>{!!footer ? footer.component() :router.pathname=='/[lang]/'&& <CommonFooter radius={true} language={props.language} />}</>
+        <>
+            {!!footer
+                ? footer.component()
+                : router.pathname == '/[lang]/' && (
+                      <CommonFooter radius={true} language={props.language} />
+                  )}
+        </>
     );
 };
 
 export default Footer;
 
 Footer.propTypes = {
-    language:PropTypes.string
+    language: PropTypes.string,
 };
 
 Footer.defaultProps = {
-    language: ''
+    language: '',
 };

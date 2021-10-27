@@ -77,7 +77,9 @@ export default function InsightWithFormSection() {
                                         <h2 className="h2 mb-2">
                                             {t('home.readyGetStarted')}
                                         </h2>
-                                        <Paragraph>{t('home.haveAnIdea')}</Paragraph>
+                                        <Paragraph>
+                                            {t('home.haveAnIdea')}
+                                        </Paragraph>
 
                                         <div className="home-contact-form mt-4">
                                             <Form
@@ -92,7 +94,10 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom01"
                                                     >
                                                         <Form.Label>
-                                                            {t('home.firstName')}*
+                                                            {t(
+                                                                'home.firstName'
+                                                            )}
+                                                            *
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
@@ -145,7 +150,9 @@ export default function InsightWithFormSection() {
                                                         controlId="validationCustom03"
                                                     >
                                                         <Form.Label>
-                                                            {t('home.weHelpYou')}
+                                                            {t(
+                                                                'home.weHelpYou'
+                                                            )}
                                                         </Form.Label>
                                                         <Form.Control
                                                             as="textarea"

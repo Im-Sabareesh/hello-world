@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import i18next from 'i18next';
 import Image from 'next/image';
-import PropTypes from 'prop-types'
-import { Container, Row, Col, Navbar, Nav,  NavDropdown } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 import { Button } from '@components';
 import images from '@components/images';
-import MyImage from '../Image'
+import MyImage from '../Image';
 
 const Header = (props) => {
     const router = useRouter(),
@@ -21,7 +21,7 @@ const Header = (props) => {
             images.instaSVG,
             images.twitterSVG,
             images.uTubeSVG,
-            images.wpSVG
+            images.wpSVG,
         ];
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
@@ -36,7 +36,7 @@ const Header = (props) => {
     }, []);
     return (
         <header className={`fixed-top ${state}`}>
-            {router.pathname === "/[lang]" && (
+            {router.pathname === '/[lang]' && (
                 <div className="header-top py-2">
                     <Container fluid>
                         <Row className="justify-content-between">
@@ -49,7 +49,7 @@ const Header = (props) => {
                                 className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
                             >
                                 <ul className="social-links">
-                                    {_.map(socialMedisIcons, (icon) =>  (
+                                    {_.map(socialMedisIcons, (icon) => (
                                         <li key={icon}>
                                             <a
                                                 href="#"
@@ -63,8 +63,7 @@ const Header = (props) => {
                                                     quality={100}
                                                     height={20}
                                                     width={20}
-
-                                                /> 
+                                                />
                                             </a>
                                         </li>
                                     ))}
@@ -113,7 +112,9 @@ const Header = (props) => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Link href={`/${props.language}/about`}>
+                                            <Link
+                                                href={`/${props.language}/about`}
+                                            >
                                                 <a className="nav-link">
                                                     {t('header.aboutUS')}
                                                 </a>
@@ -145,12 +146,16 @@ const Header = (props) => {
                                                 id="basic-nav-dropdown"
                                             >
                                                 <NavDropdown.Item>
-                                                    <Link href={`/${props.language}/services/NFTServices`}>
+                                                    <Link
+                                                        href={`/${props.language}/services/NFTServices`}
+                                                    >
                                                         {t('nftDevelopement')}
                                                     </Link>
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item>
-                                                    <Link href={`/${props.language}/services/DefiServices`}>
+                                                    <Link
+                                                        href={`/${props.language}/services/DefiServices`}
+                                                    >
                                                         {t('defiDevelopment')}
                                                     </Link>
                                                 </NavDropdown.Item>
@@ -206,8 +211,8 @@ const Header = (props) => {
 
 export default Header;
 
-Header.propTypes = {language: PropTypes.string};
+Header.propTypes = { language: PropTypes.string };
 
 Header.defaultProps = {
-    language: ''
+    language: '',
 };

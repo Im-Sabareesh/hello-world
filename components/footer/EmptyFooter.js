@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import i18next from 'i18next';
 const EmptyFooter = () => {
-    const t  = i18next.t.bind(i18next);
+    const t = i18next.t.bind(i18next);
 
     return (
         <footer className="contactus-footer py-1">

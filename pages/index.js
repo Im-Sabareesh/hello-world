@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 
 import i18next from 'i18next';
 
-
 export default function Home({ allLangsData }) {
     const router = useRouter();
 
