@@ -1,14 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
-
+import i18next from 'i18next';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import images from '@components/images';
+import { MyImage } from '@components';
 
 export default function CilentTestimonialSection() {
-    const { t } = useTranslation('home');
+    const t = i18next.t.bind(i18next);
     const testimonialList = [
         {
             name: 'Chuan Allen',
@@ -41,10 +40,10 @@ export default function CilentTestimonialSection() {
                         <div className="testimonial-bg py-5">
                             <Row>
                                 <Col lg={12} className="text-center">
-                                    <small> {t('testimonial')} </small>
+                                    <small> {t('home.testimonial')} </small>
 
                                     <h2 className="h2 mt-4 mb-5">
-                                        {t('letClients')}
+                                        {t('home.letClients')}
                                     </h2>
                                 </Col>
 
@@ -58,7 +57,7 @@ export default function CilentTestimonialSection() {
                                                 <div className="testimonial-cont">
                                                     <div className="testimonial-user-cont d-flex align-items-center">
                                                         <div className="user-thumb">
-                                                            <Image
+                                                            <MyImage
                                                                 src={item.image}
                                                                 className="shadow"
                                                                 alt=" "

@@ -2,21 +2,23 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-import Image from 'next/image';
 
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
 
 const CareerDetailsComponent = () => {
     const router = useRouter();
-    const { query: { cid } } = router;
-    const state = useSelector((state) =>
-        careerSelector.careerDetailsSelector(state, cid)
-    ) || {};
+    const {
+        query: { cid },
+    } = router;
+    const state =
+        useSelector((state) =>
+            careerSelector.careerDetailsSelector(state, cid)
+        ) || {};
     return (
         <>
             <div className="breadcrumb-section">
@@ -71,8 +73,8 @@ const CareerDetailsComponent = () => {
                         </Col>
                         <Col sm={12} md={12} lg={6}>
                             <div className="overview-img">
-                                <div className=" d-none d-lg-block">
-                                    <Image
+                                <div className="d-none d-lg-block">
+                                    <MyImage
                                         src={images.careerDetail}
                                         alt="career-overview-img"
                                         className="overview-mobile-img p-0"
@@ -82,7 +84,7 @@ const CareerDetailsComponent = () => {
                                     />
                                 </div>
                                 <div className="d-lg-flex">
-                                    <Image
+                                    <MyImage
                                         src={images.careerDetail}
                                         alt="career-overview-img"
                                         className="overview-mobile-img"
@@ -91,7 +93,6 @@ const CareerDetailsComponent = () => {
                                         layout="responsive"
                                     />
                                 </div>
-                                
                             </div>
                         </Col>
                     </Row>

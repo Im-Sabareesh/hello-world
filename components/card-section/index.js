@@ -3,9 +3,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 
 import { Card } from 'react-bootstrap';
-import Image from 'next/image';
-
-import { Button } from '@components';
+import { Button, MyImage } from '@components';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
     const renderFullCard = () => {
@@ -25,7 +23,10 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                         >
                             Learn More
                             <div className="ps-1" >
-                                <Image src="/assets/icons/purple-arrow.svg" height={10} width={11} alt="" />
+                                <MyImage
+                                    src="/assets/icons/purple-arrow.svg"
+                                    alt=" " width={11} height={10}
+                                />
                             </div>
                         </a>
                     )}
@@ -40,7 +41,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             {item.link}
                         </a>
                         <a href="#" onClick={(e) => e.preventDefault()}>
-                            <Image src="/assets/icons/card-arrow.svg" alt="" height={14} width={16} />
+                            <MyImage src="/assets/icons/card-arrow.svg" alt="" width={16} height={14} />
                         </a>
                     </Card.Footer>
                 )}

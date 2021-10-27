@@ -1,16 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
-
+import i18next from 'i18next';
+import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
+
 import images from '@components/images';
+import { Paragraph, MyImage } from '@components';
 
-import { Paragraph } from '@components';
-
-const TopLogoFooter = () => {
-    const { t } = useTranslation('common'),
+const TopLogoFooter = (props) => {
+    const t = i18next.t.bind(i18next),
         footerLinkList = [
             {
                 title: t('footer.ourServices'),
@@ -21,11 +20,11 @@ const TopLogoFooter = () => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: '/services/DefiServices',
+                        route: `/${props.language}/services/DefiServices`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: '/services/NFTServices',
+                        route: `/${props.language}/services/NFTServices`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),
@@ -71,15 +70,15 @@ const TopLogoFooter = () => {
                 list: [
                     {
                         name: t('contactUs'),
-                        route: '/contact',
+                        route: `/${props.language}/contact`,
                     },
                     {
                         name: t('career'),
-                        route: '/careers',
+                        route: `/${props.language}/careers`,
                     },
                     {
                         name: t('footer.moreAboutUs'),
-                        route: '/about',
+                        route: `/${props.language}/about`,
                     },
                     {
                         name: t('footer.blog'),
@@ -101,9 +100,9 @@ const TopLogoFooter = () => {
                         xs={6}
                         className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 "
                     >
-                        <Link href="/">
+                        <Link href={`/${props.language}/`}>
                             <a className="brand-logo">
-                                <Image
+                                <MyImage
                                     src={images.ccWhiteLogo}
                                     // className="mb-md-4 mb-sm-3 mb-4"
                                     alt=" "
@@ -121,7 +120,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.fbSVG}
                                     alt=" "
                                     width={11}
@@ -133,7 +132,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.instaSVG}
                                     alt=" "
                                     width={20}
@@ -145,7 +144,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.twitterSVG}
                                     alt=" "
                                     width={25}
@@ -157,7 +156,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.uTubeSVG}
                                     alt=" "
                                     width={27}
@@ -169,7 +168,7 @@ const TopLogoFooter = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.wpSVG}
                                     alt=" "
                                     width={19}
@@ -250,6 +249,10 @@ const TopLogoFooter = () => {
 
 export default TopLogoFooter;
 
-TopLogoFooter.propTypes = {};
+TopLogoFooter.propTypes = {
+    language: PropTypes.string,
+};
 
-TopLogoFooter.defaultProps = {};
+TopLogoFooter.defaultProps = {
+    language: '',
+};

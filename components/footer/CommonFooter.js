@@ -1,17 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import i18next from 'i18next';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Paragraph } from '@components';
+import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const RadiusFooter = (props) => {
-    const { t } = useTranslation('common'),
+    const t = i18next.t.bind(i18next),
         footerLinkList = [
             {
                 title: t('footer.ourServices'),
@@ -19,11 +17,11 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: '/services/DefiServices',
+                        route: `/services/DefiServices`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: '/services/NFTServices',
+                        route: `/services/NFTServices`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),
@@ -63,15 +61,15 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('contactUs'),
-                        route: '/contact',
+                        route: `/contact`,
                     },
                     {
                         name: t('career'),
-                        route: '/careers',
+                        route: `/careers`,
                     },
                     {
                         name: t('footer.moreAboutUs'),
-                        route: '/about',
+                        route: `/about`,
                     },
                     {
                         name: t('footer.blog'),
@@ -96,12 +94,12 @@ const RadiusFooter = (props) => {
                                 : 'home-footer-logo'
                         } mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                     >
-                        <Link href="/">
+                        <Link href={`/${props.language}/`}>
                             <a
                                 // onClick={(e) => e.preventDefault()}
                                 className="brand-logo"
                             >
-                                <Image
+                                <MyImage
                                     src={images.ccWhiteLogo}
                                     alt="..."
                                     width={219}
@@ -118,7 +116,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.fbSVG}
                                     alt="..."
                                     width={11}
@@ -130,7 +128,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.instaSVG}
                                     alt="..."
                                     width={20}
@@ -142,7 +140,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.twitterSVG}
                                     alt="..."
                                     width={25}
@@ -154,7 +152,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.uTubeSVG}
                                     alt="..."
                                     width={27}
@@ -166,7 +164,7 @@ const RadiusFooter = (props) => {
                                 onClick={(e) => e.preventDefault()}
                                 className="mx-md-3 mx-1"
                             >
-                                <Image
+                                <MyImage
                                     src={images.wpSVG}
                                     alt="..."
                                     width={19}
@@ -189,10 +187,10 @@ const RadiusFooter = (props) => {
                                 {item.title}
                             </h3>
                             <ul className="lh-lg">
-                                {_.map(item.list, (listItem) => (
+                                {_.map(item.list, (listItem) =>  (
                                     <li key={_.uniqueId()} className="mb-2">
                                         {listItem.route !== '#' ? (
-                                            <Link href={listItem.route}>
+                                            <Link href={`/${props.language}${listItem.route}`}>
                                                 <a className="light-text-color">
                                                     {listItem.name}
                                                 </a>
@@ -200,7 +198,6 @@ const RadiusFooter = (props) => {
                                         ) : (
                                             <a
                                                 className="light-text-color"
-                                                href="#"
                                                 onClick={(e) =>
                                                     e.preventDefault()
                                                 }
@@ -225,7 +222,7 @@ const RadiusFooter = (props) => {
                                 }}
                             >
                                 <div className="arrow-bg">
-                                    <Image
+                                    <MyImage
                                         src={images.upArrow}
                                         alt=" "
                                         width={52}
@@ -271,8 +268,10 @@ export default RadiusFooter;
 
 RadiusFooter.propTypes = {
     radius: PropTypes.bool,
+    language: PropTypes.string,
 };
 
 RadiusFooter.defaultProps = {
     radius: false,
+    language: '',
 };

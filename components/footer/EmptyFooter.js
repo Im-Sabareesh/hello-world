@@ -1,9 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useTranslation } from 'next-i18next';
-
+import i18next from 'i18next';
 const EmptyFooter = () => {
-    const { t } = useTranslation('common');
+    const t = i18next.t.bind(i18next);
 
     return (
         <footer className="contactus-footer py-1">

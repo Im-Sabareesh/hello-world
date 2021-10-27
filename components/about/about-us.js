@@ -1,10 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
-
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const AboutUs = () => {
@@ -80,7 +78,7 @@ const AboutUs = () => {
                 <Container fluid className="pb-xl-5 pb-2">
                     <Row className="pb-xl-5 pb-2">
                         <Col className="pb-xl-5 pb-2 align-img">
-                            <Image
+                            <MyImage
                                 src={images.aboutUs}
                                 alt=" "
                                 className="mx-auto about-section1-img"
@@ -295,7 +293,7 @@ const AboutUs = () => {
                                                 }
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
-                                                <Image
+                                                <MyImage
                                                     src={images.twitter}
                                                     alt=" "
                                                     width={23}
@@ -309,7 +307,7 @@ const AboutUs = () => {
                                                 }
                                                 className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                             >
-                                                <Image
+                                                <MyImage
                                                     src={images.linkeIn}
                                                     alt=" "
                                                     width={23}

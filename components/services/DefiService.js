@@ -1,9 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
-
 import { Container, Row, Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import {
     CardSection,
@@ -11,10 +10,11 @@ import {
     Button,
     H1,
     Paragraph,
+    MyImage
 } from '@components';
 import images from '@components/images';
 
-const DefiSComponent = () => {
+const DefiSComponent = (props) => {
     const router = useRouter(),
         wideServiceListSec3 = [
             {
@@ -66,7 +66,7 @@ const DefiSComponent = () => {
                                     className="p-0"
                                     size="lg"
                                     onClick={() => {
-                                        router.push('/contact');
+                                        router.push(`/${props.language}/contact`);
                                     }}
                                 >
                                     Talk to our Experts
@@ -75,7 +75,7 @@ const DefiSComponent = () => {
                         </Col>
                         <Col md={6} sm={12}>
                             <div className="nft-service-img-div">
-                                <Image
+                                <MyImage
                                     src={images.defiMain}
                                     rounded="true"
                                     className="nft-service-img"
@@ -101,7 +101,7 @@ const DefiSComponent = () => {
                     <Container>
                         <Row>
                             <Col lg={5}>
-                                <Image
+                                <MyImage
                                     src={images.videoThumb}
                                     width={771}
                                     height={542}
@@ -184,7 +184,7 @@ const DefiSComponent = () => {
                     <ImgPanelSection
                         className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
                         title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
-                        link="/contact"
+                        link={`/${props.language}/contact`}
                         btnName="Let’s Talk"
                     />
                 </Container>
@@ -216,7 +216,7 @@ const DefiSComponent = () => {
                         </Col>
 
                         <Col md={{ span: 12, order: 0 }} lg={6}>
-                            <Image
+                            <MyImage
                                 src={images.defiTwo}
                                 alt=".."
                                 width={927}
@@ -237,6 +237,8 @@ const DefiSComponent = () => {
 
 export default DefiSComponent;
 
-DefiSComponent.propTypes = {};
+DefiSComponent.propTypes = { language: PropTypes.string};
 
-DefiSComponent.defaultProps = {};
+DefiSComponent.defaultProps = {
+    language: ''
+};

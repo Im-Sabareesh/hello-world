@@ -16,3 +16,4 @@ export { default as H1 } from './h1';
 export { default as Paragraph } from './paragraph';
 export { default as toaster } from './toast';
 export { default as StaticComponent } from './StaticComponent';
+export { default as MyImage } from './Image';

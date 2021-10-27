@@ -3,7 +3,7 @@ import rootReducer from './root-reducer';
 import thunk from 'redux-thunk';
 
 //
-// Binding middleware and dev toold
+// Binding middleware and dev tools
 //
 const bindMiddleware = (middleware) => {
     if (process.env.NODE_ENV !== 'production') {

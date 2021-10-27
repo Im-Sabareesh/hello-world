@@ -2,33 +2,34 @@ import React from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
+import PropTypes from 'prop-types';
+import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { Button, H1, Paragraph } from '@components';
 
-export default function FeaturedSection() {
+export default function FeaturedSection(props) {
     const router = useRouter();
-    const { t } = useTranslation(['home', 'common']),
+    const t = i18next.t.bind(i18next),
         featuresList = [
             {
-                title: t('hyperledgerDevelopment'),
+                title: t('home.hyperledgerDevelopment'),
                 link: '#',
             },
             {
-                title: t('defiDevelopment', { ns: 'common' }),
-                link: '/services/DefiServices/',
+                title: t('home.defiDevelopment'),
+                link: 'services/DefiServices/',
             },
             {
-                title: t('nftDevelopement', { ns: 'common' }),
-                link: '/services/NFTServices/',
+                title: t('nftDevelopement'),
+                link: 'services/NFTServices/',
             },
             {
-                title: t('obortechSmartHub'),
+                title: t('home.obortechSmartHub'),
                 link: '#',
             },
             {
-                title: t('gdprCompliance'),
+                title: t('home.gdprCompliance'),
                 link: '#',
             },
         ];
@@ -40,31 +41,31 @@ export default function FeaturedSection() {
                     <Col md={10} lg={8} xl={7} xxl={6}>
                         <div className="d-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
-                                {t('blockChainTechnology')}
+                                {t('home.blockChainTechnology')}
                             </h3>
                             <div className="heading-line"> </div>
                         </div>
 
-                        <H1>{t('provideEnterprise')}</H1>
+                        <H1>{t('home.provideEnterprise')}</H1>
 
-                        <Paragraph>{t('provideEnterpriseDesc')}</Paragraph>
+                        <Paragraph>{t('home.provideEnterpriseDesc')}</Paragraph>
 
                         <div className="button-outer">
                             <Button
                                 btnVarient="red-btn"
                                 size="lg"
                                 onClick={() => {
-                                    router.push('/contact');
+                                    router.push(`${props.language}/contact`);
                                 }}
                             >
-                                {t('consultFree', { ns: 'common' })}
+                                {t('consultFree')}
                             </Button>
                         </div>
                     </Col>
 
                     <Col md={12} className="text-center mt-4">
                         <h2 className="h2 secondary-text-color">
-                            {t('featured')}
+                            {t('home.featured')}
                         </h2>
                     </Col>
 
@@ -73,7 +74,9 @@ export default function FeaturedSection() {
                             {_.map(featuresList, (item) => (
                                 <Col key={_.uniqueId()}>
                                     {item.link !== '#' ? (
-                                        <Link href={item.link}>
+                                        <Link
+                                            href={`${props.language}/${item.link}`}
+                                        >
                                             <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
                                                 <span> {item.title} </span>
                                             </div>
@@ -93,6 +96,8 @@ export default function FeaturedSection() {
     );
 }
 
-FeaturedSection.propTypes = {};
+FeaturedSection.propTypes = { language: PropTypes.string };
 
-FeaturedSection.defaultProps = {};
+FeaturedSection.defaultProps = {
+    language: '',
+};

@@ -1,9 +1,11 @@
 const path = require('path');
+// const webpack = require('@svgr/webpack')
+// const withImages = require('next-images')
+
 const {
     PHASE_DEVELOPMENT_SERVER,
     PHASE_PRODUCTION_BUILD,
 } = require('next/constants');
-const { i18n, localePath } = require('./next-i18next.config');
 
 module.exports = (phase) => {
     const isDev = phase === PHASE_DEVELOPMENT_SERVER;
@@ -20,24 +22,34 @@ module.exports = (phase) => {
         API_URL: (() => {
             if (isDev)
                 return 'http://my-json-server.typicode.com/kathirpandian1993/demo';
+
             if (isProd) {
                 return 'http://my-json-server.typicode.com/kathirpandian1993/demo';
             }
             if (isStaging)
                 return 'http://my-json-server.typicode.com/kathirpandian1993/demo';
+
             return 'RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)';
         })(),
     };
 
     return {
-        trailingSlash: true,
         reactStrictMode: true,
         trailingSlash: true,
         env: env,
         sassOptions: {
             includePaths: [path.join(__dirname, 'styles')],
         },
-        i18n,
-        localePath,
+        images: {
+            loader: 'cloudinary',
+            // path: "/",
+            imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+            domain: [
+                'http://localhost:3000',
+                'http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com',
+                'https://chaincode.sumanastech.com/',
+            ],
+        },
     };
+    // }
 };

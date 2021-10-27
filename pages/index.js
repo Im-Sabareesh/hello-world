@@ -1,28 +1,17 @@
-import React from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-import { HomeComponent, Meta } from '@components';
+import i18next from 'i18next';
 
-export default function Home() {
-    const { t } = useTranslation('home');
-    return (
-        <div className="home-page">
-            <Meta title={t('title')} desc="" />
+export default function Home({ allLangsData }) {
+    const router = useRouter();
 
-            <HomeComponent />
-        </div>
-    );
+    useEffect(() => {
+        const { pathname } = router;
+        if (pathname == '/') {
+            router.push('/' + i18next.language.substring(0, 2));
+        }
+    });
+
+    return null;
 }
-
-export const getStaticProps = async (p) => {
-    return {
-        props: {
-            ...(await serverSideTranslations(p.locale, ['home', 'common'])),
-        },
-    };
-};
-
-Home.propTypes = {};
-
-Home.defaultProps = {};
