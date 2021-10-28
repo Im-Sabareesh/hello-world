@@ -1,6 +1,33 @@
 import servicesAction from './action';
 
-const initState = { list: [] };
+const initState = {
+    list: {
+        defi: {
+            headerSection: {
+                title: '',
+                description: ''
+            },
+            smallParaSection: [],
+            cardSection: []
+        },
+        nft: {
+            headerSection: {
+                title: '',
+                description: ''
+            },
+            smallParaSection: [],
+            cardSection: []
+        },
+        hlfd: {
+            headerSection: {
+                title: '',
+                description: ''
+            },
+            smallParaSection: [],
+            cardSection: []
+        },
+
+} };
 
 const fetchList = (state, payload) => {
     return {

@@ -3,11 +3,14 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { serviceSelector } from '@redux';
+import { useSelector } from 'react-redux';
 
-import { ImgPanelSection, Button, H1, Paragraph, MyImage } from '@components';
+import { CardSection, ImgPanelSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const NFTSComponent = (props) => {
+    const nftServList = useSelector(serviceSelector.servicesListSelector);
     const router = useRouter();
 
     return (
@@ -24,13 +27,10 @@ const NFTSComponent = (props) => {
                                 </h3>
                             </div>
 
-                            <H1>NFT Development</H1>
+                            <H1>{nftServList.nft.headerSection.title}</H1>
 
                             <Paragraph>
-                                Our NFT development process provides high
-                                customization freedom and allows you to become a
-                                frontrunner in the NFT field by availing of the
-                                services of our NFT development company.
+                                {nftServList.nft.headerSection.description}
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -77,31 +77,11 @@ const NFTSComponent = (props) => {
                                     Blockchain solutions for frictionless
                                     business
                                 </h2>
-                                <Paragraph>
-                                    Blockchain is changing the way the world
-                                    lives and works – but it&apos;s only a means
-                                    to an end, not the end itself. We can help
-                                    you apply this technology to drive your
-                                    transformation into the future.
-                                </Paragraph>
-
-                                <Paragraph>
-                                    We start with an understanding of your
-                                    specific aspirations, followed by a
-                                    practical application of blockchain
-                                    innovation. The conversation grows as new
-                                    opportunities come to light along the way.
-                                </Paragraph>
-
-                                <Paragraph>
-                                    As the leading independent technology
-                                    organization, we integrate alliances,
-                                    partnerships, and leaders from every aspect
-                                    of the blockchain ecosystem. The goal? To
-                                    bring the right combination of capabilities
-                                    to your unique infrastructure, challenges
-                                    and strategic vision
-                                </Paragraph>
+                                {_.map(nftServList.nft.smallParaSection, (item, i) => (
+                                    <Paragraph key={_.uniqueId()}>
+                                        {item}
+                                    </Paragraph>
+                                ))}
                             </Col>
                         </Row>
                     </Container>
@@ -112,13 +92,38 @@ const NFTSComponent = (props) => {
 
             {/*--------------- NFT Services section3 cta start---------- */}
 
-            <ImgPanelSection
-                secClass="service-inner-section3 py-md-5 py-4"
-                className="cta-banner cta-banner3 d-flex align-items-center"
-                title="Start Now?"
-                link={`/${props.language}/contact`}
-                btnName="Get a quote"
-            />
+            <section className="service-inner-section3 py-xl-5 py-4">
+                <Container>
+                    <Row>
+                        <Col md={12} className="text-center mb-2 mb-lg-5">
+                            <h2 className="h2">
+                                {' '}
+                                Our wide range of service include
+                                {' '}
+                            </h2>
+                        </Col>
+                        {_.map(nftServList.nft.cardSection, (item, i) => (
+                            <Col key={_.uniqueId()} md={6} lg={4}>
+                                <CardSection
+                                    className="card shadow-sm mt-3 mb-4"
+                                    item={item}
+                                    index={i}
+                                />
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+
+                <Container className="mt-5 pt-2">
+                    <ImgPanelSection
+                        secClass="service-inner-section3 py-md-5 py-4"
+                        className="cta-banner cta-banner3 d-flex align-items-center"
+                        title="Start Now?"
+                        link={`/${props.language}/contact`}
+                        btnName="Get a quote"
+                    />
+                </Container>
+            </section>
 
             {/*--------------- NFT Services section3 cta end---------- */}
         </>

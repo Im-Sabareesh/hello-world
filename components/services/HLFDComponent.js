@@ -16,14 +16,11 @@ import {
 } from '@components';
 import images from '@components/images';
 
-const DefiSComponent = (props) => {
-    const defiServList = useSelector(serviceSelector.servicesListSelector);
+const HLFDSComponent = (props) => {
+    const hlfdServList = useSelector(serviceSelector.servicesListSelector);
     const router = useRouter();
-
     return (
         <>
-            {/*--------------- defi Services section1 start---------- */}
-
             <section className="service-inner-section1">
                 <Container>
                     <Row>
@@ -34,10 +31,10 @@ const DefiSComponent = (props) => {
                                 </h3>
                             </div>
 
-                            <H1>{defiServList.defi.headerSection.title}</H1>
+                            <H1>{hlfdServList.hlfd.headerSection.title}</H1>
 
                             <Paragraph>
-                                {defiServList.defi.headerSection.description}
+                                {hlfdServList.hlfd.headerSection.description}
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -95,53 +92,17 @@ const DefiSComponent = (props) => {
 
                             <Col lg={{ span: 6, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain solutions for frictionless
-                                    business
+                                    Blockchain Development With Hyperledger Fabric
                                 </h2>
 
                                 <ul className="ul-list">
-                                    {_.map(defiServList.defi.smallParaSection, (item, i) => (
+                                    {_.map(hlfdServList.hlfd.smallParaSection, (item, i) => (
                                         <li key={_.uniqueId()}>
                                             {' '}
                                             {item}
                                             {' '}
                                         </li>
                                     ))}
-                                    {/* <li>
-                                        {' '}
-                                        The emergence of <strong>Decentralized Finance</strong> or
-                                        DeFi has brought about a paradigm shift from
-                                        conventional finance to decentralized, peer-to-peer
-                                        Ethereum blockchain-based technologies.
-                                        The DeFi ecosystem encompasses a broad-ranging
-                                        network of impactful financial instruments,
-                                        including investing, payments and settlement, banking,
-                                        stablecoins, lending and borrowing platforms, and more.{' '}
-                                    </li>
-
-                                    <li>
-                                        {' '}
-                                        DeFi enhances and expands the access for global participants
-                                        to invest, lend, trade, and borrow. Whether you need a
-                                        permissionless financial system, immutability, interoperability,
-                                        transparency, low upfront costs, and a secure solution, DeFi is
-                                        the answer! Our superlative <strong>DeFi Development Services</strong> enable
-                                        you to defy all conventional methods of running a business. We help
-                                        you carve a distinct niche for yourself in a world where blockchain
-                                        technology adoption is becoming the norm.{' '}
-                                    </li> */}
-
-                                    {/* <li>
-                                        {' '}
-                                        As the leading independent technology
-                                        organization, we integrate alliances,
-                                        partnerships, and leaders from every
-                                        aspect of the blockchain ecosystem. The
-                                        goal? To bring the right combination of
-                                        capabilities to your unique
-                                        infrastructure, challenges and strategic
-                                        vision{' '}
-                                    </li> */}
                                 </ul>
                             </Col>
                         </Row>
@@ -162,7 +123,7 @@ const DefiSComponent = (props) => {
                                 Our wide range of service include{' '}
                             </h2>
                         </Col>
-                        {_.map(defiServList.defi.cardSection, (item, i) => (
+                        {_.map(hlfdServList.hlfd.cardSection, (item, i) => (
                             <Col key={_.uniqueId()} md={6} lg={4}>
                                 <CardSection
                                     className="card shadow-sm mt-3 mb-4"
@@ -174,21 +135,21 @@ const DefiSComponent = (props) => {
                     </Row>
                 </Container>
 
-                <Container className="mt-5 pt-2">
+                {/* <Container className="mt-5 pt-2">
                     <ImgPanelSection
                         className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
                         title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
                         link={`/${props.language}/contact`}
                         btnName="Let’s Talk"
                     />
-                </Container>
+                </Container> */}
             </section>
 
             {/*--------------- defi Services section3 cta end---------- */}
 
             {/*--------------- defi Services section4 start---------- */}
 
-            <section className="service-inner-section4 py-5">
+            {/* <section className="service-inner-section4 py-5">
                 <Container>
                     <Row>
                         <Col md={12} lg={6} className="my-auto">
@@ -222,17 +183,18 @@ const DefiSComponent = (props) => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
             {/*--------------- defi Services section4 end---------- */}
         </>
-    );
+    )
+ 
 };
 
-export default DefiSComponent;
+export default HLFDSComponent;
 
-DefiSComponent.propTypes = { language: PropTypes.string };
+HLFDSComponent.propTypes = { language: PropTypes.string };
 
-DefiSComponent.defaultProps = {
+HLFDSComponent.defaultProps = {
     language: '',
 };

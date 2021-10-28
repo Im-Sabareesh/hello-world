@@ -158,6 +158,13 @@ const Header = (props) => {
                                                         {t('defiDevelopment')}
                                                     </Link>
                                                 </NavDropdown.Item>
+                                                <NavDropdown.Item>
+                                                    <Link
+                                                        href={`/${props.language}/services/HLFDServices`}
+                                                    >
+                                                        {t('hdfDevelopment')}
+                                                    </Link>
+                                                </NavDropdown.Item>
                                             </NavDropdown>
                                         </Nav>
                                     </Navbar.Collapse>
