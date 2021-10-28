@@ -9,7 +9,7 @@ const Layout = (props) => {
     const router = useRouter();
     return (
         <>
-            {router.pathname === '/' ? null : (<Header language={language} />)}
+            {router.pathname === '/' ? null : <Header language={language} />}
             {props.children}
             <Footer language={language} />
         </>

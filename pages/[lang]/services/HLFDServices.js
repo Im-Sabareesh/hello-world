@@ -3,10 +3,10 @@ import i18next from 'i18next';
 import { useDispatch } from 'react-redux';
 import { servicesAction } from '@redux';
 
-import { NFTSComponent, Meta } from '@components';
+import { HLFDSComponent, Meta } from '@components';
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 
-const NFTServices = (props) => {
+const HLFDServices = (props) => {
     const t = i18next.t.bind(i18next);
     const dispatch = useDispatch();
     React.useEffect(() => {
@@ -16,12 +16,12 @@ const NFTServices = (props) => {
         <div className="nft-service-page">
             <Meta title={t('nftDevelopement')} desc="" />
 
-            <NFTSComponent language={props.language} />
+            <HLFDSComponent language={props.language} />
         </div>
     );
 };
 
-export default NFTServices;
+export default HLFDServices;
 
 export async function getStaticPaths() {
     const paths = getAllLanguageSlugs();
@@ -40,6 +40,6 @@ export async function getStaticProps({ params }) {
     };
 }
 
-NFTServices.propTypes = {};
+HLFDServices.propTypes = {};
 
-NFTServices.defaultProps = {};
+HLFDServices.defaultProps = {};

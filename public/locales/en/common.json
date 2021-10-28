@@ -33,7 +33,8 @@
         "copyRightsReserved": "©ChainCode PTY LTD 2021. All rights reserved"
     },
     "letsTalk": "Let's Talk",
-    "defiDevelopment": "Defi development",
+    "defiDevelopment": "DeFi Development",
+    "hdfDevelopment": "Hyperledger Fabric Development",
     "nftDevelopement": "NFT Development",
     "viewMore": "View More",
     "getQuote": "Get a quote",
@@ -94,7 +95,7 @@
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
         "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
-        "defiDevelopment": "Defi Development"
+        "defiDevelopment": "DeFi Development"
     },
     "aboutUs": {
         "title": "About Us"

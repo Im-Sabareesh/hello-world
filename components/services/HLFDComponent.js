@@ -6,24 +6,14 @@ import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
 
-import {
-    CardSection,
-    ImgPanelSection,
-    Button,
-    H1,
-    Paragraph,
-    MyImage,
-} from '@components';
+import { CardSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
-const DefiSComponent = (props) => {
-    const defiServList = useSelector(serviceSelector.servicesListSelector);
+const HLFDSComponent = (props) => {
+    const hlfdServList = useSelector(serviceSelector.servicesListSelector);
     const router = useRouter();
-
     return (
         <>
-            {/*--------------- defi Services section1 start---------- */}
-
             <section className="service-inner-section1">
                 <Container>
                     <Row>
@@ -34,10 +24,10 @@ const DefiSComponent = (props) => {
                                 </h3>
                             </div>
 
-                            <H1>{defiServList.defi.headerSection.title}</H1>
+                            <H1>{hlfdServList.hlfd.headerSection.title}</H1>
 
                             <Paragraph>
-                                {defiServList.defi.headerSection.description}
+                                {hlfdServList.hlfd.headerSection.description}
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -95,13 +85,13 @@ const DefiSComponent = (props) => {
 
                             <Col lg={{ span: 6, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain solutions for frictionless
-                                    business
+                                    Blockchain Development With Hyperledger
+                                    Fabric
                                 </h2>
 
                                 <ul className="ul-list">
                                     {_.map(
-                                        defiServList.defi.smallParaSection,
+                                        hlfdServList.hlfd.smallParaSection,
                                         (item, i) => (
                                             <li key={_.uniqueId()}> {item} </li>
                                         )
@@ -126,7 +116,7 @@ const DefiSComponent = (props) => {
                                 Our wide range of service include{' '}
                             </h2>
                         </Col>
-                        {_.map(defiServList.defi.cardSection, (item, i) => (
+                        {_.map(hlfdServList.hlfd.cardSection, (item, i) => (
                             <Col key={_.uniqueId()} md={6} lg={4}>
                                 <CardSection
                                     className="card shadow-sm mt-3 mb-4"
@@ -137,66 +127,15 @@ const DefiSComponent = (props) => {
                         ))}
                     </Row>
                 </Container>
-
-                <Container className="mt-5 pt-2">
-                    <ImgPanelSection
-                        className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
-                        title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
-                        link={`/${props.language}/contact`}
-                        btnName="Let’s Talk"
-                    />
-                </Container>
             </section>
-
-            {/*--------------- defi Services section3 cta end---------- */}
-
-            {/*--------------- defi Services section4 start---------- */}
-
-            <section className="service-inner-section4 py-5">
-                <Container>
-                    <Row>
-                        <Col md={12} lg={6} className="my-auto">
-                            <h2 className="h2 mb-4">
-                                {' '}
-                                Blockchain solutions for frictionless business{' '}
-                            </h2>
-
-                            <Paragraph>
-                                Blockchain for business uses a shared and
-                                immutable ledger that can only be accessed by
-                                members with permission. Network members control
-                                what information each organization or member may
-                                see, and what actions each can take. Blockchain
-                                is sometimes called a trustless network not
-                                because business partners don’t trust each
-                                other, but because they don’t have to.
-                            </Paragraph>
-                        </Col>
-
-                        <Col md={{ span: 12, order: 0 }} lg={6}>
-                            <MyImage
-                                src={images.defiTwo}
-                                alt=".."
-                                width={927}
-                                height={646}
-                                layout="responsive"
-                                placeholder="blur"
-                                loading="lazy"
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-
-            {/*--------------- defi Services section4 end---------- */}
         </>
     );
 };
 
-export default DefiSComponent;
+export default HLFDSComponent;
 
-DefiSComponent.propTypes = { language: PropTypes.string };
+HLFDSComponent.propTypes = { language: PropTypes.string };
 
-DefiSComponent.defaultProps = {
+HLFDSComponent.defaultProps = {
     language: '',
 };

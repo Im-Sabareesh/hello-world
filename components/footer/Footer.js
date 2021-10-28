@@ -43,6 +43,11 @@ const Footer = (props) => {
             footer: 'top',
             component: () => <TopLogoFooter language={props.language} />,
         },
+        {
+            name: '/services/HLFDServices',
+            footer: 'top',
+            component: () => <TopLogoFooter language={props.language} />,
+        },
     ];
 
     const footer = _.find(whiteLayout, (l) => router.pathname.includes(l.name));
