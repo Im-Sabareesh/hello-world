@@ -97,7 +97,11 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
         );
     };
 
-    return typeof window !== 'undefined' ? (fullCard ? renderFullCard() : renderCard()) : null;
+    return typeof window !== 'undefined'
+        ? fullCard
+            ? renderFullCard()
+            : renderCard()
+        : null;
 };
 
 export default CardSection;

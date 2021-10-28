@@ -100,48 +100,12 @@ const DefiSComponent = (props) => {
                                 </h2>
 
                                 <ul className="ul-list">
-                                    {_.map(defiServList.defi.smallParaSection, (item, i) => (
-                                        <li key={_.uniqueId()}>
-                                            {' '}
-                                            {item}
-                                            {' '}
-                                        </li>
-                                    ))}
-                                    {/* <li>
-                                        {' '}
-                                        The emergence of <strong>Decentralized Finance</strong> or
-                                        DeFi has brought about a paradigm shift from
-                                        conventional finance to decentralized, peer-to-peer
-                                        Ethereum blockchain-based technologies.
-                                        The DeFi ecosystem encompasses a broad-ranging
-                                        network of impactful financial instruments,
-                                        including investing, payments and settlement, banking,
-                                        stablecoins, lending and borrowing platforms, and more.{' '}
-                                    </li>
-
-                                    <li>
-                                        {' '}
-                                        DeFi enhances and expands the access for global participants
-                                        to invest, lend, trade, and borrow. Whether you need a
-                                        permissionless financial system, immutability, interoperability,
-                                        transparency, low upfront costs, and a secure solution, DeFi is
-                                        the answer! Our superlative <strong>DeFi Development Services</strong> enable
-                                        you to defy all conventional methods of running a business. We help
-                                        you carve a distinct niche for yourself in a world where blockchain
-                                        technology adoption is becoming the norm.{' '}
-                                    </li> */}
-
-                                    {/* <li>
-                                        {' '}
-                                        As the leading independent technology
-                                        organization, we integrate alliances,
-                                        partnerships, and leaders from every
-                                        aspect of the blockchain ecosystem. The
-                                        goal? To bring the right combination of
-                                        capabilities to your unique
-                                        infrastructure, challenges and strategic
-                                        vision{' '}
-                                    </li> */}
+                                    {_.map(
+                                        defiServList.defi.smallParaSection,
+                                        (item, i) => (
+                                            <li key={_.uniqueId()}> {item} </li>
+                                        )
+                                    )}
                                 </ul>
                             </Col>
                         </Row>

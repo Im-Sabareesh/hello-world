@@ -6,7 +6,14 @@ import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
 
-import { CardSection, ImgPanelSection, Button, H1, Paragraph, MyImage } from '@components';
+import {
+    CardSection,
+    ImgPanelSection,
+    Button,
+    H1,
+    Paragraph,
+    MyImage,
+} from '@components';
 import images from '@components/images';
 
 const NFTSComponent = (props) => {
@@ -77,11 +84,14 @@ const NFTSComponent = (props) => {
                                     Blockchain solutions for frictionless
                                     business
                                 </h2>
-                                {_.map(nftServList.nft.smallParaSection, (item, i) => (
-                                    <Paragraph key={_.uniqueId()}>
-                                        {item}
-                                    </Paragraph>
-                                ))}
+                                {_.map(
+                                    nftServList.nft.smallParaSection,
+                                    (item, i) => (
+                                        <Paragraph key={_.uniqueId()}>
+                                            {item}
+                                        </Paragraph>
+                                    )
+                                )}
                             </Col>
                         </Row>
                     </Container>
@@ -98,8 +108,7 @@ const NFTSComponent = (props) => {
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
                                 {' '}
-                                Our wide range of service include
-                                {' '}
+                                Our wide range of service include{' '}
                             </h2>
                         </Col>
                         {_.map(nftServList.nft.cardSection, (item, i) => (

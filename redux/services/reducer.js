@@ -5,29 +5,29 @@ const initState = {
         defi: {
             headerSection: {
                 title: '',
-                description: ''
+                description: '',
             },
             smallParaSection: [],
-            cardSection: []
+            cardSection: [],
         },
         nft: {
             headerSection: {
                 title: '',
-                description: ''
+                description: '',
             },
             smallParaSection: [],
-            cardSection: []
+            cardSection: [],
         },
         hlfd: {
             headerSection: {
                 title: '',
-                description: ''
+                description: '',
             },
             smallParaSection: [],
-            cardSection: []
+            cardSection: [],
         },
-
-} };
+    },
+};
 
 const fetchList = (state, payload) => {
     return {

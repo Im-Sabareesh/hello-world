@@ -6,14 +6,7 @@ import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
 
-import {
-    CardSection,
-    ImgPanelSection,
-    Button,
-    H1,
-    Paragraph,
-    MyImage,
-} from '@components';
+import { CardSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const HLFDSComponent = (props) => {
@@ -92,17 +85,17 @@ const HLFDSComponent = (props) => {
 
                             <Col lg={{ span: 6, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain Development With Hyperledger Fabric
+                                    Blockchain Development With Hyperledger
+                                    Fabric
                                 </h2>
 
                                 <ul className="ul-list">
-                                    {_.map(hlfdServList.hlfd.smallParaSection, (item, i) => (
-                                        <li key={_.uniqueId()}>
-                                            {' '}
-                                            {item}
-                                            {' '}
-                                        </li>
-                                    ))}
+                                    {_.map(
+                                        hlfdServList.hlfd.smallParaSection,
+                                        (item, i) => (
+                                            <li key={_.uniqueId()}> {item} </li>
+                                        )
+                                    )}
                                 </ul>
                             </Col>
                         </Row>
@@ -134,61 +127,9 @@ const HLFDSComponent = (props) => {
                         ))}
                     </Row>
                 </Container>
-
-                {/* <Container className="mt-5 pt-2">
-                    <ImgPanelSection
-                        className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
-                        title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
-                        link={`/${props.language}/contact`}
-                        btnName="Let’s Talk"
-                    />
-                </Container> */}
             </section>
-
-            {/*--------------- defi Services section3 cta end---------- */}
-
-            {/*--------------- defi Services section4 start---------- */}
-
-            {/* <section className="service-inner-section4 py-5">
-                <Container>
-                    <Row>
-                        <Col md={12} lg={6} className="my-auto">
-                            <h2 className="h2 mb-4">
-                                {' '}
-                                Blockchain solutions for frictionless business{' '}
-                            </h2>
-
-                            <Paragraph>
-                                Blockchain for business uses a shared and
-                                immutable ledger that can only be accessed by
-                                members with permission. Network members control
-                                what information each organization or member may
-                                see, and what actions each can take. Blockchain
-                                is sometimes called a trustless network not
-                                because business partners don’t trust each
-                                other, but because they don’t have to.
-                            </Paragraph>
-                        </Col>
-
-                        <Col md={{ span: 12, order: 0 }} lg={6}>
-                            <MyImage
-                                src={images.defiTwo}
-                                alt=".."
-                                width={927}
-                                height={646}
-                                layout="responsive"
-                                placeholder="blur"
-                                loading="lazy"
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section> */}
-
-            {/*--------------- defi Services section4 end---------- */}
         </>
-    )
- 
+    );
 };
 
 export default HLFDSComponent;
