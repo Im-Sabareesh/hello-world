@@ -3,11 +3,15 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-
+import {
+    // GoogleReCaptchaProvider,
+    withGoogleReCaptcha,
+    GoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 import images from '@components/images';
 import { CardSection, Button, Paragraph, MyImage } from '@components';
 
-export default function InsightWithFormSection() {
+const InsightWithFormSection = (props) => {
     const t = i18next.t.bind(i18next),
         router = useRouter(),
         insightsList = [
@@ -31,12 +35,30 @@ export default function InsightWithFormSection() {
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
+        event.preventDefault();
+        event.stopPropagation();
         if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
         }
 
         setValidated(true);
+    };
+
+    const handleVerify = (value) => {
+        console.log(value);
+    };
+
+    const handleVerifyRecaptcha = async () => {
+        console.log(props);
+        const { executeRecaptcha } = props.googleReCaptchaProps;
+
+        if (!executeRecaptcha) {
+            console.log('Recaptcha has not been loaded');
+
+            return;
+        }
+
+        const token = await executeRecaptcha('homepage');
+        console.log('token -- > ', token);
     };
 
     return (
@@ -226,6 +248,23 @@ export default function InsightWithFormSection() {
                                                             Send Request
                                                         </Button>
                                                     </Form.Group>
+
+                                                    {/* <div>
+                                                        <button
+                                                            onClick={
+                                                                handleVerifyRecaptcha
+                                                            }
+                                                        >
+                                                            Verify Recaptcha
+                                                        </button>
+                                                    </div> */}
+                                                    <div>
+                                                        <GoogleReCaptcha
+                                                            onVerify={
+                                                                handleVerify
+                                                            }
+                                                        />
+                                                    </div>
                                                 </Row>
                                             </Form>
                                         </div>
@@ -253,8 +292,10 @@ export default function InsightWithFormSection() {
             </Container>
         </section>
     );
-}
+};
 
 InsightWithFormSection.propTypes = {};
 
 InsightWithFormSection.defaultProps = {};
+
+export default withGoogleReCaptcha(InsightWithFormSection);

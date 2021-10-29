@@ -1,6 +1,7 @@
 import React from 'react';
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 import i18next from 'i18next';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import { HomeComponent, Meta } from '@components';
 
@@ -9,8 +10,17 @@ export default function Home(props) {
     return (
         <div className="home-page">
             <Meta title={t('home.title')} desc="" />
-
-            <HomeComponent language={props.language} />
+            <GoogleReCaptchaProvider
+                reCaptchaKey="6Lctqf8cAAAAAOjPjg81IGT-gkd-MeQ1UfXpts2j"
+                scriptProps={{
+                    async: false,
+                    defer: false,
+                    appendTo: 'body',
+                    nonce: undefined,
+                }}
+            >
+                <HomeComponent language={props.language} />
+            </GoogleReCaptchaProvider>
         </div>
     );
 }
