@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import i18next from 'i18next';
 import '../i18n/init';
 
 import '../styles/globals.scss';
@@ -9,7 +10,6 @@ import '../styles/globals-responsive.scss';
 import { Layout } from '@components';
 
 import { store } from '../redux/store';
-import i18next from 'i18next';
 
 function MyApp(props) {
     const { Component, pageProps } = props;
