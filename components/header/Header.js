@@ -29,6 +29,21 @@ const Header = (props) => {
         }
     };
 
+    const dropDownItems = [
+        {
+            name: `${t('nftDevelopement')}`,
+            navPath: `/${props.language}/services/nft-development`,
+        },
+        {
+            name: `${t('defiDevelopment')}`,
+            navPath: `/${props.language}/services/defi-development`,
+        },
+        {
+            name: `${t('hdfDevelopment')}`,
+            navPath: `/${props.language}/services/hyperledger-fabric-development`,
+        },
+    ];
+
     React.useEffect(() => {
         window.addEventListener('scroll', listenScrollEvent);
     }, []);
@@ -144,28 +159,36 @@ const Header = (props) => {
                                                 title="Services"
                                                 id="basic-nav-dropdown"
                                             >
-                                                <NavDropdown.Item>
-                                                    <Link
-                                                        href={`/${props.language}/services/NFTServices`}
-                                                    >
-                                                        {t('nftDevelopement')}
-                                                    </Link>
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item>
-                                                    <Link
-                                                        href={`/${props.language}/services/DefiServices`}
-                                                    >
-                                                        {t('defiDevelopment')}
-                                                    </Link>
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item>
-                                                    <Link
-                                                        href={`/${props.language}/services/HLFDServices`}
-                                                    >
-                                                        {t('hdfDevelopment')}
-                                                    </Link>
-                                                </NavDropdown.Item>
+                                                {_.map(
+                                                    dropDownItems,
+                                                    (navItem, i) => (
+                                                        <NavDropdown.Item
+                                                            key={_.uniqueId()}
+                                                            className={
+                                                                navItem.navPath ===
+                                                                router.asPath
+                                                                    ? 'nav-active'
+                                                                    : ''
+                                                            }
+                                                        >
+                                                            <Link
+                                                                href={
+                                                                    navItem.navPath
+                                                                }
+                                                            >
+                                                                {navItem.name}
+                                                            </Link>
+                                                        </NavDropdown.Item>
+                                                    )
+                                                )}
                                             </NavDropdown>
+                                            <Link
+                                                href={`/${props.language}/careers`}
+                                            >
+                                                <a className="nav-link">
+                                                    {t('header.careers')}
+                                                </a>
+                                            </Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>

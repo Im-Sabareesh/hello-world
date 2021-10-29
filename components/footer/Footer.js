@@ -34,17 +34,17 @@ const Footer = (props) => {
             component: () => <CommonFooter language={props.language} />,
         },
         {
-            name: '/services/NFTServices',
+            name: '/services/nft-development',
             footer: 'top',
             component: () => <TopLogoFooter language={props.language} />,
         },
         {
-            name: '/services/DefiServices',
+            name: '/services/defi-development',
             footer: 'top',
             component: () => <TopLogoFooter language={props.language} />,
         },
         {
-            name: '/services/HLFDServices',
+            name: '/services/hyperledger-fabric-development',
             footer: 'top',
             component: () => <TopLogoFooter language={props.language} />,
         },

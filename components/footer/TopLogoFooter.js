@@ -20,11 +20,11 @@ const TopLogoFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: `/${props.language}/services/DefiServices`,
+                        route: `/${props.language}/services/defi-development`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: `/${props.language}/services/NFTServices`,
+                        route: `/${props.language}/services/nft-development`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),
