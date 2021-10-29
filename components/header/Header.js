@@ -150,7 +150,7 @@ const Header = (props) => {
                                                 id="basic-nav-dropdown"
                                             >
                                                 {_.map(dropDownItems, (navItem, i) => (
-                                                    <NavDropdown.Item
+                                                    <NavDropdown.Item key={_.uniqueId()}
                                                         className={navItem.navPath === router.asPath ? 'nav-active' : ''}>
                                                         <Link href={navItem.navPath}>
                                                             {navItem.name}
