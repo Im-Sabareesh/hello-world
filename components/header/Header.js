@@ -28,11 +28,20 @@ const Header = (props) => {
             setState('');
         }
     };
-    
+
     const dropDownItems = [
-        { name: `${t('nftDevelopement')}`, navPath: `/${props.language}/services/NFTServices/` },
-        { name: `${t('defiDevelopment')}`, navPath: `/${props.language}/services/DefiServices/` },
-        { name: `${t('hdfDevelopment')}`, navPath: `/${props.language}/services/HLFDServices/` }
+        {
+            name: `${t('nftDevelopement')}`,
+            navPath: `/${props.language}/services/nft-development`,
+        },
+        {
+            name: `${t('defiDevelopment')}`,
+            navPath: `/${props.language}/services/defi-development`,
+        },
+        {
+            name: `${t('hdfDevelopment')}`,
+            navPath: `/${props.language}/services/hyperledger-fabric-development`,
+        },
     ];
 
     React.useEffect(() => {
@@ -80,10 +89,11 @@ const Header = (props) => {
             )}
 
             <div
-                className={`main-header py-2 ${_.some(whiteLayout, (lay) => router.pathname.includes(lay))
+                className={`main-header py-2 ${
+                    _.some(whiteLayout, (lay) => router.pathname.includes(lay))
                         ? 'inner-page-header'
                         : ''
-                    }`}
+                }`}
             >
                 <Container>
                     <Row>
@@ -95,9 +105,9 @@ const Header = (props) => {
                                         alt=""
                                         className={
                                             !state &&
-                                                _.some(whiteLayout, (lay) =>
-                                                    router.pathname.includes(lay)
-                                                )
+                                            _.some(whiteLayout, (lay) =>
+                                                router.pathname.includes(lay)
+                                            )
                                                 ? 'white-logo'
                                                 : ''
                                         }
@@ -149,15 +159,36 @@ const Header = (props) => {
                                                 title="Services"
                                                 id="basic-nav-dropdown"
                                             >
-                                                {_.map(dropDownItems, (navItem, i) => (
-                                                    <NavDropdown.Item key={_.uniqueId()}
-                                                        className={navItem.navPath === router.asPath ? 'nav-active' : ''}>
-                                                        <Link href={navItem.navPath}>
-                                                            {navItem.name}
-                                                        </Link>
-                                                    </NavDropdown.Item>
-                                                ))}
+                                                {_.map(
+                                                    dropDownItems,
+                                                    (navItem, i) => (
+                                                        <NavDropdown.Item
+                                                            key={_.uniqueId()}
+                                                            className={
+                                                                navItem.navPath ===
+                                                                router.asPath
+                                                                    ? 'nav-active'
+                                                                    : ''
+                                                            }
+                                                        >
+                                                            <Link
+                                                                href={
+                                                                    navItem.navPath
+                                                                }
+                                                            >
+                                                                {navItem.name}
+                                                            </Link>
+                                                        </NavDropdown.Item>
+                                                    )
+                                                )}
                                             </NavDropdown>
+                                            <Link
+                                                href={`/${props.language}/careers`}
+                                            >
+                                                <a className="nav-link">
+                                                    {t('header.careers')}
+                                                </a>
+                                            </Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>
@@ -193,9 +224,9 @@ const Header = (props) => {
                                         alt=""
                                         className={
                                             !state &&
-                                                _.some(whiteLayout, (lay) =>
-                                                    router.pathname.includes(lay)
-                                                )
+                                            _.some(whiteLayout, (lay) =>
+                                                router.pathname.includes(lay)
+                                            )
                                                 ? 'white-logo'
                                                 : ''
                                         }

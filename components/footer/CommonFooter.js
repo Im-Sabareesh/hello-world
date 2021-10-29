@@ -17,11 +17,11 @@ const RadiusFooter = (props) => {
                 list: [
                     {
                         name: t('footer.decentralizedFinance'),
-                        route: `/services/DefiServices`,
+                        route: `/services/defi-development`,
                     },
                     {
                         name: t('footer.nonFungibleTokens'),
-                        route: `/services/NFTServices`,
+                        route: `/services/nft-development`,
                     },
                     {
                         name: t('footer.binanceSmartChain'),

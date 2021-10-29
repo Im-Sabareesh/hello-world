@@ -236,8 +236,7 @@ button:not(.collapsed) {
 }
 
 .button-outer {
-    background: url('../public/assets/images/button-shadow.png') center bottom
-        no-repeat;
+    background: url('../public/assets/images/button-shadow.png') center bottom no-repeat;
     background-size: 90%;
     padding-bottom: 15px;
     width: max-content;
@@ -283,8 +282,7 @@ button:not(.collapsed) {
     // letter-spacing: 0.346154px;
     color: color('light-primary');
 
-    .topheader-text {
-    }
+    .topheader-text {}
 
     .social-links {
         img {
@@ -309,7 +307,7 @@ button:not(.collapsed) {
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 500;
-            padding: 15px 40px;
+            padding: 15px 20px;
         }
     }
 
@@ -588,8 +586,7 @@ button:not(.collapsed) {
     padding-bottom: 50px !important;
 
     .testimonial-bg {
-        background: url('../public/assets/images/testimonials-bg.svg') 100px
-            100px no-repeat;
+        background: url('../public/assets/images/testimonials-bg.svg') 100px 100px no-repeat;
         min-height: 400px;
 
         small {
@@ -617,7 +614,7 @@ button:not(.collapsed) {
 
         .testimonial-user-cont {
             .user-thumb {
-              margin-right: 25px;
+                margin-right: 25px;
                 > div {
                     overflow: visible !important;
                 }
@@ -628,10 +625,10 @@ button:not(.collapsed) {
                     margin-right: 25px;
                 }
                 div {
-                  border-radius: 35px;
+                    border-radius: 35px;
                 }
                 .shadow {
-                  border-radius: 35px;
+                    border-radius: 35px;
                 }
             }
             .user-name {
@@ -662,8 +659,7 @@ button:not(.collapsed) {
         }
 
         .card-body {
-            padding: 0;
-            padding-top: 16px;
+            padding: 16px 0 0;
         }
 
         .card-text {
@@ -680,8 +676,7 @@ button:not(.collapsed) {
 // ------------------home section 9 ------------//
 
 .home-section-11 {
-    background: url('../public/assets/images/home-contactus-bg.png') left top
-        no-repeat;
+    background: url('../public/assets/images/home-contactus-bg.png') left top no-repeat;
     margin-top: -100px;
     padding-top: 100px;
 
@@ -717,8 +712,7 @@ button:not(.collapsed) {
 
 // ------------------about-us-section------------//
 .about-us-banner {
-    background: url('../public/assets/images/about-us-banner-bg.png') no-repeat
-        center;
+    background: url('../public/assets/images/about-us-banner-bg.png') no-repeat center;
     background-position: bottom;
     min-height: 527px;
     padding-bottom: 125px;
@@ -729,10 +723,9 @@ button:not(.collapsed) {
 }
 .about-section1 {
     margin-top: -125px;
-    background: url(../public/assets/images/about-us-ellipse-bg.png) no-repeat
-        right bottom;
+    background: url('../public/assets/images/about-us-ellipse-bg.png') no-repeat right bottom;
     .about-section1-img {
-        padding: 0px 4% !important;
+        padding: 0 4% !important;
     }
 }
 
@@ -878,8 +871,7 @@ button:not(.collapsed) {
 }
 
 .contactus-banner {
-    background: url('../public/assets/images/contactus-banner.png') no-repeat
-        center;
+    background: url('../public/assets/images/contactus-banner.png') no-repeat center;
     background-position: bottom;
     height: 545px;
     padding-bottom: 125px;
@@ -890,8 +882,7 @@ button:not(.collapsed) {
 }
 
 .contactus-inner-banner {
-    background: url('../public/assets/images/contactus-innerbanner.png')
-        no-repeat center;
+    background: url('../public/assets/images/contactus-innerbanner.png') no-repeat center;
     background-position: bottom;
     padding-bottom: 275px;
     padding-top: 100px;
@@ -934,11 +925,7 @@ button:not(.collapsed) {
     }
 
     .form-control {
-        background: linear-gradient(
-            90deg,
-            rgba(111, 116, 255, 0.12) 0%,
-            rgba(94, 157, 255, 0.28) 100%
-        );
+        background: linear-gradient(90deg, rgba(111, 116, 255, 0.12) 0%, rgba(94, 157, 255, 0.28) 100%);
         border-radius: 30px;
         border: none;
         height: 60px;
@@ -1129,8 +1116,7 @@ header .main-header {
         &.search-field {
             width: 333px;
             .form-control {
-                background: url('../public/assets/icons/gradient-search.svg')
-                    no-repeat 94% center;
+                background: url('../public/assets/icons/gradient-search.svg') no-repeat 94% center;
             }
         }
     }
@@ -1249,7 +1235,7 @@ header .main-header {
     margin-right: 10px;
 }
 // ----------------------career page details end----------------
-.search-margin{
+.search-margin {
     margin-top: 14px;
 }
 
