@@ -35,7 +35,7 @@ module.exports = (phase) => {
 
     return {
         reactStrictMode: true,
-        trailingSlash: true,
+        trailingSlash: false,
         env: env,
         sassOptions: {
             includePaths: [path.join(__dirname, 'styles')],

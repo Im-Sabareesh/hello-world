@@ -93,10 +93,9 @@ button:not(.collapsed) {
     color: color('light-primary');
 }
 .secondary-text-color {
-    @include gradient-background('gradient-blue');
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: color('secondary');
 }
+
 
 .dark-text-color {
     color: color('dark-primary');
@@ -243,8 +242,15 @@ button:not(.collapsed) {
     padding-bottom: 15px;
     width: max-content;
 }
+
 .purple-gradient-text-color {
     @include gradient-background('gradient-secondary');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-text-color {
+    @include gradient-background('gradient-blue');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
