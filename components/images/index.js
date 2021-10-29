@@ -29,7 +29,7 @@ import instaSVG from '@public/assets/icons/instagram.svg';
 import twitterSVG from '@public/assets/icons/twitter.svg';
 import uTubeSVG from '@public/assets/icons/youtube.svg';
 import wpSVG from '@public/assets/icons/wordpress.svg';
-import purpleArrow from '@public//assets/icons/purple-arrow.svg';
+import purpleArrow from '@public/assets/icons/purple-arrow.svg';
 
 const homeSecTopImg = '/assets/images/home-section1-img.png';
 const deCenFin = '/assets/icons/service-icon1.png';
@@ -54,6 +54,11 @@ const defiTwo = '/assets/images/defi-img2.png';
 const careerDetail = '/assets/images/career-details-mobile-img1.png';
 const nftPng = '/assets/images/nftesrvices-image1.png';
 const upArrow = '/assets/images/uparrow.png';
+const hyperledgericon = '/assets/icons/hyperledger-deve-opment-icon.png';
+const defiicon = '/assets/icons/DeFi-Development.png';
+const gdprIcon = '/assets/icons/GDPR-Compliance-icon.png';
+const nftIcon = '/assets/icons/NFT-Development-icon.png';
+const obortechIcon = '/assets/icons/Obortech-Smart-Hub-icon.png';
 
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
@@ -119,4 +124,9 @@ export default {
     wpSVG,
     upArrow,
     purpleArrow,
+    hyperledgericon,
+    defiicon,
+    gdprIcon,
+    nftIcon,
+    obortechIcon,
 };
