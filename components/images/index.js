@@ -54,7 +54,11 @@ const defiTwo = '/assets/images/defi-img2.png';
 const careerDetail = '/assets/images/career-details-mobile-img1.png';
 const nftPng = '/assets/images/nftesrvices-image1.png';
 const upArrow = '/assets/images/uparrow.png';
-const featuredIcon1 = '/assets/icons/hyperledger-deve-opment-icon.png';
+const hyperledgericon = '/assets/icons/hyperledger-deve-opment-icon.png';
+const defiicon = '/assets/icons/DeFi-Development.png';
+const gdprIcon = '/assets/icons/GDPR-Compliance-icon.png';
+const nftIcon = '/assets/icons/NFT-Development-icon.png';
+const obortechIcon = '/assets/icons/Obortech-Smart-Hub-icon.png';
 
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
@@ -120,5 +124,9 @@ export default {
     wpSVG,
     upArrow,
     purpleArrow,
-    featuredIcon1,
+    hyperledgericon,
+    defiicon,
+    gdprIcon,
+    nftIcon,
+    obortechIcon,
 };
