@@ -114,7 +114,7 @@
     .btn-group-lg > .btn {
         width: 170px !important;
         height: 56px !important;
-        padding: 0px !important;
+        padding: 0 !important;
     }
 
     .home-section-6 {
@@ -205,7 +205,7 @@
         margin-top: 0 !important;
         padding-top: 0 !important;
         .contact-img {
-            margin-top: 0px !important;
+            margin-top: 0 !important;
         }
 
         .contactus-sociallinks {
@@ -354,7 +354,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px !important;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -560,7 +560,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px !important;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -670,7 +670,7 @@
     .btn-group-lg > .btn {
         width: 170px;
         height: 56px !important;
-        padding: 0px;
+        padding: 0;
     }
 
     .home-section-6 {
@@ -727,7 +727,7 @@
     .main-header {
         .main-menu {
             .nav-link {
-                padding: 15px 31px;
+                padding: 15px 20px;
             }
         }
     }
@@ -744,7 +744,7 @@
     .home-contact-form {
         .btn-lg {
             width: 166px !important;
-            padding: 0px;
+            padding: 0;
         }
     }
 }
@@ -1045,7 +1045,7 @@
         display: none;
     }
     .about-section1 .about-section1-img {
-        padding: 0px 0% !important;
+        padding: 0 !important;
     }
 }
 
@@ -1326,7 +1326,7 @@
         display: none;
     }
     .about-section1 .about-section1-img {
-        padding: 0px 0% !important;
+        padding: 0 !important;
     }
 }
 @include media-breakpoint-between(md, lg) {
@@ -1584,12 +1584,12 @@
     .backtotop {
         bottom: 65px;
     }
-    .style_red-btn__2MgIy{
+    .style_red-btn__2MgIy {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
     .about-section1 .about-section1-img {
-        padding: 0px 2% !important;
+        padding: 0 2% !important;
     }
 }
 @include media-breakpoint-between(lg, xl) {
@@ -1740,12 +1740,12 @@
     .backtotop {
         bottom: 65px;
     }
-    .style_red-btn__2MgIy{
+    .style_red-btn__2MgIy {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
     .about-section1 .about-section1-img {
-        padding: 0px 2% !important;
+        padding: 0 2% !important;
     }
 }
 @include media-breakpoint-between(xl, xxl) {
@@ -1792,17 +1792,15 @@
         .roles-responsibility {
             padding: 60px 55px;
         }
-    }
+    };
     // ----------------------career page details end----------------
 }
 
 
 /* // For 2k Monitors, (more than 1401 px) */
-@media (min-width: 1401px) and (max-width: 1599.98px) {
-  
-}
+@media(min-width: 1401px) and(max-width: 1599.98px) {}
 
-@media (min-width: 1600px) and (max-width: 2559.98px) {
+@media(min-width: 1600px) and(max-width: 2559.98px) {
     .office-banner {
         margin-left: 22% !important;
     }

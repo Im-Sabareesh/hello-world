@@ -124,7 +124,7 @@ const CareersComponent = (props) => {
 
             {/*--------------- career-section2 start---------- */}
 
-            <section className="career-section2  py-xl-5 py-4">
+            {/* <section className="career-section2  py-xl-5 py-4">
                 <Container>
                     <h2 className="h2 mb-md-4 pb-md-3 mb-2 pb-2 dark-secondary-text-color text-center">
                         Job Listings
@@ -137,7 +137,6 @@ const CareersComponent = (props) => {
                                         className="form-field search-field md-margin"
                                         controlId="formGroupsearch"
                                     >
-                                        {/* <Form.Label>Email address</Form.Label> */}
                                         <Form.Control
                                             type="text"
                                             placeholder="Search by Keyword"
@@ -148,7 +147,6 @@ const CareersComponent = (props) => {
                                         className="form-field md-margin"
                                         controlId="formGridCategory"
                                     >
-                                        {/* <Form.Label>State</Form.Label> */}
                                         <Form.Select defaultValue="Category">
                                             <option>Category</option>
                                             <option>...</option>
@@ -159,7 +157,6 @@ const CareersComponent = (props) => {
                                         className="form-field"
                                         controlId="formGridJobType"
                                     >
-                                        {/* <Form.Label>State</Form.Label> */}
                                         <Form.Select defaultValue="Job Type">
                                             <option>Job Type</option>
                                             <option>...</option>
@@ -170,7 +167,6 @@ const CareersComponent = (props) => {
                                         className="form-field"
                                         controlId="formGridLocation"
                                     >
-                                        {/* <Form.Label>State</Form.Label> */}
                                         <Form.Select defaultValue="Location">
                                             <option>Location</option>
                                             <option>...</option>
@@ -181,7 +177,7 @@ const CareersComponent = (props) => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
             {/*--------------- career-section2 end ---------- */}
 

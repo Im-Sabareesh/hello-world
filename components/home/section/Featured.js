@@ -14,15 +14,15 @@ export default function FeaturedSection(props) {
         featuresList = [
             {
                 title: t('home.hyperledgerDevelopment'),
-                link: '#',
+                link: 'services/hyperledger-fabric-development',
             },
             {
                 title: t('home.defiDevelopment'),
-                link: 'services/DefiServices/',
+                link: 'services/defi-development',
             },
             {
                 title: t('nftDevelopement'),
-                link: 'services/NFTServices/',
+                link: 'services/nft-development',
             },
             {
                 title: t('home.obortechSmartHub'),
