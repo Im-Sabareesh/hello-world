@@ -3,6 +3,9 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
+import { init } from 'emailjs-com';
+import { axios } from '@libs';
 
 import images from '@components/images';
 import { CardSection, Button, Paragraph, MyImage } from '@components';
@@ -28,13 +31,57 @@ export default function InsightWithFormSection() {
             },
         ];
     const [validated, setValidated] = React.useState(false);
+    
+        const form = React.useRef();
+    const [firstName, setFirstName] = React.useState(false);
+    const [email, setEmail] = React.useState(false);
+    const [phoneNumber, setPhoneNumber] = React.useState(false);
+    const [helpText, setHelpText] = React.useState(false);
+    const myFunctio = (e) => {
+        console.log(e);
+    }
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+        init("user_G0Zd3Z5CvPjd1IOQcZXPu");
+        event.preventDefault();
+        event.stopPropagation();
+        // if (form.checkValidity() === false) {
+        // }
+
+        let formData = {
+            firstName,
+            email,
+            phoneNumber,
+            helpText
         }
+
+        // fetch("/api/mailer", {
+        //     method: "POST",
+        //     headers: {
+        //         Accept: "application/json, text/plain, */*",
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //         name: firstName,
+        //         email: email,
+        //         text: helpText,
+        //     }),
+        // })
+
+        axios
+            .post('/api/mailer.js')
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((err) => console.log(err));
+        
+        emailjs.send('service_p7gh4pe', 'template_1vtsqvp', formData, 'user_G0Zd3Z5CvPjd1IOQcZXPu')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
 
         setValidated(true);
     };
@@ -84,6 +131,7 @@ export default function InsightWithFormSection() {
                                                 noValidate
                                                 validated={validated}
                                                 onSubmit={handleSubmit}
+                                                ref={form}
                                             >
                                                 <Row className="">
                                                     <Form.Group
@@ -102,6 +150,7 @@ export default function InsightWithFormSection() {
                                                             type="text"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(fn) => setFirstName(fn.target.value)}
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -120,6 +169,7 @@ export default function InsightWithFormSection() {
                                                             type="text"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(em) => setEmail(em.target.value)}
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -138,6 +188,7 @@ export default function InsightWithFormSection() {
                                                             type="text"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(mob) => setPhoneNumber(mob.target.value)}
                                                         />
                                                     </Form.Group>
                                                 </Row>
@@ -155,6 +206,7 @@ export default function InsightWithFormSection() {
                                                         <Form.Control
                                                             as="textarea"
                                                             rows={2}
+                                                            onChange={(hText) => setHelpText(hText.target.value)}
                                                         />
                                                         <Form.Control.Feedback type="invalid">
                                                             Please provide a
