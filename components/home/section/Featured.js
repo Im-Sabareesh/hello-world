@@ -5,8 +5,10 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import i18next from 'i18next';
 
+
 import { Container, Row, Col } from 'react-bootstrap';
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, Paragraph, MyImage } from '@components';
+import images from '@components/images';
 
 export default function FeaturedSection(props) {
     const router = useRouter();
@@ -63,14 +65,202 @@ export default function FeaturedSection(props) {
                         </div>
                     </Col>
 
-                    <Col md={12} className="text-center mt-4">
+                    <Col md={12} className="text-center mt-4 featured-heading">
                         <h2 className="h2 secondary-text-color">
                             {t('home.featured')}
                         </h2>
                     </Col>
 
                     <div className="mt-4">
-                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
+                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
+                            <Col> 
+                            
+                            <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between"> 
+                            
+                            <div className="featured-icon-new">   <MyImage
+                            src={images.featuredIcon1}
+                            alt=""
+                            width={112}
+                            height={112}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                            
+                        />
+                         </div>
+                            
+                            <p> Hyperledger Development </p>
+                            
+                            <div> <MyImage
+                            src={images.purpleArrow}
+                            alt=""
+                            width={20}
+                            height={17}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> </div>
+
+                            
+                        
+
+                            
+                            </div>
+                            
+                            </Col>
+
+                            <Col> 
+                            
+                            <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between"> 
+                            
+                            <div className="featured-icon-new">   <MyImage
+                            src={images.featuredIcon1}
+                            alt=""
+                            width={112}
+                            height={112}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                            
+                        />
+                         </div>
+                            
+                            <p> Hyperledger Development </p>
+                            
+                            <div> <MyImage
+                            src={images.purpleArrow}
+                            alt=""
+                            width={20}
+                            height={17}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> </div>
+
+                            
+                        
+
+                            
+                            </div>
+                            
+                            </Col>
+
+
+                            <Col> 
+                            
+                            <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between"> 
+                            
+                            <div className="featured-icon-new">   <MyImage
+                            src={images.featuredIcon1}
+                            alt=""
+                            width={112}
+                            height={112}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                            
+                        />
+                         </div>
+                            
+                            <p> Hyperledger Development </p>
+                            
+                            <div> <MyImage
+                            src={images.purpleArrow}
+                            alt=""
+                            width={20}
+                            height={17}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> </div>
+
+                            
+                        
+
+                            
+                            </div>
+                            
+                            </Col>
+
+
+                            <Col> 
+                            
+                            <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between"> 
+                            
+                            <div className="featured-icon-new">   <MyImage
+                            src={images.featuredIcon1}
+                            alt=""
+                            width={112}
+                            height={112}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                            
+                        />
+                         </div>
+                            
+                            <p> Hyperledger Development </p>
+                            
+                            <div> <MyImage
+                            src={images.purpleArrow}
+                            alt=""
+                            width={20}
+                            height={17}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> </div>
+
+                            
+                        
+
+                            
+                            </div>
+                            
+                            </Col>
+
+
+                            <Col> 
+                            
+                            <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between"> 
+                            
+                            <div className="featured-icon-new">   <MyImage
+                            src={images.featuredIcon1}
+                            alt=""
+                            width={112}
+                            height={112}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                            
+                        />
+                         </div>
+                            
+                            <p> Hyperledger Development </p>
+                            
+                            <div> <MyImage
+                            src={images.purpleArrow}
+                            alt=""
+                            width={20}
+                            height={17}
+                            layout="intrinsic"
+                            placeholder="blur"
+                            loading="lazy"
+                        /> </div>
+
+                            
+                    
+                            
+                            </div>
+                            
+                            </Col>
+
+
+
+
+                           
+                        </Row>
+                        {/* <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
                             {_.map(featuresList, (item) => (
                                 <Col key={_.uniqueId()}>
                                     {item.link !== '#' ? (
@@ -88,7 +278,7 @@ export default function FeaturedSection(props) {
                                     )}
                                 </Col>
                             ))}
-                        </Row>
+                        </Row> */}
                     </div>
                 </Row>
             </Container>

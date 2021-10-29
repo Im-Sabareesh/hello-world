@@ -52,7 +52,8 @@ import twitterSVG from '@public/assets/icons/twitter.svg';
 import uTubeSVG from '@public/assets/icons/youtube.svg';
 import wpSVG from '@public/assets/icons/wordpress.svg';
 import upArrow from '@public/assets/images/uparrow.png';
-import purpleArrow from '@public//assets/icons/purple-arrow.svg';
+import purpleArrow from '@public/assets/icons/purple-arrow.svg';
+import featuredIcon1 from '@public/assets/icons/hyperledger-deve-opment-icon.png';
 
 export default {
     homeSecTopImg,
@@ -110,4 +111,5 @@ export default {
     wpSVG,
     upArrow,
     purpleArrow,
+    featuredIcon1,
 };
