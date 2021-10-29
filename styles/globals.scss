@@ -93,13 +93,9 @@ button:not(.collapsed) {
     color: color('light-primary');
 }
 .secondary-text-color {
-    // color: linear-gradient(90deg, #4597FF 0%, #72AEFA 50.52%, #A1C8F9 100%);
-    // font-size: 72px;
     @include gradient-background('gradient-blue');
-    // background: -webkit-linear-gradient(90deg, #4597FF 0%, #72AEFA 50.52%, #A1C8F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    // color: color('secondary');
 }
 
 .dark-text-color {
