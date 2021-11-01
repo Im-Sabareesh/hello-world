@@ -13,7 +13,7 @@ const ModalComponent = ({
         <>
             <Modal show={isShow} onHide={hide} size={mSize} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>{header.name}</Modal.Title>
+                    <Modal.Title>Apply for a {header.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {children}

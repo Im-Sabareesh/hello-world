@@ -3,6 +3,8 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+import { axios } from '@libs';
+
 import {
     // GoogleReCaptchaProvider,
     withGoogleReCaptcha,
@@ -33,12 +35,25 @@ const InsightWithFormSection = (props) => {
         ];
     const [validated, setValidated] = React.useState(false);
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
+    const form = React.useRef();
+    const [firstName, setFirstName] = React.useState(false);
+    const [email, setEmail] = React.useState(false);
+    const [phoneNumber, setPhoneNumber] = React.useState(false);
+    const [helpText, setHelpText] = React.useState(false);
+
+    const handleSubmit = (data) => {
         event.preventDefault();
         event.stopPropagation();
-        if (form.checkValidity() === false) {
-        }
+        const target = data.target;
+        let body = {};
+        _.map(target, (t) => (body[t.name] = t.value));
+
+        axios
+            .post('http://localhost:4000/sent-mail', body)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((err) => console.log(err));
 
         setValidated(true);
     };
@@ -106,6 +121,7 @@ const InsightWithFormSection = (props) => {
                                                 noValidate
                                                 validated={validated}
                                                 onSubmit={handleSubmit}
+                                                ref={form}
                                             >
                                                 <Row className="">
                                                     <Form.Group
@@ -121,9 +137,16 @@ const InsightWithFormSection = (props) => {
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
+                                                            name="firstname"
                                                             type="text"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(fn) =>
+                                                                setFirstName(
+                                                                    fn.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -140,8 +163,15 @@ const InsightWithFormSection = (props) => {
                                                         <Form.Control
                                                             required
                                                             type="text"
+                                                            name="email"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(em) =>
+                                                                setEmail(
+                                                                    em.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -158,8 +188,15 @@ const InsightWithFormSection = (props) => {
                                                         <Form.Control
                                                             required
                                                             type="text"
+                                                            name="phone"
                                                             placeholder=""
                                                             defaultValue=""
+                                                            onChange={(mob) =>
+                                                                setPhoneNumber(
+                                                                    mob.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                     </Form.Group>
                                                 </Row>
@@ -177,6 +214,13 @@ const InsightWithFormSection = (props) => {
                                                         <Form.Control
                                                             as="textarea"
                                                             rows={2}
+                                                            name="description"
+                                                            onChange={(hText) =>
+                                                                setHelpText(
+                                                                    hText.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback type="invalid">
                                                             Please provide a
