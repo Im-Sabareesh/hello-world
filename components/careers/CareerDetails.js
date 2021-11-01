@@ -110,7 +110,7 @@ const CareerDetailsComponent = () => {
                         Apply Now
                     </Button>
                     <ModalComponent isShow={show} hide={handleClose} mSize="lg" header={state} footer={'Dummy'}>
-                        <CareerFormFormik />
+                        <CareerFormFormik {...state} />
                     </ModalComponent>
                 </div>
             </section>
