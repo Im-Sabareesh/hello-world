@@ -2,10 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
-import { Button, H1, MyImage, Paragraph } from '@components';
+import { Button, CareerFormFormik, H1, ModalComponent, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { careerSelector } from '@redux';
 import StaticComponent from '../StaticComponent';
@@ -19,6 +18,10 @@ const CareerDetailsComponent = () => {
         useSelector((state) =>
             careerSelector.careerDetailsSelector(state, cid)
         ) || {};
+
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+    
     return (
         <>
             <div className="breadcrumb-section">
@@ -103,9 +106,12 @@ const CareerDetailsComponent = () => {
             ))}
             <section className="careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3">
                 <div className="text-center mt-xl-5 pt-xl-5 mt-md-4 pt-md-4 mt-3 pt-3">
-                    <Button btnVarient="red-btn" className=" career-apply-btn">
+                    <Button btnVarient="red-btn" className=" career-apply-btn" onClick={() => setShow(true)}>
                         Apply Now
                     </Button>
+                    <ModalComponent isShow={show} hide={handleClose} mSize="lg" header={state} footer={'Dummy'}>
+                        <CareerFormFormik />
+                    </ModalComponent>
                 </div>
             </section>
         </>
