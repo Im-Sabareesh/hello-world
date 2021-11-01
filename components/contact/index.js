@@ -6,7 +6,7 @@ import {
     withGoogleReCaptcha,
     GoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
-import axios from 'axios';
+import { axios } from '@libs';
 import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { useRouter } from 'next/router';

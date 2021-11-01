@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-// import { axios } from '@libs';
+import { axios } from '@libs';
 
 import {
     // GoogleReCaptchaProvider,
