@@ -31,57 +31,29 @@ export default function InsightWithFormSection() {
             },
         ];
     const [validated, setValidated] = React.useState(false);
-    
-        const form = React.useRef();
+
+    const form = React.useRef();
     const [firstName, setFirstName] = React.useState(false);
     const [email, setEmail] = React.useState(false);
     const [phoneNumber, setPhoneNumber] = React.useState(false);
     const [helpText, setHelpText] = React.useState(false);
     const myFunctio = (e) => {
         console.log(e);
-    }
+    };
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        init("user_G0Zd3Z5CvPjd1IOQcZXPu");
+    const handleSubmit = (data) => {
         event.preventDefault();
         event.stopPropagation();
-        // if (form.checkValidity() === false) {
-        // }
-
-        let formData = {
-            firstName,
-            email,
-            phoneNumber,
-            helpText
-        }
-
-        // fetch("/api/mailer", {
-        //     method: "POST",
-        //     headers: {
-        //         Accept: "application/json, text/plain, */*",
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         name: firstName,
-        //         email: email,
-        //         text: helpText,
-        //     }),
-        // })
+        const target = data.target;
+        let body = {};
+        _.map(target, (t) => (body[t.name] = t.value));
 
         axios
-            .post('/api/mailer.js')
+            .post('http://localhost:4000/sent-mail', body)
             .then((response) => {
                 console.log(response);
             })
             .catch((err) => console.log(err));
-        
-        emailjs.send('service_p7gh4pe', 'template_1vtsqvp', formData, 'user_G0Zd3Z5CvPjd1IOQcZXPu')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.log('FAILED...', err);
-            });
 
         setValidated(true);
     };
@@ -147,10 +119,16 @@ export default function InsightWithFormSection() {
                                                         </Form.Label>
                                                         <Form.Control
                                                             required
+                                                            name="firstname"
                                                             type="text"
                                                             placeholder=""
                                                             defaultValue=""
-                                                            onChange={(fn) => setFirstName(fn.target.value)}
+                                                            onChange={(fn) =>
+                                                                setFirstName(
+                                                                    fn.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -167,9 +145,15 @@ export default function InsightWithFormSection() {
                                                         <Form.Control
                                                             required
                                                             type="text"
+                                                            name="email"
                                                             placeholder=""
                                                             defaultValue=""
-                                                            onChange={(em) => setEmail(em.target.value)}
+                                                            onChange={(em) =>
+                                                                setEmail(
+                                                                    em.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback>
                                                             Looks good!
@@ -186,9 +170,15 @@ export default function InsightWithFormSection() {
                                                         <Form.Control
                                                             required
                                                             type="text"
+                                                            name="phone"
                                                             placeholder=""
                                                             defaultValue=""
-                                                            onChange={(mob) => setPhoneNumber(mob.target.value)}
+                                                            onChange={(mob) =>
+                                                                setPhoneNumber(
+                                                                    mob.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                     </Form.Group>
                                                 </Row>
@@ -206,7 +196,13 @@ export default function InsightWithFormSection() {
                                                         <Form.Control
                                                             as="textarea"
                                                             rows={2}
-                                                            onChange={(hText) => setHelpText(hText.target.value)}
+                                                            name="description"
+                                                            onChange={(hText) =>
+                                                                setHelpText(
+                                                                    hText.target
+                                                                        .value
+                                                                )
+                                                            }
                                                         />
                                                         <Form.Control.Feedback type="invalid">
                                                             Please provide a
