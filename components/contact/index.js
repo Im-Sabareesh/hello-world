@@ -6,7 +6,7 @@ import {
     withGoogleReCaptcha,
     GoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
-
+import axios from 'axios';
 import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { useRouter } from 'next/router';
@@ -48,6 +48,20 @@ const ContactComponent = (props) => {
 
     const handleVerify = (token) => {
         console.log('token -- > ', token);
+    };
+
+    const handleSubmit = (e) => {
+        const target = e.target;
+
+        let body = {};
+        _.map(target, (t) => (body[t.name] = t.value));
+        console.log('body', body);
+        axios
+            .post('http://localhost:4000/sent-mail', body)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((err) => console.log(err));
     };
 
     return (
@@ -228,9 +242,11 @@ const ContactComponent = (props) => {
 
                                 <div className="getintouch-form mt-5">
                                     <Form
-                                        onSubmit={(event) =>
-                                            event.preventDefault()
-                                        }
+                                        onSubmit={(event) => {
+                                            console.log('eevnt');
+                                            event.preventDefault();
+                                            handleSubmit(event);
+                                        }}
                                     >
                                         <Form.Group
                                             className="form-group"
@@ -239,6 +255,7 @@ const ContactComponent = (props) => {
                                             <Form.Label>Your Name</Form.Label>
                                             <Form.Control
                                                 type="text"
+                                                name="firstname"
                                                 placeholder=""
                                             />
                                         </Form.Group>
@@ -250,6 +267,7 @@ const ContactComponent = (props) => {
                                             <Form.Label>Your Email</Form.Label>
                                             <Form.Control
                                                 type="text"
+                                                name="email"
                                                 placeholder=""
                                             />
                                         </Form.Group>
@@ -263,6 +281,7 @@ const ContactComponent = (props) => {
                                             </Form.Label>
                                             <Form.Control
                                                 type="text"
+                                                name="phone"
                                                 placeholder=""
                                             />
                                         </Form.Group>
@@ -277,6 +296,7 @@ const ContactComponent = (props) => {
                                             <Form.Select
                                                 aria-label="Default select example"
                                                 className="form-control select"
+                                                name="service"
                                             >
                                                 <option>Select service</option>
                                                 <option value="1">One</option>
@@ -294,6 +314,7 @@ const ContactComponent = (props) => {
                                             </Form.Label>
                                             <Form.Control
                                                 as="textarea"
+                                                name="description"
                                                 className="msg-field"
                                                 rows={3}
                                             />
