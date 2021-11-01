@@ -18,3 +18,6 @@ export { default as Paragraph } from './paragraph';
 export { default as toaster } from './toast';
 export { default as StaticComponent } from './StaticComponent';
 export { default as MyImage } from './Image';
+export { default as CareerFormFormik } from './career-form/CareerFormFormik';
+export { default as ModalComponent } from './modal';
+export { default as StyledDropzone } from './file-drop-zone';
