@@ -2,10 +2,6 @@ const path = require('path');
 // const webpack = require('@svgr/webpack')
 // const withImages = require('next-images')
 const dotenv = require('dotenv');
-const {
-    PHASE_DEVELOPMENT_SERVER,
-    PHASE_PRODUCTION_BUILD,
-} = require('next/constants');
 
 module.exports = {
     reactStrictMode: true,

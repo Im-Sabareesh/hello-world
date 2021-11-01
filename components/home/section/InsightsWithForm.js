@@ -3,14 +3,17 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
-import { init } from 'emailjs-com';
-import { axios } from '@libs';
+// import { axios } from '@libs';
 
+import {
+    // GoogleReCaptchaProvider,
+    withGoogleReCaptcha,
+    GoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 import images from '@components/images';
 import { CardSection, Button, Paragraph, MyImage } from '@components';
 
-export default function InsightWithFormSection() {
+const InsightWithFormSection = (props) => {
     const t = i18next.t.bind(i18next),
         router = useRouter(),
         insightsList = [
@@ -37,9 +40,6 @@ export default function InsightWithFormSection() {
     const [email, setEmail] = React.useState(false);
     const [phoneNumber, setPhoneNumber] = React.useState(false);
     const [helpText, setHelpText] = React.useState(false);
-    const myFunctio = (e) => {
-        console.log(e);
-    };
 
     const handleSubmit = (data) => {
         event.preventDefault();
@@ -56,6 +56,24 @@ export default function InsightWithFormSection() {
             .catch((err) => console.log(err));
 
         setValidated(true);
+    };
+
+    const handleVerify = (value) => {
+        console.log(value);
+    };
+
+    const handleVerifyRecaptcha = async () => {
+        console.log(props);
+        const { executeRecaptcha } = props.googleReCaptchaProps;
+
+        if (!executeRecaptcha) {
+            console.log('Recaptcha has not been loaded');
+
+            return;
+        }
+
+        const token = await executeRecaptcha('homepage');
+        console.log('token -- > ', token);
     };
 
     return (
@@ -274,6 +292,23 @@ export default function InsightWithFormSection() {
                                                             Send Request
                                                         </Button>
                                                     </Form.Group>
+
+                                                    {/* <div>
+                                                        <button
+                                                            onClick={
+                                                                handleVerifyRecaptcha
+                                                            }
+                                                        >
+                                                            Verify Recaptcha
+                                                        </button>
+                                                    </div> */}
+                                                    <div>
+                                                        <GoogleReCaptcha
+                                                            onVerify={
+                                                                handleVerify
+                                                            }
+                                                        />
+                                                    </div>
                                                 </Row>
                                             </Form>
                                         </div>
@@ -301,8 +336,10 @@ export default function InsightWithFormSection() {
             </Container>
         </section>
     );
-}
+};
 
 InsightWithFormSection.propTypes = {};
 
 InsightWithFormSection.defaultProps = {};
+
+export default withGoogleReCaptcha(InsightWithFormSection);

@@ -1,6 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+import {
+    // GoogleReCaptchaProvider,
+    withGoogleReCaptcha,
+    GoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 
 import { Button, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
@@ -40,6 +45,10 @@ const ContactComponent = (props) => {
             mailID: 'info@chaincodeconsulting.com',
         },
     ];
+
+    const handleVerify = (token) => {
+        console.log('token -- > ', token);
+    };
 
     return (
         <>
@@ -299,6 +308,11 @@ const ContactComponent = (props) => {
                                                 Send Message
                                             </Button>
                                         </Form.Group>
+                                        <div>
+                                            <GoogleReCaptcha
+                                                onVerify={handleVerify}
+                                            />
+                                        </div>
                                     </Form>
                                 </div>
                             </Col>

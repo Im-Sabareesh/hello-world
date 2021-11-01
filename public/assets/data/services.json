@@ -208,10 +208,12 @@
             "title": "Tap The Potential Of Distributed Ledger Technology",
             "description": "At Chaincode Consulting, we have redefined business interactions with blockchain technology enabling a secured, trusted, and affordable ecosystem for our clients. Blockchain is empowering businesses with the distributed ledgers and computational capabilities of smart contracts. From banking to government to our identities, blockchain is transforming everything. With our extensive experience in Hyperledger Fabric development and innovative capabilities, we are making blockchain real for a wide spectrum of industry use cases."
         },
-        "smallParaSection": [
-            "The emergence of Decentralized Finance or DeFi has brought about a paradigm shift from conventional finance to decentralized, peer-to-peer Ethereum blockchain-based technologies. The DeFi ecosystem encompasses a broad-ranging network of impactful financial instruments, including investing, payments and settlement, banking, stablecoins, lending and borrowing platforms, and more.",
-            "DeFi enhances and expands the access for global participants to invest, lend, trade, and borrow. Whether you need a permissionless financial system, immutability, interoperability, transparency, low upfront costs, and a secure solution, DeFi is the answer! Our superlative DeFi Development Services enable you to defy all conventional methods of running a business. We help you carve a distinct niche for yourself in a world where blockchain technology adoption is becoming the norm."
-        ],
+        "smallParaSection": {
+            "title": "Blockchain Development With Hyperledger Fabric",
+            "content": "We build enterprise-grade blockchain applications with Hyperledger Fabric.",
+            "subtitle": "What is Hyperledger Fabric?",
+            "subcontent": "What is Hyperledger Fabric? Hyperledger Fabric – hosted by the Linux Foundation, is a permissioned open-source enterprise-grade blockchain platform.  Beyond cryptocurrencies, it is specially designed with a modular architecture and plug and play components to serve a wide range of industry use cases. Hyperledger Fabric provides a new infrastructure enabling tech-based relationships and a new style of secured digital interactions."
+        },
         "cardSection": [
             {
                 "title": "Performance & Scalabilty",

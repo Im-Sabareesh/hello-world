@@ -8,6 +8,7 @@
         "en": "🇺🇸 English"
     },
     "header": {
+        "careers": "Careers",
         "title": "Header",
         "aboutUS": "About Us",
         "blockchainSolution": "Blockchain Solution",
@@ -30,7 +31,7 @@
         "connectWithUs": "Connect With Us",
         "moreAboutUs": "More About Us",
         "blog": "Blog",
-        "copyRightsReserved": "©ChainCode PTY LTD 2021. All rights reserved"
+        "copyRightsReserved": "Chaincode Consulting LLP 2021. All rights reserved"
     },
     "letsTalk": "Let's Talk",
     "defiDevelopment": "DeFi Development",
@@ -55,7 +56,7 @@
         "provideEnterpriseDesc": "Unleash full business potential with our cutting edge blockchain solutions. We innovate, build and integrate real-world blockchain applications.",
         "featured": "Featured",
         "hyperledgerDevelopment": "Hyperledger Development",
-        "obortechSmartHub": "Obortech Smart Hub",
+        "obortechSmartHub": "Obortech <br/> Smart Hub",
         "gdprCompliance": "GDPR Compliance",
         "blockChainEnhance": "How Blockchain Enhances Your Business",
         "blockChainEnhanceDesc": "Blockchain for business uses a shared and immutable ledger that can only be accessed by members with permission. Network members control what information each organization or member may see, and what actions each can take. Blockchain is sometimes called a trustless network not because business partners don’t trust each other, but because they don’t have to.",

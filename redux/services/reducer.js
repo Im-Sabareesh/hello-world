@@ -23,7 +23,7 @@ const initState = {
                 title: '',
                 description: '',
             },
-            smallParaSection: [],
+            smallParaSection: {},
             cardSection: [],
         },
     },

@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import i18next from 'i18next';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import { Button, H1, Paragraph } from '@components';
+import { Button, H1, Paragraph, MyImage } from '@components';
+import images from '@components/images';
 
 export default function FeaturedSection(props) {
     const router = useRouter();
@@ -14,23 +15,28 @@ export default function FeaturedSection(props) {
         featuresList = [
             {
                 title: t('home.hyperledgerDevelopment'),
-                link: '#',
+                link: 'services/hyperledger-fabric-development',
+                icon: images.hyperledgericon,
             },
             {
                 title: t('home.defiDevelopment'),
-                link: 'services/DefiServices/',
+                link: 'services/defi-development',
+                icon: images.defiicon,
             },
             {
                 title: t('nftDevelopement'),
-                link: 'services/NFTServices/',
+                link: 'services/nft-development',
+                icon: images.nftIcon,
             },
             {
                 title: t('home.obortechSmartHub'),
                 link: '#',
+                icon: images.obortechIcon,
             },
             {
                 title: t('home.gdprCompliance'),
                 link: '#',
+                icon: images.gdprIcon,
             },
         ];
 
@@ -63,29 +69,48 @@ export default function FeaturedSection(props) {
                         </div>
                     </Col>
 
-                    <Col md={12} className="text-center mt-4">
-                        <h2 className="h2 secondary-text-color">
+                    <Col md={12} className="text-center mt-4 featured-heading">
+                        <h2 className="h2 blue-gradient-text-color">
                             {t('home.featured')}
                         </h2>
                     </Col>
 
                     <div className="mt-4">
-                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
+                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
                             {_.map(featuresList, (item) => (
                                 <Col key={_.uniqueId()}>
-                                    {item.link !== '#' ? (
-                                        <Link
-                                            href={`${props.language}/${item.link}`}
-                                        >
-                                            <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
-                                                <span> {item.title} </span>
-                                            </div>
-                                        </Link>
-                                    ) : (
-                                        <div className="featured-box-container btn d-flex align-items-center justify-content-center text-center">
-                                            <span> {item.title} </span>
+                                    <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">
+                                        <div className="featured-icon-new">
+                                            <MyImage
+                                                src={item.icon}
+                                                alt=""
+                                                width={112}
+                                                height={112}
+                                                layout="intrinsic"
+                                                placeholder="blur"
+                                                loading="lazy"
+                                            />
                                         </div>
-                                    )}
+
+                                        <p
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.title,
+                                            }}
+                                        />
+
+                                        <div>
+                                            {' '}
+                                            <MyImage
+                                                src={images.purpleArrow}
+                                                alt=""
+                                                width={20}
+                                                height={17}
+                                                layout="intrinsic"
+                                                placeholder="blur"
+                                                loading="lazy"
+                                            />{' '}
+                                        </div>
+                                    </div>
                                 </Col>
                             ))}
                         </Row>

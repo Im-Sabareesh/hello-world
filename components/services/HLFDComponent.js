@@ -85,18 +85,30 @@ const HLFDSComponent = (props) => {
 
                             <Col lg={{ span: 6, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain Development With Hyperledger
-                                    Fabric
+                                    {hlfdServList.hlfd.smallParaSection.title}
                                 </h2>
-
-                                <ul className="ul-list">
-                                    {_.map(
-                                        hlfdServList.hlfd.smallParaSection,
-                                        (item, i) => (
-                                            <li key={_.uniqueId()}> {item} </li>
-                                        )
-                                    )}
-                                </ul>
+                                <div className="ul-list">
+                                    <p>
+                                        {
+                                            hlfdServList.hlfd.smallParaSection
+                                                .content
+                                        }
+                                    </p>
+                                </div>
+                                <h3 className="h3 mb-md-3 mb-2 pb-md-3 pb-2">
+                                    {
+                                        hlfdServList.hlfd.smallParaSection
+                                            .subtitle
+                                    }
+                                </h3>
+                                <div className="ul-list">
+                                    <p>
+                                        {
+                                            hlfdServList.hlfd.smallParaSection
+                                                .subcontent
+                                        }
+                                    </p>
+                                </div>
                             </Col>
                         </Row>
                     </Container>
