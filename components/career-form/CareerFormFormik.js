@@ -41,7 +41,6 @@ const CareerFormFormik = (props) => {
     }
     const hideModal = () => {
     }
-    const [isFileValid, setIsFileValid] = React.useState(true);
 
     return (
         <>
@@ -91,14 +90,14 @@ const CareerFormFormik = (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="form-group col-3 pr-0">
+                                            <div className="form-group col-3">
                                                 <Field name="areaCode" type="text" className={'form-control' + (errors.areaCode && touched.areaCode ? ' is-invalid' : '')} />
                                                 <ErrorMessage name="areaCode" component="div" className="invalid-feedback text-center" />
                                             </div>
                                             <div className="form-group col-1 text-center p-3">
                                                 -
                                             </div>
-                                            <div className="form-group col-8 pl-0">
+                                            <div className="form-group col col-md-8">
                                                 <Field name="phoneNumber" type="text" className={'form-control' + (errors.phoneNumber && touched.phoneNumber ? ' is-invalid' : '')} />
                                                 <ErrorMessage name="phoneNumber" component="div" className="invalid-feedback text-center" />
                                             </div>
