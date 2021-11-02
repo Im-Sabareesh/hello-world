@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const myLoader = ({ src, width, origin }) => {
-    return `${window.location.origin}/${src}?w=${width}&q=${75}`;
+    return `${window.location.origin}${src}?w=${width}&q=${75}`;
 };
 
 const MyImage = (props) => {

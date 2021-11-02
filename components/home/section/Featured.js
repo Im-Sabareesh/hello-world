@@ -78,7 +78,15 @@ export default function FeaturedSection(props) {
                     <div className="mt-4">
                         <Row className="row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
                             {_.map(featuresList, (item) => (
-                                <Col key={_.uniqueId()}>
+                                <Col
+                                    key={_.uniqueId()}
+                                    onClick={() => {
+                                        if (item.link)
+                                            router.push(
+                                                `${props.language}/${item.link}`
+                                            );
+                                    }}
+                                >
                                     <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">
                                         <div className="featured-icon-new">
                                             <MyImage

@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
-
+const api = require('./api');
 const dev = process.env.dev == 'true';
 const port = process.env.port;
 
@@ -23,15 +23,13 @@ app.prepare().then(async () => {
     server.get('/_next/*', (req, res) => {
         handle(req, res);
     });
-
-    server.get('/static/*', (req, res) => {
+    api(server);
+    server.get('/*', (req, res) => {
         handle(req, res);
     });
 
     server.post('/sent-mail', require('./sendMail'));
 
-    server.get('/', function (req, res) {
-        res.send('hello world');
-    });
+    server.use(handle);
     server.listen(port, (err) => {});
 });
