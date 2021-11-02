@@ -1,13 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import { Container, Row, Col, Form } from 'react-bootstrap';
-import {
-    // GoogleReCaptchaProvider,
-    withGoogleReCaptcha,
-    GoogleReCaptcha,
-} from 'react-google-recaptcha-v3';
-import { axios } from '@libs';
-import { Button, H1, MyImage, Paragraph } from '@components';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ContactFormFormik, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
 import { useRouter } from 'next/router';
 
@@ -45,24 +39,6 @@ const ContactComponent = (props) => {
             mailID: 'info@chaincodeconsulting.com',
         },
     ];
-
-    const handleVerify = (token) => {
-        console.log('token -- > ', token);
-    };
-
-    const handleSubmit = (e) => {
-        const target = e.target;
-
-        let body = {};
-        _.map(target, (t) => (body[t.name] = t.value));
-        console.log('body', body);
-        axios
-            .post('http://localhost:4000/sent-mail', body)
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => console.log(err));
-    };
 
     return (
         <>
@@ -240,102 +216,7 @@ const ContactComponent = (props) => {
                                     information confidential.
                                 </Paragraph>
 
-                                <div className="getintouch-form mt-5">
-                                    <Form
-                                        onSubmit={(event) => {
-                                            console.log('eevnt');
-                                            event.preventDefault();
-                                            handleSubmit(event);
-                                        }}
-                                    >
-                                        <Form.Group
-                                            className="form-group"
-                                            controlId=""
-                                        >
-                                            <Form.Label>Your Name</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                name="firstname"
-                                                placeholder=""
-                                            />
-                                        </Form.Group>
-
-                                        <Form.Group
-                                            className="form-group"
-                                            controlId=""
-                                        >
-                                            <Form.Label>Your Email</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                name="email"
-                                                placeholder=""
-                                            />
-                                        </Form.Group>
-
-                                        <Form.Group
-                                            className="form-group"
-                                            controlId=""
-                                        >
-                                            <Form.Label>
-                                                Contact Number
-                                            </Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                name="phone"
-                                                placeholder=""
-                                            />
-                                        </Form.Group>
-
-                                        <Form.Group
-                                            className="form-group select-field"
-                                            controlId=""
-                                        >
-                                            <Form.Label>
-                                                Service you are interested in
-                                            </Form.Label>
-                                            <Form.Select
-                                                aria-label="Default select example"
-                                                className="form-control select"
-                                                name="service"
-                                            >
-                                                <option>Select service</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </Form.Select>
-                                        </Form.Group>
-
-                                        <Form.Group
-                                            className="mb-3"
-                                            controlId="exampleForm.ControlTextarea1"
-                                        >
-                                            <Form.Label>
-                                                Your Message
-                                            </Form.Label>
-                                            <Form.Control
-                                                as="textarea"
-                                                name="description"
-                                                className="msg-field"
-                                                rows={3}
-                                            />
-                                        </Form.Group>
-
-                                        <Form.Group className="button-outer">
-                                            <Button
-                                                btnVarient="red-btn"
-                                                className="red-btn-shadow btn-lg"
-                                                type="submit"
-                                            >
-                                                Send Message
-                                            </Button>
-                                        </Form.Group>
-                                        <div>
-                                            <GoogleReCaptcha
-                                                onVerify={handleVerify}
-                                            />
-                                        </div>
-                                    </Form>
-                                </div>
+                                <ContactFormFormik />
                             </Col>
                         </Row>
                     </Container>
