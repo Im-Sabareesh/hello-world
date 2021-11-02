@@ -40,6 +40,9 @@ const StyledDropzone = ({ onFileUpload }) => {
     } = useDropzone({
         // maxFiles: 1,
         multiple: false,
+        onDrop: acceptedFiles => {
+            onFileUpload(acceptedFiles)
+        }
     });
 
     const files = acceptedFiles.map((file) => (
@@ -47,10 +50,6 @@ const StyledDropzone = ({ onFileUpload }) => {
             {file.path} - {file.size} bytes
         </li>
     ));
-
-    React.useEffect(() => {
-        onFileUpload(acceptedFiles[0]);
-    }, [acceptedFiles]);
 
     const style = React.useMemo(
         () => ({

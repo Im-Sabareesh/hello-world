@@ -26,8 +26,7 @@ const CareerFormFormik = (props) => {
             .required('Phone Number is required'),
         whenStart: Yup.string()
             .required('Start Date is required'),
-        resume: Yup.string()
-            .required('Resume is required'),
+        resume: Yup.mixed().required('Resume is required one')
     });
     const initialValues = {
         firstName: '',
@@ -38,7 +37,7 @@ const CareerFormFormik = (props) => {
         position: props.name,
         whenStart: '',
         coverLtr: '',
-        resume: ''
+        resume: null
     }
     const hideModal = () => {
     }
@@ -55,12 +54,9 @@ const CareerFormFormik = (props) => {
                         console.log(fields);
                     }}
                 >
-                    {({ errors, status, touched, handleSubmit }) => {
-                        const setResumeValue = (fileSelected) => {
-                            setIsFileValid(fileSelected === undefined ? false : true);
-                        }
+                    {({ errors, values, touched, setFieldValue, handleSubmit }) => {
                         return (
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="form-group col-6">
                                         <BootstrapForm.Label htmlFor="firstName">First Name</BootstrapForm.Label>
@@ -125,9 +121,10 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12">
                                         <BootstrapForm.Label htmlFor="covLetter">Cover Letter</BootstrapForm.Label>
-                                        <BootstrapForm.Control
+                                        <Field
                                             as="textarea"
-                                            className="msg-field"
+                                            className="msg-field form-control"
+                                            name="coverLtr"
                                             rows={3}
                                         />
                                     </div>
@@ -135,9 +132,11 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12">
                                         <BootstrapForm.Label htmlFor="email">Upload Resume</BootstrapForm.Label>
-                                        <StyledDropzone name="resume" onFileUpload={(file) => { setResumeValue(file) }} />
+                                        <StyledDropzone name="resume" onFileUpload={(file) => {
+                                            setFieldValue('resume', file)
+                                        }} />
                                         {
-                                            (errors.resume && touched.resume && !isFileValid) ? <p className={'invalid-feedback text-center d-block mb-0'}>
+                                            (errors.resume && touched.resume) ? <p className={'invalid-feedback text-center d-block mb-0'}>
                                                 Resume is required</p> : null
                                         }
                                     </div>
@@ -160,7 +159,7 @@ export default CareerFormFormik;
 
 CareerFormFormik.propTypes = {
     language: PropTypes.string,
-    name: PropTypes.string,
+    name: PropTypes.string
 };
 
 CareerFormFormik.defaultProps = {
