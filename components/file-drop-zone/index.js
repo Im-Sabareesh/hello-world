@@ -42,7 +42,6 @@ const StyledDropzone = ({ onFileUpload }) => {
         multiple: false,
     });
 
-    console.log(acceptedFiles);
     const files = acceptedFiles.map((file) => (
         <li key={file.path}>
             {file.path} - {file.size} bytes
@@ -51,9 +50,6 @@ const StyledDropzone = ({ onFileUpload }) => {
 
     React.useEffect(() => {
         onFileUpload(acceptedFiles[0]);
-        return () => {
-            console.log('on unmount -> ');
-        };
     }, [acceptedFiles]);
 
     const style = React.useMemo(

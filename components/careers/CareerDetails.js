@@ -128,7 +128,7 @@ const CareerDetailsComponent = () => {
                         header={state}
                         footer={'Dummy'}
                     >
-                        <CareerFormFormik />
+                        <CareerFormFormik {...state} />
                     </ModalComponent>
                 </div>
             </section>

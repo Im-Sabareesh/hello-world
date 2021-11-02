@@ -26,6 +26,8 @@ const CareerFormFormik = (props) => {
             .required('Phone Number is required'),
         whenStart: Yup.string()
             .required('Start Date is required'),
+        resume: Yup.string()
+            .required('Resume is required'),
     });
     const initialValues = {
         firstName: '',
@@ -40,6 +42,7 @@ const CareerFormFormik = (props) => {
     }
     const hideModal = () => {
     }
+    const [isFileValid, setIsFileValid] = React.useState(true);
 
     return (
         <>
@@ -52,94 +55,101 @@ const CareerFormFormik = (props) => {
                         console.log(fields);
                     }}
                 >
-                    {({ errors, status, touched }) => (
-                        <Form>
-                            <div className="row">
-                                <div className="form-group col-6">
-                                    <BootstrapForm.Label htmlFor="firstName">First Name</BootstrapForm.Label>
-                                    <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="firstName" component="div" className="invalid-feedback text-center" />
-                                </div>
-                                <div className="form-group col-6">
-                                    <BootstrapForm.Label htmlFor="lastName">Last Name</BootstrapForm.Label>
-                                    <Field name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="lastName" component="div" className="invalid-feedback text-center" />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="firstName">Email</BootstrapForm.Label>
-                                    <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')}
-                                        placeholder="ex: myname@example.com" />
-                                    <ErrorMessage name="email" component="div" className="invalid-feedback text-center" />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="appFor">Phone Number</BootstrapForm.Label>
-                                    <div className="row mb-0">
-                                        <div className="form-group col-3 mb-0">
-                                            <BootstrapForm.Label htmlFor="areaCode">Area Code</BootstrapForm.Label>
-                                        </div>
-                                        <div className="form-group col-1 text-center mb-0">
-                                        </div>
-                                        <div className="form-group col-6 mb-0">
-                                            <BootstrapForm.Label htmlFor="phoneNumber">Phone Number</BootstrapForm.Label>
-                                        </div>
+                    {({ errors, status, touched, handleSubmit }) => {
+                        const setResumeValue = (fileSelected) => {
+                            setIsFileValid(fileSelected === undefined ? false : true);
+                        }
+                        return (
+                            <Form>
+                                <div className="row">
+                                    <div className="form-group col-6">
+                                        <BootstrapForm.Label htmlFor="firstName">First Name</BootstrapForm.Label>
+                                        <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
+                                        <ErrorMessage name="firstName" component="div" className="invalid-feedback text-center" />
                                     </div>
-                                    <div className="row">
-                                        <div className="form-group col-3 pr-0">
-                                            <Field name="areaCode" type="text" className={'form-control' + (errors.areaCode && touched.areaCode ? ' is-invalid' : '')} />
-                                            <ErrorMessage name="areaCode" component="div" className="invalid-feedback text-center" />
-                                        </div>
-                                        <div className="form-group col-1 text-center p-3">
-                                            -
-                                        </div>
-                                        <div className="form-group col-8 pl-0">
-                                            <Field name="phoneNumber" type="text" className={'form-control' + (errors.phoneNumber && touched.phoneNumber ? ' is-invalid' : '')} />
-                                            <ErrorMessage name="phoneNumber" component="div" className="invalid-feedback text-center" />
-                                        </div>
+                                    <div className="form-group col-6">
+                                        <BootstrapForm.Label htmlFor="lastName">Last Name</BootstrapForm.Label>
+                                        <Field name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
+                                        <ErrorMessage name="lastName" component="div" className="invalid-feedback text-center" />
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="appFor">Applying for Position</BootstrapForm.Label>
-                                    <Field disabled name="position" type="text" className="form-control" vlaue />
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="firstName">Email</BootstrapForm.Label>
+                                        <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')}
+                                            placeholder="ex: myname@example.com" />
+                                        <ErrorMessage name="email" component="div" className="invalid-feedback text-center" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="wycs">When can you start?</BootstrapForm.Label>
-                                    <Field name="wycs" type="text" className={'form-control' + (errors.whenStart && touched.whenStart ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="whenStart" component="div" className="invalid-feedback text-center" />
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="appFor">Phone Number</BootstrapForm.Label>
+                                        <div className="row mb-0">
+                                            <div className="form-group col-3 mb-0">
+                                                <BootstrapForm.Label htmlFor="areaCode">Area Code</BootstrapForm.Label>
+                                            </div>
+                                            <div className="form-group col-1 text-center mb-0">
+                                            </div>
+                                            <div className="form-group col-6 mb-0">
+                                                <BootstrapForm.Label htmlFor="phoneNumber">Phone Number</BootstrapForm.Label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="form-group col-3 pr-0">
+                                                <Field name="areaCode" type="text" className={'form-control' + (errors.areaCode && touched.areaCode ? ' is-invalid' : '')} />
+                                                <ErrorMessage name="areaCode" component="div" className="invalid-feedback text-center" />
+                                            </div>
+                                            <div className="form-group col-1 text-center p-3">
+                                                -
+                                            </div>
+                                            <div className="form-group col-8 pl-0">
+                                                <Field name="phoneNumber" type="text" className={'form-control' + (errors.phoneNumber && touched.phoneNumber ? ' is-invalid' : '')} />
+                                                <ErrorMessage name="phoneNumber" component="div" className="invalid-feedback text-center" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="covLetter">Cover Letter</BootstrapForm.Label>
-                                    <BootstrapForm.Control
-                                        as="textarea"
-                                        className="msg-field"
-                                        rows={3}
-                                    />
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="appFor">Applying for Position</BootstrapForm.Label>
+                                        <Field disabled name="position" type="text" className="form-control" vlaue />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="email">Upload Resume</BootstrapForm.Label>
-                                    {/* <StyledDropzone className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} /> */}
-                                    <StyledDropzone onFileUpload={(e) => { console.log("seleted", e);}} />
-                                    <ErrorMessage name="resume" component="div" className="invalid-feedback text-center" />
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="whenStart">When can you start?</BootstrapForm.Label>
+                                        <Field name="whenStart" type="text" className={'form-control' + (errors.whenStart && touched.whenStart ? ' is-invalid' : '')} />
+                                        <ErrorMessage name="whenStart" component="div" className="invalid-feedback text-center" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group text-center">
-                                <Button btnVarient="red-btn" type="submit" className="m-auto career-apply-btn" onClick={() => hideModal()}>
-                                    Submit
-                                </Button>
-                            </div>
-                        </Form>
-                    )}
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="covLetter">Cover Letter</BootstrapForm.Label>
+                                        <BootstrapForm.Control
+                                            as="textarea"
+                                            className="msg-field"
+                                            rows={3}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="form-group col-12">
+                                        <BootstrapForm.Label htmlFor="email">Upload Resume</BootstrapForm.Label>
+                                        <StyledDropzone name="resume" onFileUpload={(file) => { setResumeValue(file) }} />
+                                        {
+                                            (errors.resume && touched.resume && !isFileValid) ? <p className={'invalid-feedback text-center d-block mb-0'}>
+                                                Resume is required</p> : null
+                                        }
+                                    </div>
+                                </div>
+                                <div className="form-group text-center">
+                                    <Button btnVarient="red-btn" type="submit" className="m-auto career-apply-btn">
+                                        Submit
+                                    </Button>
+                                </div>
+                            </Form>
+                        )
+                    }}
                 </Formik>
             </div>
         </>
@@ -150,8 +160,10 @@ export default CareerFormFormik;
 
 CareerFormFormik.propTypes = {
     language: PropTypes.string,
+    name: PropTypes.string,
 };
 
 CareerFormFormik.defaultProps = {
     language: '',
+    name: ''
 };
