@@ -23,13 +23,18 @@ app.prepare().then(async () => {
     server.get('/_next/*', (req, res) => {
         handle(req, res);
     });
+    server.get('/static/*', (req, res) => {
+        handle(req, res);
+    });
+
     api(server);
+
     server.get('/*', (req, res) => {
         handle(req, res);
     });
 
     server.post('/sent-mail', require('./sendMail'));
 
-    server.use(handle);
+    // server.use(handle);
     server.listen(port, (err) => {});
 });

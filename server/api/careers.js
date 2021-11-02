@@ -17,3 +17,5 @@ router.get('/fetch', async (req, res) => {
         res.json({ error: err.message || err.toString() });
     }
 });
+
+module.exports = router;
