@@ -102,6 +102,24 @@
     "aboutUs": {
         "title": "About Us"
     },
+    "careerForm": {
+        "applyPosition": "Applying for Position",
+        "whenStart": "When can you start?",
+        "phoneNumber": "Phone Number",
+        "areaCode": "Area Code",
+        "email": "Email",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "uploadResume": "Upload Resume",
+        "coverLetter": "Cover Letter",
+        "submit": "Submit"
+    },
+    "validation": {
+        "requied": "{{name}} is required field",
+        "invalid": "{{name}} is invalid",
+        "min": "{{name}} must be at least {{size}} characters",
+        "max": "{{name}} maximum characters is {{size}}"
+    },
     "contactUsForm": {
         "yourName": "Your Name",
         "yourEmail": "Your Email",
