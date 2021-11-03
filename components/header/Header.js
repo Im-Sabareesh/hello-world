@@ -57,12 +57,9 @@ const Header = (props) => {
     };
 
     const handleClick = (e) => {
-        console.log(nodes);
         if (nodes.current.contains(e.target)) {
             // if clicked inside menu do something
-            console.log(true);
         } else {
-            console.log(false);
             // If clicked outside menu, close the navbar.
             setIsToggled(false);
         }
