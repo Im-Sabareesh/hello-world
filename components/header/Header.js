@@ -10,6 +10,8 @@ import { Button, MyImage } from '@components';
 import images from '@components/images';
 
 const Header = (props) => {
+    const [isToggled, setIsToggled] = React.useState(false);
+    const nodes = React.useRef();
     const router = useRouter(),
         t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'],
@@ -44,8 +46,35 @@ const Header = (props) => {
         },
     ];
 
+    // const closeToggle = (e) => {
+    //     if (isToggled) {
+    //         onToggled(false);
+    //     }
+    // };
+
+    const onToggled = (e) => {
+        setIsToggled(e);
+    };
+
+    const handleClick = (e) => {
+        console.log(nodes);
+        if (nodes.current.contains(e.target)) {
+            // if clicked inside menu do something
+            console.log(true);
+        } else {
+            console.log(false);
+            // If clicked outside menu, close the navbar.
+            setIsToggled(false);
+        }
+    };
+
     React.useEffect(() => {
+        document.addEventListener('click', handleClick, false);
         window.addEventListener('scroll', listenScrollEvent);
+
+        return () => {
+            document.removeEventListener('click', handleClick, false);
+        };
     }, []);
     return (
         <header className={`fixed-top ${state}`}>
@@ -120,79 +149,93 @@ const Header = (props) => {
                         </Col>
 
                         <Col sm={4} md={5} lg={8}>
-                            <Navbar expand="lg" className="main-menu">
-                                <Container fluid className="p-0">
-                                    {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
-                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                    <Navbar.Collapse id="basic-navbar-nav">
-                                        <Nav className="me-auto">
-                                            <Link
-                                                href={`/${props.language}/about`}
-                                            >
-                                                <a className="nav-link">
-                                                    {t('header.aboutUS')}
+                            <div ref={nodes}>
+                                <Navbar
+                                    expand="lg"
+                                    id="header-navbar"
+                                    className="main-menu"
+                                    onToggle={(e) => {
+                                        onToggled(e);
+                                    }}
+                                    expanded={isToggled}
+                                >
+                                    <Container fluid className="p-0">
+                                        {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+                                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                        <Navbar.Collapse id="basic-navbar-nav">
+                                            <Nav className="me-auto">
+                                                <Link
+                                                    href={`/${props.language}/about`}
+                                                >
+                                                    <a className="nav-link">
+                                                        {t('header.aboutUS')}
+                                                    </a>
+                                                </Link>
+                                                {/* <Link href='/about'> */}
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) =>
+                                                        e.preventDefault()
+                                                    }
+                                                    className="nav-link"
+                                                >
+                                                    {t(
+                                                        'header.blockchainSolution'
+                                                    )}
                                                 </a>
-                                            </Link>
-                                            {/* <Link href='/about'> */}
-                                            <a
-                                                href="#"
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                {t('header.blockchainSolution')}
-                                            </a>
-                                            {/* </Link> */}
-                                            {/* <Link href='/about'> */}
-                                            <a
-                                                href="#"
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                {t('header.caseStudies')}
-                                            </a>
-                                            {/* </Link> */}
-                                            <NavDropdown
-                                                title="Services"
-                                                id="basic-nav-dropdown"
-                                            >
-                                                {_.map(
-                                                    dropDownItems,
-                                                    (navItem, i) => (
-                                                        <NavDropdown.Item
-                                                            key={_.uniqueId()}
-                                                            className={
-                                                                navItem.navPath ===
-                                                                router.asPath
-                                                                    ? 'nav-active'
-                                                                    : ''
-                                                            }
-                                                        >
-                                                            <Link
-                                                                href={
-                                                                    navItem.navPath
+                                                {/* </Link> */}
+                                                {/* <Link href='/about'> */}
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) =>
+                                                        e.preventDefault()
+                                                    }
+                                                    className="nav-link"
+                                                >
+                                                    {t('header.caseStudies')}
+                                                </a>
+                                                {/* </Link> */}
+                                                <NavDropdown
+                                                    title="Services"
+                                                    id="basic-nav-dropdown"
+                                                >
+                                                    {_.map(
+                                                        dropDownItems,
+                                                        (navItem, i) => (
+                                                            <NavDropdown.Item
+                                                                key={_.uniqueId()}
+                                                                className={
+                                                                    navItem.navPath ===
+                                                                    router.asPath
+                                                                        ? 'nav-active'
+                                                                        : ''
                                                                 }
                                                             >
-                                                                {navItem.name}
-                                                            </Link>
-                                                        </NavDropdown.Item>
-                                                    )
-                                                )}
-                                            </NavDropdown>
-                                            <Link
-                                                href={`/${props.language}/careers`}
-                                            >
-                                                <a className="nav-link">
-                                                    {t('header.careers')}
-                                                </a>
-                                            </Link>
-                                        </Nav>
-                                    </Navbar.Collapse>
-                                </Container>
-                            </Navbar>
+                                                                <Link
+                                                                    href={
+                                                                        navItem.navPath
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        navItem.name
+                                                                    }
+                                                                </Link>
+                                                            </NavDropdown.Item>
+                                                        )
+                                                    )}
+                                                </NavDropdown>
+                                                <Link
+                                                    href={`/${props.language}/careers`}
+                                                >
+                                                    <a className="nav-link">
+                                                        {t('header.careers')}
+                                                    </a>
+                                                </Link>
+                                            </Nav>
+                                        </Navbar.Collapse>
+                                    </Container>
+                                </Navbar>
+                            </div>
                         </Col>
 
                         <Col
