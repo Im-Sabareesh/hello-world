@@ -12,12 +12,12 @@ import { Button } from '@components';
 const ContactFormFormik = (props) => {
 
     const basicValidationSchema = Yup.object().shape({
-        yourName: Yup.string()
+        firstname: Yup.string()
             .required('Name is required'),
         email: Yup.string()
             .email('Email is invalid')
             .required('Email is required'),
-        contactNumber: Yup.string()
+        phone: Yup.string()
             .min(10, 'Contact Number must be at least 10 characters')
             .max(10, 'Contact Number maximum characters is 10')
             .required('Contact Number is required'),
@@ -25,9 +25,9 @@ const ContactFormFormik = (props) => {
             .required('Service is required'),
     });
     const initialValues = {
-        yourName: '',
+        firstname: '',
         email: '',
-        contactNumber: '',
+        phone: '',
         service: '',
         description: '',
     }
@@ -35,19 +35,19 @@ const ContactFormFormik = (props) => {
         console.log('token -- > ', token);
     };
 
-    const handleSubmit = (e) => {
-        const target = e.target;
+    // const handleSubmit = (e) => {
+    //     const target = e.target;
 
-        let body = {};
-        _.map(target, (t) => (body[t.name] = t.value));
-        console.log('body', body);
-        axios
-            .post('http://localhost:4000/sent-mail', body)
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => console.log(err));
-    };
+    //     let body = {};
+    //     _.map(target, (t) => (body[t.name] = t.value));
+    //     console.log('body', body);
+    //     axios
+    //         .post('http://localhost:4000/sent-mail', body)
+    //         .then((response) => {
+    //             console.log(response);
+    //         })
+    //         .catch((err) => console.log(err));
+    // };
 
     return (
         <>
@@ -55,23 +55,27 @@ const ContactFormFormik = (props) => {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
-                    enableReinitialize
                     onSubmit={fields => {
                         console.log("handle", fields);
-                        handleSubmit(fields);
+                        // handleSubmit(fields);
+                        axios
+                            .post('http://localhost:4000/sent-mail', fields)
+                            .then((response) => {
+                                console.log(response);
+                            })
+                            .catch((err) => console.log(err));
                     }}
                 >
                     {({ errors, status, touched, handleSubmit }) => (
                         <Form onSubmit={(event) => {
-                            console.log('eevnt');
-                            event.preventDefault();  
+                            event.preventDefault();
                             handleSubmit(event);
                         }}>
                             <div className="row">
                                 <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="yourName">Your Name</BootstrapForm.Label>
-                                    <Field name="yourName" type="text" className={'form-control' + (errors.yourName && touched.yourName ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="yourName" component="div" className="invalid-feedback error-text-padding-left" />
+                                    <BootstrapForm.Label htmlFor="firstname">Your Name</BootstrapForm.Label>
+                                    <Field name="firstname" type="text" className={'form-control' + (errors.firstname && touched.firstname ? ' is-invalid' : '')} />
+                                    <ErrorMessage name="firstname" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="row">
@@ -83,9 +87,9 @@ const ContactFormFormik = (props) => {
                             </div>
                             <div className="row">
                                 <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="contactNumber">Contact Number</BootstrapForm.Label>
-                                    <Field name="contactNumber" type="text" className={'form-control' + (errors.contactNumber && touched.contactNumber ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="contactNumber" component="div" className="invalid-feedback error-text-padding-left" />
+                                    <BootstrapForm.Label htmlFor="phone">Contact Number</BootstrapForm.Label>
+                                    <Field name="phone" type="text" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} />
+                                    <ErrorMessage name="phone" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="row">

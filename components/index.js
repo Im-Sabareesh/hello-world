@@ -20,5 +20,6 @@ export { default as StaticComponent } from './StaticComponent';
 export { default as MyImage } from './Image';
 export { default as CareerFormFormik } from './career-form/CareerFormFormik';
 export { default as ContactFormFormik } from './contact-form/ContactFormFormik';
+export { default as HomeFormFormik } from './home-form/HomeFormFormik';
 export { default as ModalComponent } from './modal';
 export { default as StyledDropzone } from './file-drop-zone';
