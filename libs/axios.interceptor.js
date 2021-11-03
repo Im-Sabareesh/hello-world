@@ -19,14 +19,14 @@ AxiosInstance.interceptors.request.use(async (conf) => {
 });
 
 AxiosInstance.interceptors.response.use(
-    (response) => {
-        return response.data;
+    (response) => {        
+        return Promise.resolve(response.data);
     },
     (error) => {
         if (_.get(error, 'response.status')) {
             ErrorValidation(error);
         }
-        return error;
+        return Promise.reject(error);
     }
 );
 
