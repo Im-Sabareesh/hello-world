@@ -1281,8 +1281,24 @@ header .main-header {
 }
 
 .nav-active {
-    color: #df6052 !important;
+    color: color('nav-active') !important;
     a {
-        color: #df6052 !important;
+        color: color('nav-active') !important;
     }
+}
+
+.error-text-padding-left {
+    padding-left: 20px;
+}
+
+.check-invalid {
+    color: color('danger') !important;
+}
+
+.is-invalid {
+    border-color: color('danger') !important;
+}
+
+.is-invalid-border {
+    border: 1px solid color('danger') !important;
 }
