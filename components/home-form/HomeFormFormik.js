@@ -42,11 +42,12 @@ const HomeFormFormik = (props) => {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
-                    onSubmit={fields => {
+                    onSubmit={(fields, {resetForm}) => {
                         axios
                             .post('sent-mail', fields)
                             .then((response) => {
                                 toaster('Form Submitted .!', 'success');
+                                resetForm({ values: '' })
                             })
                             .catch((err) => {
                                 console.log(err)
