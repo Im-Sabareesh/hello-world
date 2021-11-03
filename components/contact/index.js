@@ -57,7 +57,7 @@ const ContactComponent = (props) => {
         _.map(target, (t) => (body[t.name] = t.value));
         console.log('body', body);
         axios
-            .post('http://localhost:4000/sent-mail', body)
+            .post('sent-mail', body)
             .then((response) => {
                 console.log(response);
             })
