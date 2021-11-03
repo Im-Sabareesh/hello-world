@@ -15,16 +15,16 @@ const ContactFormFormik = (props) => {
 
     const basicValidationSchema = Yup.object().shape({
         firstname: Yup.string()
-            .required('Name is required'),
+            .required(t('validations.nameRequired')),
         email: Yup.string()
-            .email('Email is invalid')
-            .required('Email is required'),
+            .email(t('validations.emailInvalid'))
+            .required(t('validations.emailRequired')),
         phone: Yup.string()
-            .min(10, 'Contact Number must be at least 10 characters')
-            .max(10, 'Contact Number maximum characters is 10')
-            .required('Contact Number is required'),
+            .min(10, t('validations.conactMin'))
+            .max(10, t('validations.conactMax'))
+            .required(t('validations.contactRequired')),
         service: Yup.string()
-            .required('Service is required'),
+            .required(t('validations.serviceRequired')),
     });
     const initialValues = {
         firstname: '',

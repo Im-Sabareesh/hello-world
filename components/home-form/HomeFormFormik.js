@@ -15,15 +15,15 @@ const HomeFormFormik = (props) => {
 
     const basicValidationSchema = Yup.object().shape({
         firstName: Yup.string()
-            .required('First Name is required'),
+            .required(t('validations.firstNameReq')),
         email: Yup.string()
-            .email('Email is invalid')
-            .required('Email is required'),
+            .email(t('validations.emailInvalid'))
+            .required(t('validations.emailRequired')),
         phone: Yup.string()
-            .min(10, 'Phone Number must be at least 10 characters')
-            .max(10, 'Phone Number maximum characters is 10')
-            .required('Phone Number is required'),
-        accepTC: Yup.bool().oneOf([true], 'Please accept the terms and conditions')
+            .min(10, t('validations.phoneMin'))
+            .max(10, t('validations.phoneMax'))
+            .required(t('validations.phoneRequired')),
+        accepTC: Yup.bool().oneOf([true], t('validations.acceptTerms'))
     });
     const initialValues = {
         firstName: '',

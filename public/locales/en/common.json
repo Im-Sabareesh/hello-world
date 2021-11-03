@@ -110,5 +110,20 @@
         "selectService": "Select service",
         "yourMsg": "Your Message",
         "sendMsg": "Send Message"
+    },
+    "validations": {
+        "firstNameReq": "First Name is required",
+        "lastNameReq": "Last Name is required",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Email is invalid",
+        "phoneRequired": "Phone Number is required",
+        "phoneMin": "Phone Number must be at least 10 characters",
+        "phoneMax": "Phone Number maximum characters is 10",
+        "contactRequired": "Contact Number is required",
+        "conactMin": "Contact Number must be at least 10 characters",
+        "conactMax": "Contact Number maximum characters is 10",
+        "serviceRequired": "Service is required",
+        "acceptTerms": "Please accept the terms and conditions"
     }
 }
