@@ -49,7 +49,7 @@ const InsightWithFormSection = (props) => {
         _.map(target, (t) => (body[t.name] = t.value));
 
         axios
-            .post('http://localhost:4000/sent-mail', body)
+            .post('/sent-mail', body)
             .then((response) => {
                 console.log(response);
             })

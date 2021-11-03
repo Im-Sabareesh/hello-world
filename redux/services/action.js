@@ -7,7 +7,7 @@ const servicesAction = {
     //
     fetchList: () => (dispatch) => {
         axios
-            .get('/assets/data/services.json')
+            .get('/api/v1/services/fetch')
             .then((response) => {
                 dispatch({
                     type: servicesAction.fetchItems,
