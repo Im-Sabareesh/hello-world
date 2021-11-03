@@ -116,6 +116,7 @@ const InsightWithFormSection = (props) => {
                                             {t('home.haveAnIdea')}
                                         </Paragraph>
 
+                                        {/* Send Request home form in component with formik */}
                                         <HomeFormFormik />
                                     </Col>
 

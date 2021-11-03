@@ -11,7 +11,7 @@ import { axios } from '@libs';
 import { Button, toaster } from '@components';
 
 const HomeFormFormik = (props) => {
-    const t = i18next.t.bind(i18next)
+    const t = i18next.t.bind(i18next);
 
     const basicValidationSchema = Yup.object().shape({
         firstName: Yup.string()
@@ -123,7 +123,9 @@ const HomeFormFormik = (props) => {
                                         type="submit"
                                         className="btn-lg"
                                     >
-                                        Send Request
+                                        {t(
+                                            'home.sendRequestBtn'
+                                        )}
                                     </Button>
                                 </div>
                                 <div>

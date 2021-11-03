@@ -215,7 +215,8 @@ const ContactComponent = (props) => {
                                     you within 24 hours. We will keep your
                                     information confidential.
                                 </Paragraph>
-
+                                
+                                {/* Contact Us form in seperate component with formik */}
                                 <ContactFormFormik />
                             </Col>
                         </Row>

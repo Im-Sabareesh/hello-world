@@ -96,9 +96,19 @@
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
         "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
-        "defiDevelopment": "DeFi Development"
+        "defiDevelopment": "DeFi Development",
+        "sendRequestBtn": "Send Request"
     },
     "aboutUs": {
         "title": "About Us"
+    },
+    "contactUsForm": {
+        "yourName": "Your Name",
+        "yourEmail": "Your Email",
+        "contactNumber": "Contact Number",
+        "serviceInterestedIn": "Service you are interested in",
+        "selectService": "Select service",
+        "yourMsg": "Your Message",
+        "sendMsg": "Send Message"
     }
 }

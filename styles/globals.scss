@@ -1281,9 +1281,9 @@ header .main-header {
 }
 
 .nav-active {
-    color: #df6052 !important;
+    color: color('nav-active') !important;
     a {
-        color: #df6052 !important;
+        color: color('nav-active') !important;
     }
 }
 
@@ -1292,13 +1292,13 @@ header .main-header {
 }
 
 .check-invalid {
-    color: #dc3545 !important;
+    color: color('danger') !important;
 }
 
 .is-invalid {
-    border-color: #dc3545 !important;
+    border-color: color('danger') !important;
 }
 
 .is-invalid-border {
-    border: 1px solid #dc3545 !important;
+    border: 1px solid color('danger') !important;
 }
