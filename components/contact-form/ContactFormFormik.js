@@ -7,7 +7,7 @@ import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import _ from 'lodash';
 
 import { axios } from '@libs';
-import { Button } from '@components';
+import { Button, toaster } from '@components';
 
 const ContactFormFormik = (props) => {
 
@@ -35,20 +35,6 @@ const ContactFormFormik = (props) => {
         console.log('token -- > ', token);
     };
 
-    // const handleSubmit = (e) => {
-    //     const target = e.target;
-
-    //     let body = {};
-    //     _.map(target, (t) => (body[t.name] = t.value));
-    //     console.log('body', body);
-    //     axios
-    //         .post('http://localhost:4000/sent-mail', body)
-    //         .then((response) => {
-    //             console.log(response);
-    //         })
-    //         .catch((err) => console.log(err));
-    // };
-
     return (
         <>
             <div className="getintouch-form mt-5">
@@ -56,12 +42,10 @@ const ContactFormFormik = (props) => {
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
                     onSubmit={fields => {
-                        console.log("handle", fields);
-                        // handleSubmit(fields);
                         axios
-                            .post('http://localhost:4000/sent-mail', fields)
+                            .post('sent-mail', fields)
                             .then((response) => {
-                                console.log(response);
+                                toaster('Form Submitted .!', 'success');
                             })
                             .catch((err) => console.log(err));
                     }}
@@ -74,21 +58,21 @@ const ContactFormFormik = (props) => {
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="firstname">Your Name</BootstrapForm.Label>
-                                    <Field name="firstname" type="text" className={'form-control' + (errors.firstname && touched.firstname ? ' is-invalid' : '')} />
+                                    <Field name="firstname" type="text" className={'form-control' + (errors.firstname && touched.firstname ? ' is-invalid is-invalid-border' : '')} />
                                     <ErrorMessage name="firstname" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="firstName">Your Email</BootstrapForm.Label>
-                                    <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
+                                    <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid is-invalid-border' : '')} />
                                     <ErrorMessage name="email" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="phone">Contact Number</BootstrapForm.Label>
-                                    <Field name="phone" type="text" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} />
+                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid is-invalid-border' : '')} />
                                     <ErrorMessage name="phone" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
@@ -96,7 +80,7 @@ const ContactFormFormik = (props) => {
                                 <div className="form-group col-12 select-field">
                                     <BootstrapForm.Label htmlFor="service">Service you are interested in</BootstrapForm.Label>
                                     <Field as="select" name="service" type="text"
-                                        className={'form-control' + (errors.contactNumber && touched.contactNumber ? ' is-invalid' : '')}>
+                                        className={'form-control' + (errors.service && touched.service ? ' is-invalid is-invalid-border' : '')}>
                                         <option>Select service</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>

@@ -1290,3 +1290,15 @@ header .main-header {
 .error-text-padding-left {
     padding-left: 20px;
 }
+
+.check-invalid {
+    color: #dc3545 !important;
+}
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.is-invalid-border {
+    border: 1px solid #dc3545 !important;
+}

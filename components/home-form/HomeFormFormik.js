@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form as BootstrapForm, Row, Col } from 'react-bootstrap';
+import { Form as BootstrapForm, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -8,7 +8,7 @@ import _ from 'lodash';
 import i18next from 'i18next';
 
 import { axios } from '@libs';
-import { Button } from '@components';
+import { Button, toaster } from '@components';
 
 const HomeFormFormik = (props) => {
     const t = i18next.t.bind(i18next)
@@ -23,33 +23,18 @@ const HomeFormFormik = (props) => {
             .min(10, 'Phone Number must be at least 10 characters')
             .max(10, 'Phone Number maximum characters is 10')
             .required('Phone Number is required'),
-        accepTC: Yup.string()
-            .required('Please accept the terms and conditions'),
+        accepTC: Yup.bool().oneOf([true], 'Please accept the terms and conditions')
     });
     const initialValues = {
         firstName: '',
         email: '',
         phone: '',
         description: '',
-        accepTC: '',
+        accepTC: false,
     }
     const handleVerify = (token) => {
         console.log('token -- > ', token);
     };
-
-    // const handleSubmit = (e) => {
-    //     const target = e.target;
-
-    //     let body = {};
-    //     _.map(target, (t) => (body[t.name] = t.value));
-    //     console.log('body', body);
-    //     axios
-    //         .post('http://localhost:4000/sent-mail', body)
-    //         .then((response) => {
-    //             console.log(response);
-    //         })
-    //         .catch((err) => console.log(err));
-    // };
 
     return (
         <>
@@ -58,15 +43,14 @@ const HomeFormFormik = (props) => {
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
                     onSubmit={fields => {
-                        console.log("handle", fields);
-                        debugger
-                        // handleSubmit(fields);
                         axios
-                            .post('http://localhost:4000/sent-mail', fields)
+                            .post('sent-mail', fields)
                             .then((response) => {
-                                console.log(response);
+                                toaster('Form Submitted .!', 'success');
                             })
-                            .catch((err) => console.log(err));
+                            .catch((err) => {
+                                console.log(err)
+                            });
                     }}
                 >
                     {({ errors, status, touched, handleSubmit }) => (
@@ -102,7 +86,7 @@ const HomeFormFormik = (props) => {
                                         )}
                                         *
                                     </BootstrapForm.Label>
-                                    <Field name="phone" type="text" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} />
+                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} />
                                     <ErrorMessage name="phone" component="div" className="invalid-feedback" />
                                 </div>
                             </Row>
@@ -122,54 +106,16 @@ const HomeFormFormik = (props) => {
                                 </div>
                             </Row>
                             <Row className="mt-3">
-                                <div className="form-group col-md-7">
-                                    {['checkbox'].map(
-                                        (type) => (
-                                            <div
-                                                key={_.uniqueId()}
-                                                className="mb-3"
-                                                name="accepTC"
-                                            >
-                                                <BootstrapForm.Check
-                                                    type={
-                                                        type
-                                                    }
-                                                    id={`check-api-${type}`}
-                                                    className="d-flex"
-                                                    name="accepTC"
-                                                >
-                                                    <BootstrapForm.Check.Input
-                                                        type={
-                                                            type
-                                                        }
-                                                        className="flex-shrink-0 mr-3"
-                                                        name="accepTC"
-                                                    />
-                                                    <BootstrapForm.Check.Label>
-                                                        *
-                                                        {t(
-                                                            'home.agreeTrems'
-                                                        )}
-                                                        <a
-                                                            href="#"
-                                                            onClick={(
-                                                                e
-                                                            ) =>
-                                                                e.preventDefault()
-                                                            }
-                                                        >
-                                                            {t(
-                                                                'privacyPolicy'
-                                                            )}
-                                                        </a>
-                                                        .
-                                                    </BootstrapForm.Check.Label>
-                                                </BootstrapForm.Check>
-                                            </div>
-                                        )
-                                    )}
+                                <div className="form-group col-md-7 form-check">
+                                    <Field type="checkbox" name="accepTC" id="accepTC" className={'form-check-input ' + (errors.accepTC && touched.accepTC ? ' is-invalid' : '')} />
+                                    <BootstrapForm.Label htmlFor="accepTC" className={"form-check-label" + (errors.accepTC && touched.accepTC ? ' check-invalid' : '')}>
+                                        *
+                                        {t(
+                                            'home.agreeTrems'
+                                        )}
+                                    </BootstrapForm.Label>
+                                    <ErrorMessage name="accepTC" component="div" className="invalid-feedback" />
                                 </div>
-
                                 <div className="form-group col-md-5">
                                     <Button
                                         btnVarient="red-btn"
