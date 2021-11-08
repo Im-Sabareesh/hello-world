@@ -37,9 +37,15 @@ const CareerFormFormik = (props) => {
             .required(t('validation.requied', { name: 'Start Date' }))
             .typeError(t('validation.invalid', { name: 'Start Date' })),
 
-        resume: Yup.mixed().required(
-            t('validation.requied', { name: 'Resume' })
-        ),
+        resume: Yup.mixed()
+        .required(t('validation.requied', { name: 'Resume' }))
+        .test("type", "Only the following formats are accepted: .docx, .pdf and .doc", (value) => {
+            return value && (
+                value[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+                value[0].type === 'application/pdf' ||
+                value[0].type === "application/msword"
+            );
+        }),
     });
     const initialValues = {
         firstName: '',
@@ -214,7 +220,7 @@ const CareerFormFormik = (props) => {
                                             name="position"
                                             type="text"
                                             className="form-control"
-                                            vlaue
+                                            value
                                         />
                                     </div>
                                 </div>
@@ -273,6 +279,8 @@ const CareerFormFormik = (props) => {
                                         </BootstrapForm.Label>
                                         <StyledDropzone
                                             name="resume"
+                                            errors={errors}
+                                            touched={touched}
                                             onFileUpload={(file) => {
                                                 setFieldValue('resume', file);
                                             }}

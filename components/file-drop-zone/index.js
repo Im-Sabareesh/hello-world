@@ -1,6 +1,10 @@
 import React from 'react';
 import { useDropzone } from 'react-dropzone';
 import PropTypes from 'prop-types';
+
+import { MyImage } from '@components';
+import images from '@components/images';
+
 const baseStyle = {
     flex: 1,
     display: 'flex',
@@ -29,7 +33,7 @@ const rejectStyle = {
     borderColor: '#ff1744',
 };
 
-const StyledDropzone = ({ onFileUpload }) => {
+const StyledDropzone = ({ onFileUpload , errors, touched}) => {
     const {
         acceptedFiles,
         getRootProps,
@@ -46,10 +50,25 @@ const StyledDropzone = ({ onFileUpload }) => {
     });
 
     const files = acceptedFiles.map((file) => (
-        <li key={file.path}>
-            {file.path} - {file.size} bytes
+        <li key={file.path} className="d-flex justify-content-center justify-content-between">
+            <span>{file.path} - {file.size} bytes</span>
+            <span className="cursor-pointer" onClick={() => {
+                remove(file)
+                }} >
+                <MyImage
+                    src={images.closeIcon}
+                    alt=" "
+                    height={20}
+                    width={20}
+                />
+            </span>
         </li>
     ));
+
+    const remove = file => {
+        acceptedFiles.splice(file, 1);        
+        onFileUpload(null);
+    };
 
     const style = React.useMemo(
         () => ({
@@ -63,7 +82,14 @@ const StyledDropzone = ({ onFileUpload }) => {
 
     return (
         <div className="container">
-            <div {...getRootProps({ style })}>
+            <div {...getRootProps({ style })}  
+                className={
+                    'mb-3' +
+                    (errors.resume &&
+                    touched.resume
+                        ? ' is-invalid'
+                        : '')
+                }>
                 <input {...getInputProps()} />
                 <p>
                     Drag &apos;n&apos; drop some files here, or click to select
@@ -72,8 +98,10 @@ const StyledDropzone = ({ onFileUpload }) => {
             </div>
             {acceptedFiles.length ? (
                 <>
-                    <h5>Selected File</h5>
-                    <ul>{files}</ul>
+                    <h5>Uploaded Resume</h5>
+                    <div className="alert alert-info" role="alert">
+                        <ul>{files}</ul>
+                    </div>
                 </>
             ) : null}
         </div>
