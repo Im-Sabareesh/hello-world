@@ -23,9 +23,9 @@ const CareerFormFormik = (props) => {
             .required(t('validation.requied', { name: 'Email' })),
         areaCode: Yup.string()
             .min(2, t('validation.min', { name: 'Area code', size: 2 }))
-            .max(3, t('validation.max', { name: 'Area code', size: 3 }))
+            .max(5, t('validation.max', { name: 'Area code', size: 5 }))
             .required(t('validation.requied', { name: 'Area Code' })),
-        phoneNumber: Yup.number()
+        phoneNumber: Yup.string()
             .min(10, t('validation.min', { name: 'Phone Number', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone Number', size: 10 }))
             .required(t('validation.requied', { name: 'Phone Number' })),
