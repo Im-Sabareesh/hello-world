@@ -974,6 +974,10 @@ button:not(.collapsed) {
         padding-right: 35px;
     }
 
+    input[type="text"]:disabled {
+        background: linear-gradient(90deg, rgba(50, 50, 100, 0.10) 0%, rgba(40, 60, 100, 0.20) 100%);
+    }
+
     .select-field {
         position: relative;
 
@@ -1322,9 +1326,9 @@ input[type=number] {
     width: 150px;
     height: 130px;
     border-radius: 10px;
-    color: #055160;
-    background-color: #cff4fc;
-    border-color: #b6effb;
+    color: color('alert-info-color');
+    background-color: color('alert-info-bg');
+    border-color: color('alert-info-border');
     padding: 3px;
     .remove {
         display: flex;

@@ -29,9 +29,8 @@ const CareerFormFormik = (props) => {
             .min(10, t('validation.min', { name: 'Phone Number', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone Number', size: 10 }))
             .required(t('validation.requied', { name: 'Phone Number' })),
-        whenStart: Yup.date()
-            .required(t('validation.requied', { name: 'Start Date' }))
-            .typeError(t('validation.invalid', { name: 'Start Date' })),
+        whenStart: Yup.string()
+            .required(t('validation.requied', { name: 'Start' })),
         resume: Yup.mixed()
         .required(t('validation.requied', { name: 'Resume' }))
         .test("type", t('validation.resumeFormat'), (value) => {
@@ -226,8 +225,18 @@ const CareerFormFormik = (props) => {
                                         <BootstrapForm.Label htmlFor="whenStart">
                                             {t('careerForm.whenStart')}
                                         </BootstrapForm.Label>
-
-                                        <InputMask
+                                        <Field
+                                            className={
+                                                'form-control' +
+                                                (errors.whenStart &&
+                                                touched.whenStart
+                                                    ? ' is-invalid'
+                                                    : '')
+                                            }
+                                            name="whenStart"
+                                            type="text"
+                                        />
+                                        {/* <InputMask
                                             className={
                                                 'form-control' +
                                                 (errors.whenStart &&
@@ -242,13 +251,7 @@ const CareerFormFormik = (props) => {
                                                     e.target.value
                                                 );
                                             }}
-                                            // onChange={(val) =>
-                                            //     // setFieldValue(
-                                            //     //     'whenStart',
-                                            //     //     value
-                                            //     // )
-                                            // }
-                                        />
+                                        /> */}
                                         <ErrorMessage
                                             name="whenStart"
                                             component="div"
