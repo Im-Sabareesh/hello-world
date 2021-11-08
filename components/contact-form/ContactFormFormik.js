@@ -14,24 +14,26 @@ const ContactFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
 
     const basicValidationSchema = Yup.object().shape({
-        firstname: Yup.string()
-            .required(t('validations.nameRequired')),
+        name: Yup.string()
+            .required(t('validation.requied', { name: 'Name' })),
         email: Yup.string()
-            .email(t('validations.emailInvalid'))
-            .required(t('validations.emailRequired')),
+            .required(t('validation.requied', { name: 'Email' }))
+            .email(t('validation.invalid', { name: 'Email' })),
         phone: Yup.string()
-            .min(10, t('validations.conactMin'))
-            .max(10, t('validations.conactMax'))
-            .required(t('validations.contactRequired')),
+            .required(t('validation.requied', { name: 'Phone' }))
+            .min(10, t('validation.min', { name: 'Phone', size: 10 }))
+            .max(10, t('validation.max', { name: 'Phone', size: 10 })),
         service: Yup.string()
-            .required(t('validations.serviceRequired')),
+            .required(t('validation.requied', { name: 'Service' })),
+        message: Yup.string()
+            .required(t('validation.requied', { name: 'Message' }))
     });
     const initialValues = {
-        firstname: '',
+        name: '',
         email: '',
         phone: '',
         service: '',
-        description: '',
+        message: '',
     }
     const handleVerify = (token) => {
         console.log('token -- > ', token);
@@ -60,13 +62,13 @@ const ContactFormFormik = (props) => {
                         }}>
                             <div className="row">
                                 <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="firstname">
+                                    <BootstrapForm.Label htmlFor="name">
                                         {t(
                                             'contactUsForm.yourName'
                                         )}
                                     </BootstrapForm.Label>
-                                    <Field name="firstname" type="text" className={'form-control' + (errors.firstname && touched.firstname ? ' is-invalid is-invalid-border' : '')} />
-                                    <ErrorMessage name="firstname" component="div" className="invalid-feedback error-text-padding-left" />
+                                    <Field name="name" type="text" className={'form-control' + (errors.name && touched.name ? ' is-invalid is-invalid-border' : '')} />
+                                    <ErrorMessage name="name" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="row">
@@ -87,7 +89,9 @@ const ContactFormFormik = (props) => {
                                             'contactUsForm.contactNumber'
                                         )}
                                     </BootstrapForm.Label>
-                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid is-invalid-border' : '')} />
+                                    <Field name="phone" type="number" 
+                                        className={'form-control' + (errors.phone && touched.phone ? ' is-invalid is-invalid-border' : '')}
+                                        onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}/>
                                     <ErrorMessage name="phone" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
@@ -114,17 +118,19 @@ const ContactFormFormik = (props) => {
                             </div>
                             <div className="row">
                                 <div className="form-group col-12">
-                                    <BootstrapForm.Label htmlFor="description">
+                                    <BootstrapForm.Label htmlFor="message">
                                         {t(
                                             'contactUsForm.yourMsg'
                                         )}
                                     </BootstrapForm.Label>
                                     <Field
                                         as="textarea"
-                                        className="msg-field form-control"
-                                        name="description"
+                                        name="message"
                                         rows={3}
+                                        className={'msg-field form-control' + 
+                                        (errors.message && touched.message ? ' is-invalid is-invalid-border' : '')}
                                     />
+                                    <ErrorMessage name="message" component="div" className="invalid-feedback error-text-padding-left" />
                                 </div>
                             </div>
                             <div className="form-group">

@@ -6,12 +6,14 @@ import { Button, H1, Paragraph } from '@components';
 import { careerSelector } from '@redux';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
+import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
 const CareersComponent = (props) => {
     const jobList = useSelector(careerSelector.careerListSelector);
 
-    const router = useRouter();
+    const router = useRouter(),
+    t = i18next.t.bind(i18next);
 
     return (
         <>
@@ -29,7 +31,7 @@ const CareersComponent = (props) => {
                                 </Paragraph>
                                 <div className="button-outer mx-auto mt-md-3 pt-md-3">
                                     <Button btnVarient="red-btn">
-                                        See Current Openings
+                                        {t("careers.currentOpening")}
                                     </Button>
                                 </div>
                             </div>
@@ -218,7 +220,7 @@ const CareersComponent = (props) => {
                                                     );
                                                 }}
                                             >
-                                                Read More
+                                                {t("readMore")}
                                             </Button>
                                         </div>
                                     </div>

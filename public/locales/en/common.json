@@ -8,7 +8,6 @@
         "en": "🇺🇸 English"
     },
     "header": {
-        "careers": "Careers",
         "title": "Header",
         "aboutUS": "About Us",
         "blockchainSolution": "Blockchain Solution",
@@ -33,7 +32,7 @@
         "copyRightsReserved": "Chaincode Consulting LLP 2021. All rights reserved"
     },
     "connectWithUs": "Connect With Us",
-    "letsTalk": "Let's Talk",
+    "letsTalk": "Let’s Talk",
     "defiDevelopment": "DeFi Development",
     "hdfDevelopment": "Hyperledger Fabric Development",
     "nftDevelopement": "NFT Development",
@@ -41,10 +40,11 @@
     "getQuote": "Get a quote",
     "knowMore": "Know More",
     "learnMore": "Learn More",
+    "readMore": "Read More",
     "consultFree": "Consult for Free",
     "sendRequest": "Send Request",
     "contactUs": "Contact Us",
-    "career": "Career",
+    "career": "Careers",
     "careerDetails": "Career Details",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service & Rules",
@@ -97,11 +97,14 @@
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
         "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
-        "defiDevelopment": "DeFi Development",
-        "sendRequestBtn": "Send Request"
+        "defiDevelopment": "DeFi Development"
     },
     "aboutUs": {
         "title": "About Us"
+    },
+    "careers": {
+        "title": "Careers",
+        "currentOpening": "See Current Openings"
     },
     "careerForm": {
         "applyPosition": "Applying for Position",
@@ -120,7 +123,8 @@
         "invalid": "{{name}} is invalid",
         "min": "{{name}} must be at least {{size}} characters",
         "max": "{{name}} maximum characters is {{size}}",
-        "resumeFormat": "Only the following formats are accepted: .docx, .pdf and .doc"
+        "resumeFormat": "Only the following formats are accepted: .docx, .pdf and .doc",
+        "acceptance": "Please accept the {{name}}"
     },
     "fileDropzone": {
         "dropFilePlaceholder": "Drag 'n' drop some files here, or click to select files",
@@ -134,20 +138,5 @@
         "selectService": "Select service",
         "yourMsg": "Your Message",
         "sendMsg": "Send Message"
-    },
-    "validations": {
-        "firstNameReq": "First Name is required",
-        "lastNameReq": "Last Name is required",
-        "nameRequired": "Name is required",
-        "emailRequired": "Email is required",
-        "emailInvalid": "Email is invalid",
-        "phoneRequired": "Phone Number is required",
-        "phoneMin": "Phone Number must be at least 10 characters",
-        "phoneMax": "Phone Number maximum characters is 10",
-        "contactRequired": "Contact Number is required",
-        "conactMin": "Contact Number must be at least 10 characters",
-        "conactMax": "Contact Number maximum characters is 10",
-        "serviceRequired": "Service is required",
-        "acceptTerms": "Please accept the terms and conditions"
     }
 }

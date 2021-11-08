@@ -144,7 +144,7 @@ const DefiSComponent = (props) => {
                         className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
                         title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
                         link={`/${props.language}/contact`}
-                        btnName="Let’s Talk"
+                        btnName={t('letsTalk')}
                     />
                 </Container>
             </section>

@@ -15,15 +15,15 @@ const HomeFormFormik = (props) => {
 
     const basicValidationSchema = Yup.object().shape({
         firstName: Yup.string()
-            .required(t('validations.firstNameReq')),
+            .required(t('validation.requied'), { name: 'First name' }),
         email: Yup.string()
-            .email(t('validations.emailInvalid'))
-            .required(t('validations.emailRequired')),
+            .required(t('validation.requied', { name: 'Email' }))
+            .email(t('validation.invalid', { name: 'Email' })),
         phone: Yup.string()
-            .min(10, t('validations.phoneMin'))
-            .max(10, t('validations.phoneMax'))
-            .required(t('validations.phoneRequired')),
-        accepTC: Yup.bool().oneOf([true], t('validations.acceptTerms'))
+            .required(t('validation.requied', { name: 'Phone' }))
+            .min(10, t('validation.min', { name: 'Phone', size: 10 }))
+            .max(10, t('validation.max', { name: 'Phone', size: 10 })),
+        accepTC: Yup.bool().oneOf([true], t('validation.acceptance'), {name: 'terms and conditions'})
     });
     const initialValues = {
         firstName: '',
@@ -124,9 +124,7 @@ const HomeFormFormik = (props) => {
                                         type="submit"
                                         className="btn-lg"
                                     >
-                                        {t(
-                                            'home.sendRequestBtn'
-                                        )}
+                                        {t('sendRequest')}
                                     </Button>
                                 </div>
                                 <div>

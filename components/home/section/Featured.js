@@ -30,12 +30,12 @@ export default function FeaturedSection(props) {
             },
             {
                 title: t('home.obortechSmartHub'),
-                link: '#',
+                link: '',
                 icon: images.obortechIcon,
             },
             {
                 title: t('home.gdprCompliance'),
-                link: '#',
+                link: '',
                 icon: images.gdprIcon,
             },
         ];
@@ -80,11 +80,14 @@ export default function FeaturedSection(props) {
                             {_.map(featuresList, (item) => (
                                 <Col
                                     key={_.uniqueId()}
-                                    onClick={() => {
-                                        if (item.link)
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (item.link) {
                                             router.push(
                                                 `${props.language}/${item.link}`
                                             );
+                                        }
+                                            
                                     }}
                                 >
                                     <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">

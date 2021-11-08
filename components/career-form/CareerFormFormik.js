@@ -19,7 +19,7 @@ const CareerFormFormik = (props) => {
             t('validation.requied', { name: 'Last name' })
         ),
         email: Yup.string()
-            .email(t('validation.requied', { name: 'Email' }))
+            .email(t('validation.invalid', { name: 'Email' }))
             .required(t('validation.requied', { name: 'Email' })),
         areaCode: Yup.string()
             .min(2, t('validation.min', { name: 'Area code', size: 2 }))
