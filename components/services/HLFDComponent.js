@@ -5,13 +5,16 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
+import i18next from 'i18next';
 
 import { CardSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const HLFDSComponent = (props) => {
     const hlfdServList = useSelector(serviceSelector.servicesListSelector);
-    const router = useRouter();
+    const router = useRouter(),
+    t = i18next.t.bind(i18next);
+
     return (
         <>
             <section className="service-inner-section1">
@@ -41,7 +44,7 @@ const HLFDSComponent = (props) => {
                                         );
                                     }}
                                 >
-                                    Talk to our Experts
+                                    {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -124,7 +127,6 @@ const HLFDSComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                {' '}
                                 Our wide range of service include{' '}
                             </h2>
                         </Col>

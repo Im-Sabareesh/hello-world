@@ -1,13 +1,16 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
+import i18next from 'i18next';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+
 import { Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const AboutUs = (props) => {
     const router = useRouter(),
+        t = i18next.t.bind(i18next),
         teamMemberList = [
             {
                 name: 'Amitabh Bacchan',
@@ -360,7 +363,7 @@ const AboutUs = (props) => {
                                 }}
                                 className="min-size-btn btn btn-primary"
                             >
-                                Connect with us
+                               {t('connectWithUs')}
                             </Button>
                         </Col>
                     </Row>

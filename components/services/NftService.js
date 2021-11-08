@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
+import i18next from 'i18next';
 
 import {
     CardSection,
@@ -18,7 +19,8 @@ import images from '@components/images';
 
 const NFTSComponent = (props) => {
     const nftServList = useSelector(serviceSelector.servicesListSelector);
-    const router = useRouter();
+    const router = useRouter(),
+    t = i18next.t.bind(i18next);
 
     return (
         <>
@@ -51,7 +53,7 @@ const NFTSComponent = (props) => {
                                         );
                                     }}
                                 >
-                                    Talk to our Experts
+                                    {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -107,7 +109,6 @@ const NFTSComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                {' '}
                                 Our wide range of service include{' '}
                             </h2>
                         </Col>
@@ -129,7 +130,7 @@ const NFTSComponent = (props) => {
                         className="cta-banner cta-banner3 d-flex align-items-center"
                         title="Start Now?"
                         link={`/${props.language}/contact`}
-                        btnName="Get a quote"
+                        btnName={t('getQuote')}
                     />
                 </Container>
             </section>
