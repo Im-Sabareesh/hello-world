@@ -19,7 +19,7 @@ AxiosInstance.interceptors.request.use(async (conf) => {
 });
 
 AxiosInstance.interceptors.response.use(
-    (response) => {        
+    (response) => {
         return Promise.resolve(response.data);
     },
     (error) => {
@@ -29,6 +29,10 @@ AxiosInstance.interceptors.response.use(
         return Promise.reject(error);
     }
 );
+
+const getError = (err) => {
+    return err.data.message;
+};
 
 const ErrorValidation = (error) => {
     switch (error.response.status) {
@@ -45,7 +49,7 @@ const ErrorValidation = (error) => {
 
         case 422:
             // Toast({ description: getError(error.response), type: 'danger' });
-            toaster(error.response, 'error');
+            toaster(getError(error.response), 'error');
             break;
 
         default: {
