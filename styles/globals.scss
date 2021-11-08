@@ -959,7 +959,7 @@ button:not(.collapsed) {
     }
 
     .form-label {
-        font-size: 20px;
+        font-size: 18px;
         color: #000000;
         font-weight: 600;
         margin-bottom: 16px;
@@ -1296,9 +1296,51 @@ header .main-header {
 }
 
 .is-invalid {
-    border-color: color('danger') !important;
+    border: 1px solid color('danger') !important;
 }
 
 .is-invalid-border {
     border: 1px solid color('danger') !important;
+}
+
+//input type number field remove inside of dropdown
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+//uploaded resume 
+.uploaded-files {
+    width: 150px;
+    height: 130px;
+    border-radius: 10px;
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+    padding: 3px;
+    .remove {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 8px;
+        padding-top: 8px;
+    }
+    .file-path {
+        justify-content: center;
+        display: flex;
+        padding-left: 15px;
+        overflow: hidden;
+        margin-top: 21px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }

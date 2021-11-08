@@ -12,10 +12,10 @@ const ModalComponent = ({
     return (
         <>
             <Modal show={isShow} onHide={hide} size={mSize} centered>
-                <Modal.Header closeButton>
+                <Modal.Header className="ps-5" closeButton>
                     <Modal.Title>Apply for a {header.name}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className="p-5">
                     {children}
                 </Modal.Body>
             </Modal>

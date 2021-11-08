@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDropzone } from 'react-dropzone';
 import PropTypes from 'prop-types';
+import i18next from 'i18next';
 
 import { MyImage } from '@components';
 import images from '@components/images';
@@ -34,6 +35,8 @@ const rejectStyle = {
 };
 
 const StyledDropzone = ({ onFileUpload , errors, touched}) => {
+    const t = i18next.t.bind(i18next);
+
     const {
         acceptedFiles,
         getRootProps,
@@ -45,15 +48,20 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
         // maxFiles: 1,
         multiple: false,
         onDrop: acceptedFiles => {
-            onFileUpload(acceptedFiles)
+            onFileUpload(acceptedFiles, 'touched');
+            if (!(acceptedFiles[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+                acceptedFiles[0].type === 'application/pdf' ||
+                acceptedFiles[0].type === "application/msword")) {
+                    acceptedFiles.splice(acceptedFiles, 1);
+            }
         }
     });
 
     const files = acceptedFiles.map((file) => (
-        <li key={file.path} className="d-flex justify-content-center justify-content-between">
-            <span>{file.path} - {file.size} bytes</span>
-            <span className="cursor-pointer" onClick={() => {
-                remove(file)
+        <div key={file.path} className="uploaded-files">
+            <div className="cursor-pointer remove" onClick={(e) => {
+                e.stopPropagation();
+                remove(file);
                 }} >
                 <MyImage
                     src={images.closeIcon}
@@ -61,8 +69,9 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
                     height={20}
                     width={20}
                 />
-            </span>
-        </li>
+            </div>
+            <p className="file-path">{file.path}</p>
+        </div>
     ));
 
     const remove = file => {
@@ -92,18 +101,16 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
                 }>
                 <input {...getInputProps()} />
                 <p>
-                    Drag &apos;n&apos; drop some files here, or click to select
-                    files
+                    {!acceptedFiles.length && t('fileDropzone.dropFilePlaceholder')}
+
+                    {acceptedFiles.length ? (
+                        <>
+                            <h5> {t('fileDropzone.uploadedResume')} </h5>
+                            {files}
+                        </>
+                    ) : null}
                 </p>
             </div>
-            {acceptedFiles.length ? (
-                <>
-                    <h5>Uploaded Resume</h5>
-                    <div className="alert alert-info" role="alert">
-                        <ul>{files}</ul>
-                    </div>
-                </>
-            ) : null}
         </div>
     );
 };

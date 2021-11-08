@@ -21,26 +21,21 @@ const CareerFormFormik = (props) => {
         email: Yup.string()
             .email(t('validation.requied', { name: 'Email' }))
             .required(t('validation.requied', { name: 'Email' })),
-        areaCode: Yup.number()
+        areaCode: Yup.string()
             .min(2, t('validation.min', { name: 'Area code', size: 2 }))
             .max(3, t('validation.max', { name: 'Area code', size: 3 }))
-            .required(t('validation.requied', { name: 'Area Code' }))
-
-            .typeError(t('validation.invalid', { name: 'Area code' })),
+            .required(t('validation.requied', { name: 'Area Code' })),
         phoneNumber: Yup.number()
             .min(10, t('validation.min', { name: 'Phone Number', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone Number', size: 10 }))
-            .required(t('validation.requied', { name: 'Phone Number' }))
-            .typeError(t('validation.invalid', { name: 'Phone Number' })),
-
+            .required(t('validation.requied', { name: 'Phone Number' })),
         whenStart: Yup.date()
             .required(t('validation.requied', { name: 'Start Date' }))
             .typeError(t('validation.invalid', { name: 'Start Date' })),
-
         resume: Yup.mixed()
         .required(t('validation.requied', { name: 'Resume' }))
-        .test("type", "Only the following formats are accepted: .docx, .pdf and .doc", (value) => {
-            return value && (
+        .test("type", t('validation.resumeFormat'), (value) => {
+            return value && value[0] && (
                 value[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
                 value[0].type === 'application/pdf' ||
                 value[0].type === "application/msword"
@@ -168,7 +163,7 @@ const CareerFormFormik = (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="form-group col-3">
+                                            <div className="form-group col-3 mb-0">
                                                 <Field
                                                     name="areaCode"
                                                     type="text"
@@ -186,13 +181,14 @@ const CareerFormFormik = (props) => {
                                                     className="invalid-feedback text-center"
                                                 />
                                             </div>
-                                            <div className="form-group col-1 text-center p-3">
+                                            <div className="form-group col-1 text-center p-3 mb-0">
                                                 -
                                             </div>
-                                            <div className="form-group col col-md-8">
+                                            <div className="form-group col col-md-8 mb-0">
                                                 <Field
                                                     name="phoneNumber"
-                                                    type="text"
+                                                    type="number"
+                                                    onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}
                                                     className={
                                                         'form-control' +
                                                         (errors.phoneNumber &&
@@ -281,7 +277,10 @@ const CareerFormFormik = (props) => {
                                             name="resume"
                                             errors={errors}
                                             touched={touched}
-                                            onFileUpload={(file) => {
+                                            onFileUpload={(file, type) => {
+                                                if (type) {
+                                                    touched.resume = true;
+                                                }
                                                 setFieldValue('resume', file);
                                             }}
                                         />

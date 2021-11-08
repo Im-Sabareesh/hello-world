@@ -1,21 +1,17 @@
 import React from 'react';
 import _ from 'lodash';
-import { useRouter } from 'next/router';
 import i18next from 'i18next';
-import { Container, Row, Col, Form } from 'react-bootstrap';
-import { axios } from '@libs';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import {
     // GoogleReCaptchaProvider,
     withGoogleReCaptcha,
-    GoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
 import images from '@components/images';
 import { CardSection, Button, HomeFormFormik, Paragraph, MyImage } from '@components';
 
 const InsightWithFormSection = (props) => {
     const t = i18next.t.bind(i18next),
-        router = useRouter(),
         insightsList = [
             {
                 title: 'Financial Inclusion, Advanced by Digital Currencies',
@@ -33,48 +29,6 @@ const InsightWithFormSection = (props) => {
                 image: '/assets/images/insight-img3.jpg',
             },
         ];
-    const [validated, setValidated] = React.useState(false);
-
-    const form = React.useRef();
-    const [firstName, setFirstName] = React.useState(false);
-    const [email, setEmail] = React.useState(false);
-    const [phoneNumber, setPhoneNumber] = React.useState(false);
-    const [helpText, setHelpText] = React.useState(false);
-
-    const handleSubmit = (data) => {
-        event.preventDefault();
-        event.stopPropagation();
-        const target = data.target;
-        let body = {};
-        _.map(target, (t) => (body[t.name] = t.value));
-
-        axios
-            .post('/sent-mail', body)
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => console.log(err));
-
-        setValidated(true);
-    };
-
-    const handleVerify = (value) => {
-        console.log(value);
-    };
-
-    const handleVerifyRecaptcha = async () => {
-        console.log(props);
-        const { executeRecaptcha } = props.googleReCaptchaProps;
-
-        if (!executeRecaptcha) {
-            console.log('Recaptcha has not been loaded');
-
-            return;
-        }
-
-        const token = await executeRecaptcha('homepage');
-        console.log('token -- > ', token);
-    };
 
     return (
         <section className="home-section-10 py-5">
