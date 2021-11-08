@@ -1302,3 +1302,7 @@ header .main-header {
 .is-invalid-border {
     border: 1px solid color('danger') !important;
 }
+
+.grecaptcha-badge {
+    z-index: 3;
+}
