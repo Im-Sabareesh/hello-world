@@ -87,7 +87,8 @@ const HomeFormFormik = (props) => {
                                         )}
                                         *
                                     </BootstrapForm.Label>
-                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} />
+                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} 
+                                        onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}/>
                                     <ErrorMessage name="phone" component="div" className="invalid-feedback" />
                                 </div>
                             </Row>

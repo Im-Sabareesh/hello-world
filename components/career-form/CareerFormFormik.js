@@ -21,25 +21,25 @@ const CareerFormFormik = (props) => {
         email: Yup.string()
             .email(t('validation.requied', { name: 'Email' }))
             .required(t('validation.requied', { name: 'Email' })),
-        areaCode: Yup.number()
+        areaCode: Yup.string()
             .min(2, t('validation.min', { name: 'Area code', size: 2 }))
-            .max(3, t('validation.max', { name: 'Area code', size: 3 }))
-            .required(t('validation.requied', { name: 'Area Code' }))
-
-            .typeError(t('validation.invalid', { name: 'Area code' })),
-        phoneNumber: Yup.number()
+            .max(5, t('validation.max', { name: 'Area code', size: 5 }))
+            .required(t('validation.requied', { name: 'Area Code' })),
+        phoneNumber: Yup.string()
             .min(10, t('validation.min', { name: 'Phone Number', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone Number', size: 10 }))
-            .required(t('validation.requied', { name: 'Phone Number' }))
-            .typeError(t('validation.invalid', { name: 'Phone Number' })),
-
-        whenStart: Yup.date()
-            .required(t('validation.requied', { name: 'Start Date' }))
-            .typeError(t('validation.invalid', { name: 'Start Date' })),
-
-        resume: Yup.mixed().required(
-            t('validation.requied', { name: 'Resume' })
-        ),
+            .required(t('validation.requied', { name: 'Phone Number' })),
+        whenStart: Yup.string()
+            .required(t('validation.requied', { name: 'Start' })),
+        resume: Yup.mixed()
+        .required(t('validation.requied', { name: 'Resume' }))
+        .test("type", t('validation.resumeFormat'), (value) => {
+            return value && value[0] && (
+                value[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+                value[0].type === 'application/pdf' ||
+                value[0].type === "application/msword"
+            );
+        }),
     });
     const initialValues = {
         firstName: '',
@@ -162,10 +162,11 @@ const CareerFormFormik = (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="form-group col-3">
+                                            <div className="form-group col-3 mb-0">
                                                 <Field
                                                     name="areaCode"
-                                                    type="text"
+                                                    type="number"
+                                                    onKeyDown={e => ['e', 'E'].includes(e.key) && e.preventDefault()}
                                                     className={
                                                         'form-control' +
                                                         (errors.areaCode &&
@@ -180,13 +181,14 @@ const CareerFormFormik = (props) => {
                                                     className="invalid-feedback text-center"
                                                 />
                                             </div>
-                                            <div className="form-group col-1 text-center p-3">
+                                            <div className="form-group col-1 text-center p-3 mb-0">
                                                 -
                                             </div>
-                                            <div className="form-group col col-md-8">
+                                            <div className="form-group col col-md-8 mb-0">
                                                 <Field
                                                     name="phoneNumber"
-                                                    type="text"
+                                                    type="number"
+                                                    onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}
                                                     className={
                                                         'form-control' +
                                                         (errors.phoneNumber &&
@@ -214,7 +216,7 @@ const CareerFormFormik = (props) => {
                                             name="position"
                                             type="text"
                                             className="form-control"
-                                            vlaue
+                                            value
                                         />
                                     </div>
                                 </div>
@@ -223,8 +225,18 @@ const CareerFormFormik = (props) => {
                                         <BootstrapForm.Label htmlFor="whenStart">
                                             {t('careerForm.whenStart')}
                                         </BootstrapForm.Label>
-
-                                        <InputMask
+                                        <Field
+                                            className={
+                                                'form-control' +
+                                                (errors.whenStart &&
+                                                touched.whenStart
+                                                    ? ' is-invalid'
+                                                    : '')
+                                            }
+                                            name="whenStart"
+                                            type="text"
+                                        />
+                                        {/* <InputMask
                                             className={
                                                 'form-control' +
                                                 (errors.whenStart &&
@@ -239,13 +251,7 @@ const CareerFormFormik = (props) => {
                                                     e.target.value
                                                 );
                                             }}
-                                            // onChange={(val) =>
-                                            //     // setFieldValue(
-                                            //     //     'whenStart',
-                                            //     //     value
-                                            //     // )
-                                            // }
-                                        />
+                                        /> */}
                                         <ErrorMessage
                                             name="whenStart"
                                             component="div"
@@ -273,7 +279,12 @@ const CareerFormFormik = (props) => {
                                         </BootstrapForm.Label>
                                         <StyledDropzone
                                             name="resume"
-                                            onFileUpload={(file) => {
+                                            errors={errors}
+                                            touched={touched}
+                                            onFileUpload={(file, type) => {
+                                                if (type) {
+                                                    touched.resume = true;
+                                                }
                                                 setFieldValue('resume', file);
                                             }}
                                         />
