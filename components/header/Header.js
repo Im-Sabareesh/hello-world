@@ -191,27 +191,30 @@ const Header = (props) => {
                                                 >
                                                     {_.map(
                                                         dropDownItems,
-                                                        (navItem, i) => (
-                                                            <NavDropdown.Item
-                                                                key={_.uniqueId()}
-                                                                className={
-                                                                    navItem.navPath ===
-                                                                    router.asPath
-                                                                        ? 'nav-active'
-                                                                        : ''
-                                                                }
-                                                            >
-                                                                <Link
-                                                                    href={
-                                                                        navItem.navPath
+                                                        (navItem, i) => {
+                                                            return (
+                                                                <NavDropdown.Item
+                                                                    key={_.uniqueId()}
+                                                                    className={
+                                                                        router.asPath.includes(
+                                                                            navItem.navPath
+                                                                        )
+                                                                            ? 'nav-active'
+                                                                            : ''
                                                                     }
                                                                 >
-                                                                    {
-                                                                        navItem.name
-                                                                    }
-                                                                </Link>
-                                                            </NavDropdown.Item>
-                                                        )
+                                                                    <Link
+                                                                        href={
+                                                                            navItem.navPath
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            navItem.name
+                                                                        }
+                                                                    </Link>
+                                                                </NavDropdown.Item>
+                                                            );
+                                                        }
                                                     )}
                                                 </NavDropdown>
                                                 <Link

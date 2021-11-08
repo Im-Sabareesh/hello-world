@@ -1,13 +1,13 @@
-import { axios } from '@libs';
+import { api } from '@libs';
 
 const careerAction = {
     fetchItems: 'FetchItems.CareerList',
+    selectedItem: 'Selected.Career',
     //
     //fetch career list action
     //
     careerList: () => (dispatch) => {
-        axios
-            .get('/api/v1/careers/fetch')
+        api.getCareerList()
             .then((response) => {
                 dispatch({
                     type: careerAction.fetchItems,
@@ -15,6 +15,9 @@ const careerAction = {
                 });
             })
             .catch((err) => console.log(err));
+    },
+    selectedCareer: (item) => (dispatch) => {
+        dispatch({ type: careerAction.selectedItem, payload: item });
     },
 };
 
