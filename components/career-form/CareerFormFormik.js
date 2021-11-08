@@ -166,7 +166,8 @@ const CareerFormFormik = (props) => {
                                             <div className="form-group col-3 mb-0">
                                                 <Field
                                                     name="areaCode"
-                                                    type="text"
+                                                    type="number"
+                                                    onKeyDown={e => ['e', 'E'].includes(e.key) && e.preventDefault()}
                                                     className={
                                                         'form-control' +
                                                         (errors.areaCode &&
