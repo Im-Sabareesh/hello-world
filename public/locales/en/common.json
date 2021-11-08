@@ -118,7 +118,12 @@
         "requied": "{{name}} is required field",
         "invalid": "{{name}} is invalid",
         "min": "{{name}} must be at least {{size}} characters",
-        "max": "{{name}} maximum characters is {{size}}"
+        "max": "{{name}} maximum characters is {{size}}",
+        "resumeFormat": "Only the following formats are accepted: .docx, .pdf and .doc"
+    },
+    "fileDropzone": {
+        "dropFilePlaceholder": "Drag 'n' drop some files here, or click to select files",
+        "uploadedResume": "Uploaded Resume"
     },
     "contactUsForm": {
         "yourName": "Your Name",
