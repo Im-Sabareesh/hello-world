@@ -11,7 +11,7 @@ export default function Home(props) {
         <div className="home-page">
             <Meta title={t('home.title')} desc="" />
             <GoogleReCaptchaProvider
-                reCaptchaKey="6Lctqf8cAAAAAOjPjg81IGT-gkd-MeQ1UfXpts2j"
+                reCaptchaKey="6LegjB4dAAAAAPgQIx4piIsiMMHVl_07C29RC76m"
                 scriptProps={{
                     async: false,
                     defer: false,

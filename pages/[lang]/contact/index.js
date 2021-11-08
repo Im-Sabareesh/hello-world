@@ -11,7 +11,7 @@ const ContactUs = (props) => {
         <div className="contactus-page">
             <Meta title={t('contactUs')} desc="" />
             <GoogleReCaptchaProvider
-                reCaptchaKey="6Lctqf8cAAAAAOjPjg81IGT-gkd-MeQ1UfXpts2j"
+                reCaptchaKey="6LegjB4dAAAAAPgQIx4piIsiMMHVl_07C29RC76m"
                 scriptProps={{
                     async: false,
                     defer: false,

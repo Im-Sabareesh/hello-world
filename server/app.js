@@ -8,6 +8,11 @@ require('dotenv').config();
 const api = require('./api');
 const dev = process.env.dev == 'true';
 const port = process.env.port;
+const {
+    errorLogger,
+    errorResponder,
+    invalidPathHandler,
+} = require('./middleware');
 
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -34,7 +39,10 @@ app.prepare().then(async () => {
     });
 
     server.post('/sent-mail', require('./sendMail'));
-
+    // middleware
+    server.use(errorLogger);
+    server.use(errorResponder);
+    server.use(invalidPathHandler);
     // server.use(handle);
     server.listen(port, (err) => {});
 });
