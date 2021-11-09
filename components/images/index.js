@@ -30,7 +30,7 @@ import twitterSVG from '@public/assets/icons/twitter.svg';
 import uTubeSVG from '@public/assets/icons/youtube.svg';
 import wpSVG from '@public/assets/icons/wordpress.svg';
 import purpleArrow from '@public/assets/icons/purple-arrow.svg';
-import closeIcon from '@public/assets/icons/close-icon.svg'
+import closeIcon from '@public/assets/icons/close-icon.svg';
 
 const homeSecTopImg = '/assets/images/home-section1-img.png';
 const deCenFin = '/assets/icons/service-icon1.png';
@@ -130,5 +130,5 @@ export default {
     gdprIcon,
     nftIcon,
     obortechIcon,
-    closeIcon
+    closeIcon,
 };

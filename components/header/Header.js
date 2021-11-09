@@ -221,7 +221,7 @@ const Header = (props) => {
                                                     href={`/${props.language}/careers`}
                                                 >
                                                     <a className="nav-link">
-                                                        {t('header.careers')}
+                                                        {t('career')}
                                                     </a>
                                                 </Link>
                                             </Nav>

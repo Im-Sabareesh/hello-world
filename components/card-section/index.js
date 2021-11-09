@@ -1,12 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import i18next from 'i18next';
 
 import { Card } from 'react-bootstrap';
 import { Button, MyImage } from '@components';
 import images from '@components/images';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
+    const t = i18next.t.bind(i18next);
+
     const renderFullCard = () => {
         return (
             <Card className={`${footerClass && 'custom-card'} ${className}`}>
@@ -29,7 +32,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             onClick={(e) => e.preventDefault()}
                             className="link-primary d-flex"
                         >
-                            Learn More
+                            {t('learnMore')}
                             <div className="ps-1">
                                 <MyImage
                                     src={images.purpleArrow}
@@ -90,7 +93,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                             item.image && 'btn btn-primary w-100'
                         }`}
                     >
-                        Know More
+                        {t('knowMore')}
                     </Button>
                 </Card.Footer>
             </Card>

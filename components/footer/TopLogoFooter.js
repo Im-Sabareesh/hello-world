@@ -62,7 +62,7 @@ const TopLogoFooter = (props) => {
                 ],
             },
             {
-                title: t('footer.connectWithUs'),
+                title: t('connectWithUs'),
                 style: {
                     xl: 3,
                     lg: 3,

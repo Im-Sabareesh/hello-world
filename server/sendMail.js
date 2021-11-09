@@ -29,6 +29,7 @@ function sendMail(options, req, next) {
                     email: options.body.email,
                     phone: options.body.phone,
                     description: options.body.description,
+                    services: options.body.service,
                 },
             })
             .then(() => {

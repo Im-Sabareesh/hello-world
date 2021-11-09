@@ -56,7 +56,7 @@ const RadiusFooter = (props) => {
                 ],
             },
             {
-                title: t('footer.connectWithUs'),
+                title: t('connectWithUs'),
                 lgStyle: { span: 2, offset: 1 },
                 list: [
                     {

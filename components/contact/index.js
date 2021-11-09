@@ -1,12 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useRouter } from 'next/router';
+import i18next from 'i18next';
+
 import { ContactFormFormik, H1, MyImage, Paragraph } from '@components';
 import images from '@components/images';
-import { useRouter } from 'next/router';
 
 const ContactComponent = (props) => {
-    const router = useRouter();
+    const router = useRouter(),
+        t = i18next.t.bind(i18next);
     const branchList = [
         {
             location: 'India',
@@ -51,7 +54,7 @@ const ContactComponent = (props) => {
                             <Col>
                                 <div className="light-text-color text-center w-50 mx-auto">
                                     <H1 className="light-text-color">
-                                        Contact us
+                                        {t('contactUs')}
                                     </H1>
                                     <Paragraph>
                                         lets start something great togeather.
@@ -100,13 +103,13 @@ const ContactComponent = (props) => {
                                                 )
                                             }
                                         >
-                                            Read more
+                                            {t('readMore')}
                                         </a>
                                     </Paragraph>
                                 </div>
 
                                 <div className="contact-small-section contact-small-section-contact pt-4">
-                                    <h3 className="h3">Contact Us</h3>
+                                    <h3 className="h3">{t('contactUs')}</h3>
                                     <span className="d-flex">
                                         <Paragraph className="contact-icon">
                                             <MyImage
@@ -215,7 +218,7 @@ const ContactComponent = (props) => {
                                     you within 24 hours. We will keep your
                                     information confidential.
                                 </Paragraph>
-                                
+
                                 {/* Contact Us form in seperate component with formik */}
                                 <ContactFormFormik />
                             </Col>

@@ -34,7 +34,7 @@ const rejectStyle = {
     borderColor: '#ff1744',
 };
 
-const StyledDropzone = ({ onFileUpload , errors, touched}) => {
+const StyledDropzone = ({ onFileUpload, errors, touched }) => {
     const t = i18next.t.bind(i18next);
 
     const {
@@ -47,22 +47,30 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
     } = useDropzone({
         // maxFiles: 1,
         multiple: false,
-        onDrop: acceptedFiles => {
+        onDrop: (acceptedFiles) => {
             onFileUpload(acceptedFiles, 'touched');
-            if (!(acceptedFiles[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
-                acceptedFiles[0].type === 'application/pdf' ||
-                acceptedFiles[0].type === "application/msword")) {
-                    acceptedFiles.splice(acceptedFiles, 1);
+            if (
+                !(
+                    acceptedFiles[0].type ===
+                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+                    acceptedFiles[0].type === 'application/pdf' ||
+                    acceptedFiles[0].type === 'application/msword'
+                )
+            ) {
+                acceptedFiles.splice(acceptedFiles, 1);
             }
-        }
+        },
     });
 
     const files = acceptedFiles.map((file) => (
         <div key={file.path} className="uploaded-files">
-            <div className="cursor-pointer remove" onClick={(e) => {
-                e.stopPropagation();
-                remove(file);
-                }} >
+            <div
+                className="cursor-pointer remove"
+                onClick={(e) => {
+                    e.stopPropagation();
+                    remove(file);
+                }}
+            >
                 <MyImage
                     src={images.closeIcon}
                     alt=" "
@@ -74,8 +82,8 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
         </div>
     ));
 
-    const remove = file => {
-        acceptedFiles.splice(file, 1);        
+    const remove = (file) => {
+        acceptedFiles.splice(file, 1);
         onFileUpload(null);
     };
 
@@ -91,17 +99,17 @@ const StyledDropzone = ({ onFileUpload , errors, touched}) => {
 
     return (
         <div className="container">
-            <div {...getRootProps({ style })}  
+            <div
+                {...getRootProps({ style })}
                 className={
                     'mb-3' +
-                    (errors.resume &&
-                    touched.resume
-                        ? ' is-invalid'
-                        : '')
-                }>
+                    (errors.resume && touched.resume ? ' is-invalid' : '')
+                }
+            >
                 <input {...getInputProps()} />
                 <p>
-                    {!acceptedFiles.length && t('fileDropzone.dropFilePlaceholder')}
+                    {!acceptedFiles.length &&
+                        t('fileDropzone.dropFilePlaceholder')}
 
                     {acceptedFiles.length ? (
                         <>
