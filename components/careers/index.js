@@ -4,16 +4,17 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Button, H1, Paragraph } from '@components';
 import { careerSelector } from '@redux';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import moment from 'moment';
 import i18next from 'i18next';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-
+import { careerAction } from '@redux';
 const CareersComponent = (props) => {
     const jobList = useSelector(careerSelector.careerListSelector);
 
     const router = useRouter(),
         t = i18next.t.bind(i18next);
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -126,12 +127,12 @@ const CareersComponent = (props) => {
 
             {/*--------------- career-section2 start---------- */}
 
-            {/* <section className="career-section2  py-xl-5 py-4">
+            <section className="career-section2  py-xl-5 py-4">
                 <Container>
                     <h2 className="h2 mb-md-4 pb-md-3 mb-2 pb-2 dark-secondary-text-color text-center">
                         Job Listings
                     </h2>
-                    <Row>
+                    {/* <Row>
                         <Col sm={12}>
                             <div className="w-1k-block bg-light-primary mx-auto p-lg-4 p-3">
                                 <Form className="d-flex flex-wrap justify-content-between p-3">
@@ -177,9 +178,9 @@ const CareersComponent = (props) => {
                                 </Form>
                             </div>
                         </Col>
-                    </Row>
+                    </Row> */}
                 </Container>
-            </section> */}
+            </section>
 
             {/*--------------- career-section2 end ---------- */}
 
@@ -215,6 +216,11 @@ const CareersComponent = (props) => {
                                             <Button
                                                 btnVarient="gradient-btn"
                                                 onClick={() => {
+                                                    dispatch(
+                                                        careerAction.selectedCareer(
+                                                            item
+                                                        )
+                                                    );
                                                     router.push(
                                                         `/${props.language}/careers/${item.id}`
                                                     );

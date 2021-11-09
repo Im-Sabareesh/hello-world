@@ -1,10 +1,12 @@
 import React from 'react';
 import i18next from 'i18next';
+import _ from 'lodash';
 import { useDispatch } from 'react-redux';
 import { CareerDetailsComponent, Meta } from '@components';
 // import { api } from '@libs';
 import { getAllLanguageSlugs, getLanguage } from '@libs/lang';
 import { careerAction } from '@redux';
+import { api } from '@libs';
 
 const CareerDetails = () => {
     const t = i18next.t.bind(i18next);
@@ -22,10 +24,15 @@ const CareerDetails = () => {
 };
 
 export async function getStaticPaths() {
-    let paths = getAllLanguageSlugs();
-    if (paths && Array.isArray(paths))
-        paths.map((path) => (path.params.cid = '1'));
-    else paths = [{ params: { cid: '1' } }];
+    const careers = await api.getCareerList();
+    const cids = _.map(careers.careers, (carr) => carr.id);
+    let lang = getAllLanguageSlugs();
+    let paths = [];
+    _.map(lang, (l) =>
+        _.map(cids, (c) =>
+            paths.push({ params: { lang: l.params.lang, cid: `${c}` } })
+        )
+    );
     return {
         paths,
         fallback: false,

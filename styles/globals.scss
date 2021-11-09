@@ -1183,7 +1183,7 @@ header .main-header {
     }
 }
 .career-section3 {
-    padding: 90px 0 180px;
+    padding: 0 0 180px;
     .job-position {
         width: 50%;
         span {
@@ -1307,21 +1307,24 @@ header .main-header {
     border: 1px solid color('danger') !important;
 }
 
-//input type number field remove inside of dropdown
+.grecaptcha-badge {
+    z-index: 3;
+}
+// input type number field remove inside of dropdown
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
-//uploaded resume 
+// uploaded resume
 .uploaded-files {
     width: 150px;
     height: 130px;
