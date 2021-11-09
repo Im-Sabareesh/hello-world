@@ -23,32 +23,22 @@ const CareerDetails = () => {
     );
 };
 
-export async function getStaticPaths() {
-    const careers = await api.getCareerList();
-    const cids = _.map(careers.careers, (carr) => carr.id);
-    let lang = getAllLanguageSlugs();
-    let paths = [];
-    _.map(lang, (l) =>
-        _.map(cids, (c) =>
-            paths.push({ params: { lang: l.params.lang, cid: `${c}` } })
-        )
-    );
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params, locale }) {
-    const language = getLanguage(params.lang);
-
-    return {
-        props: {
-            // careeerDetails: await api.getCareerDetails(1),
-            language,
-        },
-    };
-}
+export const getServerSideProps = async ({ params, res }) => {
+    try {
+        const { lang, cid } = params;
+        return {
+            props: {
+                language: lang,
+                cid: cid,
+            },
+        };
+    } catch {
+        res.statusCode = 404;
+        return {
+            props: {},
+        };
+    }
+};
 
 export default CareerDetails;
 
