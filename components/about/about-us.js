@@ -363,7 +363,7 @@ const AboutUs = (props) => {
                                 }}
                                 className="min-size-btn btn btn-primary"
                             >
-                               {t('connectWithUs')}
+                                {t('connectWithUs')}
                             </Button>
                         </Col>
                     </Row>

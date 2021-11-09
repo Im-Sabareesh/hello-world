@@ -8,7 +8,13 @@ import {
     withGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
 import images from '@components/images';
-import { CardSection, Button, HomeFormFormik, Paragraph, MyImage } from '@components';
+import {
+    CardSection,
+    Button,
+    HomeFormFormik,
+    Paragraph,
+    MyImage,
+} from '@components';
 
 const InsightWithFormSection = (props) => {
     const t = i18next.t.bind(i18next),

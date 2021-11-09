@@ -87,7 +87,6 @@ export default function FeaturedSection(props) {
                                                 `${props.language}/${item.link}`
                                             );
                                         }
-                                            
                                     }}
                                 >
                                     <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">

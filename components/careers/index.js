@@ -13,7 +13,7 @@ const CareersComponent = (props) => {
     const jobList = useSelector(careerSelector.careerListSelector);
 
     const router = useRouter(),
-    t = i18next.t.bind(i18next);
+        t = i18next.t.bind(i18next);
 
     return (
         <>
@@ -31,7 +31,7 @@ const CareersComponent = (props) => {
                                 </Paragraph>
                                 <div className="button-outer mx-auto mt-md-3 pt-md-3">
                                     <Button btnVarient="red-btn">
-                                        {t("careers.currentOpening")}
+                                        {t('careers.currentOpening')}
                                     </Button>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@ const CareersComponent = (props) => {
                                                     );
                                                 }}
                                             >
-                                                {t("readMore")}
+                                                {t('readMore')}
                                             </Button>
                                         </div>
                                     </div>

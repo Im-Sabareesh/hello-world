@@ -9,7 +9,7 @@ import images from '@components/images';
 
 const ContactComponent = (props) => {
     const router = useRouter(),
-    t = i18next.t.bind(i18next);
+        t = i18next.t.bind(i18next);
     const branchList = [
         {
             location: 'India',
@@ -218,7 +218,7 @@ const ContactComponent = (props) => {
                                     you within 24 hours. We will keep your
                                     information confidential.
                                 </Paragraph>
-                                
+
                                 {/* Contact Us form in seperate component with formik */}
                                 <ContactFormFormik />
                             </Col>

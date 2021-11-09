@@ -14,8 +14,11 @@ const HomeFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
 
     const basicValidationSchema = Yup.object().shape({
-        firstName: Yup.string()
-            .required(t('validation.requied'), { name: 'First name' }),
+        firstname: Yup.string().required(
+            t('validation.requied', {
+                name: 'First name',
+            })
+        ),
         email: Yup.string()
             .required(t('validation.requied', { name: 'Email' }))
             .email(t('validation.invalid', { name: 'Email' })),
@@ -23,15 +26,17 @@ const HomeFormFormik = (props) => {
             .required(t('validation.requied', { name: 'Phone' }))
             .min(10, t('validation.min', { name: 'Phone', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone', size: 10 })),
-        accepTC: Yup.bool().oneOf([true], t('validation.acceptance'), {name: 'terms and conditions'})
+        accepTC: Yup.bool().oneOf([true], t('validation.acceptance'), {
+            name: 'terms and conditions',
+        }),
     });
     const initialValues = {
-        firstName: '',
+        firstname: '',
         email: '',
         phone: '',
         description: '',
         accepTC: false,
-    }
+    };
     const handleVerify = (token) => {
         console.log('token -- > ', token);
     };
@@ -42,62 +47,97 @@ const HomeFormFormik = (props) => {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
-                    onSubmit={(fields, {resetForm}) => {
+                    onSubmit={(fields, { resetForm }) => {
                         axios
                             .post('sent-mail', fields)
                             .then((response) => {
                                 toaster('Form Submitted .!', 'success');
-                                resetForm({ values: '' })
+                                resetForm({ values: '' });
                             })
                             .catch((err) => {
-                                console.log(err)
+                                console.log(err);
                             });
                     }}
                 >
                     {({ errors, status, touched, handleSubmit }) => (
-                        <Form onSubmit={(event) => {
-                            event.preventDefault();
-                            handleSubmit(event);
-                        }}>
+                        <Form
+                            onSubmit={(event) => {
+                                event.preventDefault();
+                                handleSubmit(event);
+                            }}
+                        >
                             <Row className="">
                                 <div className="form-group col-md-12">
-                                    <BootstrapForm.Label htmlFor="firstName">
-                                        {t(
-                                            'home.firstName'
-                                        )}
-                                        *
+                                    <BootstrapForm.Label htmlFor="firstname">
+                                        {t('home.firstName')}*
                                     </BootstrapForm.Label>
-                                    <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="firstName" component="div" className="invalid-feedback" />
+                                    <Field
+                                        name="firstname"
+                                        type="text"
+                                        className={
+                                            'form-control' +
+                                            (errors.firstname &&
+                                            touched.firstname
+                                                ? ' is-invalid'
+                                                : '')
+                                        }
+                                    />
+                                    <ErrorMessage
+                                        name="firstname"
+                                        component="div"
+                                        className="invalid-feedback"
+                                    />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <BootstrapForm.Label htmlFor="email">
-                                        {t(
-                                            'home.email'
-                                        )}
-                                        *
+                                        {t('home.email')}*
                                     </BootstrapForm.Label>
-                                    <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
-                                    <ErrorMessage name="email" component="div" className="invalid-feedback" />
+                                    <Field
+                                        name="email"
+                                        type="text"
+                                        className={
+                                            'form-control' +
+                                            (errors.email && touched.email
+                                                ? ' is-invalid'
+                                                : '')
+                                        }
+                                    />
+                                    <ErrorMessage
+                                        name="email"
+                                        component="div"
+                                        className="invalid-feedback"
+                                    />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <BootstrapForm.Label htmlFor="phone">
-                                        {t(
-                                            'home.phone'
-                                        )}
-                                        *
+                                        {t('home.phone')}*
                                     </BootstrapForm.Label>
-                                    <Field name="phone" type="number" className={'form-control' + (errors.phone && touched.phone ? ' is-invalid' : '')} 
-                                        onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}/>
-                                    <ErrorMessage name="phone" component="div" className="invalid-feedback" />
+                                    <Field
+                                        name="phone"
+                                        type="number"
+                                        className={
+                                            'form-control' +
+                                            (errors.phone && touched.phone
+                                                ? ' is-invalid'
+                                                : '')
+                                        }
+                                        onKeyDown={(e) =>
+                                            ['e', 'E', '+', '-'].includes(
+                                                e.key
+                                            ) && e.preventDefault()
+                                        }
+                                    />
+                                    <ErrorMessage
+                                        name="phone"
+                                        component="div"
+                                        className="invalid-feedback"
+                                    />
                                 </div>
                             </Row>
                             <Row className="">
                                 <div className="form-group col-md-12">
                                     <BootstrapForm.Label>
-                                        {t(
-                                            'home.weHelpYou'
-                                        )}
+                                        {t('home.weHelpYou')}
                                     </BootstrapForm.Label>
                                     <Field
                                         as="textarea"
@@ -109,14 +149,33 @@ const HomeFormFormik = (props) => {
                             </Row>
                             <Row className="mt-3">
                                 <div className="form-group col-md-7 form-check">
-                                    <Field type="checkbox" name="accepTC" id="accepTC" className={'form-check-input ' + (errors.accepTC && touched.accepTC ? ' is-invalid' : '')} />
-                                    <BootstrapForm.Label htmlFor="accepTC" className={"form-check-label" + (errors.accepTC && touched.accepTC ? ' check-invalid' : '')}>
-                                        *
-                                        {t(
-                                            'home.agreeTrems'
-                                        )}
+                                    <Field
+                                        type="checkbox"
+                                        name="accepTC"
+                                        id="accepTC"
+                                        className={
+                                            'form-check-input ' +
+                                            (errors.accepTC && touched.accepTC
+                                                ? ' is-invalid'
+                                                : '')
+                                        }
+                                    />
+                                    <BootstrapForm.Label
+                                        htmlFor="accepTC"
+                                        className={
+                                            'form-check-label' +
+                                            (errors.accepTC && touched.accepTC
+                                                ? ' check-invalid'
+                                                : '')
+                                        }
+                                    >
+                                        *{t('home.agreeTrems')}
                                     </BootstrapForm.Label>
-                                    <ErrorMessage name="accepTC" component="div" className="invalid-feedback" />
+                                    <ErrorMessage
+                                        name="accepTC"
+                                        component="div"
+                                        className="invalid-feedback"
+                                    />
                                 </div>
                                 <div className="form-group col-md-5">
                                     <Button
@@ -128,11 +187,7 @@ const HomeFormFormik = (props) => {
                                     </Button>
                                 </div>
                                 <div>
-                                    <GoogleReCaptcha
-                                        onVerify={
-                                            handleVerify
-                                        }
-                                    />
+                                    <GoogleReCaptcha onVerify={handleVerify} />
                                 </div>
                             </Row>
                         </Form>
@@ -140,7 +195,7 @@ const HomeFormFormik = (props) => {
                 </Formik>
             </div>
         </>
-    )
+    );
 };
 
 export default HomeFormFormik;

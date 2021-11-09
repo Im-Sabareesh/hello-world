@@ -20,7 +20,7 @@ import images from '@components/images';
 const NFTSComponent = (props) => {
     const nftServList = useSelector(serviceSelector.servicesListSelector);
     const router = useRouter(),
-    t = i18next.t.bind(i18next);
+        t = i18next.t.bind(i18next);
 
     return (
         <>

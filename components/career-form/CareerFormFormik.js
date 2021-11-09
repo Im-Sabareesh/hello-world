@@ -29,17 +29,21 @@ const CareerFormFormik = (props) => {
             .min(10, t('validation.min', { name: 'Phone Number', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone Number', size: 10 }))
             .required(t('validation.requied', { name: 'Phone Number' })),
-        whenStart: Yup.string()
-            .required(t('validation.requied', { name: 'Start' })),
+        whenStart: Yup.string().required(
+            t('validation.requied', { name: 'Start' })
+        ),
         resume: Yup.mixed()
-        .required(t('validation.requied', { name: 'Resume' }))
-        .test("type", t('validation.resumeFormat'), (value) => {
-            return value && value[0] && (
-                value[0].type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
-                value[0].type === 'application/pdf' ||
-                value[0].type === "application/msword"
-            );
-        }),
+            .required(t('validation.requied', { name: 'Resume' }))
+            .test('type', t('validation.resumeFormat'), (value) => {
+                return (
+                    value &&
+                    value[0] &&
+                    (value[0].type ===
+                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+                        value[0].type === 'application/pdf' ||
+                        value[0].type === 'application/msword')
+                );
+            }),
     });
     const initialValues = {
         firstName: '',
@@ -166,7 +170,11 @@ const CareerFormFormik = (props) => {
                                                 <Field
                                                     name="areaCode"
                                                     type="number"
-                                                    onKeyDown={e => ['e', 'E'].includes(e.key) && e.preventDefault()}
+                                                    onKeyDown={(e) =>
+                                                        ['e', 'E'].includes(
+                                                            e.key
+                                                        ) && e.preventDefault()
+                                                    }
                                                     className={
                                                         'form-control' +
                                                         (errors.areaCode &&
@@ -188,7 +196,15 @@ const CareerFormFormik = (props) => {
                                                 <Field
                                                     name="phoneNumber"
                                                     type="number"
-                                                    onKeyDown={e => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()}
+                                                    onKeyDown={(e) =>
+                                                        [
+                                                            'e',
+                                                            'E',
+                                                            '+',
+                                                            '-',
+                                                        ].includes(e.key) &&
+                                                        e.preventDefault()
+                                                    }
                                                     className={
                                                         'form-control' +
                                                         (errors.phoneNumber &&
