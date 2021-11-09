@@ -119,7 +119,7 @@
         "submit": "Submit"
     },
     "validation": {
-        "requied": "{{name}} is required field",
+        "required": "{{name}} is required field",
         "invalid": "{{name}} is invalid",
         "min": "{{name}} must be at least {{size}} characters",
         "max": "{{name}} maximum characters is {{size}}",

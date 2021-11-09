@@ -15,20 +15,20 @@ const ContactFormFormik = (props) => {
 
     const basicValidationSchema = Yup.object().shape({
         firstname: Yup.string().required(
-            t('validation.requied', { name: 'Name' })
+            t('validation.required', { name: 'Name' })
         ),
         email: Yup.string()
-            .required(t('validation.requied', { name: 'Email' }))
+            .required(t('validation.required', { name: 'Email' }))
             .email(t('validation.invalid', { name: 'Email' })),
         phone: Yup.string()
-            .required(t('validation.requied', { name: 'Phone' }))
+            .required(t('validation.required', { name: 'Phone' }))
             .min(10, t('validation.min', { name: 'Phone', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone', size: 10 })),
         service: Yup.string().required(
-            t('validation.requied', { name: 'Service' })
+            t('validation.required', { name: 'Service' })
         ),
         description: Yup.string().required(
-            t('validation.requied', { name: 'Message' })
+            t('validation.required', { name: 'Message' })
         ),
     });
     const initialValues = {
