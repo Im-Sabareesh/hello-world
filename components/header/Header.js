@@ -4,8 +4,9 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import i18next from 'i18next';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import $ from 'jquery';
 
+import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Button, MyImage } from '@components';
 import images from '@components/images';
 
@@ -56,6 +57,14 @@ const Header = (props) => {
         } else {
             // If clicked outside menu, close the navbar.
             setIsToggled(false);
+        }
+    };
+
+    const closeMenu = () => {
+        if (typeof window !== 'undefined' && window.innerWidth <= 990) {
+            $('.btn-navbar').click(); //bootstrap 2.x
+            $('.navbar-toggle').click(); //bootstrap 3.x by Richard
+            $('.navbar-toggler').click(); //bootstrap 4.x
         }
     };
 
@@ -154,37 +163,6 @@ const Header = (props) => {
                                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                         <Navbar.Collapse id="basic-navbar-nav">
                                             <Nav className="me-auto">
-                                                <Link
-                                                    href={`/${props.language}/about`}
-                                                >
-                                                    <a className="nav-link">
-                                                        {t('header.aboutUS')}
-                                                    </a>
-                                                </Link>
-                                                {/* <Link href='/about'> */}
-                                                <a
-                                                    href="#"
-                                                    onClick={(e) =>
-                                                        e.preventDefault()
-                                                    }
-                                                    className="nav-link"
-                                                >
-                                                    {t(
-                                                        'header.blockchainSolution'
-                                                    )}
-                                                </a>
-                                                {/* </Link> */}
-                                                {/* <Link href='/about'> */}
-                                                <a
-                                                    href="#"
-                                                    onClick={(e) =>
-                                                        e.preventDefault()
-                                                    }
-                                                    className="nav-link"
-                                                >
-                                                    {t('header.caseStudies')}
-                                                </a>
-                                                {/* </Link> */}
                                                 <NavDropdown
                                                     title="Services"
                                                     id="basic-nav-dropdown"
@@ -217,11 +195,58 @@ const Header = (props) => {
                                                         }
                                                     )}
                                                 </NavDropdown>
+                                                {/* <Link href='/about'> */}
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        closeMenu();
+                                                    }}
+                                                    className="nav-link"
+                                                >
+                                                    {t(
+                                                        'header.blockchainSolution'
+                                                    )}
+                                                </a>
+                                                {/* </Link> */}
+                                                {/* <Link href='/about'> */}
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        closeMenu();
+                                                    }}
+                                                    className="nav-link"
+                                                >
+                                                    {t('header.caseStudies')}
+                                                </a>
+                                                {/* </Link> */}
+
                                                 <Link
                                                     href={`/${props.language}/careers`}
                                                 >
-                                                    <a className="nav-link">
+                                                    <a
+                                                        className="nav-link"
+                                                        onClick={(e) => {
+                                                            // e.preventDefault();
+                                                            closeMenu();
+                                                        }}
+                                                    >
                                                         {t('career')}
+                                                    </a>
+                                                </Link>
+
+                                                <Link
+                                                    href={`/${props.language}/about`}
+                                                >
+                                                    <a
+                                                        className="nav-link"
+                                                        onClick={(e) => {
+                                                            // e.preventDefault();
+                                                            closeMenu();
+                                                        }}
+                                                    >
+                                                        {t('header.aboutUS')}
                                                     </a>
                                                 </Link>
                                             </Nav>

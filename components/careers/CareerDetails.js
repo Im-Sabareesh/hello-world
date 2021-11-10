@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
 import {
@@ -13,11 +13,12 @@ import {
     Paragraph,
 } from '@components';
 import images from '@components/images';
-import { careerSelector } from '@redux';
+import { careerSelector, careerAction } from '@redux';
 import StaticComponent from '../StaticComponent';
 
 const CareerDetailsComponent = () => {
     const router = useRouter();
+    const dispatch = useDispatch();
     const {
         query: { cid },
     } = router;
@@ -25,9 +26,11 @@ const CareerDetailsComponent = () => {
         useSelector((state) =>
             careerSelector.careerDetailsSelector(state, cid)
         ) || {};
-
-    const [show, setShow] = React.useState(false);
-    const handleClose = () => setShow(false);
+    const show =
+        useSelector((state) => careerSelector.careerModalStatus(state)) ||
+        false;
+    const handleClose = () =>
+        dispatch(careerAction.applynowStatusChange(false));
 
     return (
         <>
@@ -69,7 +72,13 @@ const CareerDetailsComponent = () => {
                                 <Button
                                     btnVarient="red-btn"
                                     className="mb-lg-5 mb-md-4 mb-3"
-                                    onClick={() => setShow(true)}
+                                    onClick={() => {
+                                        dispatch(
+                                            careerAction.applynowStatusChange(
+                                                true
+                                            )
+                                        );
+                                    }}
                                 >
                                     Apply Now
                                 </Button>
@@ -117,7 +126,9 @@ const CareerDetailsComponent = () => {
                     <Button
                         btnVarient="red-btn"
                         className=" career-apply-btn"
-                        onClick={() => setShow(true)}
+                        onClick={() =>
+                            dispatch(careerAction.applynowStatusChange(true))
+                        }
                     >
                         Apply Now
                     </Button>
