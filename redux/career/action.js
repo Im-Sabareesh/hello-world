@@ -35,7 +35,6 @@ const careerAction = {
     // Apply for a career
     //
     applynow: (data) => (dispatch) => {
-        console.log('data-- > ', data);
         const req = {
             ...data,
             file: data.resume,
