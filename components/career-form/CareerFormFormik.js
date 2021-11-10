@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import i18next from 'i18next';
-import InputMask from 'react-input-mask';
 
 import { Button, StyledDropzone } from '@components';
+import { careerAction } from '@redux';
+import { useDispatch } from 'react-redux';
 
 const CareerFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
+    const dispatch = useDispatch();
 
     const basicValidationSchema = Yup.object().shape({
         firstName: Yup.string().required(
@@ -65,7 +67,7 @@ const CareerFormFormik = (props) => {
                     validationSchema={basicValidationSchema}
                     enableReinitialize
                     onSubmit={(fields) => {
-                        console.log(fields);
+                        dispatch(careerAction.applynow(fields));
                     }}
                 >
                     {({
@@ -75,7 +77,6 @@ const CareerFormFormik = (props) => {
                         setFieldValue,
                         handleSubmit,
                     }) => {
-                        console.log(values);
                         return (
                             <Form onSubmit={handleSubmit}>
                                 <div className="row">

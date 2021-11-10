@@ -4,8 +4,11 @@ const next = require('next');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();
+const path = require('path');
 const api = require('./api');
+const basicAuth = require('express-basic-auth');
+require('dotenv').config();
+
 const dev = process.env.dev == 'true';
 const port = process.env.port;
 const {
@@ -16,6 +19,12 @@ const {
 
 const app = next({ dev });
 const handle = app.getRequestHandler();
+
+var customAuthorizerAuth = basicAuth({
+    challenge: true,
+    realm: 'test',
+    users: { [process.env.CROWLING_USERNAME]: process.env.CROWLING_PASS },
+});
 
 app.prepare().then(async () => {
     const server = express();
@@ -34,15 +43,16 @@ app.prepare().then(async () => {
 
     api(server);
 
-    server.get('/*', (req, res) => {
+    server.get('/*', customAuthorizerAuth, (req, res) => {
         handle(req, res);
     });
-
+    server.get('/robots.txt', (req, res) => {
+        res.sendFile(path.join(__dirname, '../public', 'robots.txt'));
+    });
     server.post('/sent-mail', require('./sendMail'));
     // middleware
     server.use(errorLogger);
     server.use(errorResponder);
     server.use(invalidPathHandler);
-    // server.use(handle);
     server.listen(port, (err) => {});
 });

@@ -8,6 +8,7 @@ import { Button, MyImage } from '@components';
 import images from '@components/images';
 
 const CardSection = ({ className, fullCard, item, footerClass }) => {
+    const [state, setState] = React.useState(false);
     const t = i18next.t.bind(i18next);
 
     const renderFullCard = () => {
@@ -84,7 +85,9 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>
                     </Card.Title>
-                    <Card.Text>{item.describe}</Card.Text>
+                    <Card.Text className={`${state ? 'show-more' : ''} `}>
+                        {item.describe}
+                    </Card.Text>
                 </Card.Body>
                 <Card.Footer className="">
                     <Button
@@ -92,8 +95,9 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                         className={`min-size-btn ${
                             item.image && 'btn btn-primary w-100'
                         }`}
+                        onClick={() => setState(!state)}
                     >
-                        {t('knowMore')}
+                        {state ? t('knowLess') : t('knowMore')}
                     </Button>
                 </Card.Footer>
             </Card>

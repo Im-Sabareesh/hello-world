@@ -1351,3 +1351,11 @@ input[type=number] {
         text-overflow: ellipsis;
     }
 }
+
+p.card-text.show-more {
+    display: unset;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: unset;
+    height: unset;
+}

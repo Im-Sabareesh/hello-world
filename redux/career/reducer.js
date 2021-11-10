@@ -1,6 +1,13 @@
 import actions from './action';
 
-const initState = { list: [], selectedItem: {} };
+const initState = { list: [], selectedItem: {}, showApplyNow: false };
+
+const changeApplyNow = (state, payload) => {
+    return {
+        ...state,
+        showApplyNow: payload,
+    };
+};
 
 const fetchList = (state, payload) => {
     return {
@@ -23,6 +30,9 @@ export default function reducer(state = initState, action) {
         }
         case actions.selectedItem: {
             return selectItem(state, action.payload);
+        }
+        case actions.applyNowModalStatus: {
+            return changeApplyNow(state, action.payload);
         }
         default: {
             return state;
