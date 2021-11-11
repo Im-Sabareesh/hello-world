@@ -46,9 +46,9 @@ app.prepare().then(async () => {
     server.get('/*', customAuthorizerAuth, (req, res) => {
         handle(req, res);
     });
-    server.get('/robots.txt', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public', 'robots.txt'));
-    });
+    // server.get('/robots.txt', (req, res) => {
+    //     res.sendFile(path.join(__dirname, '../public', 'robots.txt'));
+    // });
     server.post('/sent-mail', require('./sendMail'));
     // middleware
     server.use(errorLogger);
