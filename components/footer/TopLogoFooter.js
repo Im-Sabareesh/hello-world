@@ -8,6 +8,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 import images from '@components/images';
 import { Paragraph, MyImage } from '@components';
 
+const socialMediaIcons = [
+    images.fbSVG,
+    images.instaSVG,
+    images.twitterSVG,
+    images.uTubeSVG,
+    images.wpSVG,
+    images.linkedInSVG,
+];
+
 const TopLogoFooter = (props) => {
     const t = i18next.t.bind(i18next),
         footerLinkList = [
@@ -115,66 +124,15 @@ const TopLogoFooter = (props) => {
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.fbSVG}
-                                    alt=" "
-                                    width={11}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.instaSVG}
-                                    alt=" "
-                                    width={20}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.twitterSVG}
-                                    alt=" "
-                                    width={25}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.uTubeSVG}
-                                    alt=" "
-                                    width={27}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.wpSVG}
-                                    alt=" "
-                                    width={19}
-                                    height={19}
-                                />
-                            </a>
+                            {_.map(socialMediaIcons, (icon) => (
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="mx-md-3 mx-1"
+                                >
+                                    <MyImage {...icon} height={18} width={21} />
+                                </a>
+                            ))}
                         </div>
                     </Col>
 
