@@ -272,6 +272,15 @@ button:not(.collapsed) {
 .white-logo {
     filter: brightness(0) invert(1);
 }
+
+.search-input {
+    height: 49px !important;
+    padding-left: 16px !important;
+    padding-right: 18px !important;
+}
+.search-white-input {
+    background: white !important;
+}
 // ------------------header white logo------------------
 // ------------------home page header------------//
 
@@ -290,7 +299,6 @@ button:not(.collapsed) {
     // letter-spacing: 0.346154px;
     color: color('light-primary');
 
-    .topheader-text {}
 
     .social-links {
         img {
@@ -1106,7 +1114,7 @@ button:not(.collapsed) {
 header .main-header {
     position: relative;
 }
-.fixed-top.sticky .main-menu .nav-link {
+.fixed-top .sticky .main-menu .nav-link {
     color: #121212 !important;
 }
 .about-section5 {

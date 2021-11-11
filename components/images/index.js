@@ -29,6 +29,7 @@ import instaSVG from '@public/assets/icons/instagram.svg';
 import twitterSVG from '@public/assets/icons/twitter.svg';
 import uTubeSVG from '@public/assets/icons/youtube.svg';
 import wpSVG from '@public/assets/icons/wordpress.svg';
+import linkedInSVG from '@public/assets/icons/linkedin.svg';
 import purpleArrow from '@public/assets/icons/purple-arrow.svg';
 import closeIcon from '@public/assets/icons/close-icon.svg';
 
@@ -123,6 +124,7 @@ export default {
     twitterSVG,
     uTubeSVG,
     wpSVG,
+    linkedInSVG,
     upArrow,
     purpleArrow,
     hyperledgericon,

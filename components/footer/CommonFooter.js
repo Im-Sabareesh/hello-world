@@ -8,6 +8,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
+const socialMediaIcons = [
+    images.fbSVG,
+    images.instaSVG,
+    images.twitterSVG,
+    images.uTubeSVG,
+    images.wpSVG,
+    images.linkedInSVG,
+];
 const RadiusFooter = (props) => {
     const t = i18next.t.bind(i18next),
         footerLinkList = [
@@ -83,6 +91,7 @@ const RadiusFooter = (props) => {
         <footer className={`${props.radius && 'home-footer'} footer-section`}>
             <Container>
                 <Row className="py-5 pb-1">
+                    {/* align center added for home page  */}
                     <Col
                         xs={6}
                         sm={6}
@@ -91,7 +100,7 @@ const RadiusFooter = (props) => {
                         className={`${
                             !props.radius
                                 ? 'text-md-center'
-                                : 'home-footer-logo'
+                                : 'home-footer-logo text-md-center'
                         } mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
                     >
                         <Link href={`/${props.language}/`}>
@@ -111,66 +120,15 @@ const RadiusFooter = (props) => {
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.fbSVG}
-                                    alt="..."
-                                    width={11}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.instaSVG}
-                                    alt="..."
-                                    width={20}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.twitterSVG}
-                                    alt="..."
-                                    width={25}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.uTubeSVG}
-                                    alt="..."
-                                    width={27}
-                                    height={19}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="mx-md-3 mx-1"
-                            >
-                                <MyImage
-                                    src={images.wpSVG}
-                                    alt="..."
-                                    width={19}
-                                    height={19}
-                                />
-                            </a>
+                            {_.map(socialMediaIcons, (icon) => (
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="mx-md-3 mx-1"
+                                >
+                                    <MyImage {...icon} height={18} width={21} />
+                                </a>
+                            ))}
                         </div>
                     </Col>
 
