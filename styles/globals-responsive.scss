@@ -46,8 +46,8 @@
     }
 
     .hero-banner-container {
-        background-position-x: right 50%;
-        background-position-y: top 50px;
+        background-position-x:  50%;
+        background-position-y:  50px;
         padding-top: 175px;
         padding-bottom: 40px;
 
@@ -252,6 +252,14 @@
     .office-banner {
         margin-left: 0 !important;
     }
+
+    .career-hero-banner
+    {
+        .col
+        {
+            padding:0px 65px;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -299,8 +307,8 @@
     }
 
     .hero-banner-container {
-        background-position-x: right 50%;
-        background-position-y: top 50px;
+        background-position-x:  50%;
+        background-position-y:  50px;
         padding-top: 175px;
         padding-bottom: 40px;
 
@@ -472,6 +480,9 @@
         margin-left: 0 !important;
     }
 
+
+   
+
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -516,8 +527,8 @@
     }
 
     .hero-banner-container {
-        background-position-x: right 40%;
-        background-position-y: top -40px;
+        background-position-x:  40%;
+        background-position-y:  -40px;
         padding-top: 200px;
 
         .featured-box-container {
@@ -649,8 +660,8 @@
     }
 
     .hero-banner-container {
-        background-position-x: right 40%;
-        background-position-y: top -40px;
+        background-position-x:  40%;
+        background-position-y:  -40px;
     }
 
     .main-header {
@@ -742,8 +753,8 @@
     }
 
     .hero-banner-container {
-        background-position-x: right 50%;
-        background-position-y: top 40px;
+        background-position-x:  50%;
+        background-position-y:  40px;
     }
 
     .cta-banner1 {
@@ -756,6 +767,16 @@
             padding: 0;
         }
     }
+
+    .career-hero-banner
+    {
+        .col
+        {
+            padding:0px 50px;
+        }
+    }
+
+
 }
 
 // About us and nft changes
@@ -896,7 +917,7 @@
                 }
             }
         }
-        &.sticky {
+        .sticky {
             .inner-page-header {
                 .navbar-light {
                     .navbar-toggler-icon {
@@ -956,7 +977,7 @@
     .career-hero-banner {
         min-height: 290px;
         margin: 95px 0 30px;
-        padding-top: 30px;
+        padding-top: 0px;
         background-size: 100%;
         background-position: bottom;
         .w-50 {
@@ -1189,7 +1210,7 @@
                 }
             }
         }
-        &.sticky {
+        .sticky {
             .inner-page-header {
                 .navbar-light {
                     .navbar-toggler-icon {
@@ -1451,7 +1472,7 @@
                 }
             }
         }
-        &.sticky {
+        .sticky {
             .inner-page-header {
                 .navbar-light {
                     .navbar-toggler-icon {
@@ -1494,6 +1515,7 @@
             }
         }
     }
+    
     .career-section1 {
         .h1 {
             font-size: 32px !important;
@@ -1505,6 +1527,14 @@
         min-height: 420px;
         margin: 115px 0 30px;
         padding-top: 50px;
+
+        .style_red-btn__2MgIy
+        {
+
+            padding-left:25px !important;
+            padding-right:25px !important;
+        }
+
     }
     .career-section3 {
         padding: 20px 0 40px;
@@ -1600,8 +1630,50 @@
     .about-section1 .about-section1-img {
         padding: 0 2% !important;
     }
+
+    
+
+
 }
 @include media-breakpoint-between(lg, xl) {
+
+
+       //----------------- home page---------------
+
+
+       .custom-card > div
+       {
+           &:first-child
+           {
+               height:160px !important;
+           }
+
+
+       }
+
+
+       .header-top .social-links li {
+        display: inline;
+        padding-left: 16px;
+    }
+
+    .main-header .main-menu .nav-link {
+        padding: 15px 12px;
+    }
+
+    .featured-box-container-new {
+ 
+        padding-right: 118px;
+    }
+
+
+    .footer-section .mx-md-3 {
+        margin-right: .75rem !important;
+        margin-left: .75rem !important;
+    }
+
+
+
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
@@ -1756,8 +1828,42 @@
     .about-section1 .about-section1-img {
         padding: 0 2% !important;
     }
+
+
+    .career-hero-banner {
+        min-height: 420px;
+        margin: 115px 0 30px;
+        padding-top: 50px;
+
+        .style_red-btn__2MgIy
+        {
+
+            padding-left:25px !important;
+            padding-right:25px !important;
+        }
+
+    }
+
 }
 @include media-breakpoint-between(xl, xxl) {
+
+
+
+    //----------------- home page---------------
+
+
+    .custom-card > div
+    {
+        &:first-child
+        {
+            height:189px !important;
+        }
+
+        
+
+    }
+
+
     // ----------font size---------
     .nft-service-page .h1,
     .about-us-page .h1 {
