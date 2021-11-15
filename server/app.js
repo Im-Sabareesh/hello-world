@@ -43,7 +43,8 @@ app.prepare().then(async () => {
 
     api(server);
 
-    server.get('/*', customAuthorizerAuth, (req, res) => {
+    // customAuthorizerAuth
+    server.get('/*', (req, res) => {
         handle(req, res);
     });
     // server.get('/robots.txt', (req, res) => {
