@@ -19,15 +19,7 @@ const HeaderContent = (props) => {
     const nodes = React.useRef();
     const router = useRouter(),
         t = i18next.t.bind(i18next),
-        whiteLayout = ['about', 'contact'],
-        socialMedisIcons = [
-            images.fbSVG,
-            images.instaSVG,
-            images.twitterSVG,
-            images.uTubeSVG,
-            images.wpSVG,
-            images.linkedInSVG,
-        ];
+        whiteLayout = ['about', 'contact'];
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
             setState('sticky');
