@@ -46,14 +46,14 @@ const HomeComponent = (props) => {
 
             {/*--------------- Home section4 cta start---------- */}
 
-            <ImgPanelSection
+            {/* <ImgPanelSection
                 secClass="home-section-4 py-5"
                 className="cta-banner cta-banner1 d-flex align-items-center"
                 title={t('home.readyGetStarted')}
                 link={`${props.language}/contact`}
                 btnName={t('getQuote')}
                 image="/assets/icons/Arrow.svg"
-            />
+            /> */}
 
             {/*--------------- Home section4 cta end---------- */}
 
@@ -65,25 +65,25 @@ const HomeComponent = (props) => {
 
             {/*--------------- Home section6 start---------- */}
 
-            <QuickStatsSection />
+            {/* <QuickStatsSection /> */}
 
             {/*--------------- Home section6 end---------- */}
 
             {/*--------------- Home section7 start---------- */}
 
-            <WorkWithSection language={props.language} />
+            {/* <WorkWithSection language={props.language} /> */}
 
             {/*--------------- Home section7 end---------- */}
 
             {/*--------------- Home section8 start---------- */}
 
-            <ExploreProjectSection />
+            {/* <ExploreProjectSection /> */}
 
             {/*--------------- Home section8 end---------- */}
 
             {/*--------------- Home section9 testimonial start---------- */}
 
-            <CilentTestimonialSection />
+            {/* <CilentTestimonialSection /> */}
 
             {/*--------------- Home section9 testimonial start---------- */}
 

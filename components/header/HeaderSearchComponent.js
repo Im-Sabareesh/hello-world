@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import _ from 'lodash';
 
-const HeaderSearchComponent = ({ state }) => {
+const HeaderSearchComponent = ({ state , language}) => {
     const [search, setSearch] = React.useState(false);
     const router = useRouter(),
         whiteLayout = ['about', 'contact'],
@@ -32,10 +32,10 @@ const HeaderSearchComponent = ({ state }) => {
                     <Button
                         btnVarient="red-btn"
                         onClick={() => {
-                            router.push(`/${props.language}/contact`);
+                            router.push(`/${language}/contact`);
                         }}
                     >
-                        {t('letsTalk')}
+                        {t('contactUs')}
                     </Button>
                 </div>
             )}

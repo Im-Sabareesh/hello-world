@@ -153,7 +153,7 @@ const HeaderContent = (props) => {
                                                     )}
                                                 </NavDropdown>
                                                 {/* <Link href='/about'> */}
-                                                <a
+                                                {/* <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
@@ -164,10 +164,10 @@ const HeaderContent = (props) => {
                                                     {t(
                                                         'header.blockchainSolution'
                                                     )}
-                                                </a>
+                                                </a> */}
                                                 {/* </Link> */}
                                                 {/* <Link href='/about'> */}
-                                                <a
+                                                {/* <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
@@ -176,7 +176,7 @@ const HeaderContent = (props) => {
                                                     className="nav-link"
                                                 >
                                                     {t('header.caseStudies')}
-                                                </a>
+                                                </a> */}
                                                 {/* </Link> */}
 
                                                 <Link
@@ -220,7 +220,7 @@ const HeaderContent = (props) => {
                             className="text-end text-md-end d-sm-flex justify-content-lg-end
                             letstalk-btn mt-2"
                         >
-                            <HeaderSearchComponent state={state} />
+                            <HeaderSearchComponent state={state} language={props.language}/>
                         </Col>
                     </Row>
                 </Container>
