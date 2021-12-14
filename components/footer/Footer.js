@@ -47,6 +47,11 @@ const Footer = (props) => {
             name: '/services/hyperledger-fabric-development',
             footer: 'top',
             component: () => <TopLogoFooter language={props.language} />,
+        },        
+        {
+            name: '/services/blockchain-consulting',
+            footer: 'top',
+            component: () => <TopLogoFooter language={props.language} />,
         },
     ];
 

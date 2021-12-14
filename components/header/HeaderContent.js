@@ -49,6 +49,10 @@ const HeaderContent = (props) => {
             name: `${t('hdfDevelopment')}`,
             navPath: `/${props.language}/services/hyperledger-fabric-development`,
         },
+        {
+            name: `${t('blockChainConsulting')}`,
+            navPath: `/${props.language}/services/blockchain-consulting`,
+        },
     ];
 
     const onToggled = (e) => {
