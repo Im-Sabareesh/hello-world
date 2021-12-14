@@ -9,6 +9,8 @@ const WhatsappChatBotComponent = () => (
         phoneNo='XXXXXXXXXX'
         iconColor="white"
 		iconBgColor="rgb(79, 206, 93)"
+        messageBox={true}
+        messageBoxTxt="Hi Team, Is there any related service available ?"
     />
 );
   
