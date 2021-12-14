@@ -44,19 +44,7 @@ const TopLogoFooter = (props) => {
                     {
                         name: t('footer.nonFungibleTokens'),
                         route: `/${props.language}/services/nft-development`,
-                    },
-                    {
-                        name: t('footer.binanceSmartChain'),
-                        route: '#',
-                    },
-                    {
-                        name: t('footer.appDevelopment'),
-                        route: '#',
-                    },
-                    {
-                        name: t('footer.webDevelopment'),
-                        route: '#',
-                    },
+                    }
                 ],
             },
             {
@@ -98,11 +86,7 @@ const TopLogoFooter = (props) => {
                     {
                         name: t('footer.moreAboutUs'),
                         route: `/${props.language}/about`,
-                    },
-                    {
-                        name: t('footer.blog'),
-                        route: '#',
-                    },
+                    }
                 ],
             },
         ];

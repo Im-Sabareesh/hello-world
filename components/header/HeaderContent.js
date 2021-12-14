@@ -105,7 +105,7 @@ const HeaderContent = (props) => {
                             </Link>
                         </Col>
 
-                        <Col sm={4} md={5} lg={8}>
+                        <Col sm={4} md={5} lg={5}>
                             <div ref={nodes}>
                                 <Navbar
                                     expand="lg"
@@ -216,7 +216,7 @@ const HeaderContent = (props) => {
                         <Col
                             sm={4}
                             md={4}
-                            lg={2}
+                            lg={5}
                             className="text-end text-md-end d-sm-flex justify-content-lg-end
                             letstalk-btn mt-2"
                         >

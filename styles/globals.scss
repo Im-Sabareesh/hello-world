@@ -49,25 +49,15 @@ a {
 }
 a:focus,
 a:hover {
-    // color: #333;
     text-decoration: none;
 }
-// .btn,
-// .btn:focus {
 
-//     ;
-//     // box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0);;
-
-// }
 button:focus {
     box-shadow: none !important;
 }
-button:not(.collapsed) {
-    background-color: transparent;
-}
+
 .form-control:focus {
     outline: 0;
-    // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
 }
 .cursor-pointer {
     cursor: pointer;
@@ -967,6 +957,21 @@ button:not(.collapsed) {
 }
 
 .getintouch-form {
+    width:0px;
+    transition: all .5s;
+
+    &.toggle-active
+    {
+        width:240px;
+
+        .form-control {
+            padding-left: 20px !important;
+            padding-right:20px !important;
+            height: 47px !important;
+        }
+    }
+
+    margin-left:10px;
     .form-group {
         margin-bottom: 32px;
     }
@@ -983,8 +988,8 @@ button:not(.collapsed) {
         border-radius: 30px;
         border: none;
         height: 60px;
-        padding-left: 35px;
-        padding-right: 35px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
 
     input[type="text"]:disabled {
@@ -1069,16 +1074,11 @@ button:not(.collapsed) {
     }
     .nft-service-img {
         width: 100%;
-        // height: 440px;
-        // object-fit: cover;
         margin-bottom: -140px;
-        // border-radius: 0 !important;
     }
 }
 .service-inner-section2 {
     @include gradient-background('gradient-primary-opacity');
-    // padding: 175px 0 100px 0;
-    // background-size: cover;
     margin-top: -40px;
 }
 .nft-page-footer {
@@ -1295,6 +1295,9 @@ header .main-header {
 // ----------------------career page details end----------------
 .search-margin {
     margin-top: 14px;
+    a {
+        cursor: pointer;
+    }
 }
 
 .nav-active {

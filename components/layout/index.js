@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import { ChatBotComponent } from '@components';
 
 const Layout = (props) => {
     const language = props.language;
@@ -12,6 +13,8 @@ const Layout = (props) => {
             {router.pathname === '/' ? null : <Header language={language} />}
             {props.children}
             <Footer language={language} />
+
+            <ChatBotComponent/>
         </>
     );
 };

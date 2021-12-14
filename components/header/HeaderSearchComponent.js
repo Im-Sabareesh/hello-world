@@ -12,37 +12,41 @@ const HeaderSearchComponent = ({ state , language}) => {
         t = i18next.t.bind(i18next);
     return (
         <>
-            {search ? (
-                <div className="getintouch-form">
-                    <input
-                        type="text"
-                        placeholder={t('search')}
-                        className={`form-control search-input ${
-                            !state &&
-                            _.some(whiteLayout, (lay) =>
-                                router.pathname.includes(lay)
-                            )
-                                ? 'search-white-input'
-                                : ''
-                        }`}
-                    />
-                </div>
-            ) : (
-                <div>
-                    <Button
-                        btnVarient="red-btn"
-                        onClick={() => {
-                            router.push(`/${language}/contact`);
-                        }}
-                    >
-                        {t('contactUs')}
-                    </Button>
-                </div>
-            )}
+            <div>
+                <Button
+                    btnVarient="red-btn"
+                    onClick={() => {
+                        router.push(`/${language}/contact`);
+                    }}
+                >
+                    {t('contactUs')}
+                </Button>
+            </div>
+            <div className="getintouch-form" id="toggle-search">
+                <input
+                    type="text"
+                    placeholder={t('search')}
+                    className={`form-control search-input ${
+                        !state &&
+                        _.some(whiteLayout, (lay) =>
+                            router.pathname.includes(lay)
+                        )
+                            ? 'search-white-input'
+                            : ''
+                    }`}
+                />
+            </div>
             <div className="search-margin">
                 <a
                     className="ms-2 header-search pt-1"
-                    onClick={(e) => setSearch(!search)}
+                    onClick={(e) => {
+                        if (search) {
+                            document.getElementById('toggle-search').classList.add('toggle-active');
+                        } else {
+                            document.getElementById('toggle-search').classList.remove('toggle-active');
+                        }
+                        setSearch(!search)
+                    }}
                 >
                     <MyImage
                         src={images.searchIcon}
