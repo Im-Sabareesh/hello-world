@@ -32,7 +32,7 @@ const DefiSComponent = (props) => {
                         <Col md={6} sm={12} className="my-auto">
                             <div className="d-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
-                                    Service
+                                    {t('header.service')}
                                 </h3>
                             </div>
 

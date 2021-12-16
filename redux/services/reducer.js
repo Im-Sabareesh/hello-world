@@ -26,6 +26,16 @@ const initState = {
             smallParaSection: {},
             cardSection: [],
         },
+        blockchain: {
+            headerSection: {
+                title: '',
+                description: '',
+            },
+            accordion: [],
+            smallParaSection: {},
+            cardHeaderTitle: '',
+            cardSection: [],
+        },
     },
 };
 

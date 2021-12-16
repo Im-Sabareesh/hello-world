@@ -29,7 +29,9 @@ var customAuthorizerAuth = basicAuth({
 app.prepare().then(async () => {
     const server = express();
     server.use(cors());
-    server.use(helmet());
+    server.use(helmet({
+        contentSecurityPolicy: false
+    }));
     server.use(compression());
     server.use(express.json({ limit: '50mb', extended: true }));
     server.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));

@@ -7,7 +7,7 @@ import { Card } from 'react-bootstrap';
 import { Button, MyImage } from '@components';
 import images from '@components/images';
 
-const CardSection = ({ className, fullCard, item, footerClass }) => {
+const CardSection = ({ className, fullCard, item, footerClass, footer, cardBodyCls}) => {
     const [state, setState] = React.useState(false);
     const t = i18next.t.bind(i18next);
 
@@ -70,7 +70,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
 
     const renderCard = () => {
         return (
-            <Card className={`custom-card ${className}`}>
+            <Card className={`${!cardBodyCls && 'custom-card'} ${className}`}>
                 {item.image && (
                     <MyImage
                         src={item.image}
@@ -81,7 +81,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                         width={416}
                     />
                 )}
-                <Card.Body>
+                <Card.Body className={cardBodyCls}>
                     <Card.Title>
                         <h3 className="h3"> {item.title}</h3>
                     </Card.Title>
@@ -89,7 +89,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                         {item.describe}
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer className="">
+                {!footer && <Card.Footer className="">
                     <Button
                         btnVarient="red-btn"
                         className={`min-size-btn ${
@@ -99,7 +99,7 @@ const CardSection = ({ className, fullCard, item, footerClass }) => {
                     >
                         {state ? t('knowLess') : t('knowMore')}
                     </Button>
-                </Card.Footer>
+                </Card.Footer> }
             </Card>
         );
     };

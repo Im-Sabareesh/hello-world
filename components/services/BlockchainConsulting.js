@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { useRouter } from 'next/router';
-import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
+import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { serviceSelector } from '@redux';
 import { useSelector } from 'react-redux';
@@ -18,7 +18,10 @@ import {
 import images from '@components/images';
 
 const BlockchainConsultingComponent = (props) => {
-    const router = useRouter();
+    const blockchainServList = useSelector(serviceSelector.servicesListSelector);
+    const router = useRouter(),
+        t = i18next.t.bind(i18next);
+
     return (
         <>
             {/*--------------- Blockchain Consulting section1 start---------- */}
@@ -29,21 +32,14 @@ const BlockchainConsultingComponent = (props) => {
                         <Col md={6} sm={12} className="my-auto">
                             <div className="d-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
-                                    Service
+                                    {t('header.service')}
                                 </h3>
                             </div>
 
-                            <H1>Enterprise Blockchain Consulting</H1>
+                            <H1>{blockchainServList.blockchain.headerSection.title}</H1>
 
                             <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Vivamus gravida pellentesque
-                                mauris. Maecenas cursus, magna quis mollis
-                                euismod, neque elit scelerisque nunc, eu
-                                pellentesque lectus ante sed leo. Vivamus sit
-                                amet magna nibh. Fusce turpis dui, dapibus ut
-                                congue non, consequat ac orci. Maecenas vel
-                                neque aliquet, suscipit metus a, congue ante.
+                                {blockchainServList.blockchain.headerSection.description}
                             </Paragraph>
 
                             <div className="button-outer pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -57,7 +53,7 @@ const BlockchainConsultingComponent = (props) => {
                                         );
                                     }}
                                 >
-                                    Talk to our Experts
+                                    {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -87,67 +83,25 @@ const BlockchainConsultingComponent = (props) => {
                         <Row>
                             <Col md={6} sm={12}>
                                 <Accordion defaultActiveKey="0" flush>
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header>
-                                            What Is Blockchain?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is a distributed ledger
-                                            that can record transactions in a
-                                            secured and permanent way verifiable
-                                            by the stakeholders
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-
-                                    <Accordion.Item eventKey="1">
-                                        <Accordion.Header>
-                                            Why Blockchain Matters?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is revolutionizing the
-                                            enterprise world by providing a new
-                                            type of infrastructure enabling
-                                            trusted tech-based business
-                                            relationships without the need of
-                                            the third party thus making the
-                                            system more transparent, efficient,
-                                            and affordable.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-
-                                    <Accordion.Item eventKey="2">
-                                        <Accordion.Header>
-                                            Are you blockchain ready?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is disrupting the market
-                                            across industries with its
-                                            transformational capabilities. Our
-                                            enterprise blockchain consulting
-                                            services help clients to evaluate
-                                            blockchain applicability and
-                                            readiness of their systems to adopt
-                                            the technology effectively.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
+                                    {_.map(blockchainServList.blockchain.accordion, (item, i) => (                                    
+                                        <Accordion.Item eventKey={`${i}`}>
+                                            <Accordion.Header>
+                                                {item.headerTitle}
+                                            </Accordion.Header>
+                                            <Accordion.Body>
+                                                {item.headerBody}
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    ))}
                                 </Accordion>
                             </Col>
 
                             <Col md={6} sm={12}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Build Next-Generation Blockchain Solutions
+                                    {blockchainServList.blockchain.smallParaSection.title}
                                 </h2>
-
-                                <Paragraph>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vivamus gravida
-                                    pellentesque mauris. Maecenas cursus, magna
-                                    quis mollis euismod, neque elit scelerisque
-                                    nunc, eu pellentesque lectus ante sed leo.
-                                    Vivamus sit amet magna nibh. Fusce turpis
-                                    dui, dapibus ut congue non, consequat ac
-                                    orci. Maecenas vel neque aliquet, suscipit
-                                    metus a, congue ante.
+                                <Paragraph>                                    
+                                    {blockchainServList.blockchain.smallParaSection.content}
                                 </Paragraph>
                             </Col>
                         </Row>
@@ -164,7 +118,7 @@ const BlockchainConsultingComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our Blockchain Consulting Services
+                                {blockchainServList.blockchain.cardHeaderTitle}
                             </h2>
                         </Col>
                     </Row>
@@ -172,71 +126,17 @@ const BlockchainConsultingComponent = (props) => {
 
                 <Container className="mt-0 pt-2">
                     <Row>
-                        <Col xs={12} sm={6} md={6} lg={3}>
-                            <Card className="block-chain-feature-card mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0">
-                                <Card.Body className="p-5 p-sm-3 p-md-3 p-lg-3 p-xl-5 ">
-                                    <Card.Title className="mb-3">
-                                        Advisory
-                                    </Card.Title>
-                                    <Card.Text>
-                                        From use case discovery to POC to
-                                        full-scale development, we help our
-                                        clients at every stage to understand the
-                                        business impact and adopt the right
-                                        blockchain strategy.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col xs={12} sm={6} md={6} lg={3}>
-                            <Card className="block-chain-feature-card mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0">
-                                <Card.Body className="p-5 p-sm-3 p-md-3 p-lg-3 p-xl-5 ">
-                                    <Card.Title className="mb-3">
-                                        Proof Of Concept
-                                    </Card.Title>
-                                    <Card.Text>
-                                        Be blockchain confident before the
-                                        adoption. We develop quick POCs to
-                                        demonstrate how blockchain will increase
-                                        efficiency and drive business results.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col xs={12} sm={6} md={6} lg={3}>
-                            <Card className="block-chain-feature-card mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0">
-                                <Card.Body className="p-5 p-sm-3 p-md-3 p-lg-3 p-xl-5 ">
-                                    <Card.Title className="mb-3">
-                                        Blockchain Development
-                                    </Card.Title>
-                                    <Card.Text>
-                                        We turn blockchain ideas into a robust
-                                        DApp with our unparalleled industry
-                                        experience & Hyperledger Fabric
-                                        Development capabilities.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col xs={12} sm={6} md={6} lg={3}>
-                            <Card className="block-chain-feature-card mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0">
-                                <Card.Body className="p-5 p-sm-3 p-md-3 p-lg-3 p-xl-5 ">
-                                    <Card.Title className="mb-3">
-                                        Training{' '}
-                                    </Card.Title>
-                                    <Card.Text>
-                                        Our business and technical experts
-                                        educate and train our clients to develop
-                                        the right aptitude enabling them
-                                        co-innovate and co-create blockchain
-                                        solutions suitable for their use cases.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                     {_.map(blockchainServList.blockchain.cardSection, (item, i) => (
+                            <Col key={_.uniqueId()} xs={12} sm={6} md={6} lg={3}>
+                                <CardSection
+                                    className="block-chain-feature-card mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0"
+                                    cardBodyCls="p-5 p-sm-3 p-md-3 p-lg-3 p-xl-5"
+                                    item={item}
+                                    index={i}
+                                    footer="true"
+                                />
+                            </Col>
+                        ))}
                     </Row>
                 </Container>
 
