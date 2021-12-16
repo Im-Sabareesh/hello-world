@@ -236,5 +236,48 @@
                 "describe": "The notion of channels enable sub-network within the business network  ensuring data privacy. Collections enable privacy within a channel."
             }
         ]
+    },
+    "blockchain": {
+        "name": "Blockchain Consulting",
+        "headerSection": {
+            "title": "Enterprise Blockchain Consulting",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh. Fusce turpis dui, dapibus ut congue non, consequat ac orci. Maecenas vel neque aliquet, suscipit metus a, congue ante."
+        },
+        "accordion": [
+            {
+                "headerTitle": "What Is Blockchain?",
+                "headerBody": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders"
+            }, {
+                "headerTitle": "Why Blockchain Matters?",
+                "headerBody": "Blockchain is revolutionizing the enterprise world by providing a new type of infrastructure enabling trusted tech-based business relationships without the need of the third party thus making the system more transparent, efficient, and affordable."
+            }, {
+                "headerTitle": "Are you blockchain ready?",
+                "headerBody": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients to evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
+            }
+            
+        ],
+        "smallParaSection": {
+            "title": "Build Next-Generation Blockchain Solutions",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh. Fusce turpis dui, dapibus ut congue non, consequat ac orci. Maecenas vel neque aliquet, suscipit metus a, congue ante."
+        },
+        "cardHeaderTitle": "Our Blockchain Consulting Services",
+        "cardSection": [
+            {
+                "title": "Advisory",
+                "describe": "From use case discovery to POC to full-scale development, we help our clients at every stage to understand the business impact and adopt the right blockchain strategy."
+            },
+            {
+                "title": "Proof Of Concept",
+                "describe": "Be blockchain confident before the adoption. We develop quick POCs to demonstrate how blockchain will increase efficiency and drive business results"
+            },
+            {
+                "title": "Blockchain Development",
+                "describe": "We turn blockchain ideas into a robust DApp with our unparalleled industry experience & Hyperledger Fabric Development capabilities."
+            },
+            {
+                "title": "Training",
+                "describe": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases."
+            }
+        ]
     }
 }
