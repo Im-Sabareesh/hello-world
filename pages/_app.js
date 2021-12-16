@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import i18next from 'i18next';
 import '../i18n/init';
+import tawkTo from "tawkto-react";
 
 import '../styles/globals.scss';
 import '../styles/globals-responsive.scss';
@@ -14,6 +15,11 @@ import { store } from '../redux/store';
 function MyApp(props) {
     const { Component, pageProps } = props;
     i18next.changeLanguage(pageProps.language);
+
+    React.useEffect(() => {
+        tawkTo(process.env.tawkToPropertyId, process.env.tawkToKey)
+    }, []);
+
     return (
         <Provider store={store}>
             <Layout {...pageProps}>
