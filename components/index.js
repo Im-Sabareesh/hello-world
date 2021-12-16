@@ -23,3 +23,4 @@ export { default as ContactFormFormik } from './contact-form/ContactFormFormik';
 export { default as HomeFormFormik } from './home-form/HomeFormFormik';
 export { default as ModalComponent } from './modal';
 export { default as StyledDropzone } from './file-drop-zone';
+export { default as ChatBotComponent } from './chat-bot';

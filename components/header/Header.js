@@ -12,13 +12,23 @@ import HeaderContent from './HeaderContent';
 const Header = (props) => {
     const router = useRouter(),
         t = i18next.t.bind(i18next),
-        socialMedisIcons = [
-            images.fbSVG,
-            images.instaSVG,
-            images.twitterSVG,
-            images.uTubeSVG,
-            images.wpSVG,
-            images.linkedInSVG,
+        socialMediaIcons = [
+            {
+                link: 'https://www.facebook.com/enterpriseblockchain/',
+                icon: images.fbSVG
+            }, {
+                link: 'https://www.instagram.com/chaincodeconsulting/',
+                icon: images.instaSVG
+            }, {
+                link: 'https://twitter.com/chaincodellp',
+                icon: images.twitterSVG
+            }, {
+                link: '#',
+                icon: images.uTubeSVG
+            }, {
+                link: 'https://in.linkedin.com/company/chaincode-consulting-llp',
+                icon: images.linkedInSVG
+            }
         ];
 
     return (
@@ -36,15 +46,14 @@ const Header = (props) => {
                                 className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
                             >
                                 <ul className="social-links pt-1">
-                                    {_.map(socialMedisIcons, (icon) => (
+                                    {_.map(socialMediaIcons, (item) => (
                                         <li key={_.uniqueId()}>
                                             <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
+                                                href={item.link}
+                                                onClick={(e) => item.link === '#' && e.preventDefault()}
                                             >
                                                 <MyImage
-                                                    {...icon}
+                                                    {...item.icon}
                                                     height={18}
                                                     width={21}
                                                 />

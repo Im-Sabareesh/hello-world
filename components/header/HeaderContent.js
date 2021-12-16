@@ -19,15 +19,7 @@ const HeaderContent = (props) => {
     const nodes = React.useRef();
     const router = useRouter(),
         t = i18next.t.bind(i18next),
-        whiteLayout = ['about', 'contact'],
-        socialMedisIcons = [
-            images.fbSVG,
-            images.instaSVG,
-            images.twitterSVG,
-            images.uTubeSVG,
-            images.wpSVG,
-            images.linkedInSVG,
-        ];
+        whiteLayout = ['about', 'contact'];
     const listenScrollEvent = (e) => {
         if (window.scrollY > 50) {
             setState('sticky');
@@ -113,7 +105,7 @@ const HeaderContent = (props) => {
                             </Link>
                         </Col>
 
-                        <Col sm={4} md={5} lg={8}>
+                        <Col sm={4} md={5} lg={5}>
                             <div ref={nodes}>
                                 <Navbar
                                     expand="lg"
@@ -161,7 +153,7 @@ const HeaderContent = (props) => {
                                                     )}
                                                 </NavDropdown>
                                                 {/* <Link href='/about'> */}
-                                                <a
+                                                {/* <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
@@ -172,10 +164,10 @@ const HeaderContent = (props) => {
                                                     {t(
                                                         'header.blockchainSolution'
                                                     )}
-                                                </a>
+                                                </a> */}
                                                 {/* </Link> */}
                                                 {/* <Link href='/about'> */}
-                                                <a
+                                                {/* <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
@@ -184,7 +176,7 @@ const HeaderContent = (props) => {
                                                     className="nav-link"
                                                 >
                                                     {t('header.caseStudies')}
-                                                </a>
+                                                </a> */}
                                                 {/* </Link> */}
 
                                                 <Link
@@ -224,11 +216,11 @@ const HeaderContent = (props) => {
                         <Col
                             sm={4}
                             md={4}
-                            lg={2}
+                            lg={5}
                             className="text-end text-md-end d-sm-flex justify-content-lg-end
                             letstalk-btn mt-2"
                         >
-                            <HeaderSearchComponent state={state} />
+                            <HeaderSearchComponent state={state} language={props.language}/>
                         </Col>
                     </Row>
                 </Container>

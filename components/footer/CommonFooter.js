@@ -9,12 +9,22 @@ import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
 const socialMediaIcons = [
-    images.fbSVG,
-    images.instaSVG,
-    images.twitterSVG,
-    images.uTubeSVG,
-    images.wpSVG,
-    images.linkedInSVG,
+    {
+        link: 'https://www.facebook.com/enterpriseblockchain/',
+        icon: images.fbSVG
+    }, {
+        link: 'https://www.instagram.com/chaincodeconsulting/',
+        icon: images.instaSVG
+    }, {
+        link: 'https://twitter.com/chaincodellp',
+        icon: images.twitterSVG
+    }, {
+        link: '#',
+        icon: images.uTubeSVG
+    }, {
+        link: 'https://in.linkedin.com/company/chaincode-consulting-llp',
+        icon: images.linkedInSVG
+    }
 ];
 const RadiusFooter = (props) => {
     const t = i18next.t.bind(i18next),
@@ -30,18 +40,6 @@ const RadiusFooter = (props) => {
                     {
                         name: t('footer.nonFungibleTokens'),
                         route: `/services/nft-development`,
-                    },
-                    {
-                        name: t('footer.binanceSmartChain'),
-                        route: '#',
-                    },
-                    {
-                        name: t('footer.appDevelopment'),
-                        route: '#',
-                    },
-                    {
-                        name: t('footer.webDevelopment'),
-                        route: '#',
                     },
                 ],
             },
@@ -78,11 +76,7 @@ const RadiusFooter = (props) => {
                     {
                         name: t('footer.moreAboutUs'),
                         route: `/about`,
-                    },
-                    {
-                        name: t('footer.blog'),
-                        route: '#',
-                    },
+                    }
                 ],
             },
         ];
@@ -120,13 +114,13 @@ const RadiusFooter = (props) => {
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
-                            {_.map(socialMediaIcons, (icon) => (
+                            {_.map(socialMediaIcons, (item) => (
                                 <a
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
+                                    href={item.link}
+                                    onClick={(e) => item.link === '#' && e.preventDefault()}
                                     className="mx-md-3 mx-1"
                                 >
-                                    <MyImage {...icon} height={18} width={21} />
+                                    <MyImage {...item.icon} height={18} width={21} />
                                 </a>
                             ))}
                         </div>
