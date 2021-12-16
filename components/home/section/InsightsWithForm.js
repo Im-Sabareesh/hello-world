@@ -38,7 +38,7 @@ const InsightWithFormSection = (props) => {
 
     return (
         <section className="home-section-10 py-5">
-            <Container>
+            {/* <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">
                         <h2 className="h2"> {t('home.ourLatestInsights')} </h2>
@@ -60,7 +60,7 @@ const InsightWithFormSection = (props) => {
                         </Button>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
 
             <Container>
                 <div className="home-section-11">
