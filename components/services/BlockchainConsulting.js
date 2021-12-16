@@ -18,6 +18,7 @@ import {
 import images from '@components/images';
 
 const BlockchainConsultingComponent = (props) => {
+    const router = useRouter();
     return (
         <>
             {/*--------------- Blockchain Consulting section1 start---------- */}
@@ -55,7 +56,9 @@ const BlockchainConsultingComponent = (props) => {
                                             `/${props.language}/contact`
                                         );
                                     }}
-                                ></Button>
+                                >
+                                    Talk to our Experts
+                                </Button>
                             </div>
                         </Col>
                         <Col md={6} sm={12}>
@@ -243,7 +246,7 @@ const BlockchainConsultingComponent = (props) => {
                         title="I
                         Leverage blockchain to enhance your <br/> business.  Talk to an expert.
                         "
-                        // link={`/${props.language}/contact`}
+                        link={`/${props.language}/contact`}
                         btnName="Let's Talk"
                     />
                 </Container>

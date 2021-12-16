@@ -1395,20 +1395,24 @@ p.card-text.show-more {
     
 }
 
-    .accordion-button:not(.collapsed)::after {
-        filter: brightness(0);
-        filter: brightness(0) invert(1);
-    }
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0);
+    filter: brightness(0) invert(1);
+}
 
-    .block-chain-feature-card
+.block-chain-feature-card
+{
+    background-color: color('secondary');
+    color: color('light-primary');
+    min-height: 370px;
+
+    .h5
     {
-        background-color: color('secondary');
         color: color('light-primary');
-        min-height: 370px;
-
-        .h5
-        {
-            color: color('light-primary');
-            font-size:28px;
-        }
+        font-size:28px;
     }
+}
+
+.whatsapp_widget_wrapper .whatsapp_widget_pop.close{
+    display: none !important;
+}
