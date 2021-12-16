@@ -485,8 +485,8 @@
     }
     
     .block-chain-feature-card {
-        background-color: #6f75ff;
-        color: #ffffff;
+        background-color: color('secondary');
+        color: color('light-primary');
         min-height: 300px;
     }
    
@@ -659,8 +659,8 @@
     }
 
     .block-chain-feature-card {
-        background-color: #6f75ff;
-        color: #ffffff;
+        background-color: color('secondary');
+        color: color('light-primary');
         min-height: 235px;
     }
 }
