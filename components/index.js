@@ -4,6 +4,7 @@ export { default as HomeComponent } from './home/Home';
 export { default as AboutUsComponent } from './about/about-us';
 export { default as NFTSComponent } from './services/NftService';
 export { default as DefiServiceComponent } from './services/DefiService';
+export { default as BlockChainComponent } from './services/BlockchainConsulting';
 export { default as HLFDSComponent } from './services/HLFDComponent';
 export { default as ContactComponent } from './contact';
 export { default as CareersComponent } from './careers';

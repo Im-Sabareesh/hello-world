@@ -1375,3 +1375,40 @@ p.card-text.show-more {
     overflow: unset;
     height: unset;
 }
+
+
+// ----------------------Blockchain consulting--------------------
+
+
+.accordion-header 
+{
+    .accordion-button
+    {
+        font-weight: bold;
+    }
+    
+}
+
+.accordion-button:not(.collapsed) {	
+    color: color('light-primary');
+	background-color: color('secondary');
+    
+}
+
+    .accordion-button:not(.collapsed)::after {
+        filter: brightness(0);
+        filter: brightness(0) invert(1);
+    }
+
+    .block-chain-feature-card
+    {
+        background-color: color('secondary');
+        color: color('light-primary');
+        min-height: 370px;
+
+        .h5
+        {
+            color: color('light-primary');
+            font-size:28px;
+        }
+    }

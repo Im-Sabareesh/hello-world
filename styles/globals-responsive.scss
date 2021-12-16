@@ -260,6 +260,10 @@
             padding:0px 65px;
         }
     }
+
+    .block-chain-feature-card {
+        min-height: 420px;
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -479,10 +483,13 @@
     .office-banner {
         margin-left: 0 !important;
     }
-
-
+    
+    .block-chain-feature-card {
+        background-color: color('secondary');
+        color: color('light-primary');
+        min-height: 300px;
+    }
    
-
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -649,6 +656,12 @@
 
     .office-banner {
         margin-left: 0 !important;
+    }
+
+    .block-chain-feature-card {
+        background-color: color('secondary');
+        color: color('light-primary');
+        min-height: 235px;
     }
 }
 
@@ -1077,6 +1090,16 @@
     .about-section1 .about-section1-img {
         padding: 0 !important;
     }
+
+    .block-chain-feature-card
+    {
+        min-height: auto;
+    }
+
+    .accordion
+    {
+        margin-bottom:30px;
+    }
 }
 
 @include media-breakpoint-between(sm, md) {
@@ -1357,6 +1380,11 @@
     }
     .about-section1 .about-section1-img {
         padding: 0 !important;
+    }
+
+    .accordion
+    {
+        margin-bottom:30px;
     }
 }
 @include media-breakpoint-between(md, lg) {
@@ -1845,6 +1873,7 @@
     }
 
 }
+
 @include media-breakpoint-between(xl, xxl) {
 
 
@@ -1909,6 +1938,11 @@
         }
     };
     // ----------------------career page details end----------------
+
+    .block-chain-feature-card {
+      
+        min-height: 420px;
+    }
 }
 
 
