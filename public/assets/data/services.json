@@ -11,10 +11,14 @@
             "title": "NFT Development Services And Solutions",
             "description": "Chaincode Consulting's NFT Developers help create robust, feature-rich, and user-centric platforms, offering the functionality to tokenize a range of assets. Launching your NFT marketplace has never been easier with our superior, customized solutions. Your customers will have a seamless buying experience while converting their assets into NFTs."
         },
-        "smallParaSection": [
-            "NFTs (non-fungible tokens) provide a secure, digital certificate of possession of specific assets. We create these smart contracts using various open source-code parts that function on platforms like GitHub to secure the digital objects. NFTs are built on Ethereum, Tron, Binance Smart Chain, and PolkaDot blockchains. Our seasoned developers create NFTs for digital collectibles, content subscriptions, sports, artworks, gaming, video, music, and more.",
-            "We also develop white-label, multiple security layered NFT marketplace platforms with all the features required to launch a thriving, user-friendly marketplace. Leverage our superlative NFT development services and efficiently reach a significant number of investors and users. Embrace blockchain technology in a completely different way to catapult your business into the crpytosphere."
-        ],
+        "smallParaSection": {
+            "title": " Blockchain solutions for frictionless business",
+            "content": [
+                "NFTs (non-fungible tokens) provide a secure, digital certificate of possession of specific assets. We create these smart contracts using various open source-code parts that function on platforms like GitHub to secure the digital objects. NFTs are built on Ethereum, Tron, Binance Smart Chain, and PolkaDot blockchains. Our seasoned developers create NFTs for digital collectibles, content subscriptions, sports, artworks, gaming, video, music, and more.",
+                "We also develop white-label, multiple security layered NFT marketplace platforms with all the features required to launch a thriving, user-friendly marketplace. Leverage our superlative NFT development services and efficiently reach a significant number of investors and users. Embrace blockchain technology in a completely different way to catapult your business into the crpytosphere."
+            ]
+        },
+        "cardHeaderTitle": "Our wide range of service include",
         "cardSection": [
             {
                 "title": "Fractionalized NFTs",
@@ -101,7 +105,10 @@
                 "image": "/assets/images/wide-service-2.jpg",
                 "describe": "Chaincode Consulting has both the technology and the know-how to enable a comprehensive cross-chain NFT strategy. Our solutions allow you to release and operate your NFT marketplace and connect seamlessly with multiple blockchain networks to obtain more users, increasing your cross-chain transactions. We can help with a ready-to-deploy, cross-chain NFT platform or help you scale your existing platform’s functionality."
             }
-        ]
+        ],
+        "imgPannelSection": {
+            "title": "Start Now?"
+        }
     },
     "defi": {
         "name": "DeFi development",
@@ -117,10 +124,14 @@
             "title": "DeFi Development Services",
             "description": "Chaincode Consulting’s DeFi Development Services will help you reDeFine your entry into the emerging, global, decentralized finance world. Scale-up your business reliably, transparently, and securely and experience an overarching reincarnation of your financial products."
         },
-        "smallParaSection": [
-            "The emergence of Decentralized Finance or DeFi has brought about a paradigm shift from conventional finance to decentralized, peer-to-peer Ethereum blockchain-based technologies. The DeFi ecosystem encompasses a broad-ranging network of impactful financial instruments, including investing, payments and settlement, banking, stablecoins, lending and borrowing platforms, and more.",
-            "DeFi enhances and expands the access for global participants to invest, lend, trade, and borrow. Whether you need a permissionless financial system, immutability, interoperability, transparency, low upfront costs, and a secure solution, DeFi is the answer! Our superlative DeFi Development Services enable you to defy all conventional methods of running a business. We help you carve a distinct niche for yourself in a world where blockchain technology adoption is becoming the norm."
-        ],
+        "smallParaSection": {
+            "title": "Blockchain solutions for frictionless business",
+            "content": [
+                "The emergence of Decentralized Finance or DeFi has brought about a paradigm shift from conventional finance to decentralized, peer-to-peer Ethereum blockchain-based technologies. The DeFi ecosystem encompasses a broad-ranging network of impactful financial instruments, including investing, payments and settlement, banking, stablecoins, lending and borrowing platforms, and more.",
+                "DeFi enhances and expands the access for global participants to invest, lend, trade, and borrow. Whether you need a permissionless financial system, immutability, interoperability, transparency, low upfront costs, and a secure solution, DeFi is the answer! Our superlative DeFi Development Services enable you to defy all conventional methods of running a business. We help you carve a distinct niche for yourself in a world where blockchain technology adoption is becoming the norm."
+            ]
+        },
+        "cardHeaderTitle": "Our wide range of service include",
         "cardSection": [
             {
                 "title": "DeFi Lending/Borrowing Platform Development",
@@ -192,7 +203,14 @@
                 "image": "/assets/images/wide-service-2.jpg",
                 "describe": "A DeFi platform is inherently secure, making it the ideal technology for the real estate industry. Our team of skilled DeFi Real Estate Developers can help your real estate agency or company to leverage blockchain’s ledger abilities and smart contracts to facilitate buying, investing, renting, and even lending efficiently, securely, and transparently."
             }
-        ]
+        ],
+        "imgPannelSection": {
+            "title": "It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
+        },
+        "lastParaSection" : {
+            "title": "Blockchain solutions for frictionless business",
+            "content": "Blockchain for business uses a shared and immutable ledger that can only be accessed by members with permission. Network members control what information each organization or member may see, and what actions each can take. Blockchain is sometimes called a trustless network not because business partners don’t trust each other, but because they don’t have to."
+        }
     },
     "hlfd": {
         "name": "Hyperledger Fabric Development",
@@ -214,6 +232,7 @@
             "subtitle": "What is Hyperledger Fabric?",
             "subcontent": "What is Hyperledger Fabric? Hyperledger Fabric – hosted by the Linux Foundation, is a permissioned open-source enterprise-grade blockchain platform.  Beyond cryptocurrencies, it is specially designed with a modular architecture and plug and play components to serve a wide range of industry use cases. Hyperledger Fabric provides a new infrastructure enabling tech-based relationships and a new style of secured digital interactions."
         },
+        "cardHeaderTitle": "Our wide range of service include",
         "cardSection": [
             {
                 "title": "Performance & Scalabilty",
@@ -258,7 +277,10 @@
         ],
         "smallParaSection": {
             "title": "Build Next-Generation Blockchain Solutions",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh. Fusce turpis dui, dapibus ut congue non, consequat ac orci. Maecenas vel neque aliquet, suscipit metus a, congue ante."
+            "content": [
+                "Our blockchain consultants have the perfect blend of expertise in business processes, industries, and blockchain development to seize the true potential of the technology.",
+                "We are passionately dedicated to enabling enterprise-wide adoption of decentralized business applications embraced with blockchain technology. We as your business partners are committed to reduce risks and maximize ROI with proven business results."
+            ]
         },
         "cardHeaderTitle": "Our Blockchain Consulting Services",
         "cardSection": [
@@ -278,6 +300,9 @@
                 "title": "Training",
                 "describe": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases."
             }
-        ]
+        ],
+        "imgPannelSection": {
+            "title": "Leverage blockchain to enhance your <br/> business.  Talk to an expert."
+        }
     }
 }

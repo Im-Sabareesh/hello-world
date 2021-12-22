@@ -82,8 +82,8 @@ const BlockchainConsultingComponent = (props) => {
                     <Container>
                         <Row>
                             <Col md={6} sm={12}>
-                                <Accordion defaultActiveKey="0" flush>
-                                    {_.map(blockchainServList.blockchain.accordion, (item, i) => (                                    
+                                {_.map(blockchainServList.blockchain.accordion, (item, i) => (                                        
+                                    <Accordion key={`${i}`} defaultActiveKey="0" flush>
                                         <Accordion.Item eventKey={`${i}`}>
                                             <Accordion.Header>
                                                 {item.headerTitle}
@@ -92,17 +92,21 @@ const BlockchainConsultingComponent = (props) => {
                                                 {item.headerBody}
                                             </Accordion.Body>
                                         </Accordion.Item>
-                                    ))}
-                                </Accordion>
+                                    </Accordion>
+                                ))}
                             </Col>
 
                             <Col md={6} sm={12}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
                                     {blockchainServList.blockchain.smallParaSection.title}
                                 </h2>
-                                <Paragraph>                                    
-                                    {blockchainServList.blockchain.smallParaSection.content}
-                                </Paragraph>
+                                {_.map(blockchainServList.blockchain.smallParaSection.content,
+                                    (item, i) => (
+                                        <Paragraph key={_.uniqueId()}>
+                                            {item}
+                                        </Paragraph>
+                                    )
+                                )}
                             </Col>
                         </Row>
                     </Container>
@@ -143,11 +147,9 @@ const BlockchainConsultingComponent = (props) => {
                 <Container className="mt-5 pt-2">
                     <ImgPanelSection
                         className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
-                        title="I
-                        Leverage blockchain to enhance your <br/> business.  Talk to an expert.
-                        "
+                        title={blockchainServList.blockchain.imgPannelSection.title}
                         link={`/${props.language}/contact`}
-                        btnName="Let's Talk"
+                        btnName={t('letsTalk')}
                     />
                 </Container>
             </section>

@@ -62,11 +62,9 @@ const AboutUs = (props) => {
                     <Row>
                         <Col>
                             <div className="light-text-color text-center w-50 mx-auto">
-                                <H1 className="light-text-color">About Us</H1>
+                                <H1 className="light-text-color">{t('aboutUs.title')}</H1>
                                 <Paragraph>
-                                    Our vision is to be the world’s most trusted
-                                    transparency platform to build a system
-                                    where reputable people buy & sell assets.
+                                    {t('aboutUs.headerVisions')}
                                 </Paragraph>
                             </div>
                         </Col>
@@ -105,30 +103,19 @@ const AboutUs = (props) => {
                 <Container>
                     <Row>
                         <Col lg={5}>
-                            <H1>Whats Our Story?</H1>
+                            <H1>{t('aboutUs.wtsOurStory')}</H1>
                         </Col>
                         <Col lg={7}>
                             <Paragraph>
-                                Blockchain is changing the way the world lives
-                                and works – but it&apos;s only a means to an
-                                end, not the end itself. We can help you apply
-                                this technology to drive your transformation
-                                into the future.
+                                {t('aboutUs.ourStory1')}
                             </Paragraph>
 
                             <Paragraph>
-                                We start with an understanding of your specific
-                                aspirations, followed by a practical application
-                                of blockchain innovation. The conversation grows
-                                as new opportunities come to light along the
-                                way.
+                                {t('aboutUs.ourStory2')}
                             </Paragraph>
 
                             <Paragraph>
-                                As the leading independent technology
-                                organization, we integrate alliances,
-                                partnerships, and leaders from every aspect of
-                                the blockchain ecosystem.
+                                {t('aboutUs.ourStory3')}
                             </Paragraph>
                         </Col>
                     </Row>
@@ -141,11 +128,10 @@ const AboutUs = (props) => {
                                 <div className="our-story-block-content">
                                     <div className="line-animated rounded position-relative float-start me-xl-4 me-2"></div>
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
-                                        Our vision
+                                        {t('aboutUs.ourVision')}
                                     </h3>
                                     <Paragraph>
-                                        We believe that universal access to
-                                        space will inherently improve human life
+                                        {t('aboutUs.visionPara')}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -158,11 +144,10 @@ const AboutUs = (props) => {
                                 <div className="our-story-block-content">
                                     <div className="line-animated rounded position-relative float-start me-xl-4 me-2"></div>
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
-                                        Our mission
+                                        {t('aboutUs.ourMission')}
                                     </h3>
                                     <Paragraph>
-                                        We believe that universal access to
-                                        space will inherently improve human life
+                                        {t('aboutUs.missionPara')}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -175,11 +160,10 @@ const AboutUs = (props) => {
                                 <div className="our-story-block-content">
                                     <div className="line-animated rounded position-relative float-start me-xl-4 me-2"></div>
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
-                                        what we do
+                                        {t('aboutUs.whatWeDo')}
                                     </h3>
                                     <Paragraph>
-                                        We believe that universal access to
-                                        space will inherently improve human life
+                                        {t('aboutUs.whatWeDoPara')}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -202,26 +186,17 @@ const AboutUs = (props) => {
                                     <span>04</span>
                                 </div>
                                 <h3 className="h2 light-text-color">
-                                    The Way Forward
+                                    {t('aboutUs.theWayFwd')}
                                 </h3>
                             </div>
                         </Col>
                         <Col xl={8} lg={7}>
                             <h3 className="h3 lh-base fw-normal light-text-color">
-                                Blockchain is changing the way the world lives
-                                and works – but it&apos;s only a means to an
-                                end, not the end itself. We can help you apply
-                                this technology to drive your transformation
-                                into the future. As the leading independent
-                                technology organization.
+                                {t('aboutUs.theWayFwdPara1')}
                             </h3>
 
                             <h3 className="h3 lh-base fw-normal light-text-color">
-                                We start with an understanding of your specific
-                                aspirations, followed by a practical application
-                                of blockchain innovation. The conversation grows
-                                as new opportunities come to light along the
-                                way.
+                                {t('aboutUs.theWayFwdPara2')}
                             </h3>
                         </Col>
                     </Row>
@@ -238,28 +213,25 @@ const AboutUs = (props) => {
                         <Col lg={5}>
                             <div className="lets-meet-box bg-gradient-light dark-box-shadow p-5">
                                 <h4 className="dark-text-color mb-4 h2">
-                                    Lets Meet Our Team
+                                    {t('aboutUs.letMeetOurTeam')} 
                                 </h4>
                                 <div className="our-team-block">
                                     <div className="line-animated rounded position-relative float-start  me-3"></div>
                                     <h3 className="h3 mb-2 purple-gradient-text-color">
-                                        8 Members
+                                        8 {t('aboutUs.member')}
                                     </h3>
                                     <h3 className="h3 dark-secondary-text-color">
-                                        Designer - Developer - Marketing
+                                        {t('aboutUs.designDevMarketing')}
                                     </h3>
                                 </div>
                             </div>
                         </Col>
                         <Col lg={7}>
                             <h6 className="h3 text-uppercase dark-text-color mb-4">
-                                Our Team
+                                {t('aboutUs.ourTeam')}
                             </h6>
                             <h3 className="h3 dark-secondary-text-color lh-base fw-normal">
-                                Making people smile gets us out of bed every
-                                morning. Through thoughtful design we create
-                                delightful digital experiences that make life
-                                simpler and more enjoyable
+                                {t('aboutUs.ourTeamPara')}
                             </h3>
                         </Col>
                     </Row>
@@ -341,18 +313,16 @@ const AboutUs = (props) => {
                 <Container>
                     <Row>
                         <h3 className="h3 purple-gradient-text-color text-uppercase mb-3">
-                            WORK WITH US
+                            {t('aboutUs.workWithUs')}
                         </h3>
                         <Col md={6}>
                             <h6 className="h2 dark-text-color mb-3">
-                                Have you decided to work on a project with us?
+                                {t('aboutUs.workWithUsQuesition')}
                             </h6>
                         </Col>
                         <Col md={6}>
                             <h3 className="h3 dark-secondary-text-color lh-base fw-normal">
-                                Interested in joining our team and impacting the
-                                world? Reach out! We are always looking for new
-                                projectsto help take design to next level
+                                {t('aboutUs.workWithUsAnswer')}
                             </h3>
                         </Col>
                         <Col md={6} className="mt-lg-4 mt-2">

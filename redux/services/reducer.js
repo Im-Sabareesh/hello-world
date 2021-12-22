@@ -2,21 +2,30 @@ import servicesAction from './action';
 
 const initState = {
     list: {
-        defi: {
-            headerSection: {
-                title: '',
-                description: '',
-            },
-            smallParaSection: [],
-            cardSection: [],
-        },
         nft: {
             headerSection: {
                 title: '',
                 description: '',
             },
-            smallParaSection: [],
+            smallParaSection: {},
+            cardHeaderTitle: '',
             cardSection: [],
+            imgPannelSection: {
+                title: '',
+            }
+        },
+        defi: {
+            headerSection: {
+                title: '',
+                description: '',
+            },
+            smallParaSection: {},
+            cardHeaderTitle: '',
+            cardSection: [],
+            imgPannelSection: {
+                title: '',
+            },
+            lastParaSection: {},
         },
         hlfd: {
             headerSection: {
@@ -24,6 +33,7 @@ const initState = {
                 description: '',
             },
             smallParaSection: {},
+            cardHeaderTitle: '',
             cardSection: [],
         },
         blockchain: {
@@ -35,6 +45,9 @@ const initState = {
             smallParaSection: {},
             cardHeaderTitle: '',
             cardSection: [],
+            imgPannelSection: {
+                title: '',
+            }
         },
     },
 };

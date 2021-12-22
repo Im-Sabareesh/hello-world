@@ -32,6 +32,7 @@
         "blog": "Blog",
         "copyRightsReserved": "Chaincode Consulting LLP 2021. All rights reserved"
     },
+    "wtsappMsgBoxTxt": "Hi Team, Is there any related service available ?",
     "connectWithUs": "Connect With Us",
     "letsTalk": "Let’s Talk",
     "search": "Search",
@@ -104,7 +105,29 @@
         "defiDevelopment": "DeFi Development"
     },
     "aboutUs": {
-        "title": "About Us"
+        "title": "About Us",
+        "headerVisions": "Our vision is to be the world’s most trusted transparency platform to build a system where reputable people buy & sell assets.",
+        "wtsOurStory": "Whats Our Story?",
+        "ourStory1": "Blockchain is changing the way the world lives and works – but it's only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future.",
+        "ourStory2": "We start with an understanding of your specific aspirations, followed by a practical application of blockchain innovation. The conversation grows as new opportunities come to light along the way.",
+        "ourStory3": "As the leading independent technology organization, we integrate alliances, partnerships, and leaders from every aspect of the blockchain ecosystem.",
+        "ourVision": "Our vision",
+        "visionPara": "We believe that universal access to space will inherently improve human life",
+        "ourMission": "Our mission",
+        "missionPara": "We believe that universal access to space will inherently improve human life",
+        "whatWeDo": "what we do",
+        "whatWeDoPara": "We believe that universal access to space will inherently improve human life",
+        "theWayFwd": "The Way Forward",
+        "theWayFwdPara1": "Blockchain is changing the way the world lives and works – but it's only a means to an end, not the end itself. We can help you apply this technology to drive your transformation into the future. As the leading independent technology organization.",
+        "theWayFwdPara2": "We start with an understanding of your specific aspirations, followed by a practical application of blockchain innovation. The conversation grows as new opportunities come to light along the way.",
+        "letMeetOurTeam": "Lets Meet Our Team",
+        "member": "Members",
+        "designDevMarketing": "Designer - Developer - Marketing",
+        "ourTeam": "Our Team",
+        "ourTeamPara": "Making people smile gets us out of bed every morning. Through thoughtful design we create delightful digital experiences that make life simpler and more enjoyable",
+        "workWithUs": "WORK WITH US",
+        "workWithUsQuesition": "Have you decided to work on a project with us?",
+        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level"
     },
     "careers": {
         "title": "Careers",

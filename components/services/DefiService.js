@@ -97,13 +97,12 @@ const DefiSComponent = (props) => {
 
                             <Col lg={{ span: 6, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain solutions for frictionless
-                                    business
+                                    {defiServList.defi.smallParaSection.title}
                                 </h2>
 
                                 <ul className="ul-list">
                                     {_.map(
-                                        defiServList.defi.smallParaSection,
+                                        defiServList.defi.smallParaSection.content,
                                         (item, i) => (
                                             <li key={_.uniqueId()}> {item} </li>
                                         )
@@ -124,7 +123,7 @@ const DefiSComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our wide range of service include{' '}
+                                {defiServList.defi.cardHeaderTitle}
                             </h2>
                         </Col>
                         {_.map(defiServList.defi.cardSection, (item, i) => (
@@ -142,7 +141,7 @@ const DefiSComponent = (props) => {
                 <Container className="mt-5 pt-2">
                     <ImgPanelSection
                         className="cta-banner cta-banner2 d-flex align-items-center justify-content-end mt-5 mb-5"
-                        title="It’s Never too Late to Start! Get FREE <br/> Consultation from our Experts"
+                        title={defiServList.defi.imgPannelSection.title}
                         link={`/${props.language}/contact`}
                         btnName={t('letsTalk')}
                     />
@@ -158,19 +157,11 @@ const DefiSComponent = (props) => {
                     <Row>
                         <Col md={12} lg={6} className="my-auto">
                             <h2 className="h2 mb-4">
-                                {' '}
-                                Blockchain solutions for frictionless business{' '}
+                                {defiServList.defi.lastParaSection.title}
                             </h2>
 
                             <Paragraph>
-                                Blockchain for business uses a shared and
-                                immutable ledger that can only be accessed by
-                                members with permission. Network members control
-                                what information each organization or member may
-                                see, and what actions each can take. Blockchain
-                                is sometimes called a trustless network not
-                                because business partners don’t trust each
-                                other, but because they don’t have to.
+                                {defiServList.defi.lastParaSection.content}
                             </Paragraph>
                         </Col>
 

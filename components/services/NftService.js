@@ -83,11 +83,10 @@ const NFTSComponent = (props) => {
                         <Row>
                             <Col xl={{ span: 10, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
-                                    Blockchain solutions for frictionless
-                                    business
+                                    {nftServList.nft.smallParaSection.title}
                                 </h2>
                                 {_.map(
-                                    nftServList.nft.smallParaSection,
+                                    nftServList.nft.smallParaSection.content,
                                     (item, i) => (
                                         <Paragraph key={_.uniqueId()}>
                                             {item}
@@ -109,7 +108,7 @@ const NFTSComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our wide range of service include{' '}
+                                {nftServList.nft.cardHeaderTitle}
                             </h2>
                         </Col>
                         {_.map(nftServList.nft.cardSection, (item, i) => (
@@ -128,7 +127,7 @@ const NFTSComponent = (props) => {
                     <ImgPanelSection
                         secClass="service-inner-section3 py-md-5 py-4"
                         className="cta-banner cta-banner3 d-flex align-items-center"
-                        title="Start Now?"
+                        title={nftServList.nft.imgPannelSection.title}
                         link={`/${props.language}/contact`}
                         btnName={t('getQuote')}
                     />

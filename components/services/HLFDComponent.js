@@ -23,7 +23,7 @@ const HLFDSComponent = (props) => {
                         <Col md={6} sm={12} className="my-auto">
                             <div className="d-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
-                                    Service
+                                    {t('header.service')}
                                 </h3>
                             </div>
 
@@ -127,7 +127,7 @@ const HLFDSComponent = (props) => {
                     <Row>
                         <Col md={12} className="text-center mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our wide range of service include{' '}
+                                {hlfdServList.hlfd.cardHeaderTitle}
                             </h2>
                         </Col>
                         {_.map(hlfdServList.hlfd.cardSection, (item, i) => (
