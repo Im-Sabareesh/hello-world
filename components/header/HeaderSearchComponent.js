@@ -22,7 +22,7 @@ const HeaderSearchComponent = ({ state , language}) => {
                     {t('contactUs')}
                 </Button>
             </div>
-            <div className="getintouch-form" id="toggle-search">
+            <div className="getintouch-form content-search" id="toggle-search">
                 <input
                     type="text"
                     placeholder={t('search')}
