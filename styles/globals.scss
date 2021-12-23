@@ -1425,3 +1425,11 @@ p.card-text.show-more {
 .whatsapp_widget_wrapper .whatsapp_widget_pop.close{
     display: none !important;
 }
+
+.home-contact-form, .getintouch-form {
+    .spinner-border {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+}

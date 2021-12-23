@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');
-const { MailDesignationRequired } = require('../errors');
+const { MailDesignationRequired, MailError } = require('../errors');
 
 const data = require('../util/dummy/careers.json');
 router.use((req, res, next) => {
@@ -68,26 +68,28 @@ const sendMail = (options, files, res, next) => {
             .send({
                 template: 'career',
                 message: {
-                    from: 'kathirpandian@arkinfotec.com',
-                    to: options.body.email,
-                    subject: options.body.coverLtr,
+                    from: process.env.fromMail,
+                    to: process.env.fromMail,
                 },
                 locals: {
                     fname: `${options.body.firstName} ${options.body.lastName}`,
                     email: options.body.email,
                     phone: `${options.body.areaCode}${options.body.phoneNumber}`,
                     description: options.body.coverLtr,
-                    services: options.body.service,
                     whenStart: options.body.whenStart,
                     position: options.body.position,
                 },
             })
             .then(() => {
-                res.send('email has been sent!');
+                res.json({
+                    status: true,
+                    message: 'Email successfully sent',
+                });
             })
             .catch((err) => {
                 console.log(err);
-                next(err);
+                // req.status(500).send(err);
+                throw new MailError(err);
             });
     } else {
         throw new MailDesignationRequired();

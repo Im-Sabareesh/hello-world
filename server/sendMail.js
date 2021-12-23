@@ -1,8 +1,8 @@
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');
-const { MailDesignationRequired } = require('./errors');
+const { MailError } = require('./errors');
 
-function sendMail(options, req, next) {
+function sendMail(locales, template, res) {
     let transport = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
@@ -11,36 +11,30 @@ function sendMail(options, req, next) {
             pass: process.env.MAIL_PASSWORD,
         },
     });
-    if (options.body.email) {
-        const email = new Email({
-            transport: transport,
-            send: true,
-            preview: false,
-        });
-        email
-            .send({
-                template: 'mars',
-                message: {
-                    from: 'kathirpandian@arkinfotec.com',
-                    to: options.body.email,
-                },
-                locals: {
-                    fname: options.body.firstname,
-                    email: options.body.email,
-                    phone: options.body.phone,
-                    description: options.body.description,
-                    services: options.body.service,
-                },
-            })
-            .then(() => {
-                req.send('email has been sent!');
-            })
-            .catch((err) => {
-                console.log(err);
-                next(err);
+    const email = new Email({
+        transport: transport,
+        send: true,
+        preview: false,
+    });
+    email
+        .send({
+            template,
+            message: {
+                from: process.env.fromMail,
+                to: process.env.fromMail,
+            },
+            locals: locales,
+        })
+        .then(() => {
+            res.json({
+                status: true,
+                message: 'Email successfully sent',
             });
-    } else {
-        throw new MailDesignationRequired();
-    }
+        })
+        .catch((err) => {
+            // req.status(500).send(err);
+           throw new MailError(err);
+        });
 }
+
 module.exports = sendMail;

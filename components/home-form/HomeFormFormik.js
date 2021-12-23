@@ -40,6 +40,7 @@ const HomeFormFormik = (props) => {
     const handleVerify = (token) => {
         console.log('token -- > ', token);
     };
+    const [loading, setLoading] = React.useState(false);
 
     return (
         <>
@@ -48,14 +49,17 @@ const HomeFormFormik = (props) => {
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
                     onSubmit={(fields, { resetForm }) => {
+                        setLoading(true);
                         axios
-                            .post('sent-mail', fields)
+                            .post('/api/v1/send-email/home', fields)
                             .then((response) => {
+                                setLoading(false);
                                 toaster('Form Submitted .!', 'success');
                                 resetForm({ values: '' });
                             })
                             .catch((err) => {
                                 console.log(err);
+                                setLoading(false);
                             });
                     }}
                 >
@@ -182,6 +186,7 @@ const HomeFormFormik = (props) => {
                                         btnVarient="red-btn"
                                         type="submit"
                                         className="btn-lg"
+                                        disabled={loading}
                                     >
                                         {t('sendRequest')}
                                     </Button>
