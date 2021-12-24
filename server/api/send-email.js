@@ -3,7 +3,6 @@ const router = express.Router();
 const sendMail = require('../sendMail');
 
 router.post('/home', (req, res) => {
-    console.log('send email home')
     const { firstname, email, phone, description} = req.body;
     const locales = {
         fname: firstname,
