@@ -264,6 +264,148 @@
     .block-chain-feature-card {
         min-height: 420px;
     }
+
+
+
+    .enterprise-section3
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .h2 {
+            font-size: 27px !important;
+            line-height: 40px !important;
+        }
+        .featured-box-container-new {
+             padding: 15px; 
+             margin-bottom: 20px;
+             background-size: cover;
+             .featured-icon-new{
+                height: 90px;
+             }
+            .featured-content {
+                height: auto;
+                p{
+                    margin-bottom: 15px;
+                    &:not(p.paragraph-text){
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }  
+        } 
+    } 
+    .section-glow-banner {
+        height: auto;
+        padding-bottom: 27px;
+        .banner-content {
+            padding: 35px 15px 0 15px;
+        }
+        .floating-content {
+            margin-top: 0;
+            padding: 30px 25px;
+        }
+    }
+    .orange-cta-section 
+    {
+        .getstarted-heading {
+            font-size: 16px;
+            line-height: 29px;
+            margin-bottom: 15px;
+        }
+    }
+    .white-outline-btn {
+        padding: 0 30px;
+        font-size: 15px;
+        height: 45px;
+    }
+    .enterprise-section1{
+        padding-bottom: 65px;
+        .nft-service-img-div{
+            text-align: center;
+        }
+    }
+    .next-generation-accordion {
+        .accordion {
+            margin-bottom: 0px;
+        }
+        .accordion-item:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        .accordion-button:not(.collapsed){
+            font-size: 17px !important;
+        }
+        .accordion-body{
+            font-size: 16px !important;
+        }
+        .accordion-button {
+            font-size: 16px !important;
+        }
+    }
+    .enterprise-section4 {
+        padding: 30px 0 30px 0;
+    }
+    .white-footer-section {
+        .brand-logo{
+            margin-bottom: 0 !important;
+            height: 100px;
+        }
+    }
+    .blockchain-consulting-page {
+        .enterprise-section1 {
+            .h1 {
+                line-height: 48px !important;
+                font-size: 32px !important;
+            }
+        }
+    }
+    .develop-hyperledger {
+        height: auto;
+        padding-bottom: 0;
+        .floating-content {
+            height: auto;
+            padding: 30px;
+            margin-top: 0;
+            p{
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+        .floating-content h3, 
+        .floating-content .h3 {
+            margin-bottom: 20px;
+            font-size: 23px;
+        }
+        .floating-content button{
+            margin-top: 10px;
+        }
+        .banner-content 
+        {
+            padding: 30px 15px 0 15px;
+            br{
+                display: none;
+            }
+        }
+        .what-hyperledger-img{
+            margin-top: 15px;
+        }
+        
+    }
+    .why-hyperledger{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .hyperledger-service-page .enterprise-section1 .h1 {
+        font-size: 28px !important;
+        line-height: 40px !important;
+    }
+    .blockchain-consulting-page, .hyperledger-service-page{
+        .heading-line{
+            width: 100px;
+            margin-left: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -489,6 +631,123 @@
         color: color('light-primary');
         min-height: 300px;
     }
+
+    .enterprise-section3
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .h2 {
+            font-size: 28px !important;
+        }
+        .featured-box-container-new {
+             padding: 15px; 
+             margin-bottom: 20px;
+             .featured-icon-new{
+                height: 100px;
+             }
+            .featured-content {
+                height: 220px;
+                p{
+                    margin-bottom: 15px;
+                }
+            }  
+        } 
+    } 
+    .section-glow-banner {
+        height: auto;
+        padding-bottom: 46px;
+        .banner-content {
+            padding: 46px 15px 0 15px;
+        }
+        .floating-content {
+            margin-top: 0;
+            padding: 30px 25px;
+        }
+    }
+    .orange-cta-section 
+    {
+        .getstarted-heading {
+            font-size: 20px;
+            line-height: 35px;
+            margin-bottom: 15px;
+        }
+    }
+    .white-outline-btn {
+        padding: 0 40px;
+    }
+    .enterprise-section1{
+        padding-bottom: 65px;
+        .nft-service-img-div{
+            text-align: center;
+        }
+    }
+    .next-generation-accordion {
+        .accordion-item:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        .accordion-button:not(.collapsed){
+            font-size: 20px !important;
+        }
+        .accordion-body{
+            font-size: 16px !important;
+        }
+    }
+    .enterprise-section4 {
+        padding: 30px 0 30px 0;
+    }
+    .white-footer-section {
+        .brand-logo{
+            height: 100px;
+            margin-bottom: 0 !important;
+        }
+    }
+    .blockchain-consulting-page {
+        .enterprise-section1 {
+            .h1 {
+                line-height: 48px !important;
+            }
+        }
+    }
+
+    .develop-hyperledger {
+        height: auto;
+        padding-bottom: 0;
+        .floating-content {
+            height: auto;
+            padding: 30px;
+            margin-top: 0;
+            p{
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+        .floating-content h3, 
+        .floating-content .h3 {
+            margin-bottom: 20px;
+        }
+        .floating-content button{
+            margin-top: 20px;
+        }
+        .banner-content 
+        {
+            padding: 40px 15px 0 15px;
+            br{
+                display: none;
+            }
+        }
+        .what-hyperledger-img{
+            margin-top: 10px;
+        }
+        
+    }
+    .why-hyperledger{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .hyperledger-service-page .enterprise-section1 .h1 {
+        font-size: 29px !important;
+        line-height: 38px !important;
+    }
    
 }
 
@@ -663,6 +922,104 @@
         color: color('light-primary');
         min-height: 235px;
     }
+
+
+    .enterprise-section3
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .h2 {
+            font-size: 30px !important;
+        }
+        .featured-box-container-new {
+             padding: 20px; 
+            .featured-content {
+                height: 220px;
+                p{
+                    margin-bottom: 15px;
+                }
+            }  
+        } 
+    } 
+    .section-glow-banner {
+        height: auto;
+        padding-bottom: 46px;
+        .banner-content {
+            padding: 46px 0 0 0;
+        }
+        .floating-content {
+            margin-top: 0;
+            padding: 35px 25px;
+        }
+    }
+    .orange-cta-section 
+    {
+        .getstarted-heading {
+            font-size: 25px;
+            line-height: 43px;
+            margin-bottom: 20px;
+        }
+    }
+    .white-outline-btn {
+        padding: 0 60px;
+    }
+    .enterprise-section1{
+        padding-bottom: 65px;
+        .nft-service-img-div{
+            text-align: center;
+        }
+    }
+    .next-generation-accordion {
+        .accordion-item:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+    .enterprise-section4 {
+        padding: 40px 0 40px 0;
+    }
+    .white-footer-section {
+        .row {
+            .text-md-center {
+                text-align: center !important;
+                margin-bottom: 40px !important;
+            } 
+            .brand-logo{
+                margin-bottom: 0 !important;
+                height: 110px;
+            }
+        }
+    }
+
+    .develop-hyperledger {
+        height: auto;
+        padding-bottom: 0;
+        .floating-content {
+            height: auto;
+            padding: 30px;
+            margin-top: 0;
+        }
+        .floating-content h3, 
+        .floating-content .h3 {
+            margin-bottom: 20px;
+        }
+        .floating-content button{
+            margin-top: 20px;
+        }
+        .banner-content 
+        {
+            padding: 50px 15px 0 15px;
+            br{
+                display: none;
+            }
+        }
+        .what-hyperledger-img{
+            margin-top: 15px;
+        }
+    }
+    .why-hyperledger{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -749,6 +1106,71 @@
     .service-inner-section1 .nft-service-img-div {
         margin-bottom: 0;
     }
+
+    .enterprise-section3
+    {
+        padding-top: 140px;
+        padding-bottom: 70px;
+        .featured-box-container-new {
+             padding-right: 0; 
+            .featured-content {
+                height: 170px;
+            }  
+        } 
+    } 
+    .section-glow-banner {
+        height: 324px;
+        .banner-content {
+            padding: 46px 0 36px 55px;
+        }
+    }
+    .orange-cta-section 
+    {
+        .getstarted-heading {
+            font-size: 29px;
+            line-height: 52px;
+            margin-bottom: 25px;
+        }
+    }
+    .white-outline-btn {
+        padding: 0 60px;
+    }
+    .develop-hyperledger {
+        height: 595px;
+        .floating-content {
+            height: auto;
+            padding: 30px;
+            margin-top: -90px;
+        }
+        .floating-content h3, 
+        .floating-content .h3 {
+            margin-bottom: 30px;
+        }
+        .floating-content button{
+            margin-top: 20px;
+        }
+        .banner-content 
+        {
+            padding: 46px 0 36px 25px;
+                br{
+                    display: none;
+                }
+        }
+        .what-hyperledger-img{
+            margin-top: 0;
+        }
+    }
+    .why-hyperledger{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .hyperledger-service-page,
+    .blockchain-consulting-page
+    {
+        .h3{
+            font-size: 18px;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -788,7 +1210,21 @@
             padding:0px 50px;
         }
     }
-
+    .enterprise-section3 
+    {
+        .featured-box-container-new {
+            .featured-content {
+                height: 200px;
+            }
+        }
+    }
+    .section-glow-banner {
+        height: 274px;
+        .banner-content {
+            padding: 35px ​0 0 55px;
+        }
+    }
+   
 
 }
 

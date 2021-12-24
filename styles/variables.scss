@@ -8,11 +8,14 @@ $colors: (
     secondary: #6f75ff,
     light-primary: #ffffff,
     light-secondary: #ced9eb,
+    light-tertiary: #f2f5f9,
     alert-info-bg: #cff4fc,
     alert-info-border: #b6effb,
     alert-info-color: #055160,
     dark-primary: #121212,
     dark-secondary: #404852,
+    dark-tertiary: #131313,
+    dark-fourth: #222222,
     gradient-primary: (90deg, #6f74ff 0%, #5e9dff 100%,),
     gradient-primary-opacity: (90deg, #6f74ff15 0%, #5e9dff15 100%,),
     gradient-secondary: (90deg, #6f75ff 0%, #999dff 50.52%, #adb1ff 100%,),
@@ -38,6 +41,9 @@ $colors: (
 
 $primaryFont: (
     'Mulish', sans-serif);
+
+$secondaryFont: (
+    'Poppins', sans-serif);
 
 $heading1: 56px;
 

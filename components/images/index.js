@@ -61,7 +61,25 @@ const defiicon = '/assets/icons/DeFi-Development.png';
 const gdprIcon = '/assets/icons/GDPR-Compliance-icon.png';
 const nftIcon = '/assets/icons/NFT-Development-icon.png';
 const obortechIcon = '/assets/icons/Obortech-Smart-Hub-icon.png';
-
+const enterpriseBlockchain = '/assets/images/enterprise-blockchain-img.png';
+const advisoryIcon = '/assets/images/consulting-service-icon (1).png';
+const proofconceptIcon = '/assets/images/consulting-service-icon (2).png';
+const blockchaindevelopmentIcon = '/assets/images/consulting-service-icon (3).png';
+const trainingIcon = '/assets/images/consulting-service-icon (4).png';
+const featurebgadvisoryIcon = '/assets/images/feature-img1.png';
+const featurebgproofconceptIcon = '/assets/images/feature-img2.png';
+const featurebgblockchaindevelopmentIcon = '/assets/images/feature-img3.png';
+const featurebgtrainingIcon = '/assets/images/feature-img4.png';
+const hyperledgerBanner = '/assets/images/hyperledger-banner-img.png';
+const performanceIcon = '/assets/images/perfomance-scalability.png';
+const hyperledgerperformanceIcon = '/assets/images/perfomance-scalability.png';
+const governanceIcon = '/assets/images/governance.png';
+const hyperledgergovernanceIcon = '/assets/images/feature-icon2.png';
+const securityIcon = '/assets/images/security.png';
+const hyperledgersecurityIcon = '/assets/images/feature-icon3.png';
+const privacyIcon = '/assets/images/privacy.png';
+const hyperledgerprivacyIcon = '/assets/images/feature-icon4.png';
+const hyperledgerimg = '/assets/images/what-hyperledger-img.png';
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
 // import smartChain from '@public/assets/icons/service-icon3.png';
@@ -133,4 +151,23 @@ export default {
     nftIcon,
     obortechIcon,
     closeIcon,
+    enterpriseBlockchain,
+    advisoryIcon,
+    proofconceptIcon,
+    blockchaindevelopmentIcon,
+    trainingIcon,
+    featurebgadvisoryIcon,
+    featurebgproofconceptIcon,
+    featurebgblockchaindevelopmentIcon,
+    featurebgtrainingIcon,
+    hyperledgerBanner,
+    performanceIcon,
+    hyperledgerperformanceIcon,
+    governanceIcon,
+    hyperledgergovernanceIcon,
+    securityIcon,
+    hyperledgersecurityIcon,
+    privacyIcon,
+    hyperledgerprivacyIcon,
+    hyperledgerimg
 };

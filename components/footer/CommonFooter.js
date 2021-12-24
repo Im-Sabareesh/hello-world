@@ -82,7 +82,7 @@ const RadiusFooter = (props) => {
         ];
 
     return (
-        <footer className={`${props.radius && 'home-footer'} footer-section`}>
+        <footer className={`${props.radius && 'home-footer'} ${props.whitebg ? 'white-footer-section' : 'footer-section'}`}>
             <Container>
                 <Row className="py-5 pb-1">
                     {/* align center added for home page  */}
@@ -102,12 +102,21 @@ const RadiusFooter = (props) => {
                                 // onClick={(e) => e.preventDefault()}
                                 className="brand-logo"
                             >
-                                <MyImage
-                                    src={images.ccWhiteLogo}
-                                    alt="..."
-                                    width={219}
-                                    height={140}
-                                />
+                                 {props.whitebg ? 
+                                    <MyImage
+                                        src={images.logo}
+                                        alt="..."
+                                        width={120}
+                                        height={120}
+                                        className="whitefooter-logo"
+                                    /> :
+                                    <MyImage
+                                        src={images.ccWhiteLogo}
+                                        alt="..."
+                                        width={219}
+                                        height={140}
+                                    />
+                                }
                             </a>
                         </Link>
                         <Paragraph className="light-text-color text-shadow mt-2">
