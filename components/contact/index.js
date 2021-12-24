@@ -57,9 +57,7 @@ const ContactComponent = (props) => {
                                         {t('contactUs')}
                                     </H1>
                                     <Paragraph>
-                                        lets start something great togeather.
-                                        Connect with one of the experts from the
-                                        team today !
+                                        {t('contact.headerContent')}
                                     </Paragraph>
                                 </div>
                             </Col>
