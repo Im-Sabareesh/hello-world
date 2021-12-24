@@ -102,8 +102,8 @@ const BlockchainConsultingComponent = (props) => {
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={546}
-                                    height={454}
+                                    width={778}
+                                    height={716}
                                 />
                             </div>
                         </Col>
@@ -257,7 +257,7 @@ const BlockchainConsultingComponent = (props) => {
                                 key={_.uniqueId()}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    if (item.link) {
+                                    if (item.link && item.link !== '#') {
                                         router.push(
                                             `${props.language}/${item.link}`
                                         );

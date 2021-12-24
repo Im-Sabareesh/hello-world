@@ -191,7 +191,7 @@ const HLFDSComponent = (props) => {
                                 key={_.uniqueId()}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    if (item.link) {
+                                    if (item.link && item.link !== '#') {
                                         router.push(
                                             `${props.language}/${item.link}`
                                         );
