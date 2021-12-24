@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const Email = require('email-templates');
 const { MailError } = require('./errors');
 
-function sendMail(locales, template, res) {
+function sendMail(locales, template, res, message = {}) {
     let transport = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
@@ -15,6 +15,7 @@ function sendMail(locales, template, res) {
         transport: transport,
         send: true,
         preview: false,
+        message: message
     });
     email
         .send({
