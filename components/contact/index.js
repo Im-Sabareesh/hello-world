@@ -57,9 +57,7 @@ const ContactComponent = (props) => {
                                         {t('contactUs')}
                                     </H1>
                                     <Paragraph>
-                                        lets start something great togeather.
-                                        Connect with one of the experts from the
-                                        team today !
+                                        {t('contact.headerContent')}
                                     </Paragraph>
                                 </div>
                             </Col>
@@ -151,7 +149,7 @@ const ContactComponent = (props) => {
                                     <h3 className="h3">Follow Us </h3>
                                     <Paragraph className="contactus-sociallinks">
                                         <a
-                                            href="#"
+                                            href='https://www.facebook.com/enterpriseblockchain/'
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
@@ -162,7 +160,7 @@ const ContactComponent = (props) => {
                                             />
                                         </a>
                                         <a
-                                            href="#"
+                                            href='https://www.instagram.com/chaincodeconsulting/'
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
@@ -173,7 +171,7 @@ const ContactComponent = (props) => {
                                             />
                                         </a>
                                         <a
-                                            href="#"
+                                            href='https://twitter.com/chaincodellp'
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
@@ -184,7 +182,7 @@ const ContactComponent = (props) => {
                                             />
                                         </a>
                                         <a
-                                            href="#"
+                                            href='https://www.youtube.com/channel/UC1jhY2UizDbEv7Pi4STg9DA'
                                             onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
@@ -192,17 +190,6 @@ const ContactComponent = (props) => {
                                                 alt=""
                                                 height={25}
                                                 width={34}
-                                            />
-                                        </a>
-                                        <a
-                                            href="#"
-                                            onClick={(e) => e.preventDefault()}
-                                        >
-                                            <MyImage
-                                                src={images.wpPng}
-                                                alt=""
-                                                height={64}
-                                                width={64}
                                             />
                                         </a>
                                     </Paragraph>

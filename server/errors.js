@@ -27,9 +27,19 @@ class MailDesignationRequired extends Error {
     }
 }
 
+class MailError extends Error {
+    constructor(error) {
+        super();
+        this.name = 'Something went wrong';
+        this.message = error; // detailed error message
+        this.statusCode = 422; // error code for responding to client
+    }
+}
+
 module.exports = {
     CharacterCountExceeded,
     LongTitleError,
     LongBodyError,
     MailDesignationRequired,
+    MailError,
 };

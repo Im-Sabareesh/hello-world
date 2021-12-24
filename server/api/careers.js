@@ -1,9 +1,7 @@
 const multer = require('multer');
 const express = require('express');
 const router = express.Router();
-const nodemailer = require('nodemailer');
-const Email = require('email-templates');
-const { MailDesignationRequired } = require('../errors');
+const sendMail = require('../sendMail');
 
 const data = require('../util/dummy/careers.json');
 router.use((req, res, next) => {
@@ -37,7 +35,15 @@ router.post('/apply-now', (req, res, next) => {
                 console.log('error -- >', err);
                 return res.end('Error');
             } else {
-                sendMail(req, req.files, res, next);
+                const data = {
+                    fname: `${req.body.firstName} ${req.body.lastName}`,
+                    email: req.body.email,
+                    phone: `${req.body.areaCode}${req.body.phoneNumber}`,
+                    description: req.body.coverLtr,
+                    whenStart: req.body.whenStart,
+                    position: req.body.position,
+                };
+                sendMail(data, 'career', res, {attachments: req.files});
             }
         });
     } catch (err) {
@@ -45,53 +51,5 @@ router.post('/apply-now', (req, res, next) => {
         res.json({ error: err.message || err.toString() });
     }
 });
-
-const sendMail = (options, files, res, next) => {
-    let transport = nodemailer.createTransport({
-        host: process.env.MAIL_HOST,
-        port: process.env.MAIL_PORT,
-        auth: {
-            user: process.env.MAIL_USERNAME,
-            pass: process.env.MAIL_PASSWORD,
-        },
-    });
-    if (options.body.email) {
-        const email = new Email({
-            transport: transport,
-            send: true,
-            preview: false,
-            message: {
-                attachments: files,
-            },
-        });
-        email
-            .send({
-                template: 'career',
-                message: {
-                    from: 'kathirpandian@arkinfotec.com',
-                    to: options.body.email,
-                    subject: options.body.coverLtr,
-                },
-                locals: {
-                    fname: `${options.body.firstName} ${options.body.lastName}`,
-                    email: options.body.email,
-                    phone: `${options.body.areaCode}${options.body.phoneNumber}`,
-                    description: options.body.coverLtr,
-                    services: options.body.service,
-                    whenStart: options.body.whenStart,
-                    position: options.body.position,
-                },
-            })
-            .then(() => {
-                res.send('email has been sent!');
-            })
-            .catch((err) => {
-                console.log(err);
-                next(err);
-            });
-    } else {
-        throw new MailDesignationRequired();
-    }
-};
 
 module.exports = router;

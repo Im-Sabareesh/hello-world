@@ -957,21 +957,6 @@ button:focus {
 }
 
 .getintouch-form {
-    width:0px;
-    transition: all .5s;
-
-    &.toggle-active
-    {
-        width:240px;
-
-        .form-control {
-            padding-left: 20px !important;
-            padding-right:20px !important;
-            height: 47px !important;
-        }
-    }
-
-    margin-left:10px;
     .form-group {
         margin-bottom: 32px;
     }
@@ -988,8 +973,8 @@ button:focus {
         border-radius: 30px;
         border: none;
         height: 60px;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     input[type="text"]:disabled {
@@ -1013,6 +998,30 @@ button:focus {
     .msg-field {
         height: 225px;
         resize: none;
+    }
+}
+
+.content-search {
+
+    width:0px;
+    transition: all .5s;
+
+    &.toggle-active
+    {
+        width:240px;
+
+        .form-control {
+            padding-left: 20px !important;
+            padding-right:20px !important;
+            height: 47px !important;
+        }
+    }
+
+    margin-left:10px;
+
+    .form-control {
+        padding-left: 0px !important;
+        padding-right:0px !important;
     }
 }
 
@@ -1417,7 +1426,13 @@ p.card-text.show-more {
     display: none !important;
 }
 
-
+.home-contact-form, .getintouch-form {
+    .spinner-border {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+}
 
 // 22/12/21
 .blockchain-consulting-page,

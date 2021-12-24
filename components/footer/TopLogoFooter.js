@@ -19,7 +19,7 @@ const socialMediaIcons = [
         link: 'https://twitter.com/chaincodellp',
         icon: images.twitterSVG
     }, {
-        link: '#',
+        link: 'https://www.youtube.com/channel/UC1jhY2UizDbEv7Pi4STg9DA',
         icon: images.uTubeSVG
     }, {
         link: 'https://in.linkedin.com/company/chaincode-consulting-llp',

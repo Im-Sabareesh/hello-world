@@ -41,6 +41,7 @@ const ContactFormFormik = (props) => {
     const handleVerify = (token) => {
         console.log('token -- > ', token);
     };
+    const [loading, setLoading] = React.useState(false);
 
     return (
         <>
@@ -49,13 +50,18 @@ const ContactFormFormik = (props) => {
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
                     onSubmit={(fields, { resetForm }) => {
+                        setLoading(true);
                         axios
-                            .post('sent-mail', fields)
+                            .post('/api/v1/send-email/contact', fields)
                             .then((response) => {
+                                setLoading(false);
                                 toaster('Form Submitted .!', 'success');
                                 resetForm({ values: '' });
                             })
-                            .catch((err) => console.log(err));
+                            .catch((err) => {
+                                console.log(err);
+                                setLoading(false);
+                            });
                     }}
                 >
                     {({ errors, status, touched, handleSubmit }) => (
@@ -196,6 +202,7 @@ const ContactFormFormik = (props) => {
                                     btnVarient="red-btn"
                                     className="red-btn-shadow btn-lg"
                                     type="submit"
+                                    disabled={loading}
                                 >
                                     {t('contactUsForm.sendMsg')}
                                 </Button>
