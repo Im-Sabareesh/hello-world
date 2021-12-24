@@ -152,7 +152,7 @@ const DefiSComponent = (props) => {
 
             {/*--------------- defi Services section4 start---------- */}
 
-            <section className="service-inner-section4 py-5">
+            {/* <section className="service-inner-section4 py-5">
                 <Container>
                     <Row>
                         <Col md={12} lg={6} className="my-auto">
@@ -178,7 +178,7 @@ const DefiSComponent = (props) => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
             {/*--------------- defi Services section4 end---------- */}
         </>

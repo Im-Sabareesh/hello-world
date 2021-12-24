@@ -32,7 +32,7 @@ export const getServerSideProps = async ({ params, res }) => {
                 cid: cid,
             },
         };
-    } catch {
+    } catch (err) {
         res.statusCode = 404;
         return {
             props: {},

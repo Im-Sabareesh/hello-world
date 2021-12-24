@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 import styles from '../style.module.scss';
@@ -10,6 +10,7 @@ export default function ButtonComponent({
     type,
     size,
     btnVarient,
+    disabled
 }) {
     return (
         <Button
@@ -17,8 +18,10 @@ export default function ButtonComponent({
             type={type}
             size={size}
             className={`${styles[btnVarient]} ${btnVarient} ${className}`}
+            disabled={disabled}
             onClick={(e) => onClick(e)}
         >
+            { disabled && <Spinner animation="border" role="status" className={`${btnVarient}`}/> }
             {children}
 
             <style jsx>{`
