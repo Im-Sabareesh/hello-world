@@ -169,5 +169,17 @@
         "selectService": "Select service",
         "yourMsg": "Your Message",
         "sendMsg": "Send Message"
+    },
+    "blockchainConsulting": {
+        "advisory": "Advisory",
+        "proofConcept": "Proof Of Concept",
+        "blockchainDevelopment": "Blockchain Development",
+        "training": "Training"
+    },
+    "hyperledgerFabric": {
+        "performanceScalabilty": "Performance & Scalabilty",
+        "governance": "Governance",
+        "security": "Security",
+        "privacy": "Privacy"
     }
 }

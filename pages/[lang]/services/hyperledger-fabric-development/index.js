@@ -13,7 +13,7 @@ const HLFDServices = (props) => {
         dispatch(servicesAction.fetchList());
     }, []);
     return (
-        <div className="nft-service-page">
+        <div className="nft-service-page hyperledger-service-page">
             <Meta title={t('nftDevelopement')} desc="" />
 
             <HLFDSComponent language={props.language} />

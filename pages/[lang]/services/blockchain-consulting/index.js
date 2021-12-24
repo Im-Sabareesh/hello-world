@@ -13,7 +13,7 @@ const BlockChainService = (props) => {
         dispatch(servicesAction.fetchList());
     }, []);
     return (
-        <div className="nft-service-page defi-service-page">
+        <div className="nft-service-page defi-service-page blockchain-consulting-page">
             <Meta title={t('blockChainConsulting')} desc="" />
 
             <BlockChainComponent language={props.language} />
