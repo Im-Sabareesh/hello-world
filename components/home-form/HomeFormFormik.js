@@ -26,9 +26,8 @@ const HomeFormFormik = (props) => {
             .required(t('validation.required', { name: 'Phone' }))
             .min(10, t('validation.min', { name: 'Phone', size: 10 }))
             .max(10, t('validation.max', { name: 'Phone', size: 10 })),
-        accepTC: Yup.bool().oneOf([true], t('validation.acceptance'), {
-            name: 'terms and conditions',
-        }),
+        accepTC: Yup.bool()
+            .oneOf([true], t('validation.acceptance', { name: 'terms and conditions'})),
     });
     const initialValues = {
         firstname: '',

@@ -150,7 +150,6 @@ const ContactComponent = (props) => {
                                     <Paragraph className="contactus-sociallinks">
                                         <a
                                             href='https://www.facebook.com/enterpriseblockchain/'
-                                            onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
                                                 src={images.fbPng}
@@ -161,7 +160,6 @@ const ContactComponent = (props) => {
                                         </a>
                                         <a
                                             href='https://www.instagram.com/chaincodeconsulting/'
-                                            onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
                                                 src={images.instaPgn}
@@ -172,7 +170,6 @@ const ContactComponent = (props) => {
                                         </a>
                                         <a
                                             href='https://twitter.com/chaincodellp'
-                                            onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
                                                 src={images.twitterPng}
@@ -183,7 +180,6 @@ const ContactComponent = (props) => {
                                         </a>
                                         <a
                                             href='https://www.youtube.com/channel/UC1jhY2UizDbEv7Pi4STg9DA'
-                                            onClick={(e) => e.preventDefault()}
                                         >
                                             <MyImage
                                                 src={images.uTubePng}
