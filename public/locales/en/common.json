@@ -79,8 +79,8 @@
         "blockChainLink": "BLOCKCHAIN",
         "readyGetStarted": "Ready to Get Started?",
         "chooseUs": "Why Choose Us",
-        "chooseUsDesc1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-        "chooseUsDesc2": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+        "chooseUsDesc1": "Transitioning from old business processes to a decentralized space can be a daunting task and has a lot on stake. Our proven excellence in innovating, building and launching real-world DLT applications makes us worthy of your trust.",
+        "chooseUsDesc2": "With over 40 up and running products around the world, Chain Code has partnered with startups, small and medium enterprises and large corporations to reinvent business, discover new opportunities and deliver measurable success. ",
         "quickStats": "Quick Stats",
         "industryAwards": "Industry Awards",
         "projects": "Projects",
@@ -103,7 +103,14 @@
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
         "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
-        "defiDevelopment": "DeFi Development"
+        "defiDevelopment": "DeFi Development",
+        "expertBlockchainConsulting": "Expert Blockchain Consulting",
+        "superchargeBlockchainCapabilities": "Supercharge your business with disruptive blockchain capabilities",
+        "weSimplifyExcellence": "We simplify blockchain adoption with our innovative design thinking & development excellence.",
+        "blockchainRevolutionizingBusiness": "How Blockchain is Revolutionizing Business",
+        "blockchainRevolutionizingBusinessDesc": "Businesses thrive on relationships and relationships flourish with trust. With blockchain, trust becomes a rule rather than a choice.",
+        "blockchainRevolutionizingBusinessDesc1": "Blockchain connects fragmented systems and makes tech-based consortiums possible-  ushering in a new era of digital collaborations. With the inherited capabilities of shared ledgers, cryptography, smart contracts, and consensus,  blockchain is helping solve complex business problems today.",
+        "servicesOfferDesc": "At Chaincode, we are committed to bring the potential of blockchain to every enterprise through our domain expertise and unparalleled credibility. Here is how we are helping create a better business world."
     },
     "aboutUs": {
         "title": "About Us",

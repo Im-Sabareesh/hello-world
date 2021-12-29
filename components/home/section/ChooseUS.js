@@ -11,27 +11,27 @@ export default function ChooseUsSection() {
     const chooseUSList = [
         {
             icon: images.whyChose,
-            name: 'Focus on Innovation',
+            name: 'Design Thinking-led Innovation',
             describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                'We are passionate about bringing the leverage of blockchain to business. Our experts employ a design thinking-driven approach to identify blockchain use cases in your industry and build a robust strategy to implement them.',
         },
         {
             icon: images.truePartner,
-            name: 'True Partners',
+            name: 'Your Tech Partners',
             describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                'We work as your partners. You cut down on R&D time and expense by delegating blockchain deployment to us. We understand the why and then help implement the what and the how of an idea into stable, value-driven and scalable DLT based solutions.',
         },
         {
             icon: images.devOps,
-            name: 'DevOps',
+            name: 'Word-class Product Team on-demand',
             describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                'Our team of hand-picked tech talent can design, build and launch and scale your idea into real-world blockchain-based applications. Our dedicated team model allows flexibility and transparency to the entire process.',
         },
         {
             icon: images.dedTeam,
-            name: 'Dedicated Teams',
+            name: 'Agile and DevOps Tandem',
             describe:
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                'Our culture boasts of using Agile to understand and deliver on the ever-evolving needs of our clients and with DevOps in tandem, we ship faster and better. Using only the best case practices of the industry, our team has your back to test your blockchain MVP or launch a whole suite of apps. ',
         },
     ];
 

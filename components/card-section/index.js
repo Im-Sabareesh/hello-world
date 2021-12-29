@@ -26,7 +26,9 @@ const CardSection = ({ className, fullCard, item, footerClass, footer, cardBodyC
                     <Card.Title>
                         <h3 className="h3 mb-3">{item.title}</h3>
                     </Card.Title>
-                    <Card.Text>{item.subtitle}</Card.Text>
+                    <Card.Text dangerouslySetInnerHTML={
+                        {__html: item.subtitle}
+                    }></Card.Text>
                     {!footerClass && (
                         <a
                             href="#"

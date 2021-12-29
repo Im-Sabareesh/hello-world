@@ -38,10 +38,11 @@ export default function BlockchainBusinessSection() {
                 <Row>
                     <Col md={12} lg={6} className="mt-5">
                         <h2 className="dark-text-color mb-4 h2">
-                            {t('home.blockChainEnhance')}
+                            {t('home.blockchainRevolutionizingBusiness')}
                         </h2>
 
-                        <Paragraph>{t('home.blockChainEnhanceDesc')}</Paragraph>
+                        <Paragraph>{t('home.blockchainRevolutionizingBusinessDesc')}</Paragraph>
+                        <Paragraph>{t('home.blockchainRevolutionizingBusinessDesc1')}</Paragraph>
                     </Col>
 
                     <Col

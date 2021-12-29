@@ -47,14 +47,14 @@ export default function FeaturedSection(props) {
                     <Col md={10} lg={8} xl={7} xxl={6}>
                         <div className="d-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
-                                {t('home.blockChainTechnology')}
+                                {t('home.expertBlockchainConsulting')}
                             </h3>
                             <div className="heading-line"> </div>
                         </div>
 
-                        <H1>{t('home.provideEnterprise')}</H1>
+                        <H1>{t('home.superchargeBlockchainCapabilities')}</H1>
 
-                        <Paragraph>{t('home.provideEnterpriseDesc')}</Paragraph>
+                        <Paragraph>{t('home.weSimplifyExcellence')}</Paragraph>
 
                         <div className="button-outer">
                             <Button
