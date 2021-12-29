@@ -14,7 +14,7 @@ const BlockChainService = (props) => {
     }, []);
     return (
         <div className="nft-service-page defi-service-page blockchain-consulting-page">
-            <Meta title={t('blockChainConsulting')} desc="" />
+            <Meta title={t('enterpriseBlockChainConsulting')} desc="" />
 
             <BlockChainComponent language={props.language} />
         </div>

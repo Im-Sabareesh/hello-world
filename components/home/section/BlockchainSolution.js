@@ -76,11 +76,11 @@ export default function BlockChainSolutionSection() {
                         )
                     )}
 
-                    <Col md={12} className="text-center my-5">
+                    {/* <Col md={12} className="text-center my-5">
                         <Button btnVarient="red-btn" className="min-size-btn">
                             {t('viewMore')}
                         </Button>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </section>

@@ -39,6 +39,7 @@
     "defiDevelopment": "DeFi Development",
     "hdfDevelopment": "Hyperledger Fabric Development",
     "blockChainConsulting": "Blockchain Consulting",
+    "enterpriseBlockChainConsulting": "Enterprise Blockchain Consulting",
     "nftDevelopement": "NFT Development",
     "viewMore": "View More",
     "getQuote": "Get a quote",
@@ -167,6 +168,13 @@
         "contactNumber": "Contact Number",
         "serviceInterestedIn": "Service you are interested in",
         "selectService": "Select service",
+        "serviceOptions": {
+            "interestedIn": "Interested in",
+            "freeConsultation": "Free Consultation",
+            "projectDiscussion": "Project Discussion",
+            "training": "Training",
+            "careers": "Careers"
+        },
         "yourMsg": "Your Message",
         "sendMsg": "Send Message"
     },

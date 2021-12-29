@@ -30,7 +30,7 @@ export default function FeaturedSection(props) {
             },
             {
                 title: t('home.obortechSmartHub'),
-                link: '',
+                link: 'https://www.obortech.io/',
                 icon: images.obortechIcon,
             },
             {
@@ -83,9 +83,13 @@ export default function FeaturedSection(props) {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         if (item.link) {
-                                            router.push(
-                                                `${props.language}/${item.link}`
-                                            );
+                                            if (item.link.search('https') !== -1) {
+                                                window.open(item.link, '_blank');
+                                            } else {
+                                                router.push(
+                                                    `${props.language}/${item.link}`
+                                                );
+                                            }
                                         }
                                     }}
                                 >
