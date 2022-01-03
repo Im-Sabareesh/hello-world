@@ -208,15 +208,30 @@ const AboutUs = (props) => {
                             </div>
                         </Col>
                         <Col xl={8} lg={7}>
-                            <h3 className="h3 lh-base fw-normal light-text-color">
+                            <h3 className="h3 mb-3 lh-base fw-normal light-text-color">
                                 {t('aboutUs.howWeDoItPara')}
                             </h3>
 
-                            {_.map(howWeDoList, (item, index) => (
+                            {/* {_.map(howWeDoList, (item, index) => (
                                 <h3 className="h3 lh-base fw-normal light-text-color" key={index}>
                                     {item}
                                 </h3>
-                            ))}
+                            ))} */}
+                             <div className="h3 lh-base fw-normal light-text-color">
+                                 <p><b className="d-block mb-2">Assess:</b>
+                                 We understand your needs, challenges and pain points, and then determine whether blockchain can add value and set goals.
+                                 </p>
+                                 <p><b className="d-block mb-2">Plan:</b>
+                                 We collaborate with you and your team to create a comprehensive plan for meeting those goals.
+                                 </p>
+                                 <p><b className="d-block mb-2">Implement:</b>
+                                 Next, we turn it into reality. Moving from design to development, we use agile methodology to implement the solution.
+                                 </p>
+                                 <p><b className="d-block mb-2">Maintain and Scale:</b>
+                                 After project delivery, we help onboard, maintain and scale it further.
+                                 </p>
+                            </div>
+                            
                         </Col>
                     </Row>
                 </Container>
