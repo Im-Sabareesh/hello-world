@@ -25,3 +25,5 @@ export { default as HomeFormFormik } from './home-form/HomeFormFormik';
 export { default as ModalComponent } from './modal';
 export { default as StyledDropzone } from './file-drop-zone';
 export { default as ChatBotComponent } from './chat-bot';
+export { default as GDPRComponent } from './services/GDPRService';
+export { default as RPAComponent } from './services/RPAService';

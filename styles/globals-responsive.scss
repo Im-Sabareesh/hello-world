@@ -406,6 +406,84 @@
             margin-bottom: 10px;
         }
     }
+     // gdpr changes
+     .enterprise-section1{
+        .nft-service-img-div{
+            margin-top: 20px;
+        } 
+    }
+    .gdpr-service{
+        .develop-hyperledger {
+            padding-bottom: 40px;
+            .what-hyperledger-img {
+                margin-top: 30px;
+                padding-left: 15px;
+            }
+        }
+    }
+    // rpa changes
+    .right-overlapped-content {
+        padding-top: 0;
+        .floating-content {
+            font-size: 17px;
+            line-height: 25px;
+            margin-top: 0;
+            .floating-content-heading {
+                margin-bottom: 20px;
+            }
+        }
+        .banner-content {
+            padding-top: 40px;
+            .logo-image {
+                margin-bottom: 30px;
+            }
+        }
+        .light-red-bg {
+            height: auto;
+            padding-bottom: 30px;
+        }
+        .benefits-listing {
+            strong {
+                font-size: 19px;
+                margin-bottom: 14px;
+            }
+            li:not(:last-child) {
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .rpa-service .why-hyperledger {
+        padding-top: 30px;
+    }
+    .rpa-service .develop-hyperledger {
+        padding-bottom: 30px;
+        .what-hyperledger-img {
+            margin-top: 15px;
+        }
+    }
+    .benefits-content {
+        .featured-box-container-new {
+            // padding-right: 24px;
+            margin-bottom: 10px;
+            .featured-content {
+                height: 120px;
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    .ui-consulting-service {
+        margin-top: 30px;
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
+    
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -749,6 +827,80 @@
         line-height: 38px !important;
     }
    
+     // gdpr changes
+     .enterprise-section1{
+        .nft-service-img-div{
+            margin-top: 20px;
+        } 
+    }
+    .gdpr-service{
+        .develop-hyperledger {
+            padding-bottom: 40px;
+            .what-hyperledger-img {
+                margin-top: 30px;
+                padding-left: 15px;
+            }
+        }
+    }
+    // rpa changes
+    .right-overlapped-content {
+        padding-top: 0;
+        .floating-content {
+            font-size: 17px;
+            line-height: 25px;
+            margin-top: 0;
+        }
+        .banner-content {
+            padding-top: 40px;
+            .logo-image {
+                margin-bottom: 30px;
+            }
+        }
+        .light-red-bg {
+            height: auto;
+            padding-bottom: 40px;
+        }
+        .benefits-listing {
+            strong {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            li:not(:last-child) {
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .rpa-service .why-hyperledger {
+        padding-top: 40px;
+    }
+    .rpa-service .develop-hyperledger {
+        padding-bottom: 40px;
+        .what-hyperledger-img {
+            margin-top: 15px;
+        }
+    }
+    .benefits-content {
+        .featured-box-container-new {
+            // padding-right: 24px;
+            margin-bottom: 10px;
+            .featured-content {
+                height: 100px;
+                p{
+                    font-size: 16px;
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+    .ui-consulting-service {
+        margin-top: 40px;
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -1020,6 +1172,82 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+
+    // gdpr changes
+    .enterprise-section1{
+        .nft-service-img-div{
+            margin-top: 20px;
+        } 
+    }
+    .gdpr-service{
+        .develop-hyperledger {
+            padding-bottom: 40px;
+            .what-hyperledger-img {
+                margin-top: 30px;
+                padding-left: 15px;
+            }
+        }
+    }
+    // rpa changes
+    .right-overlapped-content {
+        padding-top: 0;
+        .floating-content {
+            font-size: 17px;
+            line-height: 25px;
+            margin-top: 0;
+        }
+        .banner-content {
+            padding-top: 40px;
+            .logo-image {
+                margin-bottom: 30px;
+            }
+        }
+        .light-red-bg {
+            height: auto;
+            padding-bottom: 40px;
+        }
+        .benefits-listing {
+            strong {
+                font-size: 21px;
+            }
+            li:not(:last-child) {
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .rpa-service .why-hyperledger {
+        padding-top: 40px;
+    }
+    .rpa-service .develop-hyperledger {
+        padding-bottom: 40px;
+        .what-hyperledger-img {
+            margin-top: 15px;
+        }
+    }
+    .benefits-content {
+        .featured-box-container-new {
+            // padding-right: 24px;
+            margin-bottom: 10px;
+            .featured-content {
+                height: 100px;
+                p{
+                    font-size: 16px;
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+    .ui-consulting-service {
+        margin-top: 40px;
+        .custom-card {
+            .card-text {
+                height: 185px;
+            }
+        }
+    }
+    
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1112,7 +1340,7 @@
         padding-top: 140px;
         padding-bottom: 70px;
         .featured-box-container-new {
-             padding-right: 0; 
+             padding-right: 25px; //0
             .featured-content {
                 height: 170px;
             }  
@@ -1136,7 +1364,7 @@
         padding: 0 60px;
     }
     .develop-hyperledger {
-        height: 595px;
+        height: auto; //595px
         .floating-content {
             height: auto;
             padding: 30px;
@@ -1171,6 +1399,58 @@
             font-size: 18px;
         }
     }
+    // gdpr changes
+    .gdpr-service{
+        .develop-hyperledger {
+            height: 675px;
+        }
+    }
+    // rpa changes
+    .right-overlapped-content {
+        padding-top: 120px;
+        .floating-content {
+            font-size: 17px;
+            line-height: 25px;
+        }
+        .banner-content {
+            padding-top: 40px;
+            .logo-image {
+                margin-bottom: 30px;
+            }
+        }
+        .light-red-bg {
+            height: 525px;
+        }
+        .benefits-listing {
+            strong {
+                font-size: 21px;
+            }
+            li:not(:last-child) {
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .rpa-service .why-hyperledger {
+        padding-top: 160px;
+    }
+    .benefits-content {
+        .featured-box-container-new {
+            // padding-right: 24px;
+            .featured-content {
+                height: 90px;
+            }
+        }
+    }
+    .ui-consulting-service {
+        margin-top: 70px;
+        .custom-card {
+            .card-text {
+                height: 215px;
+            }
+        }
+    }
+    
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1224,8 +1504,24 @@
             padding: 35px ​0 0 55px;
         }
     }
-   
-
+    // gdpr- changes
+    .gdpr-service .develop-hyperledger .what-hyperledger-img {
+        margin-top: -348px;
+    }
+    // rpa changes
+    .benefits-content {
+        .featured-box-container-new {
+            .featured-content {
+                height: 110px;
+                p{
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+    .rpa-service .develop-hyperledger .what-hyperledger-img {
+        margin-top: -255px;
+    }
 }
 
 // About us and nft changes
@@ -2307,6 +2603,16 @@
         }
 
     }
+
+
+    // gdpr changes
+    // .gdpr-service{
+    //     .develop-hyperledger{
+    //         .what-hyperledger-img {
+    //             margin-top: -340px;
+    //         }
+    //     } 
+    // }
 
 }
 

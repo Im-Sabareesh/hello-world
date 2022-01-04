@@ -53,6 +53,16 @@ const Footer = (props) => {
             footer: 'left',
             component: () => <CommonFooter whitebg={true} language={props.language} />,
         },
+        {
+            name: '/services/gdpr-development',
+            footer: 'left',
+            component: () => <CommonFooter whitebg={true} language={props.language} />,
+        },
+        {
+            name: '/services/rpa-development',
+            footer: 'left',
+            component: () => <CommonFooter whitebg={true} language={props.language} />,
+        },
     ];
 
     const footer = _.find(whiteLayout, (l) => router.pathname.includes(l.name));

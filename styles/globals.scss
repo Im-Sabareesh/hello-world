@@ -1528,6 +1528,8 @@ p.card-text.show-more {
     {
         background-repeat: no-repeat;
         background-size: contain;
+        box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+        width: 100%;
        .featured-content{
            height: 170px;
            z-index: 1;
@@ -1653,8 +1655,159 @@ p.card-text.show-more {
     }
     .what-hyperledger-img{
         margin-top: -360px;
+        padding-left: 55px;
     }
 }
 .why-hyperledger {
     padding-top: 455px;
 }
+
+// ---------------------------------- gdpr styles start  ----------------------------------
+.featured-gdprbg1{
+    background-image:url('../public/assets/images/gdpr-highlight-icon1.png');
+}
+.featured-gdprbg2{
+    background-image:url('../public/assets/images/gdpr-highlight-icon2.png');
+}
+.featured-gdprbg3{
+    background-image:url('../public/assets/images/gdpr-highlight-icon3.png');
+}
+.featured-gdprbg4{
+    background-image:url('../public/assets/images/gdpr-highlight-icon4.png');
+}
+
+.gdpr-service{
+    .develop-hyperledger {
+        .what-hyperledger-img {
+            margin-top: -350px;
+        }
+    }
+}
+// ---------------------------------- gdpr styles end  ----------------------------------
+// ---------------------------------- rpa styles start  ----------------------------------
+.benefits-content{
+    .featured-box-container-new{
+        padding: 24px;
+        .featured-content{
+            height: 110px;
+            p{
+                font-family: $primaryFont;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 32px;
+            }
+        }
+    }
+}
+.rpa-service{
+    .develop-hyperledger {
+        .floating-content {
+            height: auto;
+        }
+        .what-hyperledger-img {
+            margin-top: -245px;
+        }
+    }
+    .why-hyperledger{
+        padding-top: 290px;
+    }
+}
+.featured-rpabg1{
+    background-image:url('../public/assets/images/rpa-iconbg1.png');
+}
+.featured-rpabg2{
+    background-image:url('../public/assets/images/rpa-iconbg2.png');
+}
+.featured-rpabg3{
+    background-image:url('../public/assets/images/rpa-iconbg3.png');
+}
+.featured-rpabg4{
+    background-image:url('../public/assets/images/rpa-iconbg4.png');
+}
+.featured-rpabg5{
+    background-image:url('../public/assets/images/rpa-iconbg5.png');
+}
+
+.right-overlapped-content{
+    padding-top: 440px;
+    .banner-content{
+        padding-top: 50px;
+        h2{
+            color: color('light-primary');
+            font-family: $primaryFont;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 24px;
+        }
+        .logo-image{
+            margin-bottom: 60px;
+        }
+      
+    }
+    .light-red-bg{
+        height: 485px;    
+    }
+    .floating-content{
+        background-color: color('light-primary');
+        margin-top: -50px;
+        // padding: 45px 25px;
+        -webkit-box-shadow: 8px 8px 20px 0px rgba(138, 138, 138, 0.14);
+        box-shadow: 8px 8px 20px 0px rgba(138, 138, 138, 0.14);
+        border-top: 5px solid color('light-red');
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: #797B7C;
+        padding: 25px 0;
+        .floating-content-heading{
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-bottom: 32px;
+        }
+    }
+    .benefits-listing{
+        li
+        {
+            padding-left: 25px;
+            padding-right: 25px;
+            &:not(:last-child){
+                border-bottom: 1px solid #E2E3E3;
+                padding-bottom: 10px;
+                margin-bottom: 25px;
+            }
+        }
+        strong{
+            font-family: $primaryFont;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 24px;
+            margin-bottom: 16px;
+            color: color('dark-tertiary');
+        }
+        
+    }
+}
+.light-red-bg{
+    background-color: color('light-red');
+    color: color('light-primary');
+}
+
+.ui-consulting-service{
+    margin-top: 100px;
+    .custom-card{
+        box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+        border: 1px solid #E7E5E5;
+        .card-title{
+            height: auto;
+            .h3{
+                color: color('dark-secondary');
+            }
+        }
+        .card-text{
+            height: auto;
+            display: block;
+            height: 155px;
+        }
+    }
+}
+// ---------------------------------- rpa styles end  ----------------------------------

@@ -181,5 +181,11 @@
         "governance": "Governance",
         "security": "Security",
         "privacy": "Privacy"
+    },
+    "gdprService": {
+        "userConsent": "User consent model",
+        "decentralizedGovernance": "Decentralized governance",
+        "privacyDesign": "Privacy by design",
+        "rightForgotten": "Right to be forgotten"
     }
 }
