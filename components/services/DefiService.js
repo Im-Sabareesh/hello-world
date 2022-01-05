@@ -84,30 +84,18 @@ const DefiSComponent = (props) => {
                 <div className="section-glow">
                     <Container>
                         <Row>
-                            <Col lg={5}>
-                                <MyImage
-                                    src={images.videoThumb}
-                                    width={771}
-                                    height={542}
-                                    layout="responsive"
-                                    placeholder="blur"
-                                    loading="lazy"
-                                />
-                            </Col>
-
-                            <Col lg={{ span: 6, offset: 1 }}>
+                            <Col xl={{ span: 10, offset: 1 }}>
                                 <h2 className="h2 mb-md-3 mb-2 pb-md-3 pb-2">
                                     {defiServList.defi.smallParaSection.title}
                                 </h2>
-
-                                <ul className="ul-list">
-                                    {_.map(
-                                        defiServList.defi.smallParaSection.content,
-                                        (item, i) => (
-                                            <li key={_.uniqueId()}> {item} </li>
-                                        )
-                                    )}
-                                </ul>
+                                {_.map(
+                                    defiServList.defi.smallParaSection.content,
+                                    (item, i) => (
+                                        <Paragraph key={_.uniqueId()}>
+                                            {item}
+                                        </Paragraph>
+                                    )
+                                )}
                             </Col>
                         </Row>
                     </Container>

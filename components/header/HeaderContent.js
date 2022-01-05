@@ -30,20 +30,20 @@ const HeaderContent = (props) => {
 
     const dropDownItems = [
         {
-            name: `${t('nftDevelopement')}`,
-            navPath: `/${props.language}/services/nft-development`,
-        },
-        {
-            name: `${t('defiDevelopment')}`,
-            navPath: `/${props.language}/services/defi-development`,
+            name: `${t('enterpriseBlockChainConsulting')}`,
+            navPath: `/${props.language}/services/blockchain-consulting`,
         },
         {
             name: `${t('hdfDevelopment')}`,
             navPath: `/${props.language}/services/hyperledger-fabric-development`,
         },
         {
-            name: `${t('blockChainConsulting')}`,
-            navPath: `/${props.language}/services/blockchain-consulting`,
+            name: `${t('nftDevelopement')}`,
+            navPath: `/${props.language}/services/nft-development`,
+        },
+        {
+            name: `${t('defiDevelopment')}`,
+            navPath: `/${props.language}/services/defi-development`,
         },
     ];
 

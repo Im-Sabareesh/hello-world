@@ -452,11 +452,7 @@ button:focus {
     }
 
     .card-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        height: 80px;
+        height: 260px;
     }
 
     .card-footer {
@@ -784,7 +780,7 @@ button:focus {
 }
 .line-animated {
     width: 4px;
-    height: 115px;
+    height: 160px;
     background-color: #c4c4c4;
 }
 
@@ -801,7 +797,7 @@ button:focus {
                 position: absolute;
                 background-color: color('secondary');
                 animation: fadeInUp 1s ease-in-out 2s forwards;
-                height: 65px;
+                height: 80px;
                 width: 4px;
                 border-radius: 0.25rem !important;
                 bottom: 0;

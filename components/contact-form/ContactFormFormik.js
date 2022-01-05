@@ -35,7 +35,7 @@ const ContactFormFormik = (props) => {
         firstname: '',
         email: '',
         phone: '',
-        service: '',
+        service: 'Interested in',
         description: '',
     };
     const handleVerify = (token) => {
@@ -159,12 +159,14 @@ const ContactFormFormik = (props) => {
                                                 : '')
                                         }
                                     >
-                                        <option>
+                                        {/* <option>
                                             {t('contactUsForm.selectService')}
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        </option> */}
+                                        <option value={t('contactUsForm.serviceOptions.interestedIn')}>{t('contactUsForm.serviceOptions.interestedIn')}</option>
+                                        <option value={t('contactUsForm.serviceOptions.freeConsultation')}>{t('contactUsForm.serviceOptions.freeConsultation')}</option>
+                                        <option value={t('contactUsForm.serviceOptions.projectDiscussion')}>{t('contactUsForm.serviceOptions.projectDiscussion')}</option>
+                                        <option value={t('contactUsForm.serviceOptions.training')}>{t('contactUsForm.serviceOptions.training')}</option>
+                                        <option value={t('contactUsForm.serviceOptions.careers')}>{t('contactUsForm.serviceOptions.careers')}</option>
                                     </Field>
                                     <ErrorMessage
                                         name="service"
