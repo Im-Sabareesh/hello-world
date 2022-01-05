@@ -188,6 +188,17 @@ const ContactComponent = (props) => {
                                                 width={34}
                                             />
                                         </a>
+
+                                        <a
+                                            href='https://in.linkedin.com/company/chaincode-consulting-llp'
+                                        >
+                                            <MyImage
+                                                src={images.linkeIn}
+                                                alt=""
+                                                height={25}
+                                                width={34}
+                                            />
+                                        </a>
                                     </Paragraph>
                                 </div>
                             </Col>

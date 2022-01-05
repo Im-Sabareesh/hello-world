@@ -55,6 +55,7 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service & Rules",
     "talkOurExperts": "Talk to our Experts",
+    "getStarted": "Get Started",
     "home": {
         "title": "Home",
         "someText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit, lacus vel blandit auctor, mauris metus sollicitudin nulla, vitae feugiat mi elit at nunc. Suspendisse accumsan pulvinar tellus, sit amet pharetra elit tincidunt vitae. Suspendisse potenti.",
@@ -110,7 +111,19 @@
         "blockchainRevolutionizingBusiness": "How Blockchain is Revolutionizing Business",
         "blockchainRevolutionizingBusinessDesc": "Businesses thrive on relationships and relationships flourish with trust. With blockchain, trust becomes a rule rather than a choice.",
         "blockchainRevolutionizingBusinessDesc1": "Blockchain connects fragmented systems and makes tech-based consortiums possible-  ushering in a new era of digital collaborations. With the inherited capabilities of shared ledgers, cryptography, smart contracts, and consensus,  blockchain is helping solve complex business problems today.",
-        "servicesOfferDesc": "At Chaincode, we are committed to bring the potential of blockchain to every enterprise through our domain expertise and unparalleled credibility. Here is how we are helping create a better business world."
+        "servicesOfferDesc": "At Chaincode, we are committed to bring the potential of blockchain to every enterprise through our domain expertise and unparalleled credibility. Here is how we are helping create a better business world.",
+        "serviceOfferList": {
+            "hdfDevelopmentDescribe": "The modular architecture and plug-in components of Hyperledger Fabric allow stable, scalable, reusable and robust applications across industries-  supply chain, fintech, healthcare or governance.  Our track record of launching multiple successful HFD products world-over makes us one of the top in the field of Hyperledger Fabric Development with a strong team of certified professional developers.",
+            "nonFungibleTokens": "Non Fungible Tokens",
+            "nonFungibleTokensDescribe": "Every artist, celebrity and brand are hurrying to jump on the NFT bandwagon. Tokenize your artwork, video file, or any other digital asset for good and trade these tokenized assets via a custom marketplace. Our blockchain engineers and domain experts work together to offer diligently-crafted decentralized non-fungible token development solutions to suit your business needs- tokenize, trade and transcend!.",
+            "devOpsBlockchain": "DevOps Blockchain",
+            "devOpsBlockchainDescribe": "Enterprise DevOps Blockchain can be implemented using single‑chain or multi-chain blockchains as an underlying infrastructure to solve complex business problems. The flexibility of the EDOB in supporting different delivery models allows organizations to fast-track the transition from traditional to DevOps delivery while maintaining auditable and transparent records. As front-runners in the blockchain space, count on us as your tech partners.",
+            "blockChainDescribe": "Powered by the world’s most comprehensive collection of blockchain technology research, data, and tools, Chaincode Consulting with its unmatched expertise in De-Fi and HFD helps businesses achieve their goals- faster and better. Test out a blockchain POC or go full in, we help create a roadmap to your success right from use case analysis to development and launch.",
+            "binanceSmartChain": "Binance Smart Chain",
+            "SmartChainDescribe": "Empower your users with BSC dual-chain architecture to build their decentralized apps and digital assets on one blockchain and take advantage of the fast trading to exchange on the other. Binance Smart Chain offers one of the fastest blockchain transaction times and lowest fee structures, making it an ideal option for building decentralized applications.",
+            "dAppDevelopment": "DApp Development",
+            "dAppDevelopmentDescribe": "With proven extensive experience and credible expertise, we design and build secure, trustless, stable and rapidly scalable dApps. We harness different blockchains like Ethereum, EOS, BSC, Polkadot, and more to build customized dApps that align with your business needs and enable you to penetrate the market- be it gaming, collectibles, finance or even governance."
+        }
     },
     "aboutUs": {
         "title": "About Us",
@@ -144,11 +157,34 @@
         "ourTeamPara": "Making people smile gets us out of bed every morning. Through thoughtful design we create delightful digital experiences that make life simpler and more enjoyable",
         "workWithUs": "WORK WITH US",
         "workWithUsQuesition": "Have you decided to work on a project with us?",
-        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level"
+        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level",
+        "teamDesignation": {
+            "founderceo": "Founder & CEO",
+            "director": "Director",
+            "healthcareAdvisor": "Healthcare Advisor",
+            "recruitmentManager": "Recruitment Manager",
+            "digitalMarketing": "Digital Marketing Manager",
+            "teamLead": "Team Lead",
+            "qALead": "QA Lead",
+            "blockchainEngineer": "Blockchain Engineer"
+        },
+        "assess": "Assess",
+        "assessDescribe": "We understand your needs, challenges and pain points, and then determine whether blockchain can add value and set goals.",
+        "plan": "Plan",
+        "planDescribe": "We collaborate with you and your team to create a comprehensive plan for meeting those goals.",
+        "implement": "Implement",
+        "implementDescribe": "Next, we turn it into reality. Moving from design to development, we use agile methodology to implement the solution.",
+        "maintainScale:": "Maintain and Scale",
+        "maintainScaleDescribe": "After project delivery, we help onboard, maintain and scale it further."
     },
     "careers": {
         "title": "Careers",
-        "currentOpening": "See Current Openings"
+        "currentOpening": "See Current Openings",
+        "solveEveryDay": "Solve unique challenges every day.",
+        "flexibleCulture": "Flexible, result-oriented work culture.",
+        "opportunities": "Opportunities for further learning and development.",
+        "communicationOpen": "Open communication, Equal opportunities",
+        "changingBlockchain": "Blockchain is changing the way the world lives and works."
     },
     "careerForm": {
         "applyPosition": "Applying for Position",
@@ -198,12 +234,48 @@
         "advisory": "Advisory",
         "proofConcept": "Proof Of Concept",
         "blockchainDevelopment": "Blockchain Development",
-        "training": "Training"
+        "training": "Training",
+        "advisoryContent": "From use case discovery to POC to full-scale development, we help our clients at every stage to understand the business impact and adopt the right blockchain strategy.",
+        "proofConceptContent": "Be blockchain confident before the adoption. We develop quick POCs to demonstrate how blockchain will increase efficiency and drive business results.",
+        "blockchainContent": "We turn blockchain ideas into a robust DApp with our unparalleled industry experience & Hyperledger Fabric Development capabilities.",
+        "trainingContent": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases.",
+        "enterpriseBlockchain": "Enterprise Blockchain",
+        "consulting": "Consulting",
+        "headerDesc": "We offer expert guidance for your business to maneuver the best way forward with blockchain.",
+        "headerDesc1": "We innovate, design, and work with you to build bespoke decentralized solutions that enable businesses to drive next-level growth. The immutable power of the blockchain meets our development excellence allowing you to solve pressing problems of efficiency, security, and transparency.",
+        "headerDesc2": "With over 40 up and running products around the world, Chaincode Code partners with startups, small and medium enterprises, or large corporations to reinvent business processes and achieve unmatched progress via blockchain. Leverage the power of blockchain with our proven excellence in innovating, building, and launching real-world applications.",
+        "accordianList" : {
+            "whatIsBlockchain": "What Is Blockchain?",
+            "whatIsBlockchainAns": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders",
+            "whyBlockchainMatters": "Why Blockchain Matters?",
+            "whyBlockchainMattersAns": "Blockchain is revolutionizing the enterprise world by providing a new type of infrastructure enabling trusted tech-based business relationships without the need of the third party thus making the system more transparent, efficient, and affordable.",
+            "areYouBlockchain": "Are you blockchain ready?",
+            "areYouBlockchainAns": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients to evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
+        },
+        "buildNextGeneration": "Build Next-Generation <br/> Blockchain Solutions",
+        "nxtGenerationDesc": "Our blockchain consultants have the perfect blend of expertise in business processes, industries, and blockchain development to seize the true potential of the technology. We are passionately dedicated to enabling enterprise-wide adoption of decentralized business applications embraced with blockchain technology. We as your business partners are committed to reduce risks and maximize ROI with proven business results.",
+        "leverageHeader": "Leverage blockchain to enhance your business. <br /> Talk to an expert.",
+        "blockchainConsultingServices": "Our Blockchain Consulting Services"
     },
     "hyperledgerFabric": {
         "performanceScalabilty": "Performance & Scalabilty",
         "governance": "Governance",
         "security": "Security",
-        "privacy": "Privacy"
+        "privacy": "Privacy",
+        "performanceContent": "Transaction processing in three phases endorsement, ordering & commitment enables performance at scale.",
+        "governanceContent": "Hyperledger Fabric offers strong identity management & supports HSM,   transaction anonymity & zero knowledge proofs for enhanced security.",
+        "securityContent": "The notion of channels enable sub-network within the business network  ensuring data privacy. Collections enable privacy within a channel.",
+        "privacyContent": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases.",
+        "tapThePotential": "Tap The Potential Of",
+        "distributedLedger": "Distributed Ledger Technology",
+        "headerDesc": "At Chaincode Consulting, we have redefined business interactions with blockchain technology enabling a secured, trusted and affordable ecosystem for our clients.",
+        "headerPara": "Blockchain is empowering businesses with the distributed ledgers and computational capabilities of the smart contracts. From banking to government to our identities, blockchain is transforming everything.",
+        "whatIsHyperledger": "What is Hyperledger Fabric?",
+        "whatIsHyperledgerAns": "What is Hyperledger Fabric? Hyperledger Fabric – hosted by the Linux Foundation, is a permissioned open-source enterprise-grade blockchain platform. Beyond cryptocurrencies, it is specially designed with a modular architecture and plug and play components to serve a wide range of industry use cases. Hyperledger Fabric provides a new infrastructure enabling tech-based relationships and a new style of secured digital interactions.",
+        "blockHyperledgerFabric": "Blockchain Development With Hyperledger Fabric",
+        "visitHyperledger": "Visit Hyperledger.org",
+        "blockHyperledgerFabricPara": "We build enterprise-grade blockchain applications with",
+        "whyHyperledgerFabric": "Why Hyperledger Fabric?",
+        "hyperFabric": "Hyperledger Fabric"
     }
 }

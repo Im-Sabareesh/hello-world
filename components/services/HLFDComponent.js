@@ -19,25 +19,25 @@ const HLFDSComponent = (props) => {
                 title: t('hyperledgerFabric.performanceScalabilty'),
                 link: '#',
                 icon: images.performanceIcon,
-                content: "Transaction processing in three phases endorsement, ordering & commitment enables performance at scale."
+                content: t('hyperledgerFabric.performanceContent')
             },
             {
                 title: t('hyperledgerFabric.governance'),
                 link: '#',
                 icon: images.governanceIcon,
-                content: "Hyperledger Fabric offers strong identity management & supports HSM,   transaction anonymity & zero knowledge proofs for enhanced security."
+                content: t('hyperledgerFabric.governanceContent')
             },
             {
                 title: t('hyperledgerFabric.security'),
                 link: '#',
                 icon: images.securityIcon,
-                content: "The notion of channels enable sub-network within the business network  ensuring data privacy. Collections enable privacy within a channel."
+                content: t('hyperledgerFabric.securityContent')
             },
             {
                 title: t('hyperledgerFabric.privacy'),
                 link: '#',
                 icon: images.privacyIcon,
-                content: "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases."
+                content: t('hyperledgerFabric.privacyContent')
             },
         ];
     return (
@@ -49,20 +49,22 @@ const HLFDSComponent = (props) => {
                     <Row>
                         <Col lg={6} sm={12} className="my-auto">
                             <div className="d-sm-flex align-items-center">
-                                <h3 className="h3 secondary-text-color">
-                                    HYPERLEDGER FABRIC DEVELOPMENT
+                                <h3 className="h3 secondary-text-color text-uppercase">
+                                    {t('hdfDevelopment')}
                                 </h3>
                                 <div className="heading-line"></div>  
                             </div>
 
-                            <H1 className="mb-lg-4 mb-3">Tap The Potential Of <br />Distributed Ledger Technology</H1>
+                            <H1 className="mb-lg-4 mb-3">
+                                {t('hyperledgerFabric.tapThePotential')} <br /> {t('hyperledgerFabric.distributedLedger')}
+                            </H1>
 
                             <Paragraph>
-                            <b>At Chaincode Consulting, we have redefined business interactions with blockchain technology enabling a secured, trusted and affordable ecosystem for our clients.</b>
+                                <b>{t('hyperledgerFabric.headerDesc')}</b>
                             </Paragraph>
 
                             <Paragraph>
-                            Blockchain is empowering businesses with the distributed ledgers and computational capabilities of the smart contracts. From banking to government to our identities, blockchain is transforming everything. 
+                                {t('hyperledgerFabric.headerPara')}
                             </Paragraph>
 
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -76,7 +78,7 @@ const HLFDSComponent = (props) => {
                                         );
                                     }}
                                 >
-                                 Talk to our Experts
+                                 {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -108,21 +110,19 @@ const HLFDSComponent = (props) => {
                             <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                     
-                                    <h3>What is Hyperledger Fabric?</h3>
+                                    <h3>{t('hyperledgerFabric.whatIsHyperledger')}</h3>
                                     <Paragraph>
-                                        What is Hyperledger Fabric? Hyperledger Fabric – hosted by the Linux Foundation, is a permissioned open-source enterprise-grade blockchain platform. Beyond cryptocurrencies, it is specially designed with a modular architecture and plug and play components to serve a wide range of industry use cases. Hyperledger Fabric provides a new infrastructure enabling tech-based relationships and a new style of secured digital interactions.
+                                        {t('hyperledgerFabric.whatIsHyperledgerAns')}
                                     </Paragraph>
                                     <Button
                                         btnVarient="red-btn"
                                         className="p-0 rounded-0"
                                         size="lg"
                                         onClick={() => {
-                                            router.push(
-                                                `/${props.language}/contact`
-                                            );
+                                            window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
-                                    Visit Hyperledger.org
+                                        {t('hyperledgerFabric.visitHyperledger')}
                                     </Button>
                                     
                                
@@ -131,10 +131,11 @@ const HLFDSComponent = (props) => {
 
                             <Col xl={{ span: 7, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
                                 <h2 className="h2 mb-4">
-                                    Blockchain Development With Hyperledger Fabric
+                                    {t('hyperledgerFabric.blockHyperledgerFabric')}
                                 </h2>
                                 <Paragraph>
-                                    We build enterprise-grade blockchain applications with <br />Hyperledger Fabric.
+                                    {t('hyperledgerFabric.blockHyperledgerFabricPara')} <br/>
+                                    {t('hyperledgerFabric.hyperFabric')}.
                                 </Paragraph>
                                 <div className="d-xl-none d-lg-block d-none mx-auto">
                                     <MyImage
@@ -178,7 +179,7 @@ const HLFDSComponent = (props) => {
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Why Hyperledger Fabric?
+                                {t('hyperledgerFabric.whyHyperledgerFabric')}
                             </h2>
                         </Col>
                     </Row>
@@ -248,19 +249,23 @@ const HLFDSComponent = (props) => {
                 <Container>
                     <Row>
                         <Col md={12} className="get-started-block text-center">
-                            <h6 className="getstarted-heading text-white">Leverage blockchain to enhance your business. <br /> Talk to an expert.</h6>
+                            <h6 className="getstarted-heading text-white"
+                                dangerouslySetInnerHTML={{
+                                    __html: t('blockchainConsulting.leverageHeader'),
+                                }}>                                
+                            </h6>
 
                             <Button
-                                    btnVarient="white-outline-btn"
-                                    className="white-outline-btn"
-                                    onClick={() => {
-                                        router.push(
-                                            `/${props.language}/contact`
-                                        );
-                                    }}
-                                >
-                              Get Started
-                                </Button>
+                                btnVarient="white-outline-btn"
+                                className="white-outline-btn"
+                                onClick={() => {
+                                    router.push(
+                                        `/${props.language}/contact`
+                                    );
+                                }}
+                            >
+                                {t('getStarted')}
+                            </Button>
                         </Col>
                     </Row>
                 </Container>

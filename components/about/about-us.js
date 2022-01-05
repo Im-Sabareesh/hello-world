@@ -13,55 +13,65 @@ const AboutUs = (props) => {
         t = i18next.t.bind(i18next),
         teamMemberList = [
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_01.jpg',
+                name: 'Alok Gupta',
+                designation: t('aboutUs.teamDesignation.founderceo'),
+                image: '/assets/images/team-member/Alok-Gupta.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_02.jpg',
+                name: 'Vandani Gupta',
+                designation: t('aboutUs.teamDesignation.director'),
+                image: '/assets/images/team-member/Vandani-Gupta.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_03.jpg',
+                name: 'Anant Randhawa',
+                designation: t('aboutUs.teamDesignation.healthcareAdvisor'),
+                image: '/assets/images/team-member/Anant-Randhawa.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_04.jpg',
+                name: 'Nitika Sharma',
+                designation: t('aboutUs.teamDesignation.recruitmentManager'),
+                image: '/assets/images/team-member/Nitika-Sharma.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_05.jpg',
+                name: 'Damini Singh',
+                designation: t('aboutUs.teamDesignation.digitalMarketing'),
+                image: '/assets/images/team-member/Damini.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_06.jpg',
+                name: 'Gurpreet Rajpal',
+                designation: t('aboutUs.teamDesignation.teamLead'),
+                image: '/assets/images/team-member/gurpreet-rajpal.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_07.jpg',
+                name: 'Hansraj Rami',
+                designation: t('aboutUs.teamDesignation.teamLead'),
+                image: '/assets/images/team-member/Hansraj-Rami.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_08.jpg',
+                name: 'Pinki Maurya',
+                designation: t('aboutUs.teamDesignation.qALead'),
+                image: '/assets/images/team-member/Pinki-Maurya.jpg',
+            },
+            {
+                name: 'Shaishav Pindadi',
+                designation: t('aboutUs.teamDesignation.blockchainEngineer'),
+                image: 'assets/images/team-member/Shaishav.jpeg',
             },
         ],
         howWeDoList = [
-            'Assess:',
-            'We understand your needs, challenges and pain points, and then determine whether blockchain can add value and set goals.',
-            'Plan:',
-            'We collaborate with you and your team to create a comprehensive plan for meeting those goals.',
-            'Implement:',
-            'Next, we turn it into reality. Moving from design to development, we use agile methodology to implement the solution.',
-            'Maintain and Scale:',
-            'After project delivery, we help onboard, maintain and scale it further.'
+            {
+                title : t('aboutUs.assess'),
+                describe: t('aboutUs.assessDescribe')
+            }, {
+                title : t('aboutUs.plan'),
+                describe: t('aboutUs.planDescribe')
+            }, {
+                title : t('aboutUs.implement'),
+                describe: t('aboutUs.implementDescribe')
+            }, {
+                title : t('aboutUs.maintainScale'),
+                describe: t('aboutUs.maintainScaleDescribe')
+            }
         ];
 
     return (
@@ -212,24 +222,15 @@ const AboutUs = (props) => {
                                 {t('aboutUs.howWeDoItPara')}
                             </h3>
 
-                            {/* {_.map(howWeDoList, (item, index) => (
-                                <h3 className="h3 lh-base fw-normal light-text-color" key={index}>
-                                    {item}
-                                </h3>
-                            ))} */}
-                             <div className="h3 lh-base fw-normal light-text-color">
-                                 <p><b className="d-block mb-2">Assess:</b>
-                                 We understand your needs, challenges and pain points, and then determine whether blockchain can add value and set goals.
-                                 </p>
-                                 <p><b className="d-block mb-2">Plan:</b>
-                                 We collaborate with you and your team to create a comprehensive plan for meeting those goals.
-                                 </p>
-                                 <p><b className="d-block mb-2">Implement:</b>
-                                 Next, we turn it into reality. Moving from design to development, we use agile methodology to implement the solution.
-                                 </p>
-                                 <p><b className="d-block mb-2">Maintain and Scale:</b>
-                                 After project delivery, we help onboard, maintain and scale it further.
-                                 </p>
+                            <div className="h3 lh-base fw-normal light-text-color">
+
+                            {_.map(howWeDoList, (item, index) => (
+                                <p key={index}>
+                                    <b className="d-block mb-2">{item.title}:</b>
+                                    {item.describe}
+                                </p>
+                                )
+                            )}
                             </div>
                             
                         </Col>

@@ -27,29 +27,41 @@ const BlockchainConsultingComponent = (props) => {
                 link: '#',
                 icon: images.advisoryIcon,
                 bgicon: images.featurebgadvisoryIcon,
-                content: "From use case discovery to POC to full-scale development, we help our clients at every stage to understand the business impact and adopt the right blockchain strategy."
+                content: t('blockchainConsulting.advisoryContent')
             },
             {
                 title: t('blockchainConsulting.proofConcept'),
                 link: '#',
                 icon: images.proofconceptIcon,
                 bgicon: images.featurebgproofconceptIcon,
-                content: "Be blockchain confident before the adoption. We develop quick POCs to demonstrate how blockchain will increase efficiency and drive business results"
+                content: t('blockchainConsulting.proofConceptContent')
             },
             {
                 title: t('blockchainConsulting.blockchainDevelopment'),
                 link: '#',
                 icon: images.blockchaindevelopmentIcon,
                 bgicon: images.featurebgblockchaindevelopmentIcon,
-                content: "We turn blockchain ideas into a robust DApp with our unparalleled industry experience & Hyperledger Fabric Development capabilities."
+                content: t('blockchainConsulting.blockchainContent')
             },
             {
                 title: t('blockchainConsulting.training'),
                 link: '#',
                 icon: images.trainingIcon,
                 bgicon: images.featurebgtrainingIcon,
-                content: "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases."
+                content: t('blockchainConsulting.trainingContent')
             },
+        ],
+        accordionNextGenList = [
+            {
+                title: t('blockchainConsulting.accordianList.whatIsBlockchain'),
+                describe: t('blockchainConsulting.accordianList.whatIsBlockchainAns')
+            }, {
+                title: t('blockchainConsulting.accordianList.whyBlockchainMatters'),
+                describe: t('blockchainConsulting.accordianList.whyBlockchainMattersAns')
+            }, {
+                title: t('blockchainConsulting.accordianList.areYouBlockchain'),
+                describe: t('blockchainConsulting.accordianList.areYouBlockchainAns')
+            }
         ];
     return (
         <>
@@ -60,25 +72,22 @@ const BlockchainConsultingComponent = (props) => {
                     <Row>
                         <Col lg={6} sm={12} className="my-auto">
                             <div className="d-sm-flex align-items-center">
-                                <h3 className="h3 secondary-text-color">
-                                BLOCKCHAIN CONSULTING
+                                <h3 className="h3 secondary-text-color text-uppercase">
+                                    {t('blockChainConsulting')}
                                 </h3>
                                 <div className="heading-line"></div>  
-                            </div>
-
-                            <H1>Enterprise Blockchain <br />Consulting</H1>
+                            </div>                            
+                            <H1>{t('blockchainConsulting.enterpriseBlockchain')} <br />{t('blockchainConsulting.consulting')}</H1>
 
                             <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Vivamus gravida pellentesque
-                                mauris. Maecenas cursus, magna quis mollis
-                                euismod, neque elit scelerisque nunc, eu
-                                pellentesque lectus ante sed leo. Vivamus sit
-                                amet magna nibh. Fusce turpis dui, dapibus ut
-                                congue non, consequat ac orci. Maecenas vel
-                                neque aliquet, suscipit metus a, congue ante.
+                                {t('blockchainConsulting.headerDesc')}
                             </Paragraph>
-
+                            <Paragraph>
+                                {t('blockchainConsulting.headerDesc1')}
+                            </Paragraph>
+                            <Paragraph>
+                                {t('blockchainConsulting.headerDesc2')}
+                            </Paragraph>
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
                                     btnVarient="red-btn"
@@ -90,7 +99,7 @@ const BlockchainConsultingComponent = (props) => {
                                         );
                                     }}
                                 >
-                                 Talk to our Experts
+                                    {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -122,106 +131,28 @@ const BlockchainConsultingComponent = (props) => {
                             <Col lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                 <Accordion defaultActiveKey="0" flush>
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header>
-                                            What Is Blockchain?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is a distributed ledger
-                                            that can record transactions in a
-                                            secured and permanent way verifiable
-                                            by the stakeholders
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                    <Accordion.Item eventKey="1">
-                                        <Accordion.Header>
-                                            Why Blockchain Matters?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is revolutionizing the
-                                            enterprise world by providing a new
-                                            type of infrastructure enabling
-                                            trusted tech-based business
-                                            relationships without the need of
-                                            the third party thus making the
-                                            system more transparent, efficient,
-                                            and affordable.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                    <Accordion.Item eventKey="2">
-                                        <Accordion.Header>
-                                            Are you blockchain ready?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is disrupting the market
-                                            across industries with its
-                                            transformational capabilities. Our
-                                            enterprise blockchain consulting
-                                            services help clients to evaluate
-                                            blockchain applicability and
-                                            readiness of their systems to adopt
-                                            the technology effectively.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
+                                    {_.map(accordionNextGenList, (item, i) => (
+                                        <Accordion.Item eventKey={`${i}`}>
+                                            <Accordion.Header>
+                                                {item.title}
+                                            </Accordion.Header>
+                                            <Accordion.Body>                                            
+                                                {item.describe}
+                                            </Accordion.Body>
+                                        </Accordion.Item>))
+                                    }
                                 </Accordion>
-
-                                {/* <Accordion defaultActiveKey="0" flush>
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header>
-                                            What Is Blockchain?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is a distributed ledger
-                                            that can record transactions in a
-                                            secured and permanent way verifiable
-                                            by the stakeholders
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
-                                <Accordion flush>
-                                    <Accordion.Item eventKey="1">
-                                        <Accordion.Header>
-                                            Why Blockchain Matters?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is revolutionizing the
-                                            enterprise world by providing a new
-                                            type of infrastructure enabling
-                                            trusted tech-based business
-                                            relationships without the need of
-                                            the third party thus making the
-                                            system more transparent, efficient,
-                                            and affordable.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
-                                <Accordion flush>
-                                    <Accordion.Item eventKey="2">
-                                        <Accordion.Header>
-                                            Are you blockchain ready?
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            Blockchain is disrupting the market
-                                            across industries with its
-                                            transformational capabilities. Our
-                                            enterprise blockchain consulting
-                                            services help clients to evaluate
-                                            blockchain applicability and
-                                            readiness of their systems to adopt
-                                            the technology effectively.
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion> */}
                                 </div>
                             </Col>
 
                             <Col lg={{ span: 6, order: 1 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
-                                <h2 className="h2">
-                                    Build Next-Generation
-                                    Blockchain Solutions
+                                <h2 className="h2" 
+                                    dangerouslySetInnerHTML={{
+                                        __html: t('blockchainConsulting.buildNextGeneration'),
+                                    }}>
                                 </h2>
                                 <Paragraph>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh.
+                                    {t('blockchainConsulting.nxtGenerationDesc')}
                                 </Paragraph>
                                  {/* <Paragraph>
                                     Our blockchain consultants have the perfect blend of expertise in business processes, industries, and blockchain development to seize the true potential of the technology.
@@ -244,7 +175,7 @@ const BlockchainConsultingComponent = (props) => {
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our Blockchain Consulting Services
+                                {t('blockchainConsulting.blockchainConsultingServices')}
                             </h2>
                         </Col>
                     </Row>
@@ -277,8 +208,7 @@ const BlockchainConsultingComponent = (props) => {
                                         />
                                     </div>
                                     <div className="featured-content">
-                                        <p
-                                            dangerouslySetInnerHTML={{
+                                        <p dangerouslySetInnerHTML={{
                                                 __html: item.title,
                                             }}
                                         />
@@ -314,7 +244,12 @@ const BlockchainConsultingComponent = (props) => {
                 <Container>
                     <Row>
                         <Col md={12} className="get-started-block text-center">
-                            <h6 className="getstarted-heading text-white">Leverage blockchain to enhance your business. <br /> Talk to an expert.</h6>
+                            <h6 className="getstarted-heading text-white"
+                                dangerouslySetInnerHTML={{
+                                    __html: t('blockchainConsulting.leverageHeader'),
+                                }}>
+                                
+                            </h6>
 
                             <Button
                                     btnVarient="white-outline-btn"
@@ -325,7 +260,7 @@ const BlockchainConsultingComponent = (props) => {
                                         );
                                     }}
                                 >
-                              Get Started
+                                    {t('getStarted')}
                                 </Button>
                         </Col>
                     </Row>
