@@ -10,40 +10,34 @@ export default function ServiceOfferSection() {
     const t = i18next.t.bind(i18next);
     const serviceList = [
         {
-            name: 'Decentraized Finance',
+            name: t('hdfDevelopment'),
             icon: images.deCenFin,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe:  t('home.serviceOfferList.hdfDevelopmentDescribe')
         },
         {
-            name: 'Non Fungible Tokens',
+            name:  t('home.serviceOfferList.nonFungibleTokens'),
             icon: images.nonFunToken,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe: t('home.serviceOfferList.nonFungibleTokensDescribe')
         },
         {
-            name: 'Binance Smart Chain',
+            name: t('home.serviceOfferList.devOpsBlockchain'),
             icon: images.smartChain,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe: t('home.serviceOfferList.devOpsBlockchainDescribe')
         },
         {
-            name: 'Website Development',
+            name: t('blockChainConsulting'),
             icon: images.webDev,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe: t('home.serviceOfferList.blockChainDescribe')
         },
         {
-            name: 'Mobile App Development',
+            name: t('home.serviceOfferList.binanceSmartChain'),
             icon: images.mobDev,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe: t('home.serviceOfferList.SmartChainDescribe')
         },
         {
-            name: 'AI Technology',
+            name: t('home.serviceOfferList.dAppDevelopment'),
             icon: images.aiTech,
-            describe:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
+            describe: t('home.serviceOfferList.dAppDevelopmentDescribe')
         },
     ];
 
@@ -56,7 +50,7 @@ export default function ServiceOfferSection() {
                             {t('home.servicesOffer')}
                         </h2>
 
-                        <Paragraph>{t('home.nullaLoremLaborum')}</Paragraph>
+                        <Paragraph>{t('home.servicesOfferDesc')}</Paragraph>
                     </Col>
                 </Row>
             </Container>

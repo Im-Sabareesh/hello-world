@@ -37,8 +37,13 @@ const Header = (props) => {
                 <div className="header-top py-2">
                     <Container fluid>
                         <Row className="justify-content-between">
-                            <Col md={9} className="topheader-text">
-                                {t('header.headerInfo')}
+                            <Col md={9} className="topheader-text cursor-pointer"
+                                onClick={() => {
+                                    router.push(
+                                        `/${props.language}/contact`
+                                    );
+                                }}>
+                                    {t('header.headerInfo')}
                             </Col>
                             <Col
                                 md={12}

@@ -30,7 +30,7 @@ export default function FeaturedSection(props) {
             },
             {
                 title: t('home.obortechSmartHub'),
-                link: '',
+                link: 'https://www.obortech.io/',
                 icon: images.obortechIcon,
             },
             {
@@ -47,14 +47,14 @@ export default function FeaturedSection(props) {
                     <Col md={10} lg={8} xl={7} xxl={6}>
                         <div className="d-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
-                                {t('home.blockChainTechnology')}
+                                {t('home.expertBlockchainConsulting')}
                             </h3>
                             <div className="heading-line"> </div>
                         </div>
 
-                        <H1>{t('home.provideEnterprise')}</H1>
+                        <H1>{t('home.superchargeBlockchainCapabilities')}</H1>
 
-                        <Paragraph>{t('home.provideEnterpriseDesc')}</Paragraph>
+                        <Paragraph>{t('home.weSimplifyExcellence')}</Paragraph>
 
                         <div className="button-outer">
                             <Button
@@ -83,9 +83,13 @@ export default function FeaturedSection(props) {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         if (item.link) {
-                                            router.push(
-                                                `${props.language}/${item.link}`
-                                            );
+                                            if (item.link.search('https') !== -1) {
+                                                window.open(item.link, '_blank');
+                                            } else {
+                                                router.push(
+                                                    `${props.language}/${item.link}`
+                                                );
+                                            }
                                         }
                                     }}
                                 >

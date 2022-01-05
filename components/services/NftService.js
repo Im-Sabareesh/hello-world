@@ -114,7 +114,7 @@ const NFTSComponent = (props) => {
                         {_.map(nftServList.nft.cardSection, (item, i) => (
                             <Col key={_.uniqueId()} md={6} lg={4}>
                                 <CardSection
-                                    className="card shadow-sm mt-3 mb-4"
+                                    className="card shadow-sm mt-3 mb-4 card-less"
                                     item={item}
                                     index={i}
                                 />

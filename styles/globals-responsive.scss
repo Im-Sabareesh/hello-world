@@ -7,7 +7,7 @@
 
     .h1 {
         font-size: 33px !important;
-        line-height: 56px !important;
+        line-height: 50px !important;
     }
 
     .h2 {
@@ -483,7 +483,15 @@
             }
         }
     }
-    
+    // 5/1/22  doc changes
+    .blockchain-consulting-page .section-glow-banner{
+        height: auto;
+    }
+    .card-less{
+        .card-text {
+            height: 80px;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -901,6 +909,15 @@
             }
         }
     }
+    // 5/1/22  doc changes
+    .blockchain-consulting-page .section-glow-banner{
+        height: auto;
+    }
+    .card-less{
+        .card-text {
+            height: 80px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -910,7 +927,7 @@
 
     .h1 {
         font-size: 46px !important;
-        line-height: 56px !important;
+        line-height: 60px !important;
     }
 
     .h2 {
@@ -1247,7 +1264,15 @@
             }
         }
     }
-    
+    // 5/1/22  doc changes
+    .blockchain-consulting-page .section-glow-banner{
+        height: auto;
+    }
+    .card-less{
+        .card-text {
+            height: 80px !important;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1347,7 +1372,7 @@
         } 
     } 
     .section-glow-banner {
-        height: 324px;
+        height: auto;
         .banner-content {
             padding: 46px 0 36px 55px;
         }
@@ -1450,7 +1475,15 @@
             }
         }
     }
-    
+    // 5/1/22  doc changes
+    .blockchain-consulting-page .section-glow-banner{
+        height: auto;
+    }
+    .card-less{
+        .card-text {
+            height: 80px !important;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1499,9 +1532,9 @@
         }
     }
     .section-glow-banner {
-        height: 274px;
+        height: 315px;
         .banner-content {
-            padding: 35px ​0 0 55px;
+            padding: 15px 0px 36px 55px;
         }
     }
     // gdpr- changes
@@ -1521,6 +1554,15 @@
     }
     .rpa-service .develop-hyperledger .what-hyperledger-img {
         margin-top: -255px;
+    }
+    // 5/1/22  doc changes
+   .blockchain-consulting-page .section-glow-banner{
+       height: auto;
+   }
+   .card-less{
+    .card-text {
+        height: 80px !important;
+    }
     }
 }
 
@@ -1545,7 +1587,7 @@
 
     // --------- about us page start---------
     .about-us-banner {
-        min-height: 400px;
+        min-height: 430px;
         padding-bottom: 65px;
         .w-50 {
             width: 100% !important;
@@ -1556,11 +1598,11 @@
         background-size: 180px;
     }
     .line-animated {
-        height: 93px;
+        height: 140px;
     }
     .about-section2 {
         .our-story-block {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
     }
     .about-section3 {
@@ -1832,6 +1874,26 @@
     {
         margin-bottom:30px;
     }
+     // ----------------------home and about us page changes 3/1/22 start----------------------
+     .custom-card{
+        .card-text {
+            height: auto;
+        }
+        .card-title {
+            height: 35px;
+        }
+    } 
+    .style_red-btn__2MgIy{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .featured-heading {
+        margin-top: 60px !important;
+    }
+    .our-story-block:hover .line-animated:before {
+        height: 70px;
+    }
+    // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 
 @include media-breakpoint-between(sm, md) {
@@ -1863,11 +1925,11 @@
         background-size: 280px;
     }
     .line-animated {
-        height: 110px;
+        height: 210px;
     }
     .about-section2 {
         .our-story-block {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
     }
     .about-section3 {
@@ -2118,6 +2180,25 @@
     {
         margin-bottom:30px;
     }
+
+     // ----------------------home and about us page changes 3/1/22 start----------------------
+     .custom-card{
+        .card-text {
+            height: auto;
+        }
+    } 
+    .style_red-btn__2MgIy{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .featured-heading {
+        margin-top: 60px !important;
+    }
+    .our-story-block:hover .line-animated:before {
+        height: 105px;
+    }
+   
+    // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 @include media-breakpoint-between(md, lg) {
     // ----------font size---------
@@ -2143,7 +2224,7 @@
         background-size: 410px;
     }
     .line-animated {
-        height: 140px;
+        height: 250px;
     }
     .about-section3 {
         .line-animated {
@@ -2391,6 +2472,16 @@
         padding: 0 2% !important;
     }
 
+    // ----------------------home and about us page changes 3/1/22 start----------------------
+    .custom-card{
+        .card-text {
+            height: 310px;
+        }
+    } 
+    .our-story-block:hover .line-animated:before {
+        height: 125px;
+    }
+    // ----------------------home and about us page changes 3/1/22 end----------------------
     
 
 
@@ -2454,7 +2545,7 @@
         background-size: 580px;
     }
     .line-animated {
-        height: 130px;
+        height: 180px;
     }
     .about-section4 {
         .lets-meet-box {
@@ -2613,6 +2704,27 @@
     //         }
     //     } 
     // }
+    // ----------------------home and about us page changes 3/1/22 start----------------------
+    .custom-card{
+        .card-text {
+            height: 360px;
+        }
+    } 
+    .h1 {
+        font-size: 55px !important;
+    }
+    .service-thumb {
+        .h3 {
+            font-size: 18px;
+        }
+    }
+    .about-us-banner .w-50 {
+        width: 60% !important;
+    }
+    .our-story-block:hover .line-animated:before {
+        height: 90px;
+    }
+    // ----------------------home and about us page changes 3/1/22 end----------------------
 
 }
 
@@ -2685,6 +2797,20 @@
       
         min-height: 420px;
     }
+
+    // ----------------------home and about us page changes 3/1/22 start----------------------
+    .custom-card{
+        .card-text {
+            height: 280px;
+        }
+    } 
+    .line-animated {
+        height: 190px;
+    }
+    .our-story-block:hover .line-animated:before {
+        height: 95px;
+    }
+    // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 
 

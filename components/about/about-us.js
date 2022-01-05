@@ -13,45 +13,65 @@ const AboutUs = (props) => {
         t = i18next.t.bind(i18next),
         teamMemberList = [
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_01.jpg',
+                name: 'Alok Gupta',
+                designation: t('aboutUs.teamDesignation.founderceo'),
+                image: '/assets/images/team-member/Alok-Gupta.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_02.jpg',
+                name: 'Vandani Gupta',
+                designation: t('aboutUs.teamDesignation.director'),
+                image: '/assets/images/team-member/Vandani-Gupta.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_03.jpg',
+                name: 'Anant Randhawa',
+                designation: t('aboutUs.teamDesignation.healthcareAdvisor'),
+                image: '/assets/images/team-member/Anant-Randhawa.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_04.jpg',
+                name: 'Nitika Sharma',
+                designation: t('aboutUs.teamDesignation.recruitmentManager'),
+                image: '/assets/images/team-member/Nitika-Sharma.jpeg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_05.jpg',
+                name: 'Damini Singh',
+                designation: t('aboutUs.teamDesignation.digitalMarketing'),
+                image: '/assets/images/team-member/Damini.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_06.jpg',
+                name: 'Gurpreet Rajpal',
+                designation: t('aboutUs.teamDesignation.teamLead'),
+                image: '/assets/images/team-member/gurpreet-rajpal.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_07.jpg',
+                name: 'Hansraj Rami',
+                designation: t('aboutUs.teamDesignation.teamLead'),
+                image: '/assets/images/team-member/Hansraj-Rami.jpg',
             },
             {
-                name: 'Amitabh Bacchan',
-                designation: 'Founder',
-                image: '/assets/images/member_08.jpg',
+                name: 'Pinki Maurya',
+                designation: t('aboutUs.teamDesignation.qALead'),
+                image: '/assets/images/team-member/Pinki-Maurya.jpg',
             },
+            {
+                name: 'Shaishav Pindadi',
+                designation: t('aboutUs.teamDesignation.blockchainEngineer'),
+                image: 'assets/images/team-member/Shaishav.jpeg',
+            },
+        ],
+        howWeDoList = [
+            {
+                title : t('aboutUs.assess'),
+                describe: t('aboutUs.assessDescribe')
+            }, {
+                title : t('aboutUs.plan'),
+                describe: t('aboutUs.planDescribe')
+            }, {
+                title : t('aboutUs.implement'),
+                describe: t('aboutUs.implementDescribe')
+            }, {
+                title : t('aboutUs.maintainScale'),
+                describe: t('aboutUs.maintainScaleDescribe')
+            }
         ];
 
     return (
@@ -65,6 +85,9 @@ const AboutUs = (props) => {
                                 <H1 className="light-text-color">{t('aboutUs.title')}</H1>
                                 <Paragraph>
                                     {t('aboutUs.headerVisions')}
+                                </Paragraph>
+                                <Paragraph>
+                                    {t('aboutUs.headerVisions1')}
                                 </Paragraph>
                             </div>
                         </Col>
@@ -111,11 +134,15 @@ const AboutUs = (props) => {
                             </Paragraph>
 
                             <Paragraph>
-                                {t('aboutUs.ourStory2')}
+                                {t('aboutUs.ourStory2Since')}<b> 2019</b>, {t('aboutUs.ourStory2Come')}
                             </Paragraph>
 
                             <Paragraph>
                                 {t('aboutUs.ourStory3')}
+                            </Paragraph>
+
+                            <Paragraph>
+                                {t('aboutUs.ourStory4')}
                             </Paragraph>
                         </Col>
                     </Row>
@@ -128,10 +155,10 @@ const AboutUs = (props) => {
                                 <div className="our-story-block-content">
                                     <div className="line-animated rounded position-relative float-start me-xl-4 me-2"></div>
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
-                                        {t('aboutUs.ourVision')}
+                                        {t('aboutUs.mission')}
                                     </h3>
                                     <Paragraph>
-                                        {t('aboutUs.visionPara')}
+                                        {t('aboutUs.missionPara')}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -144,10 +171,10 @@ const AboutUs = (props) => {
                                 <div className="our-story-block-content">
                                     <div className="line-animated rounded position-relative float-start me-xl-4 me-2"></div>
                                     <h3 className="h3 purple-gradient-text-color text-uppercase mb-lg-4 mb-2">
-                                        {t('aboutUs.ourMission')}
+                                        {t('aboutUs.vision')}
                                     </h3>
                                     <Paragraph>
-                                        {t('aboutUs.missionPara')}
+                                        {t('aboutUs.visionPara')}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -186,18 +213,26 @@ const AboutUs = (props) => {
                                     <span>04</span>
                                 </div>
                                 <h3 className="h2 light-text-color">
-                                    {t('aboutUs.theWayFwd')}
+                                    {t('aboutUs.howWeDoIt')}
                                 </h3>
                             </div>
                         </Col>
                         <Col xl={8} lg={7}>
-                            <h3 className="h3 lh-base fw-normal light-text-color">
-                                {t('aboutUs.theWayFwdPara1')}
+                            <h3 className="h3 mb-3 lh-base fw-normal light-text-color">
+                                {t('aboutUs.howWeDoItPara')}
                             </h3>
 
-                            <h3 className="h3 lh-base fw-normal light-text-color">
-                                {t('aboutUs.theWayFwdPara2')}
-                            </h3>
+                            <div className="h3 lh-base fw-normal light-text-color">
+
+                            {_.map(howWeDoList, (item, index) => (
+                                <p key={index}>
+                                    <b className="d-block mb-2">{item.title}:</b>
+                                    {item.describe}
+                                </p>
+                                )
+                            )}
+                            </div>
+                            
                         </Col>
                     </Row>
                 </Container>
@@ -228,10 +263,10 @@ const AboutUs = (props) => {
                         </Col>
                         <Col lg={7}>
                             <h6 className="h3 text-uppercase dark-text-color mb-4">
-                                {t('aboutUs.ourTeam')}
+                                {t('aboutUs.meetCoreTeam')}
                             </h6>
                             <h3 className="h3 dark-secondary-text-color lh-base fw-normal">
-                                {t('aboutUs.ourTeamPara')}
+                                {t('aboutUs.meetCoreTeamPara')}
                             </h3>
                         </Col>
                     </Row>

@@ -8,7 +8,7 @@ const H1 = ({ children, className }) => {
                 h1 {
                     margin-top: 0px;
                     font-weight: 700;
-                    color: color('dark-primary');
+                    color: #404852;
                 }
                 .h1 {
                     font-size: 56px;
@@ -16,7 +16,7 @@ const H1 = ({ children, className }) => {
                     color: #404852;
                     margin-top: 0px;
                     font-weight: 700;
-                    color: color('dark-primary');
+                    letter-spacing: -1px;
                 }
 
                 .light-text-color {
