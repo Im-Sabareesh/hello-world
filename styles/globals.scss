@@ -1654,3 +1654,17 @@ p.card-text.show-more {
 .why-hyperledger {
     padding-top: 455px;
 }
+
+
+.blockchain-consulting-page .section-glow-banner{
+    height: 315px;
+}
+.card-less{
+    .card-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 80px;
+    }
+}
