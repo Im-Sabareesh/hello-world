@@ -86,36 +86,31 @@ const CareersComponent = (props) => {
                                     <span className="h2 purple-gradient-text-color">
                                         01
                                     </span>
-                                    Blockchain is changing the way the world
-                                    lives and works.
+                                    {t('careers.solveEveryDay')}
                                 </li>
                                 <li className="h3 fw-normal">
                                     <span className="h2 purple-gradient-text-color">
                                         02
                                     </span>
-                                    Blockchain is changing the way the world
-                                    lives and works.
+                                    {t('careers.flexibleCulture')}
                                 </li>
                                 <li className="h3 fw-normal">
                                     <span className="h2 purple-gradient-text-color">
                                         03
                                     </span>
-                                    Blockchain is changing the way the world
-                                    lives and works.
+                                    {t('careers.opportunities')}
                                 </li>
                                 <li className="h3 fw-normal">
                                     <span className="h2 purple-gradient-text-color">
                                         04
                                     </span>
-                                    Blockchain is changing the way the world
-                                    lives and works.
+                                    {t('careers.communicationOpen')}
                                 </li>
                                 <li className="h3 fw-normal">
                                     <span className="h2 purple-gradient-text-color">
                                         05
                                     </span>
-                                    Blockchain is changing the way the world
-                                    lives and works.
+                                    {t('careers.changingBlockchain')}
                                 </li>
                             </ul>
                         </Col>

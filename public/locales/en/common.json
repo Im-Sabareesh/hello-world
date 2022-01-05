@@ -161,7 +161,12 @@
     },
     "careers": {
         "title": "Careers",
-        "currentOpening": "See Current Openings"
+        "currentOpening": "See Current Openings",
+        "solveEveryDay": "Solve unique challenges every day.",
+        "flexibleCulture": "Flexible, result-oriented work culture.",
+        "opportunities": "Opportunities for further learning and development.",
+        "communicationOpen": "Open communication, Equal opportunities",
+        "changingBlockchain": "Blockchain is changing the way the world lives and works."
     },
     "careerForm": {
         "applyPosition": "Applying for Position",
@@ -218,7 +223,9 @@
         "trainingContent": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases.",
         "enterpriseBlockchain": "Enterprise Blockchain",
         "consulting": "Consulting",
-        "headerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh. Fusce turpis dui, dapibus ut congue non, consequat ac orci. Maecenas vel neque aliquet, suscipit metus a, congue ante.",
+        "headerDesc": "We offer expert guidance for your business to maneuver the best way forward with blockchain.",
+        "headerDesc1": "We innovate, design, and work with you to build bespoke decentralized solutions that enable businesses to drive next-level growth. The immutable power of the blockchain meets our development excellence allowing you to solve pressing problems of efficiency, security, and transparency.",
+        "headerDesc2": "With over 40 up and running products around the world, Chaincode Code partners with startups, small and medium enterprises, or large corporations to reinvent business processes and achieve unmatched progress via blockchain. Leverage the power of blockchain with our proven excellence in innovating, building, and launching real-world applications.",
         "accordianList" : {
             "whatIsBlockchain": "What Is Blockchain?",
             "whatIsBlockchainAns": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders",
@@ -228,7 +235,7 @@
             "areYouBlockchainAns": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients to evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
         },
         "buildNextGeneration": "Build Next-Generation <br/> Blockchain Solutions",
-        "nxtGenerationDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida pellentesque mauris. Maecenas cursus, magna quis mollis euismod, neque elit scelerisque nunc, eu pellentesque lectus ante sed leo. Vivamus sit amet magna nibh.",
+        "nxtGenerationDesc": "Our blockchain consultants have the perfect blend of expertise in business processes, industries, and blockchain development to seize the true potential of the technology. We are passionately dedicated to enabling enterprise-wide adoption of decentralized business applications embraced with blockchain technology. We as your business partners are committed to reduce risks and maximize ROI with proven business results.",
         "leverageHeader": "Leverage blockchain to enhance your business. <br /> Talk to an expert.",
         "blockchainConsultingServices": "Our Blockchain Consulting Services"
     },

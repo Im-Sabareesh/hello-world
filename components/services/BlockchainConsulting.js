@@ -82,7 +82,12 @@ const BlockchainConsultingComponent = (props) => {
                             <Paragraph>
                                 {t('blockchainConsulting.headerDesc')}
                             </Paragraph>
-
+                            <Paragraph>
+                                {t('blockchainConsulting.headerDesc1')}
+                            </Paragraph>
+                            <Paragraph>
+                                {t('blockchainConsulting.headerDesc2')}
+                            </Paragraph>
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
                                     btnVarient="red-btn"

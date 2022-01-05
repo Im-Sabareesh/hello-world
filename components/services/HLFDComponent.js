@@ -119,9 +119,7 @@ const HLFDSComponent = (props) => {
                                         className="p-0 rounded-0"
                                         size="lg"
                                         onClick={() => {
-                                            router.push(
-                                                `/${props.language}/contact`
-                                            );
+                                            window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
                                         {t('hyperledgerFabric.visitHyperledger')}
