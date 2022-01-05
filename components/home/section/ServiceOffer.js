@@ -10,40 +10,34 @@ export default function ServiceOfferSection() {
     const t = i18next.t.bind(i18next);
     const serviceList = [
         {
-            name: 'Hyperledger Fabric Development',
+            name: t('hdfDevelopment'),
             icon: images.deCenFin,
-            describe:
-                'The modular architecture and plug-in components of Hyperledger Fabric allow stable, scalable, reusable and robust applications across industries-  supply chain, fintech, healthcare or governance.  Our track record of launching multiple successful HFD products world-over makes us one of the top in the field of Hyperledger Fabric Development with a strong team of certified professional developers.',
+            describe:  t('home.serviceOfferList.hdfDevelopmentDescribe')
         },
         {
-            name: 'Non Fungible Tokens',
+            name:  t('home.serviceOfferList.nonFungibleTokens'),
             icon: images.nonFunToken,
-            describe:
-                'Every artist, celebrity and brand are hurrying to jump on the NFT bandwagon. Tokenize your artwork, video file, or any other digital asset for good and trade these tokenized assets via a custom marketplace. Our blockchain engineers and domain experts work together to offer diligently-crafted decentralized non-fungible token development solutions to suit your business needs- tokenize, trade and transcend!',
+            describe: t('home.serviceOfferList.nonFungibleTokensDescribe')
         },
         {
-            name: 'DevOps Blockchain',
+            name: t('home.serviceOfferList.devOpsBlockchain'),
             icon: images.smartChain,
-            describe:
-                'Enterprise DevOps Blockchain can be implemented using single‑chain or multi-chain blockchains as an underlying infrastructure to solve complex business problems. The flexibility of the EDOB in supporting different delivery models allows organizations to fast-track the transition from traditional to DevOps delivery while maintaining auditable and transparent records. As front-runners in the blockchain space, count on us as your tech partners.',
+            describe: t('home.serviceOfferList.devOpsBlockchainDescribe')
         },
         {
-            name: 'Blockchain Consulting',
+            name: t('blockChainConsulting'),
             icon: images.webDev,
-            describe:
-                'Powered by the world’s most comprehensive collection of blockchain technology research, data, and tools, Chaincode Consulting with its unmatched expertise in De-Fi and HFD helps businesses achieve their goals- faster and better. Test out a blockchain POC or go full in, we help create a roadmap to your success right from use case analysis to development and launch.',
+            describe: t('home.serviceOfferList.blockChainDescribe')
         },
         {
-            name: 'Binance Smart Chain',
+            name: t('home.serviceOfferList.binanceSmartChain'),
             icon: images.mobDev,
-            describe:
-                'Empower your users with BSC dual-chain architecture to build their decentralized apps and digital assets on one blockchain and take advantage of the fast trading to exchange on the other. Binance Smart Chain offers one of the fastest blockchain transaction times and lowest fee structures, making it an ideal option for building decentralized applications.',
+            describe: t('home.serviceOfferList.SmartChainDescribe')
         },
         {
-            name: 'DApp Development',
+            name: t('home.serviceOfferList.dAppDevelopment'),
             icon: images.aiTech,
-            describe:
-                'With proven extensive experience and credible expertise, we design and build secure, trustless, stable and rapidly scalable dApps. We harness different blockchains like Ethereum, EOS, BSC, Polkadot, and more to build customized dApps that align with your business needs and enable you to penetrate the market- be it gaming, collectibles, finance or even governance.',
+            describe: t('home.serviceOfferList.dAppDevelopmentDescribe')
         },
     ];
 
