@@ -157,7 +157,25 @@
         "ourTeamPara": "Making people smile gets us out of bed every morning. Through thoughtful design we create delightful digital experiences that make life simpler and more enjoyable",
         "workWithUs": "WORK WITH US",
         "workWithUsQuesition": "Have you decided to work on a project with us?",
-        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level"
+        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level",
+        "teamDesignation": {
+            "founderceo": "Founder & CEO",
+            "director": "Director",
+            "healthcareAdvisor": "Healthcare Advisor",
+            "recruitmentManager": "Recruitment Manager",
+            "digitalMarketing": "Digital Marketing Manager",
+            "teamLead": "Team Lead",
+            "qALead": "QA Lead",
+            "blockchainEngineer": "Blockchain Engineer"
+        },
+        "assess": "Assess",
+        "assessDescribe": "We understand your needs, challenges and pain points, and then determine whether blockchain can add value and set goals.",
+        "plan": "Plan",
+        "planDescribe": "We collaborate with you and your team to create a comprehensive plan for meeting those goals.",
+        "implement": "Implement",
+        "implementDescribe": "Next, we turn it into reality. Moving from design to development, we use agile methodology to implement the solution.",
+        "maintainScale:": "Maintain and Scale",
+        "maintainScaleDescribe": "After project delivery, we help onboard, maintain and scale it further."
     },
     "careers": {
         "title": "Careers",
