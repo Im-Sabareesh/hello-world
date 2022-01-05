@@ -55,7 +55,7 @@ const AboutUs = (props) => {
             {
                 name: 'Shaishav Pindadi',
                 designation: t('aboutUs.teamDesignation.blockchainEngineer'),
-                image: 'assets/images/team-member/Shaishav.jpeg',
+                image: '/assets/images/team-member/Shaishav.jpeg',
             },
         ],
         howWeDoList = [

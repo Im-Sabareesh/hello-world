@@ -80,6 +80,20 @@ const hyperledgersecurityIcon = '/assets/images/feature-icon3.png';
 const privacyIcon = '/assets/images/privacy.png';
 const hyperledgerprivacyIcon = '/assets/images/feature-icon4.png';
 const hyperledgerimg = '/assets/images/what-hyperledger-img.png';
+const gdprBanner = '/assets/images/gdpr-banner.png';
+const gdprImage = '/assets/images/gdpr-img.png';
+const userconsentIcon = '/assets/images/user-consent-model-icon.png';
+const decentralizedgovernanceIcon = '/assets/images/decentralized-governance-icon.png';
+const privacydesignIcon = '/assets/images/privacy-design-icon.png';
+const rightforgottenIcon = '/assets/images/right-forgotten-icon.png';
+const rpaBanner = '/assets/images/rpa-banner.png';
+const rpaImage = '/assets/images/rpa-img.png';
+const standardIcon = '/assets/images/rpa-icon1.png';
+const experienceIcon = '/assets/images/rpa-icon2.png';
+const productivityIcon = '/assets/images/rpa-icon3.png';
+const capabilitiesIcon = '/assets/images/rpa-icon4.png';
+const utilizingIcon = '/assets/images/rpa-icon5.png';
+const uipathLogo = '/assets/images/ui-path-logo.png';
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
 // import smartChain from '@public/assets/icons/service-icon3.png';
@@ -169,5 +183,19 @@ export default {
     hyperledgersecurityIcon,
     privacyIcon,
     hyperledgerprivacyIcon,
-    hyperledgerimg
+    hyperledgerimg,
+    gdprBanner,
+    gdprImage,
+    userconsentIcon,
+    decentralizedgovernanceIcon,
+    privacydesignIcon,
+    rightforgottenIcon,
+    rpaBanner,
+    rpaImage,
+    standardIcon,
+    experienceIcon,
+    productivityIcon,
+    capabilitiesIcon,
+    utilizingIcon,
+    uipathLogo
 };

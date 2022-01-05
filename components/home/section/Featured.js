@@ -35,7 +35,7 @@ export default function FeaturedSection(props) {
             },
             {
                 title: t('home.gdprCompliance'),
-                link: '',
+                link: 'services/gdpr-development',
                 icon: images.gdprIcon,
             },
         ];

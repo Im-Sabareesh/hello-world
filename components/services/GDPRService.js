@@ -10,61 +10,57 @@ import i18next from 'i18next';
 import { CardSection, Button, H1, Paragraph, MyImage } from '@components';
 import images from '@components/images';
 
-const HLFDSComponent = (props) => {
-    const hlfdServList = useSelector(serviceSelector.servicesListSelector);
+const GDPRComponent = (props) => {
+    const gdprServList = useSelector(serviceSelector.servicesListSelector);
     const router = useRouter(),
         t = i18next.t.bind(i18next);
-    const hlfdFabricList = [
+    const gdprFabricList = [
             {
-                title: t('hyperledgerFabric.performanceScalabilty'),
+                title: t('gdprService.userConsent'),
                 link: '#',
-                icon: images.performanceIcon,
-                content: t('hyperledgerFabric.performanceContent')
+                icon: images.userconsentIcon,
+                content: t('gdprService.userConsentContent')
             },
             {
-                title: t('hyperledgerFabric.governance'),
+                title: t('gdprService.decentralizedGovernance'),
                 link: '#',
-                icon: images.governanceIcon,
-                content: t('hyperledgerFabric.governanceContent')
+                icon: images.decentralizedgovernanceIcon,
+                content: t('gdprService.decentralizedContent')
             },
             {
-                title: t('hyperledgerFabric.security'),
+                title: t('gdprService.privacyDesign'),
                 link: '#',
-                icon: images.securityIcon,
-                content: t('hyperledgerFabric.securityContent')
+                icon: images.privacydesignIcon,
+                content: t('gdprService.privacyDesignContent')
             },
             {
-                title: t('hyperledgerFabric.privacy'),
+                title: t('gdprService.rightForgotten'),
                 link: '#',
-                icon: images.privacyIcon,
-                content: t('hyperledgerFabric.privacyContent')
+                icon: images.rightforgottenIcon,
+                content: t('gdprService.rightForgottenContent')
             },
         ];
     return (
         <>
-            {/*--------------- Hyper ledger fabric development section1 start---------- */}
+            {/*--------------- GDPR service section1 start---------- */}
 
             <section className="service-inner-section1 enterprise-section1">
                 <Container>
                     <Row>
                         <Col lg={6} sm={12} className="my-auto">
                             <div className="d-sm-flex align-items-center">
-                                <h3 className="h3 secondary-text-color text-uppercase">
-                                    {t('hdfDevelopment')}
+                                <h3 className="h3 secondary-text-color">
+                                    {t('gdprService.gdprSimplified')}
                                 </h3>
                                 <div className="heading-line"></div>  
                             </div>
 
                             <H1 className="mb-lg-4 mb-3">
-                                {t('hyperledgerFabric.tapThePotential')} <br /> {t('hyperledgerFabric.distributedLedger')}
+                                {t('gdprService.gdprheaderDesc')}
                             </H1>
 
                             <Paragraph>
-                                <b>{t('hyperledgerFabric.headerDesc')}</b>
-                            </Paragraph>
-
-                            <Paragraph>
-                                {t('hyperledgerFabric.headerPara')}
+                                {t('gdprService.gdprHeaderPara')}
                             </Paragraph>
 
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -86,12 +82,12 @@ const HLFDSComponent = (props) => {
                             <div className="nft-service-img-div">
                                {/* <Image src="../../public/assets/images/enterprise-blockchain-img.png" alt="..."></Image> */}
                                 <MyImage
-                                    src={images.hyperledgerBanner}
+                                    src={images.gdprBanner}
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={603}
-                                    height={668}
+                                    width={710}
+                                    height={571}
                                 />
                             </div>
                         </Col>
@@ -99,9 +95,9 @@ const HLFDSComponent = (props) => {
                 </Container>
             </section>
 
-            {/*--------------- Hyper ledger fabric development  section1 end---------- */}
+            {/*--------------- GDPR service  section1 end---------- */}
 
-            {/*--------------- Hyper ledger fabric development  section2 start---------- */}
+            {/*--------------- GDPR service  section2 start---------- */}
 
             <section className="service-inner-section2 enterprise-section2">
                 <div className="section-glow-banner develop-hyperledger">
@@ -110,9 +106,9 @@ const HLFDSComponent = (props) => {
                             <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                     
-                                    <h3>{t('hyperledgerFabric.whatIsHyperledger')}</h3>
+                                    <h3>{t('gdprService.whatisGDPR')}</h3>
                                     <Paragraph>
-                                        {t('hyperledgerFabric.whatIsHyperledgerAns')}
+                                        {t('gdprService.whatisGDPRAns')}
                                     </Paragraph>
                                     <Button
                                         btnVarient="red-btn"
@@ -122,7 +118,7 @@ const HLFDSComponent = (props) => {
                                             window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
-                                        {t('visitHyperledger')}
+                                    {t('visitHyperledger')}
                                     </Button>
                                     
                                
@@ -131,20 +127,19 @@ const HLFDSComponent = (props) => {
 
                             <Col xl={{ span: 7, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
                                 <h2 className="h2 mb-4">
-                                    {t('hyperledgerFabric.blockHyperledgerFabric')}
+                                    {t('gdprService.ourGDPRSolution')}
                                 </h2>
                                 <Paragraph>
-                                    {t('hyperledgerFabric.blockHyperledgerFabricPara')} <br/>
-                                    {t('hyperledgerFabric.hyperFabric')}.
+                                    {t('gdprService.ourGDPRSolutionDesc')}
                                 </Paragraph>
                                 <div className="d-xl-none d-lg-block d-none mx-auto">
                                     <MyImage
-                                        src={images.hyperledgerimg}
+                                        src={images.gdprImage}
                                         rounded="true"
                                         className="nft-service-img"
                                         alt=" "
-                                        width={517}
-                                        height={417}
+                                        width={451}
+                                        height={348}
                                     />
                                 </div>
                             </Col>
@@ -154,14 +149,14 @@ const HLFDSComponent = (props) => {
                             <Col xl={5} lg={6}>
                                 
                             </Col>
-                            <Col xl={7} lg={6} className="what-hyperledger-img text-center">
+                            <Col xl={7} lg={6} className="what-hyperledger-img text-lg-start text-center">
                                 <MyImage
-                                    src={images.hyperledgerimg}
+                                    src={images.gdprImage}
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={517}
-                                    height={417}
+                                    width={451}
+                                    height={348}
                                 />
                             </Col>
                         </Row>
@@ -170,16 +165,16 @@ const HLFDSComponent = (props) => {
                 </div>
             </section>
 
-            {/*--------------- Hyper ledger fabric development  section2 end---------- */}
+            {/*--------------- GDPR service  section2 end---------- */}
 
-            {/*--------------- Hyper ledger fabric development  section3 cta start---------- */}
+            {/*--------------- GDPR service  section3 cta start---------- */}
 
             <section className="service-inner-section3 enterprise-section3 why-hyperledger">
                 <Container>
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                {t('hyperledgerFabric.whyHyperledgerFabric')}
+                                {t('gdprService.highlights')}
                             </h2>
                         </Col>
                     </Row>
@@ -187,7 +182,7 @@ const HLFDSComponent = (props) => {
 
                 <Container className="mt-0 pt-2">
                     <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 justify-content-center">
-                        {_.map(hlfdFabricList, (item, i) => (
+                        {_.map(gdprFabricList, (item, i) => (
                             <Col
                                 key={_.uniqueId()}
                                 onClick={(e) => {
@@ -199,7 +194,7 @@ const HLFDSComponent = (props) => {
                                     }
                                 }}
                             >
-                                <div className={`featured-box-container-new btn text-start position-relative featured-iconbg-new${i+1}`}>
+                                <div className={`featured-box-container-new btn text-start position-relative featured-gdprbg${i+1}`}>
                                     <div className="featured-icon-new">
                                         <MyImage
                                             src={item.icon}
@@ -240,10 +235,10 @@ const HLFDSComponent = (props) => {
                 </Container>
             </section>
 
-            {/*--------------- Hyper ledger fabric development cta end---------- */}
+            {/*--------------- GDPR service cta end---------- */}
 
 
-            {/*--------------- Hyper ledger fabric development cta start---------- */}
+            {/*--------------- GDPR service cta start---------- */}
 
             <section className="orange-cta-section enterprise-section4">
                 <Container>
@@ -256,14 +251,14 @@ const HLFDSComponent = (props) => {
                             </h6>
 
                             <Button
-                                btnVarient="white-outline-btn"
-                                className="white-outline-btn"
-                                onClick={() => {
-                                    router.push(
-                                        `/${props.language}/contact`
-                                    );
-                                }}
-                            >
+                                    btnVarient="white-outline-btn"
+                                    className="white-outline-btn"
+                                    onClick={() => {
+                                        router.push(
+                                            `/${props.language}/contact`
+                                        );
+                                    }}
+                                >                              
                                 {t('getStarted')}
                             </Button>
                         </Col>
@@ -276,10 +271,10 @@ const HLFDSComponent = (props) => {
     );
 };
 
-export default HLFDSComponent;
+export default GDPRComponent;
 
-HLFDSComponent.propTypes = { language: PropTypes.string };
+GDPRComponent.propTypes = { language: PropTypes.string };
 
-HLFDSComponent.defaultProps = {
+GDPRComponent.defaultProps = {
     language: '',
 };

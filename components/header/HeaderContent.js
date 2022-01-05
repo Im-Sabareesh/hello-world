@@ -45,6 +45,14 @@ const HeaderContent = (props) => {
             name: `${t('defiDevelopment')}`,
             navPath: `/${props.language}/services/defi-development`,
         },
+        {
+            name: `GDPR Development`,
+            navPath: `/${props.language}/services/gdpr-development`,
+        },
+        {
+            name: `RPA Development`,
+            navPath: `/${props.language}/services/rpa-development`,
+        },
     ];
 
     const onToggled = (e) => {
