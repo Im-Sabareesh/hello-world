@@ -18,52 +18,64 @@ const RPAComponent = (props) => {
             {
                 link: '#',
                 icon: images.standardIcon,
-                content: "Increased compliance with modern business standards."
+                content: t('rpaService.benefitStd')
             },
             {
                 link: '#',
                 icon: images.experienceIcon,
-                content: "Improved customer experience."
+                content: t('rpaService.benefitImproved')
             },
             {
                 link: '#',
                 icon: images.productivityIcon,
-                content: "Improvement in the overall productivity."
+                content: t('rpaService.benefitProductivity')
             },
             {
                 link: '#',
                 icon: images.capabilitiesIcon,
-                content: "Ensuring better management capabilities."
+                content: t('rpaService.benefitEnsuring')
             },
             {
                 link: '#',
                 icon: images.utilizingIcon,
-                content: "Utilizing machine learning capabilities."
+                content: t('rpaService.benefitUtilizing')
             },
         ];
 
     const uiPathConsultList = [
         {
-            title: 'UiPath Consulting',
+            title: t('rpaService.uiPathConsulting'),
             image: '/assets/images/solution-1.jpg',
-            subtitle:
-                'With several years of relevant industry expertise, Chain Code Consulting has been delivering professional UiPath consulting services to help you incorporate the RPA process in your day-to-day business operations.',
+            subtitle: t('rpaService.uiPathConsultingContent'),
             link: t('home.blockChainLink'),
         },
         {
-            title: 'UiPath Implementation',
+            title: t('rpaService.uiPathImplementation'),
             image: '/assets/images/solution-2.jpg',
-            subtitle:
-                'The implementation phase of the RPA process involves the iterative operations of in-depth business analysis along with UiPath configuration and training & testing.nce.',
+            subtitle: t('rpaService.uiPathImplementationContent'),
             link: t('home.blockChainLink'),
         },
         {
-            title: 'Managed Services',
+            title: t('rpaService.managedServices'),
             image: '/assets/images/solution-3.jpg',
-            subtitle:
-                'As an integral part of our Business Process Outsourcing solutions, we help in managing, monitoring, and continuously optimizing your UiPath RPA implementation –along with ensuring infrastructure as well as system support.',
+            subtitle: t('rpaService.managedServicesContent'),
             link: t('home.blockChainLink'),
         },
+    ],
+    benefitListing = [
+        {
+            title: t('rpaService.dragnDrop'),
+            describe: t('rpaService.dragnDropDesc')
+        }, {
+            title: t('rpaService.recordingActions'),
+            describe: t('rpaService.recordingActionsDesc')
+        }, {
+            title: t('rpaService.vastLibrary'),
+            describe: t('rpaService.vastLibraryDesc')
+        }, {
+            title: t('rpaService.universalSearch'),
+            describe: t('rpaService.universalSearchDesc')
+        }
     ];
     return (
         <>
@@ -75,16 +87,17 @@ const RPAComponent = (props) => {
                         <Col lg={6} sm={12} className="my-auto">
                             <div className="d-sm-flex align-items-center">
                                 <h3 className="h3 secondary-text-color text-uppercase">
-                                    UiPath Consulting
+                                    {t('rpaService.uiPathConsulting')}
                                 </h3>
                                 <div className="heading-line"></div>  
                             </div>
 
                             <H1 className="mb-lg-4 mb-3">
-                            Robotic Process Automation</H1>
+                                {t('rpaService.roboticAutomation')}
+                            </H1>
 
                             <Paragraph>
-                            Robotic Process Automation (RPA) is here to stay in the modern era. The sooner you would start leveraging its potential, the faster it will help in creating a competitive edge for your business enterprise. UiPath is known all around the world for delivering impressive product leadership along with technical excellence. Boasting one of the largest management teams in the industry, UiPath is committed to continuous innovation throughout the year for accelerating your business value from automation. Chaincode Consulting is a leading UiPath consulting service provider to help you get a technical advantage in the modern market.
+                                {t('rpaService.roboticAutomationDesc')}
                             </Paragraph>
 
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -98,7 +111,7 @@ const RPAComponent = (props) => {
                                         );
                                     }}
                                 >
-                                 Talk to our Experts
+                                 {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -130,21 +143,19 @@ const RPAComponent = (props) => {
                             <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                     
-                                    <h3>What is RPA?</h3>
+                                    <h3>{t('rpaService.whatisRPA')}</h3>
                                     <Paragraph>
-                                    RPA stands for Robotic Process Automation. It is referred to as the technology allowing an individual to configure some computer software (a robot) for emulating and integrating the actions of a human being who is interacting with some digital system for executing a business-centric process. RPA automated systems or robots are known to make use of the available user interface for capturing data and manipulating applications just like human beings.
+                                        {t('rpaService.whatisRPAans')}
                                     </Paragraph>
                                     <Button
                                         btnVarient="red-btn"
                                         className="p-0 rounded-0"
                                         size="lg"
                                         onClick={() => {
-                                            router.push(
-                                                `/${props.language}/contact`
-                                            );
+                                            window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
-                                    Visit Hyperledger.org
+                                        {t('visitHyperledger')}
                                     </Button>
                                     
                                
@@ -156,7 +167,7 @@ const RPAComponent = (props) => {
                                     Our GDPR  Solution
                                 </h2> */}
                                 <Paragraph>
-                                    The robots are capable of interpreting, triggering responses, and communicating with the inter-related systems for performing upon a wide range of repetitive activities. The best thing about the high-end RPA software solution is that it never sleeps, makes zero errors, and turns out highly cost-effective. For making the most of the revolutionary RPA technology & its solutions for your business enterprise, gain access to our modern UiPath consulting services.
+                                    {t('rpaService.robotsInterpreting')}
                                 </Paragraph>
                                 <div className="d-xl-none d-lg-block d-none mx-auto">
                                     <MyImage
@@ -212,10 +223,10 @@ const RPAComponent = (props) => {
                                     />
                                 </div>
                                  <h2 className="h2 mb-4">
-                                    What Is UiPath? 
+                                    {t('rpaService.whatUiPath')} 
                                 </h2>
                                 <Paragraph>
-                                    Studio by UiPath is a specialized automated designing tool allowing businesses to model the needed business processes throughout various levels of scalability and complexity. Studio by UiPath is a diverse tool with a myriad of attractive features that are widely accepted by the end-users –ranging from business enterprises to programming experts. For maximizing the overall productivity for your business enterprise to upscale its operations significantly, reach out to our professional team of UiPath consultants providing assistance on the latest UiPath solutions.
+                                    {t('rpaService.whatUiPathAns')}
                                 </Paragraph>
                             </Col>
 
@@ -223,34 +234,18 @@ const RPAComponent = (props) => {
                                 <div className="floating-content">
                                     <div className="floating-content-heading">
                                         <Paragraph>
-                                            Benefits of RPA/UiPath automation technology in business
+                                            {t('rpaService.benefitsRPaPara')}
                                         </Paragraph>
                                     </div>
-                                    <ul class="benefits-listing">
-                                        <li>
-                                            <strong class="d-block">Drag & Drop</strong>
-                                            <Paragraph>
-                                                Automating quickly in a code-free environment.
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <strong class="d-block">Recording Your Actions</strong>
-                                            <Paragraph>
-                                                Specialized built-in workflow recorders for web apps, desktop apps, and Citrix.
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <strong class="d-block">Vast Library</strong>
-                                            <Paragraph>
-                                                Featuring built-in drag-and-drop automation templates for accelerating the overall deployment time.
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <strong class="d-block">Universal Search</strong>
-                                            <Paragraph>
-                                                The innovative Unified search technology allows you to search across the available automation resources.
-                                            </Paragraph>
-                                        </li>
+                                    <ul className="benefits-listing">
+                                        {_.map(benefitListing, (item, index) =>
+                                            <li key={index}>
+                                                <strong className="d-block">{item.title}</strong>
+                                                <Paragraph>
+                                                    {item.describe}
+                                                </Paragraph>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </Col>
@@ -268,7 +263,7 @@ const RPAComponent = (props) => {
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Potential benefits of UiPath automation technology
+                                {t('rpaService.potentialAutomation')}
                             </h2>
                         </Col>
                     </Row>
@@ -332,7 +327,7 @@ const RPAComponent = (props) => {
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Our UiPath Consulting Services
+                                {t('rpaService.ourUiPathServices')}
                             </h2>
                         </Col>
                                     
@@ -361,7 +356,10 @@ const RPAComponent = (props) => {
                 <Container>
                     <Row>
                         <Col md={12} className="get-started-block text-center">
-                            <h6 className="getstarted-heading text-white">Leverage blockchain to enhance your business. <br /> Talk to an expert.</h6>
+                            <h6 className="getstarted-heading text-white"
+                                dangerouslySetInnerHTML={{
+                                    __html: t('leverageHeader'),
+                                }}></h6>
 
                             <Button
                                     btnVarient="white-outline-btn"
@@ -372,8 +370,8 @@ const RPAComponent = (props) => {
                                         );
                                     }}
                                 >
-                              Get Started
-                                </Button>
+                              {t('getStarted')}
+                            </Button>
                         </Col>
                     </Row>
                 </Container>

@@ -19,25 +19,25 @@ const GDPRComponent = (props) => {
                 title: t('gdprService.userConsent'),
                 link: '#',
                 icon: images.userconsentIcon,
-                content: "The node based architecture ensures users have control over their data and seeks consent for its sharing."
+                content: t('gdprService.userConsentContent')
             },
             {
                 title: t('gdprService.decentralizedGovernance'),
                 link: '#',
                 icon: images.decentralizedgovernanceIcon,
-                content: "No one single authority. Governance-driven data sharing only on approval by data subject & controller."
+                content: t('gdprService.decentralizedContent')
             },
             {
                 title: t('gdprService.privacyDesign'),
                 link: '#',
                 icon: images.privacydesignIcon,
-                content: "Using pseudonymization of the original data, ensure privacy levels adhered to GDPR."
+                content: t('gdprService.privacyDesignContent')
             },
             {
                 title: t('gdprService.rightForgotten'),
                 link: '#',
                 icon: images.rightforgottenIcon,
-                content: "Data stored in the IPFS mutable file system and pointer is stored in the Fabric ledger allow erasure on demand."
+                content: t('gdprService.rightForgottenContent')
             },
         ];
     return (
@@ -50,16 +50,17 @@ const GDPRComponent = (props) => {
                         <Col lg={6} sm={12} className="my-auto">
                             <div className="d-sm-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
-                                    GDPR Simplified
+                                    {t('gdprService.gdprSimplified')}
                                 </h3>
                                 <div className="heading-line"></div>  
                             </div>
 
                             <H1 className="mb-lg-4 mb-3">
-                            Conform to GDPR with blockchain enhanced data governance & privacy.</H1>
+                                {t('gdprService.gdprheaderDesc')}
+                            </H1>
 
                             <Paragraph>
-                            Launch new products and services faster by being GDPR compliant. GDPR makes it easier for companies to freely share information globally, reduce barriers that constrain progress.
+                                {t('gdprService.gdprHeaderPara')}
                             </Paragraph>
 
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
@@ -73,7 +74,7 @@ const GDPRComponent = (props) => {
                                         );
                                     }}
                                 >
-                                 Talk to our Experts
+                                 {t('talkOurExperts')}
                                 </Button>
                             </div>
                         </Col>
@@ -105,21 +106,19 @@ const GDPRComponent = (props) => {
                             <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                     
-                                    <h3>What is GDPR?</h3>
+                                    <h3>{t('gdprService.whatisGDPR')}</h3>
                                     <Paragraph>
-                                        As technology keeps evolving with each passing minute, regulatory bodies and governments are trying to put in place systems and processes to ensure data security. The General Data Protection Regulation (GDPR) is one such law that seeks to standardize data protection laws across the European Union, and has imposed rules on processing and controlling Personally Identifiable Information (PII). It has paved a way for a robust and uniform system to data regulation globally.
+                                        {t('gdprService.whatisGDPRAns')}
                                     </Paragraph>
                                     <Button
                                         btnVarient="red-btn"
                                         className="p-0 rounded-0"
                                         size="lg"
                                         onClick={() => {
-                                            router.push(
-                                                `/${props.language}/contact`
-                                            );
+                                            window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
-                                    Visit Hyperledger.org
+                                    {t('visitHyperledger')}
                                     </Button>
                                     
                                
@@ -128,10 +127,10 @@ const GDPRComponent = (props) => {
 
                             <Col xl={{ span: 7, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
                                 <h2 className="h2 mb-4">
-                                    Our GDPR  Solution
+                                    {t('gdprService.ourGDPRSolution')}
                                 </h2>
                                 <Paragraph>
-                                    Our GDPR Solution designed and developed after thorough research enables data owners to impose data usage consent, ensures only designated parties can process personal data, and logs all data activities in an immutable distributed ledger   using smart contract and cryptography techniques.
+                                    {t('gdprService.ourGDPRSolutionDesc')}
                                 </Paragraph>
                                 <div className="d-xl-none d-lg-block d-none mx-auto">
                                     <MyImage
@@ -175,7 +174,7 @@ const GDPRComponent = (props) => {
                     <Row>
                         <Col md={12} className="mb-2 mb-lg-5">
                             <h2 className="h2">
-                                Highlights
+                                {t('gdprService.highlights')}
                             </h2>
                         </Col>
                     </Row>
@@ -245,7 +244,11 @@ const GDPRComponent = (props) => {
                 <Container>
                     <Row>
                         <Col md={12} className="get-started-block text-center">
-                            <h6 className="getstarted-heading text-white">Leverage blockchain to enhance your business. <br /> Talk to an expert.</h6>
+                            <h6 className="getstarted-heading text-white"
+                                dangerouslySetInnerHTML={{
+                                    __html: t('leverageHeader'),
+                                }}>                                
+                            </h6>
 
                             <Button
                                     btnVarient="white-outline-btn"
@@ -255,9 +258,9 @@ const GDPRComponent = (props) => {
                                             `/${props.language}/contact`
                                         );
                                     }}
-                                >
-                              Get Started
-                                </Button>
+                                >                              
+                                {t('getStarted')}
+                            </Button>
                         </Col>
                     </Row>
                 </Container>

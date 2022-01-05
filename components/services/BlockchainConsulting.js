@@ -246,7 +246,7 @@ const BlockchainConsultingComponent = (props) => {
                         <Col md={12} className="get-started-block text-center">
                             <h6 className="getstarted-heading text-white"
                                 dangerouslySetInnerHTML={{
-                                    __html: t('blockchainConsulting.leverageHeader'),
+                                    __html: t('leverageHeader'),
                                 }}>
                                 
                             </h6>

@@ -1132,6 +1132,10 @@ header .main-header {
         .card-img-top {
             margin: 0 auto;
         }
+        img{
+            object-fit: cover !important;
+            object-position: top !important;
+        }
     }
 }
 .about-us-page .header-search img {

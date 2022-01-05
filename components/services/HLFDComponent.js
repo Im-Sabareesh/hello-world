@@ -122,7 +122,7 @@ const HLFDSComponent = (props) => {
                                             window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
                                         }}
                                     >
-                                        {t('hyperledgerFabric.visitHyperledger')}
+                                        {t('visitHyperledger')}
                                     </Button>
                                     
                                
@@ -251,7 +251,7 @@ const HLFDSComponent = (props) => {
                         <Col md={12} className="get-started-block text-center">
                             <h6 className="getstarted-heading text-white"
                                 dangerouslySetInnerHTML={{
-                                    __html: t('blockchainConsulting.leverageHeader'),
+                                    __html: t('leverageHeader'),
                                 }}>                                
                             </h6>
 
