@@ -31,7 +31,8 @@ const CareersComponent = (props) => {
                                     even better.
                                 </Paragraph>
                                 <div className="button-outer mx-auto mt-md-3 pt-md-3">
-                                    <Button btnVarient="red-btn">
+                                    <Button btnVarient="red-btn"
+                                        onClick={(e) => location.href=`${location.href}#joblisting`}>
                                         {t('careers.currentOpening')}
                                     </Button>
                                 </div>
@@ -122,7 +123,7 @@ const CareersComponent = (props) => {
 
             {/*--------------- career-section2 start---------- */}
 
-            <section className="career-section2  py-xl-5 py-4">
+            <section className="career-section2  py-xl-5 py-4" id="joblisting">
                 <Container>
                     <h2 className="h2 mb-md-4 pb-md-3 mb-2 pb-2 dark-secondary-text-color text-center">
                         Job Listings
@@ -181,7 +182,7 @@ const CareersComponent = (props) => {
 
             {/*--------------- career-section3 start---------- */}
 
-            <section className="career-section3" id="joblisting">
+            <section className="career-section3">
                 <Container>
                     <Row>
                         <Col sm={12}>
