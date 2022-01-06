@@ -35,7 +35,7 @@ const ContactFormFormik = (props) => {
         firstname: '',
         email: '',
         phone: '',
-        service: 'Interested in',
+        service: t('contactUsForm.serviceOptions.interestedIn'),
         description: '',
     };
     const handleVerify = (token) => {
