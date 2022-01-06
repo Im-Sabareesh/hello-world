@@ -47,7 +47,7 @@ const CardSection = ({ className, fullCard, item, footerClass, footer, cardBodyC
                         </a>
                     )}
                 </Card.Body>
-                {footerClass && (
+                {footerClass && item.link && (
                     <Card.Footer className={footerClass}>
                         <a
                             href="#"
