@@ -48,11 +48,11 @@ const RadiusFooter = (props) => {
                 lgStyle: 2,
                 list: [
                     {
-                        name: t('footer.liveLedger'),
+                        name: t('liveLedger'),
                         route: '#',
                     },
                     {
-                        name: t('footer.trueTitle'),
+                        name: t('trueTitle'),
                         route: '#',
                     },
                     {
