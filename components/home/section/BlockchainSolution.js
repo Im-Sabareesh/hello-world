@@ -10,15 +10,15 @@ export default function BlockChainSolutionSection() {
     const t = i18next.t.bind(i18next),
         blockChainSolnList = [
             {
-                title: t('home.gdprCompliance'),
-                image: '/assets/images/home-solution-2.jpg',
-                subtitle: t('home.gdprComplianceDesc'),
-                // link: t('home.blockChainLink'),
-            },
-            {
                 title: t('home.obortechHub'),
                 image: '/assets/images/home-solution-1.jpg',
                 subtitle: t('home.obortechHubDesc'),
+                // link: t('home.blockChainLink'),
+            },
+            {
+                title: t('home.gdprCompliance'),
+                image: '/assets/images/home-solution-2.jpg',
+                subtitle: t('home.gdprComplianceDesc'),
                 // link: t('home.blockChainLink'),
             },
             {

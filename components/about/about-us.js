@@ -15,61 +15,70 @@ const AboutUs = (props) => {
             {
                 name: 'Alok Gupta',
                 designation: t('aboutUs.teamDesignation.founderceo'),
-                image: '/assets/images/team-member/Alok-Gupta.jpeg',
+                image: '/assets/images/team-member/Alok-Gupta.jpg',
+                linkedIn: 'https://www.linkedin.com/in/alok-gupta-32010615/'
             },
             {
                 name: 'Vandani Gupta',
                 designation: t('aboutUs.teamDesignation.director'),
                 image: '/assets/images/team-member/Vandani-Gupta.jpeg',
+                linkedIn: 'https://www.linkedin.com/in/vandani-gupta-73031b223/'
             },
             {
                 name: 'Anant Randhawa',
                 designation: t('aboutUs.teamDesignation.healthcareAdvisor'),
                 image: '/assets/images/team-member/Anant-Randhawa.jpg',
+                linkedIn: ''
             },
             {
                 name: 'Nitika Sharma',
                 designation: t('aboutUs.teamDesignation.recruitmentManager'),
                 image: '/assets/images/team-member/Nitika-Sharma.jpeg',
+                linkedIn: 'https://www.linkedin.com/in/nitika-sharma-18513362/'
             },
             {
                 name: 'Damini Singh',
                 designation: t('aboutUs.teamDesignation.digitalMarketing'),
                 image: '/assets/images/team-member/Damini.jpg',
+                linkedIn: 'https://www.linkedin.com/in/damini-singh-7b1129168/'
             },
             {
                 name: 'Gurpreet Rajpal',
                 designation: t('aboutUs.teamDesignation.teamLead'),
                 image: '/assets/images/team-member/gurpreet-rajpal.jpg',
+                linkedIn: 'https://www.linkedin.com/in/gurpreet-rajpal-a2869135/'
             },
             {
                 name: 'Hansraj Rami',
                 designation: t('aboutUs.teamDesignation.teamLead'),
                 image: '/assets/images/team-member/Hansraj-Rami.jpg',
+                linkedIn: 'https://www.linkedin.com/in/hansraj-rami-7a82a6165/'
             },
             {
                 name: 'Pinki Maurya',
                 designation: t('aboutUs.teamDesignation.qALead'),
                 image: '/assets/images/team-member/Pinki-Maurya.jpg',
+                linkedIn: 'https://www.linkedin.com/in/pinki-maurya/'
             },
             {
                 name: 'Shaishav Pindadi',
                 designation: t('aboutUs.teamDesignation.blockchainEngineer'),
                 image: '/assets/images/team-member/Shaishav.jpeg',
+                linkedIn: 'https://www.linkedin.com/in/shaivpidadi/'
             },
         ],
         howWeDoList = [
             {
-                title : t('aboutUs.assess'),
+                title: t('aboutUs.assess'),
                 describe: t('aboutUs.assessDescribe')
             }, {
-                title : t('aboutUs.plan'),
+                title: t('aboutUs.plan'),
                 describe: t('aboutUs.planDescribe')
             }, {
-                title : t('aboutUs.implement'),
+                title: t('aboutUs.implement'),
                 describe: t('aboutUs.implementDescribe')
             }, {
-                title : t('aboutUs.maintainScale'),
+                title: t('aboutUs.maintainScale'),
                 describe: t('aboutUs.maintainScaleDescribe')
             }
         ];
@@ -250,15 +259,6 @@ const AboutUs = (props) => {
                                 <h4 className="dark-text-color mb-4 h2">
                                     {t('aboutUs.letMeetOurTeam')} 
                                 </h4>
-                                <div className="our-team-block">
-                                    <div className="line-animated rounded position-relative float-start  me-3"></div>
-                                    <h3 className="h3 mb-2 purple-gradient-text-color">
-                                        8 {t('aboutUs.member')}
-                                    </h3>
-                                    <h3 className="h3 dark-secondary-text-color">
-                                        {t('aboutUs.designDevMarketing')}
-                                    </h3>
-                                </div>
                             </div>
                         </Col>
                         <Col lg={7}>
@@ -303,23 +303,12 @@ const AboutUs = (props) => {
                                             <div className="d-flex social-icons">
                                                 <a
                                                     href="#"
-                                                    onClick={(e) =>
-                                                        e.preventDefault()
-                                                    }
-                                                    className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
-                                                >
-                                                    <MyImage
-                                                        src={images.twitter}
-                                                        alt=" "
-                                                        width={23}
-                                                        height={20}
-                                                    />
-                                                </a>
-                                                <a
-                                                    href="#"
-                                                    onClick={(e) =>
-                                                        e.preventDefault()
-                                                    }
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        if (item.linkedIn) {
+                                                            window.open(item.linkedIn, '_blank');
+                                                        }
+                                                    }}
                                                     className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"
                                                 >
                                                     <MyImage
