@@ -110,17 +110,6 @@ const GDPRComponent = (props) => {
                                     <Paragraph>
                                         {t('gdprService.whatisGDPRAns')}
                                     </Paragraph>
-                                    <Button
-                                        btnVarient="red-btn"
-                                        className="p-0 rounded-0"
-                                        size="lg"
-                                        onClick={() => {
-                                            window.open('https://www.hyperledger.org/blog/2020/01/30/welcome-hyperledger-fabric-2-0-enterprise-dlt-for-production', '_blank');
-                                        }}
-                                    >
-                                    {t('visitHyperledger')}
-                                    </Button>
-                                    
                                
                                 </div>
                             </Col>

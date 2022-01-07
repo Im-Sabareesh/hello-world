@@ -58,14 +58,14 @@ const DefiSComponent = (props) => {
                             </div>
                         </Col>
                         <Col md={6} sm={12}>
-                            <div className="nft-service-img-div">
+                            <div className="nft-service-img-div defi-new-img">
                                 <MyImage
                                     src={images.defiMain}
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={913}
-                                    height={752}
+                                    width={710}
+                                    height={525}
                                     layout="intrinsic"
                                     placeholder="blur"
                                     loading="lazy"
@@ -81,7 +81,7 @@ const DefiSComponent = (props) => {
             {/*--------------- defi Services section2 start---------- */}
 
             <section className="service-inner-section2 p-0">
-                <div className="section-glow">
+                <div className="section-glow defi-section-glow">
                     <Container>
                         <Row>
                             <Col xl={{ span: 10, offset: 1 }}>

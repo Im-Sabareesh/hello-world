@@ -14,7 +14,7 @@ const GDPRServices = (props) => {
     }, []);
     return (
         <div className="nft-service-page hyperledger-service-page gdpr-service">
-            <Meta title={t('nftDevelopement')} desc="" />
+            <Meta title={t('gdprDevelopement')} desc="" />
 
             <GDPRComponent language={props.language} />
         </div>

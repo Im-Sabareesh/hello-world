@@ -83,16 +83,6 @@ export default function ServiceOfferSection() {
                             <Paragraph> {item.describe} </Paragraph>
                         </Col>
                     ))}
-
-                    <Col md={12} className="text-center mt-5">
-                        <a
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                            className="h3 dark-text-color link-primary"
-                        >
-                            {t('home.lotMoreYou')}
-                        </a>
-                    </Col>
                 </Row>
             </Container>
         </section>

@@ -46,11 +46,11 @@ const HeaderContent = (props) => {
             navPath: `/${props.language}/services/defi-development`,
         },
         {
-            name: `GDPR Development`,
+            name: t('gdprDevelopement'),
             navPath: `/${props.language}/services/gdpr-development`,
         },
         {
-            name: `RPA Development`,
+            name: t('rpaDevelopment'),
             navPath: `/${props.language}/services/rpa-development`,
         },
     ];

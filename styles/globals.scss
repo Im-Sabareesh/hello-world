@@ -1229,6 +1229,11 @@ header .main-header {
     background-size: cover;
 }
 
+.defi-section-glow
+{
+    padding-top:125px;
+}
+
 .defi-section2 {
     @include gradient-background('gradient-primary-opacity');
 }
@@ -1824,4 +1829,10 @@ p.card-text.show-more {
         overflow: hidden;
         height: 80px;
     }
+}
+
+
+.defi-new-img
+{
+    margin-top:50px;
 }
