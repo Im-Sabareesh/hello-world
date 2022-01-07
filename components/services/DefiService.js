@@ -64,8 +64,8 @@ const DefiSComponent = (props) => {
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={913}
-                                    height={752}
+                                    width={710}
+                                    height={525}
                                     layout="intrinsic"
                                     placeholder="blur"
                                     loading="lazy"
