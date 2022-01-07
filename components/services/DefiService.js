@@ -58,7 +58,7 @@ const DefiSComponent = (props) => {
                             </div>
                         </Col>
                         <Col md={6} sm={12}>
-                            <div className="nft-service-img-div">
+                            <div className="nft-service-img-div defi-new-img">
                                 <MyImage
                                     src={images.defiMain}
                                     rounded="true"
