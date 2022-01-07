@@ -1225,8 +1225,13 @@ header .main-header {
 
 .section-glow {
     background: url('../public/assets/images/glow-bg.png') no-repeat;
-    padding: 125px 0 100px;
+    padding: 175px 0 100px;
     background-size: cover;
+}
+
+.defi-section-glow
+{
+    padding-top:125px;
 }
 
 .defi-section2 {

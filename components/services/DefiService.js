@@ -81,7 +81,7 @@ const DefiSComponent = (props) => {
             {/*--------------- defi Services section2 start---------- */}
 
             <section className="service-inner-section2 p-0">
-                <div className="section-glow">
+                <div className="section-glow defi-section-glow">
                     <Container>
                         <Row>
                             <Col xl={{ span: 10, offset: 1 }}>
