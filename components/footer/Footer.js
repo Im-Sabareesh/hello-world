@@ -54,7 +54,7 @@ const Footer = (props) => {
             component: () => <CommonFooter whitebg={true} language={props.language} />,
         },
         {
-            name: '/services/gdpr-development',
+            name: '/services/gdpr-compliance',
             footer: 'left',
             component: () => <CommonFooter whitebg={true} language={props.language} />,
         },

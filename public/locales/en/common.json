@@ -71,9 +71,9 @@
         "obortechSmartHub": "Obortech <br/> Smart Hub",
         "gdprCompliance": "GDPR Compliance",
         "obortechHub": "Obortech Smart Hub",
-        "obortechHubDesc": "Supply Chain Management minus the guesswork. <br/> Obortech brings smart automation to the supply chain by employing emerging technologies: blockchain, AI & IOT. Smart hub exploits the capabilities of  Hyperledger Fabric blockchain framework to overcome the trust,  timing, tracking, and transparency challenges with supply chains.",
+        "obortechHubDesc": "Supply Chain Management minus the guesswork. <br/> Obortech brings smart automation to the supply chain by employing emerging technologies: blockchain, AI & IoT. Smart hub exploits the capabilities of  Hyperledger Fabric blockchain framework to overcome the trust,  timing, tracking, and transparency challenges with supply chains.",
         "gdprComplianceDesc": "Superior data governance and privacy through blockchain. <br/> Our expert-designed blockchain solution handles vast amounts of data generated and automates the regulatory compliance requirements.  We utilize the powerful combination of  Hyperledger Fabric & Mutable Prive IPFS to conform to all GDPR fundamentals.",
-        "liveLedgerDesc": "Retail Supply Chain Reimagined with Blockchain. <br/> Retail chains are marred with inefficient processes with unreliable and untimely data inputs. Our blockchain-based retail supply chain management solution, Live Ledger allows proactive inventory management, forecasts demands, and provides automated.",
+        "liveLedgerDesc": "Retail Supply Chain Reimagined with Blockchain. <br/> Retail chains are marred with inefficient processes with unreliable and untimely data inputs. Our blockchain-based retail supply chain management solution, Live Ledger allows proactive inventory management, forecasts demands, and provides automated audit trails. It has enhanced features establishing end-to-end visibility, detailed reporting and sales analytics thus ensuring greater transparency, trust and accountability.",
         "trueTitleDesc": "Fraud-proof Land Registry. <br/> Land registration traditionally relies on multiple intermediaries making the system vulnerable to discrepancies, delays and frauds. True Title endeavors to resolve the problems of forged property transactions and mortgage frauds by employing blockchain. It provides a transparent infrastructure with smart contracts ensuring non-repudiation, immutability, and traceability of land registries.",
         "blockChainEHR": "Blockchain-based EHR",
         "blockChainEHRdesc": "Interoperable, Secure and Unified patient health record. <br/> Digitization in the healthcare industry brought with it challenges of control, privacy, security, interoperability and provenance. Through Blockchain, we are completely reimagining and reengineering the storage, access, and sharing of EHR among different stakeholders.  Distributed ledger connects the fragmented systems to ensure data availability and data integrity via permissioned access, the immutability of records and governance consensus.",
@@ -114,7 +114,7 @@
         "email": "EMAIL",
         "phone": "PHONE",
         "weHelpYou": "HOW CAN WE HELP YOU",
-        "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy. Read our ",
+        "agreeTrems": "As a result of submitting completed “Contact Us” form, your personal data will be processed by ChainCode. We are committed to respecting your privacy.",
         "defiDevelopment": "DeFi Development",
         "expertBlockchainConsulting": "Expert Blockchain Consulting",
         "superchargeBlockchainCapabilities": "Supercharge your business with disruptive blockchain capabilities",
@@ -168,7 +168,7 @@
         "ourTeamPara": "Making people smile gets us out of bed every morning. Through thoughtful design we create delightful digital experiences that make life simpler and more enjoyable",
         "workWithUs": "WORK WITH US",
         "workWithUsQuesition": "Have you decided to work on a project with us?",
-        "workWithUsAnswer": "Interested in joining our team and impacting the world? Reach out! We are always looking for new projectsto help take design to next level",
+        "workWithUsAnswer": "Interested in joining our team and impacting the world? We are here to provide you best-customized solutions for your business to reach a new height with sustainability and transparency.",
         "teamDesignation": {
             "founderceo": "Founder & CEO",
             "director": "Director",
@@ -195,7 +195,8 @@
         "flexibleCulture": "Flexible, result-oriented work culture.",
         "opportunities": "Opportunities for further learning and development.",
         "communicationOpen": "Open communication, Equal opportunities",
-        "changingBlockchain": "Blockchain is changing the way the world lives and works."
+        "changingBlockchain": "Blockchain is changing the way the world lives and works.",
+        "headingContent": "Help us build the internet of the future with blockchain!"
     },
     "careerForm": {
         "applyPosition": "Applying for Position",
@@ -254,7 +255,7 @@
         "consulting": "Consulting",
         "headerDesc": "We offer expert guidance for your business to maneuver the best way forward with blockchain.",
         "headerDesc1": "We innovate, design, and work with you to build bespoke decentralized solutions that enable businesses to drive next-level growth. The immutable power of the blockchain meets our development excellence allowing you to solve pressing problems of efficiency, security, and transparency.",
-        "headerDesc2": "With over 40 up and running products around the world, Chaincode Code partners with startups, small and medium enterprises, or large corporations to reinvent business processes and achieve unmatched progress via blockchain. Leverage the power of blockchain with our proven excellence in innovating, building, and launching real-world applications.",
+        "headerDesc2": "Leverage the power of blockchain with our proven excellence in innovating, building, and launching real-world applications.",
         "accordianList" : {
             "whatIsBlockchain": "What Is Blockchain?",
             "whatIsBlockchainAns": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders",
@@ -268,14 +269,14 @@
         "blockchainConsultingServices": "Our Blockchain Consulting Services"
     },
     "hyperledgerFabric": {
-        "performanceScalabilty": "Performance & Scalabilty",
+        "performanceScalability": "Performance & Scalability",
         "governance": "Governance",
         "security": "Security",
         "privacy": "Privacy",
         "performanceContent": "Transaction processing in three phases endorsement, ordering & commitment enables performance at scale.",
-        "governanceContent": "Hyperledger Fabric offers strong identity management & supports HSM,   transaction anonymity & zero knowledge proofs for enhanced security.",
-        "securityContent": "The notion of channels enable sub-network within the business network  ensuring data privacy. Collections enable privacy within a channel.",
-        "privacyContent": "Our business and technical experts educate and train our clients to develop the right aptitude enabling them co-innovate and co-create blockchain solutions suitable for their use cases.",
+        "governanceContent": "Unique infrastructure with a neutral, open &  decentralized consensus model ensures more trust and provides better business & technical governance.",
+        "securityContent": "Hyperledger Fabric offers strong identity management & supports HSM,   transaction anonymity & zero knowledge proofs for enhanced security.",
+        "privacyContent": "The notion of channels enable sub-network within the business network  ensuring data privacy. Collections enable privacy within a channel.",
         "tapThePotential": "Tap The Potential Of",
         "distributedLedger": "Distributed Ledger Technology",
         "headerDesc": "At Chaincode Consulting, we have redefined business interactions with blockchain technology enabling a secured, trusted and affordable ecosystem for our clients.",

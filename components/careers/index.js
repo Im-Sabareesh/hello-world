@@ -27,8 +27,7 @@ const CareersComponent = (props) => {
                             <div className="text-center w-50 mx-auto">
                                 <H1>Join our Team</H1>
                                 <Paragraph>
-                                    Help us on the quest of making good software
-                                    even better.
+                                    {t('careers.headingContent')}
                                 </Paragraph>
                                 <div className="button-outer mx-auto mt-md-3 pt-md-3">
                                     <Button btnVarient="red-btn"
@@ -59,8 +58,7 @@ const CareersComponent = (props) => {
                                 Why Chaincode Consulting ?
                             </H1>
                             <h3 className="h3 lh-base mb-3 fw-normal">
-                                We are always looking for driven, interesting,
-                                and capable individules to join our team. In
+                                We are looking for user-obsessed, tech-forward, and action-oriented people to join us. In
                                 addition to our agaency business, we have
                                 several in-house projects and companies.
                             </h3>
@@ -106,12 +104,6 @@ const CareersComponent = (props) => {
                                         04
                                     </span>
                                     {t('careers.communicationOpen')}
-                                </li>
-                                <li className="h3 fw-normal">
-                                    <span className="h2 purple-gradient-text-color">
-                                        05
-                                    </span>
-                                    {t('careers.changingBlockchain')}
                                 </li>
                             </ul>
                         </Col>

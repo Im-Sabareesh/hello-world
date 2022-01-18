@@ -23,9 +23,9 @@ export default function ChooseUsSection() {
         },
         {
             icon: images.devOps,
-            name: 'Word-class Product Team on-demand',
+            name: 'Word-class Product Team On-demand',
             describe:
-                'Our team of hand-picked tech talent can design, build and launch and scale your idea into real-world blockchain-based applications. Our dedicated team model allows flexibility and transparency to the entire process.',
+                'Our team of hand-picked tech talent can design, build, launch and scale your idea into real-world blockchain-based applications. Our dedicated team model allows flexibility and transparency to the entire process.',
         },
         {
             icon: images.dedTeam,

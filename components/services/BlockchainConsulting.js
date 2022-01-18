@@ -216,18 +216,6 @@ const BlockchainConsultingComponent = (props) => {
                                              {item.content}                                            
                                         </Paragraph>
                                     </div>
-                                    <div className="mt-auto">
-                                        {' '}
-                                        <MyImage
-                                            src={images.purpleArrow}
-                                            alt=""
-                                            width={20}
-                                            height={17}
-                                            layout="intrinsic"
-                                            placeholder="blur"
-                                            loading="lazy"
-                                        />{' '}
-                                    </div>
                                 </div>
                             </Col>
                         ))}
