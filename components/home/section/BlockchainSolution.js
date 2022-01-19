@@ -42,11 +42,11 @@ export default function BlockChainSolutionSection() {
         ];
 
     return (
-        <section className="home-section-3 py-5">
+        <section className="home-section-3">
             <Container>
                 <Row>
                     <Col md={12}>
-                        <h2 className="h2 light-text-color mb-5">
+                        <h2 className="h2 light-text-color mb-5 home-section-3-heading">
                             {t('home.ourBlockChainSolutions')}
                         </h2>
                     </Col>

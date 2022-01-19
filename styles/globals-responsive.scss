@@ -4,10 +4,10 @@
 // X-Small devices (portrait phones, less than 576px) /
 @include media-breakpoint-between(xs, sm) {
     // --------------- font size-------
-
+    
     .h1 {
-        font-size: 33px !important;
-        line-height: 50px !important;
+        font-size: 27px !important;          // home page 19/1/22 changes
+        line-height: 44px !important;
     }
 
     .h2 {
@@ -53,6 +53,7 @@
 
         .featured-box-container {
             margin-bottom: 20px;
+            padding: 18px;         // home page 19/1/22 changes
         }
 
         .featured-box-container-new {
@@ -99,7 +100,7 @@
 
     .featured-box-container {
         span {
-            font-size: 19px;
+            font-size: 17px;
             line-height: 24px;
         }
     }
@@ -534,7 +535,50 @@
             }
         }
     }
-   
+      // home page 19/1/22 changes
+      .hero-banner-container{
+        padding-bottom: 30px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .featured-heading{
+        .h2{
+            font-size: 30px;
+        }
+    }
+    .heading-line {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .home-section-icons-block {
+        .h3 {
+            font-size: 16px;
+        }
+    }
+    .home-section-3 {
+        padding-top: 40px;
+        padding-bottom: 40px !important;
+        &-heading {
+            margin-bottom: 30px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
+    .home-contact-form{
+       .red-btn{
+        margin-top: 20px;
+       }
+    }
+    .home-section-11 {
+        .home-contact-card {
+            padding: 40px 30px 28px;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -993,6 +1037,36 @@
             }
         }
     }
+    // home page 19/1/22 changes
+    .hero-banner-container{
+        padding-bottom: 40px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .featured-heading{
+        .h2{
+            font-size: 30px;
+        }
+    }
+    .home-section-3 {
+        padding-top: 50px;
+        padding-bottom: 50px !important;
+        &-heading {
+            margin-bottom: 40px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
+    .home-contact-form{
+       .red-btn{
+        margin-top: 20px;
+       }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -1373,6 +1447,30 @@
             }
         }
     }
+    
+    // home page 19/1/22 changes
+    .featured-heading {
+        margin-top: 50px !important;
+    }
+    .hero-banner-container{
+        padding-bottom: 50px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .home-section-3 {
+        padding-top: 80px;
+        padding-bottom: 50px !important;
+        &-heading {
+            margin-bottom: 50px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: 340px;
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1602,6 +1700,29 @@
             }
         }
     }
+
+    // home page 19/1/22 changes
+    .featured-heading {
+        margin-top: 50px !important;
+    }
+    .hero-banner-container{
+        padding-bottom: 80px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+    }
+    .home-section-3 {
+        padding-top: 80px;
+        padding-bottom: 150px !important;
+        &-heading {
+            margin-bottom: 60px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: 420px;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1681,6 +1802,14 @@
     .card-text {
         height: 80px !important;
     }
+    }
+    // home page 19/1/22 changes
+    .home-section-3 {
+        .custom-card {
+            .card-text {
+                height: 350px;
+            }
+        }
     }
 }
 
@@ -2309,8 +2438,9 @@
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+    // home page 19/1/22 changes
     .featured-heading {
-        margin-top: 60px !important;
+        margin-top: 40px !important;
     }
     .our-story-block:hover .line-animated:before {
         height: 105px;
