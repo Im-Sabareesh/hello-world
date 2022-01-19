@@ -16,7 +16,7 @@ import images from '@components/images';
 import { careerSelector, careerAction } from '@redux';
 import StaticComponent from '../StaticComponent';
 
-const CareerDetailsComponent = () => {
+const CareerDetailsComponent = (props) => {
     const router = useRouter();
     const dispatch = useDispatch();
     const {
@@ -42,7 +42,7 @@ const CareerDetailsComponent = () => {
                                 <Breadcrumb.Item
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        router.back();
+                                        router.push(`/${props.language}/careers`);
                                     }}
                                 >
                                     Careers

@@ -28,13 +28,13 @@ export default function BlockChainSolutionSection() {
                 // link: t('home.blockChainLink'),
             },
             {
-                title: t('trueTitle'),
+                title: t('home.landRecordBlockChain'),
                 image: '/assets/images/home-solution-4.jpg',
                 subtitle: t('home.trueTitleDesc'),
                 // link: t('home.blockChainLink'),
             },
             {
-                title: t('home.blockChainEHR'),
+                title: t('home.ehrBlockchain'),
                 image: '/assets/images/home-solution-5.jpg',
                 subtitle: t('home.blockChainEHRdesc'),
                 // link: t('home.blockChainLink'),
@@ -53,7 +53,7 @@ export default function BlockChainSolutionSection() {
 
                     {_.map(blockChainSolnList, (item, index) =>
                         index === blockChainSolnList.length - 1 ? (
-                            <Col md={12} lg={8} key={_.uniqueId()}>
+                            <Col md={12} lg={8} key={index} id={(item.title.replace(/ /g,'')).toLowerCase()}>
                                 <CardSection
                                     fullCard={true}
                                     footerClass="d-flex justify-content-between"
@@ -61,7 +61,7 @@ export default function BlockChainSolutionSection() {
                                 />
                             </Col>
                         ) : (
-                            <Col md={6} lg={4} key={_.uniqueId()}>
+                            <Col md={6} lg={4} key={index} id={item.title.replace(/ /g,'').toLowerCase()}>
                                 <CardSection
                                     fullCard={true}
                                     footerClass="d-flex justify-content-between"

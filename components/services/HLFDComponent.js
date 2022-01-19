@@ -16,7 +16,7 @@ const HLFDSComponent = (props) => {
         t = i18next.t.bind(i18next);
     const hlfdFabricList = [
             {
-                title: t('hyperledgerFabric.performanceScalabilty'),
+                title: t('hyperledgerFabric.performanceScalability'),
                 link: '#',
                 icon: images.performanceIcon,
                 content: t('hyperledgerFabric.performanceContent')
@@ -220,18 +220,6 @@ const HLFDSComponent = (props) => {
                                          <Paragraph className="paragraph-text mb-sm-0">
                                              {item.content}                                            
                                         </Paragraph>
-                                    </div>
-                                    <div className="mt-auto">
-                                        {' '}
-                                        <MyImage
-                                            src={images.purpleArrow}
-                                            alt=""
-                                            width={20}
-                                            height={17}
-                                            layout="intrinsic"
-                                            placeholder="blur"
-                                            loading="lazy"
-                                        />{' '}
                                     </div>
                                 </div>
                             </Col>

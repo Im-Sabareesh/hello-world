@@ -23,9 +23,9 @@ export default function ChooseUsSection() {
         },
         {
             icon: images.devOps,
-            name: 'Word-class Product Team on-demand',
+            name: 'Word-class Product Team On-demand',
             describe:
-                'Our team of hand-picked tech talent can design, build and launch and scale your idea into real-world blockchain-based applications. Our dedicated team model allows flexibility and transparency to the entire process.',
+                'Our team of hand-picked tech talent can design, build, launch and scale your idea into real-world blockchain-based applications. Our dedicated team model allows flexibility and transparency to the entire process.',
         },
         {
             icon: images.dedTeam,
@@ -39,13 +39,13 @@ export default function ChooseUsSection() {
         <section className="home-section-5 py-5">
             <Container>
                 <Row>
-                    <Col md={{ span: 12, order: 0 }} lg={6}>
+                    <Col md={{ span: 12, order: 0 }} lg={6} className="text-center">
                         <MyImage
                             src={images.blockchainBuss}
                             placeholder="blur"
                             alt=" "
-                            height={332}
-                            width={636}
+                            height={410}
+                            width={403}
                             loading="lazy"
                         />
                     </Col>

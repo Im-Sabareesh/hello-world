@@ -38,13 +38,29 @@ const TopLogoFooter = (props) => {
                 },
                 list: [
                     {
-                        name: t('footer.decentralizedFinance'),
+                        name: `${t('enterpriseBlockChainConsulting')}`,
+                        route: `/${props.language}/services/blockchain-consulting`,
+                    },
+                    {
+                        name: `${t('hdfDevelopment')}`,
+                        route: `/${props.language}/services/hyperledger-fabric-development`,
+                    },
+                    {
+                        name: `${t('nftDevelopement')}`,
+                        route: `/${props.language}/services/nft-development`,
+                    },
+                    {
+                        name: `${t('defiDevelopment')}`,
                         route: `/${props.language}/services/defi-development`,
                     },
                     {
-                        name: t('footer.nonFungibleTokens'),
-                        route: `/${props.language}/services/nft-development`,
-                    }
+                        name: t('home.gdprCompliance'),
+                        route: `/${props.language}/services/gdpr-compliance`,
+                    },
+                    {
+                        name: t('rpaDevelopment'),
+                        route: `/${props.language}/services/rpa-development`,
+                    },
                 ],
             },
             {
@@ -55,6 +71,14 @@ const TopLogoFooter = (props) => {
                 },
                 list: [
                     {
+                        name: t('home.obortechHub'),
+                        route: 'https://www.obortech.io/',
+                    },
+                    {
+                        name: t('home.gdprCompliance'),
+                        route: `/${props.language}/#${((t('home.gdprCompliance')).replace(/ /g,'')).toLowerCase()}`,
+                    },
+                    {
                         name: t('liveLedger'),
                         route: '#',
                     },
@@ -63,7 +87,7 @@ const TopLogoFooter = (props) => {
                         route: '#',
                     },
                     {
-                        name: t('footer.instasure'),
+                        name: t('home.blockChainEHR'),
                         route: '#',
                     },
                 ],
@@ -146,7 +170,7 @@ const TopLogoFooter = (props) => {
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2">
-                                        {listItem.route !== '#' ? (
+                                        {listItem.route !== '#' && listItem.route.search('https') === -1 ? (
                                             <Link href={listItem.route}>
                                                 <a className="light-text-color">
                                                     {listItem.name}
@@ -156,9 +180,12 @@ const TopLogoFooter = (props) => {
                                             <a
                                                 className="light-text-color"
                                                 href="#"
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    if (listItem.route && listItem.route.search('https') !== -1) {
+                                                        window.open(listItem.route, '_blank');
+                                                    }
+                                                }}
                                             >
                                                 {listItem.name}
                                             </a>
@@ -173,26 +200,6 @@ const TopLogoFooter = (props) => {
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>
-                    <ul className="list-inline position-relative footer-after-line">
-                        <li className="list-inline-item px-2">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="light-text-color"
-                            >
-                                {t('privacyPolicy')}
-                            </a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="light-text-color"
-                            >
-                                {t('termsOfService')}
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </Container>
         </footer>

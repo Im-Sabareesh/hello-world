@@ -34,12 +34,28 @@ const RadiusFooter = (props) => {
                 lgStyle: 3,
                 list: [
                     {
-                        name: t('footer.decentralizedFinance'),
-                        route: `/services/defi-development`,
+                        name: `${t('enterpriseBlockChainConsulting')}`,
+                        route: '/services/blockchain-consulting',
                     },
                     {
-                        name: t('footer.nonFungibleTokens'),
-                        route: `/services/nft-development`,
+                        name: `${t('hdfDevelopment')}`,
+                        route: '/services/hyperledger-fabric-development',
+                    },
+                    {
+                        name: `${t('nftDevelopement')}`,
+                        route: '/services/nft-development',
+                    },
+                    {
+                        name: `${t('defiDevelopment')}`,
+                        route: '/services/defi-development',
+                    },
+                    {
+                        name: t('home.gdprCompliance'),
+                        route: '/services/gdpr-compliance',
+                    },
+                    {
+                        name: t('rpaDevelopment'),
+                        route: '/services/rpa-development',
                     },
                 ],
             },
@@ -47,6 +63,14 @@ const RadiusFooter = (props) => {
                 title: t('footer.expertSolutions'),
                 lgStyle: 2,
                 list: [
+                    {
+                        name: t('home.obortechHub'),
+                        route: 'https://www.obortech.io/',
+                    },
+                    {
+                        name: t('home.gdprCompliance'),
+                        route: `/#${((t('home.gdprCompliance')).replace(/ /g,'')).toLowerCase()}`,
+                    },
                     {
                         name: t('liveLedger'),
                         route: '#',
@@ -56,7 +80,7 @@ const RadiusFooter = (props) => {
                         route: '#',
                     },
                     {
-                        name: t('footer.instasure'),
+                        name: t('home.blockChainEHR'),
                         route: '#',
                     },
                 ],
@@ -149,8 +173,8 @@ const RadiusFooter = (props) => {
                             </h3>
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
-                                    <li key={_.uniqueId()} className="mb-2">
-                                        {listItem.route !== '#' ? (
+                                    <li key={_.uniqueId()} className="mb-2 cursor-pointer">
+                                        {listItem.route !== '#' && listItem.route.search('https') === -1 ? (
                                             <Link
                                                 href={`/${props.language}${listItem.route}`}
                                             >
@@ -161,9 +185,12 @@ const RadiusFooter = (props) => {
                                         ) : (
                                             <a
                                                 className="light-text-color"
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    if (listItem.route && listItem.route.search('https') !== -1) {
+                                                        window.open(listItem.route, '_blank');
+                                                    }
+                                                }}
                                             >
                                                 {listItem.name}
                                             </a>
@@ -202,26 +229,6 @@ const RadiusFooter = (props) => {
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>
-                    <ul className="list-inline position-relative footer-after-line">
-                        <li className="list-inline-item px-2">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="light-text-color"
-                            >
-                                {t('privacyPolicy')}
-                            </a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="light-text-color"
-                            >
-                                {t('termsOfService')}
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </Container>
         </footer>

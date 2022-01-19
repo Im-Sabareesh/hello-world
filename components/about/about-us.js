@@ -213,38 +213,44 @@ const AboutUs = (props) => {
             {/*--------------- about section3 section start ---------- */}
 
             <section className="about-section3 bg-gradient-secondary light-text-color py-xl-5 py-md-4 py-2">
-                <Container>
-                    <Row className="px-4 py-4">
-                        <Col xl={4} lg={5}>
-                            <div className="our-story-block">
-                                <div className="line-animated rounded position-relative float-start me-xl-4 me-2 opacity-50"></div>
-                                <div className="our-story-block-number rounded-circle d-flex justify-content-center align-items-center mb-md-4 mb-3">
-                                    <span>04</span>
+                <div className="right-end-bg-img">
+                    <Container>
+                        <Row className="px-lg-4 py-4">
+                            <Col xl={7} lg={7} sm={12}>
+                                <div className="our-story-block d-flex align-items-center">
+                                    <div className="our-story-block-number rounded-circle d-flex justify-content-center align-items-center">
+                                        <span className="text-white">04</span>
+                                    </div>
+                                    <h3 className="h2 light-text-color mb-0">
+                                        {t('aboutUs.howWeDoIt')}
+                                    </h3>
                                 </div>
-                                <h3 className="h2 light-text-color">
-                                    {t('aboutUs.howWeDoIt')}
-                                </h3>
-                            </div>
-                        </Col>
-                        <Col xl={8} lg={7}>
-                            <h3 className="h3 mb-3 lh-base fw-normal light-text-color">
-                                {t('aboutUs.howWeDoItPara')}
-                            </h3>
+                                <div className="timeline-content">
+                                    <h3 className="h3 light-text-color">
+                                        {t('aboutUs.howWeDoItPara')}
+                                    </h3>
+                                    <div className="box">
+                                        <ul id="first-list">
+                                            {_.map(howWeDoList, (item, index) => (
+                                                <li  key={index}>
+                                                    <span></span>
+                                                    <div className="info">
+                                                        <h3 className="light-text-color text-uppercase">{item.title}:</h3>
+                                                        <small>{item.describe}</small>
+                                                    </div>
+                                                </li>
+                                                )
+                                            )}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col xl={5} lg={5}>
 
-                            <div className="h3 lh-base fw-normal light-text-color">
-
-                            {_.map(howWeDoList, (item, index) => (
-                                <p key={index}>
-                                    <b className="d-block mb-2">{item.title}:</b>
-                                    {item.describe}
-                                </p>
-                                )
-                            )}
-                            </div>
-                            
-                        </Col>
-                    </Row>
-                </Container>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </section>
 
             {/*--------------- about section3 section end ---------- */}
@@ -281,7 +287,7 @@ const AboutUs = (props) => {
                 <Container>
                     <Row>
                         {_.map(teamMemberList, (item) => (
-                            <Col lg={3} md={4} xs={6} key={_.uniqueId()}>
+                            <Col lg={3} md={4} sm={6} xs={12} key={_.uniqueId()}>
                                 {typeof window !== 'undefined' ? (
                                     <Card className="our-team border-0 p-lg-4 p-3 mb-xl-5 mb-4">
                                         <MyImage

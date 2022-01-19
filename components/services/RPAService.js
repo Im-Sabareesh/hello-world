@@ -45,19 +45,19 @@ const RPAComponent = (props) => {
     const uiPathConsultList = [
         {
             title: t('rpaService.uiPathConsulting'),
-            image: '/assets/images/solution-1.jpg',
+            image: '/assets/images/solution-rpa-img1.jpg',
             subtitle: t('rpaService.uiPathConsultingContent'),
             link: t('home.blockChainLink'),
         },
         {
             title: t('rpaService.uiPathImplementation'),
-            image: '/assets/images/solution-2.jpg',
+            image: '/assets/images/solution-rpa-img2.jpg',
             subtitle: t('rpaService.uiPathImplementationContent'),
             link: t('home.blockChainLink'),
         },
         {
             title: t('rpaService.managedServices'),
-            image: '/assets/images/solution-3.jpg',
+            image: '/assets/images/solution-rpa-img3.jpg',
             subtitle: t('rpaService.managedServicesContent'),
             link: t('home.blockChainLink'),
         },
@@ -99,7 +99,7 @@ const RPAComponent = (props) => {
                             <Paragraph>
                                 {t('rpaService.roboticAutomationDesc')}
                             </Paragraph>
-
+{/* 
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
                                     btnVarient="red-btn"
@@ -113,7 +113,7 @@ const RPAComponent = (props) => {
                                 >
                                  {t('talkOurExperts')}
                                 </Button>
-                            </div>
+                            </div> */}
                         </Col>
                         <Col lg={6} sm={12}>
                             <div className="nft-service-img-div">

@@ -209,8 +209,7 @@ const ContactComponent = (props) => {
                                 <Paragraph className="getintouch-txt mb-1">
                                     To request a quote, contact us directly or
                                     fill out the form and we will get back to
-                                    you within 24 hours. We will keep your
-                                    information confidential.
+                                    you within 24 hours.
                                 </Paragraph>
 
                                 {/* Contact Us form in seperate component with formik */}
