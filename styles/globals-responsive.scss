@@ -71,8 +71,8 @@
             display: none;
         }
         .main-menu {
-            right: 30px;
-            top: 24px; // changes from value 64px to 24px on 11/10/21
+            right: 15px;
+            top: 21%;
             position: absolute;
             .nav-link {
                 padding: 15px 20px;
@@ -495,6 +495,46 @@
     .develop-hyperledger .what-hyperledger-img {
         padding-left: 15px;
     }
+    // 19/1/22  changes
+    .about-section3 .right-end-bg-img {
+        background: none;
+    }
+    .our-story-block {
+        margin-bottom: 15px;
+    }
+
+    .box ul li > span:after {
+        left: -8.5px;
+    }
+    .box ul li {
+        padding-bottom: 25px;
+    }
+    .timeline-content {
+        .h3 {
+            font-size: 16px !important;
+            margin-bottom: 30px;
+            line-height: 26px;
+        }
+        .info{
+            small {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .box{
+            margin: 0 15px;
+        }
+    }
+    .our-team{
+        padding: 30px 45px !important;
+        margin: 10px 20px;
+        .card-body{
+            p{
+                height: auto;
+            }
+        }
+    }
+   
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -558,7 +598,7 @@
         }
         .main-menu {
             right: 30px;
-            top: 22px; // changes from value 64px to 22px on 11/10/21
+            top: 18%;
             position: absolute;
             .nav-link {
                 padding: 15px 20px;
@@ -924,6 +964,35 @@
     .develop-hyperledger .what-hyperledger-img {
         padding-left: 15px;
     }
+       // 19/1/22  changes
+    .about-section3 .right-end-bg-img {
+        background: none;
+    }
+    .box ul li > span:after {
+        left: -8.5px;
+    }
+    .box ul li {
+        padding-bottom: 25px;
+    }
+    .timeline-content {
+        .h3 {
+            margin-bottom: 30px;
+            line-height: 26px;
+        }
+        .info{
+            small {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    .our-team{
+        .card-body{
+            p{
+                height: auto;
+            }
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -980,7 +1049,7 @@
     .main-header {
         .main-menu {
             right: 30px;
-            top: 21px; // changes from value 64px to 21px on 11/10/21
+            top: 17%; 
             position: absolute;
             .nav-link {
                 padding: 15px 20px;
@@ -1279,6 +1348,31 @@
             height: 80px !important;
         }
     }
+     // 19/1/22  changes
+     .about-section3 .right-end-bg-img {
+        background: none;
+    }
+    .box ul li > span:after {
+        left: -8.5px;
+    }
+    .timeline-content {
+        .h3 {
+            margin-bottom: 35px;
+        }
+        .info{
+            small {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+    .our-team{
+        .card-body{
+            p{
+                height: 50px;
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1490,6 +1584,24 @@
             height: 80px !important;
         }
     }
+    // 19/1/22  changes
+    .about-section3 .right-end-bg-img {
+        background-size: 40%;
+    }
+    .timeline-content {
+        .h3 {
+            font-size: 17px;
+            line-height: 26px;
+            margin-bottom: 35px;
+        }
+    }
+    .our-team{
+        .card-body{
+            p{
+                height: 50px;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1593,7 +1705,7 @@
 
     // --------- about us page start---------
     .about-us-banner {
-        min-height: 430px;
+        min-height: 460px;
         padding-bottom: 65px;
         .w-50 {
             width: 100% !important;
@@ -1923,7 +2035,7 @@
     .about-us-banner {
         min-height: 430px;
         .w-50 {
-            width: 85% !important;
+            width: 95% !important;
         }
     }
     .about-section1 {

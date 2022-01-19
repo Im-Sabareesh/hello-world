@@ -785,6 +785,8 @@ button:focus {
 }
 
 .our-story-block {
+    // 19/1/22 changes
+    margin-bottom: 10px;
     .our-story-block-content {
         p {
             color: #7a7a7a;
@@ -825,6 +827,10 @@ button:focus {
             -moz-box-shadow: 0 0 0 4px rgba(209, 211, 255, 0.75);
         }
     }
+    // 19/1/22 changes
+    .h2{
+        margin-left: 25px;
+    }
 }
 .about-section3 {
     .our-story-block {
@@ -835,6 +841,10 @@ button:focus {
                 }
             }
         }
+    }
+    .right-end-bg-img{
+        background: url('../public/assets/images/about-us-illustration2.png') no-repeat;
+        background-position: center right;
     }
 }
 .about-section4 {
@@ -1835,4 +1845,80 @@ p.card-text.show-more {
 .defi-new-img
 {
     margin-top:50px;
+}
+
+.timeline-content{
+    .h3{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 45px;
+    }
+    .info{
+        h3{
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+        small{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+}
+.box{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transition: all 0.5s linear;
+        top:0;
+        li{
+            padding-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            color: color('light-primary');
+            border-radius: 10px;
+            line-height: 20px;
+            width: 100%;
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 100%;
+                border: 1px dashed color('light-primary');
+                position: absolute;
+                top: 10px;
+                left: -4px;
+            }
+            &:last-child::before{
+                border: 0;
+            }
+        }
+    }
+}
+
+
+.box ul li > span:after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: color('light-primary');
+    position: absolute;
+    left: -7.5px;
+    outline: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.box ul li > span:after{top:10px;}
+
+
+.lets-meet-box {
+    h4{
+       margin-bottom: 0 !important;
+    }
 }
