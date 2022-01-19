@@ -34,6 +34,9 @@ const CareerFormFormik = (props) => {
         whenStart: Yup.string().required(
             t('validation.required', { name: 'Start' })
         ),
+        position: Yup.string().required(
+            t('validation.required', { name: 'Position' })
+        ),
         resume: Yup.mixed()
             .required(t('validation.required', { name: 'Resume' }))
             .test('type', t('validation.resumeFormat'), (value) => {
@@ -53,7 +56,7 @@ const CareerFormFormik = (props) => {
         email: '',
         areaCode: '',
         phoneNumber: '',
-        position: props.name,
+        position: props.name || '',
         whenStart: '',
         coverLtr: '',
         resume: null,
@@ -225,15 +228,24 @@ const CareerFormFormik = (props) => {
                                 </div>
                                 <div className="row">
                                     <div className="form-group col-12">
-                                        <BootstrapForm.Label htmlFor="appFor">
+                                        <BootstrapForm.Label htmlFor="position">
                                             {t('careerForm.applyPosition')}
                                         </BootstrapForm.Label>
                                         <Field
-                                            disabled
                                             name="position"
                                             type="text"
-                                            className="form-control"
-                                            value
+                                            className={
+                                                'form-control' +
+                                                (errors.position &&
+                                                touched.position
+                                                    ? ' is-invalid'
+                                                    : '')
+                                            }
+                                        />
+                                        <ErrorMessage
+                                            name="position"
+                                            component="div"
+                                            className="invalid-feedback text-center"
                                         />
                                     </div>
                                 </div>

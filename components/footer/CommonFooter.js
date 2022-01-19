@@ -68,6 +68,10 @@ const RadiusFooter = (props) => {
                         route: 'https://www.obortech.io/',
                     },
                     {
+                        name: t('home.gdprCompliance'),
+                        route: `/#${((t('home.gdprCompliance')).replace(/ /g,'')).toLowerCase()}`,
+                    },
+                    {
                         name: t('liveLedger'),
                         route: '#',
                     },
@@ -170,7 +174,7 @@ const RadiusFooter = (props) => {
                             <ul className="lh-lg">
                                 {_.map(item.list, (listItem) => (
                                     <li key={_.uniqueId()} className="mb-2 cursor-pointer">
-                                        {listItem.route !== '#' && listItem.route.search('https') === -1  ? (
+                                        {listItem.route !== '#' && listItem.route.search('https') === -1 ? (
                                             <Link
                                                 href={`/${props.language}${listItem.route}`}
                                             >

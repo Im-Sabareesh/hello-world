@@ -75,6 +75,10 @@ const TopLogoFooter = (props) => {
                         route: 'https://www.obortech.io/',
                     },
                     {
+                        name: t('home.gdprCompliance'),
+                        route: `/${props.language}/#${((t('home.gdprCompliance')).replace(/ /g,'')).toLowerCase()}`,
+                    },
+                    {
                         name: t('liveLedger'),
                         route: '#',
                     },

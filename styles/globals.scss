@@ -1922,3 +1922,5 @@ p.card-text.show-more {
        margin-bottom: 0 !important;
     }
 }
+// for recaptcha hide
+.grecaptcha-badge { visibility: hidden !important; }

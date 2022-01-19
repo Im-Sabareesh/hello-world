@@ -54,17 +54,8 @@ const CareersComponent = (props) => {
                             sm={12}
                             className="dark-secondary-text-color"
                         >
-                            <H1 className="mb-md-4 pb-md-3 mb-2 pb-2 ">
-                                Why Chaincode Consulting ?
-                            </H1>
                             <h3 className="h3 lh-base mb-3 fw-normal">
-                                We are looking for user-obsessed, tech-forward, and action-oriented people to join us. In
-                                addition to our agaency business, we have
-                                several in-house projects and companies.
-                            </h3>
-                            <h3 className="h3 lh-base mb-3 fw-normal">
-                                If you think you fit the bill, then we’d like to
-                                chat.
+                                We are looking for user-obsessed, tech-forward, and action-oriented people to join us.
                             </h3>
                             <a
                                 href="#"
