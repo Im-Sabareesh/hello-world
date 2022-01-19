@@ -39,13 +39,13 @@ export default function ChooseUsSection() {
         <section className="home-section-5 py-5">
             <Container>
                 <Row>
-                    <Col md={{ span: 12, order: 0 }} lg={6}>
+                    <Col md={{ span: 12, order: 0 }} lg={6} className="text-center">
                         <MyImage
                             src={images.blockchainBuss}
                             placeholder="blur"
                             alt=" "
-                            height={332}
-                            width={636}
+                            height={410}
+                            width={403}
                             loading="lazy"
                         />
                     </Col>
