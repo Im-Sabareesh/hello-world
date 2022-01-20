@@ -11,6 +11,26 @@ const EmptyFooter = () => {
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>
+                    {/* <ul className="list-inline position-relative footer-after-line">
+                            <li className="list-inline-item px-2">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('privacyPolicy')}
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('termsOfService')}
+                                </a>
+                            </li>
+                    </ul> */}
                 </div>
             </Container>
         </footer>

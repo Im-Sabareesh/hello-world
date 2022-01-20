@@ -124,7 +124,7 @@ const TopLogoFooter = (props) => {
                         lg={12}
                         md={12}
                         sm={6}
-                        xs={6}
+                        xs={12}
                         className="text-md-center mb-xl-5 pb-xl-5 mb-md-4 mb-3 pb-md-3 "
                     >
                         <Link href={`/${props.language}/`}>
@@ -161,7 +161,7 @@ const TopLogoFooter = (props) => {
                             lg={item.style.lg}
                             md={4}
                             sm={6}
-                            xs={6}
+                            xs={12}
                             className="mb-xl-0 mb-md-4 mb-sm-3 mb-4"
                         >
                             <h3 className="h3 light-text-color mb-3">
@@ -199,7 +199,27 @@ const TopLogoFooter = (props) => {
                 <div className="copyrights-section d-md-flex justify-content-between align-items-center text-md-left text-center pb-3">
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
-                    </span>
+                    </span>                    
+                    {/* <ul className="list-inline position-relative footer-after-line">
+                            <li className="list-inline-item px-2">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('privacyPolicy')}
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('termsOfService')}
+                                </a>
+                            </li>
+                    </ul> */}
                 </div>
             </Container>
         </footer>

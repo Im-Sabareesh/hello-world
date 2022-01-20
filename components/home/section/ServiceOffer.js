@@ -43,9 +43,9 @@ export default function ServiceOfferSection() {
 
     return (
         <section className="home-section-2 py-5">
-            <Container>
+            <Container className="pt-4">
                 <Row>
-                    <Col md={8} className="mx-auto text-center mb-2">
+                    <Col lg={8} md={9} className="mx-auto text-center mb-2">
                         <h2 className="h2 dark-text-color mb-4">
                             {t('home.servicesOffer')}
                         </h2>
@@ -55,7 +55,7 @@ export default function ServiceOfferSection() {
                 </Row>
             </Container>
 
-            <Container>
+            <Container className="pb-sm-4">
                 <Row>
                     {_.map(serviceList, (item) => (
                         <Col

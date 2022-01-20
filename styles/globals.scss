@@ -333,7 +333,7 @@ button:focus {
     background: url('../public/assets/images/hero-banner-bg.png') no-repeat;
     min-height: 500px;
     padding-top: 250px;
-    padding-bottom: 65px;
+    padding-bottom: 100px;   // ------home page 19/1/22 changes
     background-size: cover;
     background-position-x: right;
 }
@@ -1450,18 +1450,18 @@ p.card-text.show-more {
 }
 
 // 22/12/21
-.blockchain-consulting-page,
-.hyperledger-service-page{
-    font-family: $secondaryFont;
-}
-.blockchain-consulting-page .enterprise-section1 .h1,
-.hyperledger-service-page .enterprise-section1 .h1
-{
-    font-size: 36px !important;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: -2px;
-}
+// .blockchain-consulting-page,
+// .hyperledger-service-page{
+//     font-family: $secondaryFont;
+// }
+// .blockchain-consulting-page .enterprise-section1 .h1,
+// .hyperledger-service-page .enterprise-section1 .h1
+// {
+//     font-size: 36px !important;
+//     font-weight: 600;
+//     line-height: 48px;
+//     letter-spacing: -2px;
+// }
 .enterprise-section1 {
     padding-bottom: 207px;  
 }
@@ -1527,11 +1527,10 @@ p.card-text.show-more {
     padding-bottom: 90px;
     .h2{
         color: color('dark-secondary');
-        letter-spacing: -2px !important;
+        letter-spacing: -1px !important;      // home page 19/1/22 changes
         font-size: 36px !important;
-        font-weight: 600;
+        font-weight: 700;                     // home page 19/1/22 changes
         line-height: 48px;
-        letter-spacing: -2px;
     }
     .paragraph-text{
         font-size: 14px;
@@ -1650,7 +1649,7 @@ p.card-text.show-more {
         padding: 50px;
         h3{
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;                   // home page 19/1/22 changes
             line-height: 24px;
             color: color('dark-secondary');
             margin-bottom: 40px;
@@ -1717,7 +1716,7 @@ p.card-text.show-more {
 .rpa-service{
     .develop-hyperledger {
         .floating-content {
-            height: auto;
+            height: 625px;  //changes on 20/1/22
         }
         .what-hyperledger-img {
             margin-top: -245px;
@@ -1924,3 +1923,28 @@ p.card-text.show-more {
 }
 // for recaptcha hide
 .grecaptcha-badge { visibility: hidden !important; }
+
+
+// Home page changes 19/1/22
+.home-section-icons-block {
+    background-color: rgb(217 215 255 / 10%);
+    border-radius: 10px;
+    .h3 {
+        font-size: 18px;
+    }
+}
+.home-section1-bg{
+    background: url('../public/assets/images/home-section1-bg.png') no-repeat;
+    background-position: center right;
+}
+.home-section-3{
+    padding-top: 70px;
+    padding-bottom: 160px !important;
+    &-heading{
+        margin-bottom: 100px !important;
+    }
+}
+
+.responsive-footer .social-icons a {
+    margin-left: 0 !important;
+}

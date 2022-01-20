@@ -45,7 +45,7 @@ export default function FeaturedSection(props) {
             <Container>
                 <Row>
                     <Col md={10} lg={8} xl={7} xxl={6}>
-                        <div className="d-flex align-items-center">
+                        <div className="d-sm-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
                                 {t('home.expertBlockchainConsulting')}
                             </h3>
@@ -70,13 +70,13 @@ export default function FeaturedSection(props) {
                     </Col>
 
                     <Col md={12} className="text-center mt-4 featured-heading">
-                        <h2 className="h2 blue-gradient-text-color">
+                        <h2 className="h2 purple-gradient-text-color">
                             {t('home.featured')}
                         </h2>
                     </Col>
 
                     <div className="mt-4">
-                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
+                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 justify-content-center">
                             {_.map(featuresList, (item) => (
                                 <Col
                                     key={_.uniqueId()}
@@ -93,26 +93,26 @@ export default function FeaturedSection(props) {
                                         }
                                     }}
                                 >
-                                    <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">
-                                        <div className="featured-icon-new">
+                                    <div className="featured-box-container btn d-flex align-items-center justify-content-center">
+                                        {/* <div className="featured-icon-new">
                                             <MyImage
                                                 src={item.icon}
                                                 alt=""
                                                 width={112}
                                                 height={112}
-                                                layout="intrinsic"
+                                                layout="intrinsic"\
                                                 placeholder="blur"
                                                 loading="lazy"
                                             />
-                                        </div>
+                                        </div> */}
 
-                                        <p
+                                        <span
                                             dangerouslySetInnerHTML={{
                                                 __html: item.title,
                                             }}
                                         />
 
-                                        <div>
+                                        {/* <div>
                                             {' '}
                                             <MyImage
                                                 src={images.purpleArrow}
@@ -123,7 +123,7 @@ export default function FeaturedSection(props) {
                                                 placeholder="blur"
                                                 loading="lazy"
                                             />{' '}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </Col>
                             ))}

@@ -4,10 +4,10 @@
 // X-Small devices (portrait phones, less than 576px) /
 @include media-breakpoint-between(xs, sm) {
     // --------------- font size-------
-
+    
     .h1 {
-        font-size: 33px !important;
-        line-height: 50px !important;
+        font-size: 27px !important;          // home page 19/1/22 changes
+        line-height: 44px !important;
     }
 
     .h2 {
@@ -53,6 +53,7 @@
 
         .featured-box-container {
             margin-bottom: 20px;
+            padding: 18px;         // home page 19/1/22 changes
         }
 
         .featured-box-container-new {
@@ -99,7 +100,7 @@
 
     .featured-box-container {
         span {
-            font-size: 19px;
+            font-size: 17px;
             line-height: 24px;
         }
     }
@@ -202,7 +203,8 @@
         padding-top: 65px;
 
         .contactus-inner-banner {
-            background-position-y: top 200px;
+            background-position: center;
+            padding-top: 70px;
 
             .w-50 {
                 width: 80% !important;
@@ -257,7 +259,7 @@
     {
         .col
         {
-            padding:0px 65px;
+            padding: 20px 50px;   // changes 20/1/22
         }
     }
 
@@ -377,6 +379,8 @@
         }
         .floating-content button{
             margin-top: 10px;
+            width: 100% !important;   //changes on 20/1/22
+            padding: 15px !important;
         }
         .banner-content 
         {
@@ -467,7 +471,7 @@
             // padding-right: 24px;
             margin-bottom: 10px;
             .featured-content {
-                height: 120px;
+                height: auto;   // changes 20/1/22
                 p{
                     font-size: 16px;
                     line-height: 26px;
@@ -534,7 +538,110 @@
             }
         }
     }
-   
+      // home page 19/1/22 changes
+      .hero-banner-container{
+        padding-bottom: 30px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .featured-heading{
+        .h2{
+            font-size: 30px;
+        }
+    }
+    .heading-line {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .home-section-icons-block {
+        .h3 {
+            font-size: 16px;
+        }
+    }
+    .home-section-3 {
+        padding-top: 40px;
+        padding-bottom: 40px !important;
+        &-heading {
+            margin-bottom: 30px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
+    .home-contact-form{
+       .red-btn{
+        margin-top: 20px;
+       }
+    }
+    .home-section-11 {
+        .home-contact-card {
+            padding: 40px 30px 28px;
+        }
+    }
+    // 20/122 changes
+    .responsive-footer{
+        margin-bottom: 40px !important;
+    }
+    .copyrights{
+        font-size: 15px;
+        span{
+            width: 240px;
+        }
+    }
+    .rpa-service {
+        .develop-hyperledger{
+            .floating-content {
+                height: auto;
+            }
+        }
+    }
+    .address-cont{
+        .h2 {
+            font-size: 24px;
+        }
+        .address-txt{
+            font-size: 17px !important;
+        }
+    }
+    .copyrights-section {
+        font-size: 15px;
+        span {
+            margin: auto;
+            width: 240px;
+            display: block;
+        }
+    }
+    .nft-service-page .service-inner-section3 .cta-banner2{
+        padding: 20px 30px !important;
+        background-position: right !important;
+    }
+    .nft-service-page .cta-banner2 .cta-txt .h2 br{
+      display: none;
+    }
+    .apply-now-modal{
+        .modal-body{
+            padding: 25px 20px;
+        }
+        .modal-header{
+            padding-left: 20px !important;
+            padding-right: 20px;
+        }
+    }
+    .getintouch-form .msg-field {
+        height: 155px;
+    }
+    .modal-upload-file{
+        .container{
+            padding: 0 !important;
+        }
+    }
+    .getintouch-form .form-group {
+        margin-bottom: 22px;
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -714,7 +821,7 @@
         padding-top: 65px;
 
         .contactus-inner-banner {
-            background-position-y: top 200px;
+            background-position: center;    // changes 20/1/22
 
             .w-50 {
                 width: 80% !important;
@@ -992,6 +1099,63 @@
                 height: auto;
             }
         }
+    }
+    // home page 19/1/22 changes
+    .hero-banner-container{
+        padding-bottom: 40px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .featured-heading{
+        .h2{
+            font-size: 30px;
+        }
+    }
+    .home-section-3 {
+        padding-top: 50px;
+        padding-bottom: 50px !important;
+        &-heading {
+            margin-bottom: 40px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: auto;
+            }
+        }
+    }
+    .home-contact-form{
+       .red-btn{
+        margin-top: 20px;
+       }
+    }
+    .rpa-service {
+        .develop-hyperledger{
+            .floating-content {
+                height: auto;
+            }
+        }
+    }
+    .address-cont{
+        .h2 {
+            font-size: 26px;
+        }
+        .address-txt{
+            font-size: 18px !important;
+        }
+    }
+    .apply-now-modal{
+        .modal-body{
+            padding: 30px 25px;
+        }
+        .modal-header{
+            padding-left: 25px !important;
+            padding-right: 25px;
+        }
+    }
+    .getintouch-form .msg-field {
+        height: 165px;
     }
 }
 
@@ -1373,6 +1537,71 @@
             }
         }
     }
+    
+    // home page 19/1/22 changes
+    .featured-heading {
+        margin-top: 50px !important;
+    }
+    .hero-banner-container{
+        padding-bottom: 50px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    .home-section-3 {
+        padding-top: 80px;
+        padding-bottom: 50px !important;
+        &-heading {
+            margin-bottom: 50px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: 340px;
+            }
+        }
+    }
+    // 20/122 changes
+    .responsive-footer{
+        margin-bottom: 50px !important;
+    }
+    .rpa-service {
+        .develop-hyperledger{
+            .floating-content {
+                height: auto;
+            }
+        }
+    }
+    .address-cont{
+        .h2 {
+            font-size: 26px;
+        }
+        .address-txt{
+            font-size: 18px !important;
+        }
+    }
+    .address-footer{
+        .branch-office{
+            &:last-child{
+                margin: 0 auto;
+            }
+        }
+    }
+    .contactus-inner-banner {
+        background-position: center;
+    }
+    .apply-now-modal{
+        .modal-dialog{
+            max-width: 590px;
+        }
+        .modal-body{
+            padding: 30px 25px;
+        }
+        .modal-header{
+            padding-left: 25px !important;
+            padding-right: 25px;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1491,10 +1720,10 @@
     .develop-hyperledger {
         height: auto; //595px
         .floating-content {
-            height: auto;
+            height: 574px;     //changes on 20/1/22
             padding: 30px;
-            margin-top: -90px;
-        }
+            margin-top: 30px;  //changes on 20/1/22
+        } 
         .floating-content h3, 
         .floating-content .h3 {
             margin-bottom: 30px;
@@ -1602,6 +1831,48 @@
             }
         }
     }
+
+    // home page 19/1/22 changes
+    .featured-heading {
+        margin-top: 50px !important;
+    }
+    .hero-banner-container{
+        padding-bottom: 80px;
+    }
+    .home-section-icons-block {
+        padding: 10px 10px;
+    }
+    .home-section-3 {
+        padding-top: 80px;
+        padding-bottom: 150px !important;
+        &-heading {
+            margin-bottom: 60px !important;
+        }
+        .custom-card {
+            .card-text {
+                height: 420px;
+            }
+        }
+    }
+    // 20/1/22 changes
+    .nft-service-page .h1, .about-us-page .h1 {
+        line-height: 56px !important;
+    }
+    .rpa-service {
+        .develop-hyperledger{
+            .floating-content {
+                height: 490px;
+            }
+        }
+    }
+    .address-cont{
+        .h2 {
+            font-size: 26px;
+        }
+        .address-txt{
+            font-size: 18px;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1650,7 +1921,7 @@
         }
     }
     .section-glow-banner {
-        height: 315px;
+        // height: 315px;
         .banner-content {
             padding: 15px 0px 36px 55px;
         }
@@ -1681,6 +1952,18 @@
     .card-text {
         height: 80px !important;
     }
+    }
+    // home page 19/1/22 changes
+    .home-section-3 {
+        .custom-card {
+            .card-text {
+                height: 350px;
+            }
+        }
+    }
+     // 20/1/22 changes
+    .develop-hyperledger .what-hyperledger-img {
+        margin-top: -360px;
     }
 }
 
@@ -1716,7 +1999,7 @@
         background-size: 180px;
     }
     .line-animated {
-        height: 140px;
+        height: 160px;
     }
     .about-section2 {
         .our-story-block {
@@ -2309,8 +2592,9 @@
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+    // home page 19/1/22 changes
     .featured-heading {
-        margin-top: 60px !important;
+        margin-top: 40px !important;
     }
     .our-story-block:hover .line-animated:before {
         height: 105px;
