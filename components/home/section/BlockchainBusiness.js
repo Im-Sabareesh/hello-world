@@ -37,7 +37,7 @@ export default function BlockchainBusinessSection() {
             <div className="home-section1-bg pb-xl-5">
                 <Container>
                     <Row>
-                        <Col md={12} lg={6} className="mt-5">
+                        <Col md={12} lg={6} className="my-auto">
                             <h2 className="dark-text-color mb-4 h2">
                                 {t('home.blockchainRevolutionizingBusiness')}
                             </h2>
@@ -49,13 +49,13 @@ export default function BlockchainBusinessSection() {
                         <Col
                             md={12}
                             lg={6}
-                            className="mt-5 text-end text-lg-end text-md-center"
+                            className="text-end text-lg-end text-md-center"
                         >
                             <MyImage
                                 src={images.homeSecTopImg}
                                 alt=""
-                                width={610}
-                                height={318}
+                                width={440}
+                                height={509}
                                 layout="intrinsic"
                                 placeholder="blur"
                                 loading="lazy"

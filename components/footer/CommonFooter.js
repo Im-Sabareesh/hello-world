@@ -108,18 +108,18 @@ const RadiusFooter = (props) => {
     return (
         <footer className={`${props.radius && 'home-footer'} ${props.whitebg ? 'white-footer-section' : 'footer-section'}`}>
             <Container>
-                <Row className="py-5 pb-1">
+                <Row className="py-sm-5 pt-5 pb-0">
                     {/* align center added for home page  */}
                     <Col
-                        xs={6}
+                        xs={12}
                         sm={6}
                         md={12}
                         lg={4}
                         className={`${
                             !props.radius
-                                ? 'text-md-center'
-                                : 'home-footer-logo text-md-center'
-                        } mb-5 mb-md-5 mb-sm-3 mb-xs-3`}
+                                ? 'responsive-footer text-lg-start text-md-center'
+                                : 'home-footer-logo responsive-footer text-lg-start text-md-center'
+                        } mb-5 mb-md-5 mb-sm-4 mb-xs-4`}
                     >
                         <Link href={`/${props.language}/`}>
                             <a
@@ -162,11 +162,11 @@ const RadiusFooter = (props) => {
                     {_.map(footerLinkList, (item) => (
                         <Col
                             key={_.uniqueId()}
-                            xs={6}
+                            xs={12}
                             sm={6}
                             md={4}
                             lg={item.lgStyle}
-                            className="mb-xs-3 mb-sm-3 mb-4"
+                            className="mb-xs-4 mb-sm-4 mb-4"
                         >
                             <h3 className="h3 light-text-color mb-3">
                                 {item.title}
@@ -225,10 +225,30 @@ const RadiusFooter = (props) => {
                         </div>
                     )}
                 </Row>
-                <div className="d-flex justify-content-between align-items-center pt-5 pb-3 copyrights">
+                <div className="d-flex justify-content-md-between align-items-center flex-md-row flex-column text-center pt-lg-5 pt-1 copyrights">
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>
+                    {/* <ul className="list-inline position-relative footer-after-line">
+                            <li className="list-inline-item px-2">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('privacyPolicy')}
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a
+                                    href="#"
+                                    onClick={(e) => e.preventDefault()}
+                                    className="light-text-color"
+                                >
+                                    {t('termsOfService')}
+                                </a>
+                            </li>
+                    </ul> */}
                 </div>
             </Container>
         </footer>

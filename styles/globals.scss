@@ -1716,7 +1716,7 @@ p.card-text.show-more {
 .rpa-service{
     .develop-hyperledger {
         .floating-content {
-            height: auto;
+            height: 625px;  //changes on 20/1/22
         }
         .what-hyperledger-img {
             margin-top: -245px;
@@ -1943,4 +1943,8 @@ p.card-text.show-more {
     &-heading{
         margin-bottom: 100px !important;
     }
+}
+
+.responsive-footer .social-icons a {
+    margin-left: 0 !important;
 }

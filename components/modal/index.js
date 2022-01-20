@@ -5,11 +5,11 @@ import { Modal } from 'react-bootstrap';
 const ModalComponent = ({ children, isShow, hide, mSize, header }) => {
     return (
         <>
-            <Modal show={isShow} onHide={hide} size={mSize} centered>
+            <Modal show={isShow} onHide={hide} size={mSize} centered className="apply-now-modal">
                 <Modal.Header className="ps-5" closeButton>
                     <Modal.Title>Apply for a {header.name}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="p-5">{children}</Modal.Body>
+                <Modal.Body className="p-lg-5">{children}</Modal.Body>
             </Modal>
         </>
     );

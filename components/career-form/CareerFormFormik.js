@@ -83,7 +83,7 @@ const CareerFormFormik = (props) => {
                         return (
                             <Form onSubmit={handleSubmit}>
                                 <div className="row">
-                                    <div className="form-group col-6">
+                                    <div className="form-group col-md-6">
                                         <BootstrapForm.Label htmlFor="firstName">
                                             {t('careerForm.firstName')}
                                         </BootstrapForm.Label>
@@ -104,7 +104,7 @@ const CareerFormFormik = (props) => {
                                             className="invalid-feedback text-center"
                                         />
                                     </div>
-                                    <div className="form-group col-6">
+                                    <div className="form-group col-md-6">
                                         <BootstrapForm.Label htmlFor="lastName">
                                             {t('careerForm.lastName')}
                                         </BootstrapForm.Label>
@@ -154,7 +154,7 @@ const CareerFormFormik = (props) => {
                                         <BootstrapForm.Label htmlFor="appFor">
                                             {t('careerForm.phoneNumber')}
                                         </BootstrapForm.Label>
-                                        <div className="row mb-0">
+                                        <div className="row mb-0 d-md-flex d-none">
                                             <div className="form-group col-3 mb-0">
                                                 <BootstrapForm.Label htmlFor="areaCode">
                                                     {t('careerForm.areaCode')}
@@ -170,7 +170,7 @@ const CareerFormFormik = (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="form-group col-3 mb-0">
+                                            <div className="form-group col-3 mb-0 d-md-block d-none">
                                                 <Field
                                                     name="areaCode"
                                                     type="number"
@@ -193,7 +193,7 @@ const CareerFormFormik = (props) => {
                                                     className="invalid-feedback text-center"
                                                 />
                                             </div>
-                                            <div className="form-group col-1 text-center p-3 mb-0">
+                                            <div className="form-group col-1 text-center p-3 mb-0 d-md-block d-none">
                                                 -
                                             </div>
                                             <div className="form-group col col-md-8 mb-0">
@@ -302,7 +302,7 @@ const CareerFormFormik = (props) => {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="form-group col-12">
+                                    <div className="form-group col-12 modal-upload-file">
                                         <BootstrapForm.Label htmlFor="email">
                                             {t('careerForm.uploadResume')}
                                         </BootstrapForm.Label>
@@ -328,7 +328,7 @@ const CareerFormFormik = (props) => {
                                         ) : null}
                                     </div>
                                 </div>
-                                <div className="form-group text-center">
+                                <div className="form-group text-center mb-sm-4 mb-2">
                                     <Button
                                         btnVarient="red-btn"
                                         type="submit"

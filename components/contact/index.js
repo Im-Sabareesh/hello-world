@@ -240,13 +240,13 @@ const ContactComponent = (props) => {
                         </Row>
                     </Container>
                     <Container>
-                        <Row>
+                        <Row className="address-footer">
                             {_.map(branchList, (item) => (
                                 <Col
-                                    md={4}
+                                    md={6}
                                     lg={4}
                                     key={_.uniqueId()}
-                                    className="d-flex mt-5"
+                                    className="d-flex mt-5 branch-office"
                                 >
                                     <div className=" mt-1 me-3 flex-shrink-0">
                                         <MyImage

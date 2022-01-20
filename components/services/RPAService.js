@@ -99,7 +99,7 @@ const RPAComponent = (props) => {
                             <Paragraph>
                                 {t('rpaService.roboticAutomationDesc')}
                             </Paragraph>
-{/* 
+
                             <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
                                     btnVarient="red-btn"
@@ -113,7 +113,7 @@ const RPAComponent = (props) => {
                                 >
                                  {t('talkOurExperts')}
                                 </Button>
-                            </div> */}
+                            </div>
                         </Col>
                         <Col lg={6} sm={12}>
                             <div className="nft-service-img-div">
@@ -147,7 +147,7 @@ const RPAComponent = (props) => {
                                     <Paragraph>
                                         {t('rpaService.whatisRPAans')}
                                     </Paragraph>
-                                    <Button
+                                    {/* <Button
                                         btnVarient="red-btn"
                                         className="p-0 rounded-0"
                                         size="lg"
@@ -156,7 +156,7 @@ const RPAComponent = (props) => {
                                         }}
                                     >
                                         {t('visitHyperledger')}
-                                    </Button>
+                                    </Button> */}
                                     
                                
                                 </div>
@@ -270,7 +270,7 @@ const RPAComponent = (props) => {
                 </Container>
 
                 <Container className="mt-0 pt-2 benefits-content">
-                    <Row className="row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
+                    <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
                         {_.map(rpaFabricList, (item, i) => (
                             <Col
                                 key={_.uniqueId()}
