@@ -83,12 +83,12 @@ const TopLogoFooter = (props) => {
                         route: `/${props.language}/#${((t('liveLedger')).replace(/ /g,'')).toLowerCase()}`,
                     },
                     {
-                        name: t('trueTitle'),
-                        route: '#',
+                        name: t('home.landRecordBlockChain'),
+                        route: `/#${((t('home.landRecordBlockChain')).replace(/ /g,'')).toLowerCase()}`,
                     },
                     {
-                        name: t('home.blockChainEHR'),
-                        route: '#',
+                        name: t('home.ehrBlockchain'),
+                        route: `/#${((t('home.ehrBlockchain')).replace(/ /g,'')).toLowerCase()}`,
                     },
                 ],
             },
