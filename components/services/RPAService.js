@@ -46,20 +46,17 @@ const RPAComponent = (props) => {
         {
             title: t('rpaService.uiPathConsulting'),
             image: '/assets/images/solution-rpa-img1.jpg',
-            subtitle: t('rpaService.uiPathConsultingContent'),
-            link: t('home.blockChainLink'),
+            subtitle: t('rpaService.uiPathConsultingContent')
         },
         {
             title: t('rpaService.uiPathImplementation'),
             image: '/assets/images/solution-rpa-img2.jpg',
-            subtitle: t('rpaService.uiPathImplementationContent'),
-            link: t('home.blockChainLink'),
+            subtitle: t('rpaService.uiPathImplementationContent')
         },
         {
             title: t('rpaService.managedServices'),
             image: '/assets/images/solution-rpa-img3.jpg',
-            subtitle: t('rpaService.managedServicesContent'),
-            link: t('home.blockChainLink'),
+            subtitle: t('rpaService.managedServicesContent')
         },
     ],
     benefitListing = [

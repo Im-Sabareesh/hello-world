@@ -196,7 +196,7 @@ const TopLogoFooter = (props) => {
                         </Col>
                     ))}
                 </Row>
-                <div className="copyrights-section d-md-flex justify-content-between align-items-center text-md-left text-center pb-3">
+                <div className="copyrights-section d-md-flex justify-content-center align-items-center text-md-left text-center pb-3">
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>                    

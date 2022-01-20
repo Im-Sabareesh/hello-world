@@ -177,7 +177,7 @@ const CareersComponent = (props) => {
                                     <div className="job-listing p-3  d-flex justify-content-between align-items-center flex-lg-nowrap flex-wrap">
                                         <div className="job-position">
                                             <h3 className="h3">{item.name}</h3>
-                                            <span>{item.description}</span>
+                                            {/* <span>{item.description}</span> */}
                                         </div>
                                         <div className="job-info d-flex justify-content-between align-items-center">
                                             <div className="job-location">
@@ -189,7 +189,7 @@ const CareersComponent = (props) => {
                                                 <span>
                                                     {moment(
                                                         item.time
-                                                    ).fromNow()}
+                                                    ).format('MMMM')}
                                                 </span>
                                             </div>
                                             <Button
