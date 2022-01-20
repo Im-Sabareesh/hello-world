@@ -80,7 +80,7 @@ const TopLogoFooter = (props) => {
                     },
                     {
                         name: t('liveLedger'),
-                        route: '#',
+                        route: `/${props.language}/#${((t('liveLedger')).replace(/ /g,'')).toLowerCase()}`,
                     },
                     {
                         name: t('trueTitle'),
