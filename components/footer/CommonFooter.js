@@ -73,7 +73,7 @@ const RadiusFooter = (props) => {
                     },
                     {
                         name: t('liveLedger'),
-                        route: '#',
+                        route: `/#${((t('liveLedger')).replace(/ /g,'')).toLowerCase()}`,
                     },
                     {
                         name: t('trueTitle'),
