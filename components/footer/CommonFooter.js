@@ -225,7 +225,7 @@ const RadiusFooter = (props) => {
                         </div>
                     )}
                 </Row>
-                <div className="d-flex justify-content-md-between align-items-center flex-md-row flex-column text-center pt-lg-5 pt-1 copyrights">
+                <div className="d-flex justify-content-center align-items-center flex-md-row flex-column text-center pt-lg-5 pt-1 copyrights pb-3">
                     <span className="light-text-color">
                         {t('footer.copyRightsReserved')}
                     </span>
