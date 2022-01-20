@@ -49,7 +49,7 @@ export default function BlockchainBusinessSection() {
                         <Col
                             md={12}
                             lg={6}
-                            className="text-end text-lg-end text-md-center"
+                            className="text-center"
                         >
                             <MyImage
                                 src={images.homeSecTopImg}
