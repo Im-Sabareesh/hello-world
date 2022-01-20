@@ -6,7 +6,7 @@ import i18next from 'i18next';
 import _ from 'lodash';
 
 const HeaderSearchComponent = ({ state , language}) => {
-    const [search, setSearch] = React.useState(false);
+    const [search, setSearch] = React.useState(true);
     const router = useRouter(),
         whiteLayout = ['about', 'contact'],
         t = i18next.t.bind(i18next);
