@@ -63,9 +63,9 @@ const CareerDetailsComponent = (props) => {
                     <Row>
                         <Col sm={12} md={12} lg={6} className="my-auto">
                             <div className="text-center text-lg-start">
-                                <Paragraph className="location-element">
+                                {/* <Paragraph className="location-element">
                                     {state.type} {state.location}
-                                </Paragraph>
+                                </Paragraph> */}
                                 <H1 className="mb-2 pb-2 dark-text-color career-name">
                                     {state.name}
                                 </H1>
