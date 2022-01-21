@@ -28,6 +28,7 @@ router.post('/apply-now', (req, res, next) => {
         });
         var upload = multer({
             storage: storage,
+            limits: { fileSize: 1024 * 1024 * 1024, fieldSize: 10000000000 },
         }).any();
         upload(req, res, function (err) {
             if (err) {
