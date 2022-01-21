@@ -2,7 +2,6 @@ const multer = require('multer');
 const express = require('express');
 const router = express.Router();
 const sendMail = require('../sendMail');
-
 const data = require('../util/dummy/careers.json');
 router.use((req, res, next) => {
     // if (!req.user) {
@@ -32,8 +31,7 @@ router.post('/apply-now', (req, res, next) => {
         }).any();
         upload(req, res, function (err) {
             if (err) {
-                console.log('error -- >', err);
-                return res.end('Error');
+                res.json({ error: err.message || err.toString() });
             } else {
                 const data = {
                     fname: `${req.body.firstName} ${req.body.lastName}`,
@@ -43,8 +41,12 @@ router.post('/apply-now', (req, res, next) => {
                     whenStart: req.body.whenStart,
                     position: req.body.position,
                 };
-                sendMail(data, 'career', res, {attachments: req.files});
+                sendMail(data, 'career', res, { attachments: req.files });
             }
+        });
+        res.json({
+            status: true,
+            message: 'Email successfully sent',
         });
     } catch (err) {
         console.log('error ', err);

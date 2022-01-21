@@ -15,7 +15,7 @@ function sendMail(locales, template, res, message = {}) {
         transport: transport,
         send: true,
         preview: false,
-        message: message
+        message: message,
     });
     email
         .send({
@@ -26,15 +26,10 @@ function sendMail(locales, template, res, message = {}) {
             },
             locals: locales,
         })
-        .then(() => {
-            res.json({
-                status: true,
-                message: 'Email successfully sent',
-            });
-        })
+        .then(() => {})
         .catch((err) => {
             // req.status(500).send(err);
-           throw new MailError(err);
+            throw new MailError(err);
         });
 }
 

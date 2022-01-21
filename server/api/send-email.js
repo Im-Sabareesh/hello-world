@@ -3,7 +3,7 @@ const router = express.Router();
 const sendMail = require('../sendMail');
 
 router.post('/home', (req, res) => {
-    const { firstname, email, phone, description} = req.body;
+    const { firstname, email, phone, description } = req.body;
     const locales = {
         fname: firstname,
         email: email,
@@ -12,6 +12,10 @@ router.post('/home', (req, res) => {
     };
     const template = 'mars';
     sendMail(locales, template, res);
+    res.json({
+        status: true,
+        message: 'Email successfully sent',
+    });
 });
 
 router.post('/contact', (req, res) => {
@@ -25,6 +29,10 @@ router.post('/contact', (req, res) => {
     };
     const template = 'contact';
     sendMail(locales, template, res);
+    res.json({
+        status: true,
+        message: 'Email successfully sent',
+    });
 });
 
 module.exports = router;
