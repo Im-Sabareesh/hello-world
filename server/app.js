@@ -32,6 +32,7 @@ app.prepare().then(async () => {
 
     server.use(compression());
     server.use(express.json({ limit: '50mb', extended: true }));
+    server.use(bodyParser.json({ limit: '50mb', extended: true }));
     server.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
 
     server.get('/_next/*', (req, res) => {
