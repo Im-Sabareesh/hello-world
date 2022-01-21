@@ -95,11 +95,10 @@ const ContactComponent = (props) => {
                                         experienced developers.
                                         <a
                                             href="#"
-                                            onClick={() =>
-                                                router.push(
-                                                    `/${props.language}/about`
-                                                )
-                                            }
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                router.push(`/${props.language}/about`);
+                                            }}
                                         >
                                             {t('readMore')}
                                         </a>
