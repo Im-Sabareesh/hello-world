@@ -54,8 +54,13 @@ const Header = (props) => {
                                     {_.map(socialMediaIcons, (item) => (
                                         <li key={_.uniqueId()}>
                                             <a
-                                                href={item.link}
-                                                onClick={(e) => item.link === '#' && e.preventDefault()}
+                                                href="#"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    if (item.link) {
+                                                        window.open(item.link, '_blank');
+                                                    }
+                                                }}
                                             >
                                                 <MyImage
                                                     {...item.icon}
