@@ -306,7 +306,7 @@ const AboutUs = (props) => {
                                                     {item.designation}
                                                 </Card.Text>
                                             </div>
-                                            <div className="d-flex social-icons">
+                                            <div className={`d-flex social-icons ${!item.linkedIn && 'visiblity-hidden'}`}>
                                                 <a
                                                     href="#"
                                                     onClick={(e) => {
