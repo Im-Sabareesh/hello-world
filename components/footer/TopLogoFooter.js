@@ -58,8 +58,8 @@ const TopLogoFooter = (props) => {
                         route: `/${props.language}/services/gdpr-compliance`,
                     },
                     {
-                        name: t('rpaDevelopment'),
-                        route: `/${props.language}/services/rpa-development`,
+                        name: t('rpaService.uiPathConsulting'),
+                        route: `/${props.language}/services/uipath-consulting`,
                     },
                 ],
             },
@@ -142,11 +142,16 @@ const TopLogoFooter = (props) => {
                             {t('footer.followUs')}
                         </Paragraph>
                         <div className="social-icons">
-                            {_.map(socialMediaIcons, (item) => (
+                            {_.map(socialMediaIcons, (item, i) => (
                                 <a
-                                    href={item.link}
-                                    onClick={(e) => item.link === '#' && e.preventDefault()}
-                                    className="mx-md-3 mx-1"
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (item.link) {
+                                            window.open(item.link, '_blank');
+                                        }
+                                    }}
+                                    className="mx-md-3 mx-1" key={i}
                                 >
                                     <MyImage {...item.icon} height={18} width={21} />
                                 </a>

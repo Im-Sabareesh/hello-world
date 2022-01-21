@@ -59,7 +59,7 @@ const Footer = (props) => {
             component: () => <CommonFooter whitebg={true} language={props.language} />,
         },
         {
-            name: '/services/rpa-development',
+            name: '/services/uipath-consulting',
             footer: 'left',
             component: () => <CommonFooter whitebg={true} language={props.language} />,
         },

@@ -14,7 +14,7 @@ const RPAServices = (props) => {
     }, []);
     return (
         <div className="nft-service-page hyperledger-service-page rpa-service">
-            <Meta title={t('rpaDevelopment')} desc="" />
+            <Meta title={t('rpaService.uiPathConsulting')} desc="" />
 
             <RPAComponent language={props.language} />
         </div>

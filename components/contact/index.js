@@ -42,6 +42,34 @@ const ContactComponent = (props) => {
             mailID: 'info@chaincodeconsulting.com',
         },
     ];
+    const socialMediaIcons = [
+        {
+            link: 'https://www.facebook.com/enterpriseblockchain/',
+            icon: images.fbPng,
+            height: 27,
+            width: 15
+        }, {
+            link: 'https://www.instagram.com/chaincodeconsulting/',
+            icon: images.instaPgn,
+            height: 27,
+            width: 28,
+        }, {
+            link: 'https://twitter.com/chaincodellp',
+            icon: images.twitterPng,
+            height: 25,
+            width: 30,
+        }, {
+            link: 'https://www.youtube.com/channel/UC1jhY2UizDbEv7Pi4STg9DA',
+            icon: images.uTubePng,
+            height: 25,
+            width: 34,
+        }, {
+            link: 'https://in.linkedin.com/company/chaincode-consulting-llp',
+            icon: images.linkeIn,
+            height: 25,
+            width: 34,
+        }
+    ];
 
     return (
         <>
@@ -146,58 +174,26 @@ const ContactComponent = (props) => {
 
                                 <div className="contact-small-section pt-4">
                                     <h3 className="h3">Follow Us </h3>
-                                    <Paragraph className="contactus-sociallinks">
-                                        <a
-                                            href='https://www.facebook.com/enterpriseblockchain/'
-                                        >
-                                            <MyImage
-                                                src={images.fbPng}
-                                                alt=""
-                                                height={27}
-                                                width={15}
-                                            />
-                                        </a>
-                                        <a
-                                            href='https://www.instagram.com/chaincodeconsulting/'
-                                        >
-                                            <MyImage
-                                                src={images.instaPgn}
-                                                alt=""
-                                                height={27}
-                                                width={28}
-                                            />
-                                        </a>
-                                        <a
-                                            href='https://twitter.com/chaincodellp'
-                                        >
-                                            <MyImage
-                                                src={images.twitterPng}
-                                                alt=""
-                                                height={25}
-                                                width={30}
-                                            />
-                                        </a>
-                                        <a
-                                            href='https://www.youtube.com/channel/UC1jhY2UizDbEv7Pi4STg9DA'
-                                        >
-                                            <MyImage
-                                                src={images.uTubePng}
-                                                alt=""
-                                                height={25}
-                                                width={34}
-                                            />
-                                        </a>
-
-                                        <a
-                                            href='https://in.linkedin.com/company/chaincode-consulting-llp'
-                                        >
-                                            <MyImage
-                                                src={images.linkeIn}
-                                                alt=""
-                                                height={25}
-                                                width={34}
-                                            />
-                                        </a>
+                                    <Paragraph className="contactus-sociallinks">                                        
+                                        {_.map(socialMediaIcons, (item, i) => (
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        if (item.link) {
+                                                            window.open(item.link, '_blank');
+                                                        }
+                                                    }}
+                                                    key={i}
+                                                >
+                                                <MyImage
+                                                    src={item.icon}
+                                                    alt=""
+                                                    height={item.height}
+                                                    width={item.width}
+                                                />
+                                                </a>
+                                        ))}
                                     </Paragraph>
                                 </div>
                             </Col>

@@ -50,8 +50,8 @@ const HeaderContent = (props) => {
             navPath: `/${props.language}/services/gdpr-compliance`,
         },
         {
-            name: t('rpaDevelopment'),
-            navPath: `/${props.language}/services/rpa-development`,
+            name: t('rpaService.uiPathConsulting'),
+            navPath: `/${props.language}/services/uipath-consulting`,
         },
     ];
 
