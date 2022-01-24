@@ -13,6 +13,7 @@ export default function BlockChainSolutionSection() {
                 title: t('home.obortechHub'),
                 image: '/assets/images/home-solution-1.jpg',
                 subtitle: t('home.obortechHubDesc'),
+                route: 'https://www.obortech.io/'
                 // link: t('home.blockChainLink'),
             },
             {
@@ -53,7 +54,13 @@ export default function BlockChainSolutionSection() {
 
                     {_.map(blockChainSolnList, (item, index) =>
                         index === blockChainSolnList.length - 1 ? (
-                            <Col md={12} lg={8} key={index} id={(item.title.replace(/ /g,'')).toLowerCase()}>
+                            <Col md={12} lg={8} key={index} id={(item.title.replace(/ /g,'')).toLowerCase()}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    if (item.route) {
+                                        window.open(item.route, '_blank');
+                                    }
+                                }}>
                                 <CardSection
                                     fullCard={true}
                                     footerClass="d-flex justify-content-between"
@@ -61,7 +68,13 @@ export default function BlockChainSolutionSection() {
                                 />
                             </Col>
                         ) : (
-                            <Col md={6} lg={4} key={index} id={item.title.replace(/ /g,'').toLowerCase()}>
+                            <Col md={6} lg={4} key={index} id={item.title.replace(/ /g,'').toLowerCase()}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    if (item.route) {
+                                        window.open(item.route, '_blank');
+                                    }
+                                }}>
                                 <CardSection
                                     fullCard={true}
                                     footerClass="d-flex justify-content-between"

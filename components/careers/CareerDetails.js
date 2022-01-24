@@ -20,11 +20,10 @@ const CareerDetailsComponent = (props) => {
     const router = useRouter();
     const dispatch = useDispatch();
     const {
-        query: { cid },
+        query: { slug },
     } = router;
-    const state =
-        useSelector((state) =>
-            careerSelector.careerDetailsSelector(state, cid)
+    const state = useSelector((state) =>
+            careerSelector.careerDetailsSelector(state, slug)
         ) || {};
     const show =
         useSelector((state) => careerSelector.careerModalStatus(state)) ||

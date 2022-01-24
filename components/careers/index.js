@@ -201,7 +201,7 @@ const CareersComponent = (props) => {
                                                         )
                                                     );
                                                     router.push(
-                                                        `/${props.language}/careers/${item.id}`
+                                                        `/${props.language}/careers/${item.slug}`
                                                     );
                                                 }}
                                             >

@@ -25,11 +25,11 @@ const CareerDetails = (props) => {
 
 export const getServerSideProps = async ({ params, res }) => {
     try {
-        const { lang, cid } = params;
+        const { lang, slug } = params;
         return {
             props: {
                 language: lang,
-                cid: cid,
+                slug: slug,
             },
         };
     } catch (err) {
