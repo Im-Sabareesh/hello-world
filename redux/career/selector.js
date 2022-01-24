@@ -8,8 +8,8 @@ export const careerModalStatus = (state) => {
     return state.Career.showApplyNow;
 };
 
-export const careerDetailsSelector = (state, id) => {
+export const careerDetailsSelector = (state, slug) => {
     const list = state.Career.list;
-    const details = _.find(list, (l) => l.id == id);
+    const details = _.find(list, (l) => l.slug === slug);
     return details || {};
 };
