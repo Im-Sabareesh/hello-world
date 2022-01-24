@@ -13,13 +13,13 @@ export default function ChooseUsSection() {
             icon: images.whyChose,
             name: 'Design Thinking-led Innovation',
             describe:
-                'We are passionate about bringing the leverage of blockchain to business. Our experts employ a design thinking-driven approach to identify blockchain use cases in your industry and build a robust strategy to implement them.',
+                'We are passionate about bringing the leverage of Blockchain to business. Our experts employ a design thinking-driven approach to identify blockchain use cases in your industry and build a robust strategy to implement them.',
         },
         {
             icon: images.truePartner,
             name: 'Your Tech Partners',
             describe:
-                'We work as your partners. You cut down on R&D time and expense by delegating blockchain deployment to us. We understand the why and then help implement the what and the how of an idea into stable, value-driven and scalable DLT based solutions.',
+                'We work as your partners. You cut down on R&D time and expense by delegating blockchain deployment to us. We understand the why and then help implement an idea\'s what and the how of an idea into stable, value-driven and scalable DLT based solutions.',
         },
         {
             icon: images.devOps,
@@ -31,7 +31,7 @@ export default function ChooseUsSection() {
             icon: images.dedTeam,
             name: 'Agile and DevOps Tandem',
             describe:
-                'Our culture boasts of using Agile to understand and deliver on the ever-evolving needs of our clients and with DevOps in tandem, we ship faster and better. Using only the best case practices of the industry, our team has your back to test your blockchain MVP or launch a whole suite of apps. ',
+                'Our culture boasts of using Agile to understand and deliver on our clients\' ever-evolving needs. With DevOps in tandem, we ship faster and better. Using only the best case practices of the industry, our team has your back to test your blockchain MVP or launch a whole suite of apps. ',
         },
     ];
 

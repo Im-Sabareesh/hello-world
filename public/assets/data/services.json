@@ -43,7 +43,7 @@
             {
                 "title": "NFT For Games",
                 "image": "/assets/images/wide-service-nft-5.jpg",
-                "describe": "We provide unparalleled NFT For Games solutions that help you access wider avenues and engage diverse audiences. Our blockchain development company uses cutting-edge NFT engineering to create exclusive gaming skins and avatars with the potential for an incredible value. You can also add more value by offering in-game collectibles via your NFT platform securely and conveniently."
+                "describe": "We provide unparalleled NFT For Games solutions that help you access wider avenues and engage diverse audiences. Our blockchain development company uses cutting-edge NFT engineering to create exclusive gaming skins and avatars with the potential for incredible value. You can also add more value by offering in-game collectibles via your NFT platform securely and conveniently."
             },
             {
                 "title": "NFT For The Fashion Industry",
@@ -63,7 +63,7 @@
             {
                 "title": "NFT For Real Estate",
                 "image": "/assets/images/wide-service-nft-9.jpg",
-                "describe": "Chaincode Consulting’s dynamic blockchain developers create NFTs for real estate using blockchain technology. We develop platforms that integrate compliance and robust functionality. Non-fungible Tokens are the new, digital way to represent client’s identities and grant ownership of space. They also help tokenize tangible assets and sell them securely in the digital marketplace to crypto enthusiasts wanting to invest in sections of a building."
+                "describe": "Chaincode Consulting’s dynamic blockchain developers create NFTs for real estate using blockchain technology. We develop platforms that integrate compliance and robust functionality. Non-fungible Tokens are the new, digital way to represent clients' identities and grant ownership of space. They also help tokenize tangible assets and sell them securely in the digital marketplace to crypto enthusiasts wanting to invest in sections of a building."
             },
             {
                 "title": "NFT For Infrastructure Development",
@@ -88,12 +88,12 @@
             {
                 "title": "NFT For Videos",
                 "image": "/assets/images/wide-service-nft-14.jpg",
-                "describe": "Non-Fungible Tokens are ideal for displaying video content, including sports moments, exciting and unusual moments, music videos, and more. Non-fungible token distribution is being used to distribute NBA player tokens and video clips. Our NFT for Videos’ services enable you to take the digital world by storm, reach global audiences, including music lovers, companies, developers, and traders."
+                "describe": "Non-Fungible Tokens are ideal for displaying video content, including sports moments, exciting and unusual moments, music videos, and more. Non-fungible token distribution is being used to distribute NBA player tokens and video clips. Our NFT for Videos’ services enable you to take the digital world by storm reach global audiences, including music lovers, companies, developers, and traders."
             },
             {
                 "title": "NFT For Content Subscriptions",
                 "image": "/assets/images/wide-service-nft-15.jpg",
-                "describe": "Our NFT for Content Subscriptions’ solutions are a futuristic way to churn up creator-audience dynamics. We help public figures and prominent content creators design a unique blueprint for the future. NFTs are a way to overstep the conventional economic model by scaling up monetizing opportunities for the digital content you create. Our blockchain developers can help you unlock unimaginable revenue streams."
+                "describe": "Our NFT for Content Subscriptions’ solutions are a futuristic way to churn up creator-audience dynamics. We help public figures, and prominent content creators design a unique blueprint for the future. NFTs are a way to overstep the conventional economic model by scaling up monetizing opportunities for the digital content you create. Our blockchain developers can help you unlock unimaginable revenue streams."
             },
             {
                 "title": "Initial Poster Offering (IPO) Development",
@@ -122,7 +122,7 @@
         },
         "headerSection": {
             "title": "DeFi Development Services",
-            "description": "Chaincode Consulting’s DeFi Development Services will help you reDeFine your entry into the emerging, global, decentralized finance world. Scale-up your business reliably, transparently, and securely and experience an overarching reincarnation of your financial products."
+            "description": "Chaincode Consulting’s DeFi Development Services will help you reDeFine your entry into the emerging, global, decentralized finance world. Scale up your business reliably, transparently, and securely and experience an overarching reincarnation of your financial products."
         },
         "smallParaSection": {
             "title": "Decentralization Finance - The Way Ahead for Businesses",
@@ -146,7 +146,7 @@
             {
                 "title": "DeFi Asset Management Development",
                 "image": "/assets/images/wide-service-defi-3.jpg",
-                "describe": "Our superior DeFi Asset Management Development services help create innovative solutions for investors and asset management professionals alike. Decentralized Finance brings new attributes such as security tokens, protocols, composability, derivatives, and decentralized exchanges. You gain comprehensive visibility of holdings of tokens or assets at the block level and clear insights into how the assets are performing. "
+                "describe": "Our superior DeFi Asset Management Development services help create innovative solutions for investors and asset management professionals alike. Decentralized finance brings new attributes such as security tokens, protocols, composability, derivatives, and decentralized exchanges. You gain comprehensive visibility of holdings of tokens or assets at the block level and clear insights into how the assets are performing. "
             },
             {
                 "title": "DeFi Crowdfunding Platform Development",
@@ -154,7 +154,7 @@
                 "describe": "Chaincode Consulting’s DeFi Crowdfunding Platform Development services help create robust white-label crowdfunding platforms where you can easily host projects to help people and seamlessly raise funds for various causes. Our customized white-label crowdfunding software platforms are the perfect solution for you, whether attempting to raise money for a local community or reaching out globally."
             },
             {
-                "title": "Decentralised Crypto Banking Development",
+                "title": "Decentralized Crypto Banking Development",
                 "image": "/assets/images/wide-service-defi-5.jpg",
                 "describe": "We offer robust DeFi Crypto Banking Development to individuals and businesses that handle payments originating from cryptocurrencies. This digital transformation has a multi-layered security architecture ensuring regulatory compliance for cross-border settlements and value storage. It helps banking institutions offering financial services and products to cryptocurrency holders create a frictionless user experience, enhancing customer trust and regulatory compliance."
             },
@@ -265,13 +265,13 @@
         "accordion": [
             {
                 "headerTitle": "What Is Blockchain?",
-                "headerBody": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders"
+                "headerBody": "Blockchain is a distributed ledger that can record transactions secured and permanently verifiable by the stakeholders."
             }, {
                 "headerTitle": "Why Blockchain Matters?",
-                "headerBody": "Blockchain is revolutionizing the enterprise world by providing a new type of infrastructure enabling trusted tech-based business relationships without the need of the third party thus making the system more transparent, efficient, and affordable."
+                "headerBody": "Blockchain is revolutionizing the enterprise world by providing a new infrastructure enabling trusted tech-based business relationships without a third party, thus making the system more transparent, efficient, and affordable."
             }, {
                 "headerTitle": "Are you blockchain ready?",
-                "headerBody": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients to evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
+                "headerBody": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
             }
             
         ],
