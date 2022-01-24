@@ -76,7 +76,7 @@ export default function FeaturedSection(props) {
                     </Col>
 
                     <div className="mt-4">
-                        <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
+                        <Row className="row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
                             {_.map(featuresList, (item) => (
                                 <Col
                                     key={_.uniqueId()}

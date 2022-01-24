@@ -57,10 +57,14 @@
         }
 
         .featured-box-container-new {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 22px;
-            padding: 15px;
+            padding: 10px;
             margin-bottom: 20px;
+            letter-spacing: 0px;
+            span{
+                height: 45px;
+            }
         }
 
 
