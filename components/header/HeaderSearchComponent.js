@@ -22,7 +22,7 @@ const HeaderSearchComponent = ({ state , language}) => {
                     {t('contactUs')}
                 </Button>
             </div>
-            <div className="getintouch-form content-search" id="toggle-search">
+            {/* <div className="getintouch-form content-search" id="toggle-search">
                 <input
                     type="text"
                     placeholder={t('search')}
@@ -35,8 +35,8 @@ const HeaderSearchComponent = ({ state , language}) => {
                             : ''
                     }`}
                 />
-            </div>
-            <div className="search-margin">
+            </div> */}
+            {/* <div className="search-margin">
                 <a
                     className="ms-2 header-search pt-1"
                     onClick={(e) => {
@@ -63,7 +63,7 @@ const HeaderSearchComponent = ({ state , language}) => {
                         height={17}
                     />
                 </a>
-            </div>
+            </div> */}
         </>
     );
 };
