@@ -160,9 +160,9 @@ const RPAComponent = (props) => {
                             </Col>
 
                             <Col xl={{ span: 7, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
-                                {/* <h2 className="h2 mb-4">
-                                    Our GDPR  Solution
-                                </h2> */}
+                                <h2 className="h2 mb-4">
+                                    {t('rpaService.rpaSoftwareSolutions')}
+                                </h2>
                                 <Paragraph>
                                     {t('rpaService.robotsInterpreting')}
                                 </Paragraph>

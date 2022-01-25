@@ -262,9 +262,9 @@
             "whatIsBlockchain": "What Is Blockchain?",
             "whatIsBlockchainAns": "Blockchain is a distributed ledger that can record transactions in a secured and permanent way verifiable by the stakeholders",
             "whyBlockchainMatters": "Why Blockchain Matters?",
-            "whyBlockchainMattersAns": "Blockchain is revolutionizing the enterprise world by providing a new type of infrastructure enabling trusted tech-based business relationships without the need of the third party thus making the system more transparent, efficient, and affordable.",
+            "whyBlockchainMattersAns": "Blockchain is revolutionizing the enterprise world by providing a new infrastructure enabling trusted tech-based business relationships without a third party, thus making the system more transparent, efficient, and affordable.",
             "areYouBlockchain": "Are you blockchain ready?",
-            "areYouBlockchainAns": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients to evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
+            "areYouBlockchainAns": "Blockchain is disrupting the market across industries with its transformational capabilities. Our enterprise blockchain consulting services help clients evaluate blockchain applicability and readiness of their systems to adopt the technology effectively."
         },
         "buildNextGeneration": "Build Next-Generation <br/> Blockchain Solutions",
         "nxtGenerationDesc": "We are passionately dedicated to enabling enterprise-wide adoption of decentralized business applications embraced with blockchain technology. Our blockchain consultants have the perfect blend of expertise in business processes, industries, and blockchain development to seize the technology's true potential. As your business partners, we are committed to reducing risks and maximizing ROI with proven business results.",
@@ -311,6 +311,7 @@
     "rpaService": {
         "benefitStd": "Increased compliance with modern business standards.",
         "benefitImproved": "Improved customer experience.",
+        "rpaSoftwareSolutions": "RPA Software Solutions",
         "benefitProductivity": "Improvement in the overall productivity.",
         "benefitEnsuring": "Ensuring better management capabilities.",
         "benefitUtilizing": "Utilizing machine learning capabilities.",
