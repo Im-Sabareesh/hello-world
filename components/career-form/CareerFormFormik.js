@@ -151,26 +151,16 @@ const CareerFormFormik = (props) => {
                                 </div>
                                 <div className="row">
                                     <div className="form-group col-12">
-                                        <BootstrapForm.Label htmlFor="appFor">
+                                        <BootstrapForm.Label htmlFor="appFor" className="d-none d-sm-block">
                                             {t('careerForm.phoneNumber')}
                                         </BootstrapForm.Label>
-                                        <div className="row mb-0 d-md-flex d-none">
-                                            <div className="form-group col-3 mb-0">
-                                                <BootstrapForm.Label htmlFor="areaCode">
-                                                    {t('careerForm.areaCode')}
-                                                </BootstrapForm.Label>
-                                            </div>
-                                            <div className="form-group col-1 text-center mb-0"></div>
-                                            <div className="form-group col-6 mb-0">
-                                                <BootstrapForm.Label htmlFor="phoneNumber">
-                                                    {t(
-                                                        'careerForm.phoneNumber'
-                                                    )}
-                                                </BootstrapForm.Label>
-                                            </div>
-                                        </div>
                                         <div className="row">
-                                            <div className="form-group col-3 mb-0 d-md-block d-none">
+                                            <div className="form-group col-sm-3 mb-0">
+                                                <div className="form-group mb-0">
+                                                    <BootstrapForm.Label htmlFor="areaCode">
+                                                        {t('careerForm.areaCode')}
+                                                    </BootstrapForm.Label>
+                                                </div>
                                                 <Field
                                                     name="areaCode"
                                                     type="number"
@@ -193,10 +183,17 @@ const CareerFormFormik = (props) => {
                                                     className="invalid-feedback text-center"
                                                 />
                                             </div>
-                                            <div className="form-group col-1 text-center p-3 mb-0 d-md-block d-none">
+                                            <div className="form-group col-1 text-center p-3 mb-0 d-none d-sm-block">
                                                 -
                                             </div>
                                             <div className="form-group col col-md-8 mb-0">
+                                                <div className="form-group mb-0">
+                                                    <BootstrapForm.Label htmlFor="phoneNumber">
+                                                        {t(
+                                                            'careerForm.phoneNumber'
+                                                        )}
+                                                    </BootstrapForm.Label>
+                                                </div>
                                                 <Field
                                                     name="phoneNumber"
                                                     type="number"
