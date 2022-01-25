@@ -2,6 +2,34 @@
     "careers": [
         {
             "id": 1,
+            "slug": "blockchain-developer",
+            "type": "Full time",
+            "name": "Blockchain Developer",
+            "description": "As entrepreneurs ourselves, we’d",
+            "location": "Chandigarh(WFH)",
+            "time": "2022-01-19T12:00:00",
+            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a Blockchain Developer who will translate the business requirement into decentralized applications to solve critical business problems.</p> ",
+            "content": [
+                "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><ul class='career-listings lh-md mt-md-4'><li>Collaborating with managers to determine blockchain technology needs and envisaged functionalities.</li><li>Creating application features and interfaces by using programming languages and writing multithreaded codes.</li><li>Applying the latest cryptography techniques to protect digital transaction data against cyberattacks and information hacks.</li><li>Maintaining client and server-side applications.</li><li>Optimizing and securing blockchain applications by integrating new tools and technologies.</li><li>Documenting blockchain development processes and complying with best practices in data protection.</li><li>Keeping up with current blockchain technologies and cryptography methods.</li></ul></div></div></div></div></section>",
+                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have hands-on experience in Ethereum or Hyperledger Fabric.</li><li>Candidates with additional experience in other blockchain frameworks/platforms like Corda, Solana, Bianca Smart Chain, Solidity, Ethereum, Tezos, Ipfs would be preferred.</li><li>Should have a deep understanding & knowledge of blockchain architecture & use cases.</li><li>Experience in writing smart contracts for large-scale production blockchain applications.</li><li>Should have hands-on experience with Linux and Docker.</li><li>Should have good analytical & problem-solving skills.</li><li>Candidates with research aptitude will be preferred.</li><li>Hands-on experience of Nodejs and Golang.</li><li>Experience with cloud infrastructure service, AWS/ Azure will be preferred.</li><li>Experience in NFT and DeFi would be preferred.</li><li>Must have a minimum of 3 years of experience.</li></ul></div></div></div></section>"
+            ]
+        },
+        {
+            "id": 2,
+            "slug": "reactjs-developer",
+            "type": "Full time",
+            "name": "React.js Developer",
+            "description": "As entrepreneurs ourselves, we’d",
+            "location": "Chandigarh(WFH)",
+            "time": "2022-01-19T12:00:00",
+            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a ReactJS Developer who has good knowledge of micro frontend development and helps build world-class decentralized applications.</p> ",
+            "content": [
+                "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><p>As a Reactjs Developer, you will translate user stories into decentralized applications to solve critical business problems.</p><ul class='career-listings lh-md mt-md-4'><li>Leverage the inbuilt React toolkit for creating frontend features.</li><li>Translate wireframes and designs into good-quality code.</li><li>Build structured, well-documented, and reusable code and libraries for long-term use.</li><li>Write application interface code with JavaScript.</li><li>Constantly monitor application performance and help in improvements.</li><li>Optimize application for maximum speed and scalability.</li><li>Make sure of cross-browser compatibility.</li><li>Proficient understanding of code versioning tools, such as Git.</li></ul></div></div></div></div></section>",
+                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have experience of more than or equal to 2 years.</li><li>Must have knowledge about JavaScript, jQuery, Nodejs, Reacts, ExpressJs, NextJs, Git, GITHUB, SQL, MySQL, MongoDB.</li><li>Must have a basic understanding of front-end technologies, such as HTML5 and CSS3.</li><li>Should be open to learning new technologies (viz. Blockchain).</li></ul></div></div></div></section>"
+            ]
+        },
+        {
+            "id": 3,
             "slug": "business-development-manager",
             "type": "Full time",
             "name": "Business Development Manager",
@@ -15,7 +43,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 4,
             "slug": "digital-marketing-expert",
             "type": "Full time",
             "name": "Digital Marketing Expert",
@@ -26,34 +54,6 @@
             "content": [
                 "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><ul class='career-listings lh-md mt-md-4'><li>Consult clients on various SEO & PPC Search Ad campaigns techniques and recent updates.</li><li>Manage daily responsibilities associated with PPC, Paid Campaigns, Google AdWords, Google Analytics, Tableau, Web Trends, etc.</li><li>Maintain and monitor keyword bids, daily and monthly budget caps, impression share, quality score, and other important account metrics.</li><li>Keep pace with search engine and PPC industry trends and developments.</li><li>Coordinate the project status & requisites between team and client.</li><li>Adjust campaigns to enhance visibility and site optimization for clients.</li><li>Create and maintain project documentation, plans, and reports.</li><li>Ensure standards and requirements of the respective project are timely met.</li><li>Communicate with team and management on project development, timelines, and results.</li><li>Measure and report on the performance of all digital marketing campaigns on LinkedIn and other social channels like Facebook, Twitter, Instagram, etc.</li></ul></div></div></div></div></section>",
                 "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have a Bachelor's Degree in any stream.</li><li>Should have a certification/course/diploma in a similar or related field of work or IT-related course of study.</li><li>Possesses demonstrable experience leading and managing SEO/SEM, ASO, marketing database, email, social media and/or display advertising campaigns.</li><li>Possesses prior experience in client handling and generating business leads.</li><li>Should have basic knowledge of HTML/CSS and Microsoft Office (Word, Excel, and Outlook).</li></ul></div></div></div></section>"
-            ]
-        },
-        {
-            "id": 3,
-            "slug": "reactjs-developer",
-            "type": "Full time",
-            "name": "Reactjs Developer",
-            "description": "As entrepreneurs ourselves, we’d",
-            "location": "Chandigarh(WFH)",
-            "time": "2022-01-19T12:00:00",
-            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a ReactJS Developer who has good knowledge of micro frontend development and helps build world-class decentralized applications.</p> ",
-            "content": [
-                "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><p>As a Reactjs Developer, you will translate user stories into decentralized applications to solve critical business problems.</p><ul class='career-listings lh-md mt-md-4'><li>Leverage the inbuilt React toolkit for creating frontend features.</li><li>Translate wireframes and designs into good-quality code.</li><li>Build structured, well-documented, and reusable code and libraries for long-term use.</li><li>Write application interface code with JavaScript.</li><li>Constantly monitor application performance and help in improvements.</li><li>Optimize application for maximum speed and scalability.</li><li>Make sure of cross-browser compatibility.</li><li>Proficient understanding of code versioning tools, such as Git.</li></ul></div></div></div></div></section>",
-                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have experience of more than or equal to 2 years.</li><li>Must have knowledge about JavaScript, jQuery, Nodejs, Reacts, ExpressJs, NextJs, Git, GITHUB, SQL, MySQL, MongoDB.</li><li>Must have a basic understanding of front-end technologies, such as HTML5 and CSS3.</li><li>Should be open to learning new technologies (viz. Blockchain).</li></ul></div></div></div></section>"
-            ]
-        },
-        {
-            "id": 4,
-            "slug": "blockchain-developer",
-            "type": "Full time",
-            "name": "Blockchain Developer",
-            "description": "As entrepreneurs ourselves, we’d",
-            "location": "Chandigarh(WFH)",
-            "time": "2022-01-19T12:00:00",
-            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a Blockchain Developer who will translate the business requirement into decentralized applications to solve critical business problems.</p> ",
-            "content": [
-                "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><ul class='career-listings lh-md mt-md-4'><li>Collaborating with managers to determine blockchain technology needs and envisaged functionalities.</li><li>Creating application features and interfaces by using programming languages and writing multithreaded codes.</li><li>Applying the latest cryptography techniques to protect digital transaction data against cyberattacks and information hacks.</li><li>Maintaining client and server-side applications.</li><li>Optimizing and securing blockchain applications by integrating new tools and technologies.</li><li>Documenting blockchain development processes and complying with best practices in data protection.</li><li>Keeping up with current blockchain technologies and cryptography methods.</li></ul></div></div></div></div></section>",
-                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have hands-on experience in Ethereum or Hyperledger Fabric.</li><li>Candidates with additional experience in other blockchain frameworks/platforms like Corda, Solana, Bianca Smart Chain, Solidity, Ethereum, Tezos, Ipfs would be preferred.</li><li>Should have a deep understanding & knowledge of blockchain architecture & use cases.</li><li>Experience in writing smart contracts for large-scale production blockchain applications.</li><li>Should have hands-on experience with Linux and Docker.</li><li>Should have good analytical & problem-solving skills.</li><li>Candidates with research aptitude will be preferred.</li><li>Hands-on experience of Nodejs and Golang.</li><li>Experience with cloud infrastructure service, AWS/ Azure will be preferred.</li><li>Experience in NFT and DeFi would be preferred.</li><li>Must have a minimum of 3 years of experience.</li></ul></div></div></div></section>"
             ]
         }
     ]
