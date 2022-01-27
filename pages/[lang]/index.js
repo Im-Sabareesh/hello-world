@@ -9,7 +9,7 @@ export default function Home(props) {
     const t = i18next.t.bind(i18next);
     return (
         <div className="home-page">
-            <Meta title={t('home.title')} desc="" />
+            <Meta title={t('blockChainConsulting')} desc="" />
             <GoogleReCaptchaProvider
                 reCaptchaKey="6LegjB4dAAAAAPgQIx4piIsiMMHVl_07C29RC76m"
                 scriptProps={{
