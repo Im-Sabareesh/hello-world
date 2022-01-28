@@ -4,6 +4,7 @@ import _ from 'lodash';
 import i18next from 'i18next';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
+import moment from 'moment';
 
 import { Paragraph, MyImage } from '@components';
 import images from '@components/images';
@@ -233,7 +234,7 @@ const RadiusFooter = (props) => {
                 </Row>
                 <div className="d-flex justify-content-center align-items-center flex-md-row flex-column text-center pt-lg-5 pt-1 copyrights pb-3">
                     <span className="light-text-color">
-                        {t('footer.copyRightsReserved')}
+                        {t('footer.chaincodeLLP')} {moment().format('YYYY')}. {t('footer.copyRightsReserved')}
                     </span>
                     {/* <ul className="list-inline position-relative footer-after-line">
                             <li className="list-inline-item px-2">

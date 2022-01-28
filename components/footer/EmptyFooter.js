@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import i18next from 'i18next';
+import moment from 'moment';
+
 const EmptyFooter = () => {
     const t = i18next.t.bind(i18next);
 
@@ -9,7 +11,7 @@ const EmptyFooter = () => {
             <Container>
                 <div className="copyrights-section d-md-flex justify-content-center align-items-center text-md-left text-center pt-1">
                     <span className="light-text-color">
-                        {t('footer.copyRightsReserved')}
+                        {t('footer.chaincodeLLP')} {moment().format('YYYY')}. {t('footer.copyRightsReserved')}
                     </span>
                     {/* <ul className="list-inline position-relative footer-after-line">
                             <li className="list-inline-item px-2">
