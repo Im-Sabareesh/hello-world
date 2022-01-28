@@ -1,6 +1,7 @@
 import { api } from '@libs';
 import objectToFormData from 'object-to-formdata';
-import { toaster } from '@components';
+import Swal from "sweetalert2";
+
 const careerAction = {
     fetchItems: 'FetchItems.CareerList',
     selectedItem: 'Selected.Career',
@@ -42,7 +43,15 @@ const careerAction = {
         delete req.resume;
         const formData = objectToFormData.serialize(req);
         api.careerFormSubmit(formData).then((res) => {
-            toaster('Applied Successfully .!', 'success');
+            Swal.fire({
+                title: 'Thanks for being awesome!',
+                text: 'Our expert will get in touch with you within 24 hours.',
+                icon: 'success',
+                showCancelButton: false,
+                focusConfirm: true,
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#28a745'
+            });
             dispatch({
                 type: careerAction.applyNowModalStatus,
                 payload: false,

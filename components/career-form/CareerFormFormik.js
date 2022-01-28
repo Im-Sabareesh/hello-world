@@ -85,7 +85,7 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-md-6">
                                         <BootstrapForm.Label htmlFor="firstName">
-                                            {t('careerForm.firstName')}
+                                            {t('careerForm.firstName')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <Field
                                             name="firstName"
@@ -106,7 +106,7 @@ const CareerFormFormik = (props) => {
                                     </div>
                                     <div className="form-group col-md-6">
                                         <BootstrapForm.Label htmlFor="lastName">
-                                            {t('careerForm.lastName')}
+                                            {t('careerForm.lastName')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <Field
                                             name="lastName"
@@ -129,7 +129,7 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12">
                                         <BootstrapForm.Label htmlFor="firstName">
-                                            {t('careerForm.email')}
+                                            {t('careerForm.email')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <Field
                                             name="email"
@@ -158,7 +158,7 @@ const CareerFormFormik = (props) => {
                                             <div className="form-group col-sm-3 mb-0">
                                                 <div className="form-group mb-0">
                                                     <BootstrapForm.Label htmlFor="areaCode">
-                                                        {t('careerForm.areaCode')}
+                                                        {t('careerForm.areaCode')} <span className="check-invalid">*</span>
                                                     </BootstrapForm.Label>
                                                 </div>
                                                 <Field
@@ -189,9 +189,7 @@ const CareerFormFormik = (props) => {
                                             <div className="form-group col col-md-8 mb-0">
                                                 <div className="form-group mb-0">
                                                     <BootstrapForm.Label htmlFor="phoneNumber">
-                                                        {t(
-                                                            'careerForm.phoneNumber'
-                                                        )}
+                                                        {t('careerForm.phoneNumber')} <span className="check-invalid">*</span>
                                                     </BootstrapForm.Label>
                                                 </div>
                                                 <Field
@@ -226,7 +224,7 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12">
                                         <BootstrapForm.Label htmlFor="position">
-                                            {t('careerForm.applyPosition')}
+                                            {t('careerForm.applyPosition')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <Field
                                             name="position"
@@ -249,7 +247,7 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12">
                                         <BootstrapForm.Label htmlFor="whenStart">
-                                            {t('careerForm.whenStart')}
+                                            {t('careerForm.whenStart')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <Field
                                             className={
@@ -301,7 +299,7 @@ const CareerFormFormik = (props) => {
                                 <div className="row">
                                     <div className="form-group col-12 modal-upload-file">
                                         <BootstrapForm.Label htmlFor="email">
-                                            {t('careerForm.uploadResume')}
+                                            {t('careerForm.uploadResume')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
                                         <StyledDropzone
                                             name="resume"

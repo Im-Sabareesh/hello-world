@@ -6,9 +6,10 @@ import * as Yup from 'yup';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import _ from 'lodash';
 import i18next from 'i18next';
+import Swal from "sweetalert2";
 
 import { axios } from '@libs';
-import { Button, toaster } from '@components';
+import { Button } from '@components';
 
 const HomeFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
@@ -53,7 +54,15 @@ const HomeFormFormik = (props) => {
                             .post('/api/v1/send-email/home', fields)
                             .then((response) => {
                                 setLoading(false);
-                                toaster('Form Submitted .!', 'success');
+                                Swal.fire({
+                                    title: 'Thanks for being awesome!',
+                                    text: 'Our expert will get in touch with you within 24 hours.',
+                                    icon: 'success',
+                                    showCancelButton: false,
+                                    focusConfirm: true,
+                                    confirmButtonText: 'Ok',
+                                    confirmButtonColor: '#28a745'
+                                });
                                 resetForm({ values: '' });
                             })
                             .catch((err) => {
@@ -72,7 +81,7 @@ const HomeFormFormik = (props) => {
                             <Row className="">
                                 <div className="form-group col-md-12">
                                     <BootstrapForm.Label htmlFor="firstname">
-                                        {t('home.firstName')}*
+                                        {t('home.firstName')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="firstname"
@@ -93,7 +102,7 @@ const HomeFormFormik = (props) => {
                                 </div>
                                 <div className="form-group col-md-6">
                                     <BootstrapForm.Label htmlFor="email">
-                                        {t('home.email')}*
+                                        {t('home.email')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="email"
@@ -113,7 +122,7 @@ const HomeFormFormik = (props) => {
                                 </div>
                                 <div className="form-group col-md-6">
                                     <BootstrapForm.Label htmlFor="phone">
-                                        {t('home.phone')}*
+                                        {t('home.phone')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="phone"
