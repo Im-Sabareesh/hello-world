@@ -36,8 +36,11 @@ const HomeFormFormik = (props) => {
         description: '',
         accepTC: false,
     };
+    let recaptchaToken;
     const handleVerify = (token) => {
-        console.log('token -- > ', token);
+        if (token) {
+            recaptchaToken = token;
+        }
     };
     const [loading, setLoading] = React.useState(false);
 
@@ -49,6 +52,7 @@ const HomeFormFormik = (props) => {
                     validationSchema={basicValidationSchema}
                     onSubmit={(fields, { resetForm }) => {
                         setLoading(true);
+                        fields['recaptchaToken'] = recaptchaToken;
                         axios
                             .post('/api/v1/send-email/home', fields)
                             .then((response) => {

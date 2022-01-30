@@ -36,10 +36,20 @@ class MailError extends Error {
     }
 }
 
+class RecaptchaError extends Error {
+    constructor(error) {
+        super();
+        this.name = 'Your Not Human .!';
+        this.message = 'Recaptcha is invalid .!'; // detailed error message
+        this.statusCode = 422; // error code for responding to client
+    }
+}
+
 module.exports = {
     CharacterCountExceeded,
     LongTitleError,
     LongBodyError,
     MailDesignationRequired,
     MailError,
+    RecaptchaError
 };

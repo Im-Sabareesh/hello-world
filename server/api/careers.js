@@ -1,8 +1,9 @@
 const multer = require('multer');
 const express = require('express');
 const router = express.Router();
-const sendMail = require('../sendMail');
+const recaptchaTest = require('../recaptchaTest');
 const data = require('../util/dummy/careers.json');
+
 router.use((req, res, next) => {
     // if (!req.user) {
     //   res.status(401).json({ error: string.statusResponses.unAuthoried });
@@ -41,13 +42,18 @@ router.post('/apply-now', (req, res, next) => {
                     description: req.body.coverLtr,
                     whenStart: req.body.whenStart,
                     position: req.body.position,
-                };
-                sendMail(data, 'career', res, { attachments: req.files });
+                },
+                recaptchaToken = req.body.recaptchaToken;
+                if (recaptchaToken) {
+                    recaptchaTest(data, recaptchaToken, 'career', res, { attachments: req.files });
+                    res.json({
+                        status: true,
+                        message: 'Email successfully sent',
+                    });
+                } else {
+                    return res.status(422).json({ message: 'Recaptcha is invalid' });
+                }
             }
-        });
-        res.json({
-            status: true,
-            message: 'Email successfully sent',
         });
     } catch (err) {
         console.log('error ', err);

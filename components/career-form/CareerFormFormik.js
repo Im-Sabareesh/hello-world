@@ -3,6 +3,7 @@ import { Form as BootstrapForm } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import i18next from 'i18next';
 
 import { Button, StyledDropzone } from '@components';
@@ -61,6 +62,12 @@ const CareerFormFormik = (props) => {
         coverLtr: '',
         resume: null,
     };
+    let recaptchaToken;
+    const handleVerify = (token) => {
+        if (token) {
+            recaptchaToken = token;
+        }
+    };
 
     return (
         <>
@@ -70,6 +77,7 @@ const CareerFormFormik = (props) => {
                     validationSchema={basicValidationSchema}
                     enableReinitialize
                     onSubmit={(fields) => {
+                        fields['recaptchaToken'] = recaptchaToken;
                         dispatch(careerAction.applynow(fields));
                     }}
                 >
@@ -333,6 +341,9 @@ const CareerFormFormik = (props) => {
                                     >
                                         {t('careerForm.submit')}
                                     </Button>
+                                </div>
+                                <div>
+                                    <GoogleReCaptcha onVerify={handleVerify} />
                                 </div>
                             </Form>
                         );
