@@ -6,9 +6,10 @@ import * as Yup from 'yup';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import _ from 'lodash';
 import i18next from 'i18next';
+import Swal from "sweetalert2";
 
 import { axios } from '@libs';
-import { Button, toaster } from '@components';
+import { Button } from '@components';
 
 const ContactFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
@@ -59,7 +60,16 @@ const ContactFormFormik = (props) => {
                             .post('/api/v1/send-email/contact', fields)
                             .then((response) => {
                                 setLoading(false);
-                                toaster('Form Submitted .!', 'success');
+                                Swal.fire({
+                                    title: 'Thanks for being awesome!',
+                                    text: 'Our expert will get in touch with you within 24 hours.',
+                                    icon: 'success',
+                                    showCancelButton: false,
+                                    focusConfirm: true,
+                                    confirmButtonText: 'Ok',
+                                    confirmButtonColor: '#28a745'
+                                });
+                                // toaster('Form Submitted .!', 'success');
                                 resetForm({ values: '' });
                             })
                             .catch((err) => {
@@ -78,7 +88,7 @@ const ContactFormFormik = (props) => {
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="firstname">
-                                        {t('contactUsForm.yourName')}
+                                        {t('contactUsForm.yourName')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="firstname"
@@ -101,7 +111,7 @@ const ContactFormFormik = (props) => {
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="email">
-                                        {t('contactUsForm.yourEmail')}
+                                        {t('contactUsForm.yourEmail')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="email"
@@ -123,7 +133,7 @@ const ContactFormFormik = (props) => {
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="phone">
-                                        {t('contactUsForm.contactNumber')}
+                                        {t('contactUsForm.contactNumber')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         name="phone"
@@ -182,7 +192,7 @@ const ContactFormFormik = (props) => {
                             <div className="row">
                                 <div className="form-group col-12">
                                     <BootstrapForm.Label htmlFor="mesdescriptionsage">
-                                        {t('contactUsForm.yourMsg')}
+                                        {t('contactUsForm.yourMsg')} <span className="check-invalid">*</span>
                                     </BootstrapForm.Label>
                                     <Field
                                         as="textarea"

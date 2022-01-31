@@ -4,6 +4,7 @@ import Link from 'next/link';
 import i18next from 'i18next';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
+import moment from 'moment';
 
 import images from '@components/images';
 import { Paragraph, MyImage } from '@components';
@@ -203,7 +204,7 @@ const TopLogoFooter = (props) => {
                 </Row>
                 <div className="copyrights-section d-md-flex justify-content-center align-items-center text-md-left text-center pb-3">
                     <span className="light-text-color">
-                        {t('footer.copyRightsReserved')}
+                        {t('footer.chaincodeLLP')} {moment().format('YYYY')}. {t('footer.copyRightsReserved')}
                     </span>                    
                     {/* <ul className="list-inline position-relative footer-after-line">
                             <li className="list-inline-item px-2">

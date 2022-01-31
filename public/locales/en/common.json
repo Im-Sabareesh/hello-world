@@ -28,7 +28,8 @@
         "instasure": "Instasure",
         "moreAboutUs": "More About Us",
         "blog": "Blog",
-        "copyRightsReserved": "Chaincode Consulting LLP 2022. All rights reserved"
+        "copyRightsReserved": "All rights reserved",
+        "chaincodeLLP": "Chaincode Consulting LLP"
     },
     "trueTitle": "True Title",
     "liveLedger": "Live Ledger",
