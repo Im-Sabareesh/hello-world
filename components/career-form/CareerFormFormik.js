@@ -4,10 +4,13 @@ import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import i18next from 'i18next';
+import DatePicker from "react-datepicker";
 
 import { Button, StyledDropzone } from '@components';
 import { careerAction } from '@redux';
 import { useDispatch } from 'react-redux';
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const CareerFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
@@ -57,7 +60,7 @@ const CareerFormFormik = (props) => {
         areaCode: '',
         phoneNumber: '',
         position: props.name || '',
-        whenStart: '',
+        whenStart: new Date(),
         coverLtr: '',
         resume: null,
     };
@@ -249,7 +252,7 @@ const CareerFormFormik = (props) => {
                                         <BootstrapForm.Label htmlFor="whenStart">
                                             {t('careerForm.whenStart')} <span className="check-invalid">*</span>
                                         </BootstrapForm.Label>
-                                        <Field
+                                        {/* <Field
                                             className={
                                                 'form-control' +
                                                 (errors.whenStart &&
@@ -259,7 +262,11 @@ const CareerFormFormik = (props) => {
                                             }
                                             name="whenStart"
                                             type="text"
-                                        />
+                                        /> */}
+                                        <DatePicker className={
+                                                'form-control input-datepicker' + (errors.whenStart && touched.whenStart ? ' is-invalid' : '')
+                                            } selected={values.whenStart} autoComplete="off" onKeyDown={e => e.preventDefault()}
+                                            onChange={(date) => setFieldValue('whenStart', date)} />
                                         {/* <InputMask
                                             className={
                                                 'form-control' +
