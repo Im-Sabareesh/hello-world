@@ -59,8 +59,8 @@ const HomeFormFormik = (props) => {
                             .then((response) => {
                                 setLoading(false);
                                 Swal.fire({
-                                    title: 'Thanks for being awesome!',
-                                    text: 'Our expert will get in touch with you within 24 hours.',
+                                    title: t('thansForm'),
+                                    text: t('formResponse'),
                                     icon: 'success',
                                     showCancelButton: false,
                                     focusConfirm: true,
