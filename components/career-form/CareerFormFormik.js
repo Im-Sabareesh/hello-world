@@ -77,7 +77,7 @@ const CareerFormFormik = (props) => {
                     onSubmit={async (fields) => {
                         const token = await recaptchaRef.current.executeAsync();
                         recaptchaRef.current.reset();
-                        fields['g-recaptcha-response'] = token;
+                        fields['token'] = token;
                         dispatch(careerAction.applynow(fields));
                     }}
                 >

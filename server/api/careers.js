@@ -2,8 +2,8 @@ const multer = require('multer');
 const express = require('express');
 const router = express.Router();
 const sendMail = require('../sendMail');
-const Recaptcha = require('express-recaptcha').RecaptchaV2;
-const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY);
+// const Recaptcha = require('express-recaptcha').RecaptchaV2;
+// const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY);
 
 const data = require('../util/dummy/careers.json');
 router.use((req, res, next) => {
@@ -23,10 +23,7 @@ router.get('/fetch', async (req, res) => {
     }
 });
 
-router.post('/apply-now',  recaptcha.middleware.verify, (req, res, next) => {
-    if (req.recaptcha.error) {
-        res.status(422).json({ message: 'Recaptcha token is invalid' });
-    }
+router.post('/apply-now', (req, res, next) => {
     try {
         var storage = multer.diskStorage({
             destination: 'public/uploads/',
@@ -40,20 +37,29 @@ router.post('/apply-now',  recaptcha.middleware.verify, (req, res, next) => {
             if (err) {
                 res.json({ error: err.message || err.toString() });
             } else {
-                const data = {
-                    fname: `${req.body.firstName} ${req.body.lastName}`,
-                    email: req.body.email,
-                    phone: `${req.body.areaCode}${req.body.phoneNumber}`,
-                    description: req.body.coverLtr,
-                    whenStart: req.body.whenStart,
-                    position: req.body.position,
-                };
-                sendMail(data, 'career', res, {attachments: req.files});
+                const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${req.body.token}`;
+                fetch(url, { method: "post"}).then(response => response.json())
+                .then((resp) => {
+                    if (!resp.success) {
+                        res.status(422).json({ message: 'Recaptcha token is invalid' });
+                    }
+                    const data = {
+                        fname: `${req.body.firstName} ${req.body.lastName}`,
+                        email: req.body.email,
+                        phone: `${req.body.areaCode}${req.body.phoneNumber}`,
+                        description: req.body.coverLtr,
+                        whenStart: req.body.whenStart,
+                        position: req.body.position,
+                    };
+                    sendMail(data, 'career', res, {attachments: req.files});
+                    res.json({
+                        status: true,
+                        message: 'Email successfully sent',
+                    });
+                }).catch((err) => {
+                    res.status(422).json({ message: 'Something went wrong .!' });
+                });
             }
-            res.json({
-                status: true,
-                message: 'Email successfully sent',
-            });
         });
     } catch (err) {
         console.log('error ', err);
