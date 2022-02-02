@@ -64,8 +64,8 @@ const NFTSComponent = (props) => {
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={708}
-                                    height={476}
+                                    width={1172}
+                                    height={1056}
                                 />
                             </div>
                         </Col>

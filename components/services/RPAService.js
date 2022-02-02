@@ -120,8 +120,8 @@ const RPAComponent = (props) => {
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={710}
-                                    height={571}
+                                    width={1409}
+                                    height={1290}
                                 />
                             </div>
                         </Col>

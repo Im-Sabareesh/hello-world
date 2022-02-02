@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://chaincodeconsulting.com/en/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/careers/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/about/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/blockchain-consulting/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/hyperledger-fabric-development/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/nft-development/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/defi-development/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/gdpr-compliance/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/services/uipath-consulting/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chaincodeconsulting.com/en/contact/</loc>
+  <lastmod>2022-01-31T07:07:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
