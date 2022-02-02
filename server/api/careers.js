@@ -1,9 +1,11 @@
 const multer = require('multer');
 const express = require('express');
 const router = express.Router();
-const recaptchaTest = require('../recaptchaTest');
-const data = require('../util/dummy/careers.json');
+const sendMail = require('../sendMail');
+const Recaptcha = require('express-recaptcha').RecaptchaV2;
+const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY);
 
+const data = require('../util/dummy/careers.json');
 router.use((req, res, next) => {
     // if (!req.user) {
     //   res.status(401).json({ error: string.statusResponses.unAuthoried });
@@ -21,7 +23,10 @@ router.get('/fetch', async (req, res) => {
     }
 });
 
-router.post('/apply-now', (req, res, next) => {
+router.post('/apply-now',  recaptcha.middleware.verify, (req, res, next) => {
+    if (req.recaptcha.error) {
+        res.status(422).json({ message: 'Recaptcha token is invalid' });
+    }
     try {
         var storage = multer.diskStorage({
             destination: 'public/uploads/',
@@ -42,18 +47,13 @@ router.post('/apply-now', (req, res, next) => {
                     description: req.body.coverLtr,
                     whenStart: req.body.whenStart,
                     position: req.body.position,
-                },
-                recaptchaToken = req.body.recaptchaToken;
-                if (recaptchaToken) {
-                    recaptchaTest(data, recaptchaToken, 'career', res, { attachments: req.files });
-                    res.json({
-                        status: true,
-                        message: 'Email successfully sent',
-                    });
-                } else {
-                    return res.status(422).json({ message: 'Recaptcha is invalid' });
-                }
+                };
+                sendMail(data, 'career', res, {attachments: req.files});
             }
+            res.json({
+                status: true,
+                message: 'Email successfully sent',
+            });
         });
     } catch (err) {
         console.log('error ', err);

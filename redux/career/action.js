@@ -1,6 +1,7 @@
 import { api } from '@libs';
 import objectToFormData from 'object-to-formdata';
 import Swal from "sweetalert2";
+import i18next from 'i18next';
 
 const careerAction = {
     fetchItems: 'FetchItems.CareerList',
@@ -43,6 +44,7 @@ const careerAction = {
         delete req.resume;
         const formData = objectToFormData.serialize(req);
         api.careerFormSubmit(formData).then((res) => {
+            const t = i18next.t.bind(i18next);
             Swal.fire({
                 title: t('thansForm'),
                 text: t('formResponse'),

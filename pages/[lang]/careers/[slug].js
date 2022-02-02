@@ -17,7 +17,6 @@ const CareerDetails = (props) => {
     return (
         <div className="CareerDetails-wrapper">
             <Meta title={t('careerDetails')} desc="" />
-
             <CareerDetailsComponent language={props.language}/>
         </div>
     );

@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');
-const { MailError } = require('./errors');
+const { SomethingError } = require('./errors');
 
 function sendMail(locales, template, res, message = {}) {
     let transport = nodemailer.createTransport({
@@ -29,7 +29,7 @@ function sendMail(locales, template, res, message = {}) {
         .then(() => {})
         .catch((err) => {
             // req.status(500).send(err);
-            throw new MailError(err);
+            throw new SomethingError(err);
         });
 }
 

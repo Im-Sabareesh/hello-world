@@ -27,20 +27,11 @@ class MailDesignationRequired extends Error {
     }
 }
 
-class MailError extends Error {
+class SomethingError extends Error {
     constructor(error) {
         super();
         this.name = 'Something went wrong';
         this.message = error; // detailed error message
-        this.statusCode = 422; // error code for responding to client
-    }
-}
-
-class RecaptchaError extends Error {
-    constructor(error) {
-        super();
-        this.name = 'Your Not Human .!';
-        this.message = 'Recaptcha is invalid .!'; // detailed error message
         this.statusCode = 422; // error code for responding to client
     }
 }
@@ -50,6 +41,5 @@ module.exports = {
     LongTitleError,
     LongBodyError,
     MailDesignationRequired,
-    MailError,
-    RecaptchaError
+    SomethingError
 };
