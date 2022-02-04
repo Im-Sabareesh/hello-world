@@ -1,0 +1,20 @@
+- hosts : all
+  remote_user : ec2-user
+  become : yes
+  tasks:
+  - name: Download Tomcat
+    get_url:
+      url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.75/bin/apache-tomcat-8.5.75.tar.gz
+      dest: /opt/
+  - name: Extract the tomcat tar file
+    ansible.builtin.unarchive:
+      src: /opt/apache-tomcat-8.5.75.tar.gz
+      dest: /opt/
+      remote_src: yes
+  - name: Run tomcat
+    command: "nohup /opt/apache-tomcat-8.5.75/bin/startup.sh"
+    tags: startTomcat
+  - name: Copy the Artifact from jenkins-job directory to tomcat path
+    copy:
+      src: /home/ec2-user/jenkins/webapp.war
+      dest: /opt/apache-tomcat-8.5.75/webapps/
