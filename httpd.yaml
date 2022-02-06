@@ -1,31 +1,17 @@
 - hosts : all
-  remote_user : ubuntu
+  remote_user : ec2-user
   become : yes
-  vars :
-    port: 9090
-  tasks:
-  - name: Update APT package manager repositories cache
-    apt:
-      update_cache: yes
-  - name: ensure the jenkins apt repository key is installed
-    apt_key: url=https://pkg.jenkins.io/debian-stable/jenkins.io.key state=present
-  - name: ensure the repository is configured
-    apt_repository: repo='deb https://pkg.jenkins.io/debian-stable binary/' state=present
-  - name: Install OpenJDK Java
-    apt:
-      name: openjdk-8-jdk
+  tasks : 
+  - name: install the latest version of Apache
+    yum:
+      name: httpd
       state: present
-  - name: installing  jenkins
-    apt:
-      name: jenkins
-      state: present
-  - name: Changing the Jenkins Port
-    ansible.builtin.lineinfile:
-      path: /etc/default/jenkins
-      regexp: '^HTTP_PORT='
-      line: HTTP_PORT={{port}}
-  - name: Start service jenkins
+  - name: start httpd service
     service:
-      name: jenkins
+      name: httpd
       state: started
-  
+  - name: copy index file  
+    copy:
+      src: /home/ec2-user/jenkins/index.html
+      dest: /var/www/html/
+   
