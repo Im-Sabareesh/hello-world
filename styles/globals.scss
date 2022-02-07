@@ -335,7 +335,7 @@ button:focus {
 .hero-banner-container {
     background: url('../public/assets/images/hero-banner-bg.png') no-repeat;
     min-height: 500px;
-    padding-top: 250px;
+    padding-top: 200px;
     padding-bottom: 100px;   // ------home page 19/1/22 changes
     background-size: cover;
     background-position-x: right;
@@ -1960,4 +1960,11 @@ p.card-text.show-more {
 .react-datepicker__day.react-datepicker__day--keyboard-selected {
     background: none;
     color: #000;
+}
+
+.featured-wrapper{
+    background: linear-gradient(0deg, rgb(181 187 242 / 5%), rgb(181 187 242 / 8%)), rgb(196 196 196 / 1%);
+    border-radius: 12px;
+    padding: 40px 20px;
+    margin-top: 80px;
 }

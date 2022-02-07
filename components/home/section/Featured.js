@@ -69,10 +69,13 @@ export default function FeaturedSection(props) {
                         </div>
                     </Col>
 
-                    <Col md={12} className="text-center mt-4 featured-heading">
-                        <h2 className="h2 blue-gradient-text-color">
-                            {t('home.featured')}
-                        </h2>
+                   
+                </Row>
+                <Row className="featured-wrapper">
+                    <Col md={12} className="text-center featured-wrapper-heading">
+                            <h2 className="h2 blue-gradient-text-color">
+                                {t('home.featured')}
+                            </h2>
                     </Col>
 
                     <div className="mt-4">
