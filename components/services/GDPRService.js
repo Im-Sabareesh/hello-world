@@ -78,7 +78,7 @@ const GDPRComponent = (props) => {
                                 </Button>
                             </div>
                         </Col>
-                        <Col lg={6} sm={12}>
+                        <Col lg={6} sm={12} className="my-auto">
                             <div className="nft-service-img-div">
                                {/* <Image src="../../public/assets/images/enterprise-blockchain-img.png" alt="..."></Image> */}
                                 <MyImage
@@ -99,11 +99,11 @@ const GDPRComponent = (props) => {
 
             {/*--------------- GDPR service  section2 start---------- */}
 
-            <section className="service-inner-section2 enterprise-section2">
+            <section className="service-inner-section2 enterprise-section2 bg-gradient-none">
                 <div className="section-glow-banner develop-hyperledger">
                     <Container>
                         <Row>
-                            <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
+                            <Col xl={{ span: 6, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
                                 <div className="next-generation-accordion floating-content">
                                     
                                     <h3>{t('gdprService.whatisGDPR')}</h3>
@@ -114,43 +114,19 @@ const GDPRComponent = (props) => {
                                 </div>
                             </Col>
 
-                            <Col xl={{ span: 7, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content">
+                            <Col xl={{ span: 6, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 0 }} sm={{ span: 12, order: 0 }} xs={{ span: 12, order: 0 }} className="banner-content my-auto">
                                 <h2 className="h2 mb-4">
                                     {t('gdprService.ourGDPRSolution')}
                                 </h2>
                                 <Paragraph>
                                     {t('gdprService.ourGDPRSolutionDesc')}
                                 </Paragraph>
-                                <div className="d-xl-none d-lg-block d-none mx-auto">
-                                    <MyImage
-                                        src={images.gdprImage}
-                                        rounded="true"
-                                        className="nft-service-img"
-                                        alt=" "
-                                        width={451}
-                                        height={348}
-                                    />
-                                </div>
+                            
                             </Col>
                            
                         </Row>
-                        <Row className="d-xl-flex d-lg-none">
-                            <Col xl={5} lg={6}>
-                                
-                            </Col>
-                            <Col xl={7} lg={6} className="what-hyperledger-img text-lg-start text-center">
-                                <MyImage
-                                    src={images.gdprImage}
-                                    rounded="true"
-                                    className="nft-service-img"
-                                    alt=" "
-                                    width={451}
-                                    height={348}
-                                />
-                            </Col>
-                        </Row>
-
                     </Container>
+                  
                 </div>
             </section>
 

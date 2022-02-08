@@ -95,9 +95,6 @@ const AboutUs = (props) => {
                                 <Paragraph>
                                     {t('aboutUs.headerVisions')}
                                 </Paragraph>
-                                <Paragraph>
-                                    {t('aboutUs.headerVisions1')}
-                                </Paragraph>
                             </div>
                         </Col>
                     </Row>
@@ -109,16 +106,16 @@ const AboutUs = (props) => {
             {/*--------------- about section1 section start ---------- */}
 
             <section className="about-section1 pb-xl-5 pb-md-4 pb-2">
-                <Container fluid className="pb-xl-5 pb-2">
-                    <Row className="pb-xl-5 pb-2">
-                        <Col className="pb-xl-5 pb-2 align-img">
+                <Container fluid className="">
+                    <Row className="">
+                        <Col className="align-img">
                             <MyImage
                                 src={images.aboutUs}
                                 alt=" "
                                 className="mx-auto about-section1-img"
                                 rounded="true"
-                                width={1385}
-                                height={800}
+                                width={1211}
+                                height={614}
                                 layout="responsive"
                                 objectPosition="center"
                             />

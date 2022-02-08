@@ -111,8 +111,8 @@ const BlockchainConsultingComponent = (props) => {
                                     rounded="true"
                                     className="nft-service-img"
                                     alt=" "
-                                    width={778}
-                                    height={716}
+                                    width={767}
+                                    height={706}
                                 />
                             </div>
                         </Col>

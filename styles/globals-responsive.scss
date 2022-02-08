@@ -325,7 +325,7 @@
         height: 45px;
     }
     .enterprise-section1{
-        padding-bottom: 65px;
+        padding-bottom: 25px;
         .nft-service-img-div{
             text-align: center;
         }
@@ -648,6 +648,21 @@
     }
     .hero-banner-container .featured-box-container-new span br {
         display: none;
+    }
+    .gdpr-service .service-inner-section1 .nft-service-img-div{
+        bottom: unset;
+    }
+    .ui-path-service .nft-service-img-div {
+        position: unset;
+    }
+    .ui-path-service .enterprise-section1 {
+        padding-bottom: 30px;
+    }
+    .nft-wrapper .nft-service-img-div {
+        position: unset;
+    }
+    .gdpr-service .why-hyperledger {
+        padding-top: 30px;
     }
 }
 
@@ -1164,6 +1179,21 @@
     .getintouch-form .msg-field {
         height: 165px;
     }
+    .gdpr-service .service-inner-section1 .nft-service-img-div{
+        bottom: unset;
+    }
+    .ui-path-service .nft-service-img-div {
+        position: unset;
+    }
+    .ui-path-service .enterprise-section1 {
+        padding-bottom: 50px;
+    }
+    .nft-wrapper .nft-service-img-div {
+        position: unset;
+    }
+    .gdpr-service .why-hyperledger {
+        padding-top: 40px;
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -1609,6 +1639,21 @@
             padding-right: 25px;
         }
     }
+    .gdpr-service .service-inner-section1 .nft-service-img-div{
+        bottom: unset;
+    }
+    .ui-path-service .nft-service-img-div {
+        position: unset;
+    }
+    .ui-path-service .enterprise-section1 {
+        padding-bottom: 50px;
+    }
+    .nft-wrapper .nft-service-img-div {
+        position: unset;
+    }
+    .gdpr-service .why-hyperledger {
+        padding-top: 40px;
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -1727,7 +1772,6 @@
     .develop-hyperledger {
         height: auto; //595px
         .floating-content {
-            height: 574px;     //changes on 20/1/22
             padding: 30px;
             margin-top: 30px;  //changes on 20/1/22
         } 
@@ -1760,12 +1804,7 @@
             font-size: 18px;
         }
     }
-    // gdpr changes
-    .gdpr-service{
-        .develop-hyperledger {
-            height: 675px;
-        }
-    }
+   
     // rpa changes
     .right-overlapped-content {
         padding-top: 120px;
@@ -1880,6 +1919,25 @@
             font-size: 18px;
         }
     }
+    .section-glow-banner .floating-content {
+        margin-top: -47px;
+    }
+
+    .gdpr-service .section-glow-banner {
+        min-height: 414px;
+    }
+    .ui-path-service .enterprise-section1 {
+        padding-bottom: 130px;
+    }
+    .ui-path-service .nft-service-img-div {
+        bottom: 0px;
+    }
+    .nft-wrapper .nft-service-img-div {
+        bottom: -136px;
+    }
+    .gdpr-service .why-hyperledger {
+        padding-top: 70px;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -1930,7 +1988,7 @@
     .section-glow-banner {
         // height: 315px;
         .banner-content {
-            padding: 15px 0px 36px 55px;
+            padding: 15px 0px 23px 55px;
         }
     }
     // gdpr- changes
@@ -1971,6 +2029,19 @@
      // 20/1/22 changes
     .develop-hyperledger .what-hyperledger-img {
         margin-top: -360px;
+    }
+
+    .gdpr-service .section-glow-banner {
+        min-height: 404px;
+    }
+    .ui-path-service .enterprise-section1 {
+        padding-bottom: 130px;
+    }
+    .ui-path-service .nft-service-img-div {
+        bottom: -164px;
+    }
+    .nft-wrapper .nft-service-img-div {
+        bottom: -150px;
     }
 }
 
