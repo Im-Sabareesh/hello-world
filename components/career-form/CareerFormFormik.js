@@ -3,7 +3,7 @@ import { Form as BootstrapForm } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import ReCAPTCHA from 'react-google-recaptcha';
 import i18next from 'i18next';
 import DatePicker from "react-datepicker";
 
@@ -16,6 +16,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const CareerFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
     const dispatch = useDispatch();
+    const recaptchaRef = React.createRef();
 
     const basicValidationSchema = Yup.object().shape({
         firstName: Yup.string().required(
@@ -65,12 +66,6 @@ const CareerFormFormik = (props) => {
         coverLtr: '',
         resume: null,
     };
-    let recaptchaToken;
-    const handleVerify = (token) => {
-        if (token) {
-            recaptchaToken = token;
-        }
-    };
 
     return (
         <>
@@ -79,8 +74,10 @@ const CareerFormFormik = (props) => {
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
                     enableReinitialize
-                    onSubmit={(fields) => {
-                        fields['recaptchaToken'] = recaptchaToken;
+                    onSubmit={async (fields) => {
+                        const token = await recaptchaRef.current.executeAsync();
+                        recaptchaRef.current.reset();
+                        fields['token'] = token;
                         dispatch(careerAction.applynow(fields));
                     }}
                 >
@@ -347,9 +344,11 @@ const CareerFormFormik = (props) => {
                                         {t('careerForm.submit')}
                                     </Button>
                                 </div>
-                                <div>
-                                    <GoogleReCaptcha onVerify={handleVerify} />
-                                </div>
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    size="invisible"
+                                    sitekey={process.env.RECAPTCHA_SITE_KEY}
+                                />
                             </Form>
                         );
                     }}

@@ -3,7 +3,7 @@ import { Form as BootstrapForm } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import ReCAPTCHA from 'react-google-recaptcha';
 import _ from 'lodash';
 import i18next from 'i18next';
 import Swal from "sweetalert2";
@@ -13,6 +13,7 @@ import { Button } from '@components';
 
 const ContactFormFormik = (props) => {
     const t = i18next.t.bind(i18next);
+    const recaptchaRef = React.createRef();
 
     const basicValidationSchema = Yup.object().shape({
         firstname: Yup.string().required(
@@ -39,12 +40,6 @@ const ContactFormFormik = (props) => {
         service: t('contactUsForm.serviceOptions.interestedIn'),
         description: '',
     };
-    let recaptchaToken;
-    const handleVerify = (token) => {
-        if (token) {
-            recaptchaToken = token;
-        }
-    };
     const [loading, setLoading] = React.useState(false);
 
     return (
@@ -53,9 +48,11 @@ const ContactFormFormik = (props) => {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={basicValidationSchema}
-                    onSubmit={(fields, { resetForm }) => {
+                    onSubmit={async (fields, { resetForm }) => {
+                        const token = await recaptchaRef.current.executeAsync();
+                        recaptchaRef.current.reset();
                         setLoading(true);
-                        fields['recaptchaToken'] = recaptchaToken;
+                        fields['g-recaptcha-response'] = token;
                         axios
                             .post('/api/v1/send-email/contact', fields)
                             .then((response) => {
@@ -223,9 +220,11 @@ const ContactFormFormik = (props) => {
                                     {t('contactUsForm.sendMsg')}
                                 </Button>
                             </div>
-                            <div>
-                                <GoogleReCaptcha onVerify={handleVerify} />
-                            </div>
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                size="invisible"
+                                sitekey={process.env.RECAPTCHA_SITE_KEY}
+                            />
                         </Form>
                     )}
                 </Formik>

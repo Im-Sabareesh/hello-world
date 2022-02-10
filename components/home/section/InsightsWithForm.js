@@ -3,10 +3,6 @@ import _ from 'lodash';
 import i18next from 'i18next';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import {
-    // GoogleReCaptchaProvider,
-    withGoogleReCaptcha,
-} from 'react-google-recaptcha-v3';
 import images from '@components/images';
 import {
     CardSection,
@@ -108,4 +104,4 @@ InsightWithFormSection.propTypes = {};
 
 InsightWithFormSection.defaultProps = {};
 
-export default withGoogleReCaptcha(InsightWithFormSection);
+export default InsightWithFormSection;
