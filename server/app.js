@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const api = require('./api');
-const siteMap = require('./siteMap')
 const basicAuth = require('express-basic-auth');
 require('dotenv').config();
 
@@ -55,7 +54,6 @@ app.prepare().then(async () => {
     // server.post('/sent-mail', require('./sendMail'));
     // middleware
 
-    siteMap({ server });
     server.use(errorLogger);
     server.use(errorResponder);
     server.use(invalidPathHandler);
