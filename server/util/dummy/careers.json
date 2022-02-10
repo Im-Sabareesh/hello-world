@@ -2,20 +2,34 @@
     "careers": [
         {
             "id": 1,
-            "slug": "blockchain-developer",
+            "slug": "blockchain-developer-private",
             "type": "Full time",
-            "name": "Blockchain Developer",
+            "name": "Blockchain Developer (Private)",
             "description": "As entrepreneurs ourselves, we’d",
             "location": "Chandigarh(WFH)",
-            "time": "2022-01-19T12:00:00",
-            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a Blockchain Developer who will translate the business requirement into decentralized applications to solve critical business problems.</p> ",
+            "time": "2022-02-09T12:00:00",
+            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a Blockchain Developer (Private) who will translate the business requirement into decentralized applications to solve critical business problems.</p> ",
             "content": [
                 "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><ul class='career-listings lh-md mt-md-4'><li>Collaborating with managers to determine blockchain technology needs and envisaged functionalities.</li><li>Creating application features and interfaces by using programming languages and writing multithreaded codes.</li><li>Applying the latest cryptography techniques to protect digital transaction data against cyberattacks and information hacks.</li><li>Maintaining client and server-side applications.</li><li>Optimizing and securing blockchain applications by integrating new tools and technologies.</li><li>Documenting blockchain development processes and complying with best practices in data protection.</li><li>Keeping up with current blockchain technologies and cryptography methods.</li></ul></div></div></div></div></section>",
-                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have hands-on experience in Ethereum or Hyperledger Fabric.</li><li>Candidates with additional experience in other blockchain frameworks/platforms like Corda, Solana, Bianca Smart Chain, Solidity, Ethereum, Tezos, Ipfs would be preferred.</li><li>Should have a deep understanding & knowledge of blockchain architecture & use cases.</li><li>Experience in writing smart contracts for large-scale production blockchain applications.</li><li>Should have hands-on experience with Linux and Docker.</li><li>Should have good analytical & problem-solving skills.</li><li>Candidates with research aptitude will be preferred.</li><li>Hands-on experience of Nodejs and Golang.</li><li>Experience with cloud infrastructure service, AWS/ Azure will be preferred.</li><li>Experience in NFT and DeFi would be preferred.</li><li>Must have a minimum of 3 years of experience.</li></ul></div></div></div></section>"
+                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have hands-on experience in Hyperledger Fabric.</li><li>Candidates with additional experience in Kubernetes and DevOps would be preferred.</li><li>Should have a deep understanding & knowledge of blockchain architecture & use cases.</li><li>Experience in writing smart contracts for large-scale production blockchain applications.</li><li>Should have hands-on experience with Linux and Docker.</li><li>Should have good analytical & problem-solving skills.</li><li>Candidates with research aptitude will be preferred.</li><li>Hands-on experience with Nodejs and Golang.</li><li>Experience with cloud infrastructure service, AWS/ Azure will be preferred.</li><li>Experience in NFT and Defi would be preferred.</li><li>Must have a minimum of 1 year of experience.</ul></div></div></div></section>"
             ]
         },
         {
             "id": 2,
+            "slug": "blockchain-developer-public",
+            "type": "Full time",
+            "name": "Blockchain Developer (Public)",
+            "description": "As entrepreneurs ourselves, we’d",
+            "location": "Chandigarh(WFH)",
+            "time": "2022-02-09T12:00:00",
+            "overview": "<p>Chaincode consulting LLP is an emerging enterprise blockchain development and consulting firm. We help organizations revolutionize their businesses through blockchain. We work with our clients closely in accelerating the adoption of blockchain technology within their systems.</p><p>We are looking for a Blockchain Developer (Public) who will translate the business requirement into decentralized applications to solve critical business problems.</p>",
+            "content": [
+                "<section class='careerdetail-roles-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row><div class='col-sm-12'><div class='roles-responsibility'><h3 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Roles &amp; Responsibilities</h3><ul class='career-listings lh-md mt-md-4'><li>Collaborating with managers to determine blockchain technology needs and envisaged functionalities.</li><li>Creating application features and interfaces by using programming languages and writing multithreaded codes.</li><li>Applying the latest cryptography techniques to protect digital transaction data against cyberattacks and information hacks.</li><li>Maintaining client and server-side applications.</li><li>Optimizing and securing blockchain applications by integrating new tools and technologies.</li><li>Documenting blockchain development processes and complying with best practices in data protection.</li><li>Keeping up with current blockchain technologies and cryptography methods.</li></ul></div></div></div></div></section>",
+                "<section class='careerdetail-canditate-section mb-xl-5 pb-xl-5 mb-md-4 pb-md-4 mb-3 pb-3'><div class='container'><div class='row'><div class='col-sm-12'><h4 class='h2 pb-xl-4 pb-md-3 pb-2 dark-secondary-text-color'>Ideal Candidate</h4><ul class='career-listings lh-md'><li>Must have hands-on experience in Ethereum.</li><li>Candidates with additional experience in other blockchain frameworks/platforms like Corda, Solana, Bianca Smart Chain, Solidity, Ethereum, Cardano, Polka dot Tezos, Ipfs, Rust would be preferred.</li><li>Should have a deep understanding & knowledge of blockchain architecture & use cases.</li><li>Experience in writing smart contracts for large-scale production blockchain applications.</li><li>Should have hands-on experience with Linux and Docker.</li><li>Should have good analytical & problem-solving skills.</li><li>Candidates with research aptitude will be preferred.</li><li>Hands-on experience with Nodejs and Golang.</li><li>Experience with cloud infrastructure service, AWS/ Azure will be preferred.</li><li>Experience in NFT and Defi would be preferred</li><li>Must have a minimum of 1 year of experience.</li></ul></div></div></div></section>"
+            ]
+        },
+        {
+            "id": 3,
             "slug": "reactjs-developer",
             "type": "Full time",
             "name": "React.js Developer",
@@ -29,7 +43,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": 4,
             "slug": "business-development-manager",
             "type": "Full time",
             "name": "Business Development Manager",
@@ -43,7 +57,7 @@
             ]
         },
         {
-            "id": 4,
+            "id": 5,
             "slug": "digital-marketing-expert",
             "type": "Full time",
             "name": "Digital Marketing Expert",
