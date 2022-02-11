@@ -1,0 +1,15 @@
+.deployignore
+.env
+.eslintrc.json
+.gitignore
+.prettierignore
+.prettierrc.json
+.git
+.idea
+.next
+deploy.sh
+yarn-error.log
+yarn.lock
+package-lock.json
+node_modules
+.DS_Store
