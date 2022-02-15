@@ -33,15 +33,25 @@ export default function BlockchainBusinessSection() {
         ];
 
     return (
-        <section className="home-section1 py-5">
+        <section className="home-section1 py-5 home-section1-mobile mobile-section-padding">
             <div className="home-section1-bg pb-xl-5">
                 <Container>
                     <Row>
                         <Col md={12} lg={6} className="my-auto">
-                            <h2 className="dark-text-color mb-4 h2">
+                            <h2 className="dark-text-color mb-lg-4 h2 mb-0">
                                 {t('home.blockchainRevolutionizingBusiness')}
                             </h2>
-
+                            <div className='home-section1-mobile-image text-center d-lg-none d-block'>
+                                <MyImage
+                                    src={images.homeSecTopImg}
+                                    alt=""
+                                    width={440}
+                                    height={509}
+                                    layout="intrinsic"
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
+                            </div>
                             <Paragraph>{t('home.blockchainRevolutionizingBusinessDesc')}</Paragraph>
                             <Paragraph>{t('home.blockchainRevolutionizingBusinessDesc1')}</Paragraph>
                         </Col>
@@ -49,7 +59,7 @@ export default function BlockchainBusinessSection() {
                         <Col
                             md={12}
                             lg={6}
-                            className="text-center"
+                            className="text-center d-lg-block d-none"
                         >
                             <MyImage
                                 src={images.homeSecTopImg}
@@ -71,14 +81,14 @@ export default function BlockchainBusinessSection() {
                             /> */}
                         </Col>
 
-                        <div className="mt-5 mb-sm-3">
-                            <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 justify-content-center mt-2">
+                        <div className="mt-lg-5 mt-1 mb-sm-3">
+                            <Row className="row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 justify-content-md-center mt-2">
                                 {_.map(blockChainUsageList, (item) => (
                                     <Col
                                         key={_.uniqueId()}
                                     >
-                                        <div className="home-section-icons d-flex align-items-center justify-content-center text-center home-section-icons-block">
-                                            <div>
+                                        <div className="home-section-icons d-flex align-items-center justify-content-md-center text-center home-section-icons-block">
+                                            <div className="blockchain-consulting-icon">
                                                 {/* <p> */}
                                                 <MyImage
                                                     src={item.icon}
@@ -86,7 +96,7 @@ export default function BlockchainBusinessSection() {
                                                     width={76}
                                                     height={76}
                                                     loading="lazy"
-                                                    className="pb-2"
+                                                    className="pb-md-2"
                                                 />
                                                 {/* </p> */}
                                                 <h3 className="h3 dark-text-color mb-0">

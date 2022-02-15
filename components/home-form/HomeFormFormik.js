@@ -161,7 +161,7 @@ const HomeFormFormik = (props) => {
                                 </div>
                             </Row>
                             <Row className="mt-3">
-                                <div className="form-group col-md-7 form-check">
+                                <div className="form-group col-md-7 form-check accepTC">
                                     <Field
                                         type="checkbox"
                                         name="accepTC"

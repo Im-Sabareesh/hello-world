@@ -426,7 +426,7 @@ button:focus {
 
 .home-section-3 {
     background-image: url('../public/assets/images/section3-bg.png');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -1996,4 +1996,40 @@ p.card-text.show-more {
 }
 .gdpr-service .develop-hyperledger .floating-content{
     height: auto;
+}
+
+// home page figma changes
+.main-header{
+    .navbar-light{
+        .navbar-toggler{
+            color: transparent;
+            border-color: transparent;
+            padding-right: 0;
+            top: -1px !important;
+        }
+        .navbar-toggler-icon{
+            background-image: url('../public/assets/icons/menu-toggle.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.white-gradient-text-color {
+    @include gradient-background('gradient-seventh');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.is-mobile{
+    .search-bar{
+        .search-link{
+            display: none;
+        }
+    }
+}
+header{
+    .search-bar{
+        .search-link{
+            display: none;
+        }
+    }
 }

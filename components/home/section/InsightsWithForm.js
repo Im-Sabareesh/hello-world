@@ -33,7 +33,7 @@ const InsightWithFormSection = (props) => {
         ];
 
     return (
-        <section className="home-section-10 py-5">
+        <section className="home-section-10 py-5 home-section10-mobile">
             {/* <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">

@@ -10,13 +10,13 @@ const Layout = (props) => {
     const language = props.language || defaultLanguage;
     const router = useRouter();
     return (
-        <>
+        <div className={router.asPath === `/${language}/` ? 'is-mobile' : ''}>
             {router.pathname === '/' ? null : <Header language={language} />}
             {props.children}
             <Footer language={language} />
 
             {/* <ChatBotComponent/> */}
-        </>
+        </div>
     );
 };
 

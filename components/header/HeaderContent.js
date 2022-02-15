@@ -95,9 +95,9 @@ const HeaderContent = (props) => {
             >
                 <Container>
                     <Row>
-                        <Col sm={4} md={3} lg={2}>
+                        <Col xs={3} sm={3} md={3} lg={2}>
                             <Link href={`/${props.language}/`}>
-                                <a>
+                                <a className="header-logo-img">
                                     <MyImage
                                         src={images.logo}
                                         alt=""
@@ -117,7 +117,19 @@ const HeaderContent = (props) => {
                             </Link>
                         </Col>
 
-                        <Col sm={4} md={5} lg={5}>
+                        <Col xs={9} sm={9} md={5} lg={5}>
+                            <div className="search-bar position-relative">
+                                <a className="search-link">
+                                    <MyImage
+                                        src={images.SearchImage}
+                                        alt=""
+                                        className="search-link-img"
+                                        width={120}
+                                        height={72}
+                                        loading="lazy"
+                                    />
+                                </a>
+                            </div>
                             <div ref={nodes}>
                                 <Navbar
                                     expand="lg"

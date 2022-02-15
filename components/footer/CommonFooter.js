@@ -173,7 +173,7 @@ const RadiusFooter = (props) => {
                             sm={6}
                             md={4}
                             lg={item.lgStyle}
-                            className="mb-xs-4 mb-sm-4 mb-4"
+                            className="mb-xs-4 mb-sm-4 mb-4 mobile-space"
                         >
                             <h3 className="h3 light-text-color mb-3">
                                 {item.title}
