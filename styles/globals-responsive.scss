@@ -678,7 +678,7 @@
                 position: absolute;
                 width: 30px;
                 right: 15%;
-                top: 10px;
+                top: 12px;
             }
         }
         .h1, .h2{
@@ -742,8 +742,8 @@
         }
         .marquee {
             animation: marquee;
-            animation-delay: -15000ms;
-            animation-duration: 15000ms;
+            animation-delay: -23000ms;
+            animation-duration: 23000ms;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             will-change: transform;
@@ -763,6 +763,7 @@
     .hero-banner-mobile{
         text-align: center;
         background: url('../public/assets/images/hero-bg-mobile.png') no-repeat;
+        background-size: cover;
         padding-top: 110px;
         .h3{
             font-size: 14px;
@@ -1587,8 +1588,8 @@
         }
         .marquee {
             animation: marquee;
-            animation-delay: -15000ms;
-            animation-duration: 15000ms;
+            animation-delay: -23000ms;
+            animation-duration: 23000ms;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             will-change: transform;
@@ -1608,6 +1609,7 @@
     .hero-banner-mobile{
         text-align: center;
         background: url('../public/assets/images/hero-bg-mobile.png') no-repeat;
+        background-size: cover;
         padding-top: 120px;
         .h3{
             font-size: 14px;
