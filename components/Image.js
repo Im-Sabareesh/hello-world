@@ -17,6 +17,7 @@ const MyImage = (props) => {
             width={props.width}
             quality={props.quality}
             height={props.height}
+            priority={true}
         />
     ) : null;
 };
