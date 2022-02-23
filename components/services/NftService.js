@@ -29,7 +29,7 @@ const NFTSComponent = (props) => {
             <section className="service-inner-section1">
                 <Container>
                     <Row>
-                        <Col md={6} sm={12} className="my-auto">
+                        <Col lg={6} sm={12}>
                             <div className="d-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
                                     Service
@@ -57,7 +57,7 @@ const NFTSComponent = (props) => {
                                 </Button>
                             </div>
                         </Col>
-                        <Col md={6} sm={12}>
+                        <Col lg={6} sm={12}>
                             <div className="nft-service-img-div">
                                 <MyImage
                                     src={images.nftPng}
@@ -65,7 +65,7 @@ const NFTSComponent = (props) => {
                                     className="nft-service-img"
                                     alt=" "
                                     width={1172}
-                                    height={1056}
+                                    height={936}
                                 />
                             </div>
                         </Col>

@@ -197,16 +197,16 @@ export default function FeaturedSection(props) {
                                                 __html: item.title,
                                             }}
                                         />
-                                        <div className="">
-                                                    <MyImage
-                                                        src={images.purpleArrow}
-                                                        alt=""
-                                                        width={16}
-                                                        height={16}
-                                                        layout="intrinsic"
-                                                        placeholder="blur"
-                                                        loading="lazy"
-                                                    />
+                                        <div>
+                                            <MyImage
+                                                src={images.purpleArrow}
+                                                alt=""
+                                                width={16}
+                                                height={16}
+                                                layout="intrinsic"
+                                                placeholder="blur"
+                                                loading="lazy"
+                                            />
                                         </div>
                                     </div>
                                 </div>

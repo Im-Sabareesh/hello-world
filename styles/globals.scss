@@ -629,7 +629,6 @@ button:focus {
     padding-bottom: 50px !important;
 
     .testimonial-bg {
-        background: url('../public/assets/images/testimonials-bg.svg') 100px 100px no-repeat;
         min-height: 400px;
 
         small {
@@ -1083,7 +1082,7 @@ button:focus {
 
 // ------------------NFT Services-section------------//
 .service-inner-section1 {
-    padding-top: 145px;
+    padding-top: 170px;
     padding-bottom: 65px;
     display: grid;
     place-items: center;
@@ -1160,7 +1159,8 @@ header .main-header {
 
 // ---------------career page start---------------
 .career-hero-banner {
-    background: url('../public/assets/icons/careers-banner.svg') no-repeat;
+    background: url('../public/assets/images/careers-banner.png') no-repeat;
+    background-size: contain;
     min-height: 710px;
     padding-top: 150px;
     background-position: top;
@@ -1194,7 +1194,7 @@ header .main-header {
         &.search-field {
             width: 333px;
             .form-control {
-                background: url('../public/assets/icons/gradient-search.svg') no-repeat 94% center;
+                background: url('../public/assets/images/gradient-search.png') no-repeat 94% center;
             }
         }
     }
@@ -1966,17 +1966,16 @@ p.card-text.show-more {
     padding: 40px 20px;
     margin-top: 80px;
 }
-.gdpr-service .service-inner-section1 .nft-service-img-div{
-    position: relative;
-    bottom: -125px;
-}
 
-.ui-path-service .nft-service-img-div{
-    position: relative;
-    bottom: -108px;
+.ui-path-service {
+    .nft-service-img-div{
+        > div{
+            float: left;
+        }
+    }
 }
 .ui-path-service .enterprise-section1{
-    padding-bottom: 100px;
+    padding-bottom: 0;
 }
 .bg-gradient-none{
     background: none;
@@ -1987,10 +1986,7 @@ p.card-text.show-more {
 .gdpr-service .why-hyperledger{
     padding-top: 100px;
 }
-.nft-wrapper .nft-service-img-div {
-    position: relative;
-    bottom: -160px;
-}
+
 .blockchain-consulting-page .enterprise-section3 {
     padding-top: 100px;
 }
@@ -2008,7 +2004,7 @@ p.card-text.show-more {
             top: -1px !important;
         }
         .navbar-toggler-icon{
-            background-image: url('../public/assets/icons/menu-toggle.svg');
+            background-image: url('../public/assets/images/menu-toggle.png');
             width: 20px;
             height: 20px;
         }
@@ -2031,5 +2027,75 @@ header{
         .search-link{
             display: none;
         }
+    }
+}
+
+
+// service inner page space issues changes
+.ui-path-service{
+    .enterprise-section1{
+        .h1{
+            font-size: 48px !important;
+        }
+    }
+}
+.gdpr-service{
+    .enterprise-section1{
+        padding-top: 120px;
+        padding-bottom: 65px;
+        .h1{
+            font-size: 39px !important;
+            line-height: 49px;
+        }
+        .row{
+            > div:first-child{
+                margin-top: 35px;
+            }
+        }
+    }
+    
+}
+.nft-wrapper{
+    .service-inner-section1{
+        padding-top: 175px;
+        padding-bottom: 0;
+        .h1{
+            font-size: 34px !important;
+        }
+        .nft-service-img-div{
+            > div{
+                position: relative;
+                bottom: 0;
+            }
+        }
+    }
+    .service-inner-section2{
+        position: relative;
+        top: -95px;
+        z-index: -1;
+    }
+}
+
+.blockchain-consulting-page{
+    .service-inner-section1{
+        position: relative;
+        padding-top: 175px;
+        padding-bottom: 165px !important;
+        .blockchain-img-float{
+            position: absolute;
+            right: 0;
+            width: 45%;
+        }
+    }
+}
+
+.header-main-menu{
+    .nav-item {
+        .dropdown-menu{
+            .dropdown-item{
+                padding: 8px 15px;
+            }
+        }
+        
     }
 }

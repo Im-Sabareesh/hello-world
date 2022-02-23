@@ -106,8 +106,8 @@ const AboutUs = (props) => {
             {/*--------------- about section1 section start ---------- */}
 
             <section className="about-section1 pb-xl-5 pb-md-4 pb-2">
-                <Container fluid className="">
-                    <Row className="">
+                <Container fluid>
+                    <Row>
                         <Col className="align-img">
                             <MyImage
                                 src={images.aboutUs}

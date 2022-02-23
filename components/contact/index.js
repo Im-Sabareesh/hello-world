@@ -140,7 +140,6 @@ const ContactComponent = (props) => {
                                             <MyImage
                                                 src={images.contactPhone}
                                                 alt=" "
-                                                className=""
                                                 height={20}
                                                 width={20}
                                                 layout="intrinsic"
@@ -158,7 +157,6 @@ const ContactComponent = (props) => {
                                             <MyImage
                                                 src={images.contactEmail}
                                                 alt=" "
-                                                className=""
                                                 height={20}
                                                 width={20}
                                                 layout="intrinsic"
@@ -273,7 +271,6 @@ const ContactComponent = (props) => {
                                                             images.contactPhone
                                                         }
                                                         alt=" "
-                                                        className=""
                                                         height={20}
                                                         width={20}
                                                         layout="intrinsic"
@@ -293,7 +290,6 @@ const ContactComponent = (props) => {
                                                             images.contactEmail
                                                         }
                                                         alt=" "
-                                                        className=""
                                                         height={20}
                                                         width={20}
                                                     />

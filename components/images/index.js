@@ -40,13 +40,13 @@ import obortechIconMobile from '@public/assets/icons/Obortech-Smart-Hub-icon-mob
 import gdprIconMobile from '@public/assets/icons/GDPR-Compliance-icon-mobile.svg';
 import heroimgMobile from '@public/assets/icons/globe-hero-img.svg';
 
-const homeSecTopImg = '/assets/images/home-section1-img.png';
-const deCenFin = '/assets/icons/service-icon1.png';
-const nonFunToken = '/assets/icons/service-icon2.png';
-const smartChain = '/assets/icons/service-icon3.png';
-const webDev = '/assets/icons/service-icon2.png';
-const mobDev = '/assets/icons/service-icon3.png';
-const aiTech = '/assets/icons/service-icon6.png';
+const homeSecTopImg = '/assets/images/home-section1-img.svg';
+const deCenFin = '/assets/icons/service-icon1.svg';
+const nonFunToken = '/assets/icons/service-icon2.svg';
+const smartChain = '/assets/icons/service-icon3.svg';
+const webDev = '/assets/icons/service-icon2.svg';
+const mobDev = '/assets/icons/service-icon3.svg';
+const aiTech = '/assets/icons/service-icon6.svg';
 const blockchainBuss = '/assets/images/blockchain-business.svg';
 const weWorkWith = '/assets/images/we-work.png';
 const contactForm = '/assets/images/contact-form-img.png';

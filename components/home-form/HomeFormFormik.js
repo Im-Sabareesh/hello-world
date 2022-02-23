@@ -79,7 +79,7 @@ const HomeFormFormik = (props) => {
                                 handleSubmit(event);
                             }}
                         >
-                            <Row className="">
+                            <Row>
                                 <div className="form-group col-md-12">
                                     <BootstrapForm.Label htmlFor="firstname">
                                         {t('home.firstName')} <span className="check-invalid">*</span>
@@ -147,7 +147,7 @@ const HomeFormFormik = (props) => {
                                     />
                                 </div>
                             </Row>
-                            <Row className="">
+                            <Row>
                                 <div className="form-group col-md-12">
                                     <BootstrapForm.Label>
                                         {t('home.weHelpYou')}
