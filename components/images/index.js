@@ -101,6 +101,7 @@ const productivityIcon = '/assets/images/rpa-icon3.png';
 const capabilitiesIcon = '/assets/images/rpa-icon4.png';
 const utilizingIcon = '/assets/images/rpa-icon5.png';
 const uipathLogo = '/assets/images/ui-path-logo.png';
+const globeImg = '/assets/images/globe-img.png';
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
 // import smartChain from '@public/assets/icons/service-icon3.png';
@@ -212,4 +213,5 @@ export default {
     obortechIconMobile,
     gdprIconMobile,
     heroimgMobile,
+    globeImg,
 };

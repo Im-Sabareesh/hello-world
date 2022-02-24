@@ -134,7 +134,7 @@ const RPAComponent = (props) => {
             {/*--------------- RPA service  section2 start---------- */}
 
             <section className="service-inner-section2 enterprise-section2">
-                <div className="section-glow-banner develop-hyperledger">
+                <div className="section-glow-banner develop-hyperledger rpa-solutions">
                     <Container>
                         <Row>
                             <Col xl={{ span: 5, order: 0 }} lg={{ span: 6, order: 0 }} md={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }}>
@@ -166,7 +166,7 @@ const RPAComponent = (props) => {
                                 <Paragraph>
                                     {t('rpaService.robotsInterpreting')}
                                 </Paragraph>
-                                <div className="d-xl-none d-lg-block d-none mx-auto">
+                                {/* <div className="d-xl-none d-lg-block d-none mx-auto">
                                     <MyImage
                                         src={images.rpaImage}
                                         rounded="true"
@@ -175,11 +175,11 @@ const RPAComponent = (props) => {
                                         width={399}
                                         height={247}
                                     />
-                                </div>
+                                </div> */}
                             </Col>
                            
                         </Row>
-                        <Row className="d-xl-flex d-lg-none">
+                        {/* <Row className="d-xl-flex d-lg-none">
                             <Col xl={5} lg={6}>
                                 
                             </Col>
@@ -193,7 +193,7 @@ const RPAComponent = (props) => {
                                     height={247}
                                 />
                             </Col>
-                        </Row>
+                        </Row> */}
 
                     </Container>
                 </div>

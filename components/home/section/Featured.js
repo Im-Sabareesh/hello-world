@@ -47,10 +47,27 @@ export default function FeaturedSection(props) {
 
     return (
         <>
-        <section className="hero-banner-container hero-banner-mobile">
-            <Container>
+        <section className="hero-banner-container hero-banner-mobile position-relative">
+            <Container fluid className="d-md-block d-none">
                 <Row>
-                    <Col md={10} lg={8} xl={7} xxl={6}>
+                    <Col md={12}>
+                        <div className="hero-banner-globe">
+                            <MyImage
+                                src={images.globeImg}
+                                alt=""
+                                width={909}
+                                height={403}
+                                layout="intrinsic"
+                                placeholder="blur"
+                                loading="lazy"
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className="position-relative z-index1">
+                <Row>
+                    <Col md={10} lg={8} xl={7} xxl={7}>
                         <div className="d-md-flex align-items-center">
                             <h3 className="h3 secondary-text-color">
                                 {t('home.expertBlockchainConsulting')}

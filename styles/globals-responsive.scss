@@ -1129,6 +1129,15 @@
             }
         }
     }
+    // rpa Software Solutions changes
+    .rpa-solutions {
+        .floating-content {
+            padding: 30px;
+        }
+        .banner-content {
+            padding: 30px 15px 0 15px;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up) /
@@ -2151,6 +2160,16 @@
         top: 80px;
         padding: 0;
     }
+
+      // rpa Software Solutions changes
+      .rpa-solutions {
+        .floating-content {
+            padding: 30px;
+        }
+        .banner-content {
+            padding: 40px 15px 0 15px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up) /
@@ -2777,6 +2796,20 @@
         top: 80px;
         padding: 0;
     }
+     // rpa Software Solutions changes
+     .rpa-solutions {
+        .floating-content {
+            padding: 30px;
+        }
+        .banner-content {
+            padding: 50px 15px 0 15px;
+        }
+    }
+    .hero-banner-globe{
+        > div {
+            right: -290px;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up) /
@@ -3109,6 +3142,21 @@
             padding-top: 70px;
         }
     }
+     // rpa Software Solutions changes
+     .rpa-solutions {
+        .floating-content {
+            padding: 40px 25px 36px 25px;
+        }
+        .banner-content {
+            padding: 45px 0 25px 25px;
+        }
+    }
+ 
+    .hero-banner-globe{
+        > div {
+            right: -270px;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up) /
@@ -3127,7 +3175,7 @@
 
     .hero-banner-container {
         background-position-x:  50%;
-        background-position-y:  40px;
+        // background-position-y:  40px;
     }
 
     .cta-banner1 {
@@ -3252,6 +3300,24 @@
     .service-inner-section1 {
         padding-top: 150px;
     }
+
+    // rpa Software Solutions changes
+    .rpa-solutions {
+        .floating-content {
+            padding: 40px 25px 36px 25px;
+        }
+        .banner-content {
+            padding: 60px 0 70px 60px;
+        }
+    }
+
+    .hero-banner-mobile{
+        .h1{
+            font-size: 51px !important;
+            line-height: 67px !important;
+        }
+    }
+  
 }
 
 // About us and nft changes
