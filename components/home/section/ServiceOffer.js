@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 import i18next from 'i18next';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -8,49 +8,61 @@ import { Paragraph, MyImage, Button } from '@components';
 
 export default function ServiceOfferSection() {
     const t = i18next.t.bind(i18next);
-    const serviceList = [
+    const [serviceList, setServiceList] = useState([
         {
             name: t('hdfDevelopment'),
             icon: images.deCenFin,
-            describe:  t('home.serviceOfferList.hdfDevelopmentDescribe')
+            describe: t('home.serviceOfferList.hdfDevelopmentDescribe'),
+            showMore: false,
         },
         {
-            name:  t('home.serviceOfferList.nonFungibleTokens'),
+            name: t('home.serviceOfferList.nonFungibleTokens'),
             icon: images.nonFunToken,
-            describe: t('home.serviceOfferList.nonFungibleTokensDescribe')
+            describe: t('home.serviceOfferList.nonFungibleTokensDescribe'),
+            showMore: false,
         },
         {
             name: t('home.serviceOfferList.devOpsBlockchain'),
             icon: images.smartChain,
-            describe: t('home.serviceOfferList.devOpsBlockchainDescribe')
+            describe: t('home.serviceOfferList.devOpsBlockchainDescribe'),
+            showMore: false,
         },
         {
             name: t('blockChainConsulting'),
             icon: images.webDev,
-            describe: t('home.serviceOfferList.blockChainDescribe')
+            describe: t('home.serviceOfferList.blockChainDescribe'),
+            showMore: false,
         },
         {
             name: t('home.serviceOfferList.binanceSmartChain'),
             icon: images.mobDev,
-            describe: t('home.serviceOfferList.SmartChainDescribe')
+            describe: t('home.serviceOfferList.SmartChainDescribe'),
+            showMore: false,
         },
         {
             name: t('home.serviceOfferList.dAppDevelopment'),
             icon: images.aiTech,
-            describe: t('home.serviceOfferList.dAppDevelopmentDescribe')
+            describe: t('home.serviceOfferList.dAppDevelopmentDescribe'),
+            showMore: false,
         },
-    ];
+    ]);
 
     return (
         <section className="home-section-2 home-section2-mobile py-5">
             <Container className="pt-md-4">
                 <Row>
-                    <Col lg={8} md={9} className="mx-auto text-md-center mb-md-2">
+                    <Col
+                        lg={8}
+                        md={9}
+                        className="mx-auto text-md-center mb-md-2"
+                    >
                         <h2 className="h2 dark-text-color dark-secondary-text-color-sm mb-4">
                             {t('home.servicesOffer')}
                         </h2>
 
-                        <Paragraph className="mb-0">{t('home.servicesOfferDesc')}</Paragraph>
+                        <Paragraph className="mb-0">
+                            {t('home.servicesOfferDesc')}
+                        </Paragraph>
                     </Col>
                 </Row>
             </Container>
@@ -84,9 +96,9 @@ export default function ServiceOfferSection() {
                         </Col>
                     ))}
 
-                    {_.map(serviceList, (item) => (
+                    {_.map(serviceList, (item, index) => (
                         <Col
-                            key={_.uniqueId()}
+                            key={index}
                             md={6}
                             lg={4}
                             className="service-thumb text-md-center small-text show-more-text mt-5 d-md-none d-block"
@@ -111,9 +123,28 @@ export default function ServiceOfferSection() {
                                         {item.name}
                                     </h3>
 
-                                    <Paragraph> {item.describe} </Paragraph>
+                                    <Paragraph
+                                        className={
+                                            item.showMore ? 'show-more' : ''
+                                        }
+                                    >
+                                        {item.describe}
+                                    </Paragraph>
 
-                                    <Button variant="link" className="d-md-none d-block bg-transparent p-0 border-0 link-btn">Read More</Button>
+                                    <Button
+                                        variant="link"
+                                        className="d-md-none d-block bg-transparent p-0 border-0 link-btn"
+                                        onClick={() => {
+                                            const list = [...serviceList];
+                                            list[index].showMore =
+                                                !list[index].showMore;
+                                            setServiceList([...list]);
+                                        }}
+                                    >
+                                        {item.showMore
+                                            ? t('readLess')
+                                            : t('readMore')}
+                                    </Button>
                                 </div>
                             </div>
                         </Col>

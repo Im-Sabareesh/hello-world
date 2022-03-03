@@ -4,9 +4,9 @@
 // X-Small devices (portrait phones, less than 576px) /
 @include media-breakpoint-between(xs, sm) {
     // --------------- font size-------
-    
+
     .h1 {
-        font-size: 27px !important;          // home page 19/1/22 changes
+        font-size: 27px !important; // home page 19/1/22 changes
         line-height: 44px !important;
     }
 
@@ -46,14 +46,14 @@
     }
 
     .hero-banner-container {
-        background-position-x:  50%;
-        background-position-y:  50px;
+        background-position-x: 50%;
+        background-position-y: 50px;
         padding-top: 175px;
         padding-bottom: 40px;
 
         .featured-box-container {
             margin-bottom: 20px;
-            padding: 18px;         // home page 19/1/22 changes
+            padding: 18px; // home page 19/1/22 changes
         }
 
         .featured-box-container-new {
@@ -61,8 +61,8 @@
             line-height: 22px;
             padding: 10px;
             margin-bottom: 20px;
-            letter-spacing: 0px;
-            span{
+            letter-spacing: 0;
+            span {
                 height: 45px;
             }
         }
@@ -254,11 +254,9 @@
         margin-left: 0 !important;
     }
 
-    .career-hero-banner
-    {
-        .col
-        {
-            padding: 20px 50px;   // changes 20/1/22
+    .career-hero-banner {
+        .col {
+            padding: 20px 50px; // changes 20/1/22
         }
     }
 
@@ -267,9 +265,7 @@
     }
 
 
-
-    .enterprise-section3
-    {
+    .enterprise-section3 {
         padding-top: 30px;
         padding-bottom: 30px;
         .h2 {
@@ -277,37 +273,36 @@
             line-height: 40px !important;
         }
         .featured-box-container-new {
-             padding: 15px; 
-             margin-bottom: 20px;
-             background-size: cover;
-             .featured-icon-new{
+            padding: 15px;
+            margin-bottom: 20px;
+            background-size: cover;
+            .featured-icon-new {
                 height: 90px;
-             }
+            }
             .featured-content {
                 height: auto;
-                p{
+                p {
                     margin-bottom: 15px;
-                    &:not(p.paragraph-text){
+                    &:not(p.paragraph-text) {
                         font-size: 20px;
                         line-height: 24px;
                     }
                 }
-            }  
-        } 
-    } 
+            }
+        }
+    }
     .section-glow-banner {
         height: auto;
         padding-bottom: 27px;
         .banner-content {
-            padding: 35px 15px 0 15px;
+            padding: 35px 15px 0;
         }
         .floating-content {
             margin-top: 0;
             padding: 30px 25px;
         }
     }
-    .orange-cta-section 
-    {
+    .orange-cta-section {
         .getstarted-heading {
             font-size: 16px;
             line-height: 29px;
@@ -319,23 +314,23 @@
         font-size: 15px;
         height: 45px;
     }
-    .enterprise-section1{
+    .enterprise-section1 {
         padding-bottom: 25px;
-        .nft-service-img-div{
+        .nft-service-img-div {
             text-align: center;
         }
     }
     .next-generation-accordion {
         .accordion {
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
         .accordion-item:not(:last-child) {
             margin-bottom: 25px;
         }
-        .accordion-button:not(.collapsed){
+        .accordion-button:not(.collapsed) {
             font-size: 17px !important;
         }
-        .accordion-body{
+        .accordion-body {
             font-size: 16px !important;
         }
         .accordion-button {
@@ -343,10 +338,10 @@
         }
     }
     .enterprise-section4 {
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
     }
     .white-footer-section {
-        .brand-logo{
+        .brand-logo {
             margin-bottom: 0 !important;
             height: 100px;
         }
@@ -366,34 +361,33 @@
             height: auto;
             padding: 30px;
             margin-top: 0;
-            p{
+            p {
                 font-size: 16px;
                 line-height: 27px;
             }
         }
-        .floating-content h3, 
+        .floating-content h3,
         .floating-content .h3 {
             margin-bottom: 20px;
             font-size: 23px;
         }
-        .floating-content button{
+        .floating-content button {
             margin-top: 10px;
-            width: 100% !important;   //changes on 20/1/22
+            width: 100% !important; // changes on 20/1/22
             padding: 15px !important;
         }
-        .banner-content 
-        {
-            padding: 30px 15px 0 15px;
-            br{
+        .banner-content {
+            padding: 30px 15px 0;
+            br {
                 display: none;
             }
         }
-        .what-hyperledger-img{
+        .what-hyperledger-img {
             margin-top: 15px;
         }
-        
+
     }
-    .why-hyperledger{
+    .why-hyperledger {
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -401,21 +395,22 @@
         font-size: 28px !important;
         line-height: 40px !important;
     }
-    .blockchain-consulting-page, .hyperledger-service-page{
-        .heading-line{
+    .blockchain-consulting-page,
+    .hyperledger-service-page {
+        .heading-line {
             width: 100px;
             margin-left: 0;
             margin-top: 10px;
             margin-bottom: 10px;
         }
     }
-     // gdpr changes
-     .enterprise-section1{
-        .nft-service-img-div{
+    // gdpr changes
+    .enterprise-section1 {
+        .nft-service-img-div {
             margin-top: 20px;
-        } 
+        }
     }
-    .gdpr-service{
+    .gdpr-service {
         .develop-hyperledger {
             padding-bottom: 40px;
             .what-hyperledger-img {
@@ -470,8 +465,8 @@
             // padding-right: 24px;
             margin-bottom: 10px;
             .featured-content {
-                height: auto;   // changes 20/1/22
-                p{
+                height: auto; // changes 20/1/22
+                p {
                     font-size: 16px;
                     line-height: 26px;
                 }
@@ -487,10 +482,10 @@
         }
     }
     // 5/1/22  doc changes
-    .blockchain-consulting-page .section-glow-banner{
+    .blockchain-consulting-page .section-glow-banner {
         height: auto;
     }
-    .card-less{
+    .card-less {
         .card-text {
             height: 80px;
         }
@@ -518,35 +513,35 @@
             margin-bottom: 30px;
             line-height: 26px;
         }
-        .info{
+        .info {
             small {
                 font-size: 16px;
                 line-height: 24px;
             }
         }
-        .box{
+        .box {
             margin: 0 15px;
         }
     }
-    .our-team{
+    .our-team {
         padding: 30px 45px !important;
-        margin: 10px 20px;
-        .card-body{
-            p{
+        margin: 10px 20px !important;
+        .card-body {
+            p {
                 height: auto;
             }
         }
     }
-      // home page 19/1/22 changes
-      .hero-banner-container{
+    // home page 19/1/22 changes
+    .hero-banner-container {
         padding-bottom: 30px;
     }
     .home-section-icons-block {
-        padding: 10px 10px;
+        padding: 10px;
         margin-bottom: 20px;
     }
-    .featured-heading{
-        .h2{
+    .featured-heading {
+        .h2 {
             font-size: 30px;
         }
     }
@@ -571,10 +566,10 @@
             }
         }
     }
-    .home-contact-form{
-       .red-btn{
-        margin-top: 20px;
-       }
+    .home-contact-form {
+        .red-btn {
+            margin-top: 20px;
+        }
     }
     .home-section-11 {
         .home-contact-card {
@@ -582,27 +577,27 @@
         }
     }
     // 20/122 changes
-    .responsive-footer{
+    .responsive-footer {
         margin-bottom: 40px !important;
     }
-    .copyrights{
+    .copyrights {
         font-size: 15px;
-        span{
+        span {
             width: 240px;
         }
     }
     .rpa-service {
-        .develop-hyperledger{
+        .develop-hyperledger {
             .floating-content {
                 height: auto;
             }
         }
     }
-    .address-cont{
+    .address-cont {
         .h2 {
             font-size: 24px;
         }
-        .address-txt{
+        .address-txt {
             font-size: 17px !important;
         }
     }
@@ -614,18 +609,18 @@
             display: block;
         }
     }
-    .nft-service-page .service-inner-section3 .cta-banner2{
+    .nft-service-page .service-inner-section3 .cta-banner2 {
         padding: 20px 30px !important;
         background-position: right !important;
     }
-    .nft-service-page .cta-banner2 .cta-txt .h2 br{
-      display: none;
+    .nft-service-page .cta-banner2 .cta-txt .h2 br {
+        display: none;
     }
-    .apply-now-modal{
-        .modal-body{
+    .apply-now-modal {
+        .modal-body {
             padding: 25px 20px;
         }
-        .modal-header{
+        .modal-header {
             padding-left: 20px !important;
             padding-right: 20px;
         }
@@ -633,8 +628,8 @@
     .getintouch-form .msg-field {
         height: 155px;
     }
-    .modal-upload-file{
-        .container{
+    .modal-upload-file {
+        .container {
             padding: 0 !important;
         }
     }
@@ -644,7 +639,7 @@
     .hero-banner-container .featured-box-container-new span br {
         display: none;
     }
-    .gdpr-service .service-inner-section1 .nft-service-img-div{
+    .gdpr-service .service-inner-section1 .nft-service-img-div {
         bottom: unset;
     }
     .ui-path-service .nft-service-img-div {
@@ -660,79 +655,82 @@
         padding-top: 30px;
     }
     // home page figma mobile
-    .is-mobile{
+    .is-mobile {
         line-height: 20px;
         font-weight: 500;
-        .header-top{
+        .header-top {
             line-height: 0;
             padding: 4px 0 !important;
         }
-        .search-bar{
-            .search-link{
+        .search-bar {
+            .search-link {
                 display: block;
                 position: absolute;
                 width: 30px;
                 right: 55px;
-                top: 20px;   // 12 to 20
+                top: 20px; // 12 to 20
             }
         }
-        .h1, .h2{
+        .h1,
+        .h2 {
             font-size: 24px !important;
             font-weight: 700 !important;
             line-height: 32px !important;
             margin-bottom: 12px;
         }
-        .btn-lg, .btn-group-lg > .btn {
+        .btn-lg,
+        .btn-group-lg > .btn {
             width: 150px !important;
             height: 40px !important;
         }
-        .mobile-section-padding{
+        .mobile-section-padding {
             padding: 40px 0;
         }
-        .h3{
+        .h3 {
             font-size: 16px;
         }
         .home-footer {
             padding-top: 480px;
             margin-top: -480px;
             text-align: center;
-            .brand-logo{
-                > div{
+            .brand-logo {
+                > div {
                     width: 78px;
                 }
             }
-            p, li a{
+            p,
+            li a {
                 font-size: 13px;
                 line-height: 18px;
             }
-            li{
-               margin-bottom: 0 !important; 
+            li {
+                margin-bottom: 0 !important;
             }
-            .h3{
+            .h3 {
                 margin-bottom: 8px !important;
             }
-            .mobile-space{
+            .mobile-space {
                 margin-bottom: 40px !important;
             }
-            .copyrights{
+            .copyrights {
                 font-size: 13px;
                 line-height: 18px;
             }
             .social-icons {
-                a{
+                a {
                     padding: 0 10px;
                 }
             }
-            .pt-5{
+            .pt-5 {
                 padding: 0 !important;
             }
         }
         @keyframes marquee {
             0% {
-            transform: translateX(100%);
+                transform: translateX(100%);
             }
             100% {
-            transform: translateX(-100%);
+                transform: translateX(-100%);
             }
         }
         .marquee {
@@ -743,7 +741,7 @@
             animation-timing-function: linear;
             will-change: transform;
         }
-        
+
         .marquee {
             display: inline-block;
             font-size: 14px;
@@ -755,29 +753,29 @@
         }
     }
 
-    .hero-banner-mobile{
+    .hero-banner-mobile {
         text-align: center;
         background: url('../public/assets/images/hero-bg-mobile.png') no-repeat;
         background-size: cover;
         padding-top: 110px;
-        .h3{
+        .h3 {
             font-size: 18px;
             font-weight: 700;
             line-height: 18px;
             text-align: center;
         }
-        .heading-line{
+        .heading-line {
             display: none;
         }
-        p{
+        p {
             font-size: 13px;
             line-height: 18px;
         }
-        .button-outer{
+        .button-outer {
             background: none;
             margin-top: 45px;
             width: unset;
-            button{
+            button {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 20px;
@@ -791,13 +789,13 @@
         }
     }
 
-    .featured-mobile{
+    .featured-mobile {
         @include gradient-background('gradient-primary');
         padding: 40px 0;
-        .featured-box{
+        .featured-box {
             background: color('light-primary');
             border: 1px solid #E7E5E5;
-            box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+            box-shadow: 0 20px 35px rgba(131, 199, 255, 0.1);
             border-radius: 8px;
             font-size: 20px;
             font-weight: 700;
@@ -808,39 +806,39 @@
             width: 90%;
             padding: 13px 10px 13px 45px;
             margin-left: auto;
-            .featured-icon-mobile{
+            .featured-icon-mobile {
                 left: -50px;
                 top: 2px;
             }
-            span{
+            span {
                 width: 60%;
             }
         }
-        .h2{
+        .h2 {
             margin-bottom: 35px;
         }
     }
 
-    .home-section1-mobile{
+    .home-section1-mobile {
         @include gradient-background('gradient-eight');
-        .home-section-icons{
+        .home-section-icons {
             margin-bottom: 5px;
-            + div{
+            + div {
                 width: 25px;
             }
         }
-        .home-section1-bg{
+        .home-section1-bg {
             background: none;
             .home-section-icons {
                 height: auto;
-                .blockchain-consulting-icon{
+                .blockchain-consulting-icon {
                     display: flex;
                     align-items: center;
-                    > div{
+                    > div {
                         width: 25px;
                         flex-shrink: 0;
                     }
-                    .h3{
+                    .h3 {
                         font-size: 13px;
                         font-weight: 600;
                         color: color('dark-secondary');
@@ -848,59 +846,68 @@
                         text-align: start;
                     }
                 }
-                
+
             }
-            
-            .home-section-icons-block{
+
+            .home-section-icons-block {
                 padding: 0;
             }
-            .home-section1-mobile-image{
+            .home-section1-mobile-image {
                 margin: 24px 0;
             }
         }
-       
+
     }
-    .home-section2-mobile{
+    .home-section2-mobile {
         background: none;
-        .show-more-text{
-            p{
+        .show-more-text {
+            p {
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;  
+                -webkit-box-orient: vertical;
                 overflow: hidden;
                 margin-bottom: 0;
                 font-size: 13px;
                 line-height: 18px;
                 font-weight: 500;
+                height: 58px !important;
             }
-           
+            p.show-more {
+                display: block;
+                -webkit-line-clamp: unset;
+                -webkit-box-orient: unset;
+                overflow: unset;
+                height: unset !important;
+                margin-bottom: 5px;
+            }
+
         }
-        .link-btn{
+        .link-btn {
             color: color('dodger-blue-color');
             font-size: 13px;
             line-height: 18px;
         }
-        .service-thumb-img{
+        .service-thumb-img {
             // width: 100%;
             flex-shrink: 0;
             margin-right: 8px;
         }
-        .service-thumb-text{
+        .service-thumb-text {
             flex-grow: 1;
         }
-        .h2{
+        .h2 {
             margin-bottom: 20px !important;
         }
     }
-    .home-section3-mobile{
+    .home-section3-mobile {
         background: url('../public/assets/images/mobile-gradient.png') no-repeat;
         background-size: 100% 100%;
         padding-bottom: 60px !important;
         .custom-card {
             margin-bottom: 16px;
-            .card-title{
+            .card-title {
                 height: auto !important;
-                .h3{
+                .h3 {
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 18px;
@@ -908,55 +915,56 @@
                     color: color('dark-secondary');
                 }
             }
-            .card-text{
+            .card-text {
                 font-size: 13px;
                 line-height: 18px;
             }
         }
-        
+
     }
-    .home-section5-mobile{
+    .home-section5-mobile {
         background: none;
         padding-top: 0 !important;
-        .why-us-img-mobile{
-            margin: 30px 0 50px 0;
+        .why-us-img-mobile {
+            margin: 30px 0 50px;
         }
-        .why-us-block{
+        .why-us-block {
             margin-bottom: 15px;
-            .h3.mb-3{
+            .h3.mb-3 {
                 margin-bottom: 15px;
             }
         }
     }
-    .home-section10-mobile{
+    .home-section10-mobile {
         background: none;
-        .home-section-11{
+        .home-section-11 {
             background: none;
             margin-top: -160px;
-            .home-contact-card{
+            .home-contact-card {
                 padding: 16px;
-                p, label{
+                p,
+                label {
                     font-size: 13px;
                     line-height: 18px;
                     font-weight: 600;
                 }
-                input{
+                input {
                     padding: 5px 0;
                 }
-                textarea{
+                textarea {
                     height: 37px;
                 }
             }
-            .home-contact-form{
-                .mt-3{
+            .home-contact-form {
+                .mt-3 {
                     margin-top: 0 !important;
                 }
-                .form-check{
+                .form-check {
                     padding: 10px 10px 10px 27px !important;
                     font-size: 10px;
                     line-height: 13px;
                 }
-                button{
+                button {
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 23px;
@@ -968,29 +976,29 @@
             }
         }
     }
-    .accepTC .form-check-label{
+    .accepTC .form-check-label {
         font-size: 10px !important;
         line-height: 13px !important;
     }
-    .dark-text-color-sm{
+    .dark-text-color-sm {
         color: color('dark-primary');
     }
-    .dark-secondary-text-color-sm{
+    .dark-secondary-text-color-sm {
         color: color('dark-secondary');
     }
 
     // home changes style
-    .home-section1-mobile-image{
-        > div{
+    .home-section1-mobile-image {
+        > div {
             width: 70%;
         }
     }
 
     // service inner page space issues changes
-    .ui-path-service{
-        .enterprise-section1{
+    .ui-path-service {
+        .enterprise-section1 {
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
             }
         }
@@ -1003,31 +1011,31 @@
             }
         }
     }
-    .gdpr-service{
-        .enterprise-section1{
+    .gdpr-service {
+        .enterprise-section1 {
             padding-top: 80px;
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
             }
-            .row{
-                > div:first-child{
+            .row {
+                > div:first-child {
                     margin-top: 0;
                 }
             }
         }
     }
-    .nft-wrapper{
-        .service-inner-section1{
+    .nft-wrapper {
+        .service-inner-section1 {
             padding-top: 80px;
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
                 line-height: 40px !important;
                 margin-bottom: 15px;
             }
         }
-        .service-inner-section2{
+        .service-inner-section2 {
             top: 0;
         }
         .nft-service-img-div {
@@ -1037,23 +1045,23 @@
             }
         }
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
             padding-top: 80px;
             padding-bottom: 30px !important;
-            .h1{
+            .h1 {
                 line-height: 44px !important;
                 font-size: 29px !important;
-                br{
+                br {
                     display: none;
                 }
             }
             .blockchain-img-float {
                 position: unset;
                 width: 100%;
-                .nft-service-img-div{
+                .nft-service-img-div {
                     text-align: center;
-                    > div{
+                    > div {
                         width: 100%;
                     }
                 }
@@ -1064,16 +1072,16 @@
         }
     }
     // menu fiex
-    .header-main-menu{
-        .main-menu{
+    .header-main-menu {
+        .main-menu {
             width: 100%;
-            right: 0px;
+            right: 0;
             padding: 5px 0;
-            .navbar-toggler{
+            .navbar-toggler {
                 right: 15px;
             }
-            .navbar-collapse{
-                .navbar-nav{
+            .navbar-collapse {
+                .navbar-nav {
                     margin-top: 0;
                     border-radius: 0;
                     .dropdown-menu {
@@ -1084,7 +1092,7 @@
                         .dropdown-item {
                             padding: 8px 25px;
                             // border-bottom: 1px solid color('light-grey');
-                            a{
+                            a {
                                 font-size: 15px;
                                 font-weight: 500;
                             }
@@ -1092,8 +1100,8 @@
                     }
                 }
             }
-          
-            .nav-link{
+
+            .nav-link {
                 padding: 16px 25px;
                 font-size: 15px;
                 font-weight: 700;
@@ -1104,26 +1112,26 @@
             }
         }
     }
-    .header-logo-img{
-        > div{
+    .header-logo-img {
+        > div {
             width: 66px;
         }
     }
-    .main-header{
+    .main-header {
         height: 60px;
-        .nav-mobile{
+        .nav-mobile {
             padding: 0;
         }
     }
-    .is-mobile{
-        .main-header{
+    .is-mobile {
+        .main-header {
             position: relative;
         }
     }
-    .enterprise-section2{
-        .banner-content{
-            h2{
-                br{
+    .enterprise-section2 {
+        .banner-content {
+            h2 {
+                br {
                     display: none;
                 }
             }
@@ -1135,7 +1143,7 @@
             padding: 30px;
         }
         .banner-content {
-            padding: 30px 15px 0 15px;
+            padding: 30px 15px 0;
         }
     }
 }
@@ -1185,8 +1193,8 @@
     }
 
     .hero-banner-container {
-        background-position-x:  50%;
-        background-position-y:  50px;
+        background-position-x: 50%;
+        background-position-y: 50px;
         padding-top: 175px;
         padding-bottom: 40px;
 
@@ -1313,7 +1321,7 @@
         padding-top: 65px;
 
         .contactus-inner-banner {
-            background-position: center;    // changes 20/1/22
+            background-position: center; // changes 20/1/22
 
             .w-50 {
                 width: 80% !important;
@@ -1353,47 +1361,45 @@
     .office-banner {
         margin-left: 0 !important;
     }
-    
+
     .block-chain-feature-card {
         background-color: color('secondary');
         color: color('light-primary');
         min-height: 300px;
     }
 
-    .enterprise-section3
-    {
+    .enterprise-section3 {
         padding-top: 30px;
         padding-bottom: 30px;
         .h2 {
             font-size: 28px !important;
         }
         .featured-box-container-new {
-             padding: 15px; 
-             margin-bottom: 20px;
-             .featured-icon-new{
+            padding: 15px;
+            margin-bottom: 20px;
+            .featured-icon-new {
                 height: 100px;
-             }
+            }
             .featured-content {
                 height: 220px;
-                p{
+                p {
                     margin-bottom: 15px;
                 }
-            }  
-        } 
-    } 
+            }
+        }
+    }
     .section-glow-banner {
         height: auto;
         padding-bottom: 46px;
         .banner-content {
-            padding: 46px 15px 0 15px;
+            padding: 46px 15px 0;
         }
         .floating-content {
             margin-top: 0;
             padding: 30px 25px;
         }
     }
-    .orange-cta-section 
-    {
+    .orange-cta-section {
         .getstarted-heading {
             font-size: 20px;
             line-height: 35px;
@@ -1403,9 +1409,9 @@
     .white-outline-btn {
         padding: 0 40px;
     }
-    .enterprise-section1{
+    .enterprise-section1 {
         padding-bottom: 65px;
-        .nft-service-img-div{
+        .nft-service-img-div {
             text-align: center;
         }
     }
@@ -1413,18 +1419,18 @@
         .accordion-item:not(:last-child) {
             margin-bottom: 25px;
         }
-        .accordion-button:not(.collapsed){
+        .accordion-button:not(.collapsed) {
             font-size: 20px !important;
         }
-        .accordion-body{
+        .accordion-body {
             font-size: 16px !important;
         }
     }
     .enterprise-section4 {
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
     }
     .white-footer-section {
-        .brand-logo{
+        .brand-logo {
             height: 100px;
             margin-bottom: 0 !important;
         }
@@ -1444,31 +1450,30 @@
             height: auto;
             padding: 30px;
             margin-top: 0;
-            p{
+            p {
                 font-size: 16px;
                 line-height: 27px;
             }
         }
-        .floating-content h3, 
+        .floating-content h3,
         .floating-content .h3 {
             margin-bottom: 20px;
         }
-        .floating-content button{
+        .floating-content button {
             margin-top: 20px;
         }
-        .banner-content 
-        {
-            padding: 40px 15px 0 15px;
-            br{
+        .banner-content {
+            padding: 40px 15px 0;
+            br {
                 display: none;
             }
         }
-        .what-hyperledger-img{
+        .what-hyperledger-img {
             margin-top: 10px;
         }
-        
+
     }
-    .why-hyperledger{
+    .why-hyperledger {
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -1476,14 +1481,14 @@
         font-size: 29px !important;
         line-height: 38px !important;
     }
-   
-     // gdpr changes
-     .enterprise-section1{
-        .nft-service-img-div{
+
+    // gdpr changes
+    .enterprise-section1 {
+        .nft-service-img-div {
             margin-top: 20px;
-        } 
+        }
     }
-    .gdpr-service{
+    .gdpr-service {
         .develop-hyperledger {
             padding-bottom: 40px;
             .what-hyperledger-img {
@@ -1536,7 +1541,7 @@
             margin-bottom: 10px;
             .featured-content {
                 height: 100px;
-                p{
+                p {
                     font-size: 16px;
                     line-height: 29px;
                 }
@@ -1552,10 +1557,10 @@
         }
     }
     // 5/1/22  doc changes
-    .blockchain-consulting-page .section-glow-banner{
+    .blockchain-consulting-page .section-glow-banner {
         height: auto;
     }
-    .card-less{
+    .card-less {
         .card-text {
             height: 80px;
         }
@@ -1563,7 +1568,7 @@
     .develop-hyperledger .what-hyperledger-img {
         padding-left: 15px;
     }
-       // 19/1/22  changes
+    // 19/1/22  changes
     .about-section3 .right-end-bg-img {
         background: none;
     }
@@ -1578,30 +1583,30 @@
             margin-bottom: 30px;
             line-height: 26px;
         }
-        .info{
+        .info {
             small {
                 font-size: 16px;
                 line-height: 24px;
             }
         }
     }
-    .our-team{
-        .card-body{
-            p{
+    .our-team {
+        .card-body {
+            p {
                 height: auto;
             }
         }
     }
     // home page 19/1/22 changes
-    .hero-banner-container{
+    .hero-banner-container {
         padding-bottom: 40px;
     }
     .home-section-icons-block {
-        padding: 10px 10px;
+        padding: 10px;
         margin-bottom: 20px;
     }
-    .featured-heading{
-        .h2{
+    .featured-heading {
+        .h2 {
             font-size: 30px;
         }
     }
@@ -1617,31 +1622,31 @@
             }
         }
     }
-    .home-contact-form{
-       .red-btn{
-        margin-top: 20px;
-       }
+    .home-contact-form {
+        .red-btn {
+            margin-top: 20px;
+        }
     }
     .rpa-service {
-        .develop-hyperledger{
+        .develop-hyperledger {
             .floating-content {
                 height: auto;
             }
         }
     }
-    .address-cont{
+    .address-cont {
         .h2 {
             font-size: 26px;
         }
-        .address-txt{
+        .address-txt {
             font-size: 18px !important;
         }
     }
-    .apply-now-modal{
-        .modal-body{
+    .apply-now-modal {
+        .modal-body {
             padding: 30px 25px;
         }
-        .modal-header{
+        .modal-header {
             padding-left: 25px !important;
             padding-right: 25px;
         }
@@ -1649,7 +1654,7 @@
     .getintouch-form .msg-field {
         height: 165px;
     }
-    .gdpr-service .service-inner-section1 .nft-service-img-div{
+    .gdpr-service .service-inner-section1 .nft-service-img-div {
         bottom: unset;
     }
     .ui-path-service .nft-service-img-div {
@@ -1665,80 +1670,83 @@
         padding-top: 40px;
     }
 
-     // home page figma mobile
-     .is-mobile{
+    // home page figma mobile
+    .is-mobile {
         line-height: 20px;
         font-weight: 500;
-        .header-top{
+        .header-top {
             line-height: 0;
             padding: 4px 0 !important;
         }
-        .search-bar{
-            .search-link{
+        .search-bar {
+            .search-link {
                 display: block;
                 position: absolute;
                 width: 30px;
-                right: 75px;  // 55 to 75
-                top: -45px;   // 20 to -45px
+                right: 75px; // 55 to 75
+                top: -45px; // 20 to -45px
             }
         }
-        .h1, .h2{
+        .h1,
+        .h2 {
             font-size: 24px !important;
             font-weight: 700 !important;
             line-height: 32px !important;
             margin-bottom: 12px;
         }
-        .btn-lg, .btn-group-lg > .btn {
+        .btn-lg,
+        .btn-group-lg > .btn {
             width: 150px !important;
             height: 40px !important;
         }
-        .mobile-section-padding{
+        .mobile-section-padding {
             padding: 40px 0;
         }
-        .h3{
+        .h3 {
             font-size: 16px;
         }
         .home-footer {
             padding-top: 480px;
             margin-top: -480px;
             text-align: center;
-            .brand-logo{
-                > div{
+            .brand-logo {
+                > div {
                     width: 78px;
                 }
             }
-            p, li a{
+            p,
+            li a {
                 font-size: 13px;
                 line-height: 18px;
             }
-            li{
-               margin-bottom: 0 !important; 
+            li {
+                margin-bottom: 0 !important;
             }
-            .h3{
+            .h3 {
                 margin-bottom: 8px !important;
             }
-            .mobile-space{
+            .mobile-space {
                 margin-bottom: 40px !important;
             }
-            .copyrights{
+            .copyrights {
                 font-size: 13px;
                 line-height: 18px;
             }
             .social-icons {
-                a{
+                a {
                     padding: 0 10px;
                 }
             }
-            .pt-5{
+            .pt-5 {
                 padding: 0 !important;
             }
         }
         @keyframes marquee {
             0% {
-            transform: translateX(100%);
+                transform: translateX(100%);
             }
             100% {
-            transform: translateX(-100%);
+                transform: translateX(-100%);
             }
         }
         .marquee {
@@ -1749,7 +1757,7 @@
             animation-timing-function: linear;
             will-change: transform;
         }
-        
+
         .marquee {
             display: inline-block;
             font-size: 14px;
@@ -1761,29 +1769,29 @@
         }
     }
 
-    .hero-banner-mobile{
+    .hero-banner-mobile {
         text-align: center;
         background: url('../public/assets/images/hero-bg-mobile.png') no-repeat;
         background-size: cover;
         padding-top: 120px;
-        .h3{
+        .h3 {
             font-size: 18px;
             font-weight: 700;
             line-height: 18px;
             text-align: center;
         }
-        .heading-line{
+        .heading-line {
             display: none;
         }
-        p{
+        p {
             font-size: 13px;
             line-height: 18px;
         }
-        .button-outer{
+        .button-outer {
             background: none;
             margin-top: 45px;
             width: unset;
-            button{
+            button {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 20px;
@@ -1797,13 +1805,13 @@
         }
     }
 
-    .featured-mobile{
+    .featured-mobile {
         @include gradient-background('gradient-primary');
         padding: 40px 0;
-        .featured-box{
+        .featured-box {
             background: color('light-primary');
             border: 1px solid #E7E5E5;
-            box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+            box-shadow: 0 20px 35px rgba(131, 199, 255, 0.1);
             border-radius: 8px;
             font-size: 20px;
             font-weight: 700;
@@ -1814,39 +1822,39 @@
             width: 94%;
             padding: 13px 10px 13px 45px;
             margin-left: auto;
-            .featured-icon-mobile{
+            .featured-icon-mobile {
                 left: -50px;
                 top: 2px;
             }
-            span{
+            span {
                 width: 60%;
             }
         }
-        .h2{
+        .h2 {
             margin-bottom: 35px;
         }
     }
 
-    .home-section1-mobile{
+    .home-section1-mobile {
         @include gradient-background('gradient-eight');
-        .home-section-icons{
+        .home-section-icons {
             margin-bottom: 5px;
-            + div{
+            + div {
                 width: 25px;
             }
         }
-        .home-section1-bg{
+        .home-section1-bg {
             background: none;
             .home-section-icons {
                 height: auto;
-                .blockchain-consulting-icon{
+                .blockchain-consulting-icon {
                     display: flex;
                     align-items: center;
-                    > div{
+                    > div {
                         width: 25px;
                         flex-shrink: 0;
                     }
-                    .h3{
+                    .h3 {
                         font-size: 13px;
                         font-weight: 600;
                         color: color('dark-secondary');
@@ -1854,59 +1862,68 @@
                         text-align: start;
                     }
                 }
-                
+
             }
-            
-            .home-section-icons-block{
+
+            .home-section-icons-block {
                 padding: 0;
             }
-            .home-section1-mobile-image{
+            .home-section1-mobile-image {
                 margin: 24px 0;
             }
         }
-       
+
     }
-    .home-section2-mobile{
+    .home-section2-mobile {
         background: none;
-        .show-more-text{
-            p{
+        .show-more-text {
+            p {
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;  
+                -webkit-box-orient: vertical;
                 overflow: hidden;
                 margin-bottom: 0;
                 font-size: 13px;
                 line-height: 18px;
                 font-weight: 500;
+                height: 58px !important;
             }
-           
+            p.show-more {
+                display: block;
+                -webkit-line-clamp: unset;
+                -webkit-box-orient: unset;
+                overflow: unset;
+                height: unset !important;
+                margin-bottom: 5px;
+            }
+
         }
-        .link-btn{
+        .link-btn {
             color: color('dodger-blue-color');
             font-size: 13px;
             line-height: 18px;
         }
-        .service-thumb-img{
+        .service-thumb-img {
             // width: 100%;
             flex-shrink: 0;
             margin-right: 8px;
         }
-        .service-thumb-text{
+        .service-thumb-text {
             flex-grow: 1;
         }
-        .h2{
+        .h2 {
             margin-bottom: 20px !important;
         }
     }
-    .home-section3-mobile{
+    .home-section3-mobile {
         background: url('../public/assets/images/mobile-gradient.png') no-repeat;
         background-size: 100% 100%;
         padding-bottom: 60px !important;
         .custom-card {
             margin-bottom: 16px;
-            .card-title{
+            .card-title {
                 height: auto !important;
-                .h3{
+                .h3 {
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 18px;
@@ -1914,55 +1931,56 @@
                     color: color('dark-secondary');
                 }
             }
-            .card-text{
+            .card-text {
                 font-size: 13px;
                 line-height: 18px;
             }
         }
-        
+
     }
-    .home-section5-mobile{
+    .home-section5-mobile {
         background: none;
         padding-top: 0 !important;
-        .why-us-img-mobile{
-            margin: 30px 0 50px 0;
+        .why-us-img-mobile {
+            margin: 30px 0 50px;
         }
-        .why-us-block{
+        .why-us-block {
             margin-bottom: 15px;
-            .h3.mb-3{
+            .h3.mb-3 {
                 margin-bottom: 15px;
             }
         }
     }
-    .home-section10-mobile{
+    .home-section10-mobile {
         background: none;
-        .home-section-11{
+        .home-section-11 {
             background: none;
             margin-top: -160px;
-            .home-contact-card{
+            .home-contact-card {
                 padding: 16px;
-                p, label{
+                p,
+                label {
                     font-size: 13px;
                     line-height: 18px;
                     font-weight: 600;
                 }
-                input{
+                input {
                     padding: 5px 0;
                 }
-                textarea{
+                textarea {
                     height: 37px;
                 }
             }
-            .home-contact-form{
-                .mt-3{
+            .home-contact-form {
+                .mt-3 {
                     margin-top: 0 !important;
                 }
-                .form-check{
+                .form-check {
                     padding: 10px 10px 10px 27px !important;
                     font-size: 10px;
                     line-height: 13px;
                 }
-                button{
+                button {
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 23px;
@@ -1974,36 +1992,36 @@
             }
         }
     }
-    .accepTC .form-check-label{
+    .accepTC .form-check-label {
         font-size: 10px !important;
         line-height: 13px !important;
     }
-    .dark-text-color-sm{
+    .dark-text-color-sm {
         color: color('dark-primary');
     }
-    .dark-secondary-text-color-sm{
+    .dark-secondary-text-color-sm {
         color: color('dark-secondary');
     }
 
-    .main-header{
-        .navbar-light{
-            .navbar-toggler{
+    .main-header {
+        .navbar-light {
+            .navbar-toggler {
                 top: -53px !important;
             }
         }
     }
-    
+
     // home changes style
-    .home-section1-mobile-image{
-        > div{
+    .home-section1-mobile-image {
+        > div {
             width: 70%;
         }
     }
-     // service inner page space issues changes
-     .ui-path-service{
-        .enterprise-section1{
+    // service inner page space issues changes
+    .ui-path-service {
+        .enterprise-section1 {
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
             }
         }
@@ -2016,15 +2034,15 @@
             }
         }
     }
-    .gdpr-service{
-        .enterprise-section1{
+    .gdpr-service {
+        .enterprise-section1 {
             padding-top: 110px;
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
             }
-            .row{
-                > div:first-child{
+            .row {
+                > div:first-child {
                     margin-top: 0;
                 }
             }
@@ -2034,38 +2052,38 @@
                 width: 80%;
             }
         }
-          .nft-wrapper{
-        .service-inner-section1{
-            padding-top: 120px;
-            padding-bottom: 0 !important;
-            .h1{
-                font-size: 33px !important;
-                line-height: 40px !important;
-                margin-bottom: 15px;
+        .nft-wrapper {
+            .service-inner-section1 {
+                padding-top: 120px;
+                padding-bottom: 0 !important;
+                .h1 {
+                    font-size: 33px !important;
+                    line-height: 40px !important;
+                    margin-bottom: 15px;
+                }
             }
-        }
-        .service-inner-section2{
-            top: 0;
-        }
-        .nft-service-img-div {
-            text-align: center;
-            > div {
-                width: 60%;
+            .service-inner-section2 {
+                top: 0;
+            }
+            .nft-service-img-div {
+                text-align: center;
+                > div {
+                    width: 60%;
+                }
             }
         }
     }
-    }
-    .nft-wrapper{
-        .service-inner-section1{
+    .nft-wrapper {
+        .service-inner-section1 {
             padding-top: 110px;
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 29px !important;
                 line-height: 40px !important;
                 margin-bottom: 15px;
             }
         }
-        .service-inner-section2{
+        .service-inner-section2 {
             top: 0;
         }
         .nft-service-img-div {
@@ -2075,22 +2093,22 @@
             }
         }
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
             padding-top: 110px;
             padding-bottom: 35px !important;
-            .h1{
+            .h1 {
                 line-height: 69px;
-                br{
+                br {
                     display: none;
                 }
             }
             .blockchain-img-float {
                 position: unset;
                 width: 100%;
-                .nft-service-img-div{
+                .nft-service-img-div {
                     text-align: center;
-                    > div{
+                    > div {
                         width: 80%;
                     }
                 }
@@ -2101,17 +2119,17 @@
         }
     }
 
-     // menu fiex
-     .header-main-menu{
-        .main-menu{
+    // menu fiex
+    .header-main-menu {
+        .main-menu {
             width: 100%;
-            right: 0px;
+            right: 0;
             padding: 4px 0;
-            .navbar-toggler{
+            .navbar-toggler {
                 right: 30px;
             }
-            .navbar-collapse{
-                .navbar-nav{
+            .navbar-collapse {
+                .navbar-nav {
                     margin-top: 0;
                     border-radius: 0;
                     .dropdown-menu {
@@ -2121,7 +2139,7 @@
                         padding: 0;
                         .dropdown-item {
                             padding: 10px 25px;
-                            a{
+                            a {
                                 font-size: 15px;
                                 font-weight: 500;
                             }
@@ -2129,8 +2147,8 @@
                     }
                 }
             }
-          
-            .nav-link{
+
+            .nav-link {
                 padding: 16px 25px;
                 font-size: 15px;
                 font-weight: 700;
@@ -2141,16 +2159,16 @@
             }
         }
     }
-    .header-logo-img{
-        > div{
+    .header-logo-img {
+        > div {
             width: 110px;
         }
     }
-    .main-header{
+    .main-header {
         height: 85px;
     }
-    .is-mobile{
-        .main-header{
+    .is-mobile {
+        .main-header {
             position: relative;
         }
     }
@@ -2161,13 +2179,13 @@
         padding: 0;
     }
 
-      // rpa Software Solutions changes
-      .rpa-solutions {
+    // rpa Software Solutions changes
+    .rpa-solutions {
         .floating-content {
             padding: 30px;
         }
         .banner-content {
-            padding: 40px 15px 0 15px;
+            padding: 40px 15px 0;
         }
     }
 }
@@ -2214,8 +2232,8 @@
     }
 
     .hero-banner-container {
-        background-position-x:  40%;
-        background-position-y:  -40px;
+        background-position-x: 40%;
+        background-position-y: -40px;
         padding-top: 200px;
 
         .featured-box-container {
@@ -2340,36 +2358,34 @@
     }
 
 
-    .enterprise-section3
-    {
+    .enterprise-section3 {
         padding-top: 40px;
         padding-bottom: 40px;
         .h2 {
             font-size: 30px !important;
         }
         .featured-box-container-new {
-             padding: 20px; 
+            padding: 20px;
             .featured-content {
                 height: 220px;
-                p{
+                p {
                     margin-bottom: 15px;
                 }
-            }  
-        } 
-    } 
+            }
+        }
+    }
     .section-glow-banner {
         height: auto;
         padding-bottom: 46px;
         .banner-content {
-            padding: 46px 0 0 0;
+            padding: 46px 0 0;
         }
         .floating-content {
             margin-top: 0;
             padding: 35px 25px;
         }
     }
-    .orange-cta-section 
-    {
+    .orange-cta-section {
         .getstarted-heading {
             font-size: 25px;
             line-height: 43px;
@@ -2379,9 +2395,9 @@
     .white-outline-btn {
         padding: 0 60px;
     }
-    .enterprise-section1{
+    .enterprise-section1 {
         padding-bottom: 65px;
-        .nft-service-img-div{
+        .nft-service-img-div {
             text-align: center;
         }
     }
@@ -2391,15 +2407,15 @@
         }
     }
     .enterprise-section4 {
-        padding: 40px 0 40px 0;
+        padding: 40px 0;
     }
     .white-footer-section {
         .row {
             .text-md-center {
                 text-align: center !important;
                 margin-bottom: 40px !important;
-            } 
-            .brand-logo{
+            }
+            .brand-logo {
                 margin-bottom: 0 !important;
                 height: 110px;
             }
@@ -2414,37 +2430,36 @@
             padding: 30px;
             margin-top: 0;
         }
-        .floating-content h3, 
+        .floating-content h3,
         .floating-content .h3 {
             margin-bottom: 20px;
         }
-        .floating-content button{
+        .floating-content button {
             margin-top: 20px;
         }
-        .banner-content 
-        {
-            padding: 50px 15px 0 15px;
-            br{
+        .banner-content {
+            padding: 50px 15px 0;
+            br {
                 display: none;
             }
         }
-        .what-hyperledger-img{
+        .what-hyperledger-img {
             margin-top: 15px;
         }
     }
-    .why-hyperledger{
+    .why-hyperledger {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
 
     // gdpr changes
-    .enterprise-section1{
-        .nft-service-img-div{
-            margin-top: 30px;  // 20 to 30
-        } 
+    .enterprise-section1 {
+        .nft-service-img-div {
+            margin-top: 30px; // 20 to 30
+        }
     }
-    .gdpr-service{
+    .gdpr-service {
         .develop-hyperledger {
             padding-bottom: 40px;
             .what-hyperledger-img {
@@ -2496,7 +2511,7 @@
             margin-bottom: 10px;
             .featured-content {
                 height: 100px;
-                p{
+                p {
                     font-size: 16px;
                     line-height: 29px;
                 }
@@ -2512,16 +2527,16 @@
         }
     }
     // 5/1/22  doc changes
-    .blockchain-consulting-page .section-glow-banner{
+    .blockchain-consulting-page .section-glow-banner {
         height: auto;
     }
-    .card-less{
+    .card-less {
         .card-text {
             height: 80px !important;
         }
     }
-     // 19/1/22  changes
-     .about-section3 .right-end-bg-img {
+    // 19/1/22  changes
+    .about-section3 .right-end-bg-img {
         background: none;
     }
     .box ul li > span:after {
@@ -2531,30 +2546,30 @@
         .h3 {
             margin-bottom: 35px;
         }
-        .info{
+        .info {
             small {
                 font-size: 16px;
                 line-height: 26px;
             }
         }
     }
-    .our-team{
-        .card-body{
-            p{
+    .our-team {
+        .card-body {
+            p {
                 height: 50px;
             }
         }
     }
-    
+
     // home page 19/1/22 changes
     .featured-heading {
         margin-top: 50px !important;
     }
-    .hero-banner-container{
+    .hero-banner-container {
         padding-bottom: 50px;
     }
     .home-section-icons-block {
-        padding: 10px 10px;
+        padding: 10px;
         margin-bottom: 20px;
     }
     .home-section-3 {
@@ -2570,27 +2585,27 @@
         }
     }
     // 20/122 changes
-    .responsive-footer{
+    .responsive-footer {
         margin-bottom: 50px !important;
     }
     .rpa-service {
-        .develop-hyperledger{
+        .develop-hyperledger {
             .floating-content {
                 height: auto;
             }
         }
     }
-    .address-cont{
+    .address-cont {
         .h2 {
             font-size: 26px;
         }
-        .address-txt{
+        .address-txt {
             font-size: 18px !important;
         }
     }
-    .address-footer{
-        .branch-office{
-            &:last-child{
+    .address-footer {
+        .branch-office {
+            &:last-child {
                 margin: 0 auto;
             }
         }
@@ -2598,19 +2613,19 @@
     .contactus-inner-banner {
         background-position: center;
     }
-    .apply-now-modal{
-        .modal-dialog{
+    .apply-now-modal {
+        .modal-dialog {
             max-width: 590px;
         }
-        .modal-body{
+        .modal-body {
             padding: 30px 25px;
         }
-        .modal-header{
+        .modal-header {
             padding-left: 25px !important;
             padding-right: 25px;
         }
     }
-    .gdpr-service .service-inner-section1 .nft-service-img-div{
+    .gdpr-service .service-inner-section1 .nft-service-img-div {
         bottom: unset;
     }
     .ui-path-service .nft-service-img-div {
@@ -2627,12 +2642,12 @@
     }
 
     // home page mobile figma changes
-    .main-header{
-        .navbar-light{
-            .navbar-toggler{
-              padding: 10px;
+    .main-header {
+        .navbar-light {
+            .navbar-toggler {
+                padding: 10px;
             }
-            .navbar-toggler-icon{
+            .navbar-toggler-icon {
                 width: 30px;
                 height: 30px;
             }
@@ -2641,17 +2656,17 @@
 
     // Mobile figma changes /
     .home-section1-mobile {
-        .home-section1-bg{
+        .home-section1-bg {
             .home-section1-mobile-image {
                 margin: 24px 0;
             }
         }
     }
     // service inner page space issues changes
-    .ui-path-service{
-        .enterprise-section1{
+    .ui-path-service {
+        .enterprise-section1 {
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 35px !important;
             }
         }
@@ -2664,15 +2679,15 @@
             }
         }
     }
-    .gdpr-service{
-        .enterprise-section1{
+    .gdpr-service {
+        .enterprise-section1 {
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 35px !important;
                 line-height: 50px !important;
             }
-            .row{
-                > div:first-child{
+            .row {
+                > div:first-child {
                     margin-top: 0;
                 }
             }
@@ -2683,17 +2698,17 @@
             }
         }
     }
-    .nft-wrapper{
-        .service-inner-section1{
+    .nft-wrapper {
+        .service-inner-section1 {
             padding-top: 120px;
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 33px !important;
                 line-height: 40px !important;
                 margin-bottom: 15px;
             }
         }
-        .service-inner-section2{
+        .service-inner-section2 {
             top: 0;
         }
         .nft-service-img-div {
@@ -2703,13 +2718,13 @@
             }
         }
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
             padding-top: 120px;
             padding-bottom: 45px !important;
-            .h1{
+            .h1 {
                 line-height: 69px;
-                br{
+                br {
                     display: none;
                 }
             }
@@ -2717,9 +2732,9 @@
                 text-align: center;
                 position: unset;
                 width: 100%;
-                .nft-service-img-div{
+                .nft-service-img-div {
                     text-align: center;
-                    > div{
+                    > div {
                         width: 60%;
                     }
                 }
@@ -2730,19 +2745,19 @@
         }
     }
 
-       // menu fiex
-       .header-main-menu{
-        .main-menu{
+    // menu fiex
+    .header-main-menu {
+        .main-menu {
             width: 100%;
-            right: 0px;
+            right: 0;
             padding: 3px 0;
-            .navbar-toggler{
+            .navbar-toggler {
                 right: 26px;
                 top: -62px !important;
             }
-            .navbar-collapse{
+            .navbar-collapse {
                 margin: 0;
-                .navbar-nav{
+                .navbar-nav {
                     margin-top: 0;
                     border-radius: 0;
                     .dropdown-menu {
@@ -2752,7 +2767,7 @@
                         padding: 0;
                         .dropdown-item {
                             padding: 7px 25px;
-                            a{
+                            a {
                                 font-size: 15px;
                                 font-weight: 500;
                             }
@@ -2760,8 +2775,8 @@
                     }
                 }
             }
-          
-            .nav-link{
+
+            .nav-link {
                 padding: 16px 25px;
                 font-size: 15px;
                 font-weight: 700;
@@ -2772,20 +2787,20 @@
             }
         }
     }
-    .header-logo-img{
-        > div{
+    .header-logo-img {
+        > div {
             width: 110px;
         }
     }
-    .main-header{
+    .main-header {
         height: 85px;
-        .letstalk-btn{
+        .letstalk-btn {
             display: none !important;
         }
     }
 
-    .is-mobile{
-        .main-header{
+    .is-mobile {
+        .main-header {
             position: relative;
         }
     }
@@ -2796,16 +2811,16 @@
         top: 80px;
         padding: 0;
     }
-     // rpa Software Solutions changes
-     .rpa-solutions {
+    // rpa Software Solutions changes
+    .rpa-solutions {
         .floating-content {
             padding: 30px;
         }
         .banner-content {
-            padding: 50px 15px 0 15px;
+            padding: 50px 15px 0;
         }
     }
-    .hero-banner-globe{
+    .hero-banner-globe {
         > div {
             right: -290px;
         }
@@ -2820,8 +2835,8 @@
     }
 
     .hero-banner-container {
-        background-position-x:  50%;
-        background-position-y:  -40px;
+        background-position-x: 50%;
+        background-position-y: -40px;
     }
 
     .main-header {
@@ -2897,25 +2912,23 @@
         margin-bottom: 0;
     }
 
-    .enterprise-section3
-    {
+    .enterprise-section3 {
         padding-top: 140px;
         padding-bottom: 70px;
         .featured-box-container-new {
-             padding-right: 25px; //0
+            padding-right: 25px; // 0
             .featured-content {
                 height: 170px;
-            }  
-        } 
-    } 
+            }
+        }
+    }
     .section-glow-banner {
         height: auto;
         .banner-content {
             padding: 46px 0 36px 55px;
         }
     }
-    .orange-cta-section 
-    {
+    .orange-cta-section {
         .getstarted-heading {
             font-size: 29px;
             line-height: 52px;
@@ -2926,41 +2939,39 @@
         padding: 0 60px;
     }
     .develop-hyperledger {
-        height: auto; //595px
+        height: auto; // 595px
         .floating-content {
             padding: 30px;
-            margin-top: 30px;  //changes on 20/1/22
-        } 
-        .floating-content h3, 
+            margin-top: 30px; // changes on 20/1/22
+        }
+        .floating-content h3,
         .floating-content .h3 {
             margin-bottom: 30px;
         }
-        .floating-content button{
+        .floating-content button {
             margin-top: 20px;
         }
-        .banner-content 
-        {
+        .banner-content {
             padding: 46px 0 36px 25px;
-                br{
-                    display: none;
-                }
+            br {
+                display: none;
+            }
         }
-        .what-hyperledger-img{
+        .what-hyperledger-img {
             margin-top: 0;
         }
     }
-    .why-hyperledger{
+    .why-hyperledger {
         padding-top: 70px;
         padding-bottom: 70px;
     }
     .hyperledger-service-page,
-    .blockchain-consulting-page
-    {
-        .h3{
+    .blockchain-consulting-page {
+        .h3 {
             font-size: 18px;
         }
     }
-   
+
     // rpa changes
     .right-overlapped-content {
         padding-top: 120px;
@@ -3007,10 +3018,10 @@
         }
     }
     // 5/1/22  doc changes
-    .blockchain-consulting-page .section-glow-banner{
+    .blockchain-consulting-page .section-glow-banner {
         height: auto;
     }
-    .card-less{
+    .card-less {
         .card-text {
             height: 80px !important;
         }
@@ -3026,9 +3037,9 @@
             margin-bottom: 35px;
         }
     }
-    .our-team{
-        .card-body{
-            p{
+    .our-team {
+        .card-body {
+            p {
                 height: 50px;
             }
         }
@@ -3038,11 +3049,11 @@
     .featured-heading {
         margin-top: 50px !important;
     }
-    .hero-banner-container{
+    .hero-banner-container {
         padding-bottom: 80px;
     }
     .home-section-icons-block {
-        padding: 10px 10px;
+        padding: 10px;
     }
     .home-section-3 {
         padding-top: 80px;
@@ -3057,21 +3068,22 @@
         }
     }
     // 20/1/22 changes
-    .nft-service-page .h1, .about-us-page .h1 {
+    .nft-service-page .h1,
+    .about-us-page .h1 {
         line-height: 56px !important;
     }
     .rpa-service {
-        .develop-hyperledger{
+        .develop-hyperledger {
             .floating-content {
                 height: 490px;
             }
         }
     }
-    .address-cont{
+    .address-cont {
         .h2 {
             font-size: 26px;
         }
-        .address-txt{
+        .address-txt {
             font-size: 18px;
         }
     }
@@ -3083,10 +3095,10 @@
         min-height: 414px;
     }
     .ui-path-service .enterprise-section1 {
-        padding-bottom: 110px;    // 130 to 110
+        padding-bottom: 110px; // 130 to 110
     }
     .ui-path-service .nft-service-img-div {
-        bottom: 0px;
+        bottom: 0;
     }
     .nft-wrapper .nft-service-img-div {
         bottom: -136px;
@@ -3096,45 +3108,45 @@
     }
 
     // service inner page space issues changes
-    .ui-path-service{
-        .enterprise-section1{
-            .h1{
+    .ui-path-service {
+        .enterprise-section1 {
+            .h1 {
                 font-size: 35px !important;
                 line-height: 40px;
                 margin-bottom: 15px !important;
             }
         }
     }
-    .gdpr-service{
-        .enterprise-section1{
+    .gdpr-service {
+        .enterprise-section1 {
             padding-bottom: 100px !important;
-            .h1{
+            .h1 {
                 font-size: 36px !important;
                 line-height: 50px !important;
             }
-            .row{
-                > div:first-child{
+            .row {
+                > div:first-child {
                     margin-top: 0;
                 }
             }
         }
     }
-    .nft-wrapper{
-        .service-inner-section1{
+    .nft-wrapper {
+        .service-inner-section1 {
             padding-bottom: 75px !important;
-            .h1{
+            .h1 {
                 font-size: 33px !important;
                 line-height: 40px !important;
             }
         }
-        .service-inner-section2{
+        .service-inner-section2 {
             top: 0;
         }
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
             padding-bottom: 105px !important;
-            .h1{
+            .h1 {
                 line-height: 69px;
             }
         }
@@ -3142,17 +3154,17 @@
             padding-top: 70px;
         }
     }
-     // rpa Software Solutions changes
-     .rpa-solutions {
+    // rpa Software Solutions changes
+    .rpa-solutions {
         .floating-content {
-            padding: 40px 25px 36px 25px;
+            padding: 40px 25px 36px;
         }
         .banner-content {
             padding: 45px 0 25px 25px;
         }
     }
- 
-    .hero-banner-globe{
+
+    .hero-banner-globe {
         > div {
             right: -270px;
         }
@@ -3174,7 +3186,7 @@
     }
 
     .hero-banner-container {
-        background-position-x:  50%;
+        background-position-x: 50%;
         // background-position-y:  40px;
     }
 
@@ -3189,15 +3201,12 @@
         }
     }
 
-    .career-hero-banner
-    {
-        .col
-        {
-            padding:0px 50px;
+    .career-hero-banner {
+        .col {
+            padding: 0 50px;
         }
     }
-    .enterprise-section3 
-    {
+    .enterprise-section3 {
         .featured-box-container-new {
             .featured-content {
                 height: 200px;
@@ -3207,7 +3216,7 @@
     .section-glow-banner {
         // height: 315px;
         .banner-content {
-            padding: 15px 0px 23px 55px;
+            padding: 15px 0 23px 55px;
         }
     }
     // gdpr- changes
@@ -3219,7 +3228,7 @@
         .featured-box-container-new {
             .featured-content {
                 height: 110px;
-                p{
+                p {
                     line-height: 29px;
                 }
             }
@@ -3229,13 +3238,13 @@
         margin-top: -255px;
     }
     // 5/1/22  doc changes
-   .blockchain-consulting-page .section-glow-banner{
-       height: auto;
-   }
-   .card-less{
-    .card-text {
-        height: 80px !important;
+    .blockchain-consulting-page .section-glow-banner {
+        height: auto;
     }
+    .card-less {
+        .card-text {
+            height: 80px !important;
+        }
     }
     // home page 19/1/22 changes
     .home-section-3 {
@@ -3245,7 +3254,7 @@
             }
         }
     }
-     // 20/1/22 changes
+    // 20/1/22 changes
     .develop-hyperledger .what-hyperledger-img {
         margin-top: -360px;
     }
@@ -3263,34 +3272,34 @@
         bottom: -150px;
     }
 
-    
+
     // service inner page space issues changes
-    .ui-path-service{
-        .enterprise-section1{
+    .ui-path-service {
+        .enterprise-section1 {
             padding-bottom: 0 !important;
-            .h1{
+            .h1 {
                 font-size: 38px !important;
                 line-height: 40px;
                 margin-bottom: 10px !important;
             }
         }
     }
-    .nft-wrapper{
-        .service-inner-section1{
-            .h1{
+    .nft-wrapper {
+        .service-inner-section1 {
+            .h1 {
                 font-size: 29px !important;
                 line-height: 40px;
             }
 
         }
-        .service-inner-section2{
+        .service-inner-section2 {
             top: -83px;
         }
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
             padding-bottom: 155px !important;
-            .h1{
+            .h1 {
                 line-height: 69px;
             }
         }
@@ -3304,20 +3313,20 @@
     // rpa Software Solutions changes
     .rpa-solutions {
         .floating-content {
-            padding: 40px 25px 36px 25px;
+            padding: 40px 25px 36px;
         }
         .banner-content {
             padding: 60px 0 70px 60px;
         }
     }
 
-    .hero-banner-mobile{
-        .h1{
+    .hero-banner-mobile {
+        .h1 {
             font-size: 51px !important;
             line-height: 67px !important;
         }
     }
-  
+
 }
 
 // About us and nft changes
@@ -3519,7 +3528,7 @@
     .career-hero-banner {
         min-height: 290px;
         margin: 95px 0 30px;
-        padding-top: 0px;
+        padding-top: 0;
         background-size: 100%;
         background-position: bottom;
         .w-50 {
@@ -3620,25 +3629,23 @@
         padding: 0 !important;
     }
 
-    .block-chain-feature-card
-    {
+    .block-chain-feature-card {
         min-height: auto;
     }
 
-    .accordion
-    {
-        margin-bottom:30px;
+    .accordion {
+        margin-bottom: 30px;
     }
-     // ----------------------home and about us page changes 3/1/22 start----------------------
-     .custom-card{
+    // ----------------------home and about us page changes 3/1/22 start----------------------
+    .custom-card {
         .card-text {
             height: auto;
         }
         .card-title {
             height: 35px;
         }
-    } 
-    .style_red-btn__2MgIy{
+    }
+    .style_red-btn__2MgIy {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
@@ -3647,7 +3654,7 @@
     }
     .our-story-block:hover .line-animated:before {
         height: 70px;
-    }
+    };
     // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 
@@ -3931,18 +3938,17 @@
         padding: 0 !important;
     }
 
-    .accordion
-    {
-        margin-bottom:30px;
+    .accordion {
+        margin-bottom: 30px;
     }
 
-     // ----------------------home and about us page changes 3/1/22 start----------------------
-     .custom-card{
+    // ----------------------home and about us page changes 3/1/22 start----------------------
+    .custom-card {
         .card-text {
             height: auto;
         }
-    } 
-    .style_red-btn__2MgIy{
+    }
+    .style_red-btn__2MgIy {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
@@ -3952,8 +3958,8 @@
     }
     .our-story-block:hover .line-animated:before {
         height: 105px;
-    }
-   
+    };
+
     // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 @include media-breakpoint-between(md, lg) {
@@ -4112,7 +4118,7 @@
             }
         }
     }
-    
+
     .career-section1 {
         .h1 {
             font-size: 32px !important;
@@ -4125,11 +4131,10 @@
         margin: 115px 0 30px;
         padding-top: 50px;
 
-        .style_red-btn__2MgIy
-        {
+        .style_red-btn__2MgIy {
 
-            padding-left:25px !important;
-            padding-right:25px !important;
+            padding-left: 25px !important;
+            padding-right: 25px !important;
         }
 
     }
@@ -4229,37 +4234,34 @@
     }
 
     // ----------------------home and about us page changes 3/1/22 start----------------------
-    .custom-card{
+    .custom-card {
         .card-text {
             height: 310px;
         }
-    } 
+    }
     .our-story-block:hover .line-animated:before {
         height: 125px;
-    }
+    };
     // ----------------------home and about us page changes 3/1/22 end----------------------
-    
 
 
 }
 @include media-breakpoint-between(lg, xl) {
 
 
-       //----------------- home page---------------
+    // ----------------- home page---------------
 
 
-       .custom-card > div
-       {
-           &:first-child
-           {
-               height:160px !important;
-           }
+    .custom-card > div {
+        &:first-child {
+            height: 160px !important;
+        }
 
 
-       }
+    }
 
 
-       .header-top .social-links li {
+    .header-top .social-links li {
         display: inline;
         padding-left: 16px;
     }
@@ -4269,16 +4271,15 @@
     }
 
     .featured-box-container-new {
- 
+
         padding-right: 118px;
     }
 
 
     .footer-section .mx-md-3 {
-        margin-right: .75rem !important;
-        margin-left: .75rem !important;
+        margin-right: 0.75rem !important;
+        margin-left: 0.75rem !important;
     }
-
 
 
     // ----------font size---------
@@ -4442,11 +4443,10 @@
         margin: 115px 0 30px;
         padding-top: 50px;
 
-        .style_red-btn__2MgIy
-        {
+        .style_red-btn__2MgIy {
 
-            padding-left:25px !important;
-            padding-right:25px !important;
+            padding-left: 25px !important;
+            padding-right: 25px !important;
         }
 
     }
@@ -4458,14 +4458,14 @@
     //         .what-hyperledger-img {
     //             margin-top: -340px;
     //         }
-    //     } 
+    //     }
     // }
     // ----------------------home and about us page changes 3/1/22 start----------------------
-    .custom-card{
+    .custom-card {
         .card-text {
             height: 360px;
         }
-    } 
+    }
     .h1 {
         font-size: 55px !important;
     }
@@ -4479,7 +4479,7 @@
     }
     .our-story-block:hover .line-animated:before {
         height: 90px;
-    }
+    };
     // ----------------------home and about us page changes 3/1/22 end----------------------
 
 }
@@ -4487,18 +4487,14 @@
 @include media-breakpoint-between(xl, xxl) {
 
 
+    // ----------------- home page---------------
 
-    //----------------- home page---------------
 
-
-    .custom-card > div
-    {
-        &:first-child
-        {
-            height:189px !important;
+    .custom-card > div {
+        &:first-child {
+            height: 189px !important;
         }
 
-        
 
     }
 
@@ -4550,22 +4546,22 @@
     // ----------------------career page details end----------------
 
     .block-chain-feature-card {
-      
+
         min-height: 420px;
     }
 
     // ----------------------home and about us page changes 3/1/22 start----------------------
-    .custom-card{
+    .custom-card {
         .card-text {
             height: 280px;
         }
-    } 
+    }
     .line-animated {
         height: 190px;
     }
     .our-story-block:hover .line-animated:before {
         height: 95px;
-    }
+    };
     // ----------------------home and about us page changes 3/1/22 end----------------------
 }
 
@@ -4577,9 +4573,9 @@
     .office-banner {
         margin-left: 22% !important;
     }
-    .blockchain-consulting-page{
-        .service-inner-section1{
-            .blockchain-img-float{
+    .blockchain-consulting-page {
+        .service-inner-section1 {
+            .blockchain-img-float {
                 top: 90px;
             }
         }
