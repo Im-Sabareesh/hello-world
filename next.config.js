@@ -17,8 +17,11 @@ module.exports = {
         domain: [
             'http://localhost:3000',
             'http://ec2-13-127-48-125.ap-south-1.compute.amazonaws.com',
-            'https://chaincode.sumanastech.com/',
+            'https://chaincode.sumanastech.com',
+            'https://chaincode.sumanas.xyz',
+            'https://chaincodeconsulting.com',
         ],
+        minimumCacheTTL: 60 * 60 * 7
     },
 };
 // }

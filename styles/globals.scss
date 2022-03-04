@@ -285,10 +285,6 @@ button:focus {
 }
 
 
-
-
-
-
 .header-top {
     background: color('secondary');
     font-weight: 600;
@@ -333,10 +329,10 @@ button:focus {
 // ------------------home page header------------//
 
 .hero-banner-container {
-    background: url('../public/assets/images/hero-banner-bg.png') no-repeat;
+    background: url('../public/assets/images/hero-bg.png') no-repeat;
     min-height: 500px;
     padding-top: 200px;
-    padding-bottom: 100px;   // ------home page 19/1/22 changes
+    padding-bottom: 100px; // ------home page 19/1/22 changes
     background-size: cover;
     background-position-x: right;
 }
@@ -426,7 +422,7 @@ button:focus {
 
 .home-section-3 {
     background-image: url('../public/assets/images/section3-bg.png');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -629,7 +625,6 @@ button:focus {
     padding-bottom: 50px !important;
 
     .testimonial-bg {
-        background: url('../public/assets/images/testimonials-bg.svg') 100px 100px no-repeat;
         min-height: 400px;
 
         small {
@@ -831,7 +826,7 @@ button:focus {
         }
     }
     // 19/1/22 changes
-    .h2{
+    .h2 {
         margin-left: 25px;
     }
 }
@@ -845,7 +840,7 @@ button:focus {
             }
         }
     }
-    .right-end-bg-img{
+    .right-end-bg-img {
         background: url('../public/assets/images/about-us-illustration2.png') no-repeat;
         background-position: center right;
     }
@@ -1012,25 +1007,24 @@ button:focus {
 
 .content-search {
 
-    width:0px;
-    transition: all .5s;
+    width: 0;
+    transition: all 0.5s;
 
-    &.toggle-active
-    {
-        width:240px;
+    &.toggle-active {
+        width: 240px;
 
         .form-control {
             padding-left: 20px !important;
-            padding-right:20px !important;
+            padding-right: 20px !important;
             height: 47px !important;
         }
     }
 
-    margin-left:10px;
+    margin-left: 10px;
 
     .form-control {
-        padding-left: 0px !important;
-        padding-right:0px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
@@ -1083,12 +1077,11 @@ button:focus {
 
 // ------------------NFT Services-section------------//
 .service-inner-section1 {
-    padding-top: 145px;
+    padding-top: 170px;
     padding-bottom: 65px;
     display: grid;
     place-items: center;
-    .nft-service-img-div {
-    }
+    .nft-service-img-div {}
     .nft-service-img {
         width: 100%;
         margin-bottom: -140px;
@@ -1143,7 +1136,7 @@ header .main-header {
         .card-img-top {
             margin: 0 auto;
         }
-        img{
+        img {
             object-fit: cover !important;
             object-position: top !important;
         }
@@ -1160,7 +1153,8 @@ header .main-header {
 
 // ---------------career page start---------------
 .career-hero-banner {
-    background: url('../public/assets/icons/careers-banner.svg') no-repeat;
+    background: url('../public/assets/images/careers-banner.png') no-repeat;
+    background-size: contain;
     min-height: 710px;
     padding-top: 150px;
     background-position: top;
@@ -1194,7 +1188,7 @@ header .main-header {
         &.search-field {
             width: 333px;
             .form-control {
-                background: url('../public/assets/icons/gradient-search.svg') no-repeat 94% center;
+                background: url('../public/assets/images/gradient-search.png') no-repeat 94% center;
             }
         }
     }
@@ -1240,9 +1234,8 @@ header .main-header {
     background-size: cover;
 }
 
-.defi-section-glow
-{
-    padding-top:125px;
+.defi-section-glow {
+    padding-top: 125px;
 }
 
 .defi-section2 {
@@ -1405,19 +1398,17 @@ p.card-text.show-more {
 // ----------------------Blockchain consulting--------------------
 
 
-.accordion-header 
-{
-    .accordion-button
-    {
+.accordion-header {
+    .accordion-button {
         font-weight: bold;
     }
-    
+
 }
 
-.accordion-button:not(.collapsed) {	
+.accordion-button:not(.collapsed) {
     color: color('light-primary');
-	background-color: color('secondary');
-    
+    background-color: color('secondary');
+
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -1425,24 +1416,23 @@ p.card-text.show-more {
     filter: brightness(0) invert(1);
 }
 
-.block-chain-feature-card
-{
+.block-chain-feature-card {
     background-color: color('secondary');
     color: color('light-primary');
     min-height: 370px;
 
-    .h3
-    {
+    .h3 {
         color: color('light-primary');
-        font-size:28px;
+        font-size: 28px;
     }
 }
 
-.whatsapp_widget_wrapper .whatsapp_widget_pop.close{
+.whatsapp_widget_wrapper .whatsapp_widget_pop.close {
     display: none !important;
 }
 
-.home-contact-form, .getintouch-form {
+.home-contact-form,
+.getintouch-form {
     .spinner-border {
         width: 20px;
         height: 20px;
@@ -1464,31 +1454,31 @@ p.card-text.show-more {
 //     letter-spacing: -2px;
 // }
 .enterprise-section1 {
-    padding-bottom: 207px;  
+    padding-bottom: 207px;
 }
-.section-glow-banner{
+.section-glow-banner {
     background-color: color('secondary');
     height: 264px;
     .h2 {
         color: color('light-primary');
         margin-bottom: 12px;
     }
-    .floating-content{
+    .floating-content {
         margin-top: -81px;
         background-color: color('light-primary');
         padding: 45px 25px;
-        box-shadow: 8px 8px 20px 0px rgba(138, 138, 138, 0.14);
+        box-shadow: 8px 8px 20px 0 rgba(138, 138, 138, 0.14);
         border-top: 5px solid color('secondary');
-     }
-     .banner-content{
+    }
+    .banner-content {
         color: color('light-primary');
         padding: 36px 0 5px 55px;
-     }
+    }
 }
 
-.next-generation-accordion{
-    .accordion-flush{
-        .accordion-button:not(.collapsed){
+.next-generation-accordion {
+    .accordion-flush {
+        .accordion-button:not(.collapsed) {
             background-color: color('light-tertiary');
             box-shadow: 4px 4px 8px rgba(240, 240, 240, 0.25);
             font-size: 24px;
@@ -1496,7 +1486,7 @@ p.card-text.show-more {
             line-height: 24px;
             color: color('dark-tertiary');
         }
-        .accordion-button{
+        .accordion-button {
             background-color: color('light-tertiary');
             font-size: 18px;
             font-weight: 500;
@@ -1504,10 +1494,10 @@ p.card-text.show-more {
             border-radius: 4px;
             color: #4A5659;
         }
-        .accordion-button:not(.collapsed)::after{
+        .accordion-button:not(.collapsed)::after {
             filter: brightness(0);
         }
-        .accordion-body{
+        .accordion-body {
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
@@ -1515,77 +1505,75 @@ p.card-text.show-more {
             padding-bottom: 0;
         }
     }
-    .accordion-item{
+    .accordion-item {
         border: 0;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-bottom: 35px;
         }
     }
-  
+
 }
-.enterprise-section3{
+.enterprise-section3 {
     padding-top: 200px;
     padding-bottom: 90px;
-    .h2{
+    .h2 {
         color: color('dark-secondary');
-        letter-spacing: -1px !important;      // home page 19/1/22 changes
+        letter-spacing: -1px !important; // home page 19/1/22 changes
         font-size: 36px !important;
-        font-weight: 700;                     // home page 19/1/22 changes
+        font-weight: 700; // home page 19/1/22 changes
         line-height: 48px;
     }
-    .paragraph-text{
+    .paragraph-text {
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
         color: color('dark-secondary');
     }
-    .featured-box-container-new 
-    {
+    .featured-box-container-new {
         background-repeat: no-repeat;
         background-size: contain;
-        box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+        box-shadow: 0 20px 35px rgba(131, 199, 255, 0.1);
         width: 100%;
-       .featured-content{
-           height: 170px;
-           z-index: 1;
+        .featured-content {
+            height: 170px;
+            z-index: 1;
             position: relative;
-           p{
-            color: color('dark-secondary');
-            margin-bottom: 18px;
-           }
-       } 
+            p {
+                color: color('dark-secondary');
+                margin-bottom: 18px;
+            }
+        }
     }
-    .featured-iconbg-new1{
-       background-image:url('../public/assets/images/feature-icon1.png');
+    .featured-iconbg-new1 {
+        background-image: url('../public/assets/images/feature-icon1.png');
     }
-    .featured-iconbg-new2{
-        background-image:url('../public/assets/images/feature-icon2.png');
+    .featured-iconbg-new2 {
+        background-image: url('../public/assets/images/feature-icon2.png');
     }
-    .featured-iconbg-new3{
-        background-image:url('../public/assets/images/feature-icon3.png');
+    .featured-iconbg-new3 {
+        background-image: url('../public/assets/images/feature-icon3.png');
     }
-    .featured-iconbg-new4{
-        background-image:url('../public/assets/images/feature-icon4.png');
+    .featured-iconbg-new4 {
+        background-image: url('../public/assets/images/feature-icon4.png');
     }
 }
-.featured-hyperledgerbg1{
-    background-image:url('../public/assets/images/feature-img1.png');
+.featured-hyperledgerbg1 {
+    background-image: url('../public/assets/images/feature-img1.png');
 }
-.featured-hyperledgerbg2{
-    background-image:url('../public/assets/images/feature-img2.png');
+.featured-hyperledgerbg2 {
+    background-image: url('../public/assets/images/feature-img2.png');
 }
-.featured-hyperledgerbg3{
-    background-image:url('../public/assets/images/feature-img3.png');
+.featured-hyperledgerbg3 {
+    background-image: url('../public/assets/images/feature-img3.png');
 }
-.featured-hyperledgerbg4{
-    background-image:url('../public/assets/images/feature-img4.png');
+.featured-hyperledgerbg4 {
+    background-image: url('../public/assets/images/feature-img4.png');
 }
-.orange-cta-section{
+.orange-cta-section {
     background: url('../public/assets/images/orange-bg.png') no-repeat;
     background-size: cover;
 }
-.orange-cta-section 
-{
+.orange-cta-section {
     .getstarted-heading {
         font-size: 30px;
         font-weight: 600;
@@ -1594,10 +1582,10 @@ p.card-text.show-more {
         margin-bottom: 35px;
     }
 }
-.enterprise-section4{
-    padding: 55px 0 65px 0;
+.enterprise-section4 {
+    padding: 55px 0 65px;
 }
-.white-outline-btn{
+.white-outline-btn {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -1607,68 +1595,67 @@ p.card-text.show-more {
     border-radius: 0;
     background-color: transparent;
     padding: 0 82px;
-    &:hover{
+    &:hover {
         background-color: color('light-primary');
         color: color('dark-secondary');
         border: 2px solid color('light-primary');
     }
 }
-.dark-black-color{
+.dark-black-color {
     color: color('dark-fourth');
 }
-.white-footer-section
-{
-    .row{
-        .text-md-center{
+.white-footer-section {
+    .row {
+        .text-md-center {
             text-align: left !important;
         }
-        .brand-logo{
+        .brand-logo {
             margin-bottom: 40px;
             display: block;
             margin-top: -30px;
         }
     }
-    .light-text-color{
+    .light-text-color {
         color: color('dark-fourth') !important;
     }
-    .social-icons{
-        a{
+    .social-icons {
+        a {
             margin-left: 0 !important;
-            img{
+            img {
                 filter: brightness(0);
             }
         }
-       
+
     }
     .footer-after-line li:not(:last-child):after {
         background-color: color('dark-fourth');
     }
 }
-.develop-hyperledger{
-    .floating-content{
+.develop-hyperledger {
+    .floating-content {
         height: 714px;
         padding: 50px;
-        h3{
+        h3 {
             font-size: 24px;
-            font-weight: 700;                   // home page 19/1/22 changes
+            font-weight: 700; // home page 19/1/22 changes
             line-height: 24px;
             color: color('dark-secondary');
             margin-bottom: 40px;
         }
-        button{
+        button {
             margin-top: 40px;
             padding-left: 40px !important;
             padding-right: 40px !important;
             width: auto !important;
         }
-        p{
+        p {
             font-size: 18px;
             font-weight: 400;
             line-height: 30px;
             color: color('dark-fourth');
         }
     }
-    .what-hyperledger-img{
+    .what-hyperledger-img {
         margin-top: -360px;
         padding-left: 55px;
     }
@@ -1678,20 +1665,20 @@ p.card-text.show-more {
 }
 
 // ---------------------------------- gdpr styles start  ----------------------------------
-.featured-gdprbg1{
-    background-image:url('../public/assets/images/gdpr-highlight-icon1.png');
+.featured-gdprbg1 {
+    background-image: url('../public/assets/images/gdpr-highlight-icon1.png');
 }
-.featured-gdprbg2{
-    background-image:url('../public/assets/images/gdpr-highlight-icon2.png');
+.featured-gdprbg2 {
+    background-image: url('../public/assets/images/gdpr-highlight-icon2.png');
 }
-.featured-gdprbg3{
-    background-image:url('../public/assets/images/gdpr-highlight-icon3.png');
+.featured-gdprbg3 {
+    background-image: url('../public/assets/images/gdpr-highlight-icon3.png');
 }
-.featured-gdprbg4{
-    background-image:url('../public/assets/images/gdpr-highlight-icon4.png');
+.featured-gdprbg4 {
+    background-image: url('../public/assets/images/gdpr-highlight-icon4.png');
 }
 
-.gdpr-service{
+.gdpr-service {
     .develop-hyperledger {
         .what-hyperledger-img {
             margin-top: -350px;
@@ -1700,12 +1687,12 @@ p.card-text.show-more {
 }
 // ---------------------------------- gdpr styles end  ----------------------------------
 // ---------------------------------- rpa styles start  ----------------------------------
-.benefits-content{
-    .featured-box-container-new{
+.benefits-content {
+    .featured-box-container-new {
         padding: 24px;
-        .featured-content{
+        .featured-content {
             height: 110px;
-            p{
+            p {
                 font-family: $primaryFont;
                 font-size: 18px;
                 font-weight: 700;
@@ -1714,84 +1701,83 @@ p.card-text.show-more {
         }
     }
 }
-.rpa-service{
+.rpa-service {
     .develop-hyperledger {
         .floating-content {
-            height: 625px;  //changes on 20/1/22
+            height: 625px; // changes on 20/1/22
         }
         .what-hyperledger-img {
             margin-top: -245px;
         }
     }
-    .why-hyperledger{
-        padding-top: 290px;
+    .why-hyperledger {
+        padding-top: 200px;
     }
 }
-.featured-rpabg1{
-    background-image:url('../public/assets/images/rpa-iconbg1.png');
+.featured-rpabg1 {
+    background-image: url('../public/assets/images/rpa-iconbg1.png');
 }
-.featured-rpabg2{
-    background-image:url('../public/assets/images/rpa-iconbg2.png');
+.featured-rpabg2 {
+    background-image: url('../public/assets/images/rpa-iconbg2.png');
 }
-.featured-rpabg3{
-    background-image:url('../public/assets/images/rpa-iconbg3.png');
+.featured-rpabg3 {
+    background-image: url('../public/assets/images/rpa-iconbg3.png');
 }
-.featured-rpabg4{
-    background-image:url('../public/assets/images/rpa-iconbg4.png');
+.featured-rpabg4 {
+    background-image: url('../public/assets/images/rpa-iconbg4.png');
 }
-.featured-rpabg5{
-    background-image:url('../public/assets/images/rpa-iconbg5.png');
+.featured-rpabg5 {
+    background-image: url('../public/assets/images/rpa-iconbg5.png');
 }
 
-.right-overlapped-content{
-    padding-top: 440px;
-    .banner-content{
+.right-overlapped-content {
+    padding-top: 110px; // 440px to 110px
+    .banner-content {
         padding-top: 50px;
-        h2{
+        h2 {
             color: color('light-primary');
             font-family: $primaryFont;
             font-size: 24px;
             font-weight: 800;
             line-height: 24px;
         }
-        .logo-image{
+        .logo-image {
             margin-bottom: 60px;
         }
-      
+
     }
-    .light-red-bg{
-        height: 485px;    
+    .light-red-bg {
+        height: 485px;
     }
-    .floating-content{
+    .floating-content {
         background-color: color('light-primary');
         margin-top: -50px;
         // padding: 45px 25px;
-        -webkit-box-shadow: 8px 8px 20px 0px rgba(138, 138, 138, 0.14);
-        box-shadow: 8px 8px 20px 0px rgba(138, 138, 138, 0.14);
+        -webkit-box-shadow: 8px 8px 20px 0 rgba(138, 138, 138, 0.14);
+        box-shadow: 8px 8px 20px 0 rgba(138, 138, 138, 0.14);
         border-top: 5px solid color('light-red');
         font-size: 18px;
         font-weight: 400;
         line-height: 27px;
         color: #797B7C;
         padding: 25px 0;
-        .floating-content-heading{
+        .floating-content-heading {
             padding-left: 25px;
             padding-right: 25px;
             margin-bottom: 32px;
         }
     }
-    .benefits-listing{
-        li
-        {
+    .benefits-listing {
+        li {
             padding-left: 25px;
             padding-right: 25px;
-            &:not(:last-child){
+            &:not(:last-child) {
                 border-bottom: 1px solid #E2E3E3;
                 padding-bottom: 10px;
                 margin-bottom: 25px;
             }
         }
-        strong{
+        strong {
             font-family: $primaryFont;
             font-size: 24px;
             font-weight: 800;
@@ -1799,26 +1785,26 @@ p.card-text.show-more {
             margin-bottom: 16px;
             color: color('dark-tertiary');
         }
-        
+
     }
 }
-.light-red-bg{
+.light-red-bg {
     background-color: color('light-red');
     color: color('light-primary');
 }
 
-.ui-consulting-service{
+.ui-consulting-service {
     margin-top: 100px;
-    .custom-card{
-        box-shadow: 0px 20px 35px rgba(131, 199, 255, 0.1);
+    .custom-card {
+        box-shadow: 0 20px 35px rgba(131, 199, 255, 0.1);
         border: 1px solid #E7E5E5;
-        .card-title{
+        .card-title {
             height: auto;
-            .h3{
+            .h3 {
                 color: color('dark-secondary');
             }
         }
-        .card-text{
+        .card-text {
             height: auto;
             display: block;
             height: 155px;
@@ -1828,10 +1814,10 @@ p.card-text.show-more {
 // ---------------------------------- rpa styles end  ----------------------------------
 
 // 5/1/22  doc changes
-.blockchain-consulting-page .section-glow-banner{
+.blockchain-consulting-page .section-glow-banner {
     min-height: 315px;
 }
-.card-less{
+.card-less {
     .card-text {
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -1842,41 +1828,40 @@ p.card-text.show-more {
 }
 
 
-.defi-new-img
-{
-    margin-top:50px;
+.defi-new-img {
+    margin-top: 50px;
 }
 
-.timeline-content{
-    .h3{
+.timeline-content {
+    .h3 {
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 45px;
     }
-    .info{
-        h3{
+    .info {
+        h3 {
             font-weight: 900;
             font-size: 18px;
             line-height: 30px;
             margin-bottom: 10px;
         }
-        small{
+        small {
             font-size: 14px;
             font-weight: 500;
             line-height: 18px;
         }
     }
 }
-.box{
-    ul{
+.box {
+    ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         position: relative;
         transition: all 0.5s linear;
-        top:0;
-        li{
+        top: 0;
+        li {
             padding-bottom: 30px;
             position: relative;
             padding-left: 20px;
@@ -1884,7 +1869,7 @@ p.card-text.show-more {
             border-radius: 10px;
             line-height: 20px;
             width: 100%;
-            &::before{
+            &::before {
                 content: "";
                 display: inline-block;
                 width: 0;
@@ -1894,7 +1879,7 @@ p.card-text.show-more {
                 top: 10px;
                 left: -4px;
             }
-            &:last-child::before{
+            &:last-child::before {
                 border: 0;
             }
         }
@@ -1902,7 +1887,7 @@ p.card-text.show-more {
 }
 
 
-.box ul li > span:after{
+.box ul li > span:after {
     content: "";
     display: block;
     width: 10px;
@@ -1914,16 +1899,20 @@ p.card-text.show-more {
     outline: 4px solid rgba(255, 255, 255, 0.3);
 }
 
-.box ul li > span:after{top:10px;}
+.box ul li > span:after {
+    top: 10px;
+}
 
 
 .lets-meet-box {
-    h4{
-       margin-bottom: 0 !important;
+    h4 {
+        margin-bottom: 0 !important;
     }
 }
 // for recaptcha hide
-.grecaptcha-badge { visibility: hidden !important; }
+.grecaptcha-badge {
+    visibility: hidden !important;
+}
 
 
 // Home page changes 19/1/22
@@ -1934,14 +1923,14 @@ p.card-text.show-more {
         font-size: 18px;
     }
 }
-.home-section1-bg{
+.home-section1-bg {
     background: url('../public/assets/images/home-section1-bg.png') no-repeat;
     background-position: center right;
 }
-.home-section-3{
+.home-section-3 {
     padding-top: 70px;
     padding-bottom: 160px !important;
-    &-heading{
+    &-heading {
         margin-bottom: 100px !important;
     }
 }
@@ -1960,40 +1949,164 @@ p.card-text.show-more {
     color: #000;
 }
 
-.featured-wrapper{
+.featured-wrapper {
     background: linear-gradient(0deg, rgb(181 187 242 / 5%), rgb(181 187 242 / 8%)), rgb(196 196 196 / 1%);
     border-radius: 12px;
     padding: 40px 20px;
     margin-top: 80px;
 }
-.gdpr-service .service-inner-section1 .nft-service-img-div{
-    position: relative;
-    bottom: -125px;
-}
 
-.ui-path-service .nft-service-img-div{
-    position: relative;
-    bottom: -108px;
+.ui-path-service {
+    .nft-service-img-div {
+        > div {
+            float: left;
+        }
+    }
 }
-.ui-path-service .enterprise-section1{
-    padding-bottom: 100px;
+.ui-path-service .enterprise-section1 {
+    padding-bottom: 0;
 }
-.bg-gradient-none{
+.bg-gradient-none {
     background: none;
 }
-.gdpr-service .section-glow-banner{
+.gdpr-service .section-glow-banner {
     min-height: 344px;
 }
-.gdpr-service .why-hyperledger{
+.gdpr-service .why-hyperledger {
     padding-top: 100px;
-}
-.nft-wrapper .nft-service-img-div {
-    position: relative;
-    bottom: -160px;
 }
 .blockchain-consulting-page .enterprise-section3 {
     padding-top: 100px;
 }
-.gdpr-service .develop-hyperledger .floating-content{
+.gdpr-service .develop-hyperledger .floating-content {
     height: auto;
+}
+
+// home page figma changes
+.main-header {
+    .navbar-light {
+        .navbar-toggler {
+            color: transparent;
+            border-color: transparent;
+            padding-right: 0;
+            top: -1px !important;
+        }
+        .navbar-toggler-icon {
+            background-image: url('../public/assets/images/menu-toggle.png');
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.white-gradient-text-color {
+    @include gradient-background('gradient-seventh');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.is-mobile {
+    .search-bar {
+        .search-link {
+            display: none;
+        }
+    }
+}
+header {
+    .search-bar {
+        .search-link {
+            display: none;
+        }
+    }
+}
+
+
+// service inner page space issues changes
+.ui-path-service {
+    .enterprise-section1 {
+        .h1 {
+            font-size: 48px !important;
+        }
+    }
+}
+.gdpr-service {
+    .enterprise-section1 {
+        padding-top: 120px;
+        padding-bottom: 65px;
+        .h1 {
+            font-size: 39px !important;
+            line-height: 49px;
+        }
+        .row {
+            > div:first-child {
+                margin-top: 35px;
+            }
+        }
+    }
+
+}
+.nft-wrapper {
+    .service-inner-section1 {
+        padding-top: 175px;
+        padding-bottom: 0;
+        .h1 {
+            font-size: 34px !important;
+        }
+        .nft-service-img-div {
+            > div {
+                position: relative;
+                bottom: 0;
+            }
+        }
+    }
+    .service-inner-section2 {
+        position: relative;
+        top: -95px;
+        z-index: -1;
+    }
+}
+
+.blockchain-consulting-page {
+    .service-inner-section1 {
+        position: relative;
+        padding-top: 175px;
+        padding-bottom: 165px !important;
+        .blockchain-img-float {
+            position: absolute;
+            right: 0;
+            width: 45%;
+        }
+    }
+}
+
+.header-main-menu {
+    .nav-item {
+        .dropdown-menu {
+            .dropdown-item {
+                padding: 8px 15px;
+            }
+        }
+
+    }
+}
+
+
+.rpa-solutions {
+    min-height: 350px;
+    .floating-content {
+        height: auto !important;
+        padding: 50px 50px 26px;
+    }
+    .banner-content {
+        padding: 60px 0 70px 60px;
+    }
+}
+
+.hero-banner-globe {
+    > div {
+        position: absolute !important;
+        right: 0;
+        z-index: 0;
+    }
+}
+.z-index1 {
+    z-index: 1;
 }

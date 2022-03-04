@@ -17,123 +17,245 @@ export default function FeaturedSection(props) {
                 title: t('home.hyperledgerDevelopment'),
                 link: 'services/hyperledger-fabric-development',
                 icon: images.hyperledgericon,
+                mobileIcon: images.hyperledgericonMobile,
             },
             {
                 title: t('home.defiDevelopment'),
                 link: 'services/defi-development',
                 icon: images.defiicon,
+                mobileIcon: images.defiiconMobile,
             },
             {
                 title: t('nftDevelopement'),
                 link: 'services/nft-development',
                 icon: images.nftIcon,
+                mobileIcon: images.nftIconMobile,
             },
             {
                 title: t('home.obortechSmartHub'),
                 link: 'https://www.obortech.io/',
                 icon: images.obortechIcon,
+                mobileIcon: images.obortechIconMobile,
             },
             {
                 title: t('home.gdprCompliance'),
                 link: 'services/gdpr-compliance',
                 icon: images.gdprIcon,
+                mobileIcon: images.gdprIconMobile,
             },
         ];
 
     return (
-        <section className="hero-banner-container">
-            <Container>
-                <Row>
-                    <Col md={10} lg={8} xl={7} xxl={6}>
-                        <div className="d-sm-flex align-items-center">
-                            <h3 className="h3 secondary-text-color">
-                                {t('home.expertBlockchainConsulting')}
-                            </h3>
-                            <div className="heading-line"> </div>
-                        </div>
+        <>
+            <section className="hero-banner-container hero-banner-mobile position-relative">
+                <Container fluid className="d-md-block d-none">
+                    <Row>
+                        <Col md={12}>
+                            <div className="hero-banner-globe">
+                                <MyImage
+                                    src={images.globeImg}
+                                    alt=""
+                                    width={909}
+                                    height={403}
+                                    layout="intrinsic"
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container className="position-relative z-index1">
+                    <Row>
+                        <Col md={10} lg={8} xl={7} xxl={7}>
+                            <div className="d-md-flex align-items-center">
+                                <h3 className="h3 secondary-text-color">
+                                    {t('home.expertBlockchainConsulting')}
+                                </h3>
+                                <div className="heading-line"> </div>
+                            </div>
 
-                        <H1>{t('home.superchargeBlockchainCapabilities')}</H1>
+                            <div className="d-md-none d-block py-2">
+                                <MyImage
+                                    src={images.heroimgMobile}
+                                    alt=""
+                                    width={342}
+                                    height={120}
+                                    layout="intrinsic"
+                                    placeholder="blur"
+                                    loading="lazy"
+                                />
+                            </div>
 
-                        <Paragraph>{t('home.weSimplifyExcellence')}</Paragraph>
+                            <H1>
+                                {t('home.superchargeBlockchainCapabilities')}
+                            </H1>
 
-                        <div className="button-outer">
-                            <Button
-                                btnVarient="red-btn"
-                                size="lg"
-                                onClick={() => {
-                                    router.push(`${props.language}/contact`);
-                                }}
-                            >
-                                {t('consultFree')}
-                            </Button>
-                        </div>
-                    </Col>
+                            <Paragraph>
+                                {t('home.weSimplifyExcellence')}
+                            </Paragraph>
 
-                   
-                </Row>
-                <Row className="featured-wrapper">
-                    <Col md={12} className="text-center featured-wrapper-heading">
+                            <div className="button-outer">
+                                <Button
+                                    btnVarient="red-btn"
+                                    size="lg"
+                                    onClick={() => {
+                                        router.push(
+                                            `${props.language}/contact`
+                                        );
+                                    }}
+                                >
+                                    {t('consultFree')}
+                                </Button>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="featured-wrapper d-md-block d-none">
+                        <Col
+                            md={12}
+                            className="text-center featured-wrapper-heading"
+                        >
                             <h2 className="h2 blue-gradient-text-color">
                                 {t('home.featured')}
                             </h2>
-                    </Col>
+                        </Col>
 
-                    <div className="mt-4">
-                        <Row className="row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
-                            {_.map(featuresList, (item) => (
-                                <Col
-                                    key={_.uniqueId()}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        if (item.link) {
-                                            if (item.link.search('https') !== -1) {
-                                                window.open(item.link, '_blank');
-                                            } else {
-                                                router.push(
-                                                    `${props.language}/${item.link}`
-                                                );
+                        <div className="mt-4">
+                            <Row className="row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5 justify-content-center">
+                                {_.map(featuresList, (item) => (
+                                    <Col
+                                        key={_.uniqueId()}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            if (item.link) {
+                                                if (
+                                                    item.link.search(
+                                                        'https'
+                                                    ) !== -1
+                                                ) {
+                                                    window.open(
+                                                        item.link,
+                                                        '_blank'
+                                                    );
+                                                } else {
+                                                    router.push(
+                                                        `${props.language}/${item.link}`
+                                                    );
+                                                }
                                             }
-                                        }
-                                    }}
-                                >
-                                    <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">
-                                        <div className="featured-icon-new">
-                                            <MyImage
-                                                src={item.icon}
-                                                alt=""
-                                                width={112}
-                                                height={112}
-                                                layout="intrinsic"
-                                                placeholder="blur"
-                                                loading="lazy"
-                                            />
-                                        </div>
+                                        }}
+                                    >
+                                        <div className="featured-box-container-new btn d-flex text-start flex-column  justify-content-between">
+                                            <div className="featured-icon-new">
+                                                <MyImage
+                                                    src={item.icon}
+                                                    alt=""
+                                                    width={112}
+                                                    height={112}
+                                                    layout="intrinsic"
+                                                    placeholder="blur"
+                                                    loading="lazy"
+                                                />
+                                            </div>
 
-                                        <span
-                                            dangerouslySetInnerHTML={{
-                                                __html: item.title,
-                                            }}
-                                        />
-
-                                        <div className="mt-sm-3 mt-4">
-                                            <MyImage
-                                                src={images.purpleArrow}
-                                                alt=""
-                                                width={20}
-                                                height={17}
-                                                layout="intrinsic"
-                                                placeholder="blur"
-                                                loading="lazy"
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: item.title,
+                                                }}
                                             />
+
+                                            <div className="mt-sm-3 mt-4">
+                                                <MyImage
+                                                    src={images.purpleArrow}
+                                                    alt=""
+                                                    width={20}
+                                                    height={17}
+                                                    layout="intrinsic"
+                                                    placeholder="blur"
+                                                    loading="lazy"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                </Col>
-                            ))}
-                        </Row>
-                    </div>
-                </Row>
-            </Container>
-        </section>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
+                    </Row>
+                </Container>
+            </section>
+            <section className="featured-mobile d-md-none d-block">
+                <Container>
+                    <Row>
+                        <Col xs={12} className="text-center">
+                            <h2 className="h2 white-gradient-text-color">
+                                {t('home.featured')}
+                            </h2>
+                        </Col>
+                        <Col xs={12}>
+                            <Row>
+                                {_.map(featuresList, (item) => (
+                                    <Col
+                                        xs={12}
+                                        key={_.uniqueId()}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            if (item.link) {
+                                                if (
+                                                    item.link.search(
+                                                        'https'
+                                                    ) !== -1
+                                                ) {
+                                                    window.open(
+                                                        item.link,
+                                                        '_blank'
+                                                    );
+                                                } else {
+                                                    router.push(
+                                                        `${props.language}/${item.link}`
+                                                    );
+                                                }
+                                            }
+                                        }}
+                                    >
+                                        <div className="featured-box position-relative">
+                                            <div className="position-absolute featured-icon-mobile">
+                                                <MyImage
+                                                    src={item.mobileIcon}
+                                                    alt=""
+                                                    width={103}
+                                                    height={112}
+                                                    layout="intrinsic"
+                                                    placeholder="blur"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <div className="d-flex align-items-center justify-content-between h-100">
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: item.title,
+                                                    }}
+                                                />
+                                                <div>
+                                                    <MyImage
+                                                        src={images.purpleArrow}
+                                                        alt=""
+                                                        width={16}
+                                                        height={16}
+                                                        layout="intrinsic"
+                                                        placeholder="blur"
+                                                        loading="lazy"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+        </>
     );
 }
 

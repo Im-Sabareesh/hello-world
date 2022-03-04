@@ -16,71 +16,76 @@ const AboutUs = (props) => {
                 name: 'Alok Gupta',
                 designation: t('aboutUs.teamDesignation.founderceo'),
                 image: '/assets/images/team-member/Alok-Gupta.jpg',
-                linkedIn: 'https://www.linkedin.com/in/alok-gupta-32010615/'
+                linkedIn: 'https://www.linkedin.com/in/alok-gupta-32010615/',
             },
             {
                 name: 'Vandani Gupta',
                 designation: t('aboutUs.teamDesignation.director'),
                 image: '/assets/images/team-member/Vandani-Gupta.jpeg',
-                linkedIn: 'https://www.linkedin.com/in/vandani-gupta-73031b223/'
+                linkedIn:
+                    'https://www.linkedin.com/in/vandani-gupta-73031b223/',
             },
             {
                 name: 'Anant Randhawa',
                 designation: t('aboutUs.teamDesignation.healthcareAdvisor'),
                 image: '/assets/images/team-member/Anant-Randhawa.jpg',
-                linkedIn: ''
+                linkedIn: '',
             },
             {
                 name: 'Nitika Sharma',
                 designation: t('aboutUs.teamDesignation.recruitmentManager'),
                 image: '/assets/images/team-member/Nitika-Sharma.jpeg',
-                linkedIn: 'https://www.linkedin.com/in/nitika-sharma-18513362/'
+                linkedIn: 'https://www.linkedin.com/in/nitika-sharma-18513362/',
             },
             {
                 name: 'Damini Singh',
                 designation: t('aboutUs.teamDesignation.digitalMarketing'),
                 image: '/assets/images/team-member/Damini.jpg',
-                linkedIn: 'https://www.linkedin.com/in/damini-singh-7b1129168/'
+                linkedIn: 'https://www.linkedin.com/in/damini-singh-7b1129168/',
             },
             {
                 name: 'Gurpreet Rajpal',
                 designation: t('aboutUs.teamDesignation.teamLead'),
                 image: '/assets/images/team-member/gurpreet-rajpal.jpg',
-                linkedIn: 'https://www.linkedin.com/in/gurpreet-rajpal-a2869135/'
+                linkedIn:
+                    'https://www.linkedin.com/in/gurpreet-rajpal-a2869135/',
             },
             {
                 name: 'Hansraj Rami',
                 designation: t('aboutUs.teamDesignation.teamLead'),
                 image: '/assets/images/team-member/Hansraj-Rami.jpg',
-                linkedIn: 'https://www.linkedin.com/in/hansraj-rami-7a82a6165/'
+                linkedIn: 'https://www.linkedin.com/in/hansraj-rami-7a82a6165/',
             },
             {
                 name: 'Pinki Maurya',
                 designation: t('aboutUs.teamDesignation.qALead'),
                 image: '/assets/images/team-member/Pinki-Maurya.jpg',
-                linkedIn: 'https://www.linkedin.com/in/pinki-maurya/'
+                linkedIn: 'https://www.linkedin.com/in/pinki-maurya/',
             },
             {
                 name: 'Shaishav Pindadi',
                 designation: t('aboutUs.teamDesignation.blockchainEngineer'),
                 image: '/assets/images/team-member/Shaishav.jpeg',
-                linkedIn: 'https://www.linkedin.com/in/shaivpidadi/'
+                linkedIn: 'https://www.linkedin.com/in/shaivpidadi/',
             },
         ],
         howWeDoList = [
             {
                 title: t('aboutUs.assess'),
-                describe: t('aboutUs.assessDescribe')
-            }, {
+                describe: t('aboutUs.assessDescribe'),
+            },
+            {
                 title: t('aboutUs.plan'),
-                describe: t('aboutUs.planDescribe')
-            }, {
+                describe: t('aboutUs.planDescribe'),
+            },
+            {
                 title: t('aboutUs.implement'),
-                describe: t('aboutUs.implementDescribe')
-            }, {
+                describe: t('aboutUs.implementDescribe'),
+            },
+            {
                 title: t('aboutUs.maintainScale'),
-                describe: t('aboutUs.maintainScaleDescribe')
-            }
+                describe: t('aboutUs.maintainScaleDescribe'),
+            },
         ];
 
     return (
@@ -91,7 +96,9 @@ const AboutUs = (props) => {
                     <Row>
                         <Col>
                             <div className="light-text-color text-center w-50 mx-auto">
-                                <H1 className="light-text-color">{t('aboutUs.title')}</H1>
+                                <H1 className="light-text-color">
+                                    {t('aboutUs.title')}
+                                </H1>
                                 <Paragraph>
                                     {t('aboutUs.headerVisions')}
                                 </Paragraph>
@@ -106,8 +113,8 @@ const AboutUs = (props) => {
             {/*--------------- about section1 section start ---------- */}
 
             <section className="about-section1 pb-xl-5 pb-md-4 pb-2">
-                <Container fluid className="">
-                    <Row className="">
+                <Container fluid>
+                    <Row>
                         <Col className="align-img">
                             <MyImage
                                 src={images.aboutUs}
@@ -135,21 +142,16 @@ const AboutUs = (props) => {
                             <H1>{t('aboutUs.wtsOurStory')}</H1>
                         </Col>
                         <Col lg={7}>
-                            <Paragraph>
-                                {t('aboutUs.ourStory1')}
-                            </Paragraph>
+                            <Paragraph>{t('aboutUs.ourStory1')}</Paragraph>
 
                             <Paragraph>
-                                {t('aboutUs.ourStory2Since')}<b> 2019</b>, {t('aboutUs.ourStory2Come')}
+                                {t('aboutUs.ourStory2Since')}
+                                <b> 2019</b>, {t('aboutUs.ourStory2Come')}
                             </Paragraph>
 
-                            <Paragraph>
-                                {t('aboutUs.ourStory3')}
-                            </Paragraph>
+                            <Paragraph>{t('aboutUs.ourStory3')}</Paragraph>
 
-                            <Paragraph>
-                                {t('aboutUs.ourStory4')}
-                            </Paragraph>
+                            <Paragraph>{t('aboutUs.ourStory4')}</Paragraph>
                         </Col>
                     </Row>
                     <Row className="pt-xl-5 pt-3 mt-md-4">
@@ -228,23 +230,27 @@ const AboutUs = (props) => {
                                     </h3>
                                     <div className="box">
                                         <ul id="first-list">
-                                            {_.map(howWeDoList, (item, index) => (
-                                                <li  key={index}>
-                                                    <span></span>
-                                                    <div className="info">
-                                                        <h3 className="light-text-color text-uppercase">{item.title}:</h3>
-                                                        <small>{item.describe}</small>
-                                                    </div>
-                                                </li>
+                                            {_.map(
+                                                howWeDoList,
+                                                (item, index) => (
+                                                    <li key={index}>
+                                                        <span></span>
+                                                        <div className="info">
+                                                            <h3 className="light-text-color text-uppercase">
+                                                                {item.title}:
+                                                            </h3>
+                                                            <small>
+                                                                {item.describe}
+                                                            </small>
+                                                        </div>
+                                                    </li>
                                                 )
                                             )}
                                         </ul>
                                     </div>
                                 </div>
                             </Col>
-                            <Col xl={5} lg={5}>
-
-                            </Col>
+                            <Col xl={5} lg={5}></Col>
                         </Row>
                     </Container>
                 </div>
@@ -260,7 +266,7 @@ const AboutUs = (props) => {
                         <Col lg={5}>
                             <div className="lets-meet-box bg-gradient-light dark-box-shadow p-5">
                                 <h4 className="dark-text-color mb-4 h2">
-                                    {t('aboutUs.letMeetOurTeam')} 
+                                    {t('aboutUs.letMeetOurTeam')}
                                 </h4>
                             </div>
                         </Col>
@@ -284,7 +290,13 @@ const AboutUs = (props) => {
                 <Container>
                     <Row>
                         {_.map(teamMemberList, (item) => (
-                            <Col lg={3} md={4} sm={6} xs={12} key={_.uniqueId()}>
+                            <Col
+                                lg={3}
+                                md={4}
+                                sm={6}
+                                xs={12}
+                                key={_.uniqueId()}
+                            >
                                 {typeof window !== 'undefined' ? (
                                     <Card className="our-team border-0 p-lg-4 p-3 mb-xl-5 mb-4">
                                         <MyImage
@@ -303,13 +315,21 @@ const AboutUs = (props) => {
                                                     {item.designation}
                                                 </Card.Text>
                                             </div>
-                                            <div className={`d-flex social-icons ${!item.linkedIn && 'visiblity-hidden'}`}>
+                                            <div
+                                                className={`d-flex social-icons ${
+                                                    !item.linkedIn &&
+                                                    'visiblity-hidden'
+                                                }`}
+                                            >
                                                 <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
                                                         if (item.linkedIn) {
-                                                            window.open(item.linkedIn, '_blank');
+                                                            window.open(
+                                                                item.linkedIn,
+                                                                '_blank'
+                                                            );
                                                         }
                                                     }}
                                                     className="rounded-circle d-flex justify-content-center align-items-center mx-lg-3 mx-2"

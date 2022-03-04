@@ -37,18 +37,21 @@ const Header = (props) => {
                 <div className="header-top py-2">
                     <Container fluid>
                         <Row className="justify-content-between">
-                            <Col md={9} className="topheader-text cursor-pointer"
+                            <Col md={9} className="top-header-text cursor-pointer d-lg-block d-md-none d-block"
                                 onClick={() => {
                                     router.push(
                                         `/${props.language}/contact`
                                     );
                                 }}>
-                                    {t('header.headerInfo')}
+
+                                <div className="wrapper">
+                                    <div className="marquee"> {t('header.headerInfo')}</div>
+                                </div>
                             </Col>
                             <Col
                                 md={12}
                                 lg={3}
-                                className="text-center text-xs-center text-sm-center text-md-center text-lg-end"
+                                className="text-center text-xs-center text-sm-center text-md-center text-lg-end d-md-block d-none"
                             >
                                 <ul className="social-links pt-1">
                                     {_.map(socialMediaIcons, (item) => (

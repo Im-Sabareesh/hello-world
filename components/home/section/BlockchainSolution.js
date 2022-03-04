@@ -43,7 +43,7 @@ export default function BlockChainSolutionSection() {
         ];
 
     return (
-        <section className="home-section-3">
+        <section className="home-section-3 home-section3-mobile mobile-section-padding">
             <Container>
                 <Row>
                     <Col md={12}>

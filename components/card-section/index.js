@@ -91,7 +91,7 @@ const CardSection = ({ className, fullCard, item, footerClass, footer, cardBodyC
                         {item.describe}
                     </Card.Text>
                 </Card.Body>
-                {!footer && <Card.Footer className="">
+                {!footer && <Card.Footer>
                     <Button
                         btnVarient="red-btn"
                         className={`min-size-btn ${

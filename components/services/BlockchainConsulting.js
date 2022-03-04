@@ -70,7 +70,7 @@ const BlockchainConsultingComponent = (props) => {
             <section className="service-inner-section1 enterprise-section1">
                 <Container>
                     <Row>
-                        <Col lg={6} sm={12} className="my-auto">
+                        <Col lg={7} sm={12}>
                             <div className="d-sm-flex align-items-center">
                                 <h3 className="h3 secondary-text-color text-uppercase">
                                     {t('blockChainConsulting')}
@@ -103,7 +103,7 @@ const BlockchainConsultingComponent = (props) => {
                                 </Button>
                             </div>
                         </Col>
-                        <Col lg={6} sm={12}>
+                        <Col lg={5} sm={12} className="blockchain-img-float">
                             <div className="nft-service-img-div">
                                {/* <Image src="../../public/assets/images/enterprise-blockchain-img.png" alt="..."></Image> */}
                                 <MyImage

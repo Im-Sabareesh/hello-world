@@ -32,15 +32,22 @@ import wpSVG from '@public/assets/icons/wordpress.svg';
 import linkedInSVG from '@public/assets/icons/linkedin.svg';
 import purpleArrow from '@public/assets/icons/purple-arrow.svg';
 import closeIcon from '@public/assets/icons/close-icon.svg';
+import SearchImage from '@public/assets/icons/mobile-search-icon.svg';
+import hyperledgericonMobile from '@public/assets/icons/hyperledger-deve-opment-icon.svg';
+import defiiconMobile from '@public/assets/icons/DeFi-Development-mobile.svg';
+import nftIconMobile from '@public/assets/icons/NFT-Development-icon-mobile.svg';
+import obortechIconMobile from '@public/assets/icons/Obortech-Smart-Hub-icon-mobile.svg';
+import gdprIconMobile from '@public/assets/icons/GDPR-Compliance-icon-mobile.svg';
+import heroimgMobile from '@public/assets/icons/globe-hero-img.svg';
 
-const homeSecTopImg = '/assets/images/home-section1-img.png';
-const deCenFin = '/assets/icons/service-icon1.png';
-const nonFunToken = '/assets/icons/service-icon2.png';
-const smartChain = '/assets/icons/service-icon3.png';
-const webDev = '/assets/icons/service-icon2.png';
-const mobDev = '/assets/icons/service-icon3.png';
-const aiTech = '/assets/icons/service-icon6.png';
-const blockchainBuss = '/assets/images/blockchain-business.png';
+const homeSecTopImg = '/assets/images/home-section1-img.svg';
+const deCenFin = '/assets/icons/service-icon1.svg';
+const nonFunToken = '/assets/icons/service-icon2.svg';
+const smartChain = '/assets/icons/service-icon3.svg';
+const webDev = '/assets/icons/service-icon2.svg';
+const mobDev = '/assets/icons/service-icon3.svg';
+const aiTech = '/assets/icons/service-icon6.svg';
+const blockchainBuss = '/assets/images/blockchain-business.svg';
 const weWorkWith = '/assets/images/we-work.png';
 const contactForm = '/assets/images/contact-form-img.png';
 const aboutUs = '/assets/images/about-us-grid.png';
@@ -56,11 +63,11 @@ const defiTwo = '/assets/images/defi-img2.png';
 const careerDetail = '/assets/images/career-details-mobile-img1.png';
 const nftPng = '/assets/images/nftesrvices-image1.png';
 const upArrow = '/assets/images/uparrow.png';
-const hyperledgericon = '/assets/icons/hyperledger-deve-opment-icon.png';
-const defiicon = '/assets/icons/DeFi-Development.png';
-const gdprIcon = '/assets/icons/GDPR-Compliance-icon.png';
-const nftIcon = '/assets/icons/NFT-Development-icon.png';
-const obortechIcon = '/assets/icons/Obortech-Smart-Hub-icon.png';
+const hyperledgericon = '/assets/icons/hyperledger-deve-opment-icon.webp';
+const defiicon = '/assets/icons/DeFi-Development.webp';
+const gdprIcon = '/assets/icons/GDPR-Compliance-icon.webp';
+const nftIcon = '/assets/icons/NFT-Development-icon.webp';
+const obortechIcon = '/assets/icons/Obortech-Smart-Hub-icon.webp';
 const enterpriseBlockchain = '/assets/images/enterprise-blockchain-img.png';
 const advisoryIcon = '/assets/images/consulting-service-icon (1).png';
 const proofconceptIcon = '/assets/images/consulting-service-icon (2).png';
@@ -94,6 +101,7 @@ const productivityIcon = '/assets/images/rpa-icon3.png';
 const capabilitiesIcon = '/assets/images/rpa-icon4.png';
 const utilizingIcon = '/assets/images/rpa-icon5.png';
 const uipathLogo = '/assets/images/ui-path-logo.png';
+const globeImg = '/assets/images/globe-img.png';
 // import deCenFin from '@public/assets/icons/service-icon1.png';
 // import nonFunToken from '@public/assets/icons/service-icon2.png';
 // import smartChain from '@public/assets/icons/service-icon3.png';
@@ -197,5 +205,13 @@ export default {
     productivityIcon,
     capabilitiesIcon,
     utilizingIcon,
-    uipathLogo
+    uipathLogo,
+    SearchImage,
+    hyperledgericonMobile,
+    defiiconMobile,
+    nftIconMobile,
+    obortechIconMobile,
+    gdprIconMobile,
+    heroimgMobile,
+    globeImg,
 };

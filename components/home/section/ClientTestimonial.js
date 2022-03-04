@@ -52,7 +52,6 @@ export default function CilentTestimonialSection() {
                                         {_.map(testimonialList, (item) => (
                                             <Col
                                                 key={_.uniqueId()}
-                                                className=""
                                             >
                                                 <div className="testimonial-cont">
                                                     <div className="testimonial-user-cont d-flex align-items-center">

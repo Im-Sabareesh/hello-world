@@ -36,10 +36,10 @@ export default function ChooseUsSection() {
     ];
 
     return (
-        <section className="home-section-5 py-5">
+        <section className="home-section-5 py-5 home-section5-mobile mobile-section-padding">
             <Container>
                 <Row>
-                    <Col md={{ span: 12, order: 0 }} lg={6} className="text-center">
+                    <Col md={{ span: 12, order: 0 }} lg={6} className="text-center d-lg-block d-none">
                         <MyImage
                             src={images.blockchainBuss}
                             placeholder="blur"
@@ -51,14 +51,25 @@ export default function ChooseUsSection() {
                     </Col>
 
                     <Col md={12} lg={6}>
-                        <h2 className="h2 mb-4"> {t('home.chooseUs')} </h2>
+                        <h2 className="h2 mb-md-4 mb-3"> {t('home.chooseUs')} </h2>
 
                         <Paragraph>{t('home.chooseUsDesc1')}</Paragraph>
 
                         <Paragraph>{t('home.chooseUsDesc2')}</Paragraph>
+
+                        <div className="d-lg-none d-block why-us-img-mobile text-center">
+                            <MyImage
+                                src={images.blockchainBuss}
+                                placeholder="blur"
+                                alt=" "
+                                height={257}
+                                width={275}
+                                loading="lazy"
+                            />
+                        </div>
                     </Col>
                     {_.map(chooseUSList, (item) => (
-                        <Col key={_.uniqueId()} md={6} className="mt-4">
+                        <Col key={_.uniqueId()} md={6} className="mt-lg-4 why-us-block">
                             <div className="d-flex">
                                 <div className="flex-shrink-0">
                                     <MyImage

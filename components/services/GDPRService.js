@@ -47,7 +47,7 @@ const GDPRComponent = (props) => {
             <section className="service-inner-section1 enterprise-section1">
                 <Container>
                     <Row>
-                        <Col lg={6} sm={12} className="my-auto">
+                        <Col lg={6} sm={12}>
                             <div className="d-sm-flex align-items-center">
                                 <h3 className="h3 secondary-text-color">
                                     {t('gdprService.gdprSimplified')}
@@ -63,7 +63,7 @@ const GDPRComponent = (props) => {
                                 {t('gdprService.gdprHeaderPara')}
                             </Paragraph>
 
-                            <div className="pt-lg-4 mt-lg-3 pt-md-3 pt-0 mt-0">
+                            <div className="pt-lg-3 mt-lg-3 pt-md-3 pt-0 mt-0">
                                 <Button
                                     btnVarient="red-btn"
                                     className="p-0 rounded-0"

@@ -14,9 +14,11 @@ $colors: (
     alert-info-color: #055160,
     dark-primary: #121212,
     dark-secondary: #404852,
+    dodger-blue-color: #2F80ED,
     dark-tertiary: #131313,
     dark-fourth: #222222,
     light-red: #F4786B,
+    light-grey: #E7E7E7,
     gradient-primary: (90deg, #6f74ff 0%, #5e9dff 100%,),
     gradient-primary-opacity: (90deg, #6f74ff15 0%, #5e9dff15 100%,),
     gradient-secondary: (90deg, #6f75ff 0%, #999dff 50.52%, #adb1ff 100%,),
@@ -24,7 +26,8 @@ $colors: (
     gradient-fourth: (96.87deg, #7177ff 7.56%, #adb1ff 96.48%,),
     gradient-fifth: (180deg, #ffffff 2.5%, #f5f9ff 16.75%, #ebf3ff 39.72%, #f5f9ff 62.44%,),
     gradient-sixth: (180deg, #ffffff 2.5%, #f5f9ff 16.75%, #ebf3ff 39.72%, #f5f9ff 62.44%, #ffffff 83.72%,),
-
+    gradient-seventh: (90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.72) 41.89%, rgba(255, 255, 255, 0.684) 74.02%, rgba(255, 255, 255, 0.855) 100%,),
+    gradient-eight:(90deg, rgb(111 116 255 / 10%) 0%, rgb(94 157 255 / 10%) 100%),
     gradient-blue: (180deg, #4597FF 5%, #72AEFA 25%, #A1C8F9 100%,),
 
     nav-active: #df6052,

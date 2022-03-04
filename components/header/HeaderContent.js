@@ -21,7 +21,7 @@ const HeaderContent = (props) => {
         t = i18next.t.bind(i18next),
         whiteLayout = ['about', 'contact'];
     const listenScrollEvent = (e) => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 0) {
             setState('sticky');
         } else {
             setState('');
@@ -95,9 +95,9 @@ const HeaderContent = (props) => {
             >
                 <Container>
                     <Row>
-                        <Col sm={4} md={3} lg={2}>
+                        <Col xs={12} sm={12} md={12} lg={2}>
                             <Link href={`/${props.language}/`}>
-                                <a>
+                                <a className="header-logo-img">
                                     <MyImage
                                         src={images.logo}
                                         alt=""
@@ -117,8 +117,20 @@ const HeaderContent = (props) => {
                             </Link>
                         </Col>
 
-                        <Col sm={4} md={5} lg={5}>
-                            <div ref={nodes}>
+                        <Col xs={12} sm={12} md={12} lg={5} className="nav-mobile">
+                            <div className="search-bar">
+                                <a className="search-link">
+                                    <MyImage
+                                        src={images.SearchImage}
+                                        alt=""
+                                        className="search-link-img"
+                                        width={120}
+                                        height={72}
+                                        loading="lazy"
+                                    />
+                                </a>
+                            </div>
+                            <div ref={nodes} className="header-main-menu">
                                 <Navbar
                                     expand="lg"
                                     id="header-navbar"
