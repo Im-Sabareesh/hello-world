@@ -13,7 +13,7 @@ const RPAServices = (props) => {
         dispatch(servicesAction.fetchList());
     }, []);
     return (
-        <div className="nft-service-page hyperledger-service-page rpa-service">
+        <div className="nft-service-page hyperledger-service-page rpa-service ui-path-service">
             <Meta title={t('rpaService.uiPathConsulting')} desc="" />
 
             <RPAComponent language={props.language} />

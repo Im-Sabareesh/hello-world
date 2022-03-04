@@ -13,7 +13,7 @@ const NFTServices = (props) => {
         dispatch(servicesAction.fetchList());
     }, []);
     return (
-        <div className="nft-service-page">
+        <div className="nft-service-page nft-wrapper">
             <Meta title={t('nftDevelopement')} desc="" />
 
             <NFTSComponent language={props.language} />
